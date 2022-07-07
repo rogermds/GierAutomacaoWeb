@@ -2,11 +2,11 @@
 Library    SeleniumLibrary
 
 *** Keywords ***
-Clicar em "Esqueci minha Senha"
+Clicar em 'Esqueci minha Senha'
     Click Link    locator=lbtEsqueciSenha
 
-Clicar no Campo "EMAIL" e Preencher o Valor "rafaela.domingos@tecnogroup.com.br"
-    Input Text    locator=txtEmail   text=rafaela.domingos@tecnogroup.com.br
+Clicar no Campo 'EMAIL' e Preencher o Valor "${Email}"
+    Input Text    locator=txtEmail   text=${Email}
     Execute JavaScript  document.getElementById("btnEnviar").click();
 
 Verificar se o sistema exibe a mensagem: Informe um CPF válido!

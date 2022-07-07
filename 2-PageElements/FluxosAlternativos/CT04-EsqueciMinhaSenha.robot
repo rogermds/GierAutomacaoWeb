@@ -2,8 +2,8 @@
 Library    SeleniumLibrary
 
 *** Keywords ***
-Clicar no Campo "CPF" e Preencher o Valor "41316137864"
-    Input Text    locator=txtCpf    text=41316137864
+Clicar no Campo 'CPF' e Preencher o Valor "${CPF}"
+    Input Text    locator=txtCpf    text=${CPF}
     Execute JavaScript  document.getElementById("btnEnviar").click();
     
 Verificar se o sistema exibe a mensagem: Informe um email válido!
