@@ -12,4 +12,10 @@ Pesquisar "${pesquisaEstrutura}" e selecionar o primeiro resultado
 
 Selecionar o botão Cadastrar
     Click Button    locator=cphContent_btnCad
+
+Clicar no Campo "Correio Eletrônico" e Digitar o Valor "Teste"
+
+Clicar no "Botão Salvar"
+
+Resultado: O sistema irá emitir a mensagem: CORREIO ELETRÔNICO INVÁLIDO     
     

@@ -170,4 +170,4 @@ No modal Deseja Cadastrar Outra Pessoa?, clicar em "${cadastroSimNao}"
     Run Keyword If    '${cadastroSimNao}' == 'Não'  Execute JavaScript  document.getElementById("${botaoCadastroPessoaNao}").click();
 
 Verificar se o sistema retorna a página Consultar Pessoa
-    Verificar se aparece o texto "Consultar Pessoa"
+ 
