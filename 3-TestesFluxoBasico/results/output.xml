@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220706 15:21:18.668" rpa="false" schemaversion="3">
+<suite id="s1" name="TesteDeVersaoPositivo" source="C:\Users\rogerio.santos\Desktop\Automação\Gier-TesteDeVersão-Web\3-TestesFluxoBasico\TesteDeVersaoPositivo.robot">
+<test id="s1-t1" name="Cenário 04-A: Funcionalidade Consulta de Pessoa – Secretaria" line="101">
+<kw name="Abrir o navegador" library="1-Principal" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://www.google.com/</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20220706 15:21:19.067" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220706 15:21:19.067" endtime="20220706 15:21:21.198"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220706 15:21:21.198" endtime="20220706 15:21:21.319"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:19.066" endtime="20220706 15:21:21.319"/>
+</kw>
+<kw name="Acessar o ambiente &quot;https://guarulhoshomolog.gier.com.br/&quot;" library="CT01-Login" sourcename="Acessar o ambiente &quot;${url}&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<msg timestamp="20220706 15:21:21.322" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
+<status status="PASS" starttime="20220706 15:21:21.322" endtime="20220706 15:21:22.950"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:21.319" endtime="20220706 15:21:22.950"/>
+</kw>
+<kw name="Entrar com as credenciais &quot;02867439817&quot; e &quot;12345678&quot;" library="CT01-Login" sourcename="Entrar com as credenciais &quot;${login}&quot; e &quot;${senha}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${tituloLogin}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220706 15:21:22.952" endtime="20220706 15:21:22.983"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoLogin}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20220706 15:21:22.984" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
+<status status="PASS" starttime="20220706 15:21:22.983" endtime="20220706 15:21:23.054"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoSenha}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20220706 15:21:23.054" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
+<status status="PASS" starttime="20220706 15:21:23.054" endtime="20220706 15:21:23.112"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${botaoLogin}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20220706 15:21:23.113" level="INFO">Clicking button 'btnAcessar'.</msg>
+<status status="PASS" starttime="20220706 15:21:23.113" endtime="20220706 15:21:25.047"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:22.951" endtime="20220706 15:21:25.047"/>
+</kw>
+<kw name="Verificar se aparece o texto &quot;Estrutura&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${texto}</arg>
+<arg>20</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220706 15:21:25.048" endtime="20220706 15:21:25.066"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:25.048" endtime="20220706 15:21:25.066"/>
+</kw>
+<kw name="Pesquisar &quot;SECRETARIA&quot; e selecionar o primeiro resultado" library="CT02-SelecaodeEstrutura" sourcename="Pesquisar &quot;${pesquisaEstrutura}&quot; e selecionar o primeiro resultado">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoPesquisaEstrutura}</arg>
+<arg>${pesquisaEstrutura}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20220706 15:21:25.067" level="INFO">Typing text 'SECRETARIA' into text field '//input[contains(@class,'textBuscaEstrutura')]'.</msg>
+<status status="PASS" starttime="20220706 15:21:25.067" endtime="20220706 15:21:25.151"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${primeiroResultadoEstrutura}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220706 15:21:25.153" level="INFO">Clicking element '//html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]'.</msg>
+<status status="PASS" starttime="20220706 15:21:25.151" endtime="20220706 15:21:25.187"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:25.067" endtime="20220706 15:21:25.187"/>
+</kw>
+<kw name="Verificar se aparece o texto &quot;Operação&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${texto}</arg>
+<arg>20</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220706 15:21:25.188" endtime="20220706 15:21:31.622"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:25.188" endtime="20220706 15:21:31.623"/>
+</kw>
+<kw name="Entrar no módulo &quot;Pessoas&quot;" library="1-Principal" sourcename="Entrar no módulo &quot;${nomeModulo}&quot;">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220706 15:21:31.625" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//span[contains(.,'Pessoas')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+Without any arguments.</msg>
+<status status="PASS" starttime="20220706 15:21:31.625" endtime="20220706 15:21:31.631"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult.singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220706 15:21:31.631" level="INFO">Executing JavaScript:
+xPathResult.singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20220706 15:21:31.631" endtime="20220706 15:21:31.644"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:31.624" endtime="20220706 15:21:31.644"/>
+</kw>
+<kw name="Entrar na funcionalidade &quot;Pessoa&quot;" library="1-Principal" sourcename="Entrar na funcionalidade &quot;${funcionalidade}&quot;">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220706 15:21:31.646" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//span[contains(@title,'Pessoa')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+Without any arguments.</msg>
+<status status="PASS" starttime="20220706 15:21:31.645" endtime="20220706 15:21:33.672"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult.singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220706 15:21:33.675" level="INFO">Executing JavaScript:
+xPathResult.singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20220706 15:21:33.673" endtime="20220706 15:21:33.682"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:31.645" endtime="20220706 15:21:33.682"/>
+</kw>
+<kw name="Em consulta, no campo Nome, inserir o nome &quot;AGATHA GABRIELLY DOS SANTOS SOUZA&quot;" library="CT04-ConsultaPessoa" sourcename="Em consulta, no campo Nome, inserir o nome &quot;${nome}&quot;">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${campoNome}</arg>
+<arg>cphContent_txtNome</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220706 15:21:33.683" level="INFO">${campoNome} = cphContent_txtNome</msg>
+<status status="PASS" starttime="20220706 15:21:33.683" endtime="20220706 15:21:33.683"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoNome}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20220706 15:21:33.684" level="INFO">Typing text 'AGATHA GABRIELLY DOS SANTOS SOUZA' into text field 'cphContent_txtNome'.</msg>
+<status status="PASS" starttime="20220706 15:21:33.684" endtime="20220706 15:21:46.827"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:33.683" endtime="20220706 15:21:46.827"/>
+</kw>
+<kw name="Em consulta, no campo D. Nascimento, inserir a data &quot;15/06/2013&quot;" library="CT04-ConsultaPessoa" sourcename="Em consulta, no campo D. Nascimento, inserir a data &quot;${dataNascimento}&quot;">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${campoDataNascimento}</arg>
+<arg>cphContent_txtDNasc</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220706 15:21:46.829" level="INFO">${campoDataNascimento} = cphContent_txtDNasc</msg>
+<status status="PASS" starttime="20220706 15:21:46.829" endtime="20220706 15:21:46.829"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoDataNascimento}</arg>
+<arg>${dataNascimento}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20220706 15:21:46.830" level="INFO">Typing text '15/06/2013' into text field 'cphContent_txtDNasc'.</msg>
+<status status="PASS" starttime="20220706 15:21:46.829" endtime="20220706 15:21:46.933"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:46.828" endtime="20220706 15:21:46.933"/>
+</kw>
+<kw name="Clicar no botão &quot;Pesquisar&quot;" library="CT04-ConsultaPessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${botaoPesquisar}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220706 15:21:46.934" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_btnPesquisa").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220706 15:21:46.934" endtime="20220706 15:21:46.947"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:46.934" endtime="20220706 15:21:46.947"/>
+</kw>
+<kw name="Verificar se no grid é exibido o CPF &quot;57266385814&quot;" library="CT04-ConsultaPessoa" sourcename="Verificar se no grid é exibido o CPF &quot;${CPF}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${CPF}</arg>
+<arg>10</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220706 15:21:46.948" endtime="20220706 15:21:52.200"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:46.948" endtime="20220706 15:21:52.201"/>
+</kw>
+<kw name="Verificar se no grid é exibido o RG &quot;60483237&quot;" library="CT04-ConsultaPessoa" sourcename="Verificar se no grid é exibido o RG &quot;${RG}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${RG}</arg>
+<arg>10</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220706 15:21:52.202" endtime="20220706 15:21:52.220"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:52.201" endtime="20220706 15:21:52.220"/>
+</kw>
+<kw name="Verificar se no grid é exibido a Data de Nascimento &quot;15/06/2013&quot;" library="CT04-ConsultaPessoa" sourcename="Verificar se no grid é exibido a Data de Nascimento &quot;${dataNascimento}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${dataNascimento}</arg>
+<arg>10</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220706 15:21:52.221" endtime="20220706 15:21:52.241"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:52.221" endtime="20220706 15:21:52.241"/>
+</kw>
+<kw name="Clicar no botão &quot;Ações&quot;" library="CT04-ConsultaPessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult = document.evaluate("${botaoAcoes}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220706 15:21:52.242" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsultaPessoa$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+Without any arguments.</msg>
+<status status="PASS" starttime="20220706 15:21:52.242" endtime="20220706 15:21:52.247"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult.singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220706 15:21:52.247" level="INFO">Executing JavaScript:
+xPathResult.singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20220706 15:21:52.247" endtime="20220706 15:21:52.252"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:52.242" endtime="20220706 15:21:52.252"/>
+</kw>
+<kw name="Clicar no botão &quot;Visualizar&quot;" library="CT04-ConsultaPessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${botaoVisualizar}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220706 15:21:52.253" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_dtlConsultaPessoa_lkbVisualizar_0").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220706 15:21:52.252" endtime="20220706 15:21:53.530"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:52.252" endtime="20220706 15:21:53.530"/>
+</kw>
+<kw name="Verificar se aparece o texto &quot;Visualizar Pessoa&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${texto}</arg>
+<arg>20</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220706 15:21:53.531" endtime="20220706 15:22:03.868"/>
+</kw>
+<status status="PASS" starttime="20220706 15:21:53.530" endtime="20220706 15:22:03.868"/>
+</kw>
+<kw name="Verificar se é exibido o nome &quot;AGATHA GABRIELLY DOS SANTOS SOUZA&quot;" library="CT04-ConsultaPessoa" sourcename="Verificar se é exibido o nome &quot;${nome}&quot;">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${campoNome}</arg>
+<arg>ctl00$cphContent$ucDadosPessoais$txtNomeCompleto</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220706 15:22:03.873" level="INFO">${campoNome} = ctl00$cphContent$ucDadosPessoais$txtNomeCompleto</msg>
+<status status="PASS" starttime="20220706 15:22:03.873" endtime="20220706 15:22:03.873"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>${campoNome}</arg>
+<arg>value</arg>
+<arg>${nome}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20220706 15:22:03.891" level="INFO">Element 'ctl00$cphContent$ucDadosPessoais$txtNomeCompleto' attribute 'value' contains value 'AGATHA GABRIELLY DOS SANTOS SOUZA'.</msg>
+<status status="PASS" starttime="20220706 15:22:03.873" endtime="20220706 15:22:03.891"/>
+</kw>
+<status status="PASS" starttime="20220706 15:22:03.868" endtime="20220706 15:22:03.891"/>
+</kw>
+<kw name="Verificar se é exibido a data de nascimento &quot;15/06/2013&quot;" library="CT04-ConsultaPessoa" sourcename="Verificar se é exibido a data de nascimento &quot;${dataNascimento}&quot;">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${campoNascimento}</arg>
+<arg>ctl00$cphContent$ucDadosPessoais$txtDNasc</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220706 15:22:03.892" level="INFO">${campoNascimento} = ctl00$cphContent$ucDadosPessoais$txtDNasc</msg>
+<status status="PASS" starttime="20220706 15:22:03.892" endtime="20220706 15:22:03.892"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>${campoNascimento}</arg>
+<arg>value</arg>
+<arg>${dataNascimento}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20220706 15:22:03.916" level="INFO">Element 'ctl00$cphContent$ucDadosPessoais$txtDNasc' attribute 'value' contains value '15/06/2013'.</msg>
+<status status="PASS" starttime="20220706 15:22:03.892" endtime="20220706 15:22:03.916"/>
+</kw>
+<status status="PASS" starttime="20220706 15:22:03.892" endtime="20220706 15:22:03.916"/>
+</kw>
+<kw name="Fechar o navegador" library="1-Principal" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20220706 15:22:04.053" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220706 15:22:03.917" endtime="20220706 15:22:04.053"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220706 15:22:04.053" endtime="20220706 15:22:06.258"/>
+</kw>
+<status status="PASS" starttime="20220706 15:22:03.917" endtime="20220706 15:22:06.258"/>
+</kw>
+<doc>Esse teste verifica se é possível efetuar o
+cadastro de uma pessoa na secretaria</doc>
+<tag>Cadastro de Pessoa - Secretaria | Fluxo Positivo</tag>
+<status status="PASS" starttime="20220706 15:21:19.066" endtime="20220706 15:22:06.260"/>
+</test>
+<status status="PASS" starttime="20220706 15:21:18.668" endtime="20220706 15:22:06.264"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Cadastro de Pessoa - Secretaria | Fluxo Positivo</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TesteDeVersaoPositivo">TesteDeVersaoPositivo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
