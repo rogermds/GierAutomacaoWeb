@@ -10,6 +10,9 @@ Resource         ../2-PageElements/FluxosAlternativos/CT07-CadastroDePessoaData.
 Resource         ../2-PageElements/FluxosAlternativos/CT08-CadastroDePessoaNome.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT09-CadastroDePessoaSexo.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT10-CadastroDePessoaNacion.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT11-CadastroDePessoaEnd.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT12-CadastroDePessoaCep.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT13-ConsultaDePessoaNome.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -186,4 +189,59 @@ CT10 - Cadastro de Pessoa - Nacionalidade sem preechimento
     Clicar no campo 'UF' e selecionar a opção "SP"
     Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: CIDADE DE NASCIMENTO    
 
-    
+CT11 - Cadastro de Pessoa - Endereço não informado
+    [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
+    [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "41316137864" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado        
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Pessoa"
+    Selecionar o botão 'Cadastrar'    
+    Clicar no campo 'Nome' e digitar o valor "Teste Pessoa Versão"
+    Clicar no campo 'Sexo' e selecionar a opção "FEMININO"
+    Clicar no campo 'Data de Nascimento' e digitar o valor "24/04/1993"
+    Clicar no Campo 'Correio Eletrônico' e digitar o Valor "testeQualidade@teste.com.br"
+    Clicar no campo 'Nacionalidade' e selecionar a opção "BRASILEIRA"
+    Clicar no campo 'UF' e selecionar a opção "SP"
+    Clicar no campo 'Cidade de Nascimento' e selecionar a opção "SAO PAULO"
+    Clicar no campo 'Cor/Raça' e selecionar a opção "AMARELA"
+    Clicar no campo 'Zona' e selecionar a opção "URBANO"
+    Clicar no botão 'Incluir'
+    Clicar no 'Botão Salvar'
+    Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: ENDEREÇOS: AO MENOS UM ENDEREÇO RESIDENCIAL    
+
+CT12 - Cadastro de Pessoa - Cep inválido
+    [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
+    [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "41316137864" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado        
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Pessoa"
+    Selecionar o botão 'Cadastrar'    
+    Clicar no campo 'Nome' e digitar o valor "Teste Pessoa Versão"
+    Clicar no campo 'Sexo' e selecionar a opção "FEMININO"
+    Clicar no campo 'Data de Nascimento' e digitar o valor "24/04/1993"
+    Clicar no Campo 'Correio Eletrônico' e digitar o Valor "testeQualidade@teste.com.br"
+    Clicar no campo 'Nacionalidade' e selecionar a opção "BRASILEIRA"
+    Clicar no campo 'UF' e selecionar a opção "SP"
+    Clicar no campo 'Cidade de Nascimento' e selecionar a opção "SAO PAULO"
+    Clicar no campo 'Cor/Raça' e selecionar a opção "AMARELA"
+    Clicar no campo 'Cep' e digitar o valor "00000001"
+    Clicar no campo 'Numero' e digitar o valor "134"
+    Visualizar a mensagem: CEP NÃO ENCONTRADO
+
+CT13 - Acesso ao Sistema – Pessoa/ Consulta sem informar Nome
+    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
+    [Tags]             Pessoa/ Consulta | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "41316137864" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Pessoa"
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: OBRIGATÓRIO PREENCHER NOME E SOBRENOME OU NOME E DATA DE NASCIMENTO.    
