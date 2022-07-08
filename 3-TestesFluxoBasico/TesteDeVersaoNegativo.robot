@@ -13,6 +13,8 @@ Resource         ../2-PageElements/FluxosAlternativos/CT10-CadastroDePessoaNacio
 Resource         ../2-PageElements/FluxosAlternativos/CT11-CadastroDePessoaEnd.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT12-CadastroDePessoaCep.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT13-ConsultaDePessoaNome.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT14-ConsultaDePessoaNome.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT15_16-ConsultaDePessoaEmail.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -244,4 +246,44 @@ CT13 - Acesso ao Sistema – Pessoa/ Consulta sem informar Nome
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Pessoa"
     Clicar no Botão "Pesquisar"
-    Visualizar a mensagem: OBRIGATÓRIO PREENCHER NOME E SOBRENOME OU NOME E DATA DE NASCIMENTO.    
+    Visualizar a mensagem: OBRIGATÓRIO PREENCHER NOME E SOBRENOME OU NOME E DATA DE NASCIMENTO.   
+
+CT14 - Acesso ao Sistema – Pessoa/ Consulta inexistente por nome
+    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
+    [Tags]             Pessoa/ Consulta | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "41316137864" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Pessoa"
+    Clicar no campo de pesquisa 'Nome' e preencher o valor "TESTE INVÁLIDO"    
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: NENHUM REGISTRO FOI ENCONTRADO.      
+
+CT15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
+    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
+    [Tags]             Pessoa/ Consulta | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "41316137864" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Pessoa"
+    Clicar no tipo de Pesquisa e selecionar o tipo "CORREIO ELETRÔNICO"
+    Clicar no campo de pesquisa 'Correio Eletrônico' e preencher o valor "TESTE@INVÁLIDO"    
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: INFORME UM CORREIO ELETRÔNICO VÁLIDO.
+
+CT16 - Acesso ao Sistema – Pessoa/ Consulta por E-mail campo vazio
+    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
+    [Tags]             Pessoa/ Consulta | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "41316137864" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Pessoa"
+    Clicar no tipo de Pesquisa e selecionar o tipo "CORREIO ELETRÔNICO"
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: INFORME UM CORREIO ELETRÔNICO VÁLIDO.    
