@@ -15,6 +15,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT12-CadastroDePessoaCep.r
 Resource         ../2-PageElements/FluxosAlternativos/CT13-ConsultaDePessoaNome.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT14-ConsultaDePessoaNome.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT15_16-ConsultaDePessoaEmail.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT17-CadastroDeTurmaRegular.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -287,3 +288,45 @@ CT16 - Acesso ao Sistema – Pessoa/ Consulta por E-mail campo vazio
     Clicar no tipo de Pesquisa e selecionar o tipo "CORREIO ELETRÔNICO"
     Clicar no Botão "Pesquisar"
     Visualizar a mensagem: INFORME UM CORREIO ELETRÔNICO VÁLIDO.    
+
+Cenário 17 - Funcionalidade Cadastro de Turma – Infantil
+    [Documentation]    Esse teste verifica se é possível efetuar o
+    ...                cadastro de uma turma da Etapa Infantil
+    [Tags]             Cadastro de Turma | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Turmas"
+    Clicar em Nova Turma Regular
+    Na Turma, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Curso, selecionar "PRÉ-ESCOLA"
+    Em Ciclo, selecionar "ESTÁGIO I"
+    Em Período, selecionar "TARDE"
+    Em Turma, selecionar "W"
+    Em Grade de Aula, selecionar "GRADE DE HORARIO - TARDE"
+    Em Programa Curricular, selecionar "ESTÁGIO I"
+    Em Capacidade da Turma, inserir a quantidade "20"
+    Na Turma, clicar em Salvar
+    Visualizar a mensagem: SELECIONE UMA SALA FÍSICA PARA ASSOCIAR A TURMA.    
+    Clicar em OK no modal
+    Selecionar uma Sala Física
+    Limpar a capacidade da turma 
+    Na Turma, clicar em Salvar
+    Visualizar a mensagem: INFORME A CAPACIDADE DA TURMA.
+    Clicar em OK no modal
+    Em Capacidade da Turma, inserir a quantidade "20"
+    Em Grade de Aula, selecionar "SELECIONE"
+    Na Turma, clicar em Salvar
+    Visualizar a mensagem: INFORME A GRADE DE AULA.
+    Clicar em OK no modal
+    Em Grade de Aula, selecionar "GRADE DE HORARIO - TARDE"
+    Na Turma, clicar em Salvar
+    Visualizar a mensagem: INFORME O PROGRAMA CURRICULAR.    
+
+
+
+
+
