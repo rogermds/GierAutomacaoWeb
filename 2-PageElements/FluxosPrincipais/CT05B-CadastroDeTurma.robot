@@ -20,7 +20,7 @@ Clicar em Nova Turma Regular
     Execute JavaScript  document.getElementById("${botaoNovaTurmaTurma}").click();
     Wait Until Page Contains  Gerar Turma Regular
 
-Na Turma, em Etapa/Modalidade, selecionar "${etapaModalide}"
+No cadastro de turma, em Etapa/Modalidade, selecionar "${etapaModalide}"
     Set Suite Variable      ${etapaModalide}
     Run Keyword If    '${etapaModalide}' == 'EDUCAÇÃO INFANTIL'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("1|EI|0").trigger('chosen:updated');
     Run Keyword If    '${etapaModalide}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("4|EF|0").trigger('chosen:updated');

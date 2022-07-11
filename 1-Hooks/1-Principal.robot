@@ -3,6 +3,10 @@ Library    SeleniumLibrary
 
 *** Variable ***
 ${botaoCadastrar}               cphContent_btnCad
+${botaoPesquisar}               cphContent_btnPesquisar
+${botaoEditar}                  cphContent_btnEditar
+${botaoSalvar}                  cphContent_btnSalvar
+${botaoFinalizar}               cphContent_btnFinalizar
 
 *** Keywords ***
 Abrir o navegador
@@ -26,3 +30,15 @@ Entrar na funcionalidade "${funcionalidade}"
 
 Clicar no botão Cadastrar
     Execute JavaScript  document.getElementById("${botaoCadastrar}").click();
+
+Clicar em Pesquisar
+    Execute JavaScript  document.getElementById("${botaoPesquisar}").click(); 
+
+Clicar em Editar
+    Execute JavaScript  document.getElementById("${botaoPesquisar}").click(); 
+
+Clicar em Salvar
+    Execute JavaScript  document.getElementById("${botaoPesquisar}").click(); 
+
+Clicar em Finalizar
+    Execute JavaScript  document.getElementById("${botaoPesquisar}").click(); 
