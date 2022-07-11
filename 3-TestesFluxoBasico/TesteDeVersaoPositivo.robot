@@ -5,6 +5,8 @@ Resource         ../2-PageElements/FluxosPrincipais/CT01-Login.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT02-SelecaodeEstrutura.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT03-CadastroPessoa.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT04-ConsultaPessoa.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT05A-Calendario.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT05B-CadastroDeTurma.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -98,26 +100,95 @@ Test Teardown    Fechar o navegador
 #     No modal Deseja Cadastrar Outra Pessoa?, clicar em "Não"
 #     Verificar se o sistema retorna a página Consultar Pessoa
 
-Cenário 04-A: Funcionalidade Consulta de Pessoa – Secretaria
+# Cenário 04-A: Funcionalidade Consulta de Pessoa – Secretaria
+#     [Documentation]    Esse teste verifica se é possível efetuar o
+#     ...                cadastro de uma pessoa na secretaria
+#     [Tags]             Cadastro de Pessoa - Secretaria | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Pessoas"
+#     Entrar na funcionalidade "Pessoa"
+#     Em consulta, no campo Nome, inserir o nome "AGATHA GABRIELLY DOS SANTOS SOUZA"
+#     Em consulta, no campo D. Nascimento, inserir a data "15/06/2013"
+#     Clicar no botão "Pesquisar"
+#     Verificar se no grid é exibido o CPF "57266385814"
+#     Verificar se no grid é exibido o RG "60483237"
+#     Verificar se no grid é exibido a Data de Nascimento "15/06/2013"
+#     Clicar no botão "Ações"
+#     Clicar no botão "Visualizar"
+#     Verificar se aparece o texto "Visualizar Pessoa"
+#     Verificar se é exibido o nome "AGATHA GABRIELLY DOS SANTOS SOUZA"
+#     Verificar se é exibido a data de nascimento "15/06/2013"
+    
+# Cenário 05-A: Funcionalidade Calendário – Secretaria
+#     [Documentation]    Esse teste verifica se é possível vincular modalidades
+#     ...                ao calendário escolar
+#     [Tags]             Cadastro de Etapa/Modalide | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão Escolar"
+#     Entrar na funcionalidade "Calendário Escolar"
+#     No calendário, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+#     Em Calendário, selecionar CALENDÁRIO ESCOLAR SME 2022
+#     Clicar em Pesquisar
+#     Clicar em Editar
+#     Clicar em Salvar
+#     Em Calendário, selecionar CALENDÁRIO ESCOLAR SME 2022
+#     Clicar em Pesquisar
+#     Clicar em Finalizar
+#     Clicar em OK no modal Sucesso
+
+# Cenário 05-B: Funcionalidade Cadastro de Turma – Infantil
+#     [Documentation]    Esse teste verifica se é possível efetuar o
+#     ...                cadastro de uma turma da Etapa Infantil
+#     [Tags]             Cadastro de Turma | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão Escolar"
+#     Entrar na funcionalidade "Turmas"
+#     Clicar em Nova Turma Regular
+#     Na Turma, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+#     Em Curso, selecionar "PRÉ-ESCOLA"
+#     Em Ciclo, selecionar "ESTÁGIO II"
+#     Em Período, selecionar "MANHÃ"
+#     Em Turma, selecionar "W"
+#     Em Grade de Aula, selecionar "GRADE DE HORARIO - MANHÃ"
+#     Em Programa Curricular, selecionar "ESTÁGIO II"
+#     Selecionar uma Sala Física
+#     Em Capacidade da Turma, inserir a quantidade "20"
+#     Na Turma, clicar em Salvar
+#     No modal para cadastrar outra turma, clique em Não
+
+Cenário 05-C: Funcionalidade Cadastro de Turma – Fundamental
     [Documentation]    Esse teste verifica se é possível efetuar o
-    ...                cadastro de uma pessoa na secretaria
-    [Tags]             Cadastro de Pessoa - Secretaria | Fluxo Positivo
+    ...                cadastro de uma turma da Etapa Infantil
+    [Tags]             Cadastro de Turma | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pessoas"
-    Entrar na funcionalidade "Pessoa"
-    Em consulta, no campo Nome, inserir o nome "AGATHA GABRIELLY DOS SANTOS SOUZA"
-    Em consulta, no campo D. Nascimento, inserir a data "15/06/2013"
-    Clicar no botão "Pesquisar"
-    Verificar se no grid é exibido o CPF "57266385814"
-    Verificar se no grid é exibido o RG "60483237"
-    Verificar se no grid é exibido a Data de Nascimento "15/06/2013"
-    Clicar no botão "Ações"
-    Clicar no botão "Visualizar"
-    Verificar se aparece o texto "Visualizar Pessoa"
-    Verificar se é exibido o nome "AGATHA GABRIELLY DOS SANTOS SOUZA"
-    Verificar se é exibido a data de nascimento "15/06/2013"
-    
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Turmas"
+    Clicar em Nova Turma Regular
+    Na Turma, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Curso, selecionar "CICLO II"
+    Em Ciclo, selecionar "5° ANO"
+    Em Período, selecionar "TARDE"
+    Em Turma, selecionar "X"
+    Em Grade de Aula, selecionar "GRADE DE HORARIO - TARDE"
+    Em Programa Curricular, selecionar "5º ANO"
+    Selecionar uma Sala Física
+    Em Capacidade da Turma, inserir a quantidade "20"
+    Na Turma, clicar em Salvar
+    No modal para cadastrar outra turma, clique em Não
+

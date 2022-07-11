@@ -44,11 +44,9 @@ Clicar no checkbox Pessoa não possui correio eletrônico
 
 No campo Nacionalidade, selecionar "${nacionalidade}"
     Run Keyword If    '${nacionalidade}' == 'BRASILEIRA'  Execute JavaScript   $('#${campoNacionalidade}').val("1").trigger('chosen:updated');
-    Run Keyword If    '${nacionalidade}' == 'BRASILEIRA'  Execute JavaScript   $('#${campoNacionalidade}').trigger('change');
     Run Keyword If    '${nacionalidade}' == 'BRASILEIRO NASCIDO NO EXTERIOR'  Execute JavaScript   $('#${campoNacionalidade}').val("2").trigger('chosen:updated');
-    Run Keyword If    '${nacionalidade}' == 'BRASILEIRO NASCIDO NO EXTERIOR'  Execute JavaScript   $('#${campoNacionalidade}').trigger('change');
     Run Keyword If    '${nacionalidade}' == 'ESTRANGEIRO'  Execute JavaScript   $('#${campoNacionalidade}').val("3").trigger('chosen:updated');
-    Run Keyword If    '${nacionalidade}' == 'ESTRANGEIRO'  Execute JavaScript   $('#${campoNacionalidade}').trigger('change');
+    Execute JavaScript   $('#${campoNacionalidade}').trigger('change');
     Sleep  8
 
 No campo UF Nascimento, selecionar "${UF}"
