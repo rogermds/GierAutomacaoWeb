@@ -304,9 +304,9 @@ Cenário 17 - Funcionalidade Cadastro de Turma – Infantil
     Na Turma, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
     Em Curso, selecionar "PRÉ-ESCOLA"
     Em Ciclo, selecionar "ESTÁGIO I"
-    Em Período, selecionar "TARDE"
-    Em Turma, selecionar "W"
-    Em Grade de Aula, selecionar "GRADE DE HORARIO - TARDE"
+    Em Período, selecionar "MANHÃ"
+    Em Turma, selecionar "I"
+    Em Grade de Aula, selecionar "GRADE DE HORARIO - MANHÃ"
     Em Programa Curricular, selecionar "ESTÁGIO I"
     Em Capacidade da Turma, inserir a quantidade "20"
     Na Turma, clicar em Salvar
@@ -322,7 +322,7 @@ Cenário 17 - Funcionalidade Cadastro de Turma – Infantil
     Na Turma, clicar em Salvar
     Visualizar a mensagem: INFORME A GRADE DE AULA.
     Clicar em OK no modal
-    Em Grade de Aula, selecionar "GRADE DE HORARIO - TARDE"
+    Em Grade de Aula, selecionar "GRADE DE HORARIO - MANHÃ"
     Na Turma, clicar em Salvar
     Visualizar a mensagem: INFORME O PROGRAMA CURRICULAR.    
 

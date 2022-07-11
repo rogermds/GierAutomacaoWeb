@@ -8,7 +8,7 @@ ${campoEtapaModalidadeTurma}            cphContent_ddlTipoEnsino
 ${campoCursoTurma}                      cphContent_ddlCurso
 ${campoCicloTurma}                      cphContent_ddlCiclo
 ${campoPeriodoTurma}                    cphContent_ddlPeriodo
-${campoTurmaTurma}                      cphContent_ddlTurma_chosen
+${campoTurmaTurma}                      cphContent_ddlTurma
 ${campoGradeAulaTurma}                  cphContent_ddlCalendarioPadrao
 ${campoProgramaCurricularTurma}         cphContent_ddlProgramaCurricular
 ${campoSalaFisica}                      cphContent_dtlGerarClasse_lbtSelecionar_0
@@ -51,9 +51,9 @@ Em Período, selecionar "${periodo}"
     Run Keyword If    '${periodo}' == 'TARDE'  Execute JavaScript   $('#${campoPeriodoTurma}').val("14649|T|3").trigger('chosen:updated');
     Execute JavaScript   $('#${campoPeriodoTurma}').trigger('change');
     Sleep   8
-    Wait Until Element Is Visible    ${campoTurmaTurma}    10
 
 Em Turma, selecionar "${turma}"
+    Run Keyword If    '${turma}' == 'I'  Execute JavaScript   $('#${campoTurmaTurma}').val("9").trigger('chosen:updated');
     Run Keyword If    '${turma}' == 'W'  Execute JavaScript   $('#${campoTurmaTurma}').val("25").trigger('chosen:updated');
     Run Keyword If    '${turma}' == 'X'  Execute JavaScript   $('#${campoTurmaTurma}').val("24").trigger('chosen:updated');
     Run Keyword If    '${turma}' == 'Y'  Execute JavaScript   $('#${campoTurmaTurma}').val("23").trigger('chosen:updated');
@@ -61,6 +61,7 @@ Em Turma, selecionar "${turma}"
     Sleep   5
 
 Em Grade de Aula, selecionar "${gradeAula}"
+    Run Keyword If    '${gradeAula}' == 'SELECIONE'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("-1").trigger('chosen:updated');
     Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - MANHÃ'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("14710").trigger('chosen:updated');
     Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - TARDE'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("14711").trigger('chosen:updated');
     Execute JavaScript   $('#${campoGradeAulaTurma}').trigger('change');
