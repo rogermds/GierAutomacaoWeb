@@ -49,11 +49,9 @@ Clicar no Campo 'Correio Eletrônico' e digitar o Valor "${Email}"
 
 Clicar no campo 'Nacionalidade' e selecionar a opção "${Nacionalidade}"
     Run Keyword If    '${Nacionalidade}' == 'BRASILEIRA'  Execute JavaScript   $('#${campoNacionalidade}').val("1").trigger('chosen:updated');
-    Run Keyword If    '${Nacionalidade}' == 'BRASILEIRA'  Execute JavaScript   $('#${campoNacionalidade}').trigger('change');
     Run Keyword If    '${Nacionalidade}' == 'BRASILEIRO NASCIDO NO EXTERIOR'  Execute JavaScript   $('#${campoNacionalidade}').val("2").trigger('chosen:updated');
-    Run Keyword If    '${Nacionalidade}' == 'BRASILEIRO NASCIDO NO EXTERIOR'  Execute JavaScript   $('#${campoNacionalidade}').trigger('change');
     Run Keyword If    '${Nacionalidade}' == 'ESTRANGEIRO'  Execute JavaScript   $('#${campoNacionalidade}').val("3").trigger('chosen:updated');
-    Run Keyword If    '${Nacionalidade}' == 'ESTRANGEIRO'  Execute JavaScript   $('#${campoNacionalidade}').trigger('change');
+    Execute JavaScript   $('#${campoNacionalidade}').trigger('change');
     Sleep  5
 
 Clicar no campo 'UF' e selecionar a opção "${UF}"
