@@ -168,27 +168,50 @@ Test Teardown    Fechar o navegador
 #     Na Turma, clicar em Salvar
 #     No modal para cadastrar outra turma, clique em Não
 
-Cenário 05-C: Funcionalidade Cadastro de Turma – Fundamental
+# Cenário 05-C: Funcionalidade Cadastro de Turma – Fundamental
+#     [Documentation]    Esse teste verifica se é possível efetuar o
+#     ...                cadastro de uma turma da Etapa Infantil
+#     [Tags]             Cadastro de Turma | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão Escolar"
+#     Entrar na funcionalidade "Turmas"
+#     Clicar em Nova Turma Regular
+#     Na Turma, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+#     Em Curso, selecionar "CICLO II"
+#     Em Ciclo, selecionar "5° ANO"
+#     Em Período, selecionar "TARDE"
+#     Em Turma, selecionar "X"
+#     Em Grade de Aula, selecionar "GRADE DE HORARIO - TARDE"
+#     Em Programa Curricular, selecionar "5º ANO"
+#     Selecionar uma Sala Física
+#     Em Capacidade da Turma, inserir a quantidade "20"
+#     Na Turma, clicar em Salvar
+#     No modal para cadastrar outra turma, clique em Não
+
+Cenário 05-D: Funcionalidade Cadastro de Turma – EJA
     [Documentation]    Esse teste verifica se é possível efetuar o
     ...                cadastro de uma turma da Etapa Infantil
     [Tags]             Cadastro de Turma | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Turmas"
     Clicar em Nova Turma Regular
-    Na Turma, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Em Curso, selecionar "CICLO II"
-    Em Ciclo, selecionar "5° ANO"
-    Em Período, selecionar "TARDE"
-    Em Turma, selecionar "X"
-    Em Grade de Aula, selecionar "GRADE DE HORARIO - TARDE"
-    Em Programa Curricular, selecionar "5º ANO"
+    Na Turma, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE"
+    Em Curso, selecionar "CICLO I"
+    Em Ciclo, selecionar "SEMESTRE 3"
+    Em Período, selecionar "NOITE"
+    Em Turma, selecionar "W"
+    Em Grade de Aula, selecionar "GRADE DE HORARIO - NOITE"
+    Em Programa Curricular, selecionar "EJA"
     Selecionar uma Sala Física
     Em Capacidade da Turma, inserir a quantidade "20"
     Na Turma, clicar em Salvar
     No modal para cadastrar outra turma, clique em Não
-
