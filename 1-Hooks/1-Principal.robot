@@ -19,6 +19,7 @@ Fechar o navegador
 
 Verificar se aparece o texto "${texto}"
     Wait Until Page Contains    ${texto}    20
+    Sleep   1
 
 Entrar no módulo "${nomeModulo}"
     Execute JavaScript  xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
@@ -35,10 +36,10 @@ Clicar em Pesquisar
     Execute JavaScript  document.getElementById("${botaoPesquisar}").click(); 
 
 Clicar em Editar
-    Execute JavaScript  document.getElementById("${botaoPesquisar}").click(); 
+    Execute JavaScript  document.getElementById("${botaoEditar}").click(); 
 
 Clicar em Salvar
-    Execute JavaScript  document.getElementById("${botaoPesquisar}").click(); 
+    Execute JavaScript  document.getElementById("${botaoSalvar}").click(); 
 
 Clicar em Finalizar
-    Execute JavaScript  document.getElementById("${botaoPesquisar}").click(); 
+    Execute JavaScript  document.getElementById("${botaoFinalizar}").click(); 

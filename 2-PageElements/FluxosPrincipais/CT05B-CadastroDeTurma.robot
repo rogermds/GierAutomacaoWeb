@@ -20,21 +20,21 @@ Clicar em Nova Turma Regular
     Execute JavaScript  document.getElementById("${botaoNovaTurmaTurma}").click();
     Wait Until Page Contains  Gerar Turma Regular
 
-No cadastro de turma, em Etapa/Modalidade, selecionar "${etapaModalide}"
-    Set Suite Variable      ${etapaModalide}
-    Run Keyword If    '${etapaModalide}' == 'EDUCAÇÃO INFANTIL'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("1|EI|0").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalide}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("4|EF|0").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalide}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("5|EJA1S|1").trigger('chosen:updated');
+No cadastro de turma, em Etapa/Modalidade, selecionar "${etapaModalidade}"
+    Set Suite Variable      ${etapaModalidade}
+    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("1|EI|0").trigger('chosen:updated');
+    Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("4|EF|0").trigger('chosen:updated');
+    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("5|EJA1S|1").trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeTurma}').trigger('change');
     Sleep   3
 
 Em Curso, selecionar "${curso}"
     Run Keyword If    '${curso}' == 'CRECHE'  Execute JavaScript   $('#${campoCursoTurma}').val("1").trigger('chosen:updated');
     Run Keyword If    '${curso}' == 'PRÉ-ESCOLA'  Execute JavaScript   $('#${campoCursoTurma}').val("3").trigger('chosen:updated');
-    Run Keyword If    '${curso}' == 'CICLO I' and '${etapaModalide}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoCursoTurma}').val("2").trigger('chosen:updated');
-    Run Keyword If    '${curso}' == 'CICLO II' and '${etapaModalide}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoCursoTurma}').val("4").trigger('chosen:updated');
-    Run Keyword If    '${curso}' == 'CICLO I' and '${etapaModalide}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoCursoTurma}').val("5").trigger('chosen:updated');
-    Run Keyword If    '${curso}' == 'CICLO II' and '${etapaModalide}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoCursoTurma}').val("6").trigger('chosen:updated');
+    Run Keyword If    '${curso}' == 'CICLO I' and '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoCursoTurma}').val("2").trigger('chosen:updated');
+    Run Keyword If    '${curso}' == 'CICLO II' and '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoCursoTurma}').val("4").trigger('chosen:updated');
+    Run Keyword If    '${curso}' == 'CICLO I' and '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoCursoTurma}').val("5").trigger('chosen:updated');
+    Run Keyword If    '${curso}' == 'CICLO II' and '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoCursoTurma}').val("6").trigger('chosen:updated');
     Execute JavaScript   $('#${campoCursoTurma}').trigger('change');
     Sleep   3
 
@@ -76,6 +76,7 @@ Em Grade de Aula, selecionar "${gradeAula}"
     Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - MANHÃ'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("14710").trigger('chosen:updated');
     Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - TARDE'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("14711").trigger('chosen:updated');
     Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - NOITE'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("15274").trigger('chosen:updated');
+    Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - MISTO'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("15406").trigger('chosen:updated');
     Execute JavaScript   $('#${campoGradeAulaTurma}').trigger('change');
     Sleep   3
 

@@ -90,7 +90,7 @@ CT06 - Cadastro de Pessoa - E-mail inválido
     Clicar no campo 'Zona' e selecionar a opção "URBANO"
     Clicar no botão 'Incluir'
     Clicar no 'Botão Salvar'
-    Visualizar a mensagem: CORREIO ELETRÔNICO INVÁLIDO     
+    Visualizar a mensagem: CORREIO ELETRÔNICO INVÁLIDO     
 
 CT07 - Cadastro de Pessoa - Data de Nascimento sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
@@ -114,7 +114,7 @@ CT07 - Cadastro de Pessoa - Data de Nascimento sem preechimento
     Clicar no campo 'Zona' e selecionar a opção "URBANO"
     Clicar no botão 'Incluir'
     Clicar no 'Botão Salvar'
-    Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: DATA DE NASCIMENTO    
+    Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: DATA DE NASCIMENTO    
 
 CT08 - Cadastro de Pessoa - Nome sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
@@ -138,7 +138,7 @@ CT08 - Cadastro de Pessoa - Nome sem preechimento
     Clicar no campo 'Zona' e selecionar a opção "URBANO"
     Clicar no botão 'Incluir'
     Clicar no 'Botão Salvar'
-    Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: NOME      
+    Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: NOME      
 
 CT09 - Cadastro de Pessoa - Sexo sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
@@ -239,38 +239,38 @@ CT12 - Cadastro de Pessoa - Cep inválido
     Visualizar a mensagem: CEP NÃO ENCONTRADO
 
 CT13 - Acesso ao Sistema – Pessoa/ Consulta sem informar Nome
-    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
-    [Tags]             Pessoa/ Consulta | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Entrar no módulo "Gestão Escolar"
+    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
+    [Tags]             Pessoa/ Consulta | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "41316137864" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Pessoa"
     Clicar no Botão "Pesquisar"
     Visualizar a mensagem: OBRIGATÓRIO PREENCHER NOME E SOBRENOME OU NOME E DATA DE NASCIMENTO.   
 
 CT14 - Acesso ao Sistema – Pessoa/ Consulta inexistente por nome
-    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
-    [Tags]             Pessoa/ Consulta | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Entrar no módulo "Gestão Escolar"
+    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
+    [Tags]             Pessoa/ Consulta | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "41316137864" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Pessoa"
     Clicar no campo de pesquisa 'Nome' e preencher o valor "TESTE INVÁLIDO"    
     Clicar no Botão "Pesquisar"
     Visualizar a mensagem: NENHUM REGISTRO FOI ENCONTRADO.      
 
 CT15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
-    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
-    [Tags]             Pessoa/ Consulta | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Entrar no módulo "Gestão Escolar"
+    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
+    [Tags]             Pessoa/ Consulta | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "41316137864" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Pessoa"
     Clicar no tipo de Pesquisa e selecionar o tipo "CORREIO ELETRÔNICO"
     Clicar no campo de pesquisa 'Correio Eletrônico' e preencher o valor "TESTE@INVÁLIDO"    
@@ -278,13 +278,13 @@ CT15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
     Visualizar a mensagem: INFORME UM CORREIO ELETRÔNICO VÁLIDO.
 
 CT16 - Acesso ao Sistema – Pessoa/ Consulta por E-mail campo vazio
-    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
-    [Tags]             Pessoa/ Consulta | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Entrar no módulo "Gestão Escolar"
+    [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
+    [Tags]             Pessoa/ Consulta | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "41316137864" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Pessoa"
     Clicar no tipo de Pesquisa e selecionar o tipo "CORREIO ELETRÔNICO"
     Clicar no Botão "Pesquisar"
@@ -341,7 +341,7 @@ Cenário 18 - Funcionalidade Cadastro de Turma – Multisseriada
     Clicar em Nova Turma Multisseriada
     Na Turma, clicar em Salvar
     Visualizar a mensagem: SELECIONE MAIS UMA MATRIZ CURRICULAR PARA CADASTRAR A TURMA MULTISSERIADA.
-    Clicar em OK no modal   
+    Clicar em OK no modal
     Em Anual/Semanal, selecionar "ANUAL"
     Em Período, selecionar "MANHÃ"
     Em Grid, selecionar "ESTÁGIO I"
@@ -357,9 +357,4 @@ Cenário 18 - Funcionalidade Cadastro de Turma – Multisseriada
     Na Turma, clicar em Salvar
     Visualizar a mensagem: INFORME A CAPACIDADE DA TURMA.
     Clicar em OK no modal
-
-
-
-
-
-
+    

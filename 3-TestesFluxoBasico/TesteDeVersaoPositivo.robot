@@ -8,6 +8,7 @@ Resource         ../2-PageElements/FluxosPrincipais/CT04-ConsultaPessoa.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT05A-Calendario.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT05B-CadastroDeTurma.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT06-ConsultaDeTurma.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT07-AvaliacoesFrequencia.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -160,9 +161,9 @@ Test Teardown    Fechar o navegador
 #     Na Turma, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
 #     Em Curso, selecionar "PRÉ-ESCOLA"
 #     Em Ciclo, selecionar "ESTÁGIO II"
-#     Em Período, selecionar "MANHÃ"
+#     Em Período, selecionar "MISTO"
 #     Em Turma, selecionar "W"
-#     Em Grade de Aula, selecionar "GRADE DE HORARIO - MANHÃ"
+#     Em Grade de Aula, selecionar "GRADE DE HORARIO - MISTO"
 #     Em Programa Curricular, selecionar "ESTÁGIO II"
 #     Selecionar uma Sala Física
 #     Em Capacidade da Turma, inserir a quantidade "20"
@@ -217,21 +218,127 @@ Test Teardown    Fechar o navegador
 #     Na Turma, clicar em Salvar
 #     No modal para cadastrar outra turma, clique em Não
 
-Cenário 6: Funcionalidade Consulta de Turma
-    [Documentation]    Esse teste verifica se é possível efetuar a
-    ...                consulta de uma turma
+# Cenário 06A: Funcionalidade Consulta de Turma - Infantil
+#     [Documentation]    Esse teste verifica se é possível efetuar a
+#     ...                consulta de uma turma da Etapa Infantil
+#     [Tags]             Consulta de Turma Infantil | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão Escolar"
+#     Entrar na funcionalidade "Turmas"
+#     Na consulta de turma, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+#     Na consulta de turma, em Curso, selecionar "PRÉ-ESCOLA"
+#     Na consulta de turma, em Período, selecionar "MANHÃ"
+#     Na consulta de turma, em Ciclo, selecionar "ESTÁGIO II"
+#     Clicar em Pesquisar
+#     Verificar se aparece o texto "Resultado da Busca"
+
+# Cenário 06B: Funcionalidade Consulta de Turma - Fundamental
+#     [Documentation]    Esse teste verifica se é possível efetuar a
+#     ...                consulta de uma turma da Etapa Fundamental
+#     [Tags]             Consulta de Turma Fundamental | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão Escolar"
+#     Entrar na funcionalidade "Turmas"
+#     Na consulta de turma, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+#     Na consulta de turma, em Curso, selecionar "CICLO II"
+#     Na consulta de turma, em Período, selecionar "MANHÃ"
+#     Na consulta de turma, em Ciclo, selecionar "5° ANO"
+#     Clicar em Pesquisar
+#     Verificar se aparece o texto "Resultado da Busca"
+
+# Cenário 06C: Funcionalidade Consulta de Turma - EJA
+#     [Documentation]    Esse teste verifica se é possível efetuar a
+#     ...                consulta de uma turma da Etapa EJA
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão Escolar"
+#     Entrar na funcionalidade "Turmas"
+#     Na consulta de turma, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE"
+#     Na consulta de turma, em Curso, selecionar "CICLO I"
+#     Na consulta de turma, em Período, selecionar "NOITE"
+#     Na consulta de turma, em Ciclo, selecionar "SEMESTRE 3"
+#     Clicar em Pesquisar
+#     Verificar se aparece o texto "Resultado da Busca"
+
+Cenário 07A: Funcionalidade Avaliações e Frequência - Infantil
+    [Documentation]    Esse teste verifica se é possível consultar e
+    ...                registrar nota para a Etapa Infantil
     [Tags]             Consulta de Turma | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão Escolar"
-    Entrar na funcionalidade "Turmas"
-    Na consulta de turma, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Na consulta de turma, em Curso, selecionar "CICLO II"
-    Na consulta de turma, em Período, selecionar "MANHÃ"
-    Na consulta de turma, em Ciclo, selecionar "5° ANO"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Avaliações e Frequência"
+    Na consulta de avaliações, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Na consulta de avaliações, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
+    Na consulta de avaliações, em Turma, selecionar "EII A"
     Clicar em Pesquisar
-    Verificar se aparece o texto "Resultado da Busca"
-    
+    No primeiro aluno, em questionário, clicar em "Responder"
+    Marcar "ATINGIU OS OBJETIVOS" nas questões
+    Clicar em Salvar e Fechar
+    No modal de alerta, clicar em Ok
+    Clicar em Salvar
+    No modal de Cadastro Efetuado com Sucesso, clicar em Ok
+    No primeiro aluno, em questionário, clicar em "Responder"
+    Verificar se as questões foram marcadas conforme foram salvas
+
+# Cenário 07B: Funcionalidade Avaliações e Frequência - Fundamental
+#     [Documentation]    Esse teste verifica se é possível consultar e
+#     ...                registrar nota para a Etapa Fundamental
+#     [Tags]             Consulta de Turma | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Pedagógico"
+#     Entrar na funcionalidade "Avaliações e Frequência"
+#     Na consulta de avaliações, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+#     Na consulta de avaliações, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
+#     Na consulta de avaliações, em Turma, selecionar "EII A"
+#     Clicar em Pesquisar
+#     No primeiro aluno, em questionário, clicar em "Responder"
+#     Marcar "ATINGIU OS OBJETIVOS" nas questões
+#     Clicar em Salvar e Fechar
+#     No modal de alerta, clicar em Ok
+#     Clicar em Salvar
+#     No modal de Cadastro Efetuado com Sucesso, clicar em Ok
+#     No primeiro aluno, em questionário, clicar em "Responder"
+#     Verificar se as questões foram marcadas conforme foram salvas
+
+# Cenário 07B: Funcionalidade Avaliações e Frequência - Fundamental
+#     [Documentation]    Esse teste verifica se é possível consultar e
+#     ...                registrar nota para a Etapa Fundamental
+#     [Tags]             Consulta de Turma | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Pedagógico"
+#     Entrar na funcionalidade "Avaliações e Frequência"
+#     Na consulta de avaliações, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+#     Na consulta de avaliações, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
+#     Na consulta de avaliações, em Turma, selecionar "EII A"
+#     Clicar em Pesquisar
+#     No primeiro aluno, em questionário, clicar em "Responder"
+#     Marcar "ATINGIU OS OBJETIVOS" nas questões
+#     Clicar em Salvar e Fechar
+#     No modal de alerta, clicar em Ok
+#     Clicar em Salvar
+#     No modal de Cadastro Efetuado com Sucesso, clicar em Ok
+#     No primeiro aluno, em questionário, clicar em "Responder"
+#     Verificar se as questões foram marcadas conforme foram salvas
