@@ -1,380 +1,516 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220711 15:52:36.156" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220712 11:48:06.887" rpa="false" schemaversion="3">
 <suite id="s1" name="TesteDeVersaoPositivo" source="C:\Users\rogerio.santos\Desktop\Automação\Gier-TesteDeVersão-Web\3-TestesFluxoBasico\TesteDeVersaoPositivo.robot">
-<test id="s1-t1" name="Cenário 6: Funcionalidade Consulta de Turma" line="220">
+<test id="s1-t1" name="Cenário 07A: Funcionalidade Avaliações e Frequência - Infantil" line="274">
 <kw name="Abrir o navegador" library="1-Principal" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=https://www.google.com/</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the given ``url``.</doc>
-<msg timestamp="20220711 15:52:36.562" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20220711 15:52:36.562" endtime="20220711 15:52:38.788"/>
+<msg timestamp="20220712 11:48:07.940" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220712 11:48:07.940" endtime="20220712 11:48:11.146"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220711 15:52:38.788" endtime="20220711 15:52:38.921"/>
+<status status="PASS" starttime="20220712 11:48:11.147" endtime="20220712 11:48:11.268"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:36.561" endtime="20220711 15:52:38.921"/>
+<status status="PASS" starttime="20220712 11:48:07.939" endtime="20220712 11:48:11.268"/>
 </kw>
 <kw name="Acessar o ambiente &quot;https://guarulhoshomolog.gier.com.br/&quot;" library="CT01-Login" sourcename="Acessar o ambiente &quot;${url}&quot;">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url}</arg>
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
-<msg timestamp="20220711 15:52:38.922" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
-<status status="PASS" starttime="20220711 15:52:38.922" endtime="20220711 15:52:40.913"/>
+<msg timestamp="20220712 11:48:11.270" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
+<status status="PASS" starttime="20220712 11:48:11.270" endtime="20220712 11:48:14.854"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:38.922" endtime="20220711 15:52:40.913"/>
+<status status="PASS" starttime="20220712 11:48:11.270" endtime="20220712 11:48:14.854"/>
 </kw>
 <kw name="Entrar com as credenciais &quot;02867439817&quot; e &quot;12345678&quot;" library="CT01-Login" sourcename="Entrar com as credenciais &quot;${login}&quot; e &quot;${senha}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${tituloLogin}</arg>
 <arg>timeout=30</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220711 15:52:40.914" endtime="20220711 15:52:40.945"/>
+<status status="PASS" starttime="20220712 11:48:14.856" endtime="20220712 11:48:14.899"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoLogin}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220711 15:52:40.945" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
-<status status="PASS" starttime="20220711 15:52:40.945" endtime="20220711 15:52:41.036"/>
+<msg timestamp="20220712 11:48:14.899" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
+<status status="PASS" starttime="20220712 11:48:14.899" endtime="20220712 11:48:15.016"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoSenha}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220711 15:52:41.036" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
-<status status="PASS" starttime="20220711 15:52:41.036" endtime="20220711 15:52:41.140"/>
+<msg timestamp="20220712 11:48:15.018" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
+<status status="PASS" starttime="20220712 11:48:15.016" endtime="20220712 11:48:15.119"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${botaoLogin}</arg>
 <doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220711 15:52:41.141" level="INFO">Clicking button 'btnAcessar'.</msg>
-<status status="PASS" starttime="20220711 15:52:41.141" endtime="20220711 15:52:43.303"/>
+<msg timestamp="20220712 11:48:15.119" level="INFO">Clicking button 'btnAcessar'.</msg>
+<status status="PASS" starttime="20220712 11:48:15.119" endtime="20220712 11:48:17.459"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:40.913" endtime="20220711 15:52:43.303"/>
+<status status="PASS" starttime="20220712 11:48:14.856" endtime="20220712 11:48:17.459"/>
 </kw>
 <kw name="Verificar se aparece o texto &quot;Estrutura&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${texto}</arg>
 <arg>20</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220711 15:52:43.304" endtime="20220711 15:52:43.325"/>
+<status status="PASS" starttime="20220712 11:48:17.461" endtime="20220712 11:48:17.482"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:43.304" endtime="20220711 15:52:43.325"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220712 11:48:18.497" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220712 11:48:17.482" endtime="20220712 11:48:18.497"/>
+</kw>
+<status status="PASS" starttime="20220712 11:48:17.460" endtime="20220712 11:48:18.497"/>
 </kw>
 <kw name="Pesquisar &quot;VOLPI&quot; e selecionar o primeiro resultado" library="CT02-SelecaodeEstrutura" sourcename="Pesquisar &quot;${pesquisaEstrutura}&quot; e selecionar o primeiro resultado">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoPesquisaEstrutura}</arg>
 <arg>${pesquisaEstrutura}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220711 15:52:43.327" level="INFO">Typing text 'VOLPI' into text field '//input[contains(@class,'textBuscaEstrutura')]'.</msg>
-<status status="PASS" starttime="20220711 15:52:43.326" endtime="20220711 15:52:43.428"/>
+<msg timestamp="20220712 11:48:18.499" level="INFO">Typing text 'VOLPI' into text field '//input[contains(@class,'textBuscaEstrutura')]'.</msg>
+<status status="PASS" starttime="20220712 11:48:18.499" endtime="20220712 11:48:18.593"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${primeiroResultadoEstrutura}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220711 15:52:43.428" level="INFO">Clicking element '//html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]'.</msg>
-<status status="PASS" starttime="20220711 15:52:43.428" endtime="20220711 15:52:49.984"/>
+<msg timestamp="20220712 11:48:18.594" level="INFO">Clicking element '//html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]'.</msg>
+<status status="PASS" starttime="20220712 11:48:18.594" endtime="20220712 11:48:18.642"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:43.326" endtime="20220711 15:52:49.984"/>
+<status status="PASS" starttime="20220712 11:48:18.498" endtime="20220712 11:48:18.642"/>
 </kw>
 <kw name="Verificar se aparece o texto &quot;Operação&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${texto}</arg>
 <arg>20</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220711 15:52:49.988" endtime="20220711 15:52:50.013"/>
+<status status="PASS" starttime="20220712 11:48:18.644" endtime="20220712 11:48:25.206"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:49.986" endtime="20220711 15:52:50.013"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220712 11:48:26.215" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220712 11:48:25.207" endtime="20220712 11:48:26.215"/>
 </kw>
-<kw name="Entrar no módulo &quot;Gestão Escolar&quot;" library="1-Principal" sourcename="Entrar no módulo &quot;${nomeModulo}&quot;">
+<status status="PASS" starttime="20220712 11:48:18.643" endtime="20220712 11:48:26.216"/>
+</kw>
+<kw name="Entrar no módulo &quot;Pedagógico&quot;" library="1-Principal" sourcename="Entrar no módulo &quot;${nomeModulo}&quot;">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:50.015" level="INFO">Executing JavaScript:
-xPathResult = document.evaluate("//span[contains(.,'Gestão Escolar')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+<msg timestamp="20220712 11:48:26.218" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//span[contains(.,'Pedagógico')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:50.015" endtime="20220711 15:52:50.023"/>
+<status status="PASS" starttime="20220712 11:48:26.217" endtime="20220712 11:48:26.228"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult.singleNodeValue.click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:50.025" level="INFO">Executing JavaScript:
+<msg timestamp="20220712 11:48:26.229" level="INFO">Executing JavaScript:
 xPathResult.singleNodeValue.click()
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:50.024" endtime="20220711 15:52:50.040"/>
+<status status="PASS" starttime="20220712 11:48:26.228" endtime="20220712 11:48:26.243"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:50.014" endtime="20220711 15:52:50.041"/>
+<status status="PASS" starttime="20220712 11:48:26.217" endtime="20220712 11:48:26.243"/>
 </kw>
-<kw name="Entrar na funcionalidade &quot;Turmas&quot;" library="1-Principal" sourcename="Entrar na funcionalidade &quot;${funcionalidade}&quot;">
+<kw name="Entrar na funcionalidade &quot;Avaliações e Frequência&quot;" library="1-Principal" sourcename="Entrar na funcionalidade &quot;${funcionalidade}&quot;">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:50.044" level="INFO">Executing JavaScript:
-xPathResult = document.evaluate("//span[contains(@title,'Turmas')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+<msg timestamp="20220712 11:48:26.245" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//span[contains(@title,'Avaliações e Frequência')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:50.042" endtime="20220711 15:52:50.880"/>
+<status status="PASS" starttime="20220712 11:48:26.244" endtime="20220712 11:48:27.173"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult.singleNodeValue.click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:50.881" level="INFO">Executing JavaScript:
+<msg timestamp="20220712 11:48:27.175" level="INFO">Executing JavaScript:
 xPathResult.singleNodeValue.click()
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:50.880" endtime="20220711 15:52:50.892"/>
+<status status="PASS" starttime="20220712 11:48:27.174" endtime="20220712 11:48:27.185"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:50.042" endtime="20220711 15:52:50.892"/>
+<status status="PASS" starttime="20220712 11:48:26.244" endtime="20220712 11:48:27.186"/>
 </kw>
-<kw name="Na consulta de turma, em Etapa/Modalidade, selecionar &quot;ENSINO FUNDAMENTAL&quot;" library="CT06-ConsultaDeTurma" sourcename="Na consulta de turma, em Etapa/Modalidade, selecionar &quot;${etapaModalide}&quot;">
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${etapaModalide}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20220711 15:52:50.894" level="INFO">${etapaModalide} = ENSINO FUNDAMENTAL</msg>
-<status status="PASS" starttime="20220711 15:52:50.894" endtime="20220711 15:52:50.894"/>
-</kw>
+<kw name="Na consulta de avaliações, em Etapa/Modalidade, selecionar &quot;EDUCAÇÃO INFANTIL&quot;" library="CT07-AvaliacoesFrequencia" sourcename="Na consulta de avaliações, em Etapa/Modalidade, selecionar &quot;${etapaModalidade}&quot;">
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${etapaModalide}' == 'EDUCAÇÃO INFANTIL'</arg>
+<arg>'${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'</arg>
 <arg>Execute JavaScript</arg>
-<arg>$('#${campoEtapaModalidadeTurma}').val("1").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:50.894" endtime="20220711 15:52:50.894"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${etapaModalide}' == 'ENSINO FUNDAMENTAL'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoEtapaModalidadeTurma}').val("4").trigger('chosen:updated');</arg>
+<arg>$('#${campoEtapaModalidadeAvaliacoes}').val("1").trigger('chosen:updated');</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#${campoEtapaModalidadeTurma}').val("4").trigger('chosen:updated');</arg>
+<arg>$('#${campoEtapaModalidadeAvaliacoes}').val("1").trigger('chosen:updated');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:50.897" level="INFO">Executing JavaScript:
-$('#cphContent_ddlTipoEnsino').val("4").trigger('chosen:updated');
+<msg timestamp="20220712 11:48:27.190" level="INFO">Executing JavaScript:
+$('#cphContent_ddlEtapaModalidade').val("1").trigger('chosen:updated');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:50.897" endtime="20220711 15:52:51.834"/>
+<status status="PASS" starttime="20220712 11:48:27.188" endtime="20220712 11:48:28.689"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:50.896" endtime="20220711 15:52:51.834"/>
+<status status="PASS" starttime="20220712 11:48:27.188" endtime="20220712 11:48:28.690"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${etapaModalide}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'</arg>
+<arg>'${etapaModalidade}' == 'ENSINO FUNDAMENTAL'</arg>
 <arg>Execute JavaScript</arg>
-<arg>$('#${campoEtapaModalidadeTurma}').val("5").trigger('chosen:updated');</arg>
+<arg>$('#${campoEtapaModalidadeAvaliacoes}').val("4").trigger('chosen:updated');</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:51.834" endtime="20220711 15:52:51.835"/>
+<status status="PASS" starttime="20220712 11:48:28.690" endtime="20220712 11:48:28.691"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoEtapaModalidadeAvaliacoes}').val("5").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220712 11:48:28.691" endtime="20220712 11:48:28.691"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#${campoEtapaModalidadeTurma}').trigger('change');</arg>
+<arg>$('#${campoEtapaModalidadeAvaliacoes}').trigger('change');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:51.836" level="INFO">Executing JavaScript:
-$('#cphContent_ddlTipoEnsino').trigger('change');
+<msg timestamp="20220712 11:48:28.693" level="INFO">Executing JavaScript:
+$('#cphContent_ddlEtapaModalidade').trigger('change');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:51.835" endtime="20220711 15:52:51.846"/>
+<status status="PASS" starttime="20220712 11:48:28.692" endtime="20220712 11:48:28.699"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220711 15:52:54.851" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220711 15:52:51.846" endtime="20220711 15:52:54.851"/>
+<msg timestamp="20220712 11:48:31.715" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220712 11:48:28.700" endtime="20220712 11:48:31.715"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:50.893" endtime="20220711 15:52:54.851"/>
+<status status="PASS" starttime="20220712 11:48:27.187" endtime="20220712 11:48:31.715"/>
 </kw>
-<kw name="Na consulta de turma, em Curso, selecionar &quot;CICLO II&quot;" library="CT06-ConsultaDeTurma" sourcename="Na consulta de turma, em Curso, selecionar &quot;${curso}&quot;">
+<kw name="Na consulta de avaliações, em Professor, selecionar &quot;ADRIANA CRISTINA CAMPOS SCALICI&quot;" library="CT07-AvaliacoesFrequencia" sourcename="Na consulta de avaliações, em Professor, selecionar &quot;${professor}&quot;">
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${curso}' == 'CRECHE'</arg>
+<arg>'${professor}' == 'ADRIANA CRISTINA CAMPOS SCALICI'</arg>
 <arg>Execute JavaScript</arg>
-<arg>$('#${campoCursoTurma}').val("1").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:54.852" endtime="20220711 15:52:54.852"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${curso}' == 'PRÉ-ESCOLA'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoCursoTurma}').val("3").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:54.852" endtime="20220711 15:52:54.854"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${curso}' == 'CICLO I' and '${etapaModalide}' == 'ENSINO FUNDAMENTAL'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoCursoTurma}').val("2").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:54.854" endtime="20220711 15:52:54.854"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${curso}' == 'CICLO II' and '${etapaModalide}' == 'ENSINO FUNDAMENTAL'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoCursoTurma}').val("4").trigger('chosen:updated');</arg>
+<arg>$('#${campoProfessorAvalicoes}').val("6167").trigger('chosen:updated');</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#${campoCursoTurma}').val("4").trigger('chosen:updated');</arg>
+<arg>$('#${campoProfessorAvalicoes}').val("6167").trigger('chosen:updated');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:54.856" level="INFO">Executing JavaScript:
-$('#cphContent_ddlCurso').val("4").trigger('chosen:updated');
+<msg timestamp="20220712 11:48:31.718" level="INFO">Executing JavaScript:
+$('#cphContent_ddlProfessor').val("6167").trigger('chosen:updated');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:54.855" endtime="20220711 15:52:54.865"/>
+<status status="PASS" starttime="20220712 11:48:31.717" endtime="20220712 11:48:31.727"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:54.855" endtime="20220711 15:52:54.865"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${curso}' == 'CICLO I' and '${etapaModalide}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoCursoTurma}').val("5").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:54.865" endtime="20220711 15:52:54.865"/>
+<status status="PASS" starttime="20220712 11:48:31.717" endtime="20220712 11:48:31.727"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${curso}' == 'CICLO II' and '${etapaModalide}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'</arg>
+<arg>'${professor}' == 'xxxx'</arg>
 <arg>Execute JavaScript</arg>
-<arg>$('#${campoCursoTurma}').val("6").trigger('chosen:updated');</arg>
+<arg>$('#${campoProfessorAvalicoes}').val("4").trigger('chosen:updated');</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:54.866" endtime="20220711 15:52:54.867"/>
+<status status="PASS" starttime="20220712 11:48:31.728" endtime="20220712 11:48:31.728"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${professor}' == 'xxxx'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoProfessorAvalicoes}').val("5").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220712 11:48:31.728" endtime="20220712 11:48:31.728"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#${campoCursoTurma}').trigger('change');</arg>
+<arg>$('#${campoProfessorAvalicoes}').trigger('change');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:54.868" level="INFO">Executing JavaScript:
-$('#cphContent_ddlCurso').trigger('change');
+<msg timestamp="20220712 11:48:31.729" level="INFO">Executing JavaScript:
+$('#cphContent_ddlProfessor').trigger('change');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:54.867" endtime="20220711 15:52:54.875"/>
+<status status="PASS" starttime="20220712 11:48:31.728" endtime="20220712 11:48:31.736"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220711 15:52:57.877" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220711 15:52:54.875" endtime="20220711 15:52:57.877"/>
+<msg timestamp="20220712 11:48:34.751" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220712 11:48:31.736" endtime="20220712 11:48:34.751"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:54.852" endtime="20220711 15:52:57.878"/>
+<status status="PASS" starttime="20220712 11:48:31.716" endtime="20220712 11:48:34.751"/>
 </kw>
-<kw name="Na consulta de turma, em Período, selecionar &quot;MANHÃ&quot;" library="CT06-ConsultaDeTurma" sourcename="Na consulta de turma, em Período, selecionar &quot;${periodo}&quot;">
+<kw name="Na consulta de avaliações, em Turma, selecionar &quot;EII A&quot;" library="CT07-AvaliacoesFrequencia" sourcename="Na consulta de avaliações, em Turma, selecionar &quot;${turma}&quot;">
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${periodo}' == 'MISTO'</arg>
+<arg>'${turma}' == 'EII A'</arg>
 <arg>Execute JavaScript</arg>
-<arg>$('#${campoPeriodoTurma}').val("15347|MISTO").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:57.880" endtime="20220711 15:52:57.880"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${periodo}' == 'MANHÃ'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoPeriodoTurma}').val("15219|M").trigger('chosen:updated');</arg>
+<arg>$('#${campoTurmaAvalicoes}').val("110667").trigger('chosen:updated');</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#${campoPeriodoTurma}').val("15219|M").trigger('chosen:updated');</arg>
+<arg>$('#${campoTurmaAvalicoes}').val("110667").trigger('chosen:updated');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:57.882" level="INFO">Executing JavaScript:
-$('#cphContent_ddlPeriodo').val("15219|M").trigger('chosen:updated');
+<msg timestamp="20220712 11:48:34.753" level="INFO">Executing JavaScript:
+$('#cphContent_ddlClasse').val("110667").trigger('chosen:updated');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:57.881" endtime="20220711 15:52:57.896"/>
+<status status="PASS" starttime="20220712 11:48:34.753" endtime="20220712 11:48:34.763"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:57.881" endtime="20220711 15:52:57.896"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${periodo}' == 'TARDE'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoPeriodoTurma}').val("15220|T").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:57.896" endtime="20220711 15:52:57.897"/>
+<status status="PASS" starttime="20220712 11:48:34.752" endtime="20220712 11:48:34.763"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${periodo}' == 'NOITE'</arg>
+<arg>'${turma}' == 'xxxx'</arg>
 <arg>Execute JavaScript</arg>
-<arg>$('#${campoPeriodoTurma}').val("15221|N").trigger('chosen:updated');</arg>
+<arg>$('#${campoTurmaAvalicoes}').val("4").trigger('chosen:updated');</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:57.897" endtime="20220711 15:52:57.897"/>
-</kw>
-<status status="PASS" starttime="20220711 15:52:57.879" endtime="20220711 15:52:57.897"/>
-</kw>
-<kw name="Na consulta de turma, em Ciclo, selecionar &quot;5° ANO&quot;" library="CT06-ConsultaDeTurma" sourcename="Na consulta de turma, em Ciclo, selecionar &quot;${ciclo}&quot;">
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${ciclo}' == 'ESTÁGIO I'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoCicloTurma}').val("6|EI").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:57.898" endtime="20220711 15:52:57.898"/>
+<status status="PASS" starttime="20220712 11:48:34.764" endtime="20220712 11:48:34.764"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${ciclo}' == 'ESTÁGIO II'</arg>
+<arg>'${turma}' == 'xxxx'</arg>
 <arg>Execute JavaScript</arg>
-<arg>$('#${campoCicloTurma}').val("7|EII").trigger('chosen:updated');</arg>
+<arg>$('#${campoTurmaAvalicoes}').val("5").trigger('chosen:updated');</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:57.899" endtime="20220711 15:52:57.899"/>
+<status status="PASS" starttime="20220712 11:48:34.764" endtime="20220712 11:48:34.764"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${ciclo}' == '4° ANO'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoCicloTurma}').val("14|4º").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:57.899" endtime="20220711 15:52:57.899"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${ciclo}' == '5° ANO'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoCicloTurma}').val("15|5º").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#${campoCicloTurma}').val("15|5º").trigger('chosen:updated');</arg>
+<arg>$('#${campoTurmaAvalicoes}').trigger('change');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:57.901" level="INFO">Executing JavaScript:
-$('#cphContent_ddlCiclo').val("15|5º").trigger('chosen:updated');
+<msg timestamp="20220712 11:48:34.767" level="INFO">Executing JavaScript:
+$('#cphContent_ddlClasse').trigger('change');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:57.899" endtime="20220711 15:52:57.912"/>
+<status status="PASS" starttime="20220712 11:48:34.765" endtime="20220712 11:48:34.775"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:57.899" endtime="20220711 15:52:57.912"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220712 11:48:37.779" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220712 11:48:34.775" endtime="20220712 11:48:37.779"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${ciclo}' == 'SEMESTRE 3'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoCicloTurma}').val("43|S3").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:57.912" endtime="20220711 15:52:57.913"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${ciclo}' == 'SEMESTRE 4'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#${campoCicloTurma}').val("44|S4").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220711 15:52:57.913" endtime="20220711 15:52:57.913"/>
-</kw>
-<status status="PASS" starttime="20220711 15:52:57.898" endtime="20220711 15:52:57.913"/>
+<status status="PASS" starttime="20220712 11:48:34.752" endtime="20220712 11:48:37.779"/>
 </kw>
 <kw name="Clicar em Pesquisar" library="1-Principal">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>document.getElementById("${botaoPesquisar}").click();</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220711 15:52:57.915" level="INFO">Executing JavaScript:
+<msg timestamp="20220712 11:48:37.782" level="INFO">Executing JavaScript:
 document.getElementById("cphContent_btnPesquisar").click();
 Without any arguments.</msg>
-<status status="PASS" starttime="20220711 15:52:57.915" endtime="20220711 15:52:57.927"/>
+<status status="PASS" starttime="20220712 11:48:37.782" endtime="20220712 11:48:37.800"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:57.914" endtime="20220711 15:52:57.927"/>
+<status status="PASS" starttime="20220712 11:48:37.780" endtime="20220712 11:48:37.800"/>
 </kw>
-<kw name="Verificar se aparece o texto &quot;Resultado da Busca&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${texto}</arg>
-<arg>20</arg>
-<doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220711 15:52:57.929" endtime="20220711 15:52:58.446"/>
+<kw name="No primeiro aluno, em questionário, clicar em &quot;Responder&quot;" library="CT07-AvaliacoesFrequencia">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${botaoControleFrequencia}</arg>
+<arg>10</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220712 11:48:37.802" endtime="20220712 11:48:39.937"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:57.928" endtime="20220711 15:52:58.447"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${responderPrimeiroAluno}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:39.939" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_rptDigitaNf_lkbQuestionario_0").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:39.937" endtime="20220712 11:48:39.957"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${primeiraQuestao}</arg>
+<arg>10</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220712 11:48:39.958" endtime="20220712 11:48:40.625"/>
+</kw>
+<status status="PASS" starttime="20220712 11:48:37.802" endtime="20220712 11:48:40.625"/>
+</kw>
+<kw name="Marcar &quot;ATINGIU OS OBJETIVOS&quot; nas questões" library="CT07-AvaliacoesFrequencia">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${primeiraQuestao}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:40.629" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_1_0_1").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:40.628" endtime="20220712 11:48:40.639"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${segundaQuestao}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:40.640" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_2_0_2").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:40.639" endtime="20220712 11:48:40.650"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${terceiraQuestao}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:40.651" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_3_0_3").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:40.650" endtime="20220712 11:48:40.658"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${quartaQuestao}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:40.660" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_4_0_4").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:40.659" endtime="20220712 11:48:40.666"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${quintaQuestao}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:40.667" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_5_0_5").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:40.666" endtime="20220712 11:48:40.675"/>
+</kw>
+<status status="PASS" starttime="20220712 11:48:40.627" endtime="20220712 11:48:40.676"/>
+</kw>
+<kw name="Clicar em Salvar e Fechar" library="CT07-AvaliacoesFrequencia">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${salvarFechar}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:40.678" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_QuestionarioAvaliacao_btnSalvar").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:40.677" endtime="20220712 11:48:40.694"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${okModalSucesso}</arg>
+<arg>10</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220712 11:48:40.694" endtime="20220712 11:48:41.765"/>
+</kw>
+<status status="PASS" starttime="20220712 11:48:40.677" endtime="20220712 11:48:41.765"/>
+</kw>
+<kw name="No modal de alerta, clicar em Ok" library="CT07-AvaliacoesFrequencia">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${okModalSucesso}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:41.767" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_QuestionarioAvaliacao_MensagemPadrao_btnOk").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:41.767" endtime="20220712 11:48:41.781"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220712 11:48:46.794" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220712 11:48:41.781" endtime="20220712 11:48:46.794"/>
+</kw>
+<status status="PASS" starttime="20220712 11:48:41.766" endtime="20220712 11:48:46.794"/>
+</kw>
+<kw name="Clicar em Salvar" library="1-Principal">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${botaoSalvar}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:46.796" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_btnSalvar").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:46.795" endtime="20220712 11:48:46.808"/>
+</kw>
+<status status="PASS" starttime="20220712 11:48:46.795" endtime="20220712 11:48:46.808"/>
+</kw>
+<kw name="No modal de Cadastro Efetuado com Sucesso, clicar em Ok" library="CT07-AvaliacoesFrequencia">
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220712 11:48:54.822" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20220712 11:48:46.809" endtime="20220712 11:48:54.822"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${okModalCadastroSucesso}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:54.823" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:54.822" endtime="20220712 11:48:54.837"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${botaoControleFrequencia}</arg>
+<arg>10</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220712 11:48:54.837" endtime="20220712 11:48:54.867"/>
+</kw>
+<status status="PASS" starttime="20220712 11:48:46.808" endtime="20220712 11:48:54.868"/>
+</kw>
+<kw name="No primeiro aluno, em questionário, clicar em &quot;Responder&quot;" library="CT07-AvaliacoesFrequencia">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${botaoControleFrequencia}</arg>
+<arg>10</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220712 11:48:54.869" endtime="20220712 11:48:54.897"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${responderPrimeiroAluno}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 11:48:54.898" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_rptDigitaNf_lkbQuestionario_0").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 11:48:54.898" endtime="20220712 11:48:54.912"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${primeiraQuestao}</arg>
+<arg>10</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220712 11:48:54.912" endtime="20220712 11:48:55.909"/>
+</kw>
+<status status="PASS" starttime="20220712 11:48:54.868" endtime="20220712 11:48:55.909"/>
+</kw>
+<kw name="Verificar se as questões foram marcadas conforme foram salvas" library="CT07-AvaliacoesFrequencia">
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>${primeiraQuestao}</arg>
+<arg>checked</arg>
+<arg>true</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20220712 11:48:55.930" level="INFO">Element 'cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_1_0_1' attribute 'checked' contains value 'true'.</msg>
+<status status="PASS" starttime="20220712 11:48:55.911" endtime="20220712 11:48:55.930"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>${segundaQuestao}</arg>
+<arg>checked</arg>
+<arg>true</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20220712 11:48:55.952" level="INFO">Element 'cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_2_0_2' attribute 'checked' contains value 'true'.</msg>
+<status status="PASS" starttime="20220712 11:48:55.930" endtime="20220712 11:48:55.952"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>${terceiraQuestao}</arg>
+<arg>checked</arg>
+<arg>true</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20220712 11:48:55.973" level="INFO">Element 'cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_3_0_3' attribute 'checked' contains value 'true'.</msg>
+<status status="PASS" starttime="20220712 11:48:55.952" endtime="20220712 11:48:55.973"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>${quartaQuestao}</arg>
+<arg>checked</arg>
+<arg>true</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20220712 11:48:56.004" level="INFO">Element 'cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_4_0_4' attribute 'checked' contains value 'true'.</msg>
+<status status="PASS" starttime="20220712 11:48:55.973" endtime="20220712 11:48:56.004"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>${quintaQuestao}</arg>
+<arg>checked</arg>
+<arg>true</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20220712 11:48:56.030" level="INFO">Element 'cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_5_0_5' attribute 'checked' contains value 'true'.</msg>
+<status status="PASS" starttime="20220712 11:48:56.005" endtime="20220712 11:48:56.030"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220712 11:48:58.039" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220712 11:48:56.030" endtime="20220712 11:48:58.039"/>
+</kw>
+<status status="PASS" starttime="20220712 11:48:55.911" endtime="20220712 11:48:58.039"/>
 </kw>
 <kw name="Fechar o navegador" library="1-Principal" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20220711 15:52:58.584" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220711 15:52:58.450" endtime="20220711 15:52:58.584"/>
+<msg timestamp="20220712 11:48:58.203" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220712 11:48:58.040" endtime="20220712 11:48:58.203"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220711 15:52:58.586" endtime="20220711 15:53:00.800"/>
+<status status="PASS" starttime="20220712 11:48:58.203" endtime="20220712 11:49:00.434"/>
 </kw>
-<status status="PASS" starttime="20220711 15:52:58.448" endtime="20220711 15:53:00.800"/>
+<status status="PASS" starttime="20220712 11:48:58.040" endtime="20220712 11:49:00.434"/>
 </kw>
-<doc>Esse teste verifica se é possível efetuar a
-consulta de uma turma</doc>
+<doc>Esse teste verifica se é possível consultar e
+registrar nota para a Etapa Infantil</doc>
 <tag>Consulta de Turma | Fluxo Positivo</tag>
-<status status="PASS" starttime="20220711 15:52:36.560" endtime="20220711 15:53:00.801"/>
+<status status="PASS" starttime="20220712 11:48:07.937" endtime="20220712 11:49:00.435"/>
 </test>
-<status status="PASS" starttime="20220711 15:52:36.158" endtime="20220711 15:53:00.803"/>
+<status status="PASS" starttime="20220712 11:48:06.892" endtime="20220712 11:49:00.436"/>
 </suite>
 <statistics>
 <total>
