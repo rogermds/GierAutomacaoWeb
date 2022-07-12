@@ -50,7 +50,7 @@ Em Período, selecionar "${periodo}"
     Run Keyword If    '${periodo}' == 'MANHÃ'  Execute JavaScript   $('#${campoPeriodoTurma}').val("14648|M|2").trigger('chosen:updated');
     Run Keyword If    '${periodo}' == 'TARDE'  Execute JavaScript   $('#${campoPeriodoTurma}').val("14649|T|3").trigger('chosen:updated');
     Execute JavaScript   $('#${campoPeriodoTurma}').trigger('change');
-    Sleep   8
+    Sleep   2
 
 Em Turma, selecionar "${turma}"
     Run Keyword If    '${turma}' == 'I'  Execute JavaScript   $('#${campoTurmaTurma}').val("9").trigger('chosen:updated');
@@ -58,7 +58,7 @@ Em Turma, selecionar "${turma}"
     Run Keyword If    '${turma}' == 'X'  Execute JavaScript   $('#${campoTurmaTurma}').val("24").trigger('chosen:updated');
     Run Keyword If    '${turma}' == 'Y'  Execute JavaScript   $('#${campoTurmaTurma}').val("23").trigger('chosen:updated');
     Execute JavaScript   $('#${campoTurmaTurma}').trigger('change');
-    Sleep   5
+    Sleep   2
 
 Em Grade de Aula, selecionar "${gradeAula}"
     Run Keyword If    '${gradeAula}' == 'SELECIONE'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("-1").trigger('chosen:updated');
@@ -83,7 +83,8 @@ Visualizar a mensagem: SELECIONE UMA SALA FÍSICA PARA ASSOCIAR A TURMA.
     Sleep   3
 
 Clicar em OK no modal
-    Execute JavaScript  document.getElementById("${botaoOk}").click();
+    Execute JavaScript  document.getElementById("${botaoOk}").click();
+    Sleep    1
 
 Selecionar uma Sala Física
     Execute JavaScript  document.getElementById("${campoSalaFisica}").click();

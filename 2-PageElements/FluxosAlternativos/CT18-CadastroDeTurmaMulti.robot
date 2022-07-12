@@ -5,29 +5,22 @@ Library     FakerLibrary
 *** Variables ***
 ${botaoNovaTurmaMulti}                  cphContent_btnClasseMultisseriada
 ${campoAnualSemestral}                  cphContent_ddlTipoEnsino
-${campoCicloTurma}                      cphContent_ddlCiclo
-${campoPeriodoTurma}                    cphContent_ddlPeriodo
-${campoTurmaTurma}                      cphContent_ddlTurma
-${campoSalaFisica}                      cphContent_dtlGerarClasse_lbtSelecionar_0
-${campoCapacidadeTurma}                 cphContent_txtCapacidadeInformada
-${botaoSalvarTurma}                     cphContent_btnSalvar
-${botaoOk}                              cphContent_Mensagem_Padrao_btnOk
 
 *** Keywords ***
 Clicar em Nova Turma Multisseriada
     Execute JavaScript  document.getElementById("${botaoNovaTurmaMulti}").click();
-    Wait Until Page Contains  Gerar Turma Multisseriada
+    Wait Until Page Contains  Gerar Turma Multisseriada    10
 
 Visualizar a mensagem: SELECIONE MAIS UMA MATRIZ CURRICULAR PARA CADASTRAR A TURMA MULTISSERIADA.
     Wait Until Page Contains Element    //div[@class='divConteudo'][contains(.,'Selecione mais uma matriz curricular para cadastrar a Turma multisseriada')]
-    Sleep    5
+    Sleep    2
 
 Em Anual/Semanal, selecionar "${anualSemanal}"
     Run Keyword If    '${anualSemanal}' == 'ANUAL'  Execute JavaScript   $('#${campoAnualSemestral}').val("0").trigger('chosen:updated');
     Run Keyword If    '${anualSemanal}' == '1° SEMESTRE'  Execute JavaScript   $('#${campoAnualSemestral}').val("1").trigger('chosen:updated');
     Run Keyword If    '${anualSemanal}' == '2° SEMESTRE'  Execute JavaScript   $('#${campoAnualSemestral}').val("2").trigger('chosen:updated');
     Execute JavaScript   $('#${campoAnualSemestral}').trigger('change');
-    Sleep    5
+    Sleep    2
 
 Em Grid, selecionar "${cicloMulti}"
     Run Keyword If    '${cicloMulti}' == 'BERCARIO I'   Execute JavaScript  document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_0").click();
@@ -46,7 +39,7 @@ Em Grid, selecionar "${cicloMulti}"
     Run Keyword If    '${cicloMulti}' == '3° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_13").click();
     Run Keyword If    '${cicloMulti}' == '4° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_14").click();
     Run Keyword If    '${cicloMulti}' == '5° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_15").click();
-    Sleep    5
+    Sleep    2
 
 Visualizar a mensagem: SELECIONE A TURMA
     Wait Until Page Contains Element    //span[contains(.,'Selecione a Turma')]
