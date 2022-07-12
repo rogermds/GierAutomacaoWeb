@@ -16,6 +16,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT13-ConsultaDePessoaNome.
 Resource         ../2-PageElements/FluxosAlternativos/CT14-ConsultaDePessoaNome.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT15_16-ConsultaDePessoaEmail.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT17-CadastroDeTurmaRegular.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT18-CadastroDeTurmaMulti.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -289,10 +290,10 @@ CT16 - Acesso ao Sistema – Pessoa/ Consulta por E-mail campo vazio
     Clicar no Botão "Pesquisar"
     Visualizar a mensagem: INFORME UM CORREIO ELETRÔNICO VÁLIDO.    
 
-Cenário 17 - Funcionalidade Cadastro de Turma – Infantil
+Cenário 17 - Funcionalidade Cadastro de Turma – Regular
     [Documentation]    Esse teste verifica se é possível efetuar o
-    ...                cadastro de uma turma da Etapa Infantil
-    [Tags]             Cadastro de Turma | Fluxo Positivo
+    ...                cadastro de uma turma Regular
+    [Tags]             Cadastro de Turma | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -325,6 +326,38 @@ Cenário 17 - Funcionalidade Cadastro de Turma – Infantil
     Em Grade de Aula, selecionar "GRADE DE HORARIO - MANHÃ"
     Na Turma, clicar em Salvar
     Visualizar a mensagem: INFORME O PROGRAMA CURRICULAR.    
+
+Cenário 18 - Funcionalidade Cadastro de Turma – Multisseriada
+    [Documentation]    Esse teste verifica se é possível efetuar o
+    ...                cadastro de uma turma Multisseriada
+    [Tags]             Cadastro de Turma | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Turmas"
+    Clicar em Nova Turma Multisseriada
+    Na Turma, clicar em Salvar
+    Visualizar a mensagem: SELECIONE MAIS UMA MATRIZ CURRICULAR PARA CADASTRAR A TURMA MULTISSERIADA.
+    Clicar em OK no modal   
+    Em Anual/Semanal, selecionar "ANUAL"
+    Em Período, selecionar "MANHÃ"
+    Em Grid, selecionar "ESTÁGIO I"
+    Em Grid, selecionar "ESTÁGIO II"    
+    Na Turma, clicar em Salvar
+    Visualizar a mensagem: SELECIONE A TURMA
+    Clicar em OK no modal
+    Em Turma, selecionar "W"
+    Na Turma, clicar em Salvar
+    Visualizar a mensagem: SELECIONE UMA SALA FÍSICA PARA ASSOCIAR A TURMA.
+    Clicar em OK no modal
+    Selecionar uma Sala Física
+    Na Turma, clicar em Salvar
+    Visualizar a mensagem: INFORME A CAPACIDADE DA TURMA.
+    Clicar em OK no modal
+
 
 
 
