@@ -20,7 +20,7 @@ Clicar em Nova Turma Multisseriada
 
 Visualizar a mensagem: SELECIONE MAIS UMA MATRIZ CURRICULAR PARA CADASTRAR A TURMA MULTISSERIADA.
     Wait Until Page Contains Element    //div[@class='divConteudo'][contains(.,'Selecione mais uma matriz curricular para cadastrar a Turma multisseriada')]
-    Sleep    5
+    Sleep    8
 
 Em Anual/Semanal, selecionar "${anualSemanal}"
     Run Keyword If    '${anualSemanal}' == 'ANUAL'  Execute JavaScript   $('#${campoAnualSemestral}').val("0").trigger('chosen:updated');
