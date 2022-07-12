@@ -17,6 +17,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT14-ConsultaDePessoaNome.
 Resource         ../2-PageElements/FluxosAlternativos/CT15_16-ConsultaDePessoaEmail.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT17-CadastroDeTurmaRegular.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT18-CadastroDeTurmaMulti.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT19-ConsultaDeTurma.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -357,4 +358,20 @@ Cenário 18 - Funcionalidade Cadastro de Turma – Multisseriada
     Na Turma, clicar em Salvar
     Visualizar a mensagem: INFORME A CAPACIDADE DA TURMA.
     Clicar em OK no modal
+
+Cenário 19 - Funcionalidade Consulta de Turma 
+    [Documentation]    Esse teste verifica se é possível efetuar a
+    ...                Consulta de uma turma 
+    [Tags]             Consulta de Turma | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Turmas"
+    Em Ano Letivo, clicar em "SELECIONE"      
+    Clicar em 'Pesquisar'
+    Visualizar a mensagem: CAMPOS OBRIGATÓRIOS NÃO PREENCHIDO
+
     
