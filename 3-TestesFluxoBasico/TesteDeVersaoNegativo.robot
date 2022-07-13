@@ -18,6 +18,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT15_16-ConsultaDePessoaEm
 Resource         ../2-PageElements/FluxosAlternativos/CT17-CadastroDeTurmaRegular.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT18-CadastroDeTurmaMulti.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT19-ConsultaDeTurma.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT20-ControleDiarioDeFrequecia.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -373,5 +374,42 @@ Cenário 19 - Funcionalidade Consulta de Turma
     Em Ano Letivo, clicar em "SELECIONE"      
     Clicar em 'Pesquisar'
     Visualizar a mensagem: CAMPOS OBRIGATÓRIOS NÃO PREENCHIDO
+
+Cenário 20 - Funcionalidade Controle Diário de Frequência 
+    [Documentation]    Esse teste verifica se é possível efetuar o acesso 
+    ...                ao Diário de Frequência
+    [Tags]             Controle de Frequência | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Controle Diário de Frequência"    
+    Clicar em 'Pesquisar'
+    Visualizar a mensagem: INFORME O PROFESSOR.
+    Clicar em OK no modal
+    Em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Clicar em Pesquisar
+    Visualizar a mensagem: INFORME O PROFESSOR.
+    Clicar em OK no modal
+    Em Professor, selecionar "ALEXANDRE FERREIRA DE ALMEIDA"
+    Clicar em Pesquisar
+    Visualizar a mensagem: INFORME A TURMA.
+    Clicar em OK no modal
+    Em campo turma, selecionar "1B"    
+    Clicar em 'Pesquisar'
+    Clicar no botão 'Diário de Turma'
+    Clicar em Salvar
+    Visualizar a mensagem: É NECESSÁRIO SELECIONAR AO MENOS DOIS EDUCANDOS PARA PROSSEGUIR.
+    Clicar em OK no modal do Diário de Classe    
+    Selecionar dois Educandos na Grid 
+    Clicar em 'Incluir'
+    Clicar em Salvar
+    Visualizar a mensagem: EXISTEM CAMPOS DE PREENCHIMENTO OBRIGATÓRIO NÃO PREENCHIDOS. PREENCHA OS CAMPOS PARA CONTINUAR.
+        
+
+
+    
 
     

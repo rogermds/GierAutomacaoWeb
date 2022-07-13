@@ -2,6 +2,19 @@
 Library    SeleniumLibrary
 
 *** Variables ***
+${botaoNovaTurmaTurma}                  cphContent_btnCad
+${campoEtapaModalidadeTurma}            cphContent_ddlTipoEnsino
+${campoCursoTurma}                      cphContent_ddlCurso
+${campoCicloTurma}                      cphContent_ddlCiclo
+${campoPeriodoTurma}                    cphContent_ddlPeriodo
+${campoTurmaTurma}                      cphContent_ddlTurma
+${campoGradeAulaTurma}                  cphContent_ddlCalendarioPadrao
+${campoProgramaCurricularTurma}         cphContent_ddlProgramaCurricular
+${campoSalaFisica}                      cphContent_dtlGerarClasse_lbtSelecionar_0
+${campoCapacidadeTurma}                 cphContent_txtCapacidadeInformada
+${botaoSalvarTurma}                     cphContent_btnSalvar
+${botaoNaoTurma}                        cphContent_Mensagem_Padrao_btnNao  
+${botaoOk}                              cphContent_Mensagem_Padrao_btnOk
 
 
 *** Keywords ***
