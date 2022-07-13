@@ -144,7 +144,7 @@ Test Teardown    Fechar o navegador
 #     Em Calendário, selecionar CALENDÁRIO ESCOLAR SME 2022
 #     Clicar em Pesquisar
 #     Clicar em Finalizar
-#     Clicar em OK no modal Sucesso
+#     Clicar em OK no modal
 
 # Cenário 05-B: Funcionalidade Cadastro de Turma – Infantil
 #     [Documentation]    Esse teste verifica se é possível efetuar o

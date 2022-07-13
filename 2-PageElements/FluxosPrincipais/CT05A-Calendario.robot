@@ -20,6 +20,6 @@ Em Calendário, selecionar CALENDÁRIO ESCOLAR SME 2022
     Execute JavaScript   $('#${campoCalendarioCalendario}').trigger('change');
     Sleep   5
 
-Clicar em OK no modal Sucesso
-    Execute JavaScript  document.getElementById("${cphContent_Mensagem_Padrao_btnOk}").click();
+Clicar em OK no modal
+    Execute JavaScript  document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();
     Sleep   5

@@ -9,8 +9,8 @@ ${campoetapaModalidadeControle}            cphContent_ddlEtapaModalidade
 ${campoClasseControle}                     cphContent_ddlClasse
 ${campoProfControle}                       cphContent_ddlProfessor
 ${botaoDiarioDeTurmaControle}              cphContent_btnDiarioTurma
-${botaoIncluirDiario}                            cphContent_btnIncluir
-${botaoOk}                                 cphContent_Mensagem_Padrao_btnOk
+${botaoIncluirDiario}                      cphContent_btnIncluir
+
 
 *** Keywords ***
 Visualizar a mensagem: INFORME O PROFESSOR.
@@ -57,9 +57,11 @@ Clicar em OK no modal do Diário de Classe
 Selecionar dois Educandos na Grid 
     Execute JavaScript  document.getElementById("cphContent_dtlAlunos_chkAluno_0").click();
     Execute JavaScript  document.getElementById("cphContent_dtlAlunos_chkAluno_1").click();
-    
-Clicar em 'Incluir'
-    Execute JavaScript  document.getElementById("${botaoIncluirDiario}").click();
-    
+    Sleep    5
+ 
+Clicar em 'Incluir' no Diário de Classe
+    Execute JavaScript  document.getElementById("${botaoIncluirDiario}").click(); 
+    Sleep    5   
+
 Visualizar a mensagem: EXISTEM CAMPOS DE PREENCHIMENTO OBRIGATÓRIO NÃO PREENCHIDOS. PREENCHA OS CAMPOS PARA CONTINUAR.
-    Wait Until Page Contains Element    //span[contains(.,'EXISTEM CAMPOS DE PREENCHIMENTO OBRIGATÓRIO NÃO PREENCHIDOS. PREENCHA OS CAMPOS PARA CONTINUAR.')]
+    Wait Until Page Contains Element    //span[contains(.,'EXISTEM CAMPOS DE PREENCHIMENTO OBRIGATÓRIO NÃO PREENCHIDOS. PREENCHA OS CAMPOS PARA CONTINUAR.')]    
