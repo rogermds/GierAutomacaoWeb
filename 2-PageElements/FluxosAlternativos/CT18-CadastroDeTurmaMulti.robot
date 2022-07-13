@@ -23,7 +23,7 @@ Em Anual/Semanal, selecionar "${anualSemanal}"
     Sleep    2
 
 Em Grid, selecionar "${cicloMulti}"
-    Run Keyword If    '${cicloMulti}' == 'BERCARIO I'   Execute JavaScript  document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_0").click();
+    Run Keyword If    '${cicloMulti}' == 'BERCARIO I'   Execute JavaScript  document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_0").click();
     Run Keyword If    '${cicloMulti}' == 'BERCARIO II'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_1").click();
     Run Keyword If    '${cicloMulti}' == 'MATERNAL'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_2").click();
     Run Keyword If    '${cicloMulti}' == 'ESTÁGIO I'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_3").click();

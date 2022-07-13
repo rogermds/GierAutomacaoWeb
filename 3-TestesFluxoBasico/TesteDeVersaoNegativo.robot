@@ -18,6 +18,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT15_16-ConsultaDePessoaEm
 Resource         ../2-PageElements/FluxosAlternativos/CT17-CadastroDeTurmaRegular.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT18-CadastroDeTurmaMulti.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT19-ConsultaDeTurma.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT20-ControleDiarioDeFrequecia.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -25,7 +26,7 @@ Test Teardown    Fechar o navegador
 
 *** Test Cases ***
 
-CT01 - Acesso ao Sistema – Tela de Login Cenário A
+Cenário 01 - Acesso ao Sistema – Tela de Login Cenário A
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura
     ...    Com o usuário e senha especificados
     [Tags]    Seleção de Estrutura | Fluxo Negativo
@@ -33,7 +34,7 @@ CT01 - Acesso ao Sistema – Tela de Login Cenário A
     Entrar com as credenciais "41316137864" e "100200"	
     Verificar se o sistema exibe a mensagem: Login e/ou senha inválido(s)
 
-CT02 - Acesso ao Sistema – Tela de Login B 	
+Cenário 02 - Acesso ao Sistema – Tela de Login B 	
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura	
     ...    Com o usuário e senha especificados	
     [Tags]    Seleção de Estrutura | Fluxo Negativo	
@@ -41,7 +42,7 @@ CT02 - Acesso ao Sistema – Tela de Login B
     Entrar com as credenciais "gieronline.com.br" e "123456789"		
     Verificar se o sistema exibe a mensagem: Login e/ou senha inválido(s)
 
-CT03 - Acesso ao Sistema – Tela de Login C 	
+CTenário 03 - Acesso ao Sistema – Tela de Login C 	
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura	
     ...    Com o usuário e senha especificados	
     [Tags]    Seleção de Estrutura | Fluxo Negativo	
@@ -50,7 +51,7 @@ CT03 - Acesso ao Sistema – Tela de Login C
     Clicar no Campo 'EMAIL' e Preencher o Valor "rafaela.domingos@tecnogroup.com.br"
     Verificar se o sistema exibe a mensagem: Informe um CPF válido! 	
 	
-CT04 - Acesso ao Sistema – Tela de Login D 	
+Cenário 04 - Acesso ao Sistema – Tela de Login D 	
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura	
     ...    Com o usuário e senha especificados	
     [Tags]    Seleção de Estrutura | Fluxo Negativo	
@@ -59,7 +60,7 @@ CT04 - Acesso ao Sistema – Tela de Login D
     Clicar no Campo 'CPF' e Preencher o Valor "41316137864"	
     Verificar se o sistema exibe a mensagem: Informe um email válido! 
 
-CT05 - Acesso ao Sistema – Seleção de Estrutura 
+Cenário 05 - Acesso ao Sistema – Seleção de Estrutura 
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura	
     ...    Com o usuário e senha especificados	
     [Tags]    Seleção de Estrutura | Fluxo Negativo	
@@ -68,7 +69,7 @@ CT05 - Acesso ao Sistema – Seleção de Estrutura
     Informar a Estrutura MMMMMM
     Verificar se o sistema exibe a mensagem: Não há registros com o argumento pesquisado.
 
-CT06 - Cadastro de Pessoa - E-mail inválido
+Cenário 06 - Cadastro de Pessoa - E-mail inválido
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -93,7 +94,7 @@ CT06 - Cadastro de Pessoa - E-mail inválido
     Clicar no 'Botão Salvar'
     Visualizar a mensagem: CORREIO ELETRÔNICO INVÁLIDO     
 
-CT07 - Cadastro de Pessoa - Data de Nascimento sem preechimento
+Cenário 07 - Cadastro de Pessoa - Data de Nascimento sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -117,7 +118,7 @@ CT07 - Cadastro de Pessoa - Data de Nascimento sem preechimento
     Clicar no 'Botão Salvar'
     Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: DATA DE NASCIMENTO    
 
-CT08 - Cadastro de Pessoa - Nome sem preechimento
+Cenário 08 - Cadastro de Pessoa - Nome sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -141,7 +142,7 @@ CT08 - Cadastro de Pessoa - Nome sem preechimento
     Clicar no 'Botão Salvar'
     Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: NOME      
 
-CT09 - Cadastro de Pessoa - Sexo sem preechimento
+Cenário 09 - Cadastro de Pessoa - Sexo sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -165,7 +166,7 @@ CT09 - Cadastro de Pessoa - Sexo sem preechimento
     Clicar no 'Botão Salvar'
     Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: SEXO 
 
-CT10 - Cadastro de Pessoa - Nacionalidade sem preechimento
+Cenário 10 - Cadastro de Pessoa - Nacionalidade sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -194,7 +195,7 @@ CT10 - Cadastro de Pessoa - Nacionalidade sem preechimento
     Clicar no campo 'UF' e selecionar a opção "SP"
     Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: CIDADE DE NASCIMENTO    
 
-CT11 - Cadastro de Pessoa - Endereço não informado
+Cenário 11 - Cadastro de Pessoa - Endereço não informado
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -217,7 +218,7 @@ CT11 - Cadastro de Pessoa - Endereço não informado
     Clicar no 'Botão Salvar'
     Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: ENDEREÇOS: AO MENOS UM ENDEREÇO RESIDENCIAL    
 
-CT12 - Cadastro de Pessoa - Cep inválido
+Cenário 12 - Cadastro de Pessoa - Cep inválido
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -239,7 +240,7 @@ CT12 - Cadastro de Pessoa - Cep inválido
     Clicar no campo 'Numero' e digitar o valor "134"
     Visualizar a mensagem: CEP NÃO ENCONTRADO
 
-CT13 - Acesso ao Sistema – Pessoa/ Consulta sem informar Nome
+Cenário 13 - Acesso ao Sistema – Pessoa/ Consulta sem informar Nome
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -251,7 +252,7 @@ CT13 - Acesso ao Sistema – Pessoa/ Consulta sem informar Nome
     Clicar no Botão "Pesquisar"
     Visualizar a mensagem: OBRIGATÓRIO PREENCHER NOME E SOBRENOME OU NOME E DATA DE NASCIMENTO.   
 
-CT14 - Acesso ao Sistema – Pessoa/ Consulta inexistente por nome
+Cenário 14 - Acesso ao Sistema – Pessoa/ Consulta inexistente por nome
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -264,7 +265,7 @@ CT14 - Acesso ao Sistema – Pessoa/ Consulta inexistente por nome
     Clicar no Botão "Pesquisar"
     Visualizar a mensagem: NENHUM REGISTRO FOI ENCONTRADO.      
 
-CT15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
+Cenário 15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -278,7 +279,7 @@ CT15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
     Clicar no Botão "Pesquisar"
     Visualizar a mensagem: INFORME UM CORREIO ELETRÔNICO VÁLIDO.
 
-CT16 - Acesso ao Sistema – Pessoa/ Consulta por E-mail campo vazio
+Cenário 16 - Acesso ao Sistema – Pessoa/ Consulta por E-mail campo vazio
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -373,5 +374,42 @@ Cenário 19 - Funcionalidade Consulta de Turma
     Em Ano Letivo, clicar em "SELECIONE"      
     Clicar em 'Pesquisar'
     Visualizar a mensagem: CAMPOS OBRIGATÓRIOS NÃO PREENCHIDO
+
+Cenário 20 - Funcionalidade Controle Diário de Frequência 
+    [Documentation]    Esse teste verifica se é possível efetuar o acesso 
+    ...                ao Diário de Frequência
+    [Tags]             Controle de Frequência | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Controle Diário de Frequência"    
+    Clicar em 'Pesquisar'
+    Visualizar a mensagem: INFORME O PROFESSOR.
+    Clicar em OK no modal
+    Em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Clicar em Pesquisar
+    Visualizar a mensagem: INFORME O PROFESSOR.
+    Clicar em OK no modal
+    Em Professor, selecionar "ALEXANDRE FERREIRA DE ALMEIDA"
+    Clicar em Pesquisar
+    Visualizar a mensagem: INFORME A TURMA.
+    Clicar em OK no modal
+    Em campo turma, selecionar "1B"    
+    Clicar em 'Pesquisar'
+    Clicar no botão 'Diário de Turma'
+    Clicar em Salvar
+    Visualizar a mensagem: É NECESSÁRIO SELECIONAR AO MENOS DOIS EDUCANDOS PARA PROSSEGUIR.
+    Clicar em OK no modal do Diário de Classe    
+    Selecionar dois Educandos na Grid 
+    Clicar em 'Incluir' no Diário de Classe
+    Clicar em Salvar
+    Visualizar a mensagem: EXISTEM CAMPOS DE PREENCHIMENTO OBRIGATÓRIO NÃO PREENCHIDOS. PREENCHA OS CAMPOS PARA CONTINUAR.
+        
+
+
+    
 
     

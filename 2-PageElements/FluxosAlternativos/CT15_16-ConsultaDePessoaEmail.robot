@@ -21,7 +21,7 @@ Clicar no tipo de Pesquisa e selecionar o tipo "${tipoPesquisa}"
     Sleep    5
 
 Clicar no campo de pesquisa 'Correio Eletrônico' e preencher o valor "${Email}"
-    Execute JavaScript  document.getElementById("${campoEmailPesquisa}").click();
+    Execute JavaScript  document.getElementById("${campoEmailPesquisa}").click();
     Input Text    ${campoEmailPesquisa}    ${Email}
     
 Visualizar a mensagem: INFORME UM CORREIO ELETRÔNICO VÁLIDO.
