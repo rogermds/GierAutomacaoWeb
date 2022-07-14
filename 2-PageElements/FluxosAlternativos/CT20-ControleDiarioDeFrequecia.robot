@@ -50,7 +50,7 @@ Visualizar a mensagem: É NECESSÁRIO SELECIONAR AO MENOS DOIS EDUCANDOS PARA PR
     Wait Until Page Contains Element    //span[contains(.,'É NECESSÁRIO SELECIONAR AO MENOS DOIS EDUCANDOS PARA PROSSEGUIR.')]
     Sleep    3
 
-Clicar em OK no modal do Diário de Classe
+Clicar em OK no modal de alerta
     Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnOk").click();
     Sleep    2    
 

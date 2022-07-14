@@ -7,6 +7,7 @@ ${botaoPesquisar}               cphContent_btnPesquisar
 ${botaoEditar}                  cphContent_btnEditar
 ${botaoSalvar}                  cphContent_btnSalvar
 ${botaoFinalizar}               cphContent_btnFinalizar
+${botaoLimpar}                  cphContent_btnLimpar
 
 *** Keywords ***
 Abrir o navegador

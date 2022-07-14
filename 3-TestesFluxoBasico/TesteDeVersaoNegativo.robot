@@ -20,6 +20,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT18-CadastroDeTurmaMulti.
 Resource         ../2-PageElements/FluxosAlternativos/CT19-ConsultaDeTurma.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT20-ControleDiarioDeFrequecia.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT21-AtaDeConselho.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT22-HistóricoEscolar.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -438,7 +439,42 @@ Cenário 22 - Funcionalidade Histórico Escolar
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Educandos"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"    
+    Entrar na funcionalidade "Histórico Escolar"
+    Clicar em Pesquisar
+    Visualizar a mensagem: NENHUM REGISTRO FOI ENCONTRADO.
+    Clicar em OK no modal
+    Em código do Educando, informar "103971"
+    Em Educando, informar "AARON RODRIGO NINA YUJIRA"
+    Clicar em Pesquisar
+    Visualizar a mensagem: NENHUM REGISTRO FOI ENCONTRADO.
+    Clicar em OK no modal
+    Clicar no botão Limpar
+    Em Educando, informar "."
+    Clicar em Pesquisar
+    Visualizar a mensagem: NENHUM REGISTRO FOI ENCONTRADO.
+    Clicar em OK no modal
+    Clicar no botão Limpar
+    Em código do Educando, informar "1039710"
+    Em Educando, informar "AARON RODRIGO NINA YUJIRA"    
+    Clicar em Pesquisar
+    Clicar na ação Histórico Escolar
+    Clicar em 'Incluir' para a Observação
+    Visualizar a mensagem: CAMPO CICLO OBRIGATÓRIO!
+    Clicar em OK no modal de alerta
+    Em Observações, selecionar "1°"
+    Clicar em 'Incluir' para a Observação
+    # Visualizar a mensagem: CAMPO OBSERVAÇÕES GERAL DO ANO LETIVO OBRIGATÓRIO!
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -11,4 +11,4 @@ Clicar no campo de pesquisa 'Nome' e preencher o valor "${Nome}"
     Input Text    ${campoNomePesquisa}    ${Nome}
     
 Visualizar a mensagem: NENHUM REGISTRO FOI ENCONTRADO.     
-    Wait Until Page Contains Element    cphContent_MensagemPadrao_lblMsg
+    Wait Until Page Contains Element    //span[contains(.,'Nenhum registro foi encontrado.')]    5
