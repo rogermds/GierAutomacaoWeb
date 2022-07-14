@@ -17,10 +17,12 @@ Visualizar o texto: PESQUISAR EDUCANDO
 Em código do Educando, informar "${codEducando}"
     Execute JavaScript  document.getElementById("${campoCodEducando}").click();
     Input Text    ${campoCodEducando}    ${codEducando}
-    
+    Sleep    3
+
 Em Educando, informar "${nomeEducando}"
     Execute JavaScript  document.getElementById("${campoEducando}").click();
     Input Text    ${campoEducando}    ${nomeEducando}
+    Sleep    3
 
 Clicar no botão Limpar
     Execute JavaScript  document.getElementById("${botaoLimpar}").click();
@@ -35,20 +37,16 @@ Clicar em 'Incluir' para a Observação
     
 Visualizar a mensagem: CAMPO CICLO OBRIGATÓRIO!
     Wait Until Page Contains Element    //span[contains(.,'Campo Ciclo Obrigatório!')]
-    Sleep    5
+    Sleep    3
 
 Em Observações, selecionar "${anoLetivoObservacao}"
-    Run Keyword If    '${anoLetivoObservacao}' == '1°'  Execute JavaScript   $('cphContent_rbtListaCorsoCiclo_0').val("11").trigger('chosen:updated');
-    Execute JavaScript   $('cphContent_rbtListaCorsoCiclo_0').trigger('change');
-    Run Keyword If    '${anoLetivoObservacao}' == '2°'  Execute JavaScript   $('cphContent_rbtListaCorsoCiclo_1').val("12").trigger('chosen:updated');
-    Execute JavaScript   $('cphContent_rbtListaCorsoCiclo_1').trigger('change');
-    Run Keyword If    '${anoLetivoObservacao}' == '3°'  Execute JavaScript   $('cphContent_rbtListaCorsoCiclo_2').val("13").trigger('chosen:updated');
-    Execute JavaScript   $(phContent_rbtListaCorsoCiclo_2').trigger('change');
-    Run Keyword If    '${anoLetivoObservacao}' == '4°'  Execute JavaScript   $('cphContent_rbtListaCorsoCiclo_3').val("14").trigger('chosen:updated');
-    Execute JavaScript   $(phContent_rbtListaCorsoCiclo_3').trigger('change');
-    Run Keyword If    '${anoLetivoObservacao}' == '5°'  Execute JavaScript   $('cphContent_rbtListaCorsoCiclo_4').val("15").trigger('chosen:updated');
-    Execute JavaScript   $(phContent_rbtListaCorsoCiclo_4').trigger('change');
+    Run Keyword If    '${anoLetivoObservacao}' == '1°'  Execute JavaScript  document.getElementById("cphContent_rbtListaCorsoCiclo_0").click();
+    Run Keyword If    '${anoLetivoObservacao}' == '2°'  Execute JavaScript   document.getElementById("cphContent_rbtListaCorsoCiclo_1").click();
+    Run Keyword If    '${anoLetivoObservacao}' == '3°'  Execute JavaScript   document.getElementById("cphContent_rbtListaCorsoCiclo_2").click();
+    Run Keyword If    '${anoLetivoObservacao}' == '4°'  Execute JavaScript   document.getElementById("cphContent_rbtListaCorsoCiclo_3").click();
+    Run Keyword If    '${anoLetivoObservacao}' == '5°'  Execute JavaScript   document.getElementById("cphContent_rbtListaCorsoCiclo_4").click();
     Sleep    8
 
 Visualizar a mensagem: CAMPO OBSERVAÇÕES GERAL DO ANO LETIVO OBRIGATÓRIO!
-    Wait Until Page Contains Element    //span[contains(.,'Campo Observações Geral do Ano Letivo Obrigatório!')]
+    Wait Until Page Contains Element    //div[@class='divConteudo'][contains(.,'Campo Observações Geral do Ano Letivo Obrigatório!')]    
+    

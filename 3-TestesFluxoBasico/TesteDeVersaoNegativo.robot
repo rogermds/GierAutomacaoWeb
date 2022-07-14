@@ -404,7 +404,7 @@ Cenário 20 - Funcionalidade Controle Diário de Frequência
     Clicar no botão 'Diário de Turma'
     Clicar em Salvar
     Visualizar a mensagem: É NECESSÁRIO SELECIONAR AO MENOS DOIS EDUCANDOS PARA PROSSEGUIR.
-    Clicar em OK no modal do Diário de Classe    
+    Clicar em OK no modal de alerta   
     Selecionar dois Educandos na Grid 
     Clicar em 'Incluir' no Diário de Classe
     Clicar em Salvar
@@ -463,7 +463,7 @@ Cenário 22 - Funcionalidade Histórico Escolar
     Clicar em OK no modal de alerta
     Em Observações, selecionar "1°"
     Clicar em 'Incluir' para a Observação
-    # Visualizar a mensagem: CAMPO OBSERVAÇÕES GERAL DO ANO LETIVO OBRIGATÓRIO!
+    Visualizar a mensagem: CAMPO OBSERVAÇÕES GERAL DO ANO LETIVO OBRIGATÓRIO!
 
 
 
