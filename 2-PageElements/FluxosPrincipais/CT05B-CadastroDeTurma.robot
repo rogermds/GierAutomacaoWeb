@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
+
 ${botaoNovaTurmaTurma}                  cphContent_btnCad
 ${campoEtapaModalidadeTurma}            cphContent_ddlTipoEnsino
 ${campoCursoTurma}                      cphContent_ddlCurso
@@ -14,6 +15,8 @@ ${campoSalaFisica}                      cphContent_dtlGerarClasse_lbtSelecionar_
 ${campoCapacidadeTurma}                 cphContent_txtCapacidadeInformada
 ${botaoSalvarTurma}                     cphContent_btnSalvar
 ${botaoNaoTurma}                        cphContent_Mensagem_Padrao_btnNao
+${botaoNovaTurmaMulti}                  cphContent_btnClasseMultisseriada
+${campoAnualSemestral}                  cphContent_ddlTipoEnsino
 
 *** Keywords ***
 Clicar em Nova Turma Regular
@@ -54,6 +57,7 @@ Em Período, selecionar "${periodo}"
     Run Keyword If    '${periodo}' == 'MANHÃ'  Execute JavaScript   $('#${campoPeriodoTurma}').val("14648|M|2").trigger('chosen:updated');
     Run Keyword If    '${periodo}' == 'TARDE'  Execute JavaScript   $('#${campoPeriodoTurma}').val("14649|T|3").trigger('chosen:updated');
     Run Keyword If    '${periodo}' == 'NOITE'  Execute JavaScript   $('#${campoPeriodoTurma}').val("15221|N|4").trigger('chosen:updated');
+    Run Keyword If    '${periodo}' == 'INTERMEDIÁRIO'  Execute JavaScript   $('#${campoPeriodoTurma}').val("15332|IN|5").trigger('chosen:updated');
     Execute JavaScript   $('#${campoPeriodoTurma}').trigger('change');
     Sleep   3
 
@@ -100,3 +104,33 @@ No modal para cadastrar outra turma, clique em Não
     Execute JavaScript  document.getElementById("${botaoNaoTurma}").click();
     Sleep   3
     Wait Until Page Contains  Consultar Turma
+
+Clicar em Nova Turma Multisseriada
+    Execute JavaScript  document.getElementById("${botaoNovaTurmaMulti}").click();
+    Wait Until Page Contains  Gerar Turma Multisseriada    10
+
+Em Anual/Semanal, selecionar "${anualSemanal}"
+    Run Keyword If    '${anualSemanal}' == 'ANUAL'  Execute JavaScript   $('#${campoAnualSemestral}').val("0").trigger('chosen:updated');
+    Run Keyword If    '${anualSemanal}' == '1° SEMESTRE'  Execute JavaScript   $('#${campoAnualSemestral}').val("1").trigger('chosen:updated');
+    Run Keyword If    '${anualSemanal}' == '2° SEMESTRE'  Execute JavaScript   $('#${campoAnualSemestral}').val("2").trigger('chosen:updated');
+    Execute JavaScript   $('#${campoAnualSemestral}').trigger('change');
+    Sleep    2
+
+No grid de Etapa, selecionar "${cicloMulti}"
+    Run Keyword If    '${cicloMulti}' == 'BERCARIO I'   Execute JavaScript  document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_0").click();
+    Run Keyword If    '${cicloMulti}' == 'BERCARIO II'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_1").click();
+    Run Keyword If    '${cicloMulti}' == 'MATERNAL'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_2").click();
+    Run Keyword If    '${cicloMulti}' == 'ESTÁGIO I'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_3").click();
+    Run Keyword If    '${cicloMulti}' == 'ESTÁGIO II'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_4").click();
+    Run Keyword If    '${cicloMulti}' == '1° ANO'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_5").click();
+    Run Keyword If    '${cicloMulti}' == '2° ANO'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_6").click();
+    Run Keyword If    '${cicloMulti}' == '3° ANO'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_7").click();
+    Run Keyword If    '${cicloMulti}' == '4° ANO'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_8").click();
+    Run Keyword If    '${cicloMulti}' == '5° ANO'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_9").click();
+    Run Keyword If    '${cicloMulti}' == 'ATENDIMENTO EDUCACIONAL ESPECIALIZADO'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_11").click();
+    Run Keyword If    '${cicloMulti}' == '1° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_10").click();
+    Run Keyword If    '${cicloMulti}' == '2° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_12").click();
+    Run Keyword If    '${cicloMulti}' == '3° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_13").click();
+    Run Keyword If    '${cicloMulti}' == '4° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_14").click();
+    Run Keyword If    '${cicloMulti}' == '5° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_15").click();
+    Sleep    2

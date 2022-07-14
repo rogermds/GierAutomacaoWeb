@@ -22,7 +22,7 @@ Em Ano Letivo, clicar em "${anoLetivo}"
     Sleep    2
 
 Clicar em 'Pesquisar'
-    Execute JavaScript  document.getElementById("${botaoPesquisar}").click();
+    Execute JavaScript  document.getElementById("${botaoPesquisar}").click();
 
 Visualizar a mensagem: CAMPOS OBRIGATÓRIOS NÃO PREENCHIDO
     Wait Until Page Contains Element    //span[contains(.,'Campos obrigatórios não preenchidos')]

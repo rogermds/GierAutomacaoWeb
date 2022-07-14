@@ -43,7 +43,7 @@ Em campo turma, selecionar "${turmaControle}"
 
 Clicar no botão 'Diário de Turma'
     Wait Until Element Is Visible    ${botaoDiarioDeTurmaControle}    20
-    Execute JavaScript  document.getElementById("${botaoDiarioDeTurmaControle}").click();
+    Execute JavaScript  document.getElementById("${botaoDiarioDeTurmaControle}").click();
     Wait Until Element Is Visible    ${botaoSalvar}    20
 
 Visualizar a mensagem: É NECESSÁRIO SELECIONAR AO MENOS DOIS EDUCANDOS PARA PROSSEGUIR.
@@ -51,16 +51,16 @@ Visualizar a mensagem: É NECESSÁRIO SELECIONAR AO MENOS DOIS EDUCANDOS PARA PR
     Sleep    3
 
 Clicar em OK no modal do Diário de Classe
-    Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnOk").click();
+    Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnOk").click();
     Sleep    2    
 
 Selecionar dois Educandos na Grid 
-    Execute JavaScript  document.getElementById("cphContent_dtlAlunos_chkAluno_0").click();
-    Execute JavaScript  document.getElementById("cphContent_dtlAlunos_chkAluno_1").click();
+    Execute JavaScript  document.getElementById("cphContent_dtlAlunos_chkAluno_0").click();
+    Execute JavaScript  document.getElementById("cphContent_dtlAlunos_chkAluno_1").click();
     Sleep    5
  
 Clicar em 'Incluir' no Diário de Classe
-    Execute JavaScript  document.getElementById("${botaoIncluirDiario}").click(); 
+    Execute JavaScript  document.getElementById("${botaoIncluirDiario}").click(); 
     Sleep    5   
 
 Visualizar a mensagem: EXISTEM CAMPOS DE PREENCHIMENTO OBRIGATÓRIO NÃO PREENCHIDOS. PREENCHA OS CAMPOS PARA CONTINUAR.

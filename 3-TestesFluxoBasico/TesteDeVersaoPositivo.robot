@@ -125,23 +125,27 @@ Test Teardown    Fechar o navegador
 #     Verificar se é exibido o nome "AGATHA GABRIELLY DOS SANTOS SOUZA"
 #     Verificar se é exibido a data de nascimento "15/06/2013"
     
-# Cenário 05-A: Funcionalidade Calendário – Secretaria
+#### PRECISARÁ CADASTRAR ATIVIDADE NÃO LETIVA NA SECRETARIA
+#### DEPOIS FINALIZAR CALENDARIO NA ESCOLA
+# Cenário 05-A: Funcionalidade Calendário – Educação Especial
 #     [Documentation]    Esse teste verifica se é possível vincular modalidades
 #     ...                ao calendário escolar
-#     [Tags]             Cadastro de Etapa/Modalide | Fluxo Positivo
+#     [Tags]             Cadastro de Etapa/Modalide no Calendário | Fluxo Positivo
 #     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
 #     Entrar com as credenciais "02867439817" e "12345678"
 #     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
 #     Entrar no módulo "Gestão Escolar"
 #     Entrar na funcionalidade "Calendário Escolar"
-#     No calendário, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+#     No Calendário, em Etapa/Modalidade, selecionar "EDUCAÇÃO ESPECIAL EXCLUSIVA"
 #     Em Calendário, selecionar CALENDÁRIO ESCOLAR SME 2022
 #     Clicar em Pesquisar
 #     Clicar em Editar
 #     Clicar em Salvar
-#     Em Calendário, selecionar CALENDÁRIO ESCOLAR SME 2022
+#     Clicar em OK no modal Sucesso
+####  AQUI DEVE ENTRAR NA SECRETARIA E INSERIR ATIVIDADE NAO LETIVA
+#     Em Calendário, selecionar novamente CALENDÁRIO ESCOLAR SME 2022
 #     Clicar em Pesquisar
 #     Clicar em Finalizar
 #     Clicar em OK no modal
@@ -150,8 +154,8 @@ Test Teardown    Fechar o navegador
 #     [Documentation]    Esse teste verifica se é possível efetuar o
 #     ...                cadastro de uma turma da Etapa Infantil
 #     [Tags]             Cadastro de Turma | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
+    # Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    # Entrar com as credenciais "02867439817" e "12345678"
 #     Verificar se aparece o texto "Estrutura"
 #     Pesquisar "VOLPI" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
@@ -218,6 +222,28 @@ Test Teardown    Fechar o navegador
 #     Na Turma, clicar em Salvar
 #     No modal para cadastrar outra turma, clique em Não
 
+# Cenário 05-E: Funcionalidade Cadastro de Turma Multisseriada
+#     [Documentation]    Esse teste verifica se é possível efetuar o
+#     ...                cadastro de uma turma multisseriada
+#     [Tags]             Cadastro de Turma Multisseriada | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão Escolar"
+#     Entrar na funcionalidade "Turmas"
+#     Clicar em Nova Turma Multisseriada
+#     Em Anual/Semanal, selecionar "ANUAL"
+#     Em Período, selecionar "INTERMEDIÁRIO"
+#     No grid de Etapa, selecionar "1° ANO - EE"
+#     No grid de Etapa, selecionar "2° ANO - EE"
+#     Em Turma, selecionar "R"
+#     Selecionar uma Sala Física
+#     Em Capacidade da Turma, inserir a quantidade "20"
+#     Na Turma, clicar em Salvar
+#     No modal para cadastrar outra turma, clique em Não
+
 # Cenário 06A: Funcionalidade Consulta de Turma - Infantil
 #     [Documentation]    Esse teste verifica se é possível efetuar a
 #     ...                consulta de uma turma da Etapa Infantil
@@ -257,6 +283,7 @@ Test Teardown    Fechar o navegador
 # Cenário 06C: Funcionalidade Consulta de Turma - EJA
 #     [Documentation]    Esse teste verifica se é possível efetuar a
 #     ...                consulta de uma turma da Etapa EJA
+#     [Tags]             Consulta de Turma EJA | Fluxo Positivo
 #     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
 #     Entrar com as credenciais "02867439817" e "12345678"
 #     Verificar se aparece o texto "Estrutura"
@@ -271,34 +298,28 @@ Test Teardown    Fechar o navegador
 #     Clicar em Pesquisar
 #     Verificar se aparece o texto "Resultado da Busca"
 
-Cenário 07A: Funcionalidade Avaliações e Frequência - Infantil
-    [Documentation]    Esse teste verifica se é possível consultar e
-    ...                registrar nota para a Etapa Infantil
-    [Tags]             Consulta de Turma | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Avaliações e Frequência"
-    Na consulta de avaliações, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
-    Na consulta de avaliações, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
-    Na consulta de avaliações, em Turma, selecionar "EII A"
-    Clicar em Pesquisar
-    No primeiro aluno, em questionário, clicar em "Responder"
-    Marcar "ATINGIU OS OBJETIVOS" nas questões
-    Clicar em Salvar e Fechar
-    No modal de alerta, clicar em Ok
-    Clicar em Salvar
-    No modal de Cadastro Efetuado com Sucesso, clicar em Ok
-    No primeiro aluno, em questionário, clicar em "Responder"
-    Verificar se as questões foram marcadas conforme foram salvas
+# Cenário 06D: Funcionalidade Consulta de Turma Multisseriada
+#     [Documentation]    Esse teste verifica se é possível efetuar a
+#     ...                consulta de uma turma multisseriada
+#     [Tags]             Consulta de Turma Multisseriada | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão Escolar"
+#     Entrar na funcionalidade "Turmas"
+#     Na consulta de turma, em Etapa/Modalidade, selecionar "EDUCAÇÃO ESPECIAL EXCLUSIVA"
+#     Na consulta de turma, em Curso, selecionar "CICLO I"
+#     Na consulta de turma, em Período, selecionar "INTERMEDIÁRIO"
+#     Na consulta de turma, em Ciclo, selecionar "1º ANO - EE"
+#     Clicar em Pesquisar
+#     Verificar se aparece o texto "Resultado da Busca"
 
-# Cenário 07B: Funcionalidade Avaliações e Frequência - Fundamental
+# Cenário 07A: Funcionalidade Avaliações e Frequência - Infantil
 #     [Documentation]    Esse teste verifica se é possível consultar e
-#     ...                registrar nota para a Etapa Fundamental
-#     [Tags]             Consulta de Turma | Fluxo Positivo
+#     ...                registrar nota para a Etapa Infantil
+#     [Tags]             Avaliações e Frequência Infantil | Fluxo Positivo
 #     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
 #     Entrar com as credenciais "02867439817" e "12345678"
 #     Verificar se aparece o texto "Estrutura"
@@ -318,6 +339,72 @@ Cenário 07A: Funcionalidade Avaliações e Frequência - Infantil
 #     No modal de Cadastro Efetuado com Sucesso, clicar em Ok
 #     No primeiro aluno, em questionário, clicar em "Responder"
 #     Verificar se as questões foram marcadas conforme foram salvas
+
+Cenário 07B: Funcionalidade Avaliações e Frequência - Fundamental
+    [Documentation]    Esse teste verifica se é possível consultar e
+    ...                registrar nota para a Etapa Fundamental
+    [Tags]             Avaliações e Frequência Fundamental | Fluxo Positivo
+    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Avaliações e Frequência"
+    Na consulta de avaliações, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Na consulta de avaliações, em Professor, selecionar "PRISCILA DOMINGUES FERNANDES LOPES"
+    Na consulta de avaliações, em Turma, selecionar "3B"
+    Clicar em Pesquisar
+    No primeiro aluno, em questionário, clicar em "Responder"
+    Marcar "ATINGIU OS OBJETIVOS" nas questões
+    Em Relatório, digitar um texto para envio
+    Clicar em Enviar para Validação
+    Clicar em Salvar e Fechar
+    No modal de alerta, clicar em Ok
+    Verificar se aparece o status "RELATÓRIO AGUARDANDO VALIDAÇÃO"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
+    Em Validação de Relatório, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Validação de Relatório, em Turma, selecionar "3B"
+    Em Validação de Relatório, clicar em Pesquisar
+    Verificar se a Situação de Validação está como "AGUARDANDO VALIDAÇÃO"
+    Clicar em VISUALIZAR EDUCANDOS
+    Verificar se a Situação de Validação está como "AGUARDANDO VALIDAÇÃO"
+    Clicar em VISUALIZAR RELATORIO
+    Verificar se o texto inserido aparece nesta tela
+    Clicar em Encaminhar para Ajustes
+    Digitar uma justificativa
+    Clicar em Salvar
+    Verificar se este texto aparece no histórico
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Avaliações e Frequência"
+    Na consulta de avaliações, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Na consulta de avaliações, em Professor, selecionar "PRISCILA DOMINGUES FERNANDES LOPES"
+    Na consulta de avaliações, em Turma, selecionar "3B"
+    Clicar em Pesquisar
+    Verificar se aparece o status "RELATÓRIO AGUARDANDO AJUSTES"    
+    No primeiro aluno, em questionário, clicar em "Responder"
+    Verificar se as questões foram marcadas conforme foram salvas
+    Verificar se a Justificativa de Devolução é exibida
+    Clicar em Realizar Ajustes
+    Inserir um novo texto no relatório
+    Clicar em Salvar Ajustes
+    Clicar em Salvar e Fechar
+    No modal de alerta, clicar em Ok
+    Verificar se aparece o status "RELATÓRIO VALIDADO APÓS AJUSTES"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
+    Em Validação de Relatório, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Validação de Relatório, em Turma, selecionar "3B"
+    Em Validação de Relatório, clicar em Pesquisar
+    Verificar se a Situação de Validação está como "VALIDADO COM AJUSTES"
+    Clicar em VISUALIZAR EDUCANDOS
+    Verificar se a Situação de Validação está como "VALIDADO APÓS AJUSTES"
+    Clicar em VISUALIZAR RELATORIO
+    Verificar se o texto alterado aparece nesta tela
+
+
+    
 
 # Cenário 07B: Funcionalidade Avaliações e Frequência - Fundamental
 #     [Documentation]    Esse teste verifica se é possível consultar e

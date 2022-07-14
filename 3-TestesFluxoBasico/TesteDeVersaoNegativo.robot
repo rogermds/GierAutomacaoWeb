@@ -428,6 +428,18 @@ Cenário 21 - Funcionalidade Ata de Conselho Final - Turma
     Clicar em Pesquisar
     Visualizar a mensagem: SELECIONE UMA TURMA PARA REALIZAR A PESQUISA.
 
+Cenário 22 - Funcionalidade Histórico Escolar
+    [Documentation]    Esse teste verifica se é possível efetuar o acesso 
+    ...                ao Histórico Escolar
+    [Tags]             Histórico Escolar | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"    
+
 
 
 

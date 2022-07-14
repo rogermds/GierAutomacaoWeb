@@ -30,16 +30,21 @@ Entrar na funcionalidade "${funcionalidade}"
     Execute JavaScript  xPathResult.singleNodeValue.click() 
 
 Clicar no botão Cadastrar
+    Wait Until Element Is Visible    ${botaoCadastrar}
     Execute JavaScript  document.getElementById("${botaoCadastrar}").click();
 
 Clicar em Pesquisar
+    Wait Until Element Is Visible    ${botaoPesquisar}
     Execute JavaScript  document.getElementById("${botaoPesquisar}").click(); 
 
 Clicar em Editar
+    Wait Until Element Is Visible    ${botaoEditar}
     Execute JavaScript  document.getElementById("${botaoEditar}").click(); 
 
 Clicar em Salvar
+    Wait Until Element Is Visible    ${botaoSalvar}
     Execute JavaScript  document.getElementById("${botaoSalvar}").click(); 
 
 Clicar em Finalizar
+    Wait Until Element Is Visible    ${botaoFinalizar}
     Execute JavaScript  document.getElementById("${botaoFinalizar}").click(); 
