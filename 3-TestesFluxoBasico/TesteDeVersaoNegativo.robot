@@ -21,6 +21,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT19-ConsultaDeTurma.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT20-ControleDiarioDeFrequecia.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT21-AtaDeConselho.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT22-HistóricoEscolar.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT23-BoletimEscolar.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -465,6 +466,43 @@ Cenário 22 - Funcionalidade Histórico Escolar
     Clicar em 'Incluir' para a Observação
     Visualizar a mensagem: CAMPO OBSERVAÇÕES GERAL DO ANO LETIVO OBRIGATÓRIO!
 
+Cenário 23 - Funcionalidade Histórico Escolar
+    [Documentation]    Esse teste verifica se é possível efetuar o acesso 
+    ...                ao Histórico Escolar
+    [Tags]             Histórico Escolar | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Gestão"
+    Entrar no módulo "Relatorios de Educandos"
+    Entrar na funcionalidade "Boletim Geral de Educando (conceito)"
+    Clicar em Imprimir
+    Visualizar a mensagem: VERIFIQUE SE TODOS OS FILTROS FORAM PREENCHIDOS
+    Clicar em OK no modal
+    No filtro Ano Letivo, selecionar "2022"
+    No filtro Turma, selecionar "1A"
+    Clicar em Imprimir
+    Visualizar a mensagem: VERIFIQUE SE TODOS OS FILTROS FORAM PREENCHIDOS
+    Clicar em OK no modal
+    Entrar no módulo "Relatorios de Educandos"
+    Entrar na funcionalidade "Boletim Individual de Educando"
+    Clicar em Imprimir
+    Visualizar a mensagem: VERIFIQUE SE TODOS OS FILTROS FORAM PREENCHIDOS
+    Clicar em OK no modal
+    Entrar no módulo "Relatorios de Educandos"
+    Entrar na funcionalidade "Boletim Individual de Educando M02"
+    Clicar em Imprimir
+    Visualizar a mensagem: VERIFIQUE SE TODOS OS FILTROS FORAM PREENCHIDOS
+    No filtro Ano Letivo, selecionar "2022"
+    Clicar em Imprimir
+    Visualizar a mensagem: VERIFIQUE SE TODOS OS FILTROS FORAM PREENCHIDOS
+
+
+
+
+
+    
 
 
 
