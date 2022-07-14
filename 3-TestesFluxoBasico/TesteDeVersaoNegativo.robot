@@ -19,6 +19,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT17-CadastroDeTurmaRegula
 Resource         ../2-PageElements/FluxosAlternativos/CT18-CadastroDeTurmaMulti.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT19-ConsultaDeTurma.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT20-ControleDiarioDeFrequecia.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT21-AtaDeConselho.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -408,6 +409,26 @@ Cenário 20 - Funcionalidade Controle Diário de Frequência
     Clicar em Salvar
     Visualizar a mensagem: EXISTEM CAMPOS DE PREENCHIMENTO OBRIGATÓRIO NÃO PREENCHIDOS. PREENCHA OS CAMPOS PARA CONTINUAR.
         
+Cenário 21 - Funcionalidade Ata de Conselho Final - Turma
+    [Documentation]    Esse teste verifica se é possível efetuar o acesso 
+    ...                a Ata de Conselho
+    [Tags]             Controle de Frequência | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Clicar em Pesquisar
+    Visualizar a mensagem: SELECIONE UMA TURMA PARA REALIZAR A PESQUISA.
+    Clicar em OK no modal
+    Em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Clicar em Pesquisar
+    Visualizar a mensagem: SELECIONE UMA TURMA PARA REALIZAR A PESQUISA.
+
+
 
 
     
