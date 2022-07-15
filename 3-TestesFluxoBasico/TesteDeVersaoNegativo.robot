@@ -20,9 +20,10 @@ Resource         ../2-PageElements/FluxosAlternativos/CT18-CadastroDeTurmaMulti.
 Resource         ../2-PageElements/FluxosAlternativos/CT19-ConsultaDeTurma.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT20-ControleDiarioDeFrequecia.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT21-AtaDeConselho.robot
-Resource         ../2-PageElements/FluxosAlternativos/CT22-HistóricoEscolar.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT22-HistoricoEscolar.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT23-BoletimEscolar.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT24-ProntuarioDoEducando.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT25-ProntuarioDeTurma.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -521,6 +522,32 @@ Cenário 24 - Funcionalidade Prontuário do Educando
     Clicar em OK no modal
     Clicar em Adicionar para Avaliação por Especialista
     Visualizar a mensagem: INFORME UMA ESPECIALIDADE.
+
+Cenário 25 - Funcionalidade Prontuário da Turma
+    [Documentation]    Esse teste verifica se é possível efetuar o acesso 
+    ...                ao Prontuário da Turma
+    [Tags]             Prontuário da Turma| Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Operação"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Prontuário da Turma"
+    Em Ano Letivo, clicar em "2022"
+    Clicar em Pesquisar
+    Visualizar a mensagem: INFORME A UNIDADE ESCOLAR.
+    Clicar em OK no modal de alerta
+    Em Turma, selecionar "1A"
+    Clicar em Pesquisar
+    Clicar em Salvar
+    Visualizar a mensagem: SELECIONE O MÊS DA REUNIÃO.
+    Clicar em OK no modal de alerta
+    Em Mês de Reunião, selecionar "Janeiro"
+    Clicar em Salvar
+    Visualizar a mensagem: PREENCHA A DATA DA REUNIÃO.
+
+    
 
 
 
