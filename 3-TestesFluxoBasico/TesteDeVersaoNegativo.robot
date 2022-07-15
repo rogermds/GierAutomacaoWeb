@@ -22,6 +22,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT20-ControleDiarioDeFrequ
 Resource         ../2-PageElements/FluxosAlternativos/CT21-AtaDeConselho.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT22-HistóricoEscolar.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT23-BoletimEscolar.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT24-ProntuarioDoEducando.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -468,8 +469,8 @@ Cenário 22 - Funcionalidade Histórico Escolar
 
 Cenário 23 - Funcionalidade Histórico Escolar
     [Documentation]    Esse teste verifica se é possível efetuar o acesso 
-    ...                ao Histórico Escolar
-    [Tags]             Histórico Escolar | Fluxo Negativo
+    ...                ao Boletim Escolar
+    [Tags]             Boletim Escolar | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -497,6 +498,37 @@ Cenário 23 - Funcionalidade Histórico Escolar
     No filtro Ano Letivo, selecionar "2022"
     Clicar em Imprimir
     Visualizar a mensagem: VERIFIQUE SE TODOS OS FILTROS FORAM PREENCHIDOS
+
+Cenário 24 - Funcionalidade Prontuário do Educando
+    [Documentation]    Esse teste verifica se é possível efetuar o acesso 
+    ...                ao Prontuário do Educando
+    [Tags]             Prontuário do Educando | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no módulo "Operação"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Prontuário do Educando"
+    Em Etapa/Modalidade no Prontuário, selecionar "ENSINO FUNDAMENTAL"    
+    Clicar em Pesquisar no Prontuário do Educando             
+    Visualizar a mensagem: INFORME UMA TURMA
+    Clicar em OK no modal de alerta do Prontuário
+    Em campo turma no Prontuário, selecionar "1B"    
+    Clicar em Pesquisar no Prontuário do Educando 
+    Clicar em Adicionar para Apoio Escolar
+    Visualizar a mensagem: INFORME UM COMPONENTE DE APOIO ESCOLAR.
+    Clicar em OK no modal
+    Clicar em Adicionar para Avaliação por Especialista
+    Visualizar a mensagem: INFORME UMA ESPECIALIDADE.
+
+
+
+
+
+
+
+
 
 
 
