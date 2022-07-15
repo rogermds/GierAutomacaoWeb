@@ -16,7 +16,7 @@ ${campoCEP}                     txtCep
 ${campoNumeroCEP}               cphContent_ucEnderecos_txtNumero
 ${campoZona}                    cphContent_ucEnderecos_ddlZona
 ${campoEmail}                   cphContent_ucDadosPessoais_txtEmail
-${botaoIncluir}                 cphContent_ucEnderecos_btnIncluirResidencial
+${botaoIncluirResidencial}      cphContent_ucEnderecos_btnIncluirResidencial
 ${botaoSalvar}                  cphContent_btnCadastrarPessoa
 
 *** Keywords ***
@@ -145,7 +145,7 @@ Clicar no campo 'Zona' e selecionar a opção "${Zona}"
     Run Keyword If    '${Zona}' == 'RURAL'   Execute JavaScript   $('#${campoZona}').val("2").trigger('chosen:updated');
 
 Clicar no botão 'Incluir'
-    Execute JavaScript  document.getElementById("${botaoIncluir}").click();
+    Execute JavaScript  document.getElementById("${botaoIncluirResidencial}").click();
     Sleep   5
 
 Clicar no 'Botão Salvar'

@@ -24,6 +24,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT22-HistoricoEscolar.robo
 Resource         ../2-PageElements/FluxosAlternativos/CT23-BoletimEscolar.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT24-ProntuarioDoEducando.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT25-ProntuarioDeTurma.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT26-AvaliacoesEFrequencia.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -546,6 +547,38 @@ Cenário 25 - Funcionalidade Prontuário da Turma
     Em Mês de Reunião, selecionar "Janeiro"
     Clicar em Salvar
     Visualizar a mensagem: PREENCHA A DATA DA REUNIÃO.
+
+Cenário 26: Funcionalidade Avaliações e Frequência
+    [Documentation]    Esse teste verifica se é possível consultar e
+    ...                registrar um diário do Educando em Avaliações
+    [Tags]             Avaliações e Frequência Fundamental | Fluxo Positivo
+    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Avaliações e Frequência"
+    Na consulta de avaliações, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL" 
+    Na consulta de avaliações, em Data de Referência, informar "00000000"
+    Visualizar a mensagem: INFORME UMA DATA VÁLIDA
+    Clicar em "Ok" na mensagem
+    Na consulta de avaliações, em Data de Referência, informar a data do dia atual
+    Na consulta de avaliações, em Professor, selecionar "PRISCILA DOMINGUES FERNANDES LOPES"
+    Na consulta de avaliações, em Turma, selecionar "3B"   
+    Clicar em Pesquisar
+    No primeiro aluno, em questionário, clicar em Diário de Bordo do Aluno
+    Clicar em "Salvar"
+    Visualizar a mensagem: INFORME A DESCRIÇÃO.
+    Clicar em OK no modal de alerta
+    Em Descrição, informar o valor "Teste Automação Qualidade - Fluxo Negativo"
+    Clicar em "Salvar"
+    Visualizar a mensagem: UM TIPO DE AVALIAÇÃO DEVE SER SELECIONADO.
+
+
+
+
+
 
     
 
