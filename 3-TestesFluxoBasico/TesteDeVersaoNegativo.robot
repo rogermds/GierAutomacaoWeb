@@ -25,6 +25,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT23-BoletimEscolar.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT24-ProntuarioDoEducando.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT25-ProntuarioDeTurma.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT26-AvaliacoesEFrequencia.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT27-JustificativasPreMatr.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -575,16 +576,48 @@ Cenário 26: Funcionalidade Avaliações e Frequência
     Clicar em "Salvar"
     Visualizar a mensagem: UM TIPO DE AVALIAÇÃO DEVE SER SELECIONADO.
 
-Cenário 26: Funcionalidade Avaliações e Frequência
-    [Documentation]    Esse teste verifica se é possível consultar e
-    ...                registrar um diário do Educando em Avaliações
-    [Tags]             Avaliações e Frequência Fundamental | Fluxo Positivo
+Cenário 27: Funcionalidade Justificativas da Pré-Matricula
+    [Documentation]    Esse teste verifica se é possível cadastrar uma 
+    ...                justificativa
+    [Tags]             Justificativas da Pré-Matricula | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pessoas"
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Justificativas da Pré-matrícula"
+    Clicar em Cadastrar justificativas
+    Clicar em Salvar a justificativa    
+    Visualizar a mensagem: O CAMPO TIPO DE SITUAÇÃO É OBRIGATÓRIO.
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em Tipo de Situação, selecionar "CANCELAMENTO"
+    Clicar em Salvar a justificativa
+    Visualizar a mensagem: O CAMPO JUSTIFICATIVA É OBRIGATÓRIO.    
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em Tipo de Situação, selecionar "DETERMINAÇÃO LEGAL"        
+    Clicar em Salvar a justificativa
+    Visualizar a mensagem: O CAMPO JUSTIFICATIVA É OBRIGATÓRIO.
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em Tipo de Situação, selecionar "DESFAZER AÇÃO"    
+    Clicar em Salvar a justificativa
+    Visualizar a mensagem: O CAMPO JUSTIFICATIVA É OBRIGATÓRIO.
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em Tipo de Situação, selecionar "INDEFERIMENTO"    
+    Clicar em Salvar a justificativa
+    Visualizar a mensagem: O CAMPO JUSTIFICATIVA É OBRIGATÓRIO.
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em Tipo de Situação, selecionar "PAUSADO"    
+    Clicar em Salvar a justificativa
+    Visualizar a mensagem: O CAMPO JUSTIFICATIVA É OBRIGATÓRIO.
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em Tipo de Situação, selecionar "VAGA OFERTADA"    
+    Clicar em Salvar a justificativa
+    Visualizar a mensagem: O CAMPO JUSTIFICATIVA É OBRIGATÓRIO.
+    Clicar em Ok no modal de alerta de campo obrigatório
+
+    
+
 
 
 
