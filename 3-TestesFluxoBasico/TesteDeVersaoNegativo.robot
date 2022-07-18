@@ -552,14 +552,14 @@ Cenário 26: Funcionalidade Avaliações e Frequência
     [Documentation]    Esse teste verifica se é possível consultar e
     ...                registrar um diário do Educando em Avaliações
     [Tags]             Avaliações e Frequência Fundamental | Fluxo Positivo
-    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
-    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Avaliações e Frequência"
-    Na consulta de avaliações, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL" 
+    Na consulta de avaliações, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"     
     Na consulta de avaliações, em Data de Referência, informar "00000000"
     Visualizar a mensagem: INFORME UMA DATA VÁLIDA
     Clicar em "Ok" na mensagem
@@ -575,6 +575,16 @@ Cenário 26: Funcionalidade Avaliações e Frequência
     Clicar em "Salvar"
     Visualizar a mensagem: UM TIPO DE AVALIAÇÃO DEVE SER SELECIONADO.
 
+Cenário 26: Funcionalidade Avaliações e Frequência
+    [Documentation]    Esse teste verifica se é possível consultar e
+    ...                registrar um diário do Educando em Avaliações
+    [Tags]             Avaliações e Frequência Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Pessoas"
 
 
 

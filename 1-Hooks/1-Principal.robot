@@ -8,7 +8,7 @@ ${botaoEditar}                  cphContent_btnEditar
 ${botaoSalvar}                  cphContent_btnSalvar
 ${botaoFinalizar}               cphContent_btnFinalizar
 ${botaoLimpar}                  cphContent_btnLimpar
-${botaoImprimir}                 cphContent_btnImprimir
+${botaoImprimir}                cphContent_btnImprimir
 
 *** Keywords ***
 Abrir o navegador
