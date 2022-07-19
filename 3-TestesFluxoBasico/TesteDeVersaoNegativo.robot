@@ -26,6 +26,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT24-ProntuarioDoEducando.
 Resource         ../2-PageElements/FluxosAlternativos/CT25-ProntuarioDeTurma.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT26-AvaliacoesEFrequencia.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT27-JustificativasPreMatr.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT28-LayoutDoPortal.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -615,6 +616,56 @@ Cenário 27: Funcionalidade Justificativas da Pré-Matricula
     Clicar em Salvar a justificativa
     Visualizar a mensagem: O CAMPO JUSTIFICATIVA É OBRIGATÓRIO.
     Clicar em Ok no modal de alerta de campo obrigatório
+
+Cenário 28: Funcionalidade Layout do Portal de Inscrições e Transferências
+    [Documentation]    Esse teste verifica se é possível cadastrar um 
+    ...                 Layout do Portal de Inscrições e Transferências
+    [Tags]             Layout do Portal de Inscrições e Transferências | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
+    Clicar em Cadastrar Layout
+    Clicar em Salvar e Próximo no passo 1
+    Visualizar a mensagem: NECESSÁRIO PREENCHER O CAMPO DESCRIÇÃO DO PROCESSO PARA PROSSEGUIR.
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em Descrição do Processo, inserir "Descrição Teste Automação"
+    Clicar em Salvar e Próximo no passo 1
+    Visualizar a mensagem: NÃO É POSSÍVEL SALVAR O LAYOUT. JÁ EXISTE OUTRO LAYOUT CADASTRADO PARA O ANO LETIVO SELECIONADO.
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em Ano Letivo, selecionar o Ano Letivo Seguinte
+    Em Banner Web clicar em Inserir 
+    Visualizar a mensagem: SELECIONE O ARQUIVO ANTES DE INCLUI-LO.
+    Em inserir Documento Web, inserir o arquivo "Crianças1.jpg"
+    Em Aplicar no Portal Web, inserir "00000000"        
+    Em Banner Web clicar em Inserir 
+    Visualizar a mensagem: DATA DE INÍCIO DA VIGÊNCIA DO BANNER INVÁLIDA.    
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em Aplicar no Portal Web, inserir a data do dia atual        
+    Em Banner Web clicar em Inserir 
+    Em inserir Documento móvel, inserir o arquivo "Crianças1.jpg"
+    Em Aplicar no Portal móvel, inserir "00000000"        
+    Em Banner móvel clicar em Inserir     
+    Visualizar a mensagem: DATA DE INÍCIO DA VIGÊNCIA DO BANNER INVÁLIDA.    
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em Aplicar no Portal móvel, inserir a data do dia atual        
+    Em Banner Web clicar em Inserir 
+    Clicar em Salvar e Próximo no passo 1
+    Clicar em Salvar e Próximo no passo 2
+    Clicar em Salvar e Próximo no passo 3
+    Clicar em Salvar e Próximo no passo 4
+    Clicar em inserir no passo 5
+    Visualizar a mensagem: É NECESSÁRIO INFORMAR A OBSERVAÇÃO DO COMPROVANTE DE INSCRIÇÃO
+    Clicar em Ok no modal de alerta de campo obrigatório
+
+
+
+
+
+
 
     
 

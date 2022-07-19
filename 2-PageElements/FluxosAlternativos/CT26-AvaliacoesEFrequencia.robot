@@ -8,7 +8,6 @@ ${campoEtapaModalidadeAvaliacoes}        cphContent_ddlEtapaModalidade
 ${campoProfessorAvalicoes}               cphContent_ddlProfessor
 ${campoTurmaAvalicoes}                   cphContent_ddlClasse
 ${campoDataRefencia}                     cphContent_txtDataReferenci
-${botaoDataHoje}                         //button[@type='button'][contains(.,'Hoje')]
 ${campoDescricao}                        cphContent_txtDescricao    
 ${diarioAluno}                           cphContent_rptDigitaNf_btnDiario_0
 
@@ -60,7 +59,7 @@ Na consulta de avaliações, em Turma, selecionar "${turma}"
     Sleep   3
 
 No primeiro aluno, em questionário, clicar em Diário de Bordo do Aluno
-    Wait Until Page Contains Element    ${diarioAluno}
+    Wait Until Page Contains Element    ${diarioAluno}    60
     Execute JavaScript  document.getElementById("${diarioAluno}").click();
     Sleep    3
     

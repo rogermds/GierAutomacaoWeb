@@ -9,6 +9,8 @@ ${botaoSalvar}                  cphContent_btnSalvar
 ${botaoFinalizar}               cphContent_btnFinalizar
 ${botaoLimpar}                  cphContent_btnLimpar
 ${botaoImprimir}                cphContent_btnImprimir
+${botaoDataHoje}                //button[@type='button'][contains(.,'Hoje')]
+
 
 *** Keywords ***
 Abrir o navegador
