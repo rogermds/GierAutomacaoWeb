@@ -11,14 +11,16 @@ ${botaoSalvarSegundoPasso}               btnAvancaSegundoPasso
 ${botaoSalvarTerceiroPasso}              btnAvancaTerceiroPasso
 ${botaoSalvarQuartoPasso}                btnAvancaQuartoPasso
 ${botaoInserirQuintoPasso}               btnInserirComprovante
-${campoDescricao}                        txtDescricao
-${botaoIncluirWeb}                       fupArquivoWeb
+${campoDescricaoProcesso}                //input[contains(@maxlength,'50')]
+${botaoIncluirWeb}                       btnIncluirWeb
 ${botaoIncluirMobile}                    btnIncluirMobile
 ${campoDataWeb}                          txtDataInicioWeb
 ${campoDataMovel}                        txtDataInicioMobile
-${campoArquivoWeb}                       btnBuscarArquivoWeb
-${campoArquivoMovel}                     btnBuscarArquivoMobile
+${campoArquivoWeb}                       fupArquivoWeb
+${campoArquivoMovel}                     fupArquivoMobile
 ${AnoLetivo}                             ddlAnoLetivo
+${arquivo}                               C:\\Users\\amanda.diniz\\Desktop\\images.jpg
+
 
 *** Keywords ***
 Clicar em Cadastrar Layout
@@ -31,11 +33,9 @@ Clicar em Salvar e Próximo no passo 1
 
 Visualizar a mensagem: NECESSÁRIO PREENCHER O CAMPO DESCRIÇÃO DO PROCESSO PARA PROSSEGUIR.
     Wait Until Page Contains Element    //div[@class='msg left'][contains(.,'Necessário preencher o campo Descrição do Processo para prosseguir.')]
-    Sleep    3
 
-Em Descrição do Processo, inserir "${descricao}"
-    Execute JavaScript  document.getElementById("${campoDescricao}").click();
-    Input Text    ${campoDescricao}    ${descricao}
+Em Descrição do Processo, inserir "${descricao}" 
+    Input Text    ${campoDescricaoProcesso}    ${descricao}
     Sleep    3
     
 Visualizar a mensagem: NÃO É POSSÍVEL SALVAR O LAYOUT. JÁ EXISTE OUTRO LAYOUT CADASTRADO PARA O ANO LETIVO SELECIONADO.
@@ -49,14 +49,17 @@ Em Ano Letivo, selecionar o Ano Letivo Seguinte
     Execute JavaScript   $('#${AnoLetivo}').trigger('change');
 
 Em Banner Web clicar em Inserir
-    Execute JavaScript  document.getElementById("${botaoIncluirWeb}").click(); 
+    Execute JavaScript  document.getElementById("${botaoIncluirWeb}").click();
+    Sleep    5 
 
 Visualizar a mensagem: SELECIONE O ARQUIVO ANTES DE INCLUI-LO.
     Wait Until Page Contains Element    //div[@class='divConteudo'][contains(.,'Selecione o arquivo antes de inclui-lo.')]
     Sleep    3
     
 Em inserir Documento Web, inserir o arquivo "Crianças1.jpg"
-    Choose File    ${campoArquivoWeb}    C:\Users\amanda.diniz\Pictures\Crianças1.jpg
+    Wait Until Element Is Visible    btnBuscarArquivoWeb
+    Choose File    ${campoArquivoWeb}    ${arquivo}   
+    Sleep    5
     
 Em Aplicar no Portal Web, inserir "${data}"
     Execute JavaScript  document.getElementById("${campoDataWeb}").click();
@@ -64,7 +67,6 @@ Em Aplicar no Portal Web, inserir "${data}"
     
 Visualizar a mensagem: DATA DE INÍCIO DA VIGÊNCIA DO BANNER INVÁLIDA. 
     Wait Until Page Contains Element    //span[contains(.,'Data de início da vigência do banner inválida.')]
-    Sleep    3
 
 Em Aplicar no Portal Web, inserir a data do dia atual
     Execute JavaScript  document.getElementById("${campoDataWeb}").click();
@@ -74,7 +76,9 @@ Em Aplicar no Portal Web, inserir a data do dia atual
     Sleep   2
 
 Em inserir Documento móvel, inserir o arquivo "Crianças1.jpg"
-    Execute JavaScript  document.getElementById("${campoArquivoMovel}").click();
+    Wait Until Element Is Visible    btnBuscarArquivoMobile
+    Choose File    ${campoArquivoMovel}    ${arquivo}   
+    Sleep    5
 
 Em Aplicar no Portal móvel, inserir "${data}" 
     Execute JavaScript  document.getElementById("${campoDataWeb}").click();

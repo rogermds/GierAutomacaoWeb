@@ -639,6 +639,7 @@ Cenário 28: Funcionalidade Layout do Portal de Inscrições e Transferências
     Em Ano Letivo, selecionar o Ano Letivo Seguinte
     Em Banner Web clicar em Inserir 
     Visualizar a mensagem: SELECIONE O ARQUIVO ANTES DE INCLUI-LO.
+    Clicar em Ok no modal de alerta de campo obrigatório
     Em inserir Documento Web, inserir o arquivo "Crianças1.jpg"
     Em Aplicar no Portal Web, inserir "00000000"        
     Em Banner Web clicar em Inserir 
