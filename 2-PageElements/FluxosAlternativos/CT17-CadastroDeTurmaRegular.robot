@@ -15,7 +15,6 @@ ${campoSalaFisica}                      cphContent_dtlGerarClasse_lbtSelecionar_
 ${campoCapacidadeTurma}                 cphContent_txtCapacidadeInformada
 ${botaoSalvarTurma}                     cphContent_btnSalvar
 ${botaoNaoTurma}                        cphContent_Mensagem_Padrao_btnNao  
-${botaoOk}                              cphContent_Mensagem_Padrao_btnOk
 
 *** Keywords ***
 Clicar em Nova Turma Regular
@@ -115,10 +114,6 @@ Na Turma, clicar em Salvar
 Visualizar a mensagem: SELECIONE UMA SALA FÍSICA PARA ASSOCIAR A TURMA.
     Wait Until Page Contains Element    //div[contains(@id,'painelMsg')][contains(.,'Selecione uma sala física para associar a Turma.')] 
     Sleep   3
-
-Clicar em OK no modal
-    Execute JavaScript  document.getElementById("${botaoOk}").click();
-    Sleep    1
 
 Selecionar uma Sala Física
     Execute JavaScript  document.getElementById("${campoSalaFisica}").click();
