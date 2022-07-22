@@ -20,7 +20,7 @@ Clicar em 'Consultar Solicitação'
     Execute JavaScript  xPathResult = document.evaluate("${botaoConsultarSolicitacao}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click()
 
-Em 'Consultar Solicitação', pesquisar
+Clicar em pesquisar no Portal
     ${botaoPesquisar}    Set Variable    btnPesquisar
     Execute JavaScript  document.getElementById("${botaoPesquisar}").click()
     Sleep    3
@@ -28,8 +28,8 @@ Em 'Consultar Solicitação', pesquisar
 Visualizar a mensagem: Necessário escolher uma nacionalidade.
     Wait Until Page Contains Element    //div[@class='swal-text'][contains(.,'Necessário escolher uma nacionalidade.')]
 
-Clicar em Ok no alerta de Consultar Solicitação
-    Execute JavaScript  xPathResult = document.evaluate("${botaoConsultarSolicitacao}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+Clicar em Ok no alerta do Portal
+    Execute JavaScript  xPathResult = document.evaluate("${botaoOkAlerta}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click() 
     Sleep    3
     

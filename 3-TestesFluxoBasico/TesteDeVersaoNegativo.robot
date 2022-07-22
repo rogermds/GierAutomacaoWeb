@@ -670,45 +670,45 @@ Cenário 29: Portal de Inscrição - Consulta de Solicitação
     [Tags]             Portal de Inscrição | Fluxo Positivo
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
     Clicar em 'Consultar Solicitação'
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário escolher uma nacionalidade.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar um protocolo válido. 
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
     Em Protocolo, informar "123456789"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar um documento.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
     Em CPF, inserir "364.882.650-67"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal    
     Visualizar a mensagem: Necessário informar um protocolo válido.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
     Em Protocolo, informar "123456789"
     Em CPF, inserir "364.882.650-67"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Não foi localizado registro com os dados informados.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
     Em Protocolo, informar "123456789"
     Em CPF, inserir "364.882.650-67"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar uma data de Nascimento.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
     Em Protocolo, informar "123456789"
     Em CPF, inserir "364.882.650-67"
     Em Data de Nascimento, informar "00000000" 
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Formato de data inválida.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
 
 Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     [Documentation]    Esse teste verifica se é possível realizar uma consulta
@@ -716,45 +716,57 @@ Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     [Tags]             Portal de Inscrição | Fluxo Positivo
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
     Clicar em 'Consultar Solicitação'
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário escolher uma nacionalidade.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"    
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar um protocolo válido. 
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
     Em Protocolo, informar "123456789"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal    
     Visualizar a mensagem: Necessário informar um documento.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
     Em RNE, informar "v565371"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar um protocolo válido.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
     Em Protocolo, informar "123456789"
     Em RNE, informar "v565371"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Não foi localizado registro com os dados informados.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
     Em Protocolo, informar "123456789"
     Em RNE, informar "v565371"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar uma data de Nascimento.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
     Em Protocolo, informar "123456789"
     Em RNE, informar "v565371"
     Em Data de Nascimento, informar "00000000" 
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Formato de data inválida.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
+
+Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
+    [Documentation]    Esse teste verifica se é possível realizar uma consulta
+    ...                de uma solicitação realizada no Portal
+    [Tags]             Portal de Inscrição | Fluxo Positivo
+    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: Necessário escolher um Ano Letivo
+    Clicar em Ok no alerta do Portal
+    
+
+
 
 
     
