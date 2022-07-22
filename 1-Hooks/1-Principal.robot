@@ -26,12 +26,19 @@ Fechar o navegador
     Capture Page Screenshot
     Close Browser
 
+Acessar o ambiente "${url}"
+    Go to   ${url}
+
 Aguardar tela de carregamento
     Wait Until Element Is Not Visible    class=carregando    300
 
 Verificar se aparece o texto "${texto}"
     Wait Until Page Contains    ${texto}    20
     Sleep   1
+
+Entrar no eixo "${nomeEixo}"
+    Execute JavaScript  xPathResult = document.evaluate("//span[contains(.,'${nomeEixo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()  
 
 Entrar no módulo "${nomeModulo}"
     Execute JavaScript  xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);

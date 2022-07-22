@@ -8,8 +8,6 @@ ${campoSenha}                      txtSenha1
 ${botaoLogin}                      btnAcessar
 
 *** Keywords ***
-Acessar o ambiente "${url}"
-    Go to   ${url}
 
 Entrar com as credenciais "${login}" e "${senha}" 
     Wait Until Element Is Visible   ${tituloLogin}   timeout=30
