@@ -479,7 +479,7 @@ Cenário 23 - Funcionalidade Histórico Escolar
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Entrar no módulo "Gestão"
+    Entrar no eixo "Gestão"
     Entrar no módulo "Relatorios de Educandos"
     Entrar na funcionalidade "Boletim Geral de Educando (conceito)"
     Clicar em Imprimir
@@ -511,7 +511,6 @@ Cenário 24 - Funcionalidade Prontuário do Educando
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Entrar no módulo "Operação"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Prontuário do Educando"
     Em Etapa/Modalidade no Prontuário, selecionar "ENSINO FUNDAMENTAL"    
@@ -534,7 +533,6 @@ Cenário 25 - Funcionalidade Prontuário da Turma
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Entrar no módulo "Operação"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Prontuário da Turma"
     Em Ano Letivo, clicar em "2022"
@@ -585,7 +583,7 @@ Cenário 27: Funcionalidade Justificativas da Pré-Matricula
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
+    Entrar no eixo "Configuração"
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Justificativas da Pré-matrícula"
     Clicar em Cadastrar justificativas
@@ -625,7 +623,7 @@ Cenário 28: Funcionalidade Layout do Portal de Inscrições e Transferências
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
+    Entrar no eixo "Configuração"
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
     Clicar em Cadastrar Layout

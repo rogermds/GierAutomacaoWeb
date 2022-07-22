@@ -760,92 +760,83 @@ Test Teardown    Fechar o navegador
     # Clicar em Avaliações
     # Verificar se aparece o texto "Avaliações e Frequências"
 
-    # Cenário 10A: Funcionalidade Ata de Conselho - Infantil
-    # [Documentation]    Esse teste verifica se é possível consultar e
-    # ...                registrar nota para a Etapa Fundamental
-    # [Tags]             Consulta de Turma | Fluxo Positivo
-    # Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    # Entrar com as credenciais "02867439817" e "12345678"
-    # Verificar se aparece o texto "Estrutura"
-    # Pesquisar "VOLPI" e selecionar o primeiro resultado
-    # Verificar se aparece o texto "Operação"
-    # Entrar no módulo "Pedagógico"
-    # Entrar na funcionalidade "Controle Diário de Frequência"
-    # Na controle de frequência, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
-    # Na controle de frequência, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
-    # Na controle de frequência, em Turma, selecionar "EII A"
-    # Na controle de frequência, em Data Referência, insira "01/07/2022"
-    # Clicar em Pesquisar
-    # Verificar se o botão Iniciar está desativado
-    # Do dia 23 ao 30, clicar em Iniciar
-    # Registrar faltas para os 3 primeiros alunos
-    # Clicar em Pesquisar
-    # Verificar se o primeiro aluno possui 5 faltas e frequencia 17
-    # Verificar se o segundo aluno possui 3 faltas e frequencia 50
-    # Verificar se o terceiro aluno possui 2 faltas e frequencia 67
-    # Verificar se o quarto aluno possui 0 faltas e frequencia 100
-    # Verificar se um aluno que não esteja matriculado possui as faltas bloqueadas
-    # No primeiro aluno, clicar em Diário de Bordo do Aluno
-    # Em Diário do Educando, em Tipo de Avaliação, selecionar "SAÚDE LEVE"
-    # Em Diário do Educando, em Título, inserir "PASSOU MAL COM DOR DE ESTOMAGO"
-    # Em Diário do Educando, em Descrição, inserir "O responsável do aluno o buscou no colégio"
-    # Clicar em Salvar
-    # No modal de alerta, clicar em Ok
-    # Em Diário do Educando, verificar se o card foi adicionado ao histórico
-    # Clicar em Voltar
-    # No dia 30, inserir um Campo de Experiencia
-    # Em Campo de Experiencia, selecionar a primeira opção
-    # Em Saberes, selecionar a primeira opção
-    # Em Aprendizagem, selecionar a primeira opção
-    # Em Descrição da Atividade, inserir "Atividade efetuada com sucesso"
-    # Clicar em Inserir
-    # No modal de alerta, clicar em Ok
-    # Verificar se a descrição foi salva no histórico
-    # Clicar em Salvar
-    # No modal de alerta, clicar em Ok
-    # No dia 23, cancelar a aula iniciada
-    # Verificar se os campos foram bloqueados no dia 23
-    # Clicar em Avaliações
-    # Verificar se aparece o texto "Avaliações e Frequências"
+# Cenário 10B: Funcionalidade Ata De Conselho Final - Infantil
+#     [Documentation]    Esse teste verifica se é possível consultar a
+#     ...                Ata de Conselho Final e todas as suas ações
+#     ...                para a Etapa Infantil                 
+#     [Tags]             Ata De Conselho Final - Infantil | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Pedagógico"
+#     Entrar na funcionalidade "Ata de Conselho Final - Turma"
+#     Na tela de Ata de Conselho, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+#     Na tela de Ata de Conselho, em Turma, selecionar "EII A"
+#     Clicar em Pesquisar
+#     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
+#     Na tela de Ata de Conselho, em ações, clicar em Fechamento do Período Letivo no primeiro aluno
+#     Verificar se a página foi redirecionada para Fechamento de Período Letivo
+#     Clicar em Voltar
+#     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
+#     Na tela de Ata de Conselho, em ações, clicar em Prontuário do Aluno no primeiro aluno
+#     Verificar se a página foi redirecionada para Prontuário do Educando
+#     Retornar a página anterior
+#     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
+#     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
+#     Na tela de Ata de Conselho, em Registro das Observações, inserir uma observação
+#     Clicar em Salvar
+#     Clicar em OK no modal
+#     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
+#     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
+#     Na tela de Ata de Conselho, em Registro de Observações, verificar se a observação foi incluída
+#     Clicar em Fechar
+#     Na tela de Ata de Conselho, clicar em Finalizar Conselho
+#     Clicar em Sim no Modal
+#     Na tela de Ata de Conselho, verificar se o botão Reabrir Conselho é exibido
+#     Na tela de Ata de Conselho, clicar no botão Reabrir Conselho
+#     Clicar em Sim no Modal
+#     Na tela de Ata de Conselho, verificar se o botão Finalizar Conselho é exibido
 
-Cenário 10B: Funcionalidade Ata De Conselho Final - Fundamental
-    [Documentation]    Esse teste verifica se é possível consultar a
-    ...                Ata de Conselho Final e todas as suas ações
-    ...                para a Etapa Fundamental                 
-    [Tags]             Ata De Conselho Final - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
-    Na tela de Ata de Conselho, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Na tela de Ata de Conselho, em Turma, selecionar "3A"
-    Clicar em Pesquisar
-    Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
-    Na tela de Ata de Conselho, em ações, clicar em Fechamento do Período Letivo no primeiro aluno
-    Verificar se a página foi redirecionada para Fechamento de Período Letivo
-    Clicar em Voltar
-    Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
-    Na tela de Ata de Conselho, em ações, clicar em Prontuário do Aluno no primeiro aluno
-    Verificar se a página foi redirecionada para Prontuário do Educando
-    Retornar a página anterior
-    Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
-    Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
-    Na tela de Ata de Conselho, em Registro das Observações, inserir uma observação
-    Clicar em Salvar
-    Clicar em OK no modal
-    Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
-    Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
-    Na tela de Ata de Conselho, em Registro de Observações, verificar se a observação foi incluída
-    Clicar em Fechar
-    Na tela de Ata de Conselho, clicar em Finalizar Conselho
-    Clicar em Sim no Modal
-    Na tela de Ata de Conselho, verificar se o botão Reabrir Conselho é exibido
-    Na tela de Ata de Conselho, clicar no botão Reabrir Conselho
-    Clicar em Sim no Modal
-    Na tela de Ata de Conselho, verificar se o botão Finalizar Conselho é exibido
+# Cenário 10B: Funcionalidade Ata De Conselho Final - Fundamental
+#     [Documentation]    Esse teste verifica se é possível consultar a
+#     ...                Ata de Conselho Final e todas as suas ações
+#     ...                para a Etapa Fundamental                 
+#     [Tags]             Ata De Conselho Final - Fundamental | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Pedagógico"
+#     Entrar na funcionalidade "Ata de Conselho Final - Turma"
+#     Na tela de Ata de Conselho, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+#     Na tela de Ata de Conselho, em Turma, selecionar "2A"
+#     Clicar em Pesquisar
+#     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
+#     Na tela de Ata de Conselho, em ações, clicar em Fechamento do Período Letivo no primeiro aluno
+#     Verificar se a página foi redirecionada para Fechamento de Período Letivo
+#     Clicar em Voltar
+#     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
+#     Na tela de Ata de Conselho, em ações, clicar em Prontuário do Aluno no primeiro aluno
+#     Verificar se a página foi redirecionada para Prontuário do Educando
+#     Retornar a página anterior
+#     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
+#     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
+#     Na tela de Ata de Conselho, em Registro das Observações, inserir uma observação
+#     Clicar em Salvar
+#     Clicar em OK no modal
+#     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
+#     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
+#     Na tela de Ata de Conselho, em Registro de Observações, verificar se a observação foi incluída
+#     Clicar em Fechar
+#     Na tela de Ata de Conselho, clicar em Finalizar Conselho
+#     Clicar em Sim no Modal
+#     Na tela de Ata de Conselho, verificar se o botão Reabrir Conselho é exibido
+#     Na tela de Ata de Conselho, clicar no botão Reabrir Conselho
+#     Clicar em Sim no Modal
+#     Na tela de Ata de Conselho, verificar se o botão Finalizar Conselho é exibido
 
 # Cenário 10C: Funcionalidade Ata De Conselho Final - EJA
 #     [Documentation]    Esse teste verifica se é possível consultar a
@@ -886,4 +877,16 @@ Cenário 10B: Funcionalidade Ata De Conselho Final - Fundamental
 #     Clicar em Sim no Modal
 #     Na tela de Ata de Conselho, verificar se o botão Finalizar Conselho é exibido
     
-    
+Cenário 11A: Funcionalidade Boletim Escolar - Infantil
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Boletim Escolar e todas as suas ações
+    ...                para a Etapa Infantil                 
+    [Tags]             Boletim Escolar - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
