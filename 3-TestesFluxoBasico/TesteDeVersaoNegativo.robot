@@ -29,6 +29,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT27-JustificativasPreMatr
 Resource         ../2-PageElements/FluxosAlternativos/CT28-LayoutDoPortal.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT29-PortalConsultaBrasileiro.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT30-PortalConsultaEstrangeiro.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT31-PortalListaDeEspera.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -754,14 +755,40 @@ Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     Visualizar a mensagem: Formato de data inválida.
     Clicar em Ok no alerta do Portal
 
-Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
+Cenário 31: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     [Documentation]    Esse teste verifica se é possível realizar uma consulta
     ...                de uma solicitação realizada no Portal
     [Tags]             Portal de Inscrição | Fluxo Positivo
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
+    Clicar em Lista de Espera    
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário escolher um Ano Letivo
     Clicar em Ok no alerta do Portal
+    Em Ano Letivo no Portal, selecionar o ano letivo corrente
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: Necessário informar o Nome do(a) Inscrito(a)
+    Clicar em Ok no alerta do Portal
+    Em Nome do(a) Aluno(a), informar "Teste Aluno Automação"
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: Necessário informar a Data de Nascimento
+    Clicar em Ok no alerta do Portal
+    Em Data de Nascimento, informar "24/04/1993"
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: Necessário informar o Nome do(a) Responsável
+    Clicar em Ok no alerta do Portal
+    Em Nome do(a) Responsável, informar "Teste Responsável Automação"
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: Nenhum registro encontrado com os dados informados
+    Clicar em Fechar no alerta no Portal
+    Em Data de Nascimento, informar "00/00/0000"
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: A Data de Nascimento informada é inválida
+
+
+
+
+
+
     
 
 

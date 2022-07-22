@@ -15,6 +15,8 @@ ${botaoDataHoje}                //button[@type='button'][contains(.,'Hoje')]
 ${campoObservacaoAta}           cphContent_txtObservacaoAtaConcelho
 ${botaoOKModal}                 cphContent_Mensagem_Padrao_btnOk
 ${botaoSimModal}                cphContent_Mensagem_Padrao_btnSim
+${AnoLetivo}                    ddlAnoLetivo
+${botaoFechar}                  //button[@class='swal-button swal-button--confirm'][contains(.,'Fechar')]     
 
 
 *** Keywords ***

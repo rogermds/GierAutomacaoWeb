@@ -18,7 +18,6 @@ ${campoDataWeb}                          txtDataInicioWeb
 ${campoDataMovel}                        txtDataInicioMobile
 ${campoArquivoWeb}                       fupArquivoWeb
 ${campoArquivoMovel}                     fupArquivoMobile
-${AnoLetivo}                             ddlAnoLetivo
 ${arquivo}                               C:\\Users\\amanda.diniz\\Desktop\\images.jpg
 
 
