@@ -23,7 +23,7 @@ Clicar em 'Consultar Solicitação'
 Clicar em pesquisar no Portal
     ${botaoPesquisar}    Set Variable    btnPesquisar
     Execute JavaScript  document.getElementById("${botaoPesquisar}").click()
-    Sleep    3
+    Sleep    2
     
 Visualizar a mensagem: Necessário escolher uma nacionalidade.
     Wait Until Page Contains Element    //div[@class='swal-text'][contains(.,'Necessário escolher uma nacionalidade.')]

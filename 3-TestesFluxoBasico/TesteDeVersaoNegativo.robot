@@ -755,9 +755,9 @@ Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     Visualizar a mensagem: Formato de data inválida.
     Clicar em Ok no alerta do Portal
 
-Cenário 31: Portal de Inscrição - Consulta de Solicitação Estrangeiro
+Cenário 31: Portal de Inscrição - Lista de Espera
     [Documentation]    Esse teste verifica se é possível realizar uma consulta
-    ...                de uma solicitação realizada no Portal
+    ...                de uma solicitação que esta em Lista de Espera
     [Tags]             Portal de Inscrição | Fluxo Positivo
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
     Clicar em Lista de Espera    
@@ -770,19 +770,15 @@ Cenário 31: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     Clicar em Ok no alerta do Portal
     Em Nome do(a) Aluno(a), informar "Teste Aluno Automação"
     Clicar em pesquisar no Portal
-    Visualizar a mensagem: Necessário informar a Data de Nascimento
+    Visualizar a mensagem: Necessário informar a data de Nascimento.    
     Clicar em Ok no alerta do Portal
-    Em Data de Nascimento, informar "24/04/1993"
+    Em Data de Nascimento no Portal, informar "24/04/1993"    
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar o Nome do(a) Responsável
     Clicar em Ok no alerta do Portal
     Em Nome do(a) Responsável, informar "Teste Responsável Automação"
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Nenhum registro encontrado com os dados informados
-    Clicar em Fechar no alerta no Portal
-    Em Data de Nascimento, informar "00/00/0000"
-    Clicar em pesquisar no Portal
-    Visualizar a mensagem: A Data de Nascimento informada é inválida
 
 
 

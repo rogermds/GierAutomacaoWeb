@@ -9,6 +9,7 @@ Library     DateTime
 ${botaoListaDeEsperaPortal}              //div[@class='containerBotaoMenuCentro containerBotaoTexto'][contains(.,'Lista de Espera')]
 ${campoNomeInscrito}                     txtNomeInscrito
 ${campoNomeResponsavel}                  txtNomeResponsavel 
+${campoDataNascimentoPortal}             txtDataNascimento
 
 *** Keywords ***
 Clicar em Lista de Espera
@@ -20,7 +21,9 @@ Visualizar a mensagem: Necessário escolher um Ano Letivo
     
 Em Ano Letivo no Portal, selecionar o ano letivo corrente
     ${anoAtual}     Get Current Date    result_format=%Y
-    Execute JavaScript  document.getElementById("${anoAtual}").click();
+    ${anoSeguinte}    Evaluate     ${anoAtual}
+    Execute JavaScript   $('#${AnoLetivo}').val("${anoSeguinte}").trigger('chosen:updated');
+    Execute JavaScript   $('#${AnoLetivo}').trigger('change');
 
 Visualizar a mensagem: Necessário informar o Nome do(a) Inscrito(a)
     Wait Until Page Contains Element    //div[@class='swal-text'][contains(.,'Necessário informar o Nome do(a) Inscrito(a)')]
@@ -28,9 +31,13 @@ Visualizar a mensagem: Necessário informar o Nome do(a) Inscrito(a)
 Em Nome do(a) Aluno(a), informar "${Nome}"
     Input Text    ${campoNomeInscrito}    ${Nome}
     Sleep    2
-    
-Visualizar a mensagem: Necessário informar a Data de Nascimento
-    Wait Until Page Contains Element    //div[@class='swal-modal'][contains(.,'AtençãoNecessário informar a Data de Nascimento    Ok')]
+
+Visualizar a mensagem: Necessário informar a data de Nascimento.
+    Wait Until Page Contains Element    //div[@class='swal-text'][contains(.,'Necessário informar a Data de Nascimento')]
+
+Em Data de Nascimento no Portal, informar "${Data}"
+    Input Text    ${campoDataNascimentoPortal}    ${Data}
+    Sleep    2
 
 Visualizar a mensagem: Necessário informar o Nome do(a) Responsável
     Wait Until Page Contains Element    //div[@class='swal-text'][contains(.,'Necessário informar o Nome do(a) Responsável')]
@@ -41,9 +48,3 @@ Em Nome do(a) Responsável, informar "${Nome}"
     
 Visualizar a mensagem: Nenhum registro encontrado com os dados informados
     Wait Until Page Contains Element    //div[@class='swal-text'][contains(.,'Nenhum registro encontrado com os dados informados')]
-
-Clicar em Fechar no alerta no Portal
-    Execute JavaScript  document.getElementById("${botaoFechar}").click()
-    
-Visualizar a mensagem: A Data de Nascimento informada é inválida
-    Wait Until Page Contains Element    //div[@class='swal-text'][contains(.,'A Data de Nascimento informada é inválida')]
