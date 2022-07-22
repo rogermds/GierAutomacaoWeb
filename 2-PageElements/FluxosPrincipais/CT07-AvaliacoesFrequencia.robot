@@ -102,7 +102,7 @@ Clicar em Enviar para Validação
     Sleep   4
 
 Verificar se aparece o status "${texto}"
-    Sleep    5
+    Sleep    8
     Element Should Contain    ${campoDescricaoQuestionario}     ${texto}
 
 Verificar se a Situação de Validação está como "${texto}"
