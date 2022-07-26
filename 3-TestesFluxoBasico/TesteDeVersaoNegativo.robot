@@ -30,6 +30,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT28-LayoutDoPortal.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT29-PortalConsultaBrasileiro.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT30-PortalConsultaEstrangeiro.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT31-PortalListaDeEspera.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT32-GestaoPreMatriculaEscola.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -779,6 +780,31 @@ Cenário 31: Portal de Inscrição - Lista de Espera
     Em Nome do(a) Responsável, informar "Teste Responsável Automação"
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Nenhum registro encontrado com os dados informados
+
+Cenário 32: Funcionalidade Gestão de Pré-matrícula Escola
+    [Documentation]    Esse teste verifica se é possível consultar e
+    ...                registrar as solicitações realizadas no Portal 
+    [Tags]             Gestão de Pré-matrícula | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em campo Educando, informar "Teste Automação Qualidade"
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.
+    Clicar em OK no modal de alerta
+    Clicar no botão Limpar
+    Em campo Protocolo, informar "123456789"    
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.    
+    Clicar em OK no modal de alerta
+    Clicar no botão Limpar
+
+    
+
 
 
 

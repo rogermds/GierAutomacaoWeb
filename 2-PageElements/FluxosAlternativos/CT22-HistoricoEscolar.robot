@@ -26,6 +26,7 @@ Em Educando, informar "${nomeEducando}"
 
 Clicar no botão Limpar
     Execute JavaScript  document.getElementById("${botaoLimpar}").click();
+    Aguardar tela de carregamento
 
 Clicar na ação Histórico Escolar
     Execute JavaScript  document.getElementById("${acaoHistoricoEscolar}").click();
