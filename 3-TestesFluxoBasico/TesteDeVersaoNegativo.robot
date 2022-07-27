@@ -802,8 +802,56 @@ Cenário 32: Funcionalidade Gestão de Pré-matrícula Escola
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.    
     Clicar em OK no modal de alerta
     Clicar no botão Limpar
+    Em Situação, selecionar "AGUARDANDO ANÁLISE"
+    Clicar no Botão "Pesquisar"
+    No primeiro aluno da pesquisa, clicar na ação "Indeferir"
+    Clicar no botão salvar para o alerta de Justificativa    
+    Visualizar a mensagem: SELECIONE UMA JUSTIFICATIVA    
+    Clicar em Ok no alerta de Justificativa    
+    Fechar o modal de Justificativa            
+    No primeiro aluno da pesquisa, clicar na ação "Deferir"     
+    Clicar em OK no modal de alerta
+    No primeiro aluno da pesquisa, clicar na ação "Registro de Atendimento"
+    Clicar em salvar o Registro de Atendimento     
+    Visualizar a mensagem: SELECIONE O TIPO DE CONTATO.    
+    Clicar em OK para o alerta de Registro    
+    Selecionar a opção "Contato com Sucesso"    
+    Clicar em salvar o Registro de Atendimento 
+    Visualizar a mensagem: PREENCHA O CAMPO INFORMAÇÕES SOBRE O ATENDIMENTO.
+    Clicar em OK para o alerta de Registro    
+    Selecionar a opção "Contato sem Sucesso"
+    Clicar em salvar o Registro de Atendimento 
+    Visualizar a mensagem: PREENCHA O CAMPO INFORMAÇÕES SOBRE O ATENDIMENTO.
+    Clicar em OK para o alerta de Registro
+    Fechar o modal de Histórico de Contato     
+    No primeiro aluno da pesquisa, clicar na ação "Determinação Legal"
+    Clicar no botão salvar para o alerta de Justificativa
+    Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR
+    Clicar em Ok no alerta de Justificativa
+    Fechar o modal de Justificativa
+    No primeiro aluno da pesquisa, clicar na ação "Pausar"
+    Clicar no botão salvar para o alerta de Justificativa    
+    Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR
+    Clicar em Ok no alerta de Justificativa
+    No primeiro aluno da pesquisa, clicar na ação "Cancelar Inscrição"
+    Clicar no botão salvar para o alerta de Justificativa    
+    Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR
+    Clicar em Ok no alerta de Justificativa
+    
+
+
+
+
+
+
 
     
+
+
+
+
+
+
 
 
 

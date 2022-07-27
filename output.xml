@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.3 on win32)" generated="20220725 18:07:57.287" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.3 on win32)" generated="20220727 16:45:46.494" rpa="false" schemaversion="2">
 <suite id="s1" name="TesteDeVersaoNegativo" source="c:\Users\amanda.diniz\Desktop\Gier-TesteVersaoWeb\3-TestesFluxoBasico\TesteDeVersaoNegativo.robot">
 <test id="s1-t1" name="Cenário 32: Funcionalidade Gestão de Pré-matrícula Escola">
 <kw name="Abrir o navegador" library="1-Principal" type="SETUP">
@@ -7,306 +7,539 @@
 <arg>url=https://www.google.com/</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220725 18:07:57.956" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20220725 18:07:57.956" endtime="20220725 18:08:01.085"/>
+<msg timestamp="20220727 16:45:49.499" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220727 16:45:49.496" endtime="20220727 16:45:53.838"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220725 18:08:01.086" endtime="20220725 18:08:01.224"/>
+<status status="PASS" starttime="20220727 16:45:53.839" endtime="20220727 16:45:53.982"/>
 </kw>
-<status status="PASS" starttime="20220725 18:07:57.955" endtime="20220725 18:08:01.225"/>
+<status status="PASS" starttime="20220727 16:45:49.492" endtime="20220727 16:45:53.983"/>
 </kw>
 <kw name="Acessar o ambiente &quot;https://guarulhoshomolog.gier.com.br/&quot;" library="1-Principal" sourcename="Acessar o ambiente &quot;${url}&quot;">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220725 18:08:01.231" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
-<status status="PASS" starttime="20220725 18:08:01.229" endtime="20220725 18:08:02.930"/>
+<msg timestamp="20220727 16:45:53.991" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
+<status status="PASS" starttime="20220727 16:45:53.989" endtime="20220727 16:45:56.058"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:01.227" endtime="20220725 18:08:02.931"/>
+<status status="PASS" starttime="20220727 16:45:53.985" endtime="20220727 16:45:56.058"/>
 </kw>
 <kw name="Entrar com as credenciais &quot;02867439817&quot; e &quot;12345678&quot;" library="CT01_02-TelaDeLogin" sourcename="Entrar com as credenciais &quot;${login}&quot; e &quot;${senha}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${tituloLogin}</arg>
 <arg>timeout=30</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 18:08:02.934" endtime="20220725 18:08:02.965"/>
+<status status="PASS" starttime="20220727 16:45:56.059" endtime="20220727 16:45:56.086"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoLogin}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 18:08:02.966" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
-<status status="PASS" starttime="20220725 18:08:02.966" endtime="20220725 18:08:03.063"/>
+<msg timestamp="20220727 16:45:56.087" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
+<status status="PASS" starttime="20220727 16:45:56.086" endtime="20220727 16:45:56.166"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoSenha}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 18:08:03.064" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
-<status status="PASS" starttime="20220725 18:08:03.063" endtime="20220725 18:08:03.140"/>
+<msg timestamp="20220727 16:45:56.167" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
+<status status="PASS" starttime="20220727 16:45:56.166" endtime="20220727 16:45:56.247"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${botaoLogin}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220725 18:08:03.141" level="INFO">Clicking button 'btnAcessar'.</msg>
-<status status="PASS" starttime="20220725 18:08:03.141" endtime="20220725 18:08:05.618"/>
+<msg timestamp="20220727 16:45:56.249" level="INFO">Clicking button 'btnAcessar'.</msg>
+<status status="PASS" starttime="20220727 16:45:56.248" endtime="20220727 16:45:58.573"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:02.932" endtime="20220725 18:08:05.618"/>
+<status status="PASS" starttime="20220727 16:45:56.059" endtime="20220727 16:45:58.575"/>
 </kw>
 <kw name="Verificar se aparece o texto &quot;Estrutura&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${texto}</arg>
 <arg>20</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220725 18:08:05.620" endtime="20220725 18:08:05.636"/>
+<status status="PASS" starttime="20220727 16:45:58.578" endtime="20220727 16:45:58.598"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220725 18:08:06.641" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220725 18:08:05.636" endtime="20220725 18:08:06.641"/>
+<msg timestamp="20220727 16:45:59.601" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220727 16:45:58.599" endtime="20220727 16:45:59.601"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:05.619" endtime="20220725 18:08:06.641"/>
+<status status="PASS" starttime="20220727 16:45:58.576" endtime="20220727 16:45:59.601"/>
 </kw>
 <kw name="Pesquisar &quot;VOLPI&quot; e selecionar o primeiro resultado" library="CT06-CadastroDePessoaEmail" sourcename="Pesquisar &quot;${pesquisaEstrutura}&quot; e selecionar o primeiro resultado">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoPesquisaEstrutura}</arg>
 <arg>${pesquisaEstrutura}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 18:08:06.643" level="INFO">Typing text 'VOLPI' into text field '//input[contains(@class,'textBuscaEstrutura')]'.</msg>
-<status status="PASS" starttime="20220725 18:08:06.642" endtime="20220725 18:08:06.705"/>
+<msg timestamp="20220727 16:45:59.604" level="INFO">Typing text 'VOLPI' into text field '//input[contains(@class,'textBuscaEstrutura')]'.</msg>
+<status status="PASS" starttime="20220727 16:45:59.604" endtime="20220727 16:45:59.677"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${primeiroResultadoEstrutura}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 18:08:06.706" level="INFO">Clicking element '//html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]'.</msg>
-<status status="PASS" starttime="20220725 18:08:06.705" endtime="20220725 18:08:06.738"/>
+<msg timestamp="20220727 16:45:59.678" level="INFO">Clicking element '//html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]'.</msg>
+<status status="PASS" starttime="20220727 16:45:59.678" endtime="20220727 16:45:59.721"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:06.642" endtime="20220725 18:08:06.738"/>
+<status status="PASS" starttime="20220727 16:45:59.603" endtime="20220727 16:45:59.721"/>
 </kw>
 <kw name="Verificar se aparece o texto &quot;Operação&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${texto}</arg>
 <arg>20</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220725 18:08:06.740" endtime="20220725 18:08:10.563"/>
+<status status="PASS" starttime="20220727 16:45:59.725" endtime="20220727 16:46:09.166"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220725 18:08:11.566" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220725 18:08:10.563" endtime="20220725 18:08:11.566"/>
+<msg timestamp="20220727 16:46:10.169" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220727 16:46:09.168" endtime="20220727 16:46:10.169"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:06.739" endtime="20220725 18:08:11.566"/>
+<status status="PASS" starttime="20220727 16:45:59.722" endtime="20220727 16:46:10.170"/>
 </kw>
 <kw name="Entrar no módulo &quot;Gestão Escolar&quot;" library="1-Principal" sourcename="Entrar no módulo &quot;${nomeModulo}&quot;">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220725 18:08:11.568" level="INFO">Executing JavaScript:
+<msg timestamp="20220727 16:46:10.172" level="INFO">Executing JavaScript:
 xPathResult = document.evaluate("//span[contains(.,'Gestão Escolar')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 Without any arguments.</msg>
-<status status="PASS" starttime="20220725 18:08:11.567" endtime="20220725 18:08:11.573"/>
+<status status="PASS" starttime="20220727 16:46:10.171" endtime="20220727 16:46:10.177"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult.singleNodeValue.click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220725 18:08:11.574" level="INFO">Executing JavaScript:
+<msg timestamp="20220727 16:46:10.179" level="INFO">Executing JavaScript:
 xPathResult.singleNodeValue.click()
 Without any arguments.</msg>
-<status status="PASS" starttime="20220725 18:08:11.573" endtime="20220725 18:08:11.586"/>
+<status status="PASS" starttime="20220727 16:46:10.178" endtime="20220727 16:46:10.197"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:11.567" endtime="20220725 18:08:11.586"/>
+<status status="PASS" starttime="20220727 16:46:10.171" endtime="20220727 16:46:10.198"/>
 </kw>
 <kw name="Entrar na funcionalidade &quot;Gestão de Pré-matrícula&quot;" library="1-Principal" sourcename="Entrar na funcionalidade &quot;${funcionalidade}&quot;">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220725 18:08:11.589" level="INFO">Executing JavaScript:
+<msg timestamp="20220727 16:46:10.203" level="INFO">Executing JavaScript:
 xPathResult = document.evaluate("//span[contains(@title,'Gestão de Pré-matrícula')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 Without any arguments.</msg>
-<status status="PASS" starttime="20220725 18:08:11.588" endtime="20220725 18:08:12.808"/>
+<status status="PASS" starttime="20220727 16:46:10.200" endtime="20220727 16:46:12.021"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult.singleNodeValue.click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220725 18:08:12.811" level="INFO">Executing JavaScript:
+<msg timestamp="20220727 16:46:12.022" level="INFO">Executing JavaScript:
 xPathResult.singleNodeValue.click()
 Without any arguments.</msg>
-<status status="PASS" starttime="20220725 18:08:12.809" endtime="20220725 18:08:12.826"/>
+<status status="PASS" starttime="20220727 16:46:12.021" endtime="20220727 16:46:12.031"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:11.587" endtime="20220725 18:08:12.827"/>
+<status status="PASS" starttime="20220727 16:46:10.199" endtime="20220727 16:46:12.031"/>
 </kw>
-<kw name="Em campo Educando, informar &quot;Teste Automação Qualidade&quot;" library="CT32-GestaoPreMatriculaEscola" sourcename="Em campo Educando, informar &quot;${Nome}&quot;">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${campoNomeEducando}</arg>
-<arg>${Nome}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 18:08:12.831" level="INFO">Typing text 'Teste Automação Qualidade' into text field 'cphContent_txtAluno'.</msg>
-<status status="PASS" starttime="20220725 18:08:12.831" endtime="20220725 18:08:16.992"/>
+<kw name="Em Situação, selecionar &quot;AGUARDANDO ANÁLISE&quot;" library="CT32-GestaoPreMatriculaEscola" sourcename="Em Situação, selecionar &quot;${Situacao}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Situacao}' == 'TODOS'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSituacao}').val("-1").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:12.035" endtime="20220727 16:46:12.038"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:12.829" endtime="20220725 18:08:16.992"/>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Situacao}' == 'AGUARDANDO ANÁLISE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSituacao}').val("1").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoSituacao}').val("1").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220727 16:46:12.041" level="INFO">Executing JavaScript:
+$('#cphContent_ddlSituacao').val("1").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220727 16:46:12.040" endtime="20220727 16:46:19.072"/>
+</kw>
+<status status="PASS" starttime="20220727 16:46:12.039" endtime="20220727 16:46:19.073"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Situacao}' == 'ATENDIDO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSituacao}').val("2").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:19.074" endtime="20220727 16:46:19.074"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Situacao}' == 'CANCELADO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSituacao}').val("5").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:19.075" endtime="20220727 16:46:19.076"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Situacao}' == 'DETERMINAÇÃO LEGAL'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSituacao}').val("8").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:19.077" endtime="20220727 16:46:19.077"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Situacao}' == 'EXCEDENTE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSituacao}').val("4").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:19.078" endtime="20220727 16:46:19.079"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Situacao}' == 'INDEFERIDO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSituacao}').val("3").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:19.080" endtime="20220727 16:46:19.080"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Situacao}' == 'PAUSADO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSituacao}').val("6").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:19.081" endtime="20220727 16:46:19.082"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoSituacao}').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220727 16:46:19.084" level="INFO">Executing JavaScript:
+$('#cphContent_ddlSituacao').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220727 16:46:19.082" endtime="20220727 16:46:19.092"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220727 16:46:27.093" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20220727 16:46:19.093" endtime="20220727 16:46:27.093"/>
+</kw>
+<status status="PASS" starttime="20220727 16:46:12.032" endtime="20220727 16:46:27.093"/>
 </kw>
 <kw name="Clicar no Botão &quot;Pesquisar&quot;" library="CT13-ConsultaDePessoaNome">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>document.getElementById("${botaoPesquisa}").click();</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220725 18:08:16.994" level="INFO">Executing JavaScript:
+<msg timestamp="20220727 16:46:27.095" level="INFO">Executing JavaScript:
 document.getElementById("cphContent_btnPesquisa").click();
 Without any arguments.</msg>
-<status status="PASS" starttime="20220725 18:08:16.994" endtime="20220725 18:08:17.008"/>
+<status status="PASS" starttime="20220727 16:46:27.095" endtime="20220727 16:46:27.109"/>
 </kw>
 <kw name="Aguardar tela de carregamento" library="1-Principal">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>class=carregando</arg>
 <arg>300</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220725 18:08:17.010" endtime="20220725 18:08:17.901"/>
+<status status="PASS" starttime="20220727 16:46:27.109" endtime="20220727 16:46:30.444"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:17.009" endtime="20220725 18:08:17.901"/>
+<status status="PASS" starttime="20220727 16:46:27.109" endtime="20220727 16:46:30.444"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:16.993" endtime="20220725 18:08:17.901"/>
+<status status="PASS" starttime="20220727 16:46:27.094" endtime="20220727 16:46:30.445"/>
 </kw>
-<kw name="Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS." library="CT32-GestaoPreMatriculaEscola">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>//div[@class='divConteudo'][contains(.,'Não há Educandos com os filtros selecionados.')]</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220725 18:08:17.903" endtime="20220725 18:08:17.915"/>
-</kw>
-<status status="PASS" starttime="20220725 18:08:17.902" endtime="20220725 18:08:17.916"/>
-</kw>
-<kw name="Clicar em OK no modal de alerta" library="CT20-ControleDiarioDeFrequecia">
+<kw name="No primeiro aluno da pesquisa, clicar na ação &quot;Pausar&quot;" library="CT32-GestaoPreMatriculaEscola" sourcename="No primeiro aluno da pesquisa, clicar na ação &quot;${Acao}&quot;">
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_MensagemPadrao_btnOk").click();</arg>
+<arg>document.getElementById("${botaoAcao}").click();</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220725 18:08:17.917" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_MensagemPadrao_btnOk").click();
+<msg timestamp="20220727 16:46:30.449" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_dtlConsulta_A2_0").click();
 Without any arguments.</msg>
-<status status="PASS" starttime="20220725 18:08:17.917" endtime="20220725 18:08:17.927"/>
+<status status="PASS" starttime="20220727 16:46:30.448" endtime="20220727 16:46:30.489"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Analisar Inscrição'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkAnalisar_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:30.490" endtime="20220727 16:46:30.491"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Indeferir'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkRecusar_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:30.492" endtime="20220727 16:46:30.493"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Deferir'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkAprovar_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:30.494" endtime="20220727 16:46:30.495"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Dados do Candidato'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkDadosCandidato_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:30.496" endtime="20220727 16:46:30.498"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Dados do Responsável'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkDadosResponsaveis_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:30.498" endtime="20220727 16:46:30.500"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Registro de Atendimento'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkRegistroAtendimento_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:30.502" endtime="20220727 16:46:30.503"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Origem e Documentação'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkDocumentos_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:30.504" endtime="20220727 16:46:30.505"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Histórico de Alterações'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkHistoricoPreMatricula_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:30.506" endtime="20220727 16:46:30.506"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Determinação Legal'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkDeterminacaoLegal_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:30.507" endtime="20220727 16:46:30.508"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Pausar'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkPausar_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_dtlConsulta_lnkPausar_0").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220727 16:46:30.512" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_dtlConsulta_lnkPausar_0").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220727 16:46:30.510" endtime="20220727 16:46:30.715"/>
+</kw>
+<status status="PASS" starttime="20220727 16:46:30.509" endtime="20220727 16:46:30.716"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Cancelar Inscrição'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkCancelar_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:30.716" endtime="20220727 16:46:30.717"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
+<arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220725 18:08:19.930" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220725 18:08:17.927" endtime="20220725 18:08:19.930"/>
+<msg timestamp="20220727 16:46:40.719" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220727 16:46:30.718" endtime="20220727 16:46:40.719"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:17.916" endtime="20220725 18:08:19.930"/>
+<status status="PASS" starttime="20220727 16:46:30.446" endtime="20220727 16:46:40.720"/>
 </kw>
-<kw name="Clicar no botão Limpar" library="CT22-HistoricoEscolar">
+<kw name="Clicar no botão salvar para o alerta de Justificativa" library="CT32-GestaoPreMatriculaEscola">
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("${botaoLimpar}").click();</arg>
+<arg>document.getElementById("cphContent_Justificativa_btnSalvar").click();</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220725 18:08:19.932" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnLimpar").click();
+<msg timestamp="20220727 16:46:40.722" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_Justificativa_btnSalvar").click();
 Without any arguments.</msg>
-<status status="PASS" starttime="20220725 18:08:19.932" endtime="20220725 18:08:19.945"/>
+<status status="PASS" starttime="20220727 16:46:40.721" endtime="20220727 16:46:40.752"/>
 </kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220725 18:08:19.946" endtime="20220725 18:08:23.931"/>
+<status status="PASS" starttime="20220727 16:46:40.721" endtime="20220727 16:46:40.752"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:19.945" endtime="20220725 18:08:23.931"/>
-</kw>
-<status status="PASS" starttime="20220725 18:08:19.931" endtime="20220725 18:08:23.931"/>
-</kw>
-<kw name="Em campo Protocolo, informar &quot;123456789&quot;" library="CT32-GestaoPreMatriculaEscola" sourcename="Em campo Protocolo, informar &quot;${Protocolo}&quot;">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${campoProtocolo}</arg>
-<arg>${Protocolo}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 18:08:23.933" level="INFO">Typing text '123456789' into text field 'cphContent_txtProtocolo'.</msg>
-<status status="PASS" starttime="20220725 18:08:23.932" endtime="20220725 18:08:24.003"/>
-</kw>
-<status status="PASS" starttime="20220725 18:08:23.932" endtime="20220725 18:08:24.004"/>
-</kw>
-<kw name="Clicar no Botão &quot;Pesquisar&quot;" library="CT13-ConsultaDePessoaNome">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("${botaoPesquisa}").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220725 18:08:24.005" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnPesquisa").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20220725 18:08:24.005" endtime="20220725 18:08:24.017"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220725 18:08:24.018" endtime="20220725 18:08:24.703"/>
-</kw>
-<status status="PASS" starttime="20220725 18:08:24.018" endtime="20220725 18:08:24.703"/>
-</kw>
-<status status="PASS" starttime="20220725 18:08:24.004" endtime="20220725 18:08:24.704"/>
-</kw>
-<kw name="Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS." library="CT32-GestaoPreMatriculaEscola">
+<kw name="Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR" library="CT32-GestaoPreMatriculaEscola">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>//div[@class='divConteudo'][contains(.,'Não há Educandos com os filtros selecionados.')]</arg>
+<arg>//div[@class='divConteudo'][contains(.,'Insira a justificativa para prosseguir')]</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220725 18:08:24.705" endtime="20220725 18:08:24.715"/>
+<status status="PASS" starttime="20220727 16:46:40.754" endtime="20220727 16:46:42.060"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:24.704" endtime="20220725 18:08:24.715"/>
+<status status="PASS" starttime="20220727 16:46:40.753" endtime="20220727 16:46:42.060"/>
 </kw>
-<kw name="Clicar em OK no modal de alerta" library="CT20-ControleDiarioDeFrequecia">
+<kw name="Clicar em Ok no alerta de Justificativa" library="CT32-GestaoPreMatriculaEscola">
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_MensagemPadrao_btnOk").click();</arg>
+<arg>document.getElementById("cphContent_Justificativa_Mensagem_Padrao_btnOk").click();</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220725 18:08:24.716" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_MensagemPadrao_btnOk").click();
+<msg timestamp="20220727 16:46:42.062" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_Justificativa_Mensagem_Padrao_btnOk").click();
 Without any arguments.</msg>
-<status status="PASS" starttime="20220725 18:08:24.716" endtime="20220725 18:08:24.723"/>
+<status status="PASS" starttime="20220727 16:46:42.062" endtime="20220727 16:46:42.112"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220727 16:46:42.119" endtime="20220727 16:46:45.558"/>
+</kw>
+<status status="PASS" starttime="20220727 16:46:42.115" endtime="20220727 16:46:45.559"/>
+</kw>
+<status status="PASS" starttime="20220727 16:46:42.061" endtime="20220727 16:46:45.559"/>
+</kw>
+<kw name="No primeiro aluno da pesquisa, clicar na ação &quot;Cancelar Inscrição&quot;" library="CT32-GestaoPreMatriculaEscola" sourcename="No primeiro aluno da pesquisa, clicar na ação &quot;${Acao}&quot;">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${botaoAcao}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220727 16:46:45.562" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_dtlConsulta_A2_0").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220727 16:46:45.561" endtime="20220727 16:46:45.583"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Analisar Inscrição'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkAnalisar_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:45.584" endtime="20220727 16:46:45.585"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Indeferir'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkRecusar_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:45.586" endtime="20220727 16:46:45.587"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Deferir'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkAprovar_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:45.588" endtime="20220727 16:46:45.588"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Dados do Candidato'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkDadosCandidato_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:45.589" endtime="20220727 16:46:45.590"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Dados do Responsável'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkDadosResponsaveis_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:45.590" endtime="20220727 16:46:45.591"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Registro de Atendimento'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkRegistroAtendimento_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:45.592" endtime="20220727 16:46:45.592"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Origem e Documentação'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkDocumentos_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:45.592" endtime="20220727 16:46:45.593"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Histórico de Alterações'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkHistoricoPreMatricula_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:45.593" endtime="20220727 16:46:45.594"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Determinação Legal'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkDeterminacaoLegal_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:45.595" endtime="20220727 16:46:45.595"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Pausar'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkPausar_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220727 16:46:45.596" endtime="20220727 16:46:45.596"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Acao}' == 'Cancelar Inscrição'</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.getElementById("cphContent_dtlConsulta_lnkCancelar_0").click();</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_dtlConsulta_lnkCancelar_0").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220727 16:46:45.598" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_dtlConsulta_lnkCancelar_0").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220727 16:46:45.597" endtime="20220727 16:46:45.624"/>
+</kw>
+<status status="PASS" starttime="20220727 16:46:45.597" endtime="20220727 16:46:45.624"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
+<arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220725 18:08:26.726" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220725 18:08:24.724" endtime="20220725 18:08:26.726"/>
+<msg timestamp="20220727 16:46:55.626" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220727 16:46:45.625" endtime="20220727 16:46:55.626"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:24.715" endtime="20220725 18:08:26.726"/>
+<status status="PASS" starttime="20220727 16:46:45.560" endtime="20220727 16:46:55.626"/>
 </kw>
-<kw name="Clicar no botão Limpar" library="CT22-HistoricoEscolar">
+<kw name="Clicar no botão salvar para o alerta de Justificativa" library="CT32-GestaoPreMatriculaEscola">
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("${botaoLimpar}").click();</arg>
+<arg>document.getElementById("cphContent_Justificativa_btnSalvar").click();</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220725 18:08:26.729" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnLimpar").click();
+<msg timestamp="20220727 16:46:55.629" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_Justificativa_btnSalvar").click();
 Without any arguments.</msg>
-<status status="PASS" starttime="20220725 18:08:26.728" endtime="20220725 18:08:26.738"/>
+<status status="PASS" starttime="20220727 16:46:55.628" endtime="20220727 16:46:55.650"/>
+</kw>
+<status status="PASS" starttime="20220727 16:46:55.628" endtime="20220727 16:46:55.650"/>
+</kw>
+<kw name="Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR" library="CT32-GestaoPreMatriculaEscola">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='divConteudo'][contains(.,'Insira a justificativa para prosseguir')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220727 16:46:55.652" endtime="20220727 16:46:57.545"/>
+</kw>
+<status status="PASS" starttime="20220727 16:46:55.651" endtime="20220727 16:46:57.546"/>
+</kw>
+<kw name="Clicar em Ok no alerta de Justificativa" library="CT32-GestaoPreMatriculaEscola">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_Justificativa_Mensagem_Padrao_btnOk").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220727 16:46:57.548" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_Justificativa_Mensagem_Padrao_btnOk").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220727 16:46:57.548" endtime="20220727 16:46:57.576"/>
 </kw>
 <kw name="Aguardar tela de carregamento" library="1-Principal">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>class=carregando</arg>
 <arg>300</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220725 18:08:26.739" endtime="20220725 18:08:30.756"/>
+<status status="PASS" starttime="20220727 16:46:57.576" endtime="20220727 16:46:59.726"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:26.739" endtime="20220725 18:08:30.757"/>
+<status status="PASS" starttime="20220727 16:46:57.576" endtime="20220727 16:46:59.726"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:26.727" endtime="20220725 18:08:30.757"/>
+<status status="PASS" starttime="20220727 16:46:57.547" endtime="20220727 16:46:59.727"/>
 </kw>
 <kw name="Fechar o navegador" library="1-Principal" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220725 18:08:30.975" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220725 18:08:30.759" endtime="20220725 18:08:30.975"/>
+<msg timestamp="20220727 16:47:00.167" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220727 16:46:59.729" endtime="20220727 16:47:00.167"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220725 18:08:30.976" endtime="20220725 18:08:33.155"/>
+<status status="PASS" starttime="20220727 16:47:00.168" endtime="20220727 16:47:02.593"/>
 </kw>
-<status status="PASS" starttime="20220725 18:08:30.758" endtime="20220725 18:08:33.156"/>
+<status status="PASS" starttime="20220727 16:46:59.728" endtime="20220727 16:47:02.594"/>
 </kw>
 <doc>Esse teste verifica se é possível consultar e
 registrar as solicitações realizadas no Portal</doc>
 <tag>Gestão de Pré-matrícula | Fluxo Positivo</tag>
-<status status="PASS" starttime="20220725 18:07:57.954" endtime="20220725 18:08:33.156"/>
+<status status="PASS" starttime="20220727 16:45:49.487" endtime="20220727 16:47:02.595"/>
 </test>
 <doc>Esse teste verifica se é possível efetuar login no Gier</doc>
-<status status="PASS" starttime="20220725 18:07:57.291" endtime="20220725 18:08:33.158"/>
+<status status="PASS" starttime="20220727 16:45:46.514" endtime="20220727 16:47:02.597"/>
 </suite>
 <statistics>
 <total>
