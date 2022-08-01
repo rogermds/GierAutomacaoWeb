@@ -44,7 +44,8 @@ No primeiro aluno da pesquisa, clicar na ação "${Acao}"
     Run Keyword If    '${Acao}' == 'Determinação Legal'   Execute JavaScript   document.getElementById("cphContent_dtlConsulta_lnkDeterminacaoLegal_0").click();
     Run Keyword If    '${Acao}' == 'Pausar'    Execute JavaScript   document.getElementById("cphContent_dtlConsulta_lnkPausar_0").click();
     Run Keyword If    '${Acao}' == 'Cancelar Inscrição'   Execute JavaScript   document.getElementById("cphContent_dtlConsulta_lnkCancelar_0").click();
-    Sleep    10
+    Run Keyword If    '${Acao}' == 'Oferta de Vagas'   Execute JavaScript   document.getElementById("cphContent_dtlConsulta_lnkOfertaVagas_0").click();
+    Sleep    5
 
 Clicar no botão salvar para o alerta de Justificativa
     Execute JavaScript  document.getElementById("cphContent_Justificativa_btnSalvar").click();

@@ -31,6 +31,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT29-PortalConsultaBrasile
 Resource         ../2-PageElements/FluxosAlternativos/CT30-PortalConsultaEstrangeiro.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT31-PortalListaDeEspera.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT32-GestaoPreMatriculaEscola.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT33-GestaoPreMatriculaSecret.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -837,6 +838,56 @@ Cenário 32: Funcionalidade Gestão de Pré-matrícula Escola
     Clicar no botão salvar para o alerta de Justificativa    
     Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR
     Clicar em Ok no alerta de Justificativa
+
+Cenário 33: Funcionalidade Gestão de Pré-matrícula Secretaria
+    [Documentation]    Esse teste verifica se é possível consultar e
+    ...                registrar as solicitações realizadas no Portal 
+    [Tags]             Gestão de Pré-matrícula | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em campo Educando, informar "Teste Automação Qualidade"
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.
+    Clicar em OK no modal de alerta
+    Clicar no botão Limpar
+    Em campo Protocolo, informar "123456789"    
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.    
+    Clicar em OK no modal de alerta
+    Clicar no botão Limpar
+    Em Ciclo Destino, selecionar "Creche-Maternal"
+    Em Escola Destino, selecionar "EPG JOAO BALBINO FILHO"    
+    Em Situação, selecionar "AGUARDANDO ANÁLISE"    
+    Clicar no Botão "Pesquisar"
+    No primeiro aluno da pesquisa, clicar na ação "Registro de Atendimento"
+    Clicar em salvar o Registro de Atendimento     
+    Visualizar a mensagem: SELECIONE O TIPO DE CONTATO.    
+    Clicar em OK para o alerta de Registro    
+    Selecionar a opção "Contato com Sucesso"    
+    Clicar em salvar o Registro de Atendimento 
+    Visualizar a mensagem: PREENCHA O CAMPO INFORMAÇÕES SOBRE O ATENDIMENTO.
+    Clicar em OK para o alerta de Registro    
+    Selecionar a opção "Contato sem Sucesso"
+    Clicar em salvar o Registro de Atendimento 
+    Visualizar a mensagem: PREENCHA O CAMPO INFORMAÇÕES SOBRE O ATENDIMENTO.
+    Clicar em OK para o alerta de Registro
+    Fechar o modal de Histórico de Contato     
+    No primeiro aluno da pesquisa, clicar na ação "Cancelar Inscrição"
+    Clicar no botão salvar para o alerta de Justificativa    
+    Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR
+    Clicar em Ok no alerta de Justificativa
+    Fechar o modal de Justificativa
+    No primeiro aluno da pesquisa, clicar na ação "Oferta de Vagas"
+    Clicar no botão salvar para o alerta de Justificativa    
+    Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS PARA PROSSEGUIR
+    Clicar em Ok no alerta de Justificativa
+
+
     
 
 
