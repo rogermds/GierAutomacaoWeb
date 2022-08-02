@@ -886,7 +886,13 @@ Cenário 33: Funcionalidade Gestão de Pré-matrícula Secretaria
     Clicar no botão salvar para o alerta de Justificativa    
     Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS PARA PROSSEGUIR
     Clicar em Ok no alerta de Justificativa
-
+    Fechar o modal de Justificativa
+    Clicar no Check Box do aluno
+    Clicar no botão Alterar Escola 
+    Em alterar escola, selecionar "EPG ALFREDO VOLPI"
+    Clicar em Pesquisar
+    Clicar em Alterar    
+    Clicar no botão salvar para o alerta de Justificativa Alterar Escola    
 
     
 
