@@ -25,7 +25,7 @@ Na consulta de turma, em Etapa/Modalidade, selecionar "${etapaModalidade}"
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("5").trigger('chosen:updated');
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO ESPECIAL EXCLUSIVA'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("12").trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeTurma}').trigger('change');
-    Sleep   3
+    Aguardar tela de carregamento
 
 Na consulta de turma, em Curso, selecionar "${curso}"
     Run Keyword If    '${curso}' == 'CRECHE'  Execute JavaScript   $('#${campoCursoTurma}').val("1").trigger('chosen:updated');
@@ -36,7 +36,7 @@ Na consulta de turma, em Curso, selecionar "${curso}"
     Run Keyword If    '${curso}' == 'CICLO II' and '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoCursoTurma}').val("6").trigger('chosen:updated');
     Run Keyword If    '${curso}' == 'CICLO I' and '${etapaModalidade}' == 'EDUCAÇÃO ESPECIAL EXCLUSIVA'  Execute JavaScript   $('#${campoCursoTurma}').val("15").trigger('chosen:updated');
     Execute JavaScript   $('#${campoCursoTurma}').trigger('change');
-    Sleep   3
+    Aguardar tela de carregamento
 
 Na consulta de turma, em Período, selecionar "${periodo}"
     Run Keyword If    '${periodo}' == 'MISTO'  Execute JavaScript   $('#${campoPeriodoTurma}').val("15324|MISTO").trigger('chosen:updated');

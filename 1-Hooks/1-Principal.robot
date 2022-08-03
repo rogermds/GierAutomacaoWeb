@@ -34,7 +34,6 @@ Aguardar tela de carregamento
 
 Verificar se aparece o texto "${texto}"
     Wait Until Page Contains    ${texto}    20
-    Sleep   1
 
 Entrar no eixo "${nomeEixo}"
     Execute JavaScript  xPathResult = document.evaluate("//span[contains(.,'${nomeEixo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
@@ -48,7 +47,7 @@ Entrar na funcionalidade "${funcionalidade}"
     Execute JavaScript  xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click() 
 
-Clicar no botão Cadastrar
+Clicar em Cadastrar
     Wait Until Element Is Visible    ${botaoCadastrar}
     Execute JavaScript  document.getElementById("${botaoCadastrar}").click();
     Aguardar tela de carregamento
@@ -94,3 +93,4 @@ Clicar em Sim no Modal
     Wait Until Element Is Visible    ${botaoSimModal}
     Execute JavaScript  document.getElementById("${botaoSimModal}").click();
     Aguardar tela de carregamento
+

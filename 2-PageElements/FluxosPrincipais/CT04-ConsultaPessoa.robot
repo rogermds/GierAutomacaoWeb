@@ -2,7 +2,6 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${botaoPesquisar}                 cphContent_btnPesquisa
 ${botaoAcoesPessoa}               //input[@name='ctl00$cphContent$dtlConsultaPessoa$ctl00$A2'][contains(@id,'0')]
 ${botaoVisualizarPessoa}          cphContent_dtlConsultaPessoa_lkbVisualizar_0
 
@@ -14,9 +13,7 @@ Em consulta, no campo Nome, inserir o nome "${nome}"
 Em consulta, no campo D. Nascimento, inserir a data "${dataNascimento}"
     Set Suite Variable  ${campoDataNascimento}            cphContent_txtDNasc
     Input Text    ${campoDataNascimento}    ${dataNascimento}
-
-Clicar no botão "Pesquisar"
-    Execute JavaScript  document.getElementById("${botaoPesquisar}").click();
+    Set Suite Variable    ${botaoPesquisar}    cphContent_btnPesquisa
 
 Verificar se no grid é exibido o CPF "${CPF}"
     Wait Until Page Contains  ${CPF}    10

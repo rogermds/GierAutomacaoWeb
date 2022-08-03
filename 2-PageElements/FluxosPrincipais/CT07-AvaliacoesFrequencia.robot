@@ -35,12 +35,12 @@ ${campoJustificativaDevolucao}           cphContent_QuestionarioAvaliacao_dtlQue
 
 *** Keywords ***
 Na consulta de avaliações, em Etapa/Modalidade, selecionar "${etapaModalidade}"
-    Sleep    1
+    Aguardar tela de carregamento
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("1").trigger('chosen:updated');
     Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("4").trigger('chosen:updated');
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("5").trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').trigger('change');
-    Sleep   3
+    Aguardar tela de carregamento
 
 Na consulta de avaliações, em Professor, selecionar "${professor}"    
     Run Keyword If    '${professor}' == 'ADRIANA CRISTINA CAMPOS SCALICI'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("6167").trigger('chosen:updated');
@@ -50,7 +50,7 @@ Na consulta de avaliações, em Professor, selecionar "${professor}"
     Run Keyword If    '${professor}' == 'MARIA FAUSTA JUSTINIANO SANTOS SILVEIRA'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("3560").trigger('chosen:updated');
     Run Keyword If    '${professor}' == 'LUCIANA OLIVEIRA RIBEIRO TOLEDO'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("7797").trigger('chosen:updated');
     Execute JavaScript   $('#${campoProfessorAvalicoes}').trigger('change');
-    Sleep   3
+    Aguardar tela de carregamento
 
 Na consulta de avaliações, em Turma, selecionar "${turma}"
     Run Keyword If    '${turma}' == 'EII A'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("110667").trigger('chosen:updated');
@@ -60,7 +60,7 @@ Na consulta de avaliações, em Turma, selecionar "${turma}"
     Run Keyword If    '${turma}' == '1B'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("110726").trigger('chosen:updated');
     Run Keyword If    '${turma}' == '4A'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("111827").trigger('chosen:updated');
     Execute JavaScript   $('#${campoTurmaAvalicoes}').trigger('change');
-    Sleep   3
+    Aguardar tela de carregamento
 
 No primeiro aluno, em questionário, clicar em "Responder"
     Wait Until Element Is Visible       ${botaoControleFrequencia}  20
@@ -79,10 +79,10 @@ Clicar em Salvar e Fechar
 
 No modal de alerta, clicar em Ok
     Execute JavaScript  document.getElementById("${okModalSucesso}").click();
-    Sleep  5
+    Aguardar tela de carregamento
 
 No modal de Cadastro Efetuado com Sucesso, clicar em Ok
-    Sleep   8
+    Aguardar tela de carregamento
     Execute JavaScript  document.getElementById("${okModalCadastroSucesso}").click();
     Wait Until Element Is Visible       ${botaoControleFrequencia}  10
 
@@ -91,7 +91,7 @@ Verificar se as questões foram marcadas conforme foram salvas
     Element Attribute Value Should Be    ${segundaQuestao}     checked     true
     Element Attribute Value Should Be    ${terceiraQuestao}     checked     true
     Element Attribute Value Should Be    ${quartaQuestao}     checked     true
-    Sleep   2
+    Aguardar tela de carregamento
 
 Em Relatório, digitar um texto para envio
     Set Suite Variable    ${textoRelatorioValidacao}    ENVIO DE RELATÓRIO PARA VALIDAÇÃO
@@ -99,10 +99,10 @@ Em Relatório, digitar um texto para envio
 
 Clicar em Enviar para Validação
     Execute JavaScript  document.getElementById("${botaoEnviarParaValidacao}").click();
-    Sleep   4
+    Aguardar tela de carregamento
 
 Verificar se aparece o status "${texto}"
-    Sleep    8
+    Aguardar tela de carregamento
     Element Should Contain    ${campoDescricaoQuestionario}     ${texto}
 
 Verificar se a Situação de Validação está como "${texto}"
@@ -116,18 +116,18 @@ Verificar se a Situação de Validação está como "${texto}"
 
 Clicar em VISUALIZAR EDUCANDOS
     Execute JavaScript  document.getElementById("${visualizarEducandos}").click();
-    Sleep   4
+    Aguardar tela de carregamento
 
 Clicar em VISUALIZAR RELATORIO
     Execute JavaScript  document.getElementById("${visualizarRelatorio}").click();
-    Sleep   4
+    Aguardar tela de carregamento
 
 Verificar se o texto inserido aparece nesta tela
     Element Should Contain    ${campoTextoRespostaAvaliacao}     ${textoRelatorioValidacao}
 
 Clicar em Encaminhar para Ajustes
     Execute JavaScript  document.getElementById("${encaminharParaAjustes}").click();
-    Sleep   4
+    Aguardar tela de carregamento
 
 Digitar uma justificativa
     Set Suite Variable    ${justificativaRelatorio}    JUSTIFICATIVA DE DEVOLUÇÃO DE RELATÓRIO
@@ -137,12 +137,12 @@ Verificar se a Justificativa de Devolução é exibida
     Element Should Contain    ${campoJustificativaDevolucao}     ${justificativaRelatorio}
 
 Verificar se este texto aparece no histórico
-    Sleep    5
+    Aguardar tela de carregamento
     Element Should Contain    ${campoHistoricoJustificativa}     ${justificativaRelatorio}
 
 Clicar em Realizar Ajustes
     Execute JavaScript  document.getElementById("${botaoRealizarAjustes}").click();
-    Sleep   4
+    Aguardar tela de carregamento
 
 Inserir um novo texto no relatório
     Set Suite Variable    ${correcaoRelatorio}    AJUSTE EFETUADO COM SUCESSO
@@ -150,21 +150,21 @@ Inserir um novo texto no relatório
 
 Clicar em Salvar Ajustes
     Execute JavaScript  document.getElementById("${botaoSalvarAjustes}").click();
-    Sleep   4
+    Aguardar tela de carregamento
 
 Verificar se o texto alterado aparece nesta tela
     Element Should Contain    ${campoTextoRespostaAvaliacao}     ${correcaoRelatorio}
 
 Em Validação de Relatório, em Etapa/Modalidade, selecionar "${etapaModalidade}"
-    Sleep    5
+    Aguardar tela de carregamento
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'  Execute JavaScript   $('#${campoEtapaModalidadeRelatorio}').val("1").trigger('chosen:updated');
     Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoEtapaModalidadeRelatorio}').val("4").trigger('chosen:updated');
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeRelatorio}').val("5").trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeRelatorio}').trigger('change');
-    Sleep   2
+    Aguardar tela de carregamento
 
 Em Validação de Relatório, em Turma, selecionar "${turma}"
-    Sleep    5
+    Aguardar tela de carregamento
     Run Keyword If    '${turma}' == 'EII A'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("110667").trigger('chosen:updated');
     Run Keyword If    '${turma}' == '5B'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("112173").trigger('chosen:updated');
     Run Keyword If    '${turma}' == '3A'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("110822").trigger('chosen:updated');
@@ -172,7 +172,7 @@ Em Validação de Relatório, em Turma, selecionar "${turma}"
     Run Keyword If    '${turma}' == '4A'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("111827").trigger('chosen:updated');
     Run Keyword If    '${turma}' == '1B'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("110726").trigger('chosen:updated');
     Execute JavaScript   $('#${campoTurmaRelatorio}').trigger('change');
-    Sleep   2
+    Aguardar tela de carregamento
 
 Em Validação de Relatório, clicar em Pesquisar
     ${botaoPesquisar}    Set Variable   cphContent_btnPesquisa

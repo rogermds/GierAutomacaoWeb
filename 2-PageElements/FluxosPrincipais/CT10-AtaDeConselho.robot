@@ -20,6 +20,7 @@ Na tela de Ata de Conselho, em Etapa/Modalidade, selecionar "${etapaModalidade}"
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeAta}').val("5").trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeAta}').trigger('change');
     Aguardar tela de carregamento
+
 Na tela de Ata de Conselho, em Turma, selecionar "${turma}"
     Run Keyword If    '${turma}' == 'EII A'  Execute JavaScript   $('#${campoTurmaAta}').val("110667").trigger('chosen:updated');
     Run Keyword If    '${turma}' == '5B'  Execute JavaScript   $('#${campoTurmaAta}').val("112173").trigger('chosen:updated');
@@ -47,7 +48,7 @@ Na tela de Ata de Conselho, em ações, clicar em Prontuário do Aluno no primei
 
 Verificar se a página foi redirecionada para Prontuário do Educando
     Wait Until Page Contains    Prontuário do Educando
-    Sleep    2
+    Aguardar tela de carregamento
 
 Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
     Execute JavaScript  document.getElementById("${botaoRegistrarObservacoes}").click();

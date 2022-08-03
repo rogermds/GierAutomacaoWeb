@@ -9,11 +9,11 @@ ${campoCursoTurma}                      cphContent_ddlCurso
 ${campoCicloTurma}                      cphContent_ddlCiclo
 ${campoPeriodoTurma}                    cphContent_ddlPeriodo
 ${campoTurmaTurma}                      cphContent_ddlTurma
+${campoCalendario}                      cphContent_ddlCalendarioEscola
 ${campoGradeAulaTurma}                  cphContent_ddlCalendarioPadrao
 ${campoProgramaCurricularTurma}         cphContent_ddlProgramaCurricular
 ${campoSalaFisica}                      cphContent_dtlGerarClasse_lbtSelecionar_0
 ${campoCapacidadeTurma}                 cphContent_txtCapacidadeInformada
-${botaoSalvarTurma}                     cphContent_btnSalvar
 ${botaoNaoTurma}                        cphContent_Mensagem_Padrao_btnNao
 ${botaoNovaTurmaMulti}                  cphContent_btnClasseMultisseriada
 ${campoAnualSemestral}                  cphContent_ddlTipoEnsino
@@ -29,7 +29,7 @@ No cadastro de turma, em Etapa/Modalidade, selecionar "${etapaModalidade}"
     Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("4|EF|0").trigger('chosen:updated');
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeTurma}').val("5|EJA1S|1").trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeTurma}').trigger('change');
-    Sleep   3
+    Aguardar tela de carregamento
 
 Em Curso, selecionar "${curso}"
     Run Keyword If    '${curso}' == 'CRECHE'  Execute JavaScript   $('#${campoCursoTurma}').val("1").trigger('chosen:updated');
@@ -39,7 +39,7 @@ Em Curso, selecionar "${curso}"
     Run Keyword If    '${curso}' == 'CICLO I' and '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoCursoTurma}').val("5").trigger('chosen:updated');
     Run Keyword If    '${curso}' == 'CICLO II' and '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoCursoTurma}').val("6").trigger('chosen:updated');
     Execute JavaScript   $('#${campoCursoTurma}').trigger('change');
-    Sleep   3
+    Aguardar tela de carregamento
 
 Em Ciclo, selecionar "${ciclo}"
     Run Keyword If    '${ciclo}' == 'ESTÁGIO I'  Execute JavaScript   $('#${campoCicloTurma}').val("6|EI|G4").trigger('chosen:updated');
@@ -49,17 +49,17 @@ Em Ciclo, selecionar "${ciclo}"
     Run Keyword If    '${ciclo}' == 'SEMESTRE 3'  Execute JavaScript   $('#${campoCicloTurma}').val("43|S3|S3").trigger('chosen:updated');
     Run Keyword If    '${ciclo}' == 'SEMESTRE 4'  Execute JavaScript   $('#${campoCicloTurma}').val("44|S4|S4").trigger('chosen:updated');
     Execute JavaScript   $('#${campoCicloTurma}').trigger('change');
-    Sleep   3
+    Aguardar tela de carregamento
 
 Em Período, selecionar "${periodo}"
     Run Keyword If    '${periodo}' == 'INTEGRAL'  Execute JavaScript   $('#${campoPeriodoTurma}').val("14650|I|1").trigger('chosen:updated');
-    Run Keyword If    '${periodo}' == 'MISTO'  Execute JavaScript   $('#${campoPeriodoTurma}').val("15324|MISTO|6").trigger('chosen:updated');
+    Run Keyword If    '${periodo}' == 'MISTO'  Execute JavaScript   $('#${campoPeriodoTurma}').val("15347|MISTO|6").trigger('chosen:updated');
     Run Keyword If    '${periodo}' == 'MANHÃ'  Execute JavaScript   $('#${campoPeriodoTurma}').val("14648|M|2").trigger('chosen:updated');
-    Run Keyword If    '${periodo}' == 'TARDE'  Execute JavaScript   $('#${campoPeriodoTurma}').val("14649|T|3").trigger('chosen:updated');
+    Run Keyword If    '${periodo}' == 'TARDE'  Execute JavaScript   $('#${campoPeriodoTurma}').val("15220|T|3").trigger('chosen:updated');
     Run Keyword If    '${periodo}' == 'NOITE'  Execute JavaScript   $('#${campoPeriodoTurma}').val("15221|N|4").trigger('chosen:updated');
     Run Keyword If    '${periodo}' == 'INTERMEDIÁRIO'  Execute JavaScript   $('#${campoPeriodoTurma}').val("15332|IN|5").trigger('chosen:updated');
     Execute JavaScript   $('#${campoPeriodoTurma}').trigger('change');
-    Sleep   3
+    Aguardar tela de carregamento
 
 Em Turma, selecionar "${turma}"
     Run Keyword If    '${turma}' == 'P'  Execute JavaScript   $('#${campoTurmaTurma}').val("16").trigger('chosen:updated');
@@ -74,36 +74,39 @@ Em Turma, selecionar "${turma}"
     Run Keyword If    '${turma}' == 'Y'  Execute JavaScript   $('#${campoTurmaTurma}').val("23").trigger('chosen:updated');
     Run Keyword If    '${turma}' == 'Z'  Execute JavaScript   $('#${campoTurmaTurma}').val("26").trigger('chosen:updated');
     Execute JavaScript   $('#${campoTurmaTurma}').trigger('change');
-    Sleep   5
+    Aguardar tela de carregamento
+
+No cadastro de Turma, selecionar Calendário
+    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'    Execute JavaScript   $('#${campoCalendario}').val("1374").trigger('chosen:updated');
+    Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'    Execute JavaScript   $('#${campoCalendario}').val("1516").trigger('chosen:updated');
+    Execute JavaScript   $('#${campoCalendario}').trigger('change');
 
 Em Grade de Aula, selecionar "${gradeAula}"
     Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - MANHÃ'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("14710").trigger('chosen:updated');
-    Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - TARDE'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("14711").trigger('chosen:updated');
+    Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - TARDE'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("15273").trigger('chosen:updated');
     Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - NOITE'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("15274").trigger('chosen:updated');
-    Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - MISTO'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("15406").trigger('chosen:updated');
+    Run Keyword If    '${gradeAula}' == 'GRADE DE HORARIO - MISTO'  Execute JavaScript   $('#${campoGradeAulaTurma}').val("15428").trigger('chosen:updated');
     Execute JavaScript   $('#${campoGradeAulaTurma}').trigger('change');
-    Sleep   3
+    Aguardar tela de carregamento
 
 Em Programa Curricular, selecionar "${programaCurricular}"
-    Run Keyword If    '${programaCurricular}' == 'ESTÁGIO II'  Execute JavaScript   $('#${campoProgramaCurricularTurma}').val("42646|1234").trigger('chosen:updated');
-    Run Keyword If    '${programaCurricular}' == '5º ANO'  Execute JavaScript   $('#${campoProgramaCurricularTurma}').val("45150|1246").trigger('chosen:updated');
+    Run Keyword If    '${programaCurricular}' == 'ESTÁGIO II'  Execute JavaScript   $('#${campoProgramaCurricularTurma}').val("42668|1234").trigger('chosen:updated');
+    Run Keyword If    '${programaCurricular}' == '5º ANO'  Execute JavaScript   $('#${campoProgramaCurricularTurma}').val("43568|1247").trigger('chosen:updated');
     Run Keyword If    '${programaCurricular}' == 'EJA'  Execute JavaScript   $('#${campoProgramaCurricularTurma}').val("44455|1266").trigger('chosen:updated');
 
 Selecionar uma Sala Física
     Execute JavaScript  document.getElementById("${campoSalaFisica}").click();
-    Sleep   3
+    Aguardar tela de carregamento
 
 Em Capacidade da Turma, inserir a quantidade "${capacidade}"
     Input Text   ${campoCapacidadeTurma}    ${capacidade}
 
-Na Turma, clicar em Salvar
-    Execute JavaScript  document.getElementById("${botaoSalvarTurma}").click();
-    Sleep   3
-
 No modal para cadastrar outra turma, clique em Não
     Execute JavaScript  document.getElementById("${botaoNaoTurma}").click();
-    Sleep   3
-    Wait Until Page Contains  Consultar Turma
+    Aguardar tela de carregamento
+
+Verificar se a página retornou a busca de turma
+    Wait Until Page Contains    Consultar Turma
 
 Clicar em Nova Turma Multisseriada
     Execute JavaScript  document.getElementById("${botaoNovaTurmaMulti}").click();
@@ -114,7 +117,7 @@ Em Anual/Semanal, selecionar "${anualSemanal}"
     Run Keyword If    '${anualSemanal}' == '1° SEMESTRE'  Execute JavaScript   $('#${campoAnualSemestral}').val("1").trigger('chosen:updated');
     Run Keyword If    '${anualSemanal}' == '2° SEMESTRE'  Execute JavaScript   $('#${campoAnualSemestral}').val("2").trigger('chosen:updated');
     Execute JavaScript   $('#${campoAnualSemestral}').trigger('change');
-    Sleep    2
+    Aguardar tela de carregamento
 
 No grid de Etapa, selecionar "${cicloMulti}"
     Run Keyword If    '${cicloMulti}' == 'BERCARIO I'   Execute JavaScript  document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_0").click();
@@ -133,4 +136,4 @@ No grid de Etapa, selecionar "${cicloMulti}"
     Run Keyword If    '${cicloMulti}' == '3° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_13").click();
     Run Keyword If    '${cicloMulti}' == '4° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_14").click();
     Run Keyword If    '${cicloMulti}' == '5° ANO - EE'  Execute JavaScript   document.getElementById("cphContent_dtlMatrizCurricular_ckbProgramaCurricularEscola_15").click();
-    Sleep    2
+    Aguardar tela de carregamento
