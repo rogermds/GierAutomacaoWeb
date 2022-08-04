@@ -33,6 +33,8 @@ Resource         ../2-PageElements/FluxosAlternativos/CT31-PortalListaDeEspera.r
 Resource         ../2-PageElements/FluxosAlternativos/CT32-GestaoPreMatriculaEscola.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT33-GestaoPreMatriculaSecret.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT34-CredenciamentoCondutores.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT35-CadastroDeRotas.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT36-CadastroViagens.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -999,6 +1001,117 @@ Cenário 34: Funcionalidade Credenciamento de Condutores
     Clicar no botão Salvar e Próximo para o proximo passo
     Clicar no Botão Salvar e Fechar 
     Visualizar a mensagem: NECESSÁRIO INFORMAR O NÚMERO DE CONTRATO    
+
+Cenário 35: Funcionalidade Rotas
+    [Documentation]    Esse teste verifica se é possível cadastrar
+    ...                uma rota para Transporte 
+    [Tags]             Credenciamento de Condutores | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Rotas"
+    Clicar no botão Cadastrar
+    Em Tipo de Rota, selecionar "Centro"    
+    Em Nome de Escola, inserir "Volpi"
+    Clicar em Pesquisar
+    Selecionar a busca realizada na pesquisa da Escola
+    Clicar no botão 'Inserir'    
+    Clicar em Salvar
+    Visualizar a mensagem: PREENCHA O CAMPO NOME.
+    Clicar em OK no modal de alerta
+    Em Nome, inserir "Teste Automação Qa Nome"
+    Clicar em Salvar
+    Visualizar a mensagem: PREENCHA O CAMPO PONTO INICIAL.
+    Clicar em OK no modal de alerta
+    Em Ponto Inicial, inserir "Teste Automação Qa Ponto Inicial"
+    Clicar em Salvar
+    Visualizar a mensagem: PREENCHA O CAMPO PONTO FINAL.
+    Clicar em OK no modal de alerta
+    Em Ponto Final, inserir "Teste Automação Qa Ponto Final"
+    Em Tipo de Rota, selecionar "Selecione" 
+    Clicar em Salvar
+    Visualizar a mensagem: SELECIONE UM TIPO DE ROTA    
+    Clicar em OK no modal de alerta
+
+Cenário 36: Funcionalidade Viagens 
+    [Documentation]    Esse teste verifica se é possível cadastrar
+    ...                uma rota para Transporte 
+    [Tags]             Credenciamento de Condutores | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade de transporte "Viagens"    
+    Clicar no botão Cadastrar
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME O NOME DA VIAGEM.
+    Clicar em OK no modal de alerta
+    Em Nome, inserir "Teste Automação Qa Nome"
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A ROTA DA VIAGEM.    
+    Clicar em OK no modal de alerta    
+    Em Rota, selecionar "Teste Qa"
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A FROTA.
+    Clicar em OK no modal de alerta
+    Em Frota, selecionar "Transporte Escolar"
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME O VEÍCULO.
+    Clicar em OK no modal de alerta
+    Em veículo, selecionar "CITROEN - JUMPER M33M 23S - EOE7520"
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A DATA DE VIGÊNCIA.
+    Clicar em OK no modal de alerta
+    Em Vigência Inicial, infomar "00/00/0000"
+    Em Vigência Final, infomar "00/00/0000"
+    Clicar em Salvar
+    Visualizar a mensagem: DATA DE VIGÊNCIA INVÁLIDA.
+    Clicar em OK no modal de alerta
+    Limpar Vigência Inicial, informar a data do dia atual 
+    Limpar Vigência Final, informar a data do dia atual 
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A HORÁRIO INICIAL DE.
+    Clicar em OK no modal de alerta
+    Em Horário Inicial, informar "08:00" para De
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A HORÁRIO INICIAL ATÉ.
+    Clicar em OK no modal de alerta
+    Em Horário Inicial, informar "12:00" para até
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A HORÁRIO FiNAL DE.
+    Clicar em OK no modal de alerta
+    Em Horário Final, informar "13:00" para De
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A HORÁRIO FINAL ATÉ.
+    Clicar em OK no modal de alerta
+    Em Horário Final, informar "18:00" para até
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME OS DIAS DA SEMANA
+    Clicar em OK no modal de alerta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

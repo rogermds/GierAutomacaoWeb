@@ -16,7 +16,7 @@ ${campoObservacaoAta}           cphContent_txtObservacaoAtaConcelho
 ${botaoOKModal}                 cphContent_Mensagem_Padrao_btnOk
 ${botaoSimModal}                cphContent_Mensagem_Padrao_btnSim
 ${AnoLetivo}                    ddlAnoLetivo
-
+${campoNome}                    cphContent_txtNome
 
 *** Keywords ***
 Abrir o navegador
@@ -95,3 +95,8 @@ Clicar em Sim no Modal
     Wait Until Element Is Visible    ${botaoSimModal}
     Execute JavaScript  document.getElementById("${botaoSimModal}").click();
     Aguardar tela de carregamento
+
+Em nome, inserir "${nome}"
+    Execute JavaScript  document.getElementById("${campoNome}").click();
+    Input Text    ${campoNome}    ${nome}
+    
