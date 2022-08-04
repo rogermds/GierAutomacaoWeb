@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library     FakerLibrary
 
 *** Variables ***
 ${campoEmailPesquisa}    cphContent_txtEmail

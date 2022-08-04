@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library     FakerLibrary
+Library    FakerLibrary    locale=pt-BR
 
 *** Variables ***
 ${campoPesquisaEstrutura}         //input[contains(@class,'textBuscaEstrutura')]

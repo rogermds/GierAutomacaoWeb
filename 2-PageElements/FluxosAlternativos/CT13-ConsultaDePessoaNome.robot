@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../../1-Hooks/1-Principal.robot
 Library    SeleniumLibrary
-Library     FakerLibrary
+
 
 *** Variables ***
 ${botaoPesquisa}            cphContent_btnPesquisa    

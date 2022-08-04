@@ -1,7 +1,6 @@
 *** Settings ***
 Resource    ../../1-Hooks/1-Principal.robot
 Library     SeleniumLibrary
-Library     FakerLibrary
 
 *** Variables ***
 ${campoEtapaModalidadeAvaliacoes}        cphContent_ddlEtapaModalidade
@@ -10,7 +9,6 @@ ${campoTurmaAvalicoes}                   cphContent_ddlClasse
 ${campoDataRefencia}                     cphContent_txtDataReferenci
 ${campoDescricao}                        cphContent_txtDescricao    
 ${diarioAluno}                           cphContent_rptDigitaNf_btnDiario_0
-
 
 *** Keywords ***
 Na consulta de avaliações, em Etapa/Modalidade, selecionar "${etapaModalidade}" 
@@ -32,7 +30,6 @@ Visualizar a mensagem: INFORME UMA DATA VÁLIDA
     Wait Until Page Contains Element    //div[contains(@id,'painelMsg')][contains(.,'Informe uma data válida')]
     
 Na consulta de avaliações, em Data de Referência, informar a data do dia atual
-    Execute JavaScript  document.getElementById("${campoDataRefencia}").click();
     Clear Element Text    ${campoDataRefencia}
     Execute JavaScript  xPathResult = document.evaluate("${botaoDataHoje}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click()

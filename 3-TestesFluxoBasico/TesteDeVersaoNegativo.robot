@@ -927,14 +927,14 @@ Cenário 34: Funcionalidade Credenciamento de Condutores
     Em Data da Inscrição do Condutor, selecionar o dia atual     
     Clicar em selecionar 
     Clicar no botão Salvar e Próximo
-    Clicar no botão Salvar e Próximo
+    Clicar no botão Salvar e Próximo para o proximo passo   
     Visualizar a mensagem: SELECIONE AO MENOS UMA ESCOLA
     Clicar em OK no modal de alerta 
     Em Nome da Escola, inserir "Volpi"
     Clicar em Pesquisar
     Clicar em "Inserir"
-    Clicar no botão Salvar e Próximo
-    Clicar no botão Salvar e Próximo
+    Clicar no botão Salvar e Próximo para o proximo passo  
+    Clicar no botão Salvar e Próximo para o proximo passo  
     Visualizar a mensagem: SELECIONE OU ADICIONE UM VEÍCULO
     Clicar em OK no modal de alerta 
     Clicar no botão Adicionar Veículo    
@@ -944,7 +944,7 @@ Cenário 34: Funcionalidade Credenciamento de Condutores
     Clicar no botão Adicionar Veículo
     Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
     Clicar em OK no modal de alerta 
-    Em Modelo, selecionar "Sprinter"
+    Em Modelo, selecionar "UNO"
     Clicar no botão Adicionar Veículo
     Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
     Clicar em OK no modal de alerta 
@@ -968,11 +968,11 @@ Cenário 34: Funcionalidade Credenciamento de Condutores
     Clicar no botão Adicionar Veículo
     Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
     Clicar em OK no modal de alerta 
-    Em Cor, selecionar "Rosa"
+    Em Cor, selecionar "Pink"
     Clicar no botão Adicionar Veículo
     Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
     Clicar em OK no modal de alerta 
-    Em Tipo de Veículo, selecionar "Onibus"
+    Em Tipo de Veículo, selecionar "Ônibus"
     Clicar no botão Adicionar Veículo
     Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
     Clicar em OK no modal de alerta     
@@ -995,8 +995,8 @@ Cenário 34: Funcionalidade Credenciamento de Condutores
     Clicar em OK no modal de alerta 
     Em Vagas Convencional, informar "30"
     Clicar no botão Adicionar Veículo
-    Clicar no botão Salvar e Próximo
-    Clicar no botão Salvar e Próximo
+    Clicar no botão Salvar e Próximo para o proximo passo
+    Clicar no botão Salvar e Próximo para o proximo passo
     Clicar no Botão Salvar e Fechar 
     Visualizar a mensagem: NECESSÁRIO INFORMAR O NÚMERO DE CONTRATO    
 

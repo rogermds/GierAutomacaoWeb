@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library     FakerLibrary
 
 *** Variables ***
 ${botaoNovaTurmaMulti}                  cphContent_btnClasseMultisseriada
