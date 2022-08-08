@@ -63,7 +63,7 @@ Visualizar a mensagem: O CAMPO TIPO CPF/CNPJ É OBRIGATÓRIO.
     Wait Until Page Contains Element    //div[@class='divConteudo'][contains(.,'O campo tipo CPF/CNPJ é obrigatório.')]
 
 Em CNPJ, inserir um CNPJ válido
-    ${cnpj}    FakerLibrary.CNPJ
+    ${cnpj}    FakerLibrary.CNPJ    
     Input Text  ${campoCnpj}  ${CNPJ}
 
 Em Data da Inscrição do Condutor, selecionar o dia atual

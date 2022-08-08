@@ -35,6 +35,8 @@ Resource         ../2-PageElements/FluxosAlternativos/CT33-GestaoPreMatriculaSec
 Resource         ../2-PageElements/FluxosAlternativos/CT34-CredenciamentoCondutores.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT35-CadastroDeRotas.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT36-CadastroViagens.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT37-FuncionalidadeGestãoTransp.robot
+Resource    ../2-PageElements/FluxosPrincipais/CT04-ConsultaPessoa.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -1093,6 +1095,59 @@ Cenário 36: Funcionalidade Viagens
     Clicar em Salvar
     Visualizar a mensagem: INFORME OS DIAS DA SEMANA
     Clicar em OK no modal de alerta
+
+Cenário 37: Funcionalidade Transportes Secretaria 
+    [Documentation]    Esse teste verifica se é possível solicitar
+    ...                uma transporte através da secretaria
+    [Tags]             Credenciamento de Condutores | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Gestão de Solicitação de Transporte" 
+    Clicar no botão "Pesquisar" 
+    Visualizar a mensagem: SELECIONE UMA SITUAÇÃO.
+    Clicar em OK no modal de alerta
+    Clicar em Cadastrar Beneficiários Externos
+    Clicar em Salvar
+    Visualizar a mensagem: A ESCOLA DE ORIGEM DO EDUCANDO É OBRIGATÓRIO
+    Clicar em OK no modal de alerta
+    Em Escola de Outra Rede, selecionar "AMOR AO PRÓXIMO CASA"
+    Clicar em Salvar
+    Visualizar a mensagem: O NOME DO EDUCANDO É OBRIGATÓRIO
+    Clicar em OK no modal de alerta
+    Em Nome do Educando, informar "Teste Qa Automação"
+    Clicar em Salvar
+    Visualizar a mensagem: A DATA DE NASCIMENTO DO EDUCANDO É OBRIGATÓRIO
+    Clicar em OK no modal de alerta
+    Em Data de Nascimento, informar "00/00/0000"
+    Clicar em Salvar
+    Visualizar a mensagem: O SEXO DO EDUCANDO É OBRIGATÓRIO
+    Clicar em OK no modal de alerta
+    Em Sexo, selecionar "Feminino"
+    Em Carteira de Identidade ou R.N.E informar um documento válido
+    Clicar em Salvar
+    Visualizar a mensagem: O ORGÃO EMISSOR DA CARTEIRA DE IDENTIDADE É OBRIGATÓRIO
+    Clicar em OK no modal de alerta
+    Em Órgão Emissor, selecionar "SSP"
+    Clicar em Salvar
+    Visualizar a mensagem: É OBRIGATÓRIO INSERIR O ENDEREÇO
+    Clicar em OK no modal de alerta
+    Clicar no campo 'Cep' e digitar o valor "99999-999"
+    Visualizar a mensagem: CEP NÃO ENCONTRADO
+    Clicar em OK no modal de alerta
+    Clicar no campo 'Cep' e digitar o valor "07032-000"
+    Clicar no campo 'Numero' e digitar o valor "134"
+    Clicar em "Inserir"
+    Clicar em Salvar
+    Visualizar a mensagem: É NECESSÁRIO INSERIR UM RESPONSÁVEL
+    Clicar em OK no modal de alerta
+    Clicar no botão Inserir Responsável
+    Visualizar a mensagem: PESQUISE UM RESPONSÁVEL.    
+    Clicar em OK no modal de alerta
+
 
 
 
