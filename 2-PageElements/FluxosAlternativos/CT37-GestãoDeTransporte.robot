@@ -3,7 +3,6 @@ Resource    ../../1-Hooks/1-Principal.robot
 Library     SeleniumLibrary
 Library    FakerLibrary    locale=pt-BR
 
-
 *** Variables ***
 ${cadastroBeneficiariosExternos}                         cphContent_btnCadastraAlunoForaRede
 ${campoEscolaOutraRede}                                  cphContent_ddlEscolaOutraRede

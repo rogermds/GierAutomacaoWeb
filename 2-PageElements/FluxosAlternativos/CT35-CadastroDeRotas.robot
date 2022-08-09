@@ -10,10 +10,6 @@ ${campoPontoInicialRotas}            cphContent_txtPontoInicial
 ${campoPontoFinalRotas}              cphContent_txtPontoFinal
 
 *** Keywords ***
-Clicar em Cadastrar
-    Execute JavaScript  document.getElementById("${botaoCadastrar}").click();
-    Aguardar tela de carregamento
-
 Em Tipo de Rota, selecionar "${tipoRotas}"
     Run Keyword If    '${tipoRotas}' == 'Selecione'  Execute JavaScript   $('#${campoTipoRotaRotas}').val("0").trigger('chosen:updated');
     Run Keyword If    '${tipoRotas}' == 'Apa Cabuçu'  Execute JavaScript   $('#${campoTipoRotaRotas}').val("4").trigger('chosen:updated');

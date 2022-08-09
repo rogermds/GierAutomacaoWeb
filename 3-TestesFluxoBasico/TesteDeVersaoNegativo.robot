@@ -35,8 +35,9 @@ Resource         ../2-PageElements/FluxosAlternativos/CT33-GestaoPreMatriculaSec
 Resource         ../2-PageElements/FluxosAlternativos/CT34-CredenciamentoCondutores.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT35-CadastroDeRotas.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT36-CadastroViagens.robot
-Resource         ../2-PageElements/FluxosAlternativos/CT37-FuncionalidadeGestãoTransp.robot
-Resource    ../2-PageElements/FluxosPrincipais/CT04-ConsultaPessoa.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT37-GestãoDeTransporte.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT38-SolicitacaoTransporte.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT39-Apredizagem.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -798,17 +799,17 @@ Cenário 32: Funcionalidade Gestão de Pré-matrícula Escola
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
     Em campo Educando, informar "Teste Automação Qualidade"
-    Clicar no Botão "Pesquisar"
+    Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.
     Clicar em OK no modal de alerta
     Clicar no botão Limpar
     Em campo Protocolo, informar "123456789"    
-    Clicar no Botão "Pesquisar"
+    Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.    
     Clicar em OK no modal de alerta
     Clicar no botão Limpar
     Em Situação, selecionar "AGUARDANDO ANÁLISE"
-    Clicar no Botão "Pesquisar"
+    Clicar no Botão para "Pesquisar"
     No primeiro aluno da pesquisa, clicar na ação "Indeferir"
     Clicar no botão salvar para o alerta de Justificativa    
     Visualizar a mensagem: SELECIONE UMA JUSTIFICATIVA    
@@ -855,19 +856,19 @@ Cenário 33: Funcionalidade Gestão de Pré-matrícula Secretaria
     Entrar no módulo "Gestão de Educandos"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
     Em campo Educando, informar "Teste Automação Qualidade"
-    Clicar no Botão "Pesquisar"
+    Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.
     Clicar em OK no modal de alerta
     Clicar no botão Limpar
     Em campo Protocolo, informar "123456789"    
-    Clicar no Botão "Pesquisar"
+    Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.    
     Clicar em OK no modal de alerta
     Clicar no botão Limpar
     Em Ciclo Destino, selecionar "Creche-Maternal"
     Em Escola Destino, selecionar "EPG JOAO BALBINO FILHO"    
     Em Situação, selecionar "AGUARDANDO ANÁLISE"    
-    Clicar no Botão "Pesquisar"
+    Clicar no Botão para "Pesquisar"
     No primeiro aluno da pesquisa, clicar na ação "Registro de Atendimento"
     Clicar em salvar o Registro de Atendimento     
     Visualizar a mensagem: SELECIONE O TIPO DE CONTATO.    
@@ -1006,7 +1007,7 @@ Cenário 34: Funcionalidade Credenciamento de Condutores
 Cenário 35: Funcionalidade Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar
     ...                uma rota para Transporte 
-    [Tags]             Credenciamento de Condutores | Fluxo Negativo
+    [Tags]             Rotas | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -1040,7 +1041,7 @@ Cenário 35: Funcionalidade Rotas
 Cenário 36: Funcionalidade Viagens 
     [Documentation]    Esse teste verifica se é possível cadastrar
     ...                uma rota para Transporte 
-    [Tags]             Credenciamento de Condutores | Fluxo Negativo
+    [Tags]             Viagens | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -1098,7 +1099,7 @@ Cenário 36: Funcionalidade Viagens
 Cenário 37: Funcionalidade Transportes Secretaria 
     [Documentation]    Esse teste verifica se é possível solicitar
     ...                uma transporte através da secretaria
-    [Tags]             Credenciamento de Condutores | Fluxo Negativo
+    [Tags]             Gestão de Transporte | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -1147,7 +1148,7 @@ Cenário 37: Funcionalidade Transportes Secretaria
 Cenário 38: Funcionalidade Transportes Escola 
     [Documentation]    Esse teste verifica se é possível solicitar
     ...                uma transporte através da escola
-    [Tags]             Credenciamento de Condutores | Fluxo Negativo
+    [Tags]             Solicitação de Transporte | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -1158,6 +1159,48 @@ Cenário 38: Funcionalidade Transportes Escola
     Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: CAMPO OBRIGATÓRIO. ETAPA/MODALIDADE
     Clicar em OK no modal de alerta
+
+Cenário 39: Funcionalidade Aprendizagem
+    [Documentation]    Esse teste verifica se é possível cadastrar
+    ...                e editar uma Aprendizagem
+    [Tags]             Aprendizagem | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Aprendizagem"
+    Visualizar o Titulo Consulta de Descrição de Aprendizagem    
+    Clicar no botão Cadastrar  
+    Clicar em Salvar
+    Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS    
+    Clicar em OK no modal de alerta
+    Em Sigla, informar "Teste Automação Qa Siga"    
+    Clicar em Salvar
+    Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS
+    Clicar em OK no modal de alerta
+    Em Ordem, informar "123"      
+    Clicar em Salvar
+    Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS
+    Clicar em OK no modal de alerta    
+    Clicar em Voltar
+    Visualizar a mensagem: OS DADOS NÃO SALVOS SERÃO PERDIDOS, DESEJA CONTINUAR?
+    Clicar no botão 'Sim'    
+    Clicar no Botão para "Pesquisar"
+    Clicar na ação "Editar"    
+    Limpar o campo Sigla        
+    Clicar em Salvar
+    Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Limpar o campo Ordem 
+    Clicar em Salvar    
+    Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Limpar o campo Descrição de Aprendizagem        
+    Clicar em Salvar
+    Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
 
 
 

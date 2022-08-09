@@ -57,7 +57,6 @@ Entrar na funcionalidade "${funcionalidade}"
     Execute JavaScript  xPathResult.singleNodeValue.click() 
 
 Clicar no botão Cadastrar
-    Wait Until Element Is Visible    ${botaoCadastrar}
     Execute JavaScript  document.getElementById("${botaoCadastrar}").click();
     Aguardar tela de carregamento
 
@@ -135,6 +134,8 @@ Em Órgão Emissor, selecionar "${orgaoEmissor}"
 Em campo Data de Nascimento, informar "${Data}"
     Execute JavaScript  document.getElementById("${campoDataDeNascimento}").click();
     Input Text    ${campoDataDeNascimento}    ${Data}
+
+
 
     
 
