@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    FakerLibrary    locale=pt-BR
+Resource    ../../1-Hooks/1-Principal.robot
 
 *** Variables ***
 ${campoPesquisaEstrutura}         //input[contains(@class,'textBuscaEstrutura')]
@@ -133,6 +134,8 @@ Clicar no campo 'Cor/Raça' e selecionar a opção "${corRaca}"
 
 Clicar no campo 'Cep' e digitar o valor "${CEP}"
     Input Text   ${campoCEP}    ${CEP}
+    Execute JavaScript  document.getElementById("cphContent_txtEndereco").click();
+    Aguardar tela de carregamento    
 
 Clicar no campo 'Numero' e digitar o valor "${numeroCEP}"
     Input Text   ${campoNumeroCEP}    ${numeroCEP}

@@ -22,6 +22,7 @@ ${campoNomeEducando}            cphContent_txtNomeAluno
 ${campoSexo}                    cphContent_ddlSexo
 ${campoIdentidade}              cphContent_txtIdentidade
 ${campoOrgaoEmissor}            cphContent_ddlOrgaoEmissor
+${campoDataDeNascimento}        cphContent_txtDataNascimento
 
 
 *** Keywords ***
@@ -130,4 +131,12 @@ Em Órgão Emissor, selecionar "${orgaoEmissor}"
     Run Keyword If    '${orgaoEmissor}' == 'SSP'  Execute JavaScript   $('#${campoOrgaoEmissor}').val("31").trigger('chosen:updated');
     Execute JavaScript   $('#${campoOrgaoEmissor}').trigger('change');
     Aguardar tela de carregamento    
+
+Em campo Data de Nascimento, informar "${Data}"
+    Execute JavaScript  document.getElementById("${campoDataDeNascimento}").click();
+    Input Text    ${campoDataDeNascimento}    ${Data}
+
+    
+
+
     

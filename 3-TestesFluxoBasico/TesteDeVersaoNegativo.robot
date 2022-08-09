@@ -43,7 +43,6 @@ Test Teardown    Fechar o navegador
 #robot -d ./3-TestesFluxoBasico/results ./3-TestesFluxoBasico/TesteDeVersaoNegativo.robot
 
 *** Test Cases ***
-
 Cenário 01 - Acesso ao Sistema – Tela de Login Cenário A
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura
     ...    Com o usuário e senha especificados
@@ -267,7 +266,7 @@ Cenário 13 - Acesso ao Sistema – Pessoa/ Consulta sem informar Nome
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Pessoa"
-    Clicar no Botão "Pesquisar"
+    Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: OBRIGATÓRIO PREENCHER NOME E SOBRENOME OU NOME E DATA DE NASCIMENTO.   
 
 Cenário 14 - Acesso ao Sistema – Pessoa/ Consulta inexistente por nome
@@ -280,7 +279,7 @@ Cenário 14 - Acesso ao Sistema – Pessoa/ Consulta inexistente por nome
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Pessoa"
     Clicar no campo de pesquisa 'Nome' e preencher o valor "TESTE INVÁLIDO"    
-    Clicar no Botão "Pesquisar"
+    Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: NENHUM REGISTRO FOI ENCONTRADO.      
 
 Cenário 15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
@@ -294,7 +293,7 @@ Cenário 15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
     Entrar na funcionalidade "Pessoa"
     Clicar no tipo de Pesquisa e selecionar o tipo "CORREIO ELETRÔNICO"
     Clicar no campo de pesquisa 'Correio Eletrônico' e preencher o valor "TESTE@INVÁLIDO"    
-    Clicar no Botão "Pesquisar"
+    Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: INFORME UM CORREIO ELETRÔNICO VÁLIDO.
 
 Cenário 16 - Acesso ao Sistema – Pessoa/ Consulta por E-mail campo vazio
@@ -307,7 +306,7 @@ Cenário 16 - Acesso ao Sistema – Pessoa/ Consulta por E-mail campo vazio
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Pessoa"
     Clicar no tipo de Pesquisa e selecionar o tipo "CORREIO ELETRÔNICO"
-    Clicar no Botão "Pesquisar"
+    Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: INFORME UM CORREIO ELETRÔNICO VÁLIDO.    
 
 Cenário 17 - Funcionalidade Cadastro de Turma – Regular
@@ -1107,46 +1106,60 @@ Cenário 37: Funcionalidade Transportes Secretaria
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Gestão de Solicitação de Transporte" 
-    Clicar no botão "Pesquisar" 
+    Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: SELECIONE UMA SITUAÇÃO.
     Clicar em OK no modal de alerta
     Clicar em Cadastrar Beneficiários Externos
-    Clicar em Salvar
+    Clicar em Salvar para cadastrar o aluno
     Visualizar a mensagem: A ESCOLA DE ORIGEM DO EDUCANDO É OBRIGATÓRIO
     Clicar em OK no modal de alerta
     Em Escola de Outra Rede, selecionar "AMOR AO PRÓXIMO CASA"
-    Clicar em Salvar
+    Clicar em Salvar para cadastrar o aluno
     Visualizar a mensagem: O NOME DO EDUCANDO É OBRIGATÓRIO
     Clicar em OK no modal de alerta
     Em Nome do Educando, informar "Teste Qa Automação"
-    Clicar em Salvar
+    Clicar em Salvar para cadastrar o aluno
     Visualizar a mensagem: A DATA DE NASCIMENTO DO EDUCANDO É OBRIGATÓRIO
     Clicar em OK no modal de alerta
-    Em Data de Nascimento, informar "00/00/0000"
-    Clicar em Salvar
+    Em campo Data de Nascimento, informar "00/00/0000"  
+    Clicar em Salvar para cadastrar o aluno
     Visualizar a mensagem: O SEXO DO EDUCANDO É OBRIGATÓRIO
     Clicar em OK no modal de alerta
     Em Sexo, selecionar "Feminino"
     Em Carteira de Identidade ou R.N.E informar um documento válido
-    Clicar em Salvar
+    Clicar em Salvar para cadastrar o aluno
     Visualizar a mensagem: O ORGÃO EMISSOR DA CARTEIRA DE IDENTIDADE É OBRIGATÓRIO
     Clicar em OK no modal de alerta
     Em Órgão Emissor, selecionar "SSP"
-    Clicar em Salvar
+    Clicar em Salvar para cadastrar o aluno
     Visualizar a mensagem: É OBRIGATÓRIO INSERIR O ENDEREÇO
     Clicar em OK no modal de alerta
-    Clicar no campo 'Cep' e digitar o valor "99999-999"
-    Visualizar a mensagem: CEP NÃO ENCONTRADO
-    Clicar em OK no modal de alerta
     Clicar no campo 'Cep' e digitar o valor "07032-000"
-    Clicar no campo 'Numero' e digitar o valor "134"
-    Clicar em "Inserir"
-    Clicar em Salvar
+    Clicar em 'Numero' e digitar o valor "134"    
+    Clicar em "Incluir"    
+    Clicar em Salvar para cadastrar o aluno
     Visualizar a mensagem: É NECESSÁRIO INSERIR UM RESPONSÁVEL
     Clicar em OK no modal de alerta
     Clicar no botão Inserir Responsável
     Visualizar a mensagem: PESQUISE UM RESPONSÁVEL.    
     Clicar em OK no modal de alerta
+
+Cenário 38: Funcionalidade Transportes Escola 
+    [Documentation]    Esse teste verifica se é possível solicitar
+    ...                uma transporte através da escola
+    [Tags]             Credenciamento de Condutores | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Solicitação de Transporte" 
+    Clicar no Botão para "Pesquisar"
+    Visualizar a mensagem: CAMPO OBRIGATÓRIO. ETAPA/MODALIDADE
+    Clicar em OK no modal de alerta
+
+
 
 
 
