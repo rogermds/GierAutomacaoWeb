@@ -45,5 +45,5 @@ Limpar o campo Sigla
 Limpar o campo Ordem    
     Clear Element Text    ${campoOrdem}
 
-Limpar o campo Descrição de Aprendizagem    
+Limpar o campo Descrição   
     Clear Element Text    ${campoDescricao}

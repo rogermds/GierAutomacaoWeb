@@ -38,6 +38,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT36-CadastroViagens.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT37-GestãoDeTransporte.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT38-SolicitacaoTransporte.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT39-Apredizagem.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT40-GruposDePergunta.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -1176,7 +1177,7 @@ Cenário 39: Funcionalidade Aprendizagem
     Clicar em Salvar
     Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS    
     Clicar em OK no modal de alerta
-    Em Sigla, informar "Teste Automação Qa Siga"    
+    Em Sigla, informar "Teste Automação Qa Sigla"    
     Clicar em Salvar
     Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS
     Clicar em OK no modal de alerta
@@ -1197,10 +1198,43 @@ Cenário 39: Funcionalidade Aprendizagem
     Clicar em Salvar    
     Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS
     Clicar em OK no modal de alerta 
-    Limpar o campo Descrição de Aprendizagem        
+    Limpar o campo Descrição        
     Clicar em Salvar
     Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS
     Clicar em OK no modal de alerta 
+
+Cenário 40: Funcionalidade Grupos de Pergunta
+    [Documentation]    Esse teste verifica se é possível cadastrar
+    ...                um Grupos de Pergunta
+    [Tags]             Grupos de Pergunta | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Grupos de Pergunta"
+    Visualizar o Titulo Consultar Grupos de Pergunta   
+    Clicar no botão Cadastrar  
+    Clicar em Salvar
+    Visualizar a mensagem de alerta: INFORME A DESCRIÇÃO.    
+    Clicar em OK no modal 
+    Em Descrição, informar o valor "Teste Qualidade Automação"
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A SIGLA.    
+    Clicar em OK no modal 
+    Clicar em Voltar
+    Clicar no Botão para "Pesquisar"
+    Clicar na ação "Editar"
+    Limpar o campo Sigla         
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A SIGLA.
+    Clicar em OK no modal 
+    Limpar o campo Descrição        
+    Clicar em Salvar
+    Visualizar a mensagem de alerta: INFORME A DESCRIÇÃO. 
+    Clicar em OK no modal 
+
 
 
 
