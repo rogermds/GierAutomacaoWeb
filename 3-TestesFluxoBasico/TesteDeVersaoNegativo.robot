@@ -39,6 +39,7 @@ Resource         ../2-PageElements/FluxosAlternativos/CT37-GestãoDeTransporte.r
 Resource         ../2-PageElements/FluxosAlternativos/CT38-SolicitacaoTransporte.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT39-Apredizagem.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT40-GruposDePergunta.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT41-BancoDeQuestoes.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -92,7 +93,7 @@ Cenário 06 - Cadastro de Pessoa - E-mail inválido
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -117,7 +118,7 @@ Cenário 07 - Cadastro de Pessoa - Data de Nascimento sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -141,7 +142,7 @@ Cenário 08 - Cadastro de Pessoa - Nome sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -165,7 +166,7 @@ Cenário 09 - Cadastro de Pessoa - Sexo sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -189,7 +190,7 @@ Cenário 10 - Cadastro de Pessoa - Nacionalidade sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -212,13 +213,14 @@ Cenário 10 - Cadastro de Pessoa - Nacionalidade sem preechimento
     Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: UF NASCIMENTO, CIDADE DE NASCIMENTO
     Clicar em "Ok" na mensagem
     Clicar no campo 'UF' e selecionar a opção "SP"
+    Clicar no 'Botão Salvar'
     Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: CIDADE DE NASCIMENTO    
 
 Cenário 11 - Cadastro de Pessoa - Endereço não informado
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -241,7 +243,7 @@ Cenário 12 - Cadastro de Pessoa - Cep inválido
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -263,7 +265,7 @@ Cenário 13 - Acesso ao Sistema – Pessoa/ Consulta sem informar Nome
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Gestão Escolar"
@@ -275,7 +277,7 @@ Cenário 14 - Acesso ao Sistema – Pessoa/ Consulta inexistente por nome
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Gestão Escolar"
@@ -288,7 +290,7 @@ Cenário 15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Gestão Escolar"
@@ -302,7 +304,7 @@ Cenário 16 - Acesso ao Sistema – Pessoa/ Consulta por E-mail campo vazio
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "41316137864" e "12345678"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Gestão Escolar"
@@ -672,7 +674,7 @@ Cenário 28: Funcionalidade Layout do Portal de Inscrições e Transferências
     Clicar em Ok no modal de alerta de campo obrigatório
 
 Cenário 29: Portal de Inscrição - Consulta de Solicitação
-    [Documentation]    Esse teste verifica se é possível realizar uma consulta
+    [Documentation]    Esse teste verifica se é possível realizar uma consulta    
     ...                de uma solicitação realizada no Portal
     [Tags]             Portal de Inscrição | Fluxo Negativo
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
@@ -691,12 +693,6 @@ Cenário 29: Portal de Inscrição - Consulta de Solicitação
     Visualizar a mensagem: Necessário informar um documento.
     Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
-    Em CPF, inserir "364.882.650-67"
-    Em Data de Nascimento, informar "10/01/1965"
-    Clicar em pesquisar no Portal    
-    Visualizar a mensagem: Necessário informar um protocolo válido.
-    Clicar em Ok no alerta do Portal
-    Em Nacionalidade, selecionar "Brasileiro"
     Em Protocolo, informar "123456789"
     Em CPF, inserir "364.882.650-67"
     Em Data de Nascimento, informar "10/01/1965"
@@ -706,6 +702,7 @@ Cenário 29: Portal de Inscrição - Consulta de Solicitação
     Em Nacionalidade, selecionar "Brasileiro"
     Em Protocolo, informar "123456789"
     Em CPF, inserir "364.882.650-67"
+    Limpar o campo Data de Nascimento    
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar uma data de Nascimento.
     Clicar em Ok no alerta do Portal
@@ -737,12 +734,6 @@ Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     Visualizar a mensagem: Necessário informar um documento.
     Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
-    Em RNE, informar "v565371"
-    Em Data de Nascimento, informar "10/01/1965"
-    Clicar em pesquisar no Portal
-    Visualizar a mensagem: Necessário informar um protocolo válido.
-    Clicar em Ok no alerta do Portal
-    Em Nacionalidade, selecionar "Estrangeiro"
     Em Protocolo, informar "123456789"
     Em RNE, informar "v565371"
     Em Data de Nascimento, informar "10/01/1965"
@@ -752,6 +743,7 @@ Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     Em Nacionalidade, selecionar "Estrangeiro"
     Em Protocolo, informar "123456789"
     Em RNE, informar "v565371"
+    Limpar o campo Data de Nascimento
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar uma data de Nascimento.
     Clicar em Ok no alerta do Portal
@@ -799,6 +791,7 @@ Cenário 32: Funcionalidade Gestão de Pré-matrícula Escola
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Viualizar o titulo Gestão de Pré-Matrícula    
     Em campo Educando, informar "Teste Automação Qualidade"
     Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.
@@ -1150,8 +1143,8 @@ Cenário 38: Funcionalidade Transportes Escola
     [Documentation]    Esse teste verifica se é possível solicitar
     ...                uma transporte através da escola
     [Tags]             Solicitação de Transporte | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -1160,6 +1153,14 @@ Cenário 38: Funcionalidade Transportes Escola
     Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: CAMPO OBRIGATÓRIO. ETAPA/MODALIDADE
     Clicar em OK no modal de alerta
+    Em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Situação da Solicitação, selecionar "Deferida sem Veiculo"    
+    Clicar no Botão para "Pesquisar"
+    Clicar em Ações    
+    Em ações, selecionar "Editar"
+    Clicar em Salvar
+    Visualizar a mensagem: É NECESSÁRIO SELECIONAR UMA LINHA PREFERENCIAL DO FRETADO.
+
 
 Cenário 39: Funcionalidade Aprendizagem
     [Documentation]    Esse teste verifica se é possível cadastrar
@@ -1234,6 +1235,38 @@ Cenário 40: Funcionalidade Grupos de Pergunta
     Clicar em Salvar
     Visualizar a mensagem de alerta: INFORME A DESCRIÇÃO. 
     Clicar em OK no modal 
+
+Cenário 41: Funcionalidade Banco de Questões
+    [Documentation]    Esse teste verifica se é possível cadastrar
+    ...                um Banco de Questões
+    [Tags]             Banco de Questões | Fluxo Negativo
+    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Banco de Questões" 
+    Clicar no botão Cadastrar  
+    Clicar em Salvar
+    Visualizar a mensagem: UTILIZAÇÃO DA QUESTÃO É OBRIGATÓRIO    
+    Clicar em OK no modal de alerta
+    Em Utilização da Questão, selecionar "Pedagógico"
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A PERGUNTA.
+    Clicar em OK no modal de alerta
+    Em Pergunta, informar "Teste Automação Qa Pergunta"
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A SIGLA.
+    Clicar em OK no modal de alerta
+    Em Sigla, informar "TQA"
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME A ETAPA/MODALIDADE.
+    Clicar em OK no modal de alerta
+    Em Etapa/Modalidade, selecionar o tipo de ensino "Ensino Fundamental"       
+    Clicar em Salvar
+    Visualizar a mensagem: INFORME O ANO/CICLO.
+    Clicar em OK no modal de alerta 
 
 
 

@@ -57,6 +57,9 @@ Em CPF, inserir "${CPF}"
 Visualizar a mensagem: Não foi localizado registro com os dados informados.
     Wait Until Page Contains Element    //td[@valign='top'][contains(.,'Não foi localizado registro com os dados informados.')]
 
+Limpar o campo Data de Nascimento
+    Clear Element Text    ${campoDataPortal}
+
 Visualizar a mensagem: Necessário informar uma data de Nascimento.
     Wait Until Page Contains Element    //div[@class='swal-text'][contains(.,'Necessário informar uma data de Nascimento.')]
 

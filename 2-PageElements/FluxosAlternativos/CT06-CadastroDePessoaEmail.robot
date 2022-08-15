@@ -4,21 +4,21 @@ Library    FakerLibrary    locale=pt-BR
 Resource    ../../1-Hooks/1-Principal.robot
 
 *** Variables ***
-${campoPesquisaEstrutura}         //input[contains(@class,'textBuscaEstrutura')]
-${primeiroResultadoEstrutura}     //html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]
-${campoNome}                    cphContent_ucDadosPessoais_txtNomeCompleto
-${campoDataNascimento}          txtDNasc      
-${campoSexo}                    cphContent_ucDadosPessoais_ddlSexo
-${campoNacionalidade}           cphContent_ucDadosPessoais_ddlNacionalidade
-${campoUFNascimento}            cphContent_ucDadosPessoais_ddlUfNascimento
-${campoCidade}                  cphContent_ucDadosPessoais_ddlCidadeNasc
-${campoCorRaca}                 cphContent_ucDadosSociais_ddlCorPele
-${campoCEP}                     txtCep
-${campoNumeroCEP}               cphContent_ucEnderecos_txtNumero
-${campoZona}                    cphContent_ucEnderecos_ddlZona
-${campoEmail}                   cphContent_ucDadosPessoais_txtEmail
-${botaoIncluirResidencial}      cphContent_ucEnderecos_btnIncluirResidencial
-${botaoSalvar}                  cphContent_btnCadastrarPessoa
+${campoPesquisaEstrutura}               //input[contains(@class,'textBuscaEstrutura')]
+${primeiroResultadoEstrutura}           //html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]
+${campoNomePessoa}                      cphContent_ucDadosPessoais_txtNomeCompleto
+${campoDataNascimento}                  txtDNasc      
+${campoSexoPessoa}                      cphContent_ucDadosPessoais_ddlSexo
+${campoNacionalidade}                   cphContent_ucDadosPessoais_ddlNacionalidade
+${campoUFNascimento}                    cphContent_ucDadosPessoais_ddlUfNascimento
+${campoCidade}                          cphContent_ucDadosPessoais_ddlCidadeNasc
+${campoCorRaca}                         cphContent_ucDadosSociais_ddlCorPele
+${campoCEP}                             txtCep
+${campoNumeroCEP}                       cphContent_ucEnderecos_txtNumero
+${campoZona}                            cphContent_ucEnderecos_ddlZona
+${campoEmail}                           cphContent_ucDadosPessoais_txtEmail
+${botaoIncluirResidencial}              cphContent_ucEnderecos_btnIncluirResidencial
+${botaoSalvarPessoa}                    cphContent_btnCadastrarPessoa
 
 *** Keywords ***
 Pesquisar "${pesquisaEstrutura}" e selecionar o primeiro resultado
@@ -27,16 +27,17 @@ Pesquisar "${pesquisaEstrutura}" e selecionar o primeiro resultado
 
 Selecionar o botão 'Cadastrar'
     Execute JavaScript  document.getElementById("cphContent_btnCad").click();
-    Wait Until Element Is Visible    ${campoNome}    
+    Wait Until Element Is Visible    ${campoNomePessoa}    
 
 Clicar no campo 'Nome' e digitar o valor "${nomePessoa}"
     ${codPessoaRandom}   Random Number   6
-    Input Text    ${campoNome}    ${nomePessoa}${codPessoaRandom}
+    Execute JavaScript  document.getElementById("${campoNomePessoa}").click();
+    Input Text    ${campoNomePessoa}    ${nomePessoa}${codPessoaRandom}
 
 Clicar no campo 'Sexo' e selecionar a opção "${Sexo}"
-    Run Keyword If    '${Sexo}' == 'FEMININO'  Execute JavaScript   $('#${campoSexo}').val("1").trigger('chosen:updated');
-    Run Keyword If    '${Sexo}' == 'MASCULINO'  Execute JavaScript   $('#${campoSexo}').val("2").trigger('chosen:updated');
-    Run Keyword If    '${Sexo}' == 'NÃO INFORMADO'  Execute JavaScript   $('#${campoSexo}').val("3").trigger('chosen:updated');
+    Run Keyword If    '${Sexo}' == 'FEMININO'  Execute JavaScript   $('#${campoSexoPessoa}').val("1").trigger('chosen:updated');
+    Run Keyword If    '${Sexo}' == 'MASCULINO'  Execute JavaScript   $('#${campoSexoPessoa}').val("2").trigger('chosen:updated');
+    Run Keyword If    '${Sexo}' == 'NÃO INFORMADO'  Execute JavaScript   $('#${campoSexoPessoa}').val("3").trigger('chosen:updated');
     Sleep  5
 
 Clicar no campo 'Data de Nascimento' e digitar o valor "${Data}"
@@ -110,7 +111,7 @@ Clicar no campo 'UF' e selecionar a opção "${UF}"
     Run Keyword If    '${UF}' == 'AM'  Execute JavaScript   $('#${campoUFNascimento}').val("26").trigger('change');
     Run Keyword If    '${UF}' == 'PI'  Execute JavaScript   $('#${campoUFNascimento}').val("27").trigger('chosen:updated');
     Run Keyword If    '${UF}' == 'PI'  Execute JavaScript   $('#${campoUFNascimento}').val("27").trigger('change');
-    Sleep  5
+    Aguardar tela de carregamento
 
 Clicar no campo 'Cidade de Nascimento' e selecionar a opção "${Cidade}"
     Run Keyword If    '${Cidade}' == 'ADAMANTINA'  Execute JavaScript   $('#${campoCidade}').val("5323").trigger('chosen:updated');
@@ -121,7 +122,7 @@ Clicar no campo 'Cidade de Nascimento' e selecionar a opção "${Cidade}"
     Run Keyword If    '${Cidade}' == 'SAO ROQUE'  Execute JavaScript   $('#${campoCidade}').val("4913").trigger('chosen:updated');
     Run Keyword If    '${Cidade}' == 'TREMEMBE'  Execute JavaScript   $('#${campoCidade}').val("4870").trigger('chosen:updated');
     Run Keyword If    '${Cidade}' == 'UBATUBA'  Execute JavaScript   $('#${campoCidade}').val("4877").trigger('chosen:updated');
-    Sleep  5
+    Aguardar tela de carregamento
 
 Clicar no campo 'Cor/Raça' e selecionar a opção "${corRaca}"
     Run Keyword If    '${corRaca}' == 'AMARELA'  Execute JavaScript   $('#${campoCorRaca}').val("3").trigger('chosen:updated');
@@ -134,7 +135,6 @@ Clicar no campo 'Cor/Raça' e selecionar a opção "${corRaca}"
 
 Clicar no campo 'Cep' e digitar o valor "${CEP}"
     Input Text   ${campoCEP}    ${CEP}
-    Execute JavaScript  document.getElementById("cphContent_txtEndereco").click();
     Aguardar tela de carregamento    
 
 Clicar no campo 'Numero' e digitar o valor "${numeroCEP}"
@@ -149,11 +149,11 @@ Clicar no campo 'Zona' e selecionar a opção "${Zona}"
 
 Clicar no botão 'Incluir'
     Execute JavaScript  document.getElementById("${botaoIncluirResidencial}").click();
-    Sleep   5
+    Aguardar tela de carregamento
 
 Clicar no 'Botão Salvar'
-    Execute JavaScript  document.getElementById("${botaoSalvar}").click();
-    Sleep   12
+    Execute JavaScript  document.getElementById("${botaoSalvarPessoa}").click();
+    Aguardar tela de carregamento
 
 Visualizar a mensagem: CORREIO ELETRÔNICO INVÁLIDO
     Wait Until Element Is Visible    locator=cphContent_Mensagem_Padrao_lblMsg   

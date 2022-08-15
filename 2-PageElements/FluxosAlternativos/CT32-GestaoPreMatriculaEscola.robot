@@ -3,14 +3,18 @@ Resource    ../../1-Hooks/1-Principal.robot
 Library    SeleniumLibrary
 
 *** Variables ***
-${campoNomeEducando}                      cphContent_txtAluno  
-${campoProtocolo}                         cphContent_txtProtocolo
-${campoSituacao}                          cphContent_ddlSituacao
-${botaoAcao}                              cphContent_dtlConsulta_A2_0
+${campoNomeEducandoGestaoPre}                      cphContent_txtAluno  
+${campoProtocolo}                                  cphContent_txtProtocolo
+${campoSituacao}                                   cphContent_ddlSituacao
+${botaoAcao}                                       cphContent_dtlConsulta_A2_0
 
 *** Keywords ***
+Viualizar o titulo Gestão de Pré-Matrícula
+    Wait Until Page Contains    Gestão de Pré-Matrícula
+
 Em campo Educando, informar "${Nome}"
-    Input Text    ${campoNomeEducando}      ${Nome}
+    Execute JavaScript  document.getElementById("${campoNomeEducandoGestaoPre}").click()
+    Input Text            ${campoNomeEducandoGestaoPre}      ${Nome}
 
 Em campo Protocolo, informar "${Protocolo}"
     Input Text    ${campoProtocolo}      ${Protocolo}
