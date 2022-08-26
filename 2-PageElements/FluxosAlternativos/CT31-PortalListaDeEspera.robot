@@ -1,9 +1,7 @@
 *** Settings ***
 Resource    ../../1-Hooks/1-Principal.robot
 Library     SeleniumLibrary
-Library     FakerLibrary
 Library     DateTime
-
 
 *** Variables ***
 ${botaoListaDeEsperaPortal}              //div[@class='containerBotaoMenuCentro containerBotaoTexto'][contains(.,'Lista de Espera')]

@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../../1-Hooks/1-Principal.robot
 Library     SeleniumLibrary
-Library     FakerLibrary     locale=pt_BR
+Library    FakerLibrary    locale=pt-BR
 
 
 *** Variables ***
@@ -63,15 +63,22 @@ Visualizar a mensagem: O CAMPO TIPO CPF/CNPJ É OBRIGATÓRIO.
     Wait Until Page Contains Element    //div[@class='divConteudo'][contains(.,'O campo tipo CPF/CNPJ é obrigatório.')]
 
 Em CNPJ, inserir um CNPJ válido
-    ${CNPJ}  FakerLibrary.CNPJ        
+    ${cnpj}    FakerLibrary.CNPJ    
     Input Text  ${campoCnpj}  ${CNPJ}
 
 Em Data da Inscrição do Condutor, selecionar o dia atual
-    Execute JavaScript  document.getElementById("${campoDataCondutores}").click();
-    Execute JavaScript  document.getElementById("${botaoDataHoje}").click();
-    
+    Input Text    ${campoDataCondutores}    0
+    Clear Element Text    ${campoDataCondutores}
+    Execute JavaScript  xPathResult = document.evaluate("${botaoDataHoje}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
+
 Clicar em selecionar 
-    Execute JavaScript  document.getElementById("phContent_Wizard1_dtlConsulta_lnkVisualizar_0").click();
+    Execute JavaScript  document.getElementById("cphContent_Wizard1_dtlConsulta_lnkVisualizar_0").click();
+    Aguardar tela de carregamento
+
+Clicar no botão Salvar e Próximo para o proximo passo
+    Wait Until Page Contains Element    cphContent_Wizard1_StepNavigationTemplateContainerID_StepNextButton
+    Execute JavaScript  document.getElementById("cphContent_Wizard1_StepNavigationTemplateContainerID_StepNextButton").click();
     Aguardar tela de carregamento
 
 Visualizar a mensagem: SELECIONE AO MENOS UMA ESCOLA
@@ -91,31 +98,34 @@ Visualizar a mensagem: SELECIONE OU ADICIONE UM VEÍCULO
 
 Clicar no botão Adicionar Veículo
     Execute JavaScript  document.getElementById("${botaoAdicionarVeiculoCondutores}").click();
+    Wait Until Page Contains Element    ${campoMarcaCondutores}
+    Aguardar tela de carregamento
 
 Em Marca, selecionar "${Marca}"
-    Run Keyword If    '${Marca}' == 'Selecione'  Execute JavaScript   $('#${campoMarcaCondutores}').val("575").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'MICROÔNIBUS'  Execute JavaScript   $('#${campoMarcaCondutores}').val("581").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'ÔNIBUS'  Execute JavaScript   $('#${campoMarcaCondutores}').val("606").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'VAN/KOMBI'  Execute JavaScript   $('#${campoMarcaCondutores}').val("575").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'OUTRO'  Execute JavaScript   $('#${campoMarcaCondutores}').val("581").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'KIA'  Execute JavaScript   $('#${campoMarcaCondutores}').val("606").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'FIAT'  Execute JavaScript   $('#${campoMarcaCondutores}').val("575").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'HYUNDAI'  Execute JavaScript   $('#${campoMarcaCondutores}').val("575").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'CITROEN'  Execute JavaScript   $('#${campoMarcaCondutores}').val("581").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'MARCOPOLO'  Execute JavaScript   $('#${campoMarcaCondutores}').val("606").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'JINBEI'  Execute JavaScript   $('#${campoMarcaCondutores}').val("575").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'MB S312'  Execute JavaScript   $('#${campoMarcaCondutores}').val("581").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'RENAULT'  Execute JavaScript   $('#${campoMarcaCondutores}').val("606").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'VOLKSWAGEN'  Execute JavaScript   $('#${campoMarcaCondutores}').val("575").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'FORD'  Execute JavaScript   $('#${campoMarcaCondutores}').val("581").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'IVECO'  Execute JavaScript   $('#${campoMarcaCondutores}').val("606").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'JINBEI'  Execute JavaScript   $('#${campoMarcaCondutores}').val("575").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'MERCEDES - BENZ'  Execute JavaScript   $('#${campoMarcaCondutores}').val("581").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'MERCEDEZ BENZ'  Execute JavaScript   $('#${campoMarcaCondutores}').val("606").trigger('chosen:updated');
-    Run Keyword If    '${Marca}' == 'PEUGEOT'  Execute JavaScript   $('#${campoMarcaCondutores}').val("581").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'Selecione'  Execute JavaScript   $('#${campoMarcaCondutores}').val("-1").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'MICROÔNIBUS'  Execute JavaScript   $('#${campoMarcaCondutores}').val("7").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'ÔNIBUS'  Execute JavaScript   $('#${campoMarcaCondutores}').val("8").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'VAN/KOMBI'  Execute JavaScript   $('#${campoMarcaCondutores}').val("8").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'OUTRO'  Execute JavaScript   $('#${campoMarcaCondutores}').val("10").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'KIA'  Execute JavaScript   $('#${campoMarcaCondutores}').val("11").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'FIAT'  Execute JavaScript   $('#${campoMarcaCondutores}').val("12").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'HYUNDAI'  Execute JavaScript   $('#${campoMarcaCondutores}').val("13").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'CITROEN'  Execute JavaScript   $('#${campoMarcaCondutores}').val("14").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'MARCOPOLO'  Execute JavaScript   $('#${campoMarcaCondutores}').val("15").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'JINBEI'  Execute JavaScript   $('#${campoMarcaCondutores}').val("16").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'MB S312'  Execute JavaScript   $('#${campoMarcaCondutores}').val("17").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'RENAULT'  Execute JavaScript   $('#${campoMarcaCondutores}').val("18").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'VOLKSWAGEN'  Execute JavaScript   $('#${campoMarcaCondutores}').val("19").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'FORD'  Execute JavaScript   $('#${campoMarcaCondutores}').val("20").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'IVECO'  Execute JavaScript   $('#${campoMarcaCondutores}').val("21").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'JINBEI'  Execute JavaScript   $('#${campoMarcaCondutores}').val("22").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'MERCEDES - BENZ'  Execute JavaScript   $('#${campoMarcaCondutores}').val("23").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'MERCEDEZ BENZ'  Execute JavaScript   $('#${campoMarcaCondutores}').val("24").trigger('chosen:updated');
+    Run Keyword If    '${Marca}' == 'PEUGEOT'  Execute JavaScript   $('#${campoMarcaCondutores}').val("25").trigger('chosen:updated');
     Execute JavaScript   $('#${campoMarcaCondutores}').trigger('change');
+    Aguardar tela de carregamento
 
-Em Modelo, selecionar ${Modelo}"
+Em Modelo, selecionar "${Modelo}"
     Run Keyword If    '${Modelo}' == 'Selecione'  Execute JavaScript   $('#${campoModeloCondutores}').val("-1").trigger('chosen:updated');
     Run Keyword If    '${Modelo}' == 'DUCATO'  Execute JavaScript   $('#${campoModeloCondutores}').val("15").trigger('chosen:updated');
     Run Keyword If    '${Modelo}' == 'DUC TRANSFORMERS'  Execute JavaScript   $('#${campoModeloCondutores}').val("30").trigger('chosen:updated');
@@ -146,6 +156,7 @@ Em Modelo, selecionar ${Modelo}"
     Run Keyword If    '${Modelo}' == 'DUCATO GUERRA MC 16'  Execute JavaScript   $('#${campoModeloCondutores}').val("120").trigger('chosen:updated');
     Run Keyword If    '${Modelo}' == 'DUCAFFORMA MIC21'  Execute JavaScript   $('#${campoModeloCondutores}').val("123").trigger('chosen:updated');    
     Execute JavaScript   $('#${campoModeloCondutores}').trigger('change');
+    Aguardar tela de carregamento
 
 Em Ano de Fabricação, selecionar "${Ano}"
     Run Keyword If    '${Ano}' == 'Selecione'  Execute JavaScript   $('#${campoAnoFabricacaoCondutores}').val("-1").trigger('chosen:updated');
@@ -173,6 +184,7 @@ Em Ano de Fabricação, selecionar "${Ano}"
     Run Keyword If    '${Ano}' == '2021'  Execute JavaScript   $('#${campoAnoFabricacaoCondutores}').val("2021").trigger('chosen:updated');
     Run Keyword If    '${Ano}' == '2022'  Execute JavaScript   $('#${campoAnoFabricacaoCondutores}').val("2022").trigger('chosen:updated');
     Execute JavaScript   $('#${campoAnoFabricacaoCondutores}').trigger('change');
+    Aguardar tela de carregamento
 
 Em Ano Modelo, selecionar "${Ano}"
     Run Keyword If    '${Ano}' == 'Selecione'  Execute JavaScript   $('#${campoAnoModeloCondutores}').val("-1").trigger('chosen:updated');
@@ -201,6 +213,7 @@ Em Ano Modelo, selecionar "${Ano}"
     Run Keyword If    '${Ano}' == '2022'  Execute JavaScript   $('#${campoAnoModeloCondutores}').val("2022").trigger('chosen:updated');
     Run Keyword If    '${Ano}' == '2023'  Execute JavaScript   $('#${campoAnoModeloCondutores}').val("2023").trigger('chosen:updated');
     Execute JavaScript   $('#${campoAnoModeloCondutores}').trigger('change');
+    Aguardar tela de carregamento
 
 Em Código do Veículo, informar "${Codigo}"
     Execute JavaScript  document.getElementById("${campoCodVeiculosCondutores}").click();
@@ -228,6 +241,7 @@ Em Cor, selecionar "${Cor}"
     Run Keyword If    '${Cor}' == 'Chumbo'  Execute JavaScript   $('#${campoCorCondutores}').val("11").trigger('chosen:updated');
     Run Keyword If    '${Cor}' == 'Amarela'  Execute JavaScript   $('#${campoCorCondutores}').val("12").trigger('chosen:updated');
     Execute JavaScript   $('#${campoCorCondutores}').trigger('change');
+    Aguardar tela de carregamento
 
 Em Tipo de Veículo, selecionar "${Veiculo}"
     Run Keyword If    '${Veiculo}' == 'Selecione'  Execute JavaScript   $('#${campoTipoVeiculoCondutores}').val("-1").trigger('chosen:updated');
@@ -241,16 +255,18 @@ Em Tipo de Veículo, selecionar "${Veiculo}"
     Run Keyword If    '${Veiculo}' == 'Caminhonete'  Execute JavaScript   $('#${campoTipoVeiculoCondutores}').val("14").trigger('chosen:updated');
     Run Keyword If    '${Veiculo}' == 'Ducato Maxicargo'  Execute JavaScript   $('#${campoTipoVeiculoCondutores}').val("15").trigger('chosen:updated');
     Execute JavaScript   $('#${campoTipoVeiculoCondutores}').trigger('change');
+    Aguardar tela de carregamento
 
 Em Combustivél, selecionar "${Combustivel}"
     Run Keyword If    '${Combustivel}' == 'Selecione'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("-1").trigger('chosen:updated');
-    Run Keyword If    '${Combustivel}' == 'Gasolina'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("7").trigger('chosen:updated');
-    Run Keyword If    '${Combustivel}' == 'Alcool'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("8").trigger('chosen:updated');
-    Run Keyword If    '${Combustivel}' == 'Gasolina/Alcool'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("9").trigger('chosen:updated');
-    Run Keyword If    '${Combustivel}' == 'Diesel'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("10").trigger('chosen:updated');
-    Run Keyword If    '${Combustivel}' == 'Gás Natural'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("11").trigger('chosen:updated');
-    Run Keyword If    '${Combustivel}' == 'Outros'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("12").trigger('chosen:updated');
+    Run Keyword If    '${Combustivel}' == 'Gasolina'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("1").trigger('chosen:updated');
+    Run Keyword If    '${Combustivel}' == 'Alcool'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("2").trigger('chosen:updated');
+    Run Keyword If    '${Combustivel}' == 'Gasolina/Alcool'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("3").trigger('chosen:updated');
+    Run Keyword If    '${Combustivel}' == 'Diesel'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("4").trigger('chosen:updated');
+    Run Keyword If    '${Combustivel}' == 'Gás Natural'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("5").trigger('chosen:updated');
+    Run Keyword If    '${Combustivel}' == 'Outros'  Execute JavaScript   $('#${campoCombustivelCondutores}').val("6").trigger('chosen:updated');
     Execute JavaScript   $('#${campoCombustivelCondutores}').trigger('change');
+    Aguardar tela de carregamento
 
 Em Unidade de Medida, selecionar "${UnidadeDeMedida}"
     Run Keyword If    '${UnidadeDeMedida}' == 'Selecione'  Execute JavaScript   $('#${campoUnidadeDeMedidaCondutores}').val("-1").trigger('chosen:updated');
@@ -258,6 +274,7 @@ Em Unidade de Medida, selecionar "${UnidadeDeMedida}"
     Run Keyword If    '${UnidadeDeMedida}' == 'Metros²'  Execute JavaScript   $('#${campoUnidadeDeMedidaCondutores}').val("2").trigger('chosen:updated');
     Run Keyword If    '${UnidadeDeMedida}' == 'Metros³'  Execute JavaScript   $('#${campoUnidadeDeMedidaCondutores}').val("3").trigger('chosen:updated');
     Execute JavaScript   $('#${campoUnidadeDeMedidaCondutores}').trigger('change');
+    Aguardar tela de carregamento
 
 Em Números de Eixos, informar "${Numero}"
     Execute JavaScript  document.getElementById("${campoEixosCondutores}").click();
@@ -269,15 +286,17 @@ Em Estado, selecionar "${Estado}"
     Run Keyword If    '${Estado}' == 'São Paulo'  Execute JavaScript   $('#${campoEstadoCondutores}').val("7").trigger('chosen:updated');
     Run Keyword If    '${Estado}' == 'Sergipe'  Execute JavaScript   $('#${campoEstadoCondutores}').val("9").trigger('chosen:updated');
     Execute JavaScript   $('#${campoEstadoCondutores}').trigger('change');
+    Aguardar tela de carregamento
 
 Em Cidade do Veículo, selecionar "${Cidade}"
-    Run Keyword If    '${Cidade}' == 'Selecione'  Execute JavaScript   $('#${campoEstadoCondutores}').val("-1").trigger('chosen:updated');
-    Run Keyword If    '${Cidade}' == 'Guarulhos'  Execute JavaScript   $('#${campoEstadoCondutores}').val("5333").trigger('chosen:updated');
-    Run Keyword If    '${Cidade}' == 'Santos'  Execute JavaScript   $('#${campoEstadoCondutores}').val("5026").trigger('chosen:updated');
-    Run Keyword If    '${Cidade}' == 'Aracaju'  Execute JavaScript   $('#${campoEstadoCondutores}').val("4753").trigger('chosen:updated');
-    Run Keyword If    '${Cidade}' == 'Sorocaba'  Execute JavaScript   $('#${campoEstadoCondutores}').val("4985").trigger('chosen:updated');
-    Run Keyword If    '${Cidade}' == 'Águas Lindas de Goias'  Execute JavaScript   $('#${campoEstadoCondutores}').val("906").trigger('chosen:updated');
-    Execute JavaScript   $('#${campoEstadoCondutores}').trigger('change');
+    Run Keyword If    '${Cidade}' == 'Selecione'  Execute JavaScript   $('#${campoCidadeCondutores}').val("-1").trigger('chosen:updated');
+    Run Keyword If    '${Cidade}' == 'Guarulhos'  Execute JavaScript   $('#${campoCidadeCondutores}').val("5333").trigger('chosen:updated');
+    Run Keyword If    '${Cidade}' == 'Santos'  Execute JavaScript   $('#${campoCidadeCondutores}').val("5026").trigger('chosen:updated');
+    Run Keyword If    '${Cidade}' == 'Aracaju'  Execute JavaScript   $('#${campoCidadeCondutores}').val("4753").trigger('chosen:updated');
+    Run Keyword If    '${Cidade}' == 'Sorocaba'  Execute JavaScript   $('#${campoCidadeCondutores}').val("4985").trigger('chosen:updated');
+    Run Keyword If    '${Cidade}' == 'Águas Lindas de Goias'  Execute JavaScript   $('#${campoCidadeCondutores}').val("906").trigger('chosen:updated');
+    Execute JavaScript   $('#${campoCidadeCondutores}').trigger('change');
+    Aguardar tela de carregamento
 
 Em Vagas Convencional, informar "${Numero}"
     Execute JavaScript  document.getElementById("${campoVagasConvencionalCondutores}").click();

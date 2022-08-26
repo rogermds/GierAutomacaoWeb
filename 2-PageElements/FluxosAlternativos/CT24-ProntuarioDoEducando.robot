@@ -1,7 +1,6 @@
 *** Settings ***
 Resource    ../../1-Hooks/1-Principal.robot
 Library    SeleniumLibrary
-Library     FakerLibrary
 
 *** Variables ***
 ${adicionarApoio}                    cphContent_btnAdicionarApoio
@@ -21,6 +20,7 @@ Em Etapa/Modalidade no Prontuário, selecionar "${etapaModalide}"
 
 Clicar em Pesquisar no Prontuário do Educando 
     Execute JavaScript  document.getElementById("${botaoPesquisarProntuario}").click();
+    Aguardar tela de carregamento
 
 Visualizar a mensagem: INFORME UMA TURMA
     Wait Until Page Contains Element    //span[contains(.,'Informe uma Turma')]
@@ -69,14 +69,16 @@ Em campo turma no Prontuário, selecionar "${Turma}"
     Sleep   3
 
 Clicar em Adicionar para Apoio Escolar
-    Wait Until Element Is Visible    ${adicionarApoio}    20
+    Wait Until Page Contains Element    ${adicionarApoio}    
     Execute JavaScript  document.getElementById("${adicionarApoio}").click();
-    
+    Aguardar tela de carregamento
+
 Visualizar a mensagem: INFORME UM COMPONENTE DE APOIO ESCOLAR.
     Wait Until Page Contains Element    //div[contains(@id,'painelMsg')][contains(.,'Informe um Componente de Apoio Escolar.')]
     
 Clicar em Adicionar para Avaliação por Especialista
     Execute JavaScript  document.getElementById("${adicionarEspecialista}").click();
+    Aguardar tela de carregamento
     
 Visualizar a mensagem: INFORME UMA ESPECIALIDADE.
     Wait Until Page Contains Element    //div[contains(@id,'painelMsg')][contains(.,'Informe uma Especialidade.')]

@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    FakerLibrary    locale=pt-BR
 
 *** Variable ***
 ${botaoCadastrar}               cphContent_btnCad
@@ -17,6 +18,12 @@ ${botaoOKModal}                 cphContent_Mensagem_Padrao_btnOk
 ${botaoSimModal}                cphContent_Mensagem_Padrao_btnSim
 ${botaoNaoModal}                cphContent_Mensagem_Padrao_btnNao
 ${AnoLetivo}                    ddlAnoLetivo
+${campoNome}                    cphContent_txtNome
+${campoNomeEducando}            cphContent_txtNomeAluno
+${campoSexo}                    cphContent_ddlSexo
+${campoIdentidade}              cphContent_txtIdentidade
+${campoOrgaoEmissor}            cphContent_ddlOrgaoEmissor
+${campoDataDeNascimento}        cphContent_txtDataNascimento
 
 
 *** Keywords ***
@@ -49,8 +56,7 @@ Entrar na funcionalidade "${funcionalidade}"
     Execute JavaScript  xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click() 
 
-Clicar em Cadastrar
-    Wait Until Element Is Visible    ${botaoCadastrar}
+Clicar no botão Cadastrar
     Execute JavaScript  document.getElementById("${botaoCadastrar}").click();
     Aguardar tela de carregamento
 
@@ -100,3 +106,36 @@ Clicar em Não no Modal
     Wait Until Element Is Visible    ${botaoNaoModal}
     Execute JavaScript  document.getElementById("${botaoNaoModal}").click();
     Aguardar tela de carregamento
+
+Em nome, inserir "${nome}"
+    Execute JavaScript  document.getElementById("${campoNome}").click();
+    Input Text    ${campoNome}    ${nome}
+
+Em Nome do Educando, informar "${Nome}"
+    Execute JavaScript    document.getElementById("${campoNomeEducando}").click();
+    Input Text    ${campoNomeEducando}    ${Nome}    
+    
+Em Sexo, selecionar "${Sexo}"
+    Run Keyword If    '${Sexo}' == 'Selecione'  Execute JavaScript   $('#${campoSexo}').val("-1").trigger('chosen:updated');
+    Run Keyword If    '${Sexo}' == 'Feminino'  Execute JavaScript   $('#${campoSexo}').val("1").trigger('chosen:updated');
+    Run Keyword If    '${Sexo}' == 'Masculino'  Execute JavaScript   $('#${campoSexo}').val("2").trigger('chosen:updated');
+    Run Keyword If    '${Sexo}' == 'Não informado'  Execute JavaScript   $('#${campoSexo}').val("3").trigger('chosen:updated');
+    Execute JavaScript   $('#${campoSexo}').trigger('change');
+    Aguardar tela de carregamento    
+
+Em Carteira de Identidade ou R.N.E informar um documento válido
+    ${rg}    FakerLibrary.RG    
+    Input Text  ${campoIdentidade}  ${rg}
+
+Em Órgão Emissor, selecionar "${orgaoEmissor}"
+    Run Keyword If    '${orgaoEmissor}' == 'Selecione'  Execute JavaScript   $('#${campoOrgaoEmissor}').val("-1").trigger('chosen:updated');
+    Run Keyword If    '${orgaoEmissor}' == 'Carteira Nacional de Habilitação'  Execute JavaScript   $('#${campoOrgaoEmissor}').val("67").trigger('chosen:updated');
+    Run Keyword If    '${orgaoEmissor}' == 'Carteira de Estrangeiro'  Execute JavaScript   $('#${campoOrgaoEmissor}').val("64").trigger('chosen:updated');
+    Run Keyword If    '${orgaoEmissor}' == 'Documento Estrangeiro'  Execute JavaScript   $('#${campoOrgaoEmissor}').val("59").trigger('chosen:updated');
+    Run Keyword If    '${orgaoEmissor}' == 'SSP'  Execute JavaScript   $('#${campoOrgaoEmissor}').val("31").trigger('chosen:updated');
+    Execute JavaScript   $('#${campoOrgaoEmissor}').trigger('change');
+    Aguardar tela de carregamento    
+
+Em campo Data de Nascimento, informar "${Data}"
+    Execute JavaScript  document.getElementById("${campoDataDeNascimento}").click();
+    Input Text    ${campoDataDeNascimento}    ${Data}

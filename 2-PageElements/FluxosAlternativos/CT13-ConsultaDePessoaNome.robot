@@ -1,13 +1,12 @@
 *** Settings ***
 Resource    ../../1-Hooks/1-Principal.robot
 Library    SeleniumLibrary
-Library     FakerLibrary
 
 *** Variables ***
-${botaoPesquisa}            cphContent_btnPesquisa    
+${botaoPesquisa}            cphContent_btnPesquisa
 
 *** Keywords ***
-Clicar no Botão "Pesquisar"
+Clicar no Botão para "Pesquisar"
     Execute JavaScript  document.getElementById("${botaoPesquisa}").click();
     Aguardar tela de carregamento
 

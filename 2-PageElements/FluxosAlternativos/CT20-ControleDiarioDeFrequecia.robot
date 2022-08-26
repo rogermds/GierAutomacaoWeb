@@ -1,7 +1,6 @@
 *** Settings ***
 Resource    ../../1-Hooks/1-Principal.robot
 Library    SeleniumLibrary
-Library     FakerLibrary
 
 *** Variables ***
 ${campoAnoLetivo}                          cphContent_ddlAnoLetivo
@@ -39,10 +38,10 @@ Em campo turma, selecionar "${turmaControle}"
     Run Keyword If    '${turmaControle}' == '4B'  Execute JavaScript   $('#${campoClasseControle}').val("111831").trigger('chosen:updated');
     Run Keyword If    '${turmaControle}' == '5B'  Execute JavaScript   $('#${campoClasseControle}').val("112173").trigger('chosen:updated');
     Execute JavaScript   $('#${campoClasseControle}').trigger('change');
-    Sleep    2
+    Aguardar tela de carregamento
 
 Clicar no botão 'Diário de Turma'
-    Wait Until Element Is Visible    ${botaoDiarioDeTurmaControle}    20
+    Wait Until Page Contains Element   ${botaoDiarioDeTurmaControle}    
     Execute JavaScript  document.getElementById("${botaoDiarioDeTurmaControle}").click();
     Wait Until Element Is Visible    ${botaoSalvar}    20
 
