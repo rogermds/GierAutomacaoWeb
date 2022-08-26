@@ -5,24 +5,30 @@ Resource         ../2-PageElements/FluxosPrincipais/CT01-Login.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT02-SelecaodeEstrutura.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT03-CadastroPessoa.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT04-ConsultaPessoa.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT05A-Calendario.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT05B-CadastroDeTurma.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT05-CadastroDeTurma.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT06-ConsultaDeTurma.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT07-AvaliacoesFrequencia.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT08-ControleDiarioFrequencia.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT09-HistoricoEscolar.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT10-AtaDeConselho.robot
-
+Resource         ../2-PageElements/FluxosPrincipais/CT09-AtaDeConselho.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT10-HistoricoEscolar.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT11-BoletimEscolar.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT12-ProntuarioDaTurma.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT13-ProntuarioDoAluno.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT14-Matricula.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT15-Transportes.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT16-AvaliacoesEducacionais.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
 #robot -d ./3-TestesFluxoBasico/results ./3-TestesFluxoBasico/TesteDeVersaoPositivo.robot
 
 #Inserir editar na consulta de turma
+#Cadastro no minimo 2x
+#Consultar o que foi cadastrado
+## EJA PRECISA ESPERAR VIRAR O SEMESTRE PARA ALTERAR INFORMAÇÕES
 
 
 *** Test Cases ***
-
 Cenário 01: Acesso ao Sistema – Tela de Login
     [Documentation]    Esse teste verifica se é possível efetuar login no Gier
     ...                Com o usuário e senha especificados
@@ -109,7 +115,30 @@ Cenário 03-B: Funcionalidade Cadastro de Pessoa – Secretaria
     No modal Deseja Cadastrar Outra Pessoa?, clicar em "Não"
     Verificar se o sistema retorna a página Consultar Pessoa
 
-Cenário 04-A: Funcionalidade Consulta de Pessoa – Secretaria
+Cenário 04-A: Funcionalidade Consulta de Pessoa – Escola
+    [Documentation]    Esse teste verifica se é possível efetuar o
+    ...                cadastro de uma pessoa na secretaria
+    [Tags]             Cadastro de Pessoa - Escola | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Pessoa"
+    Em consulta, no campo Nome, inserir o nome "AGATHA GABRIELLY DOS SANTOS SOUZA"
+    Em consulta, no campo D. Nascimento, inserir a data "15/06/2013"
+    Clicar em Pesquisar
+    Verificar se no grid é exibido o CPF "57266385814"
+    Verificar se no grid é exibido o RG "60483237"
+    Verificar se no grid é exibido a Data de Nascimento "15/06/2013"
+    Clicar no botão "Ações"
+    Clicar no botão "Visualizar"
+    Verificar se aparece o texto "Visualizar Pessoa"
+    Verificar se é exibido o nome "AGATHA GABRIELLY DOS SANTOS SOUZA"
+    Verificar se é exibido a data de nascimento "15/06/2013"
+
+Cenário 04-B: Funcionalidade Consulta de Pessoa – Secretaria
     [Documentation]    Esse teste verifica se é possível efetuar o
     ...                cadastro de uma pessoa na secretaria
     [Tags]             Cadastro de Pessoa - Secretaria | Fluxo Positivo
@@ -389,74 +418,74 @@ Cenário 07B: Funcionalidade Avaliações e Frequência - Fundamental
     Clicar em VISUALIZAR RELATORIO
     Verificar se o texto alterado aparece nesta tela
 
-## EJA PRECISA ESPERAR VIRAR O SEMESTRE PARA ALTERAR INFORMAÇÕES
-Cenário 07C: Funcionalidade Avaliações e Frequência - EJA
-    [Documentation]    Esse teste verifica se é possível consultar e
-    ...                registrar nota para a Etapa Fundamental
-    [Tags]             Avaliações e Frequência EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Avaliações e Frequência"
-    Na consulta de avaliações, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Na consulta de avaliações, em Professor, selecionar "PRISCILA DOMINGUES FERNANDES LOPES"
-    Na consulta de avaliações, em Turma, selecionar "3B"
-    Clicar em Pesquisar
-    No primeiro aluno, em questionário, clicar em "Responder"
-    Marcar "ATINGIU OS OBJETIVOS" nas questões
-    Em Relatório, digitar um texto para envio
-    Clicar em Enviar para Validação
-    Clicar em Salvar e Fechar
-    No modal de alerta, clicar em Ok
-    Verificar se aparece o status "RELATÓRIO AGUARDANDO VALIDAÇÃO"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
-    Em Validação de Relatório, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Em Validação de Relatório, em Turma, selecionar "3B"
-    Em Validação de Relatório, clicar em Pesquisar
-    Verificar se a Situação de Validação está como "AGUARDANDO VALIDAÇÃO"
-    Clicar em VISUALIZAR EDUCANDOS
-    Verificar se a Situação de Validação está como "AGUARDANDO VALIDAÇÃO"
-    Clicar em VISUALIZAR RELATORIO
-    Verificar se o texto inserido aparece nesta tela
-    Clicar em Encaminhar para Ajustes
-    Digitar uma justificativa
-    Clicar em Salvar
-    Verificar se este texto aparece no histórico
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Avaliações e Frequência"
-    Na consulta de avaliações, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Na consulta de avaliações, em Professor, selecionar "PRISCILA DOMINGUES FERNANDES LOPES"
-    Na consulta de avaliações, em Turma, selecionar "3B"
-    Clicar em Pesquisar
-    Verificar se aparece o status "RELATÓRIO AGUARDANDO AJUSTES"    
-    No primeiro aluno, em questionário, clicar em "Responder"
-    Verificar se as questões foram marcadas conforme foram salvas
-    Verificar se a Justificativa de Devolução é exibida
-    Clicar em Realizar Ajustes
-    Inserir um novo texto no relatório
-    Clicar em Salvar Ajustes
-    Clicar em Salvar e Fechar
-    No modal de alerta, clicar em Ok
-    Verificar se aparece o status "RELATÓRIO VALIDADO APÓS AJUSTES"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
-    Em Validação de Relatório, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Em Validação de Relatório, em Turma, selecionar "3B"
-    Em Validação de Relatório, clicar em Pesquisar
-    Verificar se a Situação de Validação está como "VALIDADO COM AJUSTES"
-    Clicar em VISUALIZAR EDUCANDOS
-    Verificar se a Situação de Validação está como "VALIDADO APÓS AJUSTES"
-    Clicar em VISUALIZAR RELATORIO
-    Verificar se o texto alterado aparece nesta tela
+## ESTÁ FORA DOS PARAMETROS DA UNIDADE LETIVA > NECESSÁRIO CONFIGURAR
+# Cenário 07C: Funcionalidade Avaliações e Frequência - EJA
+#     [Documentation]    Esse teste verifica se é possível consultar e
+#     ...                registrar nota para a Etapa Fundamental
+#     [Tags]             Avaliações e Frequência EJA | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Pedagógico"
+#     Entrar na funcionalidade "Avaliações e Frequência"
+#     Na consulta de avaliações, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 2º SEMESTRE"
+#     Na consulta de avaliações, em Professor, selecionar "PRISCILA DOMINGUES FERNANDES LOPES"
+#     Na consulta de avaliações, em Turma, selecionar "3B"
+#     Clicar em Pesquisar
+#     No primeiro aluno, em questionário, clicar em "Responder"
+#     Marcar "ATINGIU OS OBJETIVOS" nas questões
+#     Em Relatório, digitar um texto para envio
+#     Clicar em Enviar para Validação
+#     Clicar em Salvar e Fechar
+#     No modal de alerta, clicar em Ok
+#     Verificar se aparece o status "RELATÓRIO AGUARDANDO VALIDAÇÃO"
+#     Entrar no módulo "Pedagógico"
+#     Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
+#     Em Validação de Relatório, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+#     Em Validação de Relatório, em Turma, selecionar "3B"
+#     Em Validação de Relatório, clicar em Pesquisar
+#     Verificar se a Situação de Validação está como "AGUARDANDO VALIDAÇÃO"
+#     Clicar em VISUALIZAR EDUCANDOS
+#     Verificar se a Situação de Validação está como "AGUARDANDO VALIDAÇÃO"
+#     Clicar em VISUALIZAR RELATORIO
+#     Verificar se o texto inserido aparece nesta tela
+#     Clicar em Encaminhar para Ajustes
+#     Digitar uma justificativa
+#     Clicar em Salvar
+#     Verificar se este texto aparece no histórico
+#     Entrar no módulo "Pedagógico"
+#     Entrar na funcionalidade "Avaliações e Frequência"
+#     Na consulta de avaliações, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+#     Na consulta de avaliações, em Professor, selecionar "PRISCILA DOMINGUES FERNANDES LOPES"
+#     Na consulta de avaliações, em Turma, selecionar "3B"
+#     Clicar em Pesquisar
+#     Verificar se aparece o status "RELATÓRIO AGUARDANDO AJUSTES"    
+#     No primeiro aluno, em questionário, clicar em "Responder"
+#     Verificar se as questões foram marcadas conforme foram salvas
+#     Verificar se a Justificativa de Devolução é exibida
+#     Clicar em Realizar Ajustes
+#     Inserir um novo texto no relatório
+#     Clicar em Salvar Ajustes
+#     Clicar em Salvar e Fechar
+#     No modal de alerta, clicar em Ok
+#     Verificar se aparece o status "RELATÓRIO VALIDADO APÓS AJUSTES"
+#     Entrar no módulo "Pedagógico"
+#     Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
+#     Em Validação de Relatório, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+#     Em Validação de Relatório, em Turma, selecionar "3B"
+#     Em Validação de Relatório, clicar em Pesquisar
+#     Verificar se a Situação de Validação está como "VALIDADO COM AJUSTES"
+#     Clicar em VISUALIZAR EDUCANDOS
+#     Verificar se a Situação de Validação está como "VALIDADO APÓS AJUSTES"
+#     Clicar em VISUALIZAR RELATORIO
+#     Verificar se o texto alterado aparece nesta tela
 
 Cenário 08A: Funcionalidade Controle Diário de Frequência - Infantil
     [Documentation]    Esse teste verifica se é possível consultar e
-    ...                registrar nota para a Etapa Fundamental
-    [Tags]             Consulta de Turma | Fluxo Positivo
+    ...                registrar frequencia para a Etapa Infantil
+    [Tags]             Controle de Frequencia | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -464,48 +493,44 @@ Cenário 08A: Funcionalidade Controle Diário de Frequência - Infantil
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Controle Diário de Frequência"
-    Na controle de frequência, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
-    Na controle de frequência, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
-    Na controle de frequência, em Turma, selecionar "EII A"
-    Na controle de frequência, em Data Referência, insira "01/07/2022"
+    No controle de frequência, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    No controle de frequência, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
+    No controle de frequência, em Turma, selecionar "EII A"
     Clicar em Pesquisar
-    Verificar se o botão Iniciar está desativado
-    Do dia 23 ao 30, clicar em Iniciar
-    Registrar faltas para os 3 primeiros alunos
+    Verificar se o botão Iniciar está visível
+    Iniciar as aulas nos 4 últimos dias da semana
+    Registrar faltas para os 4 primeiros alunos
     Clicar em Pesquisar
-    Verificar se o primeiro aluno possui 5 faltas e frequencia 17
-    Verificar se o segundo aluno possui 3 faltas e frequencia 50
-    Verificar se o terceiro aluno possui 2 faltas e frequencia 67
-    Verificar se o quarto aluno possui 0 faltas e frequencia 100
+    Verificar se o primeiro aluno possui 4 faltas e frequencia 0
+    Verificar se o segundo aluno possui 3 faltas e frequencia 25
+    Verificar se o terceiro aluno possui 2 faltas e frequencia 50
+    Verificar se o quarto aluno possui 1 falta e frequencia 75
+    Verificar se o quinto aluno possui 0 faltas e frequencia 100
     Verificar se um aluno que não esteja matriculado possui as faltas bloqueadas
     No primeiro aluno, clicar em Diário de Bordo do Aluno
     Em Diário do Educando, em Tipo de Avaliação, selecionar "SAÚDE LEVE"
     Em Diário do Educando, em Título, inserir "PASSOU MAL COM DOR DE ESTOMAGO"
     Em Diário do Educando, em Descrição, inserir "O responsável do aluno o buscou no colégio"
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
+    Salvar o registro de Diário do Educando
     Em Diário do Educando, verificar se o card foi adicionado ao histórico
     Clicar em Voltar
-    No dia 30, inserir um Campo de Experiencia
+    No dia atual, clicar em inserir um Campo de Experiencia
     Em Campo de Experiencia, selecionar a primeira opção
     Em Saberes, selecionar a primeira opção
     Em Aprendizagem, selecionar a primeira opção
     Em Descrição da Atividade, inserir "Atividade efetuada com sucesso"
     Clicar em Inserir
-    No modal de alerta, clicar em Ok
-    Verificar se a descrição foi salva no histórico
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
-    No dia 23, cancelar a aula iniciada
-    Verificar se os campos foram bloqueados no dia 23
+    Verificar se a descrição foi salva no histórico e Salvar
+    Desmarcar as faltas registradas
+    Cancelar as aulas iniciadas
+    Verificar se os campos de faltas foram bloqueados
     Clicar em Avaliações
     Verificar se aparece o texto "Avaliações e Frequências"
-    
 
 Cenário 08B: Funcionalidade Controle Diário de Frequência - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar e
-    ...                registrar nota para a Etapa Fundamental
-    [Tags]             Consulta de Turma | Fluxo Positivo
+    ...                registrar frequencia para a Etapa Fundamental
+    [Tags]             Controle de Frequencia | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -513,236 +538,87 @@ Cenário 08B: Funcionalidade Controle Diário de Frequência - Fundamental
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Controle Diário de Frequência"
-    Na controle de frequência, em Etapa/Modalidade, selecionar "EDUCAÇÃO FUNDAMENTAL"
-    Na controle de frequência, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
-    Na controle de frequência, em Turma, selecionar "EII A"
-    Na controle de frequência, em Data Referência, insira "01/07/2022"
+    No controle de frequência, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    No controle de frequência, em Professor, selecionar "DANIELA MACHADO OLIVEIRA"
+    No controle de frequência, em Turma, selecionar "1A"
     Clicar em Pesquisar
-    Verificar se o botão Iniciar está desativado
-    Do dia 23 ao 30, clicar em Iniciar
-    Registrar faltas para os 3 primeiros alunos
+    Verificar se o botão Iniciar está visível
+    Iniciar as aulas nos 4 últimos dias da semana
+    Registrar faltas para os 4 primeiros alunos
     Clicar em Pesquisar
-    Verificar se o primeiro aluno possui 5 faltas e frequencia 17
-    Verificar se o segundo aluno possui 3 faltas e frequencia 50
-    Verificar se o terceiro aluno possui 2 faltas e frequencia 67
-    Verificar se o quarto aluno possui 0 faltas e frequencia 100
+    Verificar se o primeiro aluno possui 4 faltas e frequencia 0
+    Verificar se o segundo aluno possui 3 faltas e frequencia 25
+    Verificar se o terceiro aluno possui 2 faltas e frequencia 50
+    Verificar se o quarto aluno possui 1 falta e frequencia 75
+    Verificar se o quinto aluno possui 0 faltas e frequencia 100
     Verificar se um aluno que não esteja matriculado possui as faltas bloqueadas
     No primeiro aluno, clicar em Diário de Bordo do Aluno
     Em Diário do Educando, em Tipo de Avaliação, selecionar "SAÚDE LEVE"
     Em Diário do Educando, em Título, inserir "PASSOU MAL COM DOR DE ESTOMAGO"
     Em Diário do Educando, em Descrição, inserir "O responsável do aluno o buscou no colégio"
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
+    Salvar o registro de Diário do Educando
     Em Diário do Educando, verificar se o card foi adicionado ao histórico
     Clicar em Voltar
-    No dia 30, inserir um Campo de Experiencia
+    No dia atual, clicar em inserir um Campo de Experiencia
     Em Campo de Experiencia, selecionar a primeira opção
     Em Saberes, selecionar a primeira opção
     Em Aprendizagem, selecionar a primeira opção
     Em Descrição da Atividade, inserir "Atividade efetuada com sucesso"
     Clicar em Inserir
-    No modal de alerta, clicar em Ok
-    Verificar se a descrição foi salva no histórico
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
-    No dia 23, cancelar a aula iniciada
-    Verificar se os campos foram bloqueados no dia 23
+    Verificar se a descrição foi salva no histórico e Salvar
+    Desmarcar as faltas registradas
+    Cancelar as aulas iniciadas
+    Verificar se os campos de faltas foram bloqueados
     Clicar em Avaliações
     Verificar se aparece o texto "Avaliações e Frequências"
 
-    Cenário 08C: Funcionalidade Controle Diário de Frequência - EJA
-    [Documentation]    Esse teste verifica se é possível consultar e
-    ...                registrar nota para a Etapa EJA
-    [Tags]             Consulta de Turma | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Controle Diário de Frequência"
-    Na controle de frequência, em Etapa/Modalidade, selecionar ""
-    Na controle de frequência, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
-    Na controle de frequência, em Turma, selecionar "EII A"
-    Na controle de frequência, em Data Referência, insira "01/07/2022"
-    Clicar em Pesquisar
-    Verificar se o botão Iniciar está desativado
-    Do dia 23 ao 30, clicar em Iniciar
-    Registrar faltas para os 3 primeiros alunos
-    Clicar em Pesquisar
-    Verificar se o primeiro aluno possui 5 faltas e frequencia 17
-    Verificar se o segundo aluno possui 3 faltas e frequencia 50
-    Verificar se o terceiro aluno possui 2 faltas e frequencia 67
-    Verificar se o quarto aluno possui 0 faltas e frequencia 100
-    Verificar se um aluno que não esteja matriculado possui as faltas bloqueadas
-    No primeiro aluno, clicar em Diário de Bordo do Aluno
-    Em Diário do Educando, em Tipo de Avaliação, selecionar "SAÚDE LEVE"
-    Em Diário do Educando, em Título, inserir "PASSOU MAL COM DOR DE ESTOMAGO"
-    Em Diário do Educando, em Descrição, inserir "O responsável do aluno o buscou no colégio"
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
-    Em Diário do Educando, verificar se o card foi adicionado ao histórico
-    Clicar em Voltar
-    No dia 30, inserir um Campo de Experiencia
-    Em Campo de Experiencia, selecionar a primeira opção
-    Em Saberes, selecionar a primeira opção
-    Em Aprendizagem, selecionar a primeira opção
-    Em Descrição da Atividade, inserir "Atividade efetuada com sucesso"
-    Clicar em Inserir
-    No modal de alerta, clicar em Ok
-    Verificar se a descrição foi salva no histórico
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
-    No dia 23, cancelar a aula iniciada
-    Verificar se os campos foram bloqueados no dia 23
-    Clicar em Avaliações
-    Verificar se aparece o texto "Avaliações e Frequências"
+## ESTÁ FORA DOS PARAMETROS DA UNIDADE LETIVA > NECESSÁRIO CONFIGURAR
+# Cenário 08C: Funcionalidade Controle Diário de Frequência - EJA
+#     [Documentation]    Esse teste verifica se é possível consultar e
+#     ...                registrar frequencia para a Etapa EJA
+#     [Tags]             Controle de Frequencia | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Pedagógico"
+#     Entrar na funcionalidade "Controle Diário de Frequência"
+#     No controle de frequência, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE"
+#     No controle de frequência, em Professor, selecionar "DANIELA MACHADO OLIVEIRA"
+#     No controle de frequência, em Turma, selecionar "1A"
+#     Clicar em Pesquisar
+#     Verificar se o botão Iniciar está visível
+#     Iniciar as aulas nos 4 últimos dias da semana
+#     Registrar faltas para os 4 primeiros alunos
+#     Clicar em Pesquisar
+#     Verificar se o primeiro aluno possui 4 faltas e frequencia 0
+#     Verificar se o segundo aluno possui 3 faltas e frequencia 25
+#     Verificar se o terceiro aluno possui 2 faltas e frequencia 50
+#     Verificar se o quarto aluno possui 1 falta e frequencia 75
+#     Verificar se o quinto aluno possui 0 faltas e frequencia 100
+#     Verificar se um aluno que não esteja matriculado possui as faltas bloqueadas
+#     No primeiro aluno, clicar em Diário de Bordo do Aluno
+#     Em Diário do Educando, em Tipo de Avaliação, selecionar "SAÚDE LEVE"
+#     Em Diário do Educando, em Título, inserir "PASSOU MAL COM DOR DE ESTOMAGO"
+#     Em Diário do Educando, em Descrição, inserir "O responsável do aluno o buscou no colégio"
+#     Salvar o registro de Diário do Educando
+#     Em Diário do Educando, verificar se o card foi adicionado ao histórico
+#     Clicar em Voltar
+#     No dia atual, clicar em inserir um Campo de Experiencia
+#     Em Campo de Experiencia, selecionar a primeira opção
+#     Em Saberes, selecionar a primeira opção
+#     Em Aprendizagem, selecionar a primeira opção
+#     Em Descrição da Atividade, inserir "Atividade efetuada com sucesso"
+#     Clicar em Inserir
+#     Verificar se a descrição foi salva no histórico e Salvar
+#     Desmarcar as faltas registradas
+#     Cancelar as aulas iniciadas
+#     Verificar se os campos de faltas foram bloqueados
+#     Clicar em Avaliações
+#     Verificar se aparece o texto "Avaliações e Frequências"
 
-    Cenário 09A: Funcionalidade Ata de Conselho - Infantil
-    [Documentation]    Esse teste verifica se é possível consultar e
-    ...                registrar nota para a Etapa Fundamental
-    [Tags]             Consulta de Turma | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Controle Diário de Frequência"
-    Na controle de frequência, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
-    Na controle de frequência, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
-    Na controle de frequência, em Turma, selecionar "EII A"
-    Na controle de frequência, em Data Referência, insira "01/07/2022"
-    Clicar em Pesquisar
-    Verificar se o botão Iniciar está desativado
-    Do dia 23 ao 30, clicar em Iniciar
-    Registrar faltas para os 3 primeiros alunos
-    Clicar em Pesquisar
-    Verificar se o primeiro aluno possui 5 faltas e frequencia 17
-    Verificar se o segundo aluno possui 3 faltas e frequencia 50
-    Verificar se o terceiro aluno possui 2 faltas e frequencia 67
-    Verificar se o quarto aluno possui 0 faltas e frequencia 100
-    Verificar se um aluno que não esteja matriculado possui as faltas bloqueadas
-    No primeiro aluno, clicar em Diário de Bordo do Aluno
-    Em Diário do Educando, em Tipo de Avaliação, selecionar "SAÚDE LEVE"
-    Em Diário do Educando, em Título, inserir "PASSOU MAL COM DOR DE ESTOMAGO"
-    Em Diário do Educando, em Descrição, inserir "O responsável do aluno o buscou no colégio"
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
-    Em Diário do Educando, verificar se o card foi adicionado ao histórico
-    Clicar em Voltar
-    No dia 30, inserir um Campo de Experiencia
-    Em Campo de Experiencia, selecionar a primeira opção
-    Em Saberes, selecionar a primeira opção
-    Em Aprendizagem, selecionar a primeira opção
-    Em Descrição da Atividade, inserir "Atividade efetuada com sucesso"
-    Clicar em Inserir
-    No modal de alerta, clicar em Ok
-    Verificar se a descrição foi salva no histórico
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
-    No dia 23, cancelar a aula iniciada
-    Verificar se os campos foram bloqueados no dia 23
-    Clicar em Avaliações
-    Verificar se aparece o texto "Avaliações e Frequências"
-
-    Cenário 09B: Funcionalidade Controle Diário de Frequência - Fundamental
-    [Documentation]    Esse teste verifica se é possível consultar e
-    ...                registrar nota para a Etapa Fundamental
-    [Tags]             Consulta de Turma | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Controle Diário de Frequência"
-    Na controle de frequência, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
-    Na controle de frequência, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
-    Na controle de frequência, em Turma, selecionar "EII A"
-    Na controle de frequência, em Data Referência, insira "01/07/2022"
-    Clicar em Pesquisar
-    Verificar se o botão Iniciar está desativado
-    Do dia 23 ao 30, clicar em Iniciar
-    Registrar faltas para os 3 primeiros alunos
-    Clicar em Pesquisar
-    Verificar se o primeiro aluno possui 5 faltas e frequencia 17
-    Verificar se o segundo aluno possui 3 faltas e frequencia 50
-    Verificar se o terceiro aluno possui 2 faltas e frequencia 67
-    Verificar se o quarto aluno possui 0 faltas e frequencia 100
-    Verificar se um aluno que não esteja matriculado possui as faltas bloqueadas
-    No primeiro aluno, clicar em Diário de Bordo do Aluno
-    Em Diário do Educando, em Tipo de Avaliação, selecionar "SAÚDE LEVE"
-    Em Diário do Educando, em Título, inserir "PASSOU MAL COM DOR DE ESTOMAGO"
-    Em Diário do Educando, em Descrição, inserir "O responsável do aluno o buscou no colégio"
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
-    Em Diário do Educando, verificar se o card foi adicionado ao histórico
-    Clicar em Voltar
-    No dia 30, inserir um Campo de Experiencia
-    Em Campo de Experiencia, selecionar a primeira opção
-    Em Saberes, selecionar a primeira opção
-    Em Aprendizagem, selecionar a primeira opção
-    Em Descrição da Atividade, inserir "Atividade efetuada com sucesso"
-    Clicar em Inserir
-    No modal de alerta, clicar em Ok
-    Verificar se a descrição foi salva no histórico
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
-    No dia 23, cancelar a aula iniciada
-    Verificar se os campos foram bloqueados no dia 23
-    Clicar em Avaliações
-    Verificar se aparece o texto "Avaliações e Frequências"
-
-    Cenário 09C: Funcionalidade Ata de Conselho - EJA
-    [Documentation]    Esse teste verifica se é possível consultar e
-    ...                registrar nota para a Etapa Fundamental
-    [Tags]             Consulta de Turma | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Controle Diário de Frequência"
-    Na controle de frequência, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
-    Na controle de frequência, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
-    Na controle de frequência, em Turma, selecionar "EII A"
-    Na controle de frequência, em Data Referência, insira "01/07/2022"
-    Clicar em Pesquisar
-    Verificar se o botão Iniciar está desativado
-    Do dia 23 ao 30, clicar em Iniciar
-    Registrar faltas para os 3 primeiros alunos
-    Clicar em Pesquisar
-    Verificar se o primeiro aluno possui 5 faltas e frequencia 17
-    Verificar se o segundo aluno possui 3 faltas e frequencia 50
-    Verificar se o terceiro aluno possui 2 faltas e frequencia 67
-    Verificar se o quarto aluno possui 0 faltas e frequencia 100
-    Verificar se um aluno que não esteja matriculado possui as faltas bloqueadas
-    No primeiro aluno, clicar em Diário de Bordo do Aluno
-    Em Diário do Educando, em Tipo de Avaliação, selecionar "SAÚDE LEVE"
-    Em Diário do Educando, em Título, inserir "PASSOU MAL COM DOR DE ESTOMAGO"
-    Em Diário do Educando, em Descrição, inserir "O responsável do aluno o buscou no colégio"
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
-    Em Diário do Educando, verificar se o card foi adicionado ao histórico
-    Clicar em Voltar
-    No dia 30, inserir um Campo de Experiencia
-    Em Campo de Experiencia, selecionar a primeira opção
-    Em Saberes, selecionar a primeira opção
-    Em Aprendizagem, selecionar a primeira opção
-    Em Descrição da Atividade, inserir "Atividade efetuada com sucesso"
-    Clicar em Inserir
-    No modal de alerta, clicar em Ok
-    Verificar se a descrição foi salva no histórico
-    Clicar em Salvar
-    No modal de alerta, clicar em Ok
-    No dia 23, cancelar a aula iniciada
-    Verificar se os campos foram bloqueados no dia 23
-    Clicar em Avaliações
-    Verificar se aparece o texto "Avaliações e Frequências"
-
-Cenário 10B: Funcionalidade Ata De Conselho Final - Infantil
+Cenário 09A: Funcionalidade Ata de Conselho - Infantil
     [Documentation]    Esse teste verifica se é possível consultar a
     ...                Ata de Conselho Final e todas as suas ações
     ...                para a Etapa Infantil                 
@@ -781,7 +657,7 @@ Cenário 10B: Funcionalidade Ata De Conselho Final - Infantil
     Clicar em Sim no Modal
     Na tela de Ata de Conselho, verificar se o botão Finalizar Conselho é exibido
 
-Cenário 10B: Funcionalidade Ata De Conselho Final - Fundamental
+Cenário 09B: Funcionalidade Ata de Conselho - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar a
     ...                Ata de Conselho Final e todas as suas ações
     ...                para a Etapa Fundamental                 
@@ -793,8 +669,8 @@ Cenário 10B: Funcionalidade Ata De Conselho Final - Fundamental
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Ata de Conselho Final - Turma"
-    Na tela de Ata de Conselho, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Na tela de Ata de Conselho, em Turma, selecionar "2A"
+    Na tela de Ata de Conselho, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Na tela de Ata de Conselho, em Turma, selecionar "EII A"
     Clicar em Pesquisar
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Fechamento do Período Letivo no primeiro aluno
@@ -820,7 +696,7 @@ Cenário 10B: Funcionalidade Ata De Conselho Final - Fundamental
     Clicar em Sim no Modal
     Na tela de Ata de Conselho, verificar se o botão Finalizar Conselho é exibido
 
-Cenário 10C: Funcionalidade Ata De Conselho Final - EJA
+Cenário 09C: Funcionalidade Ata de Conselho - EJA
     [Documentation]    Esse teste verifica se é possível consultar a
     ...                Ata de Conselho Final e todas as suas ações
     ...                para a Etapa EJA                 
@@ -828,12 +704,12 @@ Cenário 10C: Funcionalidade Ata De Conselho Final - EJA
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Ata de Conselho Final - Turma"
-    Na tela de Ata de Conselho, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE"
-    Na tela de Ata de Conselho, em Turma, selecionar "CI A (1º Semestre)"
+    Na tela de Ata de Conselho, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Na tela de Ata de Conselho, em Turma, selecionar "EII A"
     Clicar em Pesquisar
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Fechamento do Período Letivo no primeiro aluno
@@ -858,6 +734,39 @@ Cenário 10C: Funcionalidade Ata De Conselho Final - EJA
     Na tela de Ata de Conselho, clicar no botão Reabrir Conselho
     Clicar em Sim no Modal
     Na tela de Ata de Conselho, verificar se o botão Finalizar Conselho é exibido
+
+Cenário 10A: Funcionalidade Histórico Escolar - Infantil
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Histórico Escolar para a Etapa Infantil                 
+    [Tags]             Histórico Escolar - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Pedagógico"
+
+Cenário 10B: Funcionalidade Histórico Escolar - Fundamental
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Histórico Escolar para a Etapa Fundamental                 
+    [Tags]             Histórico Escolar - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Pedagógico"
+
+Cenário 10C: Funcionalidade Histórico Escolar - EJA
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Histórico Escolar para a Etapa EJA                 
+    [Tags]             Histórico Escolar - EJA | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Pedagógico"
     
 Cenário 11A: Funcionalidade Boletim Escolar - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o
@@ -873,3 +782,232 @@ Cenário 11A: Funcionalidade Boletim Escolar - Infantil
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Ata de Conselho Final - Turma"
 
+
+Cenário 11B: Funcionalidade Boletim Escolar - Fundamental
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Boletim Escolar e todas as suas ações
+    ...                para a Etapa Fundamental                 
+    [Tags]             Boletim Escolar - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 11C: Funcionalidade Boletim Escolar - EJA
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Boletim Escolar e todas as suas ações
+    ...                para a Etapa EJA                 
+    [Tags]             Boletim Escolar - EJA | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 12A: Funcionalidade Prontuário da Turma - Infantil
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Prontuário da Turma e todas as suas ações
+    ...                para a Etapa Infantil                 
+    [Tags]             Boletim Escolar - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 12B: Funcionalidade Prontuário da Turma - Fundamental
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Prontuário da Turma e todas as suas ações
+    ...                para a Etapa Fundamental                 
+    [Tags]             Boletim Escolar - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 12C: Funcionalidade Prontuário da Turma - EJA
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Prontuário da Turma e todas as suas ações
+    ...                para a Etapa EJA                 
+    [Tags]             Boletim Escolar - EJA | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 13A: Funcionalidade Prontuário do Aluno - Infantil
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Prontuário da Turma e todas as suas ações
+    ...                para a Etapa Infantil                 
+    [Tags]             Prontuário do Aluno - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 13B: Funcionalidade Prontuário do Aluno - Fundamental
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Prontuário da Turma e todas as suas ações
+    ...                para a Etapa Fundamental                 
+    [Tags]             Prontuário do Aluno - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 13C: Funcionalidade Prontuário do Aluno - EJA
+    [Documentation]    Esse teste verifica se é possível consultar o
+    ...                Prontuário da Turma e todas as suas ações
+    ...                para a Etapa EJA                 
+    [Tags]             Prontuário do Aluno - EJA | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    
+Cenário 14A: Funcionalidade Matricula - Infantil
+    [Documentation]    Esse teste verifica se é possível efetuar a
+    ...                matrícula para um aluno da Etapa Infantil                 
+    [Tags]             Matricula - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 14B: Funcionalidade Matricula - Fundamental
+    [Documentation]    Esse teste verifica se é possível efetuar a
+    ...                matrícula para um aluno da Etapa Fundamental                 
+    [Tags]             Matricula - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 14C: Funcionalidade Matricula - EJA
+    [Documentation]    Esse teste verifica se é possível efetuar a
+    ...                matrícula para um aluno da Etapa EJA                 
+    [Tags]             Matricula - EJA | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 15A: Funcionalidade Transportes - Infantil
+    [Documentation]    Esse teste verifica se é possível solicitar
+    ...                transporte para um aluno da Etapa Infantil                 
+    [Tags]             Transportes - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 15B: Funcionalidade Transportes - Fundamental
+    [Documentation]    Esse teste verifica se é possível solicitar
+    ...                transporte para um aluno da Etapa Fundamental                 
+    [Tags]             Transportes - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma
+
+Cenário 15C: Funcionalidade Transportes - EJA
+    [Documentation]    Esse teste verifica se é possível solicitar
+    ...                transporte para um aluno da Etapa EJA                 
+    [Tags]             Transportes - EJA | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 16A: Funcionalidade Avaliações Educacionais - Infantil
+    [Documentation]    Esse teste verifica se é possível agendar e 
+    ...                efetuar prova online para um aluno da Etapa Infantil                 
+    [Tags]             Avaliações Educacionais - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 16B: Funcionalidade Avaliações Educacionais - Fundamental
+    [Documentation]    Esse teste verifica se é possível agendar e 
+    ...                efetuar prova online para um aluno da Etapa Infantil                 
+    [Tags]             Avaliações Educacionais - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+
+Cenário 16C: Funcionalidade Avaliações Educacionais - EJA
+    [Documentation]    Esse teste verifica se é possível agendar e 
+    ...                efetuar prova online para um aluno da Etapa Infantil                 
+    [Tags]             Avaliações Educacionais - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Ata de Conselho Final - Turma"

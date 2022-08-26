@@ -15,6 +15,8 @@ ${botaoDataHoje}                //button[@type='button'][contains(.,'Hoje')]
 ${campoObservacaoAta}           cphContent_txtObservacaoAtaConcelho
 ${botaoOKModal}                 cphContent_Mensagem_Padrao_btnOk
 ${botaoSimModal}                cphContent_Mensagem_Padrao_btnSim
+${botaoNaoModal}                cphContent_Mensagem_Padrao_btnNao
+${AnoLetivo}                    ddlAnoLetivo
 
 
 *** Keywords ***
@@ -94,3 +96,7 @@ Clicar em Sim no Modal
     Execute JavaScript  document.getElementById("${botaoSimModal}").click();
     Aguardar tela de carregamento
 
+Clicar em Não no Modal   
+    Wait Until Element Is Visible    ${botaoNaoModal}
+    Execute JavaScript  document.getElementById("${botaoNaoModal}").click();
+    Aguardar tela de carregamento

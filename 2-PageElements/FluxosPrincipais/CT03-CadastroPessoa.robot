@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    FakerLibrary     locale=pt_BR
-Resource    ../../1-Hooks/1-Principal.robot
 
 *** Variables ***
 ${campoNome}                    cphContent_ucDadosPessoais_txtNomeCompleto

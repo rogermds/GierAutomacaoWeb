@@ -29,6 +29,10 @@ Resource         ../2-PageElements/FluxosAlternativos/CT27-JustificativasPreMatr
 Resource         ../2-PageElements/FluxosAlternativos/CT28-LayoutDoPortal.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT29-PortalConsultaBrasileiro.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT30-PortalConsultaEstrangeiro.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT31-PortalListaDeEspera.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT32-GestaoPreMatriculaEscola.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT33-GestaoPreMatriculaSecret.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT34-CredenciamentoCondutores.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -553,7 +557,7 @@ Cenário 25 - Funcionalidade Prontuário da Turma
 Cenário 26: Funcionalidade Avaliações e Frequência
     [Documentation]    Esse teste verifica se é possível consultar e
     ...                registrar um diário do Educando em Avaliações
-    [Tags]             Avaliações e Frequência Fundamental | Fluxo Positivo
+    [Tags]             Avaliações e Frequência Fundamental | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -580,7 +584,7 @@ Cenário 26: Funcionalidade Avaliações e Frequência
 Cenário 27: Funcionalidade Justificativas da Pré-Matricula
     [Documentation]    Esse teste verifica se é possível cadastrar uma 
     ...                justificativa
-    [Tags]             Justificativas da Pré-Matricula | Fluxo Positivo
+    [Tags]             Justificativas da Pré-Matricula | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -620,7 +624,7 @@ Cenário 27: Funcionalidade Justificativas da Pré-Matricula
 Cenário 28: Funcionalidade Layout do Portal de Inscrições e Transferências
     [Documentation]    Esse teste verifica se é possível cadastrar um 
     ...                 Layout do Portal de Inscrições e Transferências
-    [Tags]             Layout do Portal de Inscrições e Transferências | Fluxo Positivo
+    [Tags]             Layout do Portal de Inscrições e Transferências | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -665,94 +669,381 @@ Cenário 28: Funcionalidade Layout do Portal de Inscrições e Transferências
 Cenário 29: Portal de Inscrição - Consulta de Solicitação
     [Documentation]    Esse teste verifica se é possível realizar uma consulta
     ...                de uma solicitação realizada no Portal
-    [Tags]             Portal de Inscrição | Fluxo Positivo
+    [Tags]             Portal de Inscrição | Fluxo Negativo
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
     Clicar em 'Consultar Solicitação'
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário escolher uma nacionalidade.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar um protocolo válido. 
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
     Em Protocolo, informar "123456789"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar um documento.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
     Em CPF, inserir "364.882.650-67"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal    
     Visualizar a mensagem: Necessário informar um protocolo válido.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
     Em Protocolo, informar "123456789"
     Em CPF, inserir "364.882.650-67"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Não foi localizado registro com os dados informados.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
     Em Protocolo, informar "123456789"
     Em CPF, inserir "364.882.650-67"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar uma data de Nascimento.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
     Em Protocolo, informar "123456789"
     Em CPF, inserir "364.882.650-67"
     Em Data de Nascimento, informar "00000000" 
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Formato de data inválida.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
 
 Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     [Documentation]    Esse teste verifica se é possível realizar uma consulta
     ...                de uma solicitação realizada no Portal
-    [Tags]             Portal de Inscrição | Fluxo Positivo
+    [Tags]             Portal de Inscrição | Fluxo Negativo
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
     Clicar em 'Consultar Solicitação'
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário escolher uma nacionalidade.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"    
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar um protocolo válido. 
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
     Em Protocolo, informar "123456789"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal    
     Visualizar a mensagem: Necessário informar um documento.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
     Em RNE, informar "v565371"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar um protocolo válido.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
     Em Protocolo, informar "123456789"
     Em RNE, informar "v565371"
     Em Data de Nascimento, informar "10/01/1965"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Não foi localizado registro com os dados informados.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
     Em Protocolo, informar "123456789"
     Em RNE, informar "v565371"
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar uma data de Nascimento.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
     Em Protocolo, informar "123456789"
     Em RNE, informar "v565371"
     Em Data de Nascimento, informar "00000000" 
-    Em 'Consultar Solicitação', pesquisar
+    Clicar em pesquisar no Portal
     Visualizar a mensagem: Formato de data inválida.
-    Clicar em Ok no alerta de Consultar Solicitação
+    Clicar em Ok no alerta do Portal
+
+Cenário 31: Portal de Inscrição - Lista de Espera
+    [Documentation]    Esse teste verifica se é possível realizar uma consulta
+    ...                de uma solicitação que esta em Lista de Espera
+    [Tags]             Portal de Inscrição | Fluxo Negativo
+    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
+    Clicar em Lista de Espera    
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: Necessário escolher um Ano Letivo
+    Clicar em Ok no alerta do Portal
+    Em Ano Letivo no Portal, selecionar o ano letivo corrente
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: Necessário informar o Nome do(a) Inscrito(a)
+    Clicar em Ok no alerta do Portal
+    Em Nome do(a) Aluno(a), informar "Teste Aluno Automação"
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: Necessário informar a data de Nascimento.    
+    Clicar em Ok no alerta do Portal
+    Em Data de Nascimento no Portal, informar "24/04/1993"    
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: Necessário informar o Nome do(a) Responsável
+    Clicar em Ok no alerta do Portal
+    Em Nome do(a) Responsável, informar "Teste Responsável Automação"
+    Clicar em pesquisar no Portal
+    Visualizar a mensagem: Nenhum registro encontrado com os dados informados
+
+Cenário 32: Funcionalidade Gestão de Pré-matrícula Escola
+    [Documentation]    Esse teste verifica se é possível consultar e
+    ...                registrar as solicitações realizadas no Portal 
+    [Tags]             Gestão de Pré-matrícula | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em campo Educando, informar "Teste Automação Qualidade"
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.
+    Clicar em OK no modal de alerta
+    Clicar no botão Limpar
+    Em campo Protocolo, informar "123456789"    
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.    
+    Clicar em OK no modal de alerta
+    Clicar no botão Limpar
+    Em Situação, selecionar "AGUARDANDO ANÁLISE"
+    Clicar no Botão "Pesquisar"
+    No primeiro aluno da pesquisa, clicar na ação "Indeferir"
+    Clicar no botão salvar para o alerta de Justificativa    
+    Visualizar a mensagem: SELECIONE UMA JUSTIFICATIVA    
+    Clicar em Ok no alerta de Justificativa    
+    Fechar o modal de Justificativa            
+    No primeiro aluno da pesquisa, clicar na ação "Deferir"     
+    Clicar em OK no modal de alerta
+    No primeiro aluno da pesquisa, clicar na ação "Registro de Atendimento"
+    Clicar em salvar o Registro de Atendimento     
+    Visualizar a mensagem: SELECIONE O TIPO DE CONTATO.    
+    Clicar em OK para o alerta de Registro    
+    Selecionar a opção "Contato com Sucesso"    
+    Clicar em salvar o Registro de Atendimento 
+    Visualizar a mensagem: PREENCHA O CAMPO INFORMAÇÕES SOBRE O ATENDIMENTO.
+    Clicar em OK para o alerta de Registro    
+    Selecionar a opção "Contato sem Sucesso"
+    Clicar em salvar o Registro de Atendimento 
+    Visualizar a mensagem: PREENCHA O CAMPO INFORMAÇÕES SOBRE O ATENDIMENTO.
+    Clicar em OK para o alerta de Registro
+    Fechar o modal de Histórico de Contato     
+    No primeiro aluno da pesquisa, clicar na ação "Determinação Legal"
+    Clicar no botão salvar para o alerta de Justificativa
+    Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR
+    Clicar em Ok no alerta de Justificativa
+    Fechar o modal de Justificativa
+    No primeiro aluno da pesquisa, clicar na ação "Pausar"
+    Clicar no botão salvar para o alerta de Justificativa    
+    Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR
+    Clicar em Ok no alerta de Justificativa
+    No primeiro aluno da pesquisa, clicar na ação "Cancelar Inscrição"
+    Clicar no botão salvar para o alerta de Justificativa    
+    Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR
+    Clicar em Ok no alerta de Justificativa
+
+Cenário 33: Funcionalidade Gestão de Pré-matrícula Secretaria
+    [Documentation]    Esse teste verifica se é possível consultar e
+    ...                registrar as solicitações realizadas no Portal 
+    [Tags]             Gestão de Pré-matrícula | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em campo Educando, informar "Teste Automação Qualidade"
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.
+    Clicar em OK no modal de alerta
+    Clicar no botão Limpar
+    Em campo Protocolo, informar "123456789"    
+    Clicar no Botão "Pesquisar"
+    Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.    
+    Clicar em OK no modal de alerta
+    Clicar no botão Limpar
+    Em Ciclo Destino, selecionar "Creche-Maternal"
+    Em Escola Destino, selecionar "EPG JOAO BALBINO FILHO"    
+    Em Situação, selecionar "AGUARDANDO ANÁLISE"    
+    Clicar no Botão "Pesquisar"
+    No primeiro aluno da pesquisa, clicar na ação "Registro de Atendimento"
+    Clicar em salvar o Registro de Atendimento     
+    Visualizar a mensagem: SELECIONE O TIPO DE CONTATO.    
+    Clicar em OK para o alerta de Registro    
+    Selecionar a opção "Contato com Sucesso"    
+    Clicar em salvar o Registro de Atendimento 
+    Visualizar a mensagem: PREENCHA O CAMPO INFORMAÇÕES SOBRE O ATENDIMENTO.
+    Clicar em OK para o alerta de Registro    
+    Selecionar a opção "Contato sem Sucesso"
+    Clicar em salvar o Registro de Atendimento 
+    Visualizar a mensagem: PREENCHA O CAMPO INFORMAÇÕES SOBRE O ATENDIMENTO.
+    Clicar em OK para o alerta de Registro
+    Fechar o modal de Histórico de Contato     
+    No primeiro aluno da pesquisa, clicar na ação "Cancelar Inscrição"
+    Clicar no botão salvar para o alerta de Justificativa    
+    Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR
+    Clicar em Ok no alerta de Justificativa
+    Fechar o modal de Justificativa
+    No primeiro aluno da pesquisa, clicar na ação "Oferta de Vagas"
+    Clicar no botão salvar para o alerta de Justificativa    
+    Visualizar a mensagem: PREENCHA OS CAMPOS OBRIGATÓRIOS PARA PROSSEGUIR
+    Clicar em Ok no alerta de Justificativa
+    Fechar o modal de Justificativa
+    Clicar no Check Box do aluno
+    Clicar no botão Alterar Escola 
+    Em alterar escola, selecionar "EPG ALFREDO VOLPI"
+    Clicar em Pesquisar
+    Clicar em Alterar    
+    Clicar no botão salvar para o alerta de Justificativa Alterar Escola    
+
+Cenário 34: Funcionalidade Credenciamento de Condutores
+    [Documentation]    Esse teste verifica se é possível cadastrar
+    ...                um credenciamento para um condutor 
+    [Tags]             Credenciamento de Condutores | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Credenciamento de Condutores"    
+    Clicar em Cadastrar Condutores    
+    Clicar no botão Salvar e Próximo 
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta    
+    Clicar no botão Cadastro de Pessoa Jurídica
+    Clicar em Salvar
+    Visualizar a mensagem: O CAMPO RAZÃO SOCIAL É OBRIGATÓRIO.    
+    Clicar em OK no modal de alerta 
+    Em Razão Social, informar "Teste Qa Automação"
+    Clicar em Salvar
+    Visualizar a mensagem: O CAMPO NOME FANTASIA É OBRIGATÓRIO.
+    Clicar em OK no modal de alerta 
+    Em Nome Fantasia, informar "Teste Qa Automação"
+    Clicar em Salvar
+    Visualizar a mensagem: O CAMPO TIPO CPF/CNPJ É OBRIGATÓRIO.
+    Clicar em OK no modal de alerta     
+    Em CNPJ, inserir um CNPJ válido
+    Clicar em Salvar    
+    Em Data da Inscrição do Condutor, selecionar o dia atual     
+    Clicar em selecionar 
+    Clicar no botão Salvar e Próximo
+    Clicar no botão Salvar e Próximo
+    Visualizar a mensagem: SELECIONE AO MENOS UMA ESCOLA
+    Clicar em OK no modal de alerta 
+    Em Nome da Escola, inserir "Volpi"
+    Clicar em Pesquisar
+    Clicar em "Inserir"
+    Clicar no botão Salvar e Próximo
+    Clicar no botão Salvar e Próximo
+    Visualizar a mensagem: SELECIONE OU ADICIONE UM VEÍCULO
+    Clicar em OK no modal de alerta 
+    Clicar no botão Adicionar Veículo    
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Em Marca, selecionar "FIAT"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Em Modelo, selecionar "Sprinter"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Em Ano de Fabricação, selecionar "2022"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Em Ano Modelo, selecionar "2022"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Em Código do Veículo, informar "12345"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Em Placa do Veículo informar "54321"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Em Prefixo do Veículo, informar "1"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Em Cor, selecionar "Rosa"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Em Tipo de Veículo, selecionar "Onibus"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta     
+    Em Combustivél, selecionar "Gasolina"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta   
+    Em Unidade de Medida, selecionar "Pessoas"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta   
+    Em Números de Eixos, informar "6"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta   
+    Em Estado, selecionar "São Paulo"
+    Em Cidade do Veículo, selecionar "Guarulhos"
+    Clicar no botão Adicionar Veículo
+    Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
+    Clicar em OK no modal de alerta 
+    Em Vagas Convencional, informar "30"
+    Clicar no botão Adicionar Veículo
+    Clicar no botão Salvar e Próximo
+    Clicar no botão Salvar e Próximo
+    Clicar no Botão Salvar e Fechar 
+    Visualizar a mensagem: NECESSÁRIO INFORMAR O NÚMERO DE CONTRATO    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
 
 
     

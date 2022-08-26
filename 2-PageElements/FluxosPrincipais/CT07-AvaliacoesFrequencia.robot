@@ -39,6 +39,7 @@ Na consulta de avaliações, em Etapa/Modalidade, selecionar "${etapaModalidade}
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("1").trigger('chosen:updated');
     Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("4").trigger('chosen:updated');
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("5").trigger('chosen:updated');
+    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 2º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("6").trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').trigger('change');
     Aguardar tela de carregamento
 
