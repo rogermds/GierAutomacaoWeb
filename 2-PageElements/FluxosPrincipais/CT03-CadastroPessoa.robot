@@ -20,7 +20,6 @@ ${campoCEP}                     txtCep
 ${campoNumeroCEP}               cphContent_ucEnderecos_txtNumero
 ${campoZona}                    cphContent_ucEnderecos_ddlZona
 ${botaoIncluir}                 cphContent_ucEnderecos_btnIncluirResidencial
-${botaoSalvar}                  cphContent_btnCadastrarPessoa
 ${botaoCadastroPessoaSim}       cphContent_Mensagem_Padrao_btnSim
 ${botaoCadastroPessoaNao}       cphContent_Mensagem_Padrao_btnNao
 
@@ -40,14 +39,14 @@ No campo Data de Nascimento, inserir a data "${data}"
 
 Clicar no checkbox Pessoa não possui correio eletrônico
     Execute JavaScript  document.getElementById("${naoPossuiEmail}").click();
-    Sleep  8
+    Aguardar tela de carregamento
 
 No campo Nacionalidade, selecionar "${nacionalidade}"
     Run Keyword If    '${nacionalidade}' == 'BRASILEIRA'  Execute JavaScript   $('#${campoNacionalidade}').val("1").trigger('chosen:updated');
     Run Keyword If    '${nacionalidade}' == 'BRASILEIRO NASCIDO NO EXTERIOR'  Execute JavaScript   $('#${campoNacionalidade}').val("2").trigger('chosen:updated');
     Run Keyword If    '${nacionalidade}' == 'ESTRANGEIRO'  Execute JavaScript   $('#${campoNacionalidade}').val("3").trigger('chosen:updated');
     Execute JavaScript   $('#${campoNacionalidade}').trigger('change');
-    Sleep  8
+    Aguardar tela de carregamento
 
 No campo UF Nascimento, selecionar "${UF}"
     Run Keyword If    '${UF}' == 'PE'  Execute JavaScript   $('#${campoUFNascimento}').val("1").trigger('chosen:updated');
@@ -104,7 +103,7 @@ No campo UF Nascimento, selecionar "${UF}"
     Run Keyword If    '${UF}' == 'AM'  Execute JavaScript   $('#${campoUFNascimento}').val("26").trigger('change');
     Run Keyword If    '${UF}' == 'PI'  Execute JavaScript   $('#${campoUFNascimento}').val("27").trigger('chosen:updated');
     Run Keyword If    '${UF}' == 'PI'  Execute JavaScript   $('#${campoUFNascimento}').val("27").trigger('change');
-    Sleep  8
+    Aguardar tela de carregamento
 
 No campo Cidade de Nascimento, selecionar "${cidade}"
     Run Keyword If    '${cidade}' == 'ADAMANTINA'  Execute JavaScript   $('#${campoCidade}').val("5323").trigger('chosen:updated');
@@ -115,7 +114,7 @@ No campo Cidade de Nascimento, selecionar "${cidade}"
     Run Keyword If    '${cidade}' == 'SAO ROQUE'  Execute JavaScript   $('#${campoCidade}').val("4913").trigger('chosen:updated');
     Run Keyword If    '${cidade}' == 'TREMEMBE'  Execute JavaScript   $('#${campoCidade}').val("4870").trigger('chosen:updated');
     Run Keyword If    '${cidade}' == 'UBATUBA'  Execute JavaScript   $('#${campoCidade}').val("4877").trigger('chosen:updated');
-    Sleep  8
+    Aguardar tela de carregamento
 
 No campo CPF, inserir um CPF válido
     ${CPF}  FakerLibrary.cpf
@@ -148,7 +147,8 @@ No campo CEP, inserir o CEP "${CEP}"
 
 No campo Número, inserir o número "${numeroCEP}"
     Input Text   ${campoNumeroCEP}    ${numeroCEP}
-    Sleep   8
+    Sleep    2
+    Aguardar tela de carregamento
     Input Text   ${campoNumeroCEP}    ${numeroCEP}
 
 No campo Zona, selecionar "${zona}"
@@ -157,15 +157,13 @@ No campo Zona, selecionar "${zona}"
 
 Clicar no botão Incluir
     Execute JavaScript  document.getElementById("${botaoIncluir}").click();
-    Sleep   5
-
-Clicar no botão Salvar
-    Execute JavaScript  document.getElementById("${botaoSalvar}").click();
-    Sleep   12
+    Aguardar tela de carregamento
+    Set Suite Variable  ${botaoSalvar}  cphContent_btnCadastrarPessoa
 
 No modal Deseja Cadastrar Outra Pessoa?, clicar em "${cadastroSimNao}"
     Run Keyword If    '${cadastroSimNao}' == 'Sim'  Execute JavaScript  document.getElementById("${botaoCadastroPessoaSim}").click();
     Run Keyword If    '${cadastroSimNao}' == 'Não'  Execute JavaScript  document.getElementById("${botaoCadastroPessoaNao}").click();
 
 Verificar se o sistema retorna a página Consultar Pessoa
+    Wait Until Page Contains    Consultar Pessoa
  

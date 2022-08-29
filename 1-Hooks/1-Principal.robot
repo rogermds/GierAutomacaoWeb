@@ -16,6 +16,7 @@ ${botaoDataHoje}                //button[@type='button'][contains(.,'Hoje')]
 ${campoObservacaoAta}           cphContent_txtObservacaoAtaConcelho
 ${botaoOKModal}                 cphContent_Mensagem_Padrao_btnOk
 ${botaoSimModal}                cphContent_Mensagem_Padrao_btnSim
+${botaoNaoModal}                cphContent_Mensagem_Padrao_btnNao
 ${AnoLetivo}                    ddlAnoLetivo
 ${campoNome}                    cphContent_txtNome
 ${campoNomeEducando}            cphContent_txtNomeAluno
@@ -42,7 +43,6 @@ Aguardar tela de carregamento
 
 Verificar se aparece o texto "${texto}"
     Wait Until Page Contains    ${texto}    20
-    Sleep   1
 
 Entrar no eixo "${nomeEixo}"
     Execute JavaScript  xPathResult = document.evaluate("//span[contains(.,'${nomeEixo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
@@ -102,12 +102,17 @@ Clicar em Sim no Modal
     Execute JavaScript  document.getElementById("${botaoSimModal}").click();
     Aguardar tela de carregamento
 
+Clicar em Não no Modal   
+    Wait Until Element Is Visible    ${botaoNaoModal}
+    Execute JavaScript  document.getElementById("${botaoNaoModal}").click();
+    Aguardar tela de carregamento
+
 Em nome, inserir "${nome}"
     Execute JavaScript  document.getElementById("${campoNome}").click();
     Input Text    ${campoNome}    ${nome}
 
 Em Nome do Educando, informar "${Nome}"
-    Execute JavaScript  document.getElementById("${campoNomeEducando}").click();
+    Execute JavaScript    document.getElementById("${campoNomeEducando}").click();
     Input Text    ${campoNomeEducando}    ${Nome}    
     
 Em Sexo, selecionar "${Sexo}"
@@ -134,6 +139,7 @@ Em Órgão Emissor, selecionar "${orgaoEmissor}"
 Em campo Data de Nascimento, informar "${Data}"
     Execute JavaScript  document.getElementById("${campoDataDeNascimento}").click();
     Input Text    ${campoDataDeNascimento}    ${Data}
+<<<<<<< HEAD
 
 
 
@@ -144,3 +150,5 @@ Em campo Data de Nascimento, informar "${Data}"
 
 
     
+=======
+>>>>>>> 96af94a61eed6e96d45c7cec914c0075d2685253
