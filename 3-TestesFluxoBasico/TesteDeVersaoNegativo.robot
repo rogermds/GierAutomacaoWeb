@@ -484,7 +484,7 @@ Cenário 22 - Funcionalidade Histórico Escolar
     Clicar em 'Incluir' para a Observação
     Visualizar a mensagem: CAMPO OBSERVAÇÕES GERAL DO ANO LETIVO OBRIGATÓRIO!
 
-Cenário 23 - Funcionalidade Histórico Escolar
+Cenário 23 - Funcionalidade Boletim Escolar
     [Documentation]    Esse teste verifica se é possível efetuar o acesso 
     ...                ao Boletim Escolar
     [Tags]             Boletim Escolar | Fluxo Negativo

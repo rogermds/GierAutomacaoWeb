@@ -58,9 +58,9 @@ Cenário 03-A: Funcionalidade Cadastro de Pessoa – Escola
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Pessoa"
-    Clicar em Cadastrar
+    Clicar no botão Cadastrar
     Verificar se aparece o texto "Cadastrar Pessoa"
-    No campo Nome, inserir o nome "Teste Cadastro Automacao "
+    No campo Nome, inserir o nome "Teste Cadastro Automacao"
     No campo Sexo, selecionar "MASCULINO"
     No campo Data de Nascimento, inserir a data "07/03/1996"
     Clicar no checkbox Pessoa não possui correio eletrônico
@@ -744,7 +744,9 @@ Cenário 10A: Funcionalidade Histórico Escolar - Infantil
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Histórico Escolar"
+
 
 Cenário 10B: Funcionalidade Histórico Escolar - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar o
@@ -755,7 +757,8 @@ Cenário 10B: Funcionalidade Histórico Escolar - Fundamental
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Histórico Escolar"
 
 Cenário 10C: Funcionalidade Histórico Escolar - EJA
     [Documentation]    Esse teste verifica se é possível consultar o
@@ -766,7 +769,8 @@ Cenário 10C: Funcionalidade Histórico Escolar - EJA
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Histórico Escolar"
     
 Cenário 11A: Funcionalidade Boletim Escolar - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o
@@ -780,7 +784,15 @@ Cenário 11A: Funcionalidade Boletim Escolar - Infantil
     Verificar se aparece o texto "Operação"
     Entrar no eixo "Gestão"
     Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar na funcionalidade "Boletim Geral de Educando (conceito)"
+    No filtro Ano Letivo, selecionar "2022"
+    No filtro Turma, selecionar "1A"
+    Entrar no módulo "Relatorios de Educandos"
+    Entrar na funcionalidade "Boletim Individual de Educando"
+    Clicar em Imprimir
+    Entrar no módulo "Relatorios de Educandos"
+    Entrar na funcionalidade "Boletim Individual de Educando M02"
+    Clicar em Imprimir
 
 
 Cenário 11B: Funcionalidade Boletim Escolar - Fundamental
@@ -795,7 +807,15 @@ Cenário 11B: Funcionalidade Boletim Escolar - Fundamental
     Verificar se aparece o texto "Operação"
     Entrar no eixo "Gestão"
     Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar na funcionalidade "Boletim Geral de Educando (conceito)"
+    No filtro Ano Letivo, selecionar "2022"
+    No filtro Turma, selecionar "1A"
+    Entrar no módulo "Relatorios de Educandos"
+    Entrar na funcionalidade "Boletim Individual de Educando"
+    Clicar em Imprimir
+    Entrar no módulo "Relatorios de Educandos"
+    Entrar na funcionalidade "Boletim Individual de Educando M02"
+    Clicar em Imprimir
 
 Cenário 11C: Funcionalidade Boletim Escolar - EJA
     [Documentation]    Esse teste verifica se é possível consultar o
@@ -809,21 +829,30 @@ Cenário 11C: Funcionalidade Boletim Escolar - EJA
     Verificar se aparece o texto "Operação"
     Entrar no eixo "Gestão"
     Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar na funcionalidade "Boletim Geral de Educando (conceito)"
+    No filtro Ano Letivo, selecionar "2022"
+    No filtro Turma, selecionar "1A"
+    Entrar no módulo "Relatorios de Educandos"
+    Entrar na funcionalidade "Boletim Individual de Educando"
+    Clicar em Imprimir
+    Entrar no módulo "Relatorios de Educandos"
+    Entrar na funcionalidade "Boletim Individual de Educando M02"
+    Clicar em Imprimir
 
 Cenário 12A: Funcionalidade Prontuário da Turma - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o
     ...                Prontuário da Turma e todas as suas ações
     ...                para a Etapa Infantil                 
-    [Tags]             Boletim Escolar - Infantil | Fluxo Positivo
+    [Tags]             Prontuário da Turma - Infantil | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
     Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar na funcionalidade "Prontuário da Turma"
+    Em Ano Letivo, clicar em "2022"
+    Em Turma, selecionar "1A"
+    Em Mês de Reunião, selecionar "Janeiro"
 
 Cenário 12B: Funcionalidade Prontuário da Turma - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar o
@@ -834,10 +863,11 @@ Cenário 12B: Funcionalidade Prontuário da Turma - Fundamental
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
     Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar na funcionalidade "Prontuário da Turma"
+    Em Ano Letivo, clicar em "2022"
+    Em Turma, selecionar "1A"
+    Em Mês de Reunião, selecionar "Janeiro"
 
 Cenário 12C: Funcionalidade Prontuário da Turma - EJA
     [Documentation]    Esse teste verifica se é possível consultar o
@@ -848,52 +878,54 @@ Cenário 12C: Funcionalidade Prontuário da Turma - EJA
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
     Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar na funcionalidade "Prontuário da Turma"
+    Em Ano Letivo, clicar em "2022"
+    Em Turma, selecionar "1A"
+    Em Mês de Reunião, selecionar "Janeiro"
 
 Cenário 13A: Funcionalidade Prontuário do Aluno - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o
-    ...                Prontuário da Turma e todas as suas ações
+    ...                Prontuário do Aluno e todas as suas ações
     ...                para a Etapa Infantil                 
     [Tags]             Prontuário do Aluno - Infantil | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
     Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar na funcionalidade "Prontuário do Educando"
+    Em Etapa/Modalidade no Prontuário, selecionar "ENSINO FUNDAMENTAL"    
+    Em campo turma no Prontuário, selecionar "1B"    
+
 
 Cenário 13B: Funcionalidade Prontuário do Aluno - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar o
-    ...                Prontuário da Turma e todas as suas ações
+    ...                Prontuário do Aluno e todas as suas ações
     ...                para a Etapa Fundamental                 
     [Tags]             Prontuário do Aluno - Fundamental | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
     Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar na funcionalidade "Prontuário do Educando"
+    Em Etapa/Modalidade no Prontuário, selecionar "ENSINO FUNDAMENTAL"    
+    Em campo turma no Prontuário, selecionar "1B"  
 
 Cenário 13C: Funcionalidade Prontuário do Aluno - EJA
     [Documentation]    Esse teste verifica se é possível consultar o
-    ...                Prontuário da Turma e todas as suas ações
+    ...                Prontuário do Aluno e todas as suas ações
     ...                para a Etapa EJA                 
     [Tags]             Prontuário do Aluno - EJA | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
     Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar na funcionalidade "Prontuário do Educando"
+    Em Etapa/Modalidade no Prontuário, selecionar "ENSINO FUNDAMENTAL"    
+    Em campo turma no Prontuário, selecionar "1B"  
     
 Cenário 14A: Funcionalidade Matricula - Infantil
     [Documentation]    Esse teste verifica se é possível efetuar a
@@ -902,11 +934,48 @@ Cenário 14A: Funcionalidade Matricula - Infantil
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Justificativas da Pré-matrícula"
+    Clicar em Cadastrar justificativas
+    ----------        
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
+    Clicar em Cadastrar Layout
+    Em Descrição do Processo, inserir "Descrição Teste Automação"
+    Clicar em Salvar e Próximo no passo 1
+    Em Ano Letivo, selecionar o Ano Letivo Seguinte
+    Em Banner Web clicar em Inserir 
+    Visualizar a mensagem: SELECIONE O ARQUIVO ANTES DE INCLUI-LO.
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em inserir Documento Web, inserir o arquivo "Crianças1.jpg"
+    Em Aplicar no Portal Web, inserir "00000000"        
+    Em Banner Web clicar em Inserir     
+    Em Aplicar no Portal Web, inserir a data do dia atual        
+    Em Banner Web clicar em Inserir 
+    Em inserir Documento móvel, inserir o arquivo "Crianças1.jpg"
+    Em Aplicar no Portal móvel, inserir "00000000"        
+    Em Banner móvel clicar em Inserir     
+    Em Aplicar no Portal móvel, inserir a data do dia atual        
+    Em Banner Web clicar em Inserir 
+    Clicar em Salvar e Próximo no passo 1
+    Clicar em Salvar e Próximo no passo 2
+    Clicar em Salvar e Próximo no passo 3
+    Clicar em Salvar e Próximo no passo 4
+    Clicar em inserir no passo 5
+    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
+    Clicar em 'Consultar Solicitação'
+    Em Nacionalidade, selecionar "Brasileiro"
+    Em Protocolo, informar "123456789"
+    Em Data de Nascimento, informar "10/01/1965"
+    Em Nacionalidade, selecionar "Brasileiro"
+    Em Protocolo, informar "123456789"
+    Em CPF, inserir "364.882.650-67"
+    Em Data de Nascimento, informar "10/01/1965"
+    Clicar em Ok no alerta do Portal
+    FAZER GESTÃO DE PRÉ MATRICULA
 
 Cenário 14B: Funcionalidade Matricula - Fundamental
     [Documentation]    Esse teste verifica se é possível efetuar a
@@ -915,11 +984,48 @@ Cenário 14B: Funcionalidade Matricula - Fundamental
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Justificativas da Pré-matrícula"
+    Clicar em Cadastrar justificativas
+    ----------        
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
+    Clicar em Cadastrar Layout
+    Em Descrição do Processo, inserir "Descrição Teste Automação"
+    Clicar em Salvar e Próximo no passo 1
+    Em Ano Letivo, selecionar o Ano Letivo Seguinte
+    Em Banner Web clicar em Inserir 
+    Visualizar a mensagem: SELECIONE O ARQUIVO ANTES DE INCLUI-LO.
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em inserir Documento Web, inserir o arquivo "Crianças1.jpg"
+    Em Aplicar no Portal Web, inserir "00000000"        
+    Em Banner Web clicar em Inserir     
+    Em Aplicar no Portal Web, inserir a data do dia atual        
+    Em Banner Web clicar em Inserir 
+    Em inserir Documento móvel, inserir o arquivo "Crianças1.jpg"
+    Em Aplicar no Portal móvel, inserir "00000000"        
+    Em Banner móvel clicar em Inserir     
+    Em Aplicar no Portal móvel, inserir a data do dia atual        
+    Em Banner Web clicar em Inserir 
+    Clicar em Salvar e Próximo no passo 1
+    Clicar em Salvar e Próximo no passo 2
+    Clicar em Salvar e Próximo no passo 3
+    Clicar em Salvar e Próximo no passo 4
+    Clicar em inserir no passo 5
+    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
+    Clicar em 'Consultar Solicitação'
+    Em Nacionalidade, selecionar "Brasileiro"
+    Em Protocolo, informar "123456789"
+    Em Data de Nascimento, informar "10/01/1965"
+    Em Nacionalidade, selecionar "Brasileiro"
+    Em Protocolo, informar "123456789"
+    Em CPF, inserir "364.882.650-67"
+    Em Data de Nascimento, informar "10/01/1965"
+    Clicar em Ok no alerta do Portal
+    FAZER GESTÃO DE PRÉ MATRICULA
 
 Cenário 14C: Funcionalidade Matricula - EJA
     [Documentation]    Esse teste verifica se é possível efetuar a
@@ -928,11 +1034,48 @@ Cenário 14C: Funcionalidade Matricula - EJA
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Justificativas da Pré-matrícula"
+    Clicar em Cadastrar justificativas
+    ----------        
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
+    Clicar em Cadastrar Layout
+    Em Descrição do Processo, inserir "Descrição Teste Automação"
+    Clicar em Salvar e Próximo no passo 1
+    Em Ano Letivo, selecionar o Ano Letivo Seguinte
+    Em Banner Web clicar em Inserir 
+    Visualizar a mensagem: SELECIONE O ARQUIVO ANTES DE INCLUI-LO.
+    Clicar em Ok no modal de alerta de campo obrigatório
+    Em inserir Documento Web, inserir o arquivo "Crianças1.jpg"
+    Em Aplicar no Portal Web, inserir "00000000"        
+    Em Banner Web clicar em Inserir     
+    Em Aplicar no Portal Web, inserir a data do dia atual        
+    Em Banner Web clicar em Inserir 
+    Em inserir Documento móvel, inserir o arquivo "Crianças1.jpg"
+    Em Aplicar no Portal móvel, inserir "00000000"        
+    Em Banner móvel clicar em Inserir     
+    Em Aplicar no Portal móvel, inserir a data do dia atual        
+    Em Banner Web clicar em Inserir 
+    Clicar em Salvar e Próximo no passo 1
+    Clicar em Salvar e Próximo no passo 2
+    Clicar em Salvar e Próximo no passo 3
+    Clicar em Salvar e Próximo no passo 4
+    Clicar em inserir no passo 5
+    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
+    Clicar em 'Consultar Solicitação'
+    Em Nacionalidade, selecionar "Brasileiro"
+    Em Protocolo, informar "123456789"
+    Em Data de Nascimento, informar "10/01/1965"
+    Em Nacionalidade, selecionar "Brasileiro"
+    Em Protocolo, informar "123456789"
+    Em CPF, inserir "364.882.650-67"
+    Em Data de Nascimento, informar "10/01/1965"
+    Clicar em Ok no alerta do Portal
+    FAZER GESTÃO DE PRÉ MATRICULA
 
 Cenário 15A: Funcionalidade Transportes - Infantil
     [Documentation]    Esse teste verifica se é possível solicitar
@@ -941,11 +1084,38 @@ Cenário 15A: Funcionalidade Transportes - Infantil
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Credenciamento de Condutores"    
+    Clicar em Cadastrar Condutores 
+    -------------
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Rotas"
+    Clicar no botão Cadastrar
+    Em Tipo de Rota, selecionar "Centro"    
+    Em Nome de Escola, inserir "Volpi"
+    ---------
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade de transporte "Viagens"    
+    Clicar no botão Cadastrar
+    -----------------
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Gestão de Solicitação de Transporte" 
+    -------------------
+    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Solicitação de Transporte" 
+    -----------------
 
 Cenário 15B: Funcionalidade Transportes - Fundamental
     [Documentation]    Esse teste verifica se é possível solicitar
@@ -954,11 +1124,38 @@ Cenário 15B: Funcionalidade Transportes - Fundamental
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Credenciamento de Condutores"    
+    Clicar em Cadastrar Condutores 
+    -------------
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Rotas"
+    Clicar no botão Cadastrar
+    Em Tipo de Rota, selecionar "Centro"    
+    Em Nome de Escola, inserir "Volpi"
+    ---------
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade de transporte "Viagens"    
+    Clicar no botão Cadastrar
+    -----------------
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Gestão de Solicitação de Transporte" 
+    -------------------
+    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Solicitação de Transporte" 
+    -----------------
 
 Cenário 15C: Funcionalidade Transportes - EJA
     [Documentation]    Esse teste verifica se é possível solicitar
@@ -967,11 +1164,38 @@ Cenário 15C: Funcionalidade Transportes - EJA
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Credenciamento de Condutores"    
+    Clicar em Cadastrar Condutores 
+    -------------
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Rotas"
+    Clicar no botão Cadastrar
+    Em Tipo de Rota, selecionar "Centro"    
+    Em Nome de Escola, inserir "Volpi"
+    ---------
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade de transporte "Viagens"    
+    Clicar no botão Cadastrar
+    -----------------
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Gestão de Solicitação de Transporte" 
+    -------------------
+    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Solicitação de Transporte" 
+    -----------------
 
 Cenário 16A: Funcionalidade Avaliações Educacionais - Infantil
     [Documentation]    Esse teste verifica se é possível agendar e 
@@ -980,11 +1204,25 @@ Cenário 16A: Funcionalidade Avaliações Educacionais - Infantil
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Aprendizagem"
+    Visualizar o Titulo Consulta de Descrição de Aprendizagem    
+    Clicar no botão Cadastrar  
+    -----------
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Grupos de Pergunta"
+    Visualizar o Titulo Consultar Grupos de Pergunta   
+    Clicar no botão Cadastrar  
+    ----------
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Banco de Questões" 
+    Clicar no botão Cadastrar  
+    ----------
 
 Cenário 16B: Funcionalidade Avaliações Educacionais - Fundamental
     [Documentation]    Esse teste verifica se é possível agendar e 
@@ -993,11 +1231,25 @@ Cenário 16B: Funcionalidade Avaliações Educacionais - Fundamental
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Aprendizagem"
+    Visualizar o Titulo Consulta de Descrição de Aprendizagem    
+    Clicar no botão Cadastrar  
+    -----------
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Grupos de Pergunta"
+    Visualizar o Titulo Consultar Grupos de Pergunta   
+    Clicar no botão Cadastrar  
+    ----------
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Banco de Questões" 
+    Clicar no botão Cadastrar  
+    ----------
 
 Cenário 16C: Funcionalidade Avaliações Educacionais - EJA
     [Documentation]    Esse teste verifica se é possível agendar e 
@@ -1006,8 +1258,22 @@ Cenário 16C: Funcionalidade Avaliações Educacionais - EJA
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Gestão"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Ata de Conselho Final - Turma"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Aprendizagem"
+    Visualizar o Titulo Consulta de Descrição de Aprendizagem    
+    Clicar no botão Cadastrar  
+    -----------
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Grupos de Pergunta"
+    Visualizar o Titulo Consultar Grupos de Pergunta   
+    Clicar no botão Cadastrar  
+    ----------
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Banco de Questões" 
+    Clicar no botão Cadastrar  
+    ----------
