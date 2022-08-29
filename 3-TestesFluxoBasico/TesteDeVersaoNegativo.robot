@@ -40,6 +40,8 @@ Resource         ../2-PageElements/FluxosAlternativos/CT38-SolicitacaoTransporte
 Resource         ../2-PageElements/FluxosAlternativos/CT39-Apredizagem.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT40-GruposDePergunta.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT41-BancoDeQuestoes.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT42-AvaliacaoEducacional.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT43-AvaliacaoEducacional2.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -51,7 +53,7 @@ Cenário 01 - Acesso ao Sistema – Tela de Login Cenário A
     ...    Com o usuário e senha especificados
     [Tags]    Seleção de Estrutura | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"	
-    Entrar com as credenciais "41316137864" e "100200"	
+    Entrar com as credenciais "02867439817" e "100200"	
     Verificar se o sistema exibe a mensagem: Login e/ou senha inválido(s)
 
 Cenário 02 - Acesso ao Sistema – Tela de Login B 	
@@ -1240,8 +1242,8 @@ Cenário 41: Funcionalidade Banco de Questões
     [Documentation]    Esse teste verifica se é possível cadastrar
     ...                um Banco de Questões
     [Tags]             Banco de Questões | Fluxo Negativo
-    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
-    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -1268,9 +1270,91 @@ Cenário 41: Funcionalidade Banco de Questões
     Visualizar a mensagem: INFORME O ANO/CICLO.
     Clicar em OK no modal de alerta 
 
+Cenário 42: Avaliação Educacional 
+    [Documentation]    Esse teste verifica se é possível realizar a prova
+    ...                Educacional sem o preenchimento de todas as respostas 
+    [Tags]             Banco de Questões | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "4282670" e "4282670"
+    Clicar na Prova "Prova de Educação Qa"
+    Visualizar a Questão 1 de 18       
+    Clicar no Botão Avançar 
+    Visualizar a Questão 2 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 3 de 18
+    Clicar no Botão Avançar
+    Visualizar a Questão 4 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 5 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 6 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 7 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 8 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 9 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 10 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 11 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 12 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 13 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 14 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 15 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 16 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 17 de 18
+    Clicar no Botão Avançar 
+    Visualizar a Questão 18 de 18
+    Visualizar o texto: Perguntas não respondidas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+    
+
+Cenário 43: Avaliação Educacional 
+    [Documentation]    Esse teste verifica se é possível realizar a prova
+    ...                Educacional com o preenchimento parcial das perguntas
+    [Tags]             Banco de Questões | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "4282671" e "4282671"
+    Clicar na Prova "Prova de Educação Qa"
+    Visualizar a Questão 1 de 18       
+    Clicar na Resposta "A"
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Visualizar a Questão 3 de 18  
+    Clicar na Resposta "B"
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Visualizar a Questão 6 de 18  
+    Clicar na Resposta "C"
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Visualizar a Questão 10 de 18  
+    Clicar na Resposta "D"
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Clicar no Botão Avançar 
+    Visualizar o texto: Perguntas não respondidas: 2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18    
+    Visualizar o botão Salvar desabilitado 
 
 
 
+
+
+    
 
 
 
