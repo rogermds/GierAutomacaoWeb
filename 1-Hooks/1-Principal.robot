@@ -139,7 +139,6 @@ Em Órgão Emissor, selecionar "${orgaoEmissor}"
 Em campo Data de Nascimento, informar "${Data}"
     Execute JavaScript  document.getElementById("${campoDataDeNascimento}").click();
     Input Text    ${campoDataDeNascimento}    ${Data}
-<<<<<<< HEAD
 
 
 
