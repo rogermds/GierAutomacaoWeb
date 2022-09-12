@@ -5,6 +5,8 @@ Library     SeleniumLibrary
 *** Variables ***
 
 
+
+
 *** Keywords ***
 Clicar no Processo de Demandas Contínuo
 Clicar no botão Solicitar Vaga 
