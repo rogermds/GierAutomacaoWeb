@@ -8,7 +8,6 @@ ${campoSenha}                      txtSenha1
 ${botaoLogin}                      btnAcessar
 
 *** Keywords ***
-
 Entrar com as credenciais "${login}" e "${senha}" 
     Wait Until Element Is Visible   ${tituloLogin}   timeout=30
     Input Text  ${campoLogin}  ${login}

@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Library    FakerLibrary    locale=pt-BR
 
 *** Variable ***
-${botaoCadastrar}               cphContent_btnCad
+${botaoCadastrar}               cphContent_btnCad   
 ${botaoPesquisar}               cphContent_btnPesquisar
 ${botaoEditar}                  cphContent_btnEditar
 ${botaoSalvar}                  cphContent_btnSalvar
@@ -17,6 +17,7 @@ ${campoObservacaoAta}           cphContent_txtObservacaoAtaConcelho
 ${botaoOKModal}                 cphContent_Mensagem_Padrao_btnOk
 ${botaoSimModal}                cphContent_Mensagem_Padrao_btnSim
 ${botaoNaoModal}                cphContent_Mensagem_Padrao_btnNao
+${botaoSalvarAlteracoes}        cphContent_btnSalvarAlteracoes
 ${AnoLetivo}                    ddlAnoLetivo
 ${campoNome}                    cphContent_txtNome
 ${campoNomeEducando}            cphContent_txtNomeAluno
@@ -24,7 +25,6 @@ ${campoSexo}                    cphContent_ddlSexo
 ${campoIdentidade}              cphContent_txtIdentidade
 ${campoOrgaoEmissor}            cphContent_ddlOrgaoEmissor
 ${campoDataDeNascimento}        cphContent_txtDataNascimento
-
 
 *** Keywords ***
 Abrir o navegador
@@ -45,12 +45,17 @@ Verificar se aparece o texto "${texto}"
     Wait Until Page Contains    ${texto}    20
 
 Entrar no eixo "${nomeEixo}"
-    Execute JavaScript  xPathResult = document.evaluate("//span[contains(.,'${nomeEixo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult = document.evaluate("//div[@class='divEixo'][contains(.,'${nomeEixo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click()  
 
 Entrar no módulo "${nomeModulo}"
-    Execute JavaScript  xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click()  
+    IF    '${nomeModulo}' == 'Gestão'
+        Execute JavaScript  xPathResult = document.evaluate("//span[contains(@id,'7')][contains(.,'Gestão')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click()  
+    ELSE
+        Execute JavaScript  xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click()  
+    END
 
 Entrar na funcionalidade "${funcionalidade}"  
     Execute JavaScript  xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
@@ -139,16 +144,8 @@ Em Órgão Emissor, selecionar "${orgaoEmissor}"
 Em campo Data de Nascimento, informar "${Data}"
     Execute JavaScript  document.getElementById("${campoDataDeNascimento}").click();
     Input Text    ${campoDataDeNascimento}    ${Data}
-<<<<<<< HEAD
 
-
-
-    
-
-
-    
-
-
-    
-=======
->>>>>>> 96af94a61eed6e96d45c7cec914c0075d2685253
+Clicar em Salvar Alterações
+    Wait Until Element Is Visible    ${botaoSalvarAlteracoes}
+    Execute JavaScript  document.getElementById("${botaoSalvarAlteracoes}").click(); 
+    Aguardar tela de carregamento

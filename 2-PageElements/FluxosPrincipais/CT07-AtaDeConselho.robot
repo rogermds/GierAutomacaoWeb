@@ -27,7 +27,7 @@ Na tela de Ata de Conselho, em Turma, selecionar "${turma}"
     Run Keyword If    '${turma}' == '3A'  Execute JavaScript   $('#${campoTurmaAta}').val("110822").trigger('chosen:updated');
     Run Keyword If    '${turma}' == '3B'  Execute JavaScript   $('#${campoTurmaAta}').val("110825").trigger('chosen:updated');
     Run Keyword If    '${turma}' == '2A'  Execute JavaScript   $('#${campoTurmaAta}').val("110788").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == 'CI A (1º Semestre)'  Execute JavaScript   $('#${campoTurmaAta}').val("113554").trigger('chosen:updated');
+    Run Keyword If    '${turma}' == 'CII B'  Execute JavaScript   $('#${campoTurmaAta}').val("113555").trigger('chosen:updated');
     Execute JavaScript   $('#${campoTurmaAta}').trigger('change');
     Aguardar tela de carregamento
 
@@ -52,15 +52,21 @@ Verificar se a página foi redirecionada para Prontuário do Educando
 Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
     Execute JavaScript  document.getElementById("${botaoRegistrarObservacoes}").click();
 
-Na tela de Ata de Conselho, em Registro das Observações, inserir uma observação
+Na tela de Ata de Conselho, em Registro das Observações, inserir a observação "${observacao}"
     Wait Until Element Is Visible    ${campoObservacaoAta}
     Set Suite Variable      ${botaoSalvar}           cphContent_btSalvar
-    Set Suite Variable      ${textoObservacaoAta}    TESTE DE INSERÇÃO DE OBSERVAÇÃO
+    Set Suite Variable      ${textoObservacaoAta}    ${observacao}
+    Clear Element Text    ${campoObservacaoAta}
     Input Text    ${campoObservacaoAta}    ${textoObservacaoAta}
+    Sleep    1
 
 Na tela de Ata de Conselho, em Registro de Observações, verificar se a observação foi incluída
     Wait Until Element Is Visible    ${campoObservacaoAta}
     Element Text Should Be    ${campoObservacaoAta}    ${textoObservacaoAta}
+
+Na tela de Ata de Conselho, em Observação, inserir "${observacaoAta}"
+    Set Suite Variable    ${observacaoAta}
+    Input Text    cphContent_txtObservacao    ${observacaoAta}
 
 Na tela de Ata de Conselho, clicar em Finalizar Conselho
     Aguardar tela de carregamento
@@ -70,6 +76,9 @@ Na tela de Ata de Conselho, clicar em Finalizar Conselho
 Na tela de Ata de Conselho, verificar se o botão Reabrir Conselho é exibido
     Aguardar tela de carregamento
     Wait Until Element Is Visible    ${botaoReabrirConselhoAta}
+
+Na tela de Ata de Conselho, em Observação, verificar se a observação foi salva
+    Element Should Contain    cphContent_txtObservacao    ${observacaoAta}
 
 Na tela de Ata de Conselho, clicar no botão Reabrir Conselho
     Execute JavaScript  document.getElementById("${botaoReabrirConselhoAta}").click();
