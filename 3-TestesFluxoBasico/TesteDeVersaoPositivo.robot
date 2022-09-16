@@ -10,10 +10,11 @@ Resource         ../2-PageElements/FluxosPrincipais/CT07-AtaDeConselho.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT08-HistoricoEscolar.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT09-BoletimEscolar.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT10-ProntuarioDaTurma.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT11-ProntuarioDoAluno.robot
+Resource         ../2-PageElements/FluxosPrincipais/CT11-ProntuarioDoEducando.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT12-Matricula.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT13-Transportes.robot
 Resource         ../2-PageElements/FluxosPrincipais/CT14-AvaliacoesEducacionais.robot
+Resource    ../2-PageElements/FluxosAlternativos/CT32-GestaoPreMatriculaEscola.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -1021,7 +1022,8 @@ Cenário 22: Funcionalidade Boletim Escolar - EJA
     Em Boletim Individual de Educando M02, verificar se o Boletim foi emitido corretamente
     Em Boletim Individual de Educando M02, fechar o Boletim Escolar
 
-Cenário 23: Funcionalidade Prontuário da Turma - Infantil
+## ALTERAR PARA O MÊS SEGUINTE CASO O TESTE FALHE. VERIFICAR O MÊS JÁ ESTÁ FECHADO
+Cenário 23: Funcionalidade Prontuário da Turma - InfantilCenário 23: Funcionalidade Prontuário da Turma - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário da Turma 
     ...                e todas as suas ações para a Etapa Infantil                   
     [Tags]             Prontuário da Turma - Infantil | Fluxo Positivo
@@ -1032,15 +1034,18 @@ Cenário 23: Funcionalidade Prontuário da Turma - Infantil
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Prontuário da Turma"
     Em Prontuário da Turma, em Ano Letivo, selecionar "2022"
-    Em Prontuário da Turma, em Turma, selecionar "EII A"
+    Em Prontuário da Turma, em Turma, selecionar "EII B"
     Clicar em Pesquisar
-    Em Prontuário da Turma, em Mês de Reunião, selecionar "Março"
+    Em Prontuário da Turma, em Mês de Reunião, selecionar "Maio"
     Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
+    Em Prontuário da Turma, em Impressões do Conselho de Turma, inserir "TESTE DE IMPRESSÃO DO CONSELHO DE TURMA"
     Clicar em Salvar
     Em Prontuário da Turma, clicar em OK no Modal
     Em Prontuário da Turma, clicar em Finalizar Ata do Conselho
+    Em Prontuário da Turma, em Impressões do Conselho de Turma, verificar se o texto foi salvo
+    Em Prontuário da Turma, em Impressões do Conselho de Turma, verificar se campo não está mais editável
     Em Prontuário da Turma, clicar em OK no Modal
-    Em Prontuário da Turma, em Impressões do Conselho de Turma, verificar se o botão foi desativado
+    Em Prontuário da Turma, verificar se o botão Finalizar Ata do Conselho foi desativado
 
 Cenário 24: Funcionalidade Prontuário da Turma - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário da Turma 
@@ -1055,13 +1060,16 @@ Cenário 24: Funcionalidade Prontuário da Turma - Fundamental
     Em Prontuário da Turma, em Ano Letivo, selecionar "2022"
     Em Prontuário da Turma, em Turma, selecionar "5A"
     Clicar em Pesquisar
-    Em Prontuário da Turma, em Mês de Reunião, selecionar "Março"
+    Em Prontuário da Turma, em Mês de Reunião, selecionar "Maio"
     Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
+    Em Prontuário da Turma, em Impressões do Conselho de Turma, inserir "TESTE DE IMPRESSÃO DO CONSELHO DE TURMA"
     Clicar em Salvar
     Em Prontuário da Turma, clicar em OK no Modal
     Em Prontuário da Turma, clicar em Finalizar Ata do Conselho
+    Em Prontuário da Turma, em Impressões do Conselho de Turma, verificar se o texto foi salvo
+    Em Prontuário da Turma, em Impressões do Conselho de Turma, verificar se campo não está mais editável
     Em Prontuário da Turma, clicar em OK no Modal
-    Em Prontuário da Turma, em Impressões do Conselho de Turma, verificar se o botão foi desativado
+    Em Prontuário da Turma, verificar se o botão Finalizar Ata do Conselho foi desativado
 
 Cenário 25: Funcionalidade Prontuário da Turma - EJA
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário da Turma 
@@ -1076,74 +1084,248 @@ Cenário 25: Funcionalidade Prontuário da Turma - EJA
     Em Prontuário da Turma, em Ano Letivo, selecionar "2022"
     Em Prontuário da Turma, em Turma, selecionar "CII A (1º Semestre)"
     Clicar em Pesquisar
-    Em Prontuário da Turma, em Mês de Reunião, selecionar "Março"
+    Em Prontuário da Turma, em Mês de Reunião, selecionar "Abril"
     Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
+    Em Prontuário da Turma, em Impressões do Conselho de Turma, inserir "TESTE DE IMPRESSÃO DO CONSELHO DE TURMA"
     Clicar em Salvar
     Em Prontuário da Turma, clicar em OK no Modal
     Em Prontuário da Turma, clicar em Finalizar Ata do Conselho
+    Em Prontuário da Turma, em Impressões do Conselho de Turma, verificar se o texto foi salvo
+    Em Prontuário da Turma, em Impressões do Conselho de Turma, verificar se campo não está mais editável
     Em Prontuário da Turma, clicar em OK no Modal
-    Em Prontuário da Turma, em Impressões do Conselho de Turma, verificar se o botão foi desativado
+    Em Prontuário da Turma, verificar se o botão Finalizar Ata do Conselho foi desativado
 
-Cenário 26: Funcionalidade Prontuário do Aluno - Infantil
-    [Documentation]    Esse teste verifica se é possível consultar o Prontuário do Aluno 
+#### NECESSÁRIO REVISAR
+Cenário 26: Funcionalidade Prontuário do Educando - Infantil
+    [Documentation]    Esse teste verifica se é possível consultar o Prontuário do Educando 
     ...                e todas as suas ações para a Etapa Infantil                   
-    [Tags]             Prontuário da Turma - Infantil | Fluxo Positivo
+    [Tags]             Prontuário do Educando - Infantil | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Prontuário do Educando"
-    Em Prontuário do Educando, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"    
+    Em Prontuário do Educando, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
     Em Prontuário do Educando, no campo turma no Prontuário, selecionar "EII A"    
-    Em Prontuário do Educando, em Educando, selecionar "AGHATA SOPHIA GOMES PEREIRA"
+    Em Prontuário do Educando, em Educando, selecionar "ALLAN KOJO DE ASSIS GOES"
     Em Prontuário do Educando, clicar em Pesquisar
     Em Prontuário do Educando, clicar em Tipo de Compensação
     Em Prontuário do Educando, clicar em Registrar Atestado
-    Em Tipo de A 
+    Em Atestado de Educandos, em Tipo de Atestado, selecionar "MÉDICO"
+    Em Atestado de Educandos, em Data Inicial, selecionar o dia atual
+    Em Atestado de Educandos, em Data Final, selecionar o dia atual
+    Em Atestado de Educandos, em Motivo, inserir "TESTE DE INCLUSÃO DE MOTIVO MÉDICO"
+    Em Atestado de Educandos, em Nº Registro Profissional, inserir "123456"
+    Em Atestado de Educandos, em Nome do Profissional, inserir "TESTE NOME MÉDICO"
+    Em Atestado de Educandos, em Inserir Documento, inserir um arquivo teste
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Clicar em Voltar
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, verificar se o registro foi incluído
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Ações
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Compensar Ausencia
+    Clicar em OK no Modal
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Ações
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Editar Compensação
+    Em Atestado de Educandos, em Motivo, inserir "TESTE DE EDIÇÃO DE MOTIVO MÉDICO"
+    Em Atestado de Educandos, em Inserir Documento, inserir um arquivo teste
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Clicar em Voltar
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Ações
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Excluir Compensação
+    Clicar em OK no Modal
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, verificar se o registro foi excluído
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Prontuário do Educando, clicar em Finalizar
+    Clicar em OK no Modal
+    Em Prontuário do Educando, clicar em Reabrir Relatório
+    Clicar em OK no Modal
+    Em Prontuário do Educando, verificar se o botão Finalizar está visível
+    Em Prontuário do Educando, clicar em Mapa de Turma
+    Verificar se aparece o texto "Mapa da Turma"
 
-
-
-
-Cenário 27: Funcionalidade Prontuário do Aluno - Fundamental
-    [Documentation]    Esse teste verifica se é possível consultar o
-    ...                Prontuário do Aluno e todas as suas ações
-    ...                para a Etapa Fundamental                 
-    [Tags]             Prontuário do Aluno - Fundamental | Fluxo Positivo
+Cenário 27: Funcionalidade Prontuário do Educando - Fundamental
+    [Documentation]    Esse teste verifica se é possível consultar o Prontuário do Educando 
+    ...                e todas as suas ações para a Etapa Fundamental                   
+    [Tags]             Prontuário da Turma - Fundamental | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Prontuário do Educando"
-    Em Etapa/Modalidade no Prontuário, selecionar "ENSINO FUNDAMENTAL"    
-    Em campo turma no Prontuário, selecionar "1B"  
+    Em Prontuário do Educando, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Prontuário do Educando, no campo turma no Prontuário, selecionar "5A"    
+    Em Prontuário do Educando, em Educando, selecionar "BEATRIZ PEREIRA DA SILVA"
+    Em Prontuário do Educando, clicar em Pesquisar
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Prontuário do Educando, clicar em Registrar Atestado
+    Em Atestado de Educandos, em Tipo de Atestado, selecionar "MÉDICO"
+    Em Atestado de Educandos, em Data Inicial, selecionar o dia atual
+    Em Atestado de Educandos, em Data Final, selecionar o dia atual
+    Em Atestado de Educandos, em Motivo, inserir "TESTE DE INCLUSÃO DE MOTIVO MÉDICO"
+    Em Atestado de Educandos, em Nº Registro Profissional, inserir "123456"
+    Em Atestado de Educandos, em Nome do Profissional, inserir "TESTE NOME MÉDICO"
+    Em Atestado de Educandos, em Inserir Documento, inserir um arquivo teste
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Clicar em Voltar
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, verificar se o registro foi incluído
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Ações
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Compensar Ausencia
+    Clicar em OK no Modal
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Ações
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Editar Compensação
+    Em Atestado de Educandos, em Motivo, inserir "TESTE DE EDIÇÃO DE MOTIVO MÉDICO"
+    Em Atestado de Educandos, em Inserir Documento, inserir um arquivo teste
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Clicar em Voltar
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Ações
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Excluir Compensação
+    Clicar em OK no Modal
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, verificar se o registro foi excluído
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Prontuário do Educando, em Parecer Final, selecionar "PROMOVIDO(A)"
+    Em Prontuário do Educando, em Qualificação do Parecer Final, selecionar "xxxxx"
+    Em Prontuário do Educando, clicar em Finalizar
+    Clicar em OK no Modal
+    Em Prontuário do Educando, clicar em Reabrir Relatório
+    Clicar em OK no Modal
+    Em Prontuário do Educando, verificar se o botão Finalizar está visível
+    Em Prontuário do Educando, clicar em Mapa de Turma
+    Verificar se aparece o texto "Mapa da Turma"
 
-Cenário 28: Funcionalidade Prontuário do Aluno - EJA
-    [Documentation]    Esse teste verifica se é possível consultar o
-    ...                Prontuário do Aluno e todas as suas ações
-    ...                para a Etapa EJA                 
-    [Tags]             Prontuário do Aluno - EJA | Fluxo Positivo
+Cenário 28: Funcionalidade Prontuário do Educando - EJA
+    [Documentation]    Esse teste verifica se é possível consultar o Prontuário do Educando 
+    ...                e todas as suas ações para a Etapa EJA                   
+    [Tags]             Prontuário da Turma - EJA | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Prontuário do Educando"
-    Em Etapa/Modalidade no Prontuário, selecionar "ENSINO FUNDAMENTAL"    
-    Em campo turma no Prontuário, selecionar "1B"  
+    Em Prontuário do Educando, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Prontuário do Educando, no campo turma no Prontuário, selecionar "5A"    
+    Em Prontuário do Educando, em Educando, selecionar "BEATRIZ PEREIRA DA SILVA"
+    Em Prontuário do Educando, clicar em Pesquisar
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Prontuário do Educando, clicar em Registrar Atestado
+    Em Atestado de Educandos, em Tipo de Atestado, selecionar "MÉDICO"
+    Em Atestado de Educandos, em Data Inicial, selecionar o dia atual
+    Em Atestado de Educandos, em Data Final, selecionar o dia atual
+    Em Atestado de Educandos, em Motivo, inserir "TESTE DE INCLUSÃO DE MOTIVO MÉDICO"
+    Em Atestado de Educandos, em Nº Registro Profissional, inserir "123456"
+    Em Atestado de Educandos, em Nome do Profissional, inserir "TESTE NOME MÉDICO"
+    Em Atestado de Educandos, em Inserir Documento, inserir um arquivo teste
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Clicar em Voltar
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, verificar se o registro foi incluído
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Ações
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Compensar Ausencia
+    Clicar em OK no Modal
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Ações
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Editar Compensação
+    Em Atestado de Educandos, em Motivo, inserir "TESTE DE EDIÇÃO DE MOTIVO MÉDICO"
+    Em Atestado de Educandos, em Inserir Documento, inserir um arquivo teste
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Clicar em Voltar
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Ações
+    Em Atestado de Educandos, em Compensação de Ausências, clicar em Excluir Compensação
+    Clicar em OK no Modal
+    Em Prontuário do Educando, clicar em Tipo de Compensação
+    Em Atestado de Educandos, em Compensação de Ausências, verificar se o registro foi excluído
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Prontuário do Educando, em Parecer Final, selecionar "PROMOVIDO(A)"
+    Em Prontuário do Educando, em Qualificação do Parecer Final, selecionar "xxxxx"
+    Em Prontuário do Educando, clicar em Finalizar
+    Clicar em OK no Modal
+    Em Prontuário do Educando, clicar em Reabrir Relatório
+    Clicar em OK no Modal
+    Em Prontuário do Educando, verificar se o botão Finalizar está visível
+    Em Prontuário do Educando, clicar em Mapa de Turma
+    Verificar se aparece o texto "Mapa da Turma"
 
-Cenário 29: Funcionalidade - Escola Autorizada à Receber Matrícula
+Cenário 29: Funcionalidade - Escola Autorizada A Receber Matrícula
     [Documentation]    Esse teste efetua a configuração das escolas que
     ...                estão autorizadas a receber matrícula             
-    [Tags]             Escola Autorizada à Receber Matrícula | Fluxo Positivo
+    [Tags]             Escola Autorizada A Receber Matrícula | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no eixo "Configuração"
+    Entrar no eixo "Operação"
     Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Escola Autorizada à Receber Matrícula"
+    Entrar na funcionalidade "Escola Autorizada A Receber Matrícula"
+    Em Escola Autorizada A Receber Matrícula, em Tipo de Estabelecimento, selecionar "ESCOLA"
+    Em Escola Autorizada A Receber Matrícula, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Escola Autorizada A Receber Matrícula, em Escola, selecionar "EPG ALFREDO VOLPI"
+    Clicar em Pesquisar
+    Em Escola Autorizada A Receber Matrícula, verificar se as opções estão selecionadas, e selecionar caso não estejam
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Escola Autorizada A Receber Matrícula, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Escola Autorizada A Receber Matrícula, em Escola, selecionar "EPG ALFREDO VOLPI"
+    Clicar em Pesquisar
+    Em Escola Autorizada A Receber Matrícula, verificar se as opções estão selecionadas, e selecionar caso não estejam
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Escola Autorizada A Receber Matrícula, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 1° SEMESTRE"
+    Em Escola Autorizada A Receber Matrícula, em Escola, selecionar "EPG CRISPINIANO SOARES"
+    Clicar em Pesquisar
+    Em Escola Autorizada A Receber Matrícula, verificar se as opções estão selecionadas, e selecionar caso não estejam
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Escola Autorizada A Receber Matrícula, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 2° SEMESTRE"
+    Em Escola Autorizada A Receber Matrícula, em Escola, selecionar "EPG CRISPINIANO SOARES"
+    Clicar em Pesquisar
+    Em Escola Autorizada A Receber Matrícula, verificar se as opções estão selecionadas, e selecionar caso não estejam
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Escola Autorizada A Receber Matrícula, em Tipo de Estabelecimento, selecionar "ESCOLA"
+    Em Escola Autorizada A Receber Matrícula, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Escola Autorizada A Receber Matrícula, em Escola, selecionar "EPG ALFREDO VOLPI"
+    Clicar em Pesquisar
+    Em Escola Autorizada A Receber Matrícula, verificar se as opções foram salvas corretamente
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Escola Autorizada A Receber Matrícula, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Escola Autorizada A Receber Matrícula, em Escola, selecionar "EPG ALFREDO VOLPI"
+    Clicar em Pesquisar
+    Em Escola Autorizada A Receber Matrícula, verificar se as opções foram salvas corretamente
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Escola Autorizada A Receber Matrícula, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 1° SEMESTRE"
+    Em Escola Autorizada A Receber Matrícula, em Escola, selecionar "EPG CRISPINIANO SOARES"
+    Clicar em Pesquisar
+    Em Escola Autorizada A Receber Matrícula, verificar se as opções foram salvas corretamente
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Escola Autorizada A Receber Matrícula, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 2° SEMESTRE"
+    Em Escola Autorizada A Receber Matrícula, em Escola, selecionar "EPG CRISPINIANO SOARES"
+    Clicar em Pesquisar
+    Em Escola Autorizada A Receber Matrícula, verificar se as opções foram salvas corretamente
+    Clicar em Salvar
+    Clicar em OK no Modal
 
 Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     [Documentation]    Esse teste efetua o cadastro de justificativas
@@ -1181,7 +1363,7 @@ Cenário 32: Funcionalidade Processo de Demanda
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Processo de Demandas"
     Clicar em Cadastrar
-    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO INFANTIL INICIAL 2023"
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO INFANTIL INICIAL 2023 #PROCESSO_TESTE_QA#"
     Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
     Em Processo de Demanda, em Ano Letivo, selecionar "2023"
     Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "Não"
@@ -1203,312 +1385,124 @@ Cenário 33: Funcionalidade Programação de Processo
     Clicar em Cadastrar
 
 Cenário 34: Funcionalidade Portal
-    [Documentation]    Esse teste efetua a solicitaão de matrícula no Portal,
-    ...                para todas as etapas/modalidades.                
-    [Tags]             Portal - Infantil | Fluxo Positivo
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Portal | Fluxo Positivo
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/index.html"
+    Clicar em "Educação Infantil"
+    Selecionar o Processo "xxx"
 
+Cenário 35: Funcionalidade Gestão de Pré-Matrícula
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
+    ...                dentro do GIER, para todas as etapas/modalidades.                
+    [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-Matrícula"
 
-Cenário 14B: Funcionalidade Matricula - Fundamental
-    [Documentation]    Esse teste verifica se é possível efetuar a
-    ...                matrícula para um aluno da Etapa Fundamental                 
-    [Tags]             Matricula - Fundamental | Fluxo Positivo
+Cenário 36: Funcionalidade Parâmetros do Processo de Transporte
+    [Documentation]    Esse teste efetua o cadastro, configuração e edição
+    ...                dos Parâmetros do Processo de Transporte                 
+    [Tags]             Parâmetros do Processo de Transporte | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Justificativas da Pré-matrícula"
-    Clicar em Cadastrar justificativas
-    ----------        
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
-    Clicar em Cadastrar Layout
-    Em Descrição do Processo, inserir "Descrição Teste Automação"
-    Clicar em Salvar e Próximo no passo 1
-    Em Ano Letivo, selecionar o Ano Letivo Seguinte
-    Em Banner Web clicar em Inserir 
-    Visualizar a mensagem: SELECIONE O ARQUIVO ANTES DE INCLUI-LO.
-    Clicar em Ok no modal de alerta de campo obrigatório
-    Em inserir Documento Web, inserir o arquivo "Crianças1.jpg"
-    Em Aplicar no Portal Web, inserir "00000000"        
-    Em Banner Web clicar em Inserir     
-    Em Aplicar no Portal Web, inserir a data do dia atual        
-    Em Banner Web clicar em Inserir 
-    Em inserir Documento móvel, inserir o arquivo "Crianças1.jpg"
-    Em Aplicar no Portal móvel, inserir "00000000"        
-    Em Banner móvel clicar em Inserir     
-    Em Aplicar no Portal móvel, inserir a data do dia atual        
-    Em Banner Web clicar em Inserir 
-    Clicar em Salvar e Próximo no passo 1
-    Clicar em Salvar e Próximo no passo 2
-    Clicar em Salvar e Próximo no passo 3
-    Clicar em Salvar e Próximo no passo 4
-    Clicar em inserir no passo 5
-    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
-    Clicar em 'Consultar Solicitação'
-    Em Nacionalidade, selecionar "Brasileiro"
-    Em Protocolo, informar "123456789"
-    Em Data de Nascimento, informar "10/01/1965"
-    Em Nacionalidade, selecionar "Brasileiro"
-    Em Protocolo, informar "123456789"
-    Em CPF, inserir "364.882.650-67"
-    Em Data de Nascimento, informar "10/01/1965"
-    Clicar em Ok no alerta do Portal
-    FAZER GESTÃO DE PRÉ MATRICULA
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Parâmetros do Processo de Transporte"
 
-Cenário 14C: Funcionalidade Matricula - EJA
-    [Documentation]    Esse teste verifica se é possível efetuar a
-    ...                matrícula para um aluno da Etapa EJA                 
-    [Tags]             Matricula - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Justificativas da Pré-matrícula"
-    Clicar em Cadastrar
-    Em Gestão de Demanda, em Tipo de Situação, selecionar "CANCELAMENTO"
-    Em Gestão de Demanda, em Justificativa, inserir "TESTE CADASTRO JUSTIFICATIVA CANCELAMENTO"
-    Clicar em Salvar
-    Clicar em OK no Modal
-    Clicar em Cadastrar
-    Em Gestão de Demanda, em Tipo de Situação, selecionar "INDEFERIMENTO"
-    Em Gestão de Demanda, em Justificativa, inserir "TESTE CADASTRO JUSTIFICATIVA INDEFERIMENTO"
-    Clicar em Salvar
-    Clicar em OK no Modal 
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
-    Clicar em Cadastrar
-    Em Descrição do Processo, inserir "DESCRIÇÃO TESTE AUTOMACAO LAYOUT"
-    Em inserir Documento Web, inserir o arquivo "Crianças1.jpg"
-    Em Aplicar no Portal móvel, inserir "00000000"        
-    Em Banner móvel clicar em Inserir     
-    Em inserir Documento Móvel, inserir o arquivo "Crianças1.jpg"
-    Em Aplicar no Portal móvel, inserir "00000000"        
-    Em Banner móvel clicar em Inserir     
-    Clicar em Salvar e Próximo no passo 1
-    Clicar em Salvar e Próximo no passo 2
-    Clicar em Salvar e Próximo no passo 3
-    Clicar em Salvar e Próximo no passo 4
-    Clicar em inserir no passo 5
-    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
-    Clicar em 'Consultar Solicitação'
-    Em Nacionalidade, selecionar "Brasileiro"
-    Em Protocolo, informar "123456789"
-    Em Data de Nascimento, informar "10/01/1965"
-    Em Nacionalidade, selecionar "Brasileiro"
-    Em Protocolo, informar "123456789"
-    Em CPF, inserir "364.882.650-67"
-    Em Data de Nascimento, informar "10/01/1965"
-    Clicar em Ok no alerta do Portal
-    FAZER GESTÃO DE PRÉ MATRICULA
-
-Cenário 15A: Funcionalidade Transportes - Infantil
-    [Documentation]    Esse teste verifica se é possível solicitar
-    ...                transporte para um aluno da Etapa Infantil                 
-    [Tags]             Transportes - Infantil | Fluxo Positivo
+Cenário 37: Funcionalidade Credenciamento de Condutores
+    [Documentation]    Esse teste efetua o cadastro e edição do Credenciamento de Condutores                               
+    [Tags]             Credenciamento de Condutores | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Credenciamento de Condutores"    
-    Clicar em Cadastrar Condutores 
-    -------------
+    Entrar na funcionalidade "Credenciamento de Condutores"
+    Em Credenciamento de Condutores, clicar em Cadastrar Condutores
+
+Cenário 38: Funcionalidade Rotas
+    [Documentation]    Esse teste verifica se é possível cadastrar, editar
+    ...                editar e excluir uma Rota                
+    [Tags]             Rotas | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Rotas"
-    Clicar no botão Cadastrar
-    Em Tipo de Rota, selecionar "Centro"    
-    Em Nome de Escola, inserir "Volpi"
-    ---------
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade de transporte "Viagens"    
-    Clicar no botão Cadastrar
-    -----------------
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Gestão de Solicitação de Transporte" 
-    -------------------
-    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
-    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Solicitação de Transporte" 
-    -----------------
 
-Cenário 15B: Funcionalidade Transportes - Fundamental
-    [Documentation]    Esse teste verifica se é possível solicitar
-    ...                transporte para um aluno da Etapa Fundamental                 
-    [Tags]             Transportes - Fundamental | Fluxo Positivo
+Cenário 39: Funcionalidade Viagens
+    [Documentation]    Esse teste verifica se é possível cadastrar, editar
+    ...                editar e excluir uma Viagem                
+    [Tags]             Viagens | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Credenciamento de Condutores"    
-    Clicar em Cadastrar Condutores 
-    -------------
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Rotas"
-    Clicar no botão Cadastrar
-    Em Tipo de Rota, selecionar "Centro"    
-    Em Nome de Escola, inserir "Volpi"
-    ---------
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade de transporte "Viagens"    
-    Clicar no botão Cadastrar
-    -----------------
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Gestão de Solicitação de Transporte" 
-    -------------------
-    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
-    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Solicitação de Transporte" 
-    -----------------
+    Entrar na funcionalidade "Viagens"
 
-Cenário 15C: Funcionalidade Transportes - EJA
-    [Documentation]    Esse teste verifica se é possível solicitar
-    ...                transporte para um aluno da Etapa EJA                 
-    [Tags]             Transportes - EJA | Fluxo Positivo
+Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
+    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+    ...                pela Escola, para um educando da Etapa Infantil        
+    [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Credenciamento de Condutores"    
-    Clicar em Cadastrar Condutores 
-    -------------
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Rotas"
-    Clicar no botão Cadastrar
-    Em Tipo de Rota, selecionar "Centro"    
-    Em Nome de Escola, inserir "Volpi"
-    ---------
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade de transporte "Viagens"    
-    Clicar no botão Cadastrar
-    -----------------
+    Entrar na funcionalidade "Solicitação de Transporte"
+
+Cenário 41: Funcionalidade Solicitação de Transporte - Fundamental
+    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+    ...                pela Escola, para um educando da Etapa Fundamental        
+    [Tags]             Solicitação de Transporte - Fundamental | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Gestão de Solicitação de Transporte" 
-    -------------------
-    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
-    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Entrar na funcionalidade "Solicitação de Transporte"
+
+Cenário 42: Funcionalidade Gestão de Solicitação de Transporte - Infantil
+    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+    ...                pela Secretaria, para um educando da Etapa Infantil        
+    [Tags]             Gestão de Solicitação de Transporte - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Solicitação de Transporte" 
-    -----------------
+    Entrar na funcionalidade "Gestão de Solicitação de Transporte"
 
-Cenário 16A: Funcionalidade Avaliações Educacionais - Infantil
-    [Documentation]    Esse teste verifica se é possível agendar e 
-    ...                efetuar prova online para um aluno da Etapa Infantil                 
-    [Tags]             Avaliações Educacionais - Infantil | Fluxo Positivo
+Cenário 43: Funcionalidade Gestão de Solicitação de Transporte - Fundamental
+    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+    ...                pela Secretaria, para um educando da Etapa Fundamental        
+    [Tags]             Gestão de Solicitação de Transporte - Fundamental | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Aprendizagem"
-    Visualizar o Titulo Consulta de Descrição de Aprendizagem    
-    Clicar no botão Cadastrar  
-    -----------
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Grupos de Pergunta"
-    Visualizar o Titulo Consultar Grupos de Pergunta   
-    Clicar no botão Cadastrar  
-    ----------
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Banco de Questões" 
-    Clicar no botão Cadastrar  
-    ----------
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Gestão de Solicitação de Transporte"
 
-Cenário 16B: Funcionalidade Avaliações Educacionais - Fundamental
-    [Documentation]    Esse teste verifica se é possível agendar e 
-    ...                efetuar prova online para um aluno da Etapa Infantil                 
-    [Tags]             Avaliações Educacionais - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Aprendizagem"
-    Visualizar o Titulo Consulta de Descrição de Aprendizagem    
-    Clicar no botão Cadastrar  
-    -----------
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Grupos de Pergunta"
-    Visualizar o Titulo Consultar Grupos de Pergunta   
-    Clicar no botão Cadastrar  
-    ----------
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Banco de Questões" 
-    Clicar no botão Cadastrar  
-    ----------
-
-Cenário 16C: Funcionalidade Avaliações Educacionais - EJA
-    [Documentation]    Esse teste verifica se é possível agendar e 
-    ...                efetuar prova online para um aluno da Etapa Infantil                 
-    [Tags]             Avaliações Educacionais - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Aprendizagem"
-    Visualizar o Titulo Consulta de Descrição de Aprendizagem    
-    Clicar no botão Cadastrar  
-    -----------
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Grupos de Pergunta"
-    Visualizar o Titulo Consultar Grupos de Pergunta   
-    Clicar no botão Cadastrar  
-    ----------
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Banco de Questões" 
-    Clicar no botão Cadastrar  
-    ----------
-
-Cenário 17: Funcionalidade Aprendizagem
+Cenário 44: Funcionalidade Aprendizagem
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
+    [Tags]             Aprendizagem | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -1606,3 +1600,77 @@ Cenário 17: Funcionalidade Aprendizagem
     Em Consulta de Descrição de Aprendizagem, em Descrição de Aprendizagem, inserir "TESTE DE DESCRICAO DE APRENDIZAGEM 88"
     Em Consulta de Descrição de Aprendizagem, clicar em Pesquisar
     Em Consulta de Descrição de Aprendizagem, verificar se aparece o texto "NENHUM REGISTRO FOI ENCONTRADO"
+
+Cenário 45: Funcionalidade Grupos de Pergunta
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
+    [Tags]             Grupos de Pergunta | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Grupos de Pergunta"
+
+Cenário 46: Funcionalidade Banco de Questões
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
+    [Tags]             Banco de Questões | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Banco de Questões"
+
+Cenário 47: Funcionalidade Configurar Avaliação
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
+    [Tags]             Configurar Avaliação | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Configurar Avaliação"
+
+Cenário 48: Funcionalidade Agendamento Avaliação
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
+    [Tags]             Agendamento Avaliação | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Operação"
+    Entrar no módulo "Gestão de Avaliações"
+    Entrar na funcionalidade "Agendamento Avaliação"
+
+Cenário 49: Prova Online
+    [Documentation]    Esse teste efetua a prova online para um educando da Etapa - Fundamental     
+    [Tags]             Prova Online - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "4282670" e "4282670"
+    Clicar na Prova "Prova de Educação Qa"
+
+Cenário 50: Lançamento Individualizado
+    [Documentation]    Esse teste consulta e finaliza um Lançamento Individualizado     
+    [Tags]             Lançamento Individualizado | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Operação"
+    Entrar no módulo "Gestão de Avaliações"
+    Entrar na funcionalidade "Lançamento Individualizado"
+
+Cenário 51: Avaliações Educacionais Realizadas
+    [Documentation]    Esse teste efetua a consulta de uma Avaliação Educacional Realizada,
+    ...                validando os relatórios para uma escola
+    [Tags]             Avaliações Educacionais Realizadas | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Operação"
+    Entrar no módulo "Gestão de Avaliações"
+    Entrar na funcionalidade "Avaliações Educacionais Realizadas"

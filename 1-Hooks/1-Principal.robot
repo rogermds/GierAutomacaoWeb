@@ -60,6 +60,7 @@ Entrar no módulo "${nomeModulo}"
 Entrar na funcionalidade "${funcionalidade}"  
     Execute JavaScript  xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Aguardar tela de carregamento
 
 Clicar no botão Cadastrar
     Execute JavaScript  document.getElementById("${botaoCadastrar}").click();
