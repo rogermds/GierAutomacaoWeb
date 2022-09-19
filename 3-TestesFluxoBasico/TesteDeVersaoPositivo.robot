@@ -1095,7 +1095,7 @@ Cenário 25: Funcionalidade Prontuário da Turma - EJA
     Em Prontuário da Turma, clicar em OK no Modal
     Em Prontuário da Turma, verificar se o botão Finalizar Ata do Conselho foi desativado
 
-#### NECESSÁRIO REVISAR
+#### ALTERAR LOCALIZAÇÃO DO ARQUIVO. SÓ FUNCIONA PELA PASTA ESPECIFICA DA PASTA
 Cenário 26: Funcionalidade Prontuário do Educando - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário do Educando 
     ...                e todas as suas ações para a Etapa Infantil                   
@@ -1337,7 +1337,74 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
     Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Justificativas da Pré-Matrícula"
+    Entrar na funcionalidade "Justificativas da Pré-matrícula"
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "CANCELAMENTO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Editar
+    Em Edição de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA EDITADO"
+    Em Edição de Justificativas da Pré-Matrícula, clicar em Alterar
+    Em Edição de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa editada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa editada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
+    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "CANCELAMENTO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
+    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "DETERMINAÇÃO LEGAL"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
+    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "DESFAZER AÇÃO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
+    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "INDEFERIMENTO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
+    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "VAGA OFERTADA"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
+    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
 
 Cenário 31: Funcionalidade - Layout do Portal de Inscrições e Transferências
     [Documentation]    Esse teste efetua o cadastro e edição do Portal
@@ -1350,7 +1417,37 @@ Cenário 31: Funcionalidade - Layout do Portal de Inscrições e Transferências
     Entrar no eixo "Configuração"
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
+    Em Layout do Portal, clicar em Cadastrar
+    Em Configuração de Layout do Portal, Página Inicial, em Descrição do Processo, inserir "LAYOUT PORTAL AUTOMAÇÃO"
+    Em Configuração de Layout do Portal, Página Inicial, no Banner Inicial Web, inserir uma imagem
+    Em Configuração de Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "01/01/2022"
+    Em Configuração de Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir uma imagem
+    Em Configuração de Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir a data "31/12/2022"
+    Em Configuração de Layout do Portal, Página Inicial, clicar em Salvar e Próximo
+    Em Configuração de Layout do Portal, Informações Importantes, em Informações Gerais selecionar "EDUCAÇÃO INFANTIL"
+    Em Configuração de Layout do Portal, Informações Importantes, em Descrição, inserir "TESTE DESCRIÇÃO AUTOMACAO "
+    Em Configuração de Layout do Portal, Informações Importantes, clicar em Inserir
+    Em Configuração de Layout do Portal, Página Inicial, clicar em Salvar e Próximo
+    Em Configuração de Layout do Portal, Layout Inscrição, selecionar os campos X
+    Em Configuração de Layout do Portal, Página Inicial, clicar em Salvar e Próximo
+    Em Configuração de Layout do Portal, Layout Transferência, selecionar os campos X
+    Em Configuração de Layout do Portal, Página Inicial, clicar em Salvar e Próximo
+    Em Configuração de Layout do Portal, Observações Importantes, selecionar a Etapa "EDUCAÇÃO INFANTIL"
+    Em Configuração de Layout do Portal, Observações Importantes, selecionar o curso "CRECHE"
+    Em Configuração de Layout do Portal, Observações Importantes, selecionar em inscrição "INSCRIÇÃO"
+    Em Configuração de Layout do Portal, Observações Importantes, selecionar em vaga "SIM"
+    Em Configuração de Layout do Portal, Observações Importantes, em Observações inserir "TESTE OBSERVAÇÃO "
+    Em Configuração de Layout do Portal, Observações Importantes, clicar em Inserir
+    Em Configuração de Layout do Portal, Observações Importantes, clicar em Salvar
+
+
     
+    
+
+
+    
+    
+
 Cenário 32: Funcionalidade Processo de Demanda
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
     ...                Inicial e Contínuo para as etapas/modalidades             
