@@ -150,3 +150,9 @@ Clicar em Salvar Alterações
     Wait Until Element Is Visible    ${botaoSalvarAlteracoes}
     Execute JavaScript  document.getElementById("${botaoSalvarAlteracoes}").click(); 
     Aguardar tela de carregamento
+
+Dormir
+    Sleep    4
+
+Aguardar carregamento Portal
+    Wait Until Page Does Not Contain    cssload-container

@@ -1406,6 +1406,28 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
     Em Justificativas da Pré-Matrícula, clicar em OK no Modal
 
+EDITAR
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
+    Em Layout do Portal, em Ano Letivo, selecionar "2024"
+    Em Layout do Portal, clicar em Pesquisar
+    Em Layout do Portal, clicar em Ações e Continuar Configuração
+    Em Layout do Portal, Página Inicial, em Descrição do Processo, inserir "LAYOUT PORTAL EDITADO1"
+    Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir uma imagem
+    Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "01/01/2022"
+    Em Layout do Portal, Página Inicial, no Banner Inicial Web, clicar em Inserir
+    Em Layout do Portal, Página Inicial, clicar em Salvar e Próximo
+    Em Layout do Portal, Informações Importantes, em Informações Gerais selecionar "EDUCAÇÃO INFANTIL"
+    Em Layout do Portal, Informações Importantes, em Descrição, inserir "TESTE DESCRIÇÃO AUTOMACAO "
+    Em Layout do Portal, Informações Importantes, clicar em Inserir
+    Em Layout do Portal, Informações Importantes, clicar em Salvar e Próximo
+    
+## ATUALIZAR O NOME DO PROCESSO CORRETO
 Cenário 31: Funcionalidade - Layout do Portal de Inscrições e Transferências
     [Documentation]    Esse teste efetua o cadastro e edição do Portal
     ...                Online de Matrícula            
@@ -1418,34 +1440,47 @@ Cenário 31: Funcionalidade - Layout do Portal de Inscrições e Transferências
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
     Em Layout do Portal, clicar em Cadastrar
-    Em Configuração de Layout do Portal, Página Inicial, em Descrição do Processo, inserir "LAYOUT PORTAL AUTOMAÇÃO"
-    Em Configuração de Layout do Portal, Página Inicial, no Banner Inicial Web, inserir uma imagem
-    Em Configuração de Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "01/01/2022"
-    Em Configuração de Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir uma imagem
-    Em Configuração de Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir a data "31/12/2022"
-    Em Configuração de Layout do Portal, Página Inicial, clicar em Salvar e Próximo
-    Em Configuração de Layout do Portal, Informações Importantes, em Informações Gerais selecionar "EDUCAÇÃO INFANTIL"
-    Em Configuração de Layout do Portal, Informações Importantes, em Descrição, inserir "TESTE DESCRIÇÃO AUTOMACAO "
-    Em Configuração de Layout do Portal, Informações Importantes, clicar em Inserir
-    Em Configuração de Layout do Portal, Página Inicial, clicar em Salvar e Próximo
-    Em Configuração de Layout do Portal, Layout Inscrição, selecionar os campos X
-    Em Configuração de Layout do Portal, Página Inicial, clicar em Salvar e Próximo
-    Em Configuração de Layout do Portal, Layout Transferência, selecionar os campos X
-    Em Configuração de Layout do Portal, Página Inicial, clicar em Salvar e Próximo
-    Em Configuração de Layout do Portal, Observações Importantes, selecionar a Etapa "EDUCAÇÃO INFANTIL"
-    Em Configuração de Layout do Portal, Observações Importantes, selecionar o curso "CRECHE"
-    Em Configuração de Layout do Portal, Observações Importantes, selecionar em inscrição "INSCRIÇÃO"
-    Em Configuração de Layout do Portal, Observações Importantes, selecionar em vaga "SIM"
-    Em Configuração de Layout do Portal, Observações Importantes, em Observações inserir "TESTE OBSERVAÇÃO "
-    Em Configuração de Layout do Portal, Observações Importantes, clicar em Inserir
-    Em Configuração de Layout do Portal, Observações Importantes, clicar em Salvar
+    Em Layout do Portal, Página Inicial, em Ano Letivo, selecionar "2024"
+    Em Layout do Portal, Página Inicial, em Descrição do Processo, inserir "LAYOUT PORTAL AUTOMAÇÃO"
+    Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir uma imagem
+    Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "01/01/2022"
+    Em Layout do Portal, Página Inicial, no Banner Inicial Web, clicar em Inserir
+    Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir uma imagem
+    Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir a data "31/12/2022"
+    Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, clicar em Inserir
+    Em Layout do Portal, Página Inicial, clicar em Salvar e Próximo
+    Em Layout do Portal, Informações Importantes, em Informações Gerais selecionar "EDUCAÇÃO INFANTIL"
+    Em Layout do Portal, Informações Importantes, em Descrição, inserir "TESTE DESCRIÇÃO AUTOMACAO "
+    Em Layout do Portal, Informações Importantes, clicar em Inserir
+    Em Layout do Portal, Informações Importantes, clicar em Salvar e Próximo
+    Em Layout do Portal, Layout Inscrição, selecionar os campos X
+    Em Layout do Portal, Layout Inscrição, clicar em Salvar e Próximo
+    Em Layout do Portal, Layout Transferência, selecionar os campos X
+    Em Layout do Portal, Layout Transferência, clicar em Salvar e Próximo
+    Em Layout do Portal, Observações Importantes, selecionar a Etapa "EDUCAÇÃO INFANTIL"
+    Em Layout do Portal, Observações Importantes, selecionar o curso "PRÉ-ESCOLA"
+    Em Layout do Portal, Observações Importantes, selecionar em inscrição "INSCRIÇÃO"
+    Em Layout do Portal, Observações Importantes, selecionar em vaga "SIM"
+    Em Layout do Portal, Observações Importantes, em Observações inserir "TESTE OBSERVAÇÃO "
+    Em Layout do Portal, Observações Importantes, clicar em Inserir
+    Em Layout do Portal, Observações Importantes, clicar em Salvar
+    Em Layout do Portal, Observações Importantes, clicar em OK no Modal
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    Selecionar o processo para "Educação Infantil"
 
 
-    
-    
+PORTAL
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    Dormir
+    No Portal, selecionar o processo para a etapa "Educação Infantil"
+    Dormir
+    # No Portal, verificar se o texto exibido é igual ao cadastrado
+    No Portal, fechar o modal de informações importantes
+    Dormir
+    No Portal, clicar em Consultar Solicitação
 
-
-    
     
 
 Cenário 32: Funcionalidade Processo de Demanda
