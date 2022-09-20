@@ -4,9 +4,9 @@ Library    DateTime
 Resource    ../../1-Hooks/1-Principal.robot
 
 *** Variables ***
-${campoTipoEstabelecimentoEscolaMatricula}                cphContent_ddlTipoEstabelecimento
-${campoEtapaModalidadeEscolaMatricula}                    cphContent_ddlModalidade
-${campoEscolaEscolaMatricula}                             cphContent_ddlEscola
+${campoTipoEstabelecimentoEscolaMatricula}    cphContent_ddlTipoEstabelecimento
+${campoEtapaModalidadeEscolaMatricula}        cphContent_ddlModalidade
+${campoEscolaEscolaMatricula}              cphContent_ddlEscola
 
 *** Keywords ***
 Em Escola Autorizada A Receber Matrícula, em Tipo de Estabelecimento, selecionar "ESCOLA"
@@ -15,43 +15,43 @@ Em Escola Autorizada A Receber Matrícula, em Tipo de Estabelecimento, seleciona
     Aguardar tela de carregamento
 
 Em Escola Autorizada A Receber Matrícula, em Etapa/Modalidade, selecionar "${etapaModalidade}"
-    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'        Execute JavaScript   $('#${campoEtapaModalidadeEscolaMatricula}').val("1").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'        Execute JavaScript   $('#${campoEtapaModalidadeEscolaMatricula}').val("4").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1° SEMESTRE'        Execute JavaScript   $('#${campoEtapaModalidadeEscolaMatricula}').val("5").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 2° SEMESTRE'        Execute JavaScript   $('#${campoEtapaModalidadeEscolaMatricula}').val("6").trigger('chosen:updated');
+    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'   Execute JavaScript   $('#${campoEtapaModalidadeEscolaMatricula}').val("1").trigger('chosen:updated');
+    Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoEtapaModalidadeEscolaMatricula}').val("4").trigger('chosen:updated');
+    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1° SEMESTRE'    Execute JavaScript   $('#${campoEtapaModalidadeEscolaMatricula}').val("5").trigger('chosen:updated');
+    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 2° SEMESTRE'    Execute JavaScript   $('#${campoEtapaModalidadeEscolaMatricula}').val("6").trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeEscolaMatricula}').trigger('change');
     Aguardar tela de carregamento
 
 Em Escola Autorizada A Receber Matrícula, em Escola, selecionar "${escola}"
-    Run Keyword If    '${escola}' == 'EPG ALFREDO VOLPI'        Execute JavaScript   $('#${campoEscolaEscolaMatricula}').val("575").trigger('chosen:updated');
-    Run Keyword If    '${escola}' == 'EPG CRISPINIANO SOARES'        Execute JavaScript   $('#${campoEscolaEscolaMatricula}').val("607").trigger('chosen:updated');
+    Run Keyword If    '${escola}' == 'EPG ALFREDO VOLPI'    Execute JavaScript   $('#${campoEscolaEscolaMatricula}').val("575").trigger('chosen:updated');
+    Run Keyword If    '${escola}' == 'EPG CRISPINIANO SOARES'   Execute JavaScript   $('#${campoEscolaEscolaMatricula}').val("607").trigger('chosen:updated');
     Execute JavaScript   $('#${campoEscolaEscolaMatricula}').trigger('change');
     Aguardar tela de carregamento
 
 Em Escola Autorizada A Receber Matrícula, verificar se as opções estão selecionadas, e selecionar caso não estejam
-        FOR     ${index}    IN RANGE    0    20
-            ${busca}    Set Variable    cphContent_dtlEscolas_chkTodosTd_${index}
-            ${resultado}    Run Keyword And Return Status   Wait Until Element Is Not Visible    ${busca}    0.2
-            ${resultado2}    Run Keyword And Return Status   Element Attribute Value Should Be    ${busca}    checked    true
-            IF  ${resultado} or ${resultado2}
-                CONTINUE    
-            ELSE
-                    Execute JavaScript  document.getElementById("${busca}").click();
-                    Aguardar tela de carregamento
-            END
+    FOR     ${index}    IN RANGE    0    20
+        ${busca}    Set Variable    cphContent_dtlEscolas_chkTodosTd_${index}
+        ${resultado}    Run Keyword And Return Status   Wait Until Element Is Not Visible    ${busca}    0.2
+        ${resultado2}    Run Keyword And Return Status   Element Attribute Value Should Be    ${busca}    checked    true
+        IF  ${resultado} or ${resultado2}
+        CONTINUE    
+        ELSE
+            Execute JavaScript  document.getElementById("${busca}").click();
+            Aguardar tela de carregamento
         END
+    END
 
 Em Escola Autorizada A Receber Matrícula, verificar se as opções foram salvas corretamente
-        FOR     ${index}    IN RANGE    0    20
-            ${busca}    Set Variable    cphContent_dtlEscolas_chkTodosTd_${index}
-            ${resultado}    Run Keyword And Return Status   Wait Until Element Is Not Visible    ${busca}    0.2
-            ${resultado2}    Run Keyword And Return Status   Element Attribute Value Should Be    ${busca}    checked    true
-            IF  ${resultado} or ${resultado2}
-                CONTINUE    
-            ELSE
-                Fail
-            END
+    FOR     ${index}    IN RANGE    0    20
+        ${busca}    Set Variable    cphContent_dtlEscolas_chkTodosTd_${index}
+        ${resultado}    Run Keyword And Return Status   Wait Until Element Is Not Visible    ${busca}    0.2
+        ${resultado2}    Run Keyword And Return Status   Element Attribute Value Should Be    ${busca}    checked    true
+        IF  ${resultado} or ${resultado2}
+        CONTINUE    
+        ELSE
+        Fail
         END
+    END
 
 Em Justificativas da Pré-Matrícula, clicar em Cadastrar
     Execute JavaScript  document.getElementById("btnCadastraJustificativa").click();
@@ -59,12 +59,12 @@ Em Justificativas da Pré-Matrícula, clicar em Cadastrar
 Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "${tipoSituacao}"
     Sleep    1.5
     Set Suite Variable    ${tipoSituacao}
-    Run Keyword If    '${tipoSituacao}' == 'CANCELAMENTO'        Execute JavaScript   $('#ddlTiposJustificativas').val("1").trigger('chosen:updated');
-    Run Keyword If    '${tipoSituacao}' == 'DETERMINAÇÃO LEGAL'        Execute JavaScript   $('#ddlTiposJustificativas').val("2").trigger('chosen:updated');
-    Run Keyword If    '${tipoSituacao}' == 'DESFAZER AÇÃO'        Execute JavaScript   $('#ddlTiposJustificativas').val("3").trigger('chosen:updated');
-    Run Keyword If    '${tipoSituacao}' == 'INDEFERIMENTO'        Execute JavaScript   $('#ddlTiposJustificativas').val("4").trigger('chosen:updated');
-    Run Keyword If    '${tipoSituacao}' == 'PAUSADO'        Execute JavaScript   $('#ddlTiposJustificativas').val("5").trigger('chosen:updated');
-    Run Keyword If    '${tipoSituacao}' == 'VAGA OFERTADA'        Execute JavaScript   $('#ddlTiposJustificativas').val("6").trigger('chosen:updated');
+    Run Keyword If    '${tipoSituacao}' == 'CANCELAMENTO'   Execute JavaScript   $('#ddlTiposJustificativas').val("1").trigger('chosen:updated');
+    Run Keyword If    '${tipoSituacao}' == 'DETERMINAÇÃO LEGAL' Execute JavaScript   $('#ddlTiposJustificativas').val("2").trigger('chosen:updated');
+    Run Keyword If    '${tipoSituacao}' == 'DESFAZER AÇÃO'  Execute JavaScript   $('#ddlTiposJustificativas').val("3").trigger('chosen:updated');
+    Run Keyword If    '${tipoSituacao}' == 'INDEFERIMENTO'  Execute JavaScript   $('#ddlTiposJustificativas').val("4").trigger('chosen:updated');
+    Run Keyword If    '${tipoSituacao}' == 'PAUSADO'    Execute JavaScript   $('#ddlTiposJustificativas').val("5").trigger('chosen:updated');
+    Run Keyword If    '${tipoSituacao}' == 'VAGA OFERTADA'  Execute JavaScript   $('#ddlTiposJustificativas').val("6").trigger('chosen:updated');
     Execute JavaScript   $('#ddlTiposJustificativas').trigger('change');
     Aguardar tela de carregamento
 
@@ -180,8 +180,8 @@ Em Layout do Portal, Informações Importantes, em Informações Gerais selecion
     Sleep    1
     Set Suite Variable    ${etapaInfoGerais}
     Wait Until Element Is Visible    btnAvancaSegundoPasso
-    Run Keyword If    '${etapaInfoGerais}' == 'EDUCAÇÃO INFANTIL'        Execute JavaScript   $('#ddlEtapaModalidade').val("1").trigger('chosen:updated');
-    Run Keyword If    '${etapaInfoGerais}' == 'ENSINO FUNDAMENTAL'        Execute JavaScript   $('#ddlEtapaModalidade').val("4").trigger('chosen:updated');
+    Run Keyword If    '${etapaInfoGerais}' == 'EDUCAÇÃO INFANTIL'   Execute JavaScript   $('#ddlEtapaModalidade').val("1").trigger('chosen:updated');
+    Run Keyword If    '${etapaInfoGerais}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#ddlEtapaModalidade').val("4").trigger('chosen:updated');
     Sleep    1
 
 Em Layout do Portal, Informações Importantes, em Descrição, inserir "${textoImpressaoConselho}"
@@ -214,25 +214,25 @@ Em Layout do Portal, Layout Transferência, clicar em Salvar e Próximo
 Em Layout do Portal, Observações Importantes, selecionar a Etapa "${etapaObsImportante}"
     Wait Until Element Is Visible    btnSalvar
     Set Suite Variable    ${etapaObsImportante}
-    Run Keyword If    '${etapaObsImportante}' == 'EDUCAÇÃO INFANTIL'        Execute JavaScript   $('#ddlEtapaModalidadeComprovante').val("1").trigger('chosen:updated');
-    Run Keyword If    '${etapaObsImportante}' == 'ENSINO FUNDAMENTAL'        Execute JavaScript   $('#ddlEtapaModalidadeComprovante').val("4").trigger('chosen:updated');
+    Run Keyword If    '${etapaObsImportante}' == 'EDUCAÇÃO INFANTIL'    Execute JavaScript   $('#ddlEtapaModalidadeComprovante').val("1").trigger('chosen:updated');
+    Run Keyword If    '${etapaObsImportante}' == 'ENSINO FUNDAMENTAL'   Execute JavaScript   $('#ddlEtapaModalidadeComprovante').val("4").trigger('chosen:updated');
     Execute JavaScript   $('#ddlEtapaModalidadeComprovante').trigger('change');
     Aguardar tela de carregamento
 
 Em Layout do Portal, Observações Importantes, selecionar o curso "${cursoObsImportante}"
     Set Suite Variable    ${cursoObsImportante}
-    Run Keyword If    '${cursoObsImportante}' == 'PRÉ-ESCOLA'        Execute JavaScript   $('#ddlCursoComprovante').val("3").trigger('chosen:updated');
-    Run Keyword If    '${cursoObsImportante}' == 'CICLO II'        Execute JavaScript   $('#ddlCursoComprovante').val("4").trigger('chosen:updated');
+    Run Keyword If    '${cursoObsImportante}' == 'PRÉ-ESCOLA'   Execute JavaScript   $('#ddlCursoComprovante').val("3").trigger('chosen:updated');
+    Run Keyword If    '${cursoObsImportante}' == 'CICLO II' Execute JavaScript   $('#ddlCursoComprovante').val("4").trigger('chosen:updated');
     Execute JavaScript   $('#ddlCursoComprovante').trigger('change');
     Aguardar tela de carregamento
 
 Em Layout do Portal, Observações Importantes, selecionar em inscrição "${inscricaoTransferencia}"
-    Run Keyword If    '${inscricaoTransferencia}' == 'INSCRIÇÃO'        Execute JavaScript   $('#ddlInscricaoTransferencia').val("0").trigger('chosen:updated');
+    Run Keyword If    '${inscricaoTransferencia}' == 'INSCRIÇÃO'    Execute JavaScript   $('#ddlInscricaoTransferencia').val("0").trigger('chosen:updated');
     Execute JavaScript   $('#ddlInscricaoTransferencia').trigger('change');
     Aguardar tela de carregamento
 
 Em Layout do Portal, Observações Importantes, selecionar em vaga "${simNao}"
-    Run Keyword If    '${simNao}' == 'INSCRIÇÃO'        Execute JavaScript   $('#ddlComVaga').val("0").trigger('chosen:updated');
+    Run Keyword If    '${simNao}' == 'INSCRIÇÃO'    Execute JavaScript   $('#ddlComVaga').val("0").trigger('chosen:updated');
     Execute JavaScript   $('#ddlComVaga').trigger('change');
     Aguardar tela de carregamento
 
@@ -259,9 +259,9 @@ Entrar no Portal
 
 Em Layout do Portal, em Ano Letivo, selecionar "${ano}"
     Wait Until Page Contains    Configuração de Layout do Portal de Inscrições e Transferências
-    Run Keyword If    '${ano}' == '2024'        Execute JavaScript   $('#ddlAnoLetivo').val("2024").trigger('chosen:updated');
-    Run Keyword If    '${ano}' == '2023'        Execute JavaScript   $('#ddlAnoLetivo').val("2023").trigger('chosen:updated');
-    Run Keyword If    '${ano}' == '2022'        Execute JavaScript   $('#ddlAnoLetivo').val("2022").trigger('chosen:updated');
+    Run Keyword If    '${ano}' == '2024'    Execute JavaScript   $('#ddlAnoLetivo').val("2024").trigger('chosen:updated');
+    Run Keyword If    '${ano}' == '2023'    Execute JavaScript   $('#ddlAnoLetivo').val("2023").trigger('chosen:updated');
+    Run Keyword If    '${ano}' == '2022'    Execute JavaScript   $('#ddlAnoLetivo').val("2022").trigger('chosen:updated');
     Execute JavaScript   $('#ddlAnoLetivo').trigger('change');
     Aguardar tela de carregamento
 
@@ -405,3 +405,98 @@ No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Ensino Fu
 Em Processo de Demanda, clicar em Cadastrar
     Wait Until Element Is Visible    cphContent_btnCadastrar
     Execute JavaScript  document.getElementById("cphContent_btnCadastrar").click();
+
+Em Processo de Demanda, na Descrição, inserir "AUTOMACAO INFANTIL INICIAL 2023 #PROCESSO_TESTE_QA#"
+    ${descricaoProcessoChave}    Set Variable   ${descricaoProcesso} #PROCESSO_TESTE_QA#
+    Input Text    cphContent_txtDescricao    ${descricaoProcessoChave}
+
+Em Processo de Demanda, em Resolução, inserir "${resolucao}"
+    Input Text    cphContent_txtResolucao    ${resolucao}
+
+Em Processo de Demanda, em Ano Letivo, selecionar "${anoLetivo}
+    Execute JavaScript   $('#cphContent_ddlAnoLetivo').val("${anoLetivo}").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlAnoLetivo').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "${reservaTecnica}"
+    Run Keyword If    '${reservaTecnica}' == 'SIM'  Execute JavaScript   $('#cphContent_ddlReservaTecnica').val("1").trigger('chosen:updated');
+    Run Keyword If    '${reservaTecnica}' == 'NÃO'  Execute JavaScript   $('#cphContent_ddlReservaTecnica').val("0").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlReservaTecnica').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "${criterioClassificacao}"
+    Run Keyword If    '${criterioClassificacao}' == 'SIM'   Execute JavaScript   $('#cphContent_ddlCriteriosEscola').val("1").trigger('chosen:updated');
+    Run Keyword If    '${criterioClassificacao}' == 'NÃO'   Execute JavaScript   $('#cphContent_ddlCriteriosEscola').val("0").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlCriteriosEscola').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, em Processamento Único da Classificação, selecionar "${processamentoUnico}"
+    Run Keyword If    '${processamentoUnico}' == 'SIM'  Execute JavaScript   $('#cphContent_ddlProcessoUnicoClassificacao').val("1").trigger('chosen:updated');
+    Run Keyword If    '${processamentoUnico}' == 'NÃO'  Execute JavaScript   $('#cphContent_ddlProcessoUnicoClassificacao').val("0").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlProcessoUnicoClassificacao').trigger('change');
+    Aguardar tela de carregamento
+    
+Em Processo de Demanda, em Tipo de Demanda, selecionar "${tipoDemanda}"
+    Run Keyword If    '${tipoDemanda}' == 'CADASTRO INICIAL'    Execute JavaScript   $('#cphContent_ddlTipoDemanda').val("2").trigger('chosen:updated');
+    Run Keyword If    '${tipoDemanda}' == 'CADASTRO CONTÍNUO    Execute JavaScript   $('#cphContent_ddlTipoDemanda').val("1").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlTipoDemanda').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "${estabelecimentoDestino}"
+    Run Keyword If    '${estabelecimentoDestino}' == 'ESCOLA'   Execute JavaScript   $('#cphContent_ddlTipoEstabelecimentoDest').val("1").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlTipoEstabelecimentoDest').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "${esferaDestino}"
+    Run Keyword If    '${esferaDestino}' == 'MUNICIPAL' Execute JavaScript   $('#cphContent_ddlTipoEstabelecimentoDest').val("3").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlEsferaAdministrativaDest').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "${tipoDemanda}"
+    Run Keyword If    '${tipoDemanda}' == 'EDUCAÇÃO INFANTIL'   Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("1").trigger('chosen:updated');
+    Run Keyword If    '${tipoDemanda}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("4").trigger('chosen:updated');
+    Run Keyword If    '${tipoDemanda}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'    Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("5").trigger('chosen:updated');
+    Run Keyword If    '${tipoDemanda}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 2º SEMESTRE'    Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("6").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "${cicloDestino}"
+    Run Keyword If    '${cicloDestino}' == 'TODOS'  Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("0").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'CRECHE - BERCÁRIO I'    Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("1").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'CRECHE - BERCÁRIO II'   Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("2").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'CRECHE - MATERNAL'  Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("3").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'PRÉ-ESCOLA - ESTÁGIO I' Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("6").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'PRÉ-ESCOLA - ESTÁGIO II'    Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("7").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'CICLO I - 1º ANO'   Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("11").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'CICLO I - 2º ANO'   Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("12").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'CICLO I - 3º ANO'   Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("13").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'CICLO I - 4º ANO'   Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("14").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'CICLO I - 5º ANO'   Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').val("15").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlNivelEnsinoDest').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "${listaEspera}"
+    Run Keyword If    '${listaEspera}' == 'NÃO PERMITE LISTA DE ESPERA' Execute JavaScript   $('#cphContent_ddlApresentarSomente').val("0").trigger('chosen:updated');
+    Run Keyword If    '${listaEspera}' == 'SEMPRE LISTA DE ESPERA'  Execute JavaScript   $('#cphContent_ddlApresentarSomente').val("1").trigger('chosen:updated');
+    Run Keyword If    '${listaEspera}' == 'PERMITE QUANDO NÃO HOUVER VAGA'  Execute JavaScript   $('#cphContent_ddlApresentarSomente').val("2").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlApresentarSomente').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "${data}"
+    Input Text    cphContent_txtDataInicialAgrupamento    ${data}
+    
+Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "${data}"
+    Input Text    cphContent_txtDataInicialAgrupamento    ${data}
+
+Em Processo de Demanda, Critérios, em Permite Troca, selecionar "${permiteTroca}"
+    Run Keyword If    '${permiteTroca}' == 'SIM'    Execute JavaScript   $('#cphContent_ddlTrocaEstabelecimento').val("1").trigger('chosen:updated');
+    Run Keyword If    '${permiteTroca}' == 'NÃO'    Execute JavaScript   $('#cphContent_ddlTrocaEstabelecimento').val("0").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlTrocaEstabelecimento').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Run Keyword If    '${permiteTroca}' == 'SIM'    Execute JavaScript   $('#cphContent_ddlTipoBuscaEscola').val("1").trigger('chosen:updated');
+    Run Keyword If    '${permiteTroca}' == 'NÃO'    Execute JavaScript   $('#cphContent_ddlTipoBuscaEscola').val("0").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlTipoBuscaEscola').trigger('change');
+    Aguardar tela de carregamento
+    
