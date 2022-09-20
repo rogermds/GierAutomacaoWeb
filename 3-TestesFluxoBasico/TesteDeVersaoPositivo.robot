@@ -1406,7 +1406,6 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
     Em Justificativas da Pré-Matrícula, clicar em OK no Modal
 
-## ATUALIZAR O NOME DO PROCESSO CORRETO APÓS CRIAÇÃO DO PROCESSO
 Cenário 31: Funcionalidade - Cadastro: Layout do Portal de Inscrições e Transferências
     [Documentation]    Esse teste efetua o cadastro e exclusão do Portal
     ...                Online de Matrícula            
@@ -1419,7 +1418,7 @@ Cenário 31: Funcionalidade - Cadastro: Layout do Portal de Inscrições e Trans
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
     Em Layout do Portal, clicar em Cadastrar
-    Em Layout do Portal, Página Inicial, em Ano Letivo, selecionar "2024"
+    Em Layout do Portal, Página Inicial, em Ano Letivo, selecionar o ano subsequente
     Em Layout do Portal, Página Inicial, em Descrição do Processo, inserir "LAYOUT PORTAL AUTOMAÇÃO"
     Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir uma imagem
     Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "01/01/2022"
@@ -1458,6 +1457,7 @@ Cenário 31: Funcionalidade - Cadastro: Layout do Portal de Inscrições e Trans
     Em Layout do Portal, clicar em OK no modal
     Em Layout do Portal, em Ano Letivo, selecionar "2024"
     Em Layout do Portal, em Descrição do Processo, inserir a descrição criada
+    Em Layout do Portal, clicar em Pesquisar
     Em Layout do Portal, verificar se o Layout foi excluído
 
 Cenário 32: Funcionalidade - Edição: Layout do Portal de Inscrições e Transferências
@@ -1511,7 +1511,7 @@ Cenário 32: Funcionalidade - Edição: Layout do Portal de Inscrições e Trans
     No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
     No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Ensino Fundamental
     
-Cenário 32: Funcionalidade Processo de Demanda
+Cenário 33: Funcionalidade Processo de Demanda
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
     ...                Inicial e Contínuo para as etapas/modalidades             
     [Tags]             Processo de Demanda | Fluxo Positivo
@@ -1522,14 +1522,23 @@ Cenário 32: Funcionalidade Processo de Demanda
     Entrar no eixo "Configuração"
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Processo de Demandas"
-    Clicar em Cadastrar
+    Em Processo de Demanda, clicar em Cadastrar
     Em Processo de Demanda, na Descrição, inserir "AUTOMACAO INFANTIL INICIAL 2023 #PROCESSO_TESTE_QA#"
     Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
-    Em Processo de Demanda, em Ano Letivo, selecionar "2023"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
     Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "Não"
-    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "Sim"
-    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "Sim"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "Não"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "Não"
     Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO INICIAL"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "CADASTRO INICIAL"
+    
+
+
+
+
+
+
+
 
 Cenário 33: Funcionalidade Programação de Processo
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula

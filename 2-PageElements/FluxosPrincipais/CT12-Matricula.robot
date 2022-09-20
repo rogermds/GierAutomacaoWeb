@@ -131,10 +131,10 @@ Em Justificativas da Pré-Matrícula, clicar em OK no Modal
 Em Layout do Portal, clicar em Cadastrar
     Execute JavaScript  document.getElementById("btnCadastraLayout").click();
 
-Em Layout do Portal, Página Inicial, em Ano Letivo, selecionar "${ano}"
-    Run Keyword If    '${ano}' == '2022'        Execute JavaScript   $('#ddlAnoLetivo').val("2022").trigger('chosen:updated');
-    Run Keyword If    '${ano}' == '2023'        Execute JavaScript   $('#ddlAnoLetivo').val("2023").trigger('chosen:updated');
-    Run Keyword If    '${ano}' == '2024'        Execute JavaScript   $('#ddlAnoLetivo').val("2024").trigger('chosen:updated');
+Em Layout do Portal, Página Inicial, em Ano Letivo, selecionar o ano subsequente
+    ${anoAtual}     Get Current Date    result_format=%Y
+    ${anoSeguinte}    Evaluate     ${anoAtual}+2
+    Execute JavaScript   $('#ddlAnoLetivo').val("${anoSeguinte}").trigger('chosen:updated');
     Execute JavaScript   $('#ddlAnoLetivo').trigger('change');
     Aguardar tela de carregamento
 
@@ -279,10 +279,13 @@ Em Layout do Portal, clicar em Ações e Excluir
     Aguardar tela de carregamento
 
 Em Layout do Portal, verificar se o Layout foi excluído
-    Wait Until Page Contains    NÃO FORAM ENCONTRADOS REGISTROS
-    
+    Wait Until Element Is Visible    alertBox_btnOk
+    Wait Until Element Contains    lblMsg    NÃO FORAM ENCONTRADOS REGISTROS
+
 Em Layout do Portal, clicar em OK no modal
+    Wait Until Element Is Visible    alertBox_btnOk
     Execute JavaScript  document.getElementById("alertBox_btnOk").click();
+    Aguardar tela de carregamento
 
 Em Layout do Portal, clicar em Ações e Editar
     Execute JavaScript  xPathResult = document.evaluate("//input[contains(@class,'btnAcoes btnAcoes_grid')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
@@ -398,3 +401,7 @@ No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Educaçã
 
 No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Ensino Fundamental
     Wait Until Page Contains    ${textoObsImportanteFundamental}
+
+Em Processo de Demanda, clicar em Cadastrar
+    Wait Until Element Is Visible    cphContent_btnCadastrar
+    Execute JavaScript  document.getElementById("cphContent_btnCadastrar").click();
