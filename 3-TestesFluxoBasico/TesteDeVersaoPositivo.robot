@@ -1406,30 +1406,9 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
     Em Justificativas da Pré-Matrícula, clicar em OK no Modal
 
-EDITAR
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
-    Em Layout do Portal, em Ano Letivo, selecionar "2024"
-    Em Layout do Portal, clicar em Pesquisar
-    Em Layout do Portal, clicar em Ações e Continuar Configuração
-    Em Layout do Portal, Página Inicial, em Descrição do Processo, inserir "LAYOUT PORTAL EDITADO1"
-    Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir uma imagem
-    Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "01/01/2022"
-    Em Layout do Portal, Página Inicial, no Banner Inicial Web, clicar em Inserir
-    Em Layout do Portal, Página Inicial, clicar em Salvar e Próximo
-    Em Layout do Portal, Informações Importantes, em Informações Gerais selecionar "EDUCAÇÃO INFANTIL"
-    Em Layout do Portal, Informações Importantes, em Descrição, inserir "TESTE DESCRIÇÃO AUTOMACAO "
-    Em Layout do Portal, Informações Importantes, clicar em Inserir
-    Em Layout do Portal, Informações Importantes, clicar em Salvar e Próximo
-    
-## ATUALIZAR O NOME DO PROCESSO CORRETO
-Cenário 31: Funcionalidade - Layout do Portal de Inscrições e Transferências
-    [Documentation]    Esse teste efetua o cadastro e edição do Portal
+## ATUALIZAR O NOME DO PROCESSO CORRETO APÓS CRIAÇÃO DO PROCESSO
+Cenário 31: Funcionalidade - Cadastro: Layout do Portal de Inscrições e Transferências
+    [Documentation]    Esse teste efetua o cadastro e exclusão do Portal
     ...                Online de Matrícula            
     [Tags]             Layout do Portal de Inscrições e Transferências | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -1452,37 +1431,86 @@ Cenário 31: Funcionalidade - Layout do Portal de Inscrições e Transferências
     Em Layout do Portal, Informações Importantes, em Informações Gerais selecionar "EDUCAÇÃO INFANTIL"
     Em Layout do Portal, Informações Importantes, em Descrição, inserir "TESTE DESCRIÇÃO AUTOMACAO "
     Em Layout do Portal, Informações Importantes, clicar em Inserir
+    Em Layout do Portal, Informações Importantes, em Informações Gerais selecionar "ENSINO FUNDAMENTAL"
+    Em Layout do Portal, Informações Importantes, em Descrição, inserir "TESTE DESCRIÇÃO AUTOMACAO "
+    Em Layout do Portal, Informações Importantes, clicar em Inserir
     Em Layout do Portal, Informações Importantes, clicar em Salvar e Próximo
-    Em Layout do Portal, Layout Inscrição, selecionar os campos X
+    Em Layout do Portal, Layout Inscrição, selecionar os campos conforme o ambiente de produção
     Em Layout do Portal, Layout Inscrição, clicar em Salvar e Próximo
-    Em Layout do Portal, Layout Transferência, selecionar os campos X
     Em Layout do Portal, Layout Transferência, clicar em Salvar e Próximo
     Em Layout do Portal, Observações Importantes, selecionar a Etapa "EDUCAÇÃO INFANTIL"
     Em Layout do Portal, Observações Importantes, selecionar o curso "PRÉ-ESCOLA"
     Em Layout do Portal, Observações Importantes, selecionar em inscrição "INSCRIÇÃO"
     Em Layout do Portal, Observações Importantes, selecionar em vaga "SIM"
-    Em Layout do Portal, Observações Importantes, em Observações inserir "TESTE OBSERVAÇÃO "
+    Em Layout do Portal, Observações Importantes, em Observações inserir "TESTE OBSERVAÇÃO AUTOMACAO "
     Em Layout do Portal, Observações Importantes, clicar em Inserir
+    Em Layout do Portal, Observações Importantes, selecionar a Etapa "ENSINO FUNDAMENTAL"
+    Em Layout do Portal, Observações Importantes, selecionar o curso "CICLO II"
+    Em Layout do Portal, Observações Importantes, selecionar em inscrição "INSCRIÇÃO"
+    Em Layout do Portal, Observações Importantes, selecionar em vaga "SIM"
+    Em Layout do Portal, Observações Importantes, em Observações inserir "TESTE OBSERVAÇÃO AUTOMACAO "
+    Em Layout do Portal, Observações Importantes, clicar em Inserir
+    Em Layout do Portal, Observações Importantes, clicar em Salvar
+    Em Layout do Portal, Observações Importantes, clicar em OK no Modal
+    Em Layout do Portal, em Ano Letivo, selecionar "2024"
+    Em Layout do Portal, clicar em Pesquisar
+    Em Layout do Portal, clicar em Ações e Excluir
+    Em Layout do Portal, clicar em OK no modal
+    Em Layout do Portal, em Ano Letivo, selecionar "2024"
+    Em Layout do Portal, em Descrição do Processo, inserir a descrição criada
+    Em Layout do Portal, verificar se o Layout foi excluído
+
+Cenário 32: Funcionalidade - Edição: Layout do Portal de Inscrições e Transferências
+    [Documentation]    Esse teste efetua a edição e verificação das informações no 
+    ...                Portal Online de Matrícula            
+    [Tags]             Layout do Portal de Inscrições e Transferências | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
+    Em Layout do Portal, em Ano Letivo, selecionar "2022"
+    Em Layout do Portal, clicar em Pesquisar
+    Em Layout do Portal, clicar em Ações e Continuar Configuração
+    Em Layout do Portal, Página Inicial, clicar em Salvar e Próximo
+    Em Layout do Portal, Informações Importantes, editar o texto da etapa Educação Infantil
+    Em Layout do Portal, Informações Importantes, editar o texto da etapa Ensino Fundamental
+    Em Layout do Portal, Informações Importantes, clicar em Salvar e Próximo
+    Em Layout do Portal, Layout Inscrição, verificar se os campos estão marcados conforme o ambiente de produção
+    Em Layout do Portal, Layout Inscrição, clicar em Salvar e Próximo
+    Em Layout do Portal, Layout Transferência, clicar em Salvar e Próximo
+    Em Layout do Portal, Observações Importantes, editar o texto da etapa Educação Infantil
+    Em Layout do Portal, Observações Importantes, editar o texto da etapa Ensino Fundamental
     Em Layout do Portal, Observações Importantes, clicar em Salvar
     Em Layout do Portal, Observações Importantes, clicar em OK no Modal
     Entrar no Portal
     No Portal, clicar em "Educação Infantil"
-    Selecionar o processo para "Educação Infantil"
-
-
-PORTAL
-    Entrar no Portal
-    No Portal, clicar em "EDUCAÇÃO INFANTIL"
-    Dormir
     No Portal, selecionar o processo para a etapa "Educação Infantil"
-    Dormir
-    No Portal, verificar se o texto exibido é igual ao cadastrado
+    No Portal, verificar se o texto exibido é igual ao cadastrado em Educação Infantil
     No Portal, fechar o modal de informações importantes
-    Dormir
-    No Portal, clicar em Consultar Solicitação
-
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "Ensino Fundamental"
+    No Portal, verificar se o texto exibido é igual ao cadastrado em Ensino Fundamental
+    No Portal, fechar o modal de informações importantes
+    No Portal, clicar em "Consultar Solicitação"
+    No Portal, em Consultar Solicitação, selecionar a nacionalidade "Brasileiro"
+    No Portal, em Consultar Solicitação, em Protocolo inserir "20269562"
+    No Portal, em Consultar Solicitação, em CPF inserir "57743459802"
+    No Portal, em Consultar Solicitação, em Data de Nascimento inserir "07/03/1996"
+    No Portal, em Consultar Solicitação, clicar em Pesquisar
+    No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
+    No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Educação Infantil
+    No Portal, clicar em "Consultar Solicitação"
+    No Portal, em Consultar Solicitação, selecionar a nacionalidade "Brasileiro"
+    No Portal, em Consultar Solicitação, em Protocolo inserir "20269563"
+    No Portal, em Consultar Solicitação, em CPF inserir "97780957012"
+    No Portal, em Consultar Solicitação, em Data de Nascimento inserir "07/03/1996"
+    No Portal, em Consultar Solicitação, clicar em Pesquisar
+    No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
+    No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Ensino Fundamental
     
-
 Cenário 32: Funcionalidade Processo de Demanda
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
     ...                Inicial e Contínuo para as etapas/modalidades             

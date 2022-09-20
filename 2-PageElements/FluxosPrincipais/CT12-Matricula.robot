@@ -139,6 +139,7 @@ Em Layout do Portal, Página Inicial, em Ano Letivo, selecionar "${ano}"
     Aguardar tela de carregamento
 
 Em Layout do Portal, Página Inicial, em Descrição do Processo, inserir "${descricaoProcesso}"
+    Set Suite Variable    ${descricaoProcesso}
     Sleep    1
     Clear Element Text    txtDescricao
     Input Text    txtDescricao    ${descricaoProcesso}
@@ -169,6 +170,7 @@ Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, clicar em Inseri
     Aguardar tela de carregamento
 
 Em Layout do Portal, Página Inicial, clicar em Salvar e Próximo
+    Wait Until Element Is Visible    btnAvancaPrimeiroPasso
     Sleep    1
     Aguardar tela de carregamento
     Execute JavaScript  document.getElementById("btnAvancaPrimeiroPasso").click();
@@ -179,7 +181,7 @@ Em Layout do Portal, Informações Importantes, em Informações Gerais selecion
     Set Suite Variable    ${etapaInfoGerais}
     Wait Until Element Is Visible    btnAvancaSegundoPasso
     Run Keyword If    '${etapaInfoGerais}' == 'EDUCAÇÃO INFANTIL'        Execute JavaScript   $('#ddlEtapaModalidade').val("1").trigger('chosen:updated');
-    Run Keyword If    '${etapaInfoGerais}' == 'EDUCAÇÃO INFANTIL'        Execute JavaScript   $('#ddlEtapaModalidade').val("1").trigger('chosen:updated');
+    Run Keyword If    '${etapaInfoGerais}' == 'ENSINO FUNDAMENTAL'        Execute JavaScript   $('#ddlEtapaModalidade').val("4").trigger('chosen:updated');
     Sleep    1
 
 Em Layout do Portal, Informações Importantes, em Descrição, inserir "${textoImpressaoConselho}"
@@ -194,30 +196,33 @@ Em Layout do Portal, Informações Importantes, clicar em Inserir
 Em Layout do Portal, Informações Importantes, clicar em Salvar e Próximo
     Execute JavaScript  document.getElementById("btnAvancaSegundoPasso").click();
 
-Em Layout do Portal, Layout Inscrição, selecionar os campos X
+Em Layout do Portal, Layout Inscrição, selecionar os campos conforme o ambiente de produção
     Wait Until Element Is Visible    btnAvancaTerceiroPasso
-
+    Execute JavaScript  document.getElementById("chkV_b5b7").click();
+    Execute JavaScript  document.getElementById("chkV_b5b6").click();
+    Execute JavaScript  document.getElementById("chkV_b5b9").click();
+    Execute JavaScript  document.getElementById("chkV_b6b3").click();
 
 Em Layout do Portal, Layout Inscrição, clicar em Salvar e Próximo
+    Wait Until Page Contains Element    btnAvancaTerceiroPasso
     Execute JavaScript  document.getElementById("btnAvancaTerceiroPasso").click();
-    
-Em Layout do Portal, Layout Transferência, selecionar os campos X
-    Wait Until Element Is Visible    btnAvancaQuartoPasso
-
 
 Em Layout do Portal, Layout Transferência, clicar em Salvar e Próximo
+    Wait Until Element Is Visible    btnAvancaQuartoPasso
     Execute JavaScript  document.getElementById("btnAvancaQuartoPasso").click();
 
 Em Layout do Portal, Observações Importantes, selecionar a Etapa "${etapaObsImportante}"
     Wait Until Element Is Visible    btnSalvar
     Set Suite Variable    ${etapaObsImportante}
     Run Keyword If    '${etapaObsImportante}' == 'EDUCAÇÃO INFANTIL'        Execute JavaScript   $('#ddlEtapaModalidadeComprovante').val("1").trigger('chosen:updated');
+    Run Keyword If    '${etapaObsImportante}' == 'ENSINO FUNDAMENTAL'        Execute JavaScript   $('#ddlEtapaModalidadeComprovante').val("4").trigger('chosen:updated');
     Execute JavaScript   $('#ddlEtapaModalidadeComprovante').trigger('change');
     Aguardar tela de carregamento
 
 Em Layout do Portal, Observações Importantes, selecionar o curso "${cursoObsImportante}"
     Set Suite Variable    ${cursoObsImportante}
     Run Keyword If    '${cursoObsImportante}' == 'PRÉ-ESCOLA'        Execute JavaScript   $('#ddlCursoComprovante').val("3").trigger('chosen:updated');
+    Run Keyword If    '${cursoObsImportante}' == 'CICLO II'        Execute JavaScript   $('#ddlCursoComprovante').val("4").trigger('chosen:updated');
     Execute JavaScript   $('#ddlCursoComprovante').trigger('change');
     Aguardar tela de carregamento
 
@@ -250,6 +255,7 @@ Em Layout do Portal, Observações Importantes, clicar em OK no Modal
 
 Entrar no Portal 
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/index.html"
+    Aguardar carregamento Portal
 
 Em Layout do Portal, em Ano Letivo, selecionar "${ano}"
     Wait Until Page Contains    Configuração de Layout do Portal de Inscrições e Transferências
@@ -259,35 +265,136 @@ Em Layout do Portal, em Ano Letivo, selecionar "${ano}"
     Execute JavaScript   $('#ddlAnoLetivo').trigger('change');
     Aguardar tela de carregamento
 
+Em Layout do Portal, em Descrição do Processo, inserir a descrição criada
+    Input Text    txtDescricao    ${descricaoProcesso}
+
 Em Layout do Portal, clicar em Pesquisar
     Execute JavaScript  document.getElementById("btnPesquisar_busca").click();
     Aguardar tela de carregamento
     
-Em Layout do Portal, clicar em Ações e Continuar Configuração
+Em Layout do Portal, clicar em Ações e Excluir
+    Execute JavaScript  xPathResult = document.evaluate("//input[contains(@class,'btnAcoes btnAcoes_grid')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  document.getElementById("div_smartGrid_exclusao_grid_0").click();
+    Aguardar tela de carregamento
+
+Em Layout do Portal, verificar se o Layout foi excluído
+    Wait Until Page Contains    NÃO FORAM ENCONTRADOS REGISTROS
+    
+Em Layout do Portal, clicar em OK no modal
+    Execute JavaScript  document.getElementById("alertBox_btnOk").click();
+
+Em Layout do Portal, clicar em Ações e Editar
     Execute JavaScript  xPathResult = document.evaluate("//input[contains(@class,'btnAcoes btnAcoes_grid')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click()
     Execute JavaScript  document.getElementById("div_smartGrid_edicao_grid_0").click();
     Aguardar tela de carregamento
 
+Em Layout do Portal, clicar em Ações e Continuar Configuração
+    Em Layout do Portal, clicar em Ações e Editar
+
+Em Layout do Portal, Informações Importantes, editar o texto da etapa Educação Infantil
+    Wait Until Element Is Visible    btnInserirInfoGeral
+    Execute JavaScript  xPathResult = document.evaluate("//input[contains(@idregistro,'gridInformacoesGerais_0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  document.getElementById("div_smartGrid_edicao_gridInformacoesGerais_0").click();
+    Aguardar tela de carregamento
+    Set Suite Variable    ${textoInfoImportanteInfantil}  Texto de Informações Importantes editado para a etapa Educação Infantil !!
+    Select Frame   infogeral_ifr
+    Clear Element Text    tinymce
+    Input Text   tinymce    ${textoInfoImportanteInfantil}
+    Unselect Frame
+    Execute JavaScript  document.getElementById("btnInserirInfoGeral").click();
+
+Em Layout do Portal, Informações Importantes, editar o texto da etapa Ensino Fundamental
+    Wait Until Element Is Visible    btnInserirInfoGeral
+    Execute JavaScript  xPathResult = document.evaluate("//input[contains(@idregistro,'gridInformacoesGerais_2')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  document.getElementById("div_smartGrid_edicao_gridInformacoesGerais_2").click();
+    Aguardar tela de carregamento
+    Set Suite Variable    ${textoInfoImportanteFundamental}  Texto de Informações Importantes editado para a etapa Ensino Fundamental !! 
+    Select Frame   infogeral_ifr
+    Clear Element Text    tinymce
+    Input Text   tinymce    ${textoInfoImportanteFundamental}
+    Unselect Frame
+    Execute JavaScript  document.getElementById("btnInserirInfoGeral").click();
+
+Em Layout do Portal, Layout Inscrição, verificar se os campos estão marcados conforme o ambiente de produção
+    Element Attribute Value Should Be    chkV_b5b7    checked    true
+    Element Attribute Value Should Be    chkV_b5b6    checked    true
+    Element Attribute Value Should Be    chkV_b5b9    checked    true
+    Element Attribute Value Should Be    chkV_b6b3    checked    true
+
+Em Layout do Portal, Observações Importantes, editar o texto da etapa Educação Infantil
+    Wait Until Element Is Visible    btnInserirComprovante
+    Execute JavaScript  xPathResult = document.evaluate("//input[contains(@idregistro,'gridComprovante_2')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  document.getElementById("div_smartGrid_edicao_gridComprovante_2").click();
+    Aguardar tela de carregamento
+    Set Suite Variable    ${textoObsImportanteInfantil}  Texto de Observações Importantes editado para a etapa Educação Infantil !!  
+    Clear Element Text    txtComprovante
+    Input Text   txtComprovante    ${textoObsImportanteInfantil}
+    Execute JavaScript  document.getElementById("btnInserirComprovante").click();
+
+Em Layout do Portal, Observações Importantes, editar o texto da etapa Ensino Fundamental
+    Wait Until Element Is Visible    btnInserirComprovante
+    Execute JavaScript  xPathResult = document.evaluate("//input[contains(@idregistro,'gridComprovante_12')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  document.getElementById("div_smartGrid_edicao_gridComprovante_12").click();
+    Aguardar tela de carregamento
+    Set Suite Variable    ${textoObsImportanteFundamental}  Texto de Observações Importantes editado para a etapa Ensino Fundamental !!
+    Clear Element Text    txtComprovante
+    Input Text   txtComprovante    ${textoObsImportanteFundamental}
+    Execute JavaScript  document.getElementById("btnInserirComprovante").click();
+
 No Portal, clicar em "${etapa}"
-    Aguardar carregamento Portal
-    Wait Until Page Contains    Educação Infantil
-    Run Keyword If   '${etapa}' == 'EDUCAÇÃO INFANTIL'   Execute JavaScript  xPathResult = document.evaluate("//div[@class='botao botao-ciano'][contains(.,'Educação Infantil')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Run Keyword If   '${etapa}' == 'EDUCAÇÃO INFANTIL'   Execute JavaScript  xPathResult.singleNodeValue.click()
+    Run Keyword If   '${etapa}' == 'Educação Infantil'    Click Element    //div[@class='botao botao-ciano'][contains(.,'Educação Infantil')]
+    Run Keyword If   '${etapa}' == 'Ensino Fundamental'    Click Element    //div[@class='botao botao-azul'][contains(.,'Ensino Fundamental')]
+    Run Keyword If   '${etapa}' == 'Consultar Solicitação'    Click Element    //div[@class='botao-branco'][contains(.,'Consultar Solicitação')]
     Aguardar carregamento Portal
 
 No Portal, selecionar o processo para a etapa "${etapa}"
-    Wait Until Page Contains    Selecione para qual ano letivo deseja realizar a inscrição!
-    Run Keyword If   '${etapa}' == 'EDUCAÇÃO INFANTIL'   Execute JavaScript  document.getElementById("seleciona-processo-17").click();
+    Wait Until Element Is Visible    //a[contains(@rel,'modal:close')]
+    Run Keyword If   '${etapa}' == 'Educação Infantil'   Click Element    seleciona-processo-17
+    Run Keyword If   '${etapa}' == 'Ensino Fundamental'   Click Element    seleciona-processo-19
     Aguardar carregamento Portal
 
-No Portal, verificar se o texto exibido é igual ao cadastrado
-    Wait Until Page Contains    ${textoImpressaoEtapa}
+No Portal, verificar se o texto exibido é igual ao cadastrado em Educação Infantil
+    Wait Until Element Is Visible    iniciar-inscricao
+    Wait Until Page Contains    ${textoInfoImportanteInfantil}
+
+No Portal, verificar se o texto exibido é igual ao cadastrado em Ensino Fundamental
+    Wait Until Element Is Visible    iniciar-inscricao
+    Wait Until Page Contains    ${textoInfoImportanteFundamental}
 
 No Portal, fechar o modal de informações importantes
     Wait Until Page Contains Element    //a[contains(@rel,'modal:close')]
     Click Element    //a[contains(@rel,'modal:close')]
     Aguardar carregamento Portal
 
-No Portal, clicar em Consultar Solicitação
-    Click Element    //div[@class='containerBotaoMenu'][contains(.,'Consultar Solicitação')]
+No Portal, em Consultar Solicitação, selecionar a nacionalidade "Brasileiro"
+    Click Element    BR
+
+No Portal, em Consultar Solicitação, em Protocolo inserir "${protocolo}"
+    Input Text    txtprotocolo    ${protocolo}
+
+No Portal, em Consultar Solicitação, em CPF inserir "${cpf}"
+    Input Text    txtCpf    ${cpf}
+
+No Portal, em Consultar Solicitação, em Data de Nascimento inserir "${dataNascimento}"
+    Input Text    txtdatanascimento    ${dataNascimento}
+
+No Portal, em Consultar Solicitação, clicar em Pesquisar
+    Click Element    btnPesquisar
+    Aguardar carregamento Portal
+
+No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
+    Wait Until Element Is Visible    //input[contains(@value,'Emitir 2ª Via')]
+    Click Element    //input[contains(@value,'Emitir 2ª Via')]
+    Aguardar carregamento Portal
+
+No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Educação Infantil
+    Wait Until Page Contains    ${textoObsImportanteInfantil}
+
+No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Ensino Fundamental
+    Wait Until Page Contains    ${textoObsImportanteFundamental}

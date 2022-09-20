@@ -155,4 +155,4 @@ Dormir
     Sleep    4
 
 Aguardar carregamento Portal
-    Wait Until Page Does Not Contain    cssload-container
+    Wait Until Element Is Not Visible    wait    300
