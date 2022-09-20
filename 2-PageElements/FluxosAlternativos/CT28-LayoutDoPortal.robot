@@ -42,7 +42,7 @@ Visualizar a mensagem: NÃO É POSSÍVEL SALVAR O LAYOUT. JÁ EXISTE OUTRO LAYOU
 
 Em Ano Letivo, selecionar o Ano Letivo Seguinte
     ${anoAtual}     Get Current Date    result_format=%Y
-    ${anoSeguinte}    Evaluate     ${anoAtual}+1
+    ${anoSeguinte}    Evaluate     ${anoAtual}+2
     Execute JavaScript   $('#${AnoLetivo}').val("${anoSeguinte}").trigger('chosen:updated');
     Execute JavaScript   $('#${AnoLetivo}').trigger('change');
 
