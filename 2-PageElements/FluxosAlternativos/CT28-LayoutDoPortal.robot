@@ -22,11 +22,11 @@ ${arquivo}                               C:\\Users\\amanda.diniz\\Desktop\\image
 
 *** Keywords ***
 Clicar em Cadastrar Layout
-    Execute JavaScript  document.getElementById("${botaoCadastrarLayout}").click();
+    Execute JavaScript  document.getElementById("${botaoCadastrarLayout}").click();
     Sleep    3
 
 Clicar em Salvar e Próximo no passo 1
-    Execute JavaScript  document.getElementById("${botaoSalvarPrimeiroPasso}").click();
+    Execute JavaScript  document.getElementById("${botaoSalvarPrimeiroPasso}").click();
     Sleep    3
 
 Visualizar a mensagem: NECESSÁRIO PREENCHER O CAMPO DESCRIÇÃO DO PROCESSO PARA PROSSEGUIR.
@@ -47,7 +47,7 @@ Em Ano Letivo, selecionar o Ano Letivo Seguinte
     Execute JavaScript   $('#${AnoLetivo}').trigger('change');
 
 Em Banner Web clicar em Inserir
-    Execute JavaScript  document.getElementById("${botaoIncluirWeb}").click();
+    Execute JavaScript  document.getElementById("${botaoIncluirWeb}").click();
     Sleep    5 
 
 Visualizar a mensagem: SELECIONE O ARQUIVO ANTES DE INCLUI-LO.
@@ -60,17 +60,17 @@ Em inserir Documento Web, inserir o arquivo "Crianças1.jpg"
     Sleep    5
     
 Em Aplicar no Portal Web, inserir "${data}"
-    Execute JavaScript  document.getElementById("${campoDataWeb}").click();
+    Execute JavaScript  document.getElementById("${campoDataWeb}").click();
     Input Text    ${campoDataWeb}    ${data}
     
 Visualizar a mensagem: DATA DE INÍCIO DA VIGÊNCIA DO BANNER INVÁLIDA. 
     Wait Until Page Contains Element    //span[contains(.,'Data de início da vigência do banner inválida.')]
 
 Em Aplicar no Portal Web, inserir a data do dia atual
-    Execute JavaScript  document.getElementById("${campoDataWeb}").click();
+    Execute JavaScript  document.getElementById("${campoDataWeb}").click();
     Clear Element Text    ${campoDataWeb}
-    Execute JavaScript  xPathResult = document.evaluate("${botaoDataHoje}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  xPathResult = document.evaluate("${botaoDataHoje}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
     Sleep   2
 
 Em inserir Documento móvel, inserir o arquivo "Crianças1.jpg"
@@ -79,35 +79,35 @@ Em inserir Documento móvel, inserir o arquivo "Crianças1.jpg"
     Sleep    5
 
 Em Aplicar no Portal móvel, inserir "${data}" 
-    Execute JavaScript  document.getElementById("${campoDataWeb}").click();
+    Execute JavaScript  document.getElementById("${campoDataWeb}").click();
     Input Text    ${campoDataMovel}    ${data}
     Sleep   3
     
 Em Banner móvel clicar em Inserir
-    Execute JavaScript  document.getElementById("${botaoIncluirMobile}").click();
+    Execute JavaScript  document.getElementById("${botaoIncluirMobile}").click();
     Sleep   3
 
 Em Aplicar no Portal móvel, inserir a data do dia atual
-    Execute JavaScript  document.getElementById("${campoDataMovel}").click();
+    Execute JavaScript  document.getElementById("${campoDataMovel}").click();
     Clear Element Text    ${campoDataMovel}
-    Execute JavaScript  xPathResult = document.evaluate("${botaoDataHoje}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  xPathResult = document.evaluate("${botaoDataHoje}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
     Sleep   3
     
 Clicar em Salvar e Próximo no passo 2
-    Execute JavaScript  document.getElementById("${botaoSalvarSegundoPasso}").click();
+    Execute JavaScript  document.getElementById("${botaoSalvarSegundoPasso}").click();
     Sleep   3
     
 Clicar em Salvar e Próximo no passo 3
-    Execute JavaScript  document.getElementById("${botaoSalvarTerceiroPasso}").click();
+    Execute JavaScript  document.getElementById("${botaoSalvarTerceiroPasso}").click();
     Sleep   3
 
 Clicar em Salvar e Próximo no passo 4
-    Execute JavaScript  document.getElementById("${botaoSalvarQuartoPasso}").click();
+    Execute JavaScript  document.getElementById("${botaoSalvarQuartoPasso}").click();
     Sleep   3
 
 Clicar em inserir no passo 5    
-    Execute JavaScript  document.getElementById("${botaoInserirQuintoPasso}").click();
+    Execute JavaScript  document.getElementById("${botaoInserirQuintoPasso}").click();
     Sleep   3
 
 Visualizar a mensagem: É NECESSÁRIO INFORMAR A OBSERVAÇÃO DO COMPROVANTE DE INSCRIÇÃO

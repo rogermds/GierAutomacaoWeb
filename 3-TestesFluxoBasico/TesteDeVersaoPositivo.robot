@@ -1472,11 +1472,11 @@ Cenário 31: Funcionalidade - Layout do Portal de Inscrições e Transferências
 
 PORTAL
     Entrar no Portal
-    No Portal, clicar em "Educação Infantil"
+    No Portal, clicar em "EDUCAÇÃO INFANTIL"
     Dormir
     No Portal, selecionar o processo para a etapa "Educação Infantil"
     Dormir
-    # No Portal, verificar se o texto exibido é igual ao cadastrado
+    No Portal, verificar se o texto exibido é igual ao cadastrado
     No Portal, fechar o modal de informações importantes
     Dormir
     No Portal, clicar em Consultar Solicitação
