@@ -1511,9 +1511,9 @@ Cenário 32: Funcionalidade - Edição: Layout do Portal de Inscrições e Trans
     No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
     No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Ensino Fundamental
     
-Cenário 33: Funcionalidade Processo de Demanda
+Cenário 33: Funcionalidade Processo de Demanda Inicial - Infantil
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
-    ...                Inicial e Contínuo para as etapas/modalidades             
+    ...                Inicial e Contínuo para a etapas/modalidade Infantil
     [Tags]             Processo de Demanda | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
@@ -1523,7 +1523,7 @@ Cenário 33: Funcionalidade Processo de Demanda
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Processo de Demandas"
     Em Processo de Demanda, clicar em Cadastrar
-    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO INFANTIL INICIAL 2023 #PROCESSO_TESTE_QA#"
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO INFANTIL INICIAL 2022"
     Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
     Em Processo de Demanda, em Ano Letivo, selecionar "2022"
     Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
@@ -1580,8 +1580,8 @@ Cenário 33: Funcionalidade Processo de Demanda
     Em Processo de Demanda, clicar em Incluir
     Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
     Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
-    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "PRÉ-ESCOLA - ESTÁGIO II"
-    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CRECHE - BERCÁRIO I"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "PRÉ-ESCOLA - ESTÁGIO II"
     Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
     Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2016"
     Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2017"
@@ -1593,11 +1593,99 @@ Cenário 33: Funcionalidade Processo de Demanda
     Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
     Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
     Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
-
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
     
-
-
-
+Cenário 34: Funcionalidade Processo de Demanda Inicial - Fundamental
+    [Documentation]    Esse teste efetua a configuração do Processo de Demanda
+    ...                Inicial e Contínuo para a etapas/modalidade Fundamental
+    [Tags]             Processo de Demanda | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO FUNDAMENTAL INICIAL 2022"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO INICIAL"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO I - 1º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2015"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/07/2016"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO I - 2º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2014"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2015"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO I - 3º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2013"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2014"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO II - 4º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2012"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2013"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO II - 5º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2011"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2012"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
 
 
 

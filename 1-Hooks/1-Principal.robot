@@ -57,9 +57,14 @@ Entrar no módulo "${nomeModulo}"
         Execute JavaScript  xPathResult.singleNodeValue.click()  
     END
 
-Entrar na funcionalidade "${funcionalidade}"  
-    Execute JavaScript  xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
+Entrar na funcionalidade "${funcionalidade}"
+    IF    '${funcionalidade}' == 'Processo de Demandas'
+        Execute JavaScript  xPathResult = document.evaluate("//span[@title='Processo de Demandas']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click()  
+    ELSE 
+        Execute JavaScript  xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click() 
+    END
     Aguardar tela de carregamento
 
 Clicar no botão Cadastrar
@@ -152,7 +157,7 @@ Clicar em Salvar Alterações
     Aguardar tela de carregamento
 
 Dormir
-    Sleep    4
+    Sleep    2
 
 Aguardar carregamento Portal
     Wait Until Element Is Not Visible    wait    300
