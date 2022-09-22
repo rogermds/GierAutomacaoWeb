@@ -411,6 +411,7 @@ Em Processo de Demanda, na Descrição, inserir "${descricaoProcesso}"
     Set Suite Variable    ${descricaoProcesso}
     ${descricaoProcessoChave}    Set Variable    ${descricaoProcesso} #PROCESSO_TESTE_QA#
     Wait Until Element Is Visible    cphContent_btnIncluir
+    Clear Element Text    cphContent_txtDescricao
     Input Text    cphContent_txtDescricao    ${descricaoProcessoChave}
 
 Em Processo de Demanda, em Resolução, inserir "${resolucao}"
@@ -473,8 +474,8 @@ Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "${cicloDest
     Run Keyword If    '${cicloDestino}' == 'CICLO I - 1º ANO'   Execute JavaScript   $('#cphContent_ddlCicloEnsino').val("11").trigger('chosen:updated');
     Run Keyword If    '${cicloDestino}' == 'CICLO I - 2º ANO'   Execute JavaScript   $('#cphContent_ddlCicloEnsino').val("12").trigger('chosen:updated');
     Run Keyword If    '${cicloDestino}' == 'CICLO I - 3º ANO'   Execute JavaScript   $('#cphContent_ddlCicloEnsino').val("13").trigger('chosen:updated');
-    Run Keyword If    '${cicloDestino}' == 'CICLO I - 4º ANO'   Execute JavaScript   $('#cphContent_ddlCicloEnsino').val("14").trigger('chosen:updated');
-    Run Keyword If    '${cicloDestino}' == 'CICLO I - 5º ANO'   Execute JavaScript   $('#cphContent_ddlCicloEnsino').val("15").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'CICLO II - 4º ANO'   Execute JavaScript   $('#cphContent_ddlCicloEnsino').val("14").trigger('chosen:updated');
+    Run Keyword If    '${cicloDestino}' == 'CICLO II - 5º ANO'   Execute JavaScript   $('#cphContent_ddlCicloEnsino').val("15").trigger('chosen:updated');
     Execute JavaScript   $('#cphContent_ddlCicloEnsino').trigger('change');
     Aguardar tela de carregamento
 
@@ -554,3 +555,137 @@ Em Processo de Demanda, clicar em Pesquisar
 
 Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
     Wait Until Page Contains    ${descricaoProcesso}
+
+Em Processo de Demanda, verificar se o processo não foi encontrado na pesquisa
+    Wait Until Page Does Not Contain    ${descricaoProcesso}
+
+Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "${mesmaEscola}"
+    Run Keyword If    '${mesmaEscola}' == 'SIM'    Execute JavaScript   $('#cphContent_ddlPermiteInscricaoMesmaEscola').val("1").trigger('chosen:updated');
+    Run Keyword If    '${mesmaEscola}' == 'NÃO'    Execute JavaScript   $('#cphContent_ddlPermiteInscricaoMesmaEscola').val("0").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlPermiteInscricaoMesmaEscola').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "${inscricaoPreMatricula}"
+    Run Keyword If    '${inscricaoPreMatricula}' == 'SIM'    Execute JavaScript   $('#cphContent_ddlPermiteNovaInscricaoGpm').val("1").trigger('chosen:updated');
+    Run Keyword If    '${inscricaoPreMatricula}' == 'NÃO'    Execute JavaScript   $('#cphContent_ddlPermiteNovaInscricaoGpm').val("0").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlPermiteNovaInscricaoGpm').trigger('change');
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Execute JavaScript   $('#cphContent_lbStatusGestaoPreMatricula [value="2"]').attr('selected', true);
+    Execute JavaScript   $('#cphContent_lbStatusGestaoPreMatricula [value="3"]').attr('selected', true);
+    Execute JavaScript   $("#cphContent_lbStatusGestaoPreMatricula").trigger("chosen:updated");
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, nos resultados, clicar em Ações e Editar
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkEditar_0").click();
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, nos resultados, clicar em Ações e Excluir
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkExcluir_0").click();
+    Aguardar tela de carregamento
+
+Em Processo de Demanda, clicar em Sim no modal
+    Wait Until Element Is Visible    cphContent_Mensagem_Padrao_btnSim
+    Execute JavaScript  document.getElementById("cphContent_Mensagem_Padrao_btnSim").click();
+    Aguardar tela de carregamento
+
+Em Programação de Processo, clicar em Cadastrar
+    Wait Until Element Is Visible    cphContent_btnCadastrar
+    Execute JavaScript  document.getElementById("cphContent_btnCadastrar").click();
+    Aguardar tela de carregamento
+
+Em Programação de Processo, em Ano Letivo, selecionar "${ano}"
+    Execute JavaScript   $('#cphContent_ddlAnoLetivo').val("${ano}").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlAnoLetivo').trigger('change');
+    Aguardar tela de carregamento
+
+Em Programação de Processo, em Tipo de Processo, selecionar "${tipoProcesso}"
+    Run Keyword If    '${tipoProcesso}' == 'PREMATRICULA'    Execute JavaScript   $('#cphContent_ddlTipoProcesso').val("1").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlTipoProcesso').trigger('change');
+    Aguardar tela de carregamento
+
+Em Programação de Processo, em Processo, selecionar o processo "${processo}"
+    Set Suite Variable    ${processo}
+    Wait Until Page Contains    Processo
+    Execute JavaScript   $("#cphContent_ddlProcesso").val($('option:contains("${processo}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlProcesso').trigger('change');
+    Aguardar tela de carregamento
+
+Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Wait Until Element Is Visible    cphContent_btnPesquisa
+    Execute JavaScript   $("#cphContent_ddlProcesso").val($('option:contains("${processo}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlProcesso').trigger('change');
+    Aguardar tela de carregamento
+
+Em Programação de Processo, em Ambiente Utilizado, selecionar "${ambienteUtilizado}"
+    Run Keyword If    '${ambienteUtilizado}' == 'Gier'    Execute JavaScript   document.getElementById("cphContent_rblAmbiente_0").click();
+    Aguardar tela de carregamento
+
+Em Programação de Processo, em Data Inicio, inserir "${data}"
+    Clear Element Text    cphContent_txtDataInicio
+    Input Text    cphContent_txtDataInicio    ${data}
+
+Em Programação de Processo, em Data Fim, inserir "${data}"
+    Clear Element Text    cphContent_txtDataFim
+    Input Text    cphContent_txtDataFim    ${data}
+
+Em Programação de Processo, em Hora Inicio, inserir "${hora}"
+    Input Text    cphContent_txtHoraInicio    ${hora}
+
+Em Programação de Processo, em Hora Fim, inserir "${hora}"
+    Clear Element Text    cphContent_txtHoraFim
+    Input Text    cphContent_txtHoraFim    ${hora}
+
+Em Programação de Processo, em Dias da Semana, selecionar "${diaSemana}"
+    Run Keyword If    '${diaSemana}' == 'Todos'    Execute JavaScript   document.getElementById("cblDiaSemana_7").click();
+    Run Keyword If    '${diaSemana}' == 'Segunda-Feira'    Execute JavaScript   document.getElementById("cblDiaSemana_1").click();
+    Aguardar tela de carregamento
+
+Em Programação de Processo, clicar em Inserir
+    Execute JavaScript   document.getElementById("cphContent_btnSalvar").click();
+    Aguardar tela de carregamento
+
+Em Programação de Processo, clicar em OK no modal
+    Wait Until Element Is Visible    cphContent_Mensagem_Padrao_btnOk
+    Execute JavaScript   document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();
+    Aguardar tela de carregamento
+    
+Em Programação de Processo, clicar em Sim no modal
+    Wait Until Element Is Visible    cphContent_Mensagem_Padrao_btnSim
+    Execute JavaScript   document.getElementById("cphContent_Mensagem_Padrao_btnSim").click();
+    Aguardar tela de carregamento
+
+Em Programação de Processo, clicar em Pesquisar
+    Wait Until Element Is Visible    cphContent_btnPesquisa
+    Execute JavaScript   document.getElementById("cphContent_btnPesquisa").click();
+    Aguardar tela de carregamento
+
+Em Programação de Processo, verificar se o processo aparece nos resultados
+    Wait Until Page Contains    ${processo}
+
+Em Programação de Processo, verificar se é exibida a mensagem "${mensagem}"
+    Element Should Contain    cphContent_Mensagem_Padrao_lblMsg    ${mensagem}
+
+Em Programação de Processo, clicar em Ações e Editar
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkEditar_0").click();
+    Aguardar tela de carregamento
+
+Em Programação de Processo, clicar em Ações e Excluir
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkExcluir_0").click();
+    Aguardar tela de carregamento
+
+Em Programação de Processo, verificar se a data "${data}" foi inserida 
+    Wait Until Page Contains    ${data}
+
+Em Programação de Processo, verificar se o horário "${hora}" foi inserida 
+    Wait Until Page Contains    ${hora}
+

@@ -44,6 +44,8 @@ Resource         ../2-PageElements/FluxosAlternativos/CT42-AvaliacaoEducacional.
 Resource         ../2-PageElements/FluxosAlternativos/CT43-AvaliacaoEducacional2.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT44-PortalInfantilInicial.robot
 Resource         ../2-PageElements/FluxosAlternativos/CT45-PortalInfantilCont.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT46-ProcessoDeDemanda.robot
+Resource         ../2-PageElements/FluxosAlternativos/CT47-ProgramacaoDeProcesso.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -1357,238 +1359,276 @@ Cenário 44: Portal de Inscrição - Infantil Inicial
     ...                solicitação para a etapa Infantil
     [Tags]             Portal de Inscrição | Fluxo Negativo
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/index.html"    
-    Clicar no botão para solicitação de pré-inscrição Infantil 
-    Clicar no processo de demandas inicial 
-    Viualizar as informações importantes 
-    Clicar no botão Iniciar Inscrição para o Ensino Infantil 
-    Clicar em Data de Nascimento e informar "00/00/0000"
-    Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
-    Clicar em Data de Nascimento e informar "24/04/1993"
-    Clicar em Cep e informar 07032-000
-    Clicar em Número da Residência e informar 134
-    Clicar no botão Pesquisar Escolas 
-    Visualizar a mensagem: NÃO EXISTEM ESCOLAS DISPONÍVEIS A PARTIR DOS DADOS INFORMADOS
-    Clicar em Cep e informar 00000-002
-    Visualizar a mensagem: NÃO FOI POSSÍVEL LOCALIZAR A COORDENADA PARA LISTAR ESCOLAS, FAVOR ENTRAR EM CONTATO COM ADMINISTRADOR DO SERVIÇO.
-    Clicar em Data de Nascimento e informar "24/04/2021"
-    Clicar em Cep e informar 07032-000
-    Clicar em Número da Residência e informar 134
-    Clicar no botão Pesquisar Escolas 
-    Selecionar a escola na pesquisa realizada
-    Clicar no botão Selecionar Escolas(s)
-    Clicar no botão Próximo
-    Preencher os checks dos termos de responsabilidade
-    Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
-    Clicar em CPF do responsável e informar "000.000.000-00"
-    Visualizar a mensagem: O CPF INFORMADO É INVÁLIDO
-    Clicar em Data de Nascimento do responsável e informar "00/00/0000"
-    Visualizar a mensagem: CPF NÃO INFORMADO
-    Clicar em CPF do responsável e informar "891.290.380-22"
-    Clicar em Nome Completo do responsável e informar "Teste Nome Responavel"
-    Clicar em Data de Nascimento do responsável e informar "00/00/0000"
-    Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
-    Clicar em Data de Nascimento do responsável e informar "10/01/1965"
-    Visualizar a mensagem: NÃO É POSSÍVEL CONTINUAR COM A INSCRIÇÃO, DIRIJA -SE PESSOALMENTE À ESCOLA MAIS PRÓXIMA COM OS DOCUMENTOS
-    Clicar em Nome Completo do responsável e informar "Teste Nome Responavel Automacao"
-    Clicar em Data de Nascimento do responsável e informar "10/01/1965"
-    Clicar em Sexo do responsavel e selecionar "Masculino"
-    Preencher os checks dos termos de responsabilidade
-    Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
-    Clicar em Nacionalidade e selecionar "Brasileira"
-    Clicar em Nome Completo do cadidato e informar "Teste Nome Candidato"
-    Clicar em Sexo do candidato e selecionar "Feminino"
-    Clicar em Certidão de Nascimento, selecionar "Nova" e informar "0"
-    Visualizar a mensagem: NÚMERO DE CERTIDÃO DE NASCIMENTO INVÁLIDO. VERIFIQUE O NÚMERO CADASTRADO.
-    Clicar em Certidão de Nascimento, selecionar "Nova" e informar "11246201552019194299537624703623"
-    Clicar em Data de Emissão do candidato e informar "00/00/0000"
-    Clicar em Telefone 1 e informar "11999999999"
-    Preencher os checks dos termos de responsabilidade
-    Visualizar a mensagem: DATA DE EMISSÃO DA CERTIDÃO É INVÁLIDA
-    Clicar em Data de Emissão do candidato e informar "24/04/2021"
-    Preencher os checks dos termos de responsabilidade
-    Visualizar a mensagem: DATA DE EMISSÃO DA CERTIDÃO DE NASCIMENTO NÃO PODE SER MENOR OU IGUAL QUE A DATA DE NASCIMENTO
-    Clicar em Data de Emissão do candidato e informar "25/04/2021"
-    Preencher os checks dos termos de responsabilidade
-    Visualizar a mensagem: NÃO É POSSÍVEL CONTINUAR COM A INSCRIÇÃO, DIRIJA -SE PESSOALMENTE À ESCOLA MAIS PRÓXIMA COM OS DOCUMENTOS
-    Clicar em Nome Completo do cadidato e informar "Teste Nome Candidato Automacao"
-    Preencher os checks dos termos de responsabilidade
-    Visualizar a mensgem: A PESSOA TESTE NOME CANDIDATO AUTOMACAO JÁ ESTÁ INSCRITO(A) NA REDE DE ENSINO!
+    # Clicar no botão para solicitação de pré-inscrição Infantil 
+    # Clicar no processo de demandas inicial 
+    # Viualizar as informações importantes 
+    # Clicar no botão Iniciar Inscrição para o Ensino Infantil 
+    # Clicar em Data de Nascimento e informar "00/00/0000"
+    # Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
+    # Clicar em Data de Nascimento e informar "24/04/1993"
+    # Clicar em Cep e informar 07032-000
+    # Clicar em Número da Residência e informar 134
+    # Clicar no botão Pesquisar Escolas 
+    # Visualizar a mensagem: NÃO EXISTEM ESCOLAS DISPONÍVEIS A PARTIR DOS DADOS INFORMADOS
+    # Clicar em Cep e informar 00000-002
+    # Visualizar a mensagem: NÃO FOI POSSÍVEL LOCALIZAR A COORDENADA PARA LISTAR ESCOLAS, FAVOR ENTRAR EM CONTATO COM ADMINISTRADOR DO SERVIÇO.
+    # Clicar em Data de Nascimento e informar "24/04/2021"
+    # Clicar em Cep e informar 07032-000
+    # Clicar em Número da Residência e informar 134
+    # Clicar no botão Pesquisar Escolas 
+    # Selecionar a escola na pesquisa realizada
+    # Clicar no botão Selecionar Escolas(s)
+    # Clicar no botão Próximo
+    # Preencher os checks dos termos de responsabilidade
+    # Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
+    # Clicar em CPF do responsável e informar "000.000.000-00"
+    # Visualizar a mensagem: O CPF INFORMADO É INVÁLIDO
+    # Clicar em Data de Nascimento do responsável e informar "00/00/0000"
+    # Visualizar a mensagem: CPF NÃO INFORMADO
+    # Clicar em CPF do responsável e informar "891.290.380-22"
+    # Clicar em Nome Completo do responsável e informar "Teste Nome Responavel"
+    # Clicar em Data de Nascimento do responsável e informar "00/00/0000"
+    # Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
+    # Clicar em Data de Nascimento do responsável e informar "10/01/1965"
+    # Visualizar a mensagem: NÃO É POSSÍVEL CONTINUAR COM A INSCRIÇÃO, DIRIJA -SE PESSOALMENTE À ESCOLA MAIS PRÓXIMA COM OS DOCUMENTOS
+    # Clicar em Nome Completo do responsável e informar "Teste Nome Responavel Automacao"
+    # Clicar em Data de Nascimento do responsável e informar "10/01/1965"
+    # Clicar em Sexo do responsavel e selecionar "Masculino"
+    # Preencher os checks dos termos de responsabilidade
+    # Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
+    # Clicar em Nacionalidade e selecionar "Brasileira"
+    # Clicar em Nome Completo do cadidato e informar "Teste Nome Candidato"
+    # Clicar em Sexo do candidato e selecionar "Feminino"
+    # Clicar em Certidão de Nascimento, selecionar "Nova" e informar "0"
+    # Visualizar a mensagem: NÚMERO DE CERTIDÃO DE NASCIMENTO INVÁLIDO. VERIFIQUE O NÚMERO CADASTRADO.
+    # Clicar em Certidão de Nascimento, selecionar "Nova" e informar "11246201552019194299537624703623"
+    # Clicar em Data de Emissão do candidato e informar "00/00/0000"
+    # Clicar em Telefone 1 e informar "11999999999"
+    # Preencher os checks dos termos de responsabilidade
+    # Visualizar a mensagem: DATA DE EMISSÃO DA CERTIDÃO É INVÁLIDA
+    # Clicar em Data de Emissão do candidato e informar "24/04/2021"
+    # Preencher os checks dos termos de responsabilidade
+    # Visualizar a mensagem: DATA DE EMISSÃO DA CERTIDÃO DE NASCIMENTO NÃO PODE SER MENOR OU IGUAL QUE A DATA DE NASCIMENTO
+    # Clicar em Data de Emissão do candidato e informar "25/04/2021"
+    # Preencher os checks dos termos de responsabilidade
+    # Visualizar a mensagem: NÃO É POSSÍVEL CONTINUAR COM A INSCRIÇÃO, DIRIJA -SE PESSOALMENTE À ESCOLA MAIS PRÓXIMA COM OS DOCUMENTOS
+    # Clicar em Nome Completo do cadidato e informar "Teste Nome Candidato Automacao"
+    # Preencher os checks dos termos de responsabilidade
+    # Visualizar a mensgem: A PESSOA TESTE NOME CANDIDATO AUTOMACAO JÁ ESTÁ INSCRITO(A) NA REDE DE ENSINO!
 
 Cenário 45: Portal de Inscrição - Infantil Contínuo 
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Infantil
     [Tags]             Portal de Inscrição | Fluxo Negativo
     Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/index.html"
-    Clicar no botão para solicitação de pré-inscrição Infantil 
-    Clicar no Processo de Demandas Contínuo         
-    Viualizar as informações importantes 
-    Clicar no botão Iniciar Inscrição para o Ensino Infantil 
-    Clicar em Data de Nascimento e informar "00/00/0000"
-    Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
-    Clicar em Data de Nascimento e informar "24/04/1993"
-    Clicar em Cep e informar 07032-000
-    Clicar em Número da Residência e informar 134
-    Clicar no botão Pesquisar Escolas 
-    Visualizar a mensagem: NÃO EXISTEM ESCOLAS DISPONÍVEIS A PARTIR DOS DADOS INFORMADOS
-    Clicar em Cep e informar 00000-002
-    Visualizar a mensagem: NÃO FOI POSSÍVEL LOCALIZAR A COORDENADA PARA LISTAR ESCOLAS, FAVOR ENTRAR EM CONTATO COM ADMINISTRADOR DO SERVIÇO.
-    Clicar em Data de Nascimento e informar "24/04/2021"
-    Clicar em Cep e informar 07032-000
-    Clicar em Número da Residência e informar 134
-    Clicar no botão Pesquisar Escolas 
-    Selecionar a escola na pesquisa realizada
-    Clicar no botão Solicitar Vaga 
-    Preencher os checks dos termos de responsabilidade
-    Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
-    Clicar em CPF do responsável e informar "000.000.000-00"
-    Visualizar a mensagem: O CPF INFORMADO É INVÁLIDO
-    Clicar em Data de Nascimento do responsável e informar "00/00/0000"
-    Visualizar a mensagem: CPF NÃO INFORMADO
-    Clicar em CPF do responsável e informar "891.290.380-22"
-    Clicar em Nome Completo do responsável e informar "Teste Nome Responavel"
-    Clicar em Data de Nascimento do responsável e informar "00/00/0000"
-    Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
-    Clicar em Data de Nascimento do responsável e informar "10/01/1965"
-    Visualizar a mensagem: NÃO É POSSÍVEL CONTINUAR COM A INSCRIÇÃO, DIRIJA -SE PESSOALMENTE À ESCOLA MAIS PRÓXIMA COM OS DOCUMENTOS
-    Clicar em Nome Completo do responsável e informar "Teste Nome Responavel Automacao"
-    Clicar em Data de Nascimento do responsável e informar "10/01/1965"
-    Clicar em Sexo do responsavel e selecionar "Masculino"
-    Preencher os checks dos termos de responsabilidade
-    Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
-    Clicar em Nacionalidade e selecionar "Estrangeiro"
-    Clicar em RNE e informar "123456789qa"
-    Clicar em Data de Entrada do candidato e informar "00/00/0000"
-    Clicar em Nome Completo do cadidato e informar "Teste Nome Candidato Estrangeiro"
-    Clicar em Sexo do candidato e selecionar "Feminino"
-    Clicar em Telefone 1 e informar "11999999999"
-    Preencher os checks dos termos de responsabilidade
-    Visualizar a mensagem: DATA DE ENTRADA (RNE) INVÁLIDA
-    Clicar em Data de Entrada do candidato e informar "24/04/2021"
-    Preencher os checks dos termos de responsabilidade
-    Visualizar a mensagem: DATA DE ENTRADA (RNE) NÃO PODE SER MENOR OU IGUAL QUE A DATA DE NASCIMENTO
-    Clicar em Data de Entrada do candidato e informar "25/04/2021"
-    Visualizar a mensagem: VOCÊ NÃO PODE REALIZAR UMA NOVA INSCRIÇÃO, ALUNO JÁ POSSUI UMA INSCRIÇÃO ATIVA.
+    # Clicar no botão para solicitação de pré-inscrição Infantil 
+    # Clicar no Processo de Demandas Contínuo         
+    # Viualizar as informações importantes 
+    # Clicar no botão Iniciar Inscrição para o Ensino Infantil 
+    # Clicar em Data de Nascimento e informar "00/00/0000"
+    # Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
+    # Clicar em Data de Nascimento e informar "24/04/1993"
+    # Clicar em Cep e informar 07032-000
+    # Clicar em Número da Residência e informar 134
+    # Clicar no botão Pesquisar Escolas 
+    # Visualizar a mensagem: NÃO EXISTEM ESCOLAS DISPONÍVEIS A PARTIR DOS DADOS INFORMADOS
+    # Clicar em Cep e informar 00000-002
+    # Visualizar a mensagem: NÃO FOI POSSÍVEL LOCALIZAR A COORDENADA PARA LISTAR ESCOLAS, FAVOR ENTRAR EM CONTATO COM ADMINISTRADOR DO SERVIÇO.
+    # Clicar em Data de Nascimento e informar "24/04/2021"
+    # Clicar em Cep e informar 07032-000
+    # Clicar em Número da Residência e informar 134
+    # Clicar no botão Pesquisar Escolas 
+    # Selecionar a escola na pesquisa realizada
+    # Clicar no botão Solicitar Vaga 
+    # Preencher os checks dos termos de responsabilidade
+    # Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
+    # Clicar em CPF do responsável e informar "000.000.000-00"
+    # Visualizar a mensagem: O CPF INFORMADO É INVÁLIDO
+    # Clicar em Data de Nascimento do responsável e informar "00/00/0000"
+    # Visualizar a mensagem: CPF NÃO INFORMADO
+    # Clicar em CPF do responsável e informar "891.290.380-22"
+    # Clicar em Nome Completo do responsável e informar "Teste Nome Responavel"
+    # Clicar em Data de Nascimento do responsável e informar "00/00/0000"
+    # Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
+    # Clicar em Data de Nascimento do responsável e informar "10/01/1965"
+    # Visualizar a mensagem: NÃO É POSSÍVEL CONTINUAR COM A INSCRIÇÃO, DIRIJA -SE PESSOALMENTE À ESCOLA MAIS PRÓXIMA COM OS DOCUMENTOS
+    # Clicar em Nome Completo do responsável e informar "Teste Nome Responavel Automacao"
+    # Clicar em Data de Nascimento do responsável e informar "10/01/1965"
+    # Clicar em Sexo do responsavel e selecionar "Masculino"
+    # Preencher os checks dos termos de responsabilidade
+    # Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
+    # Clicar em Nacionalidade e selecionar "Estrangeiro"
+    # Clicar em RNE e informar "123456789qa"
+    # Clicar em Data de Entrada do candidato e informar "00/00/0000"
+    # Clicar em Nome Completo do cadidato e informar "Teste Nome Candidato Estrangeiro"
+    # Clicar em Sexo do candidato e selecionar "Feminino"
+    # Clicar em Telefone 1 e informar "11999999999"
+    # Preencher os checks dos termos de responsabilidade
+    # Visualizar a mensagem: DATA DE ENTRADA (RNE) INVÁLIDA
+    # Clicar em Data de Entrada do candidato e informar "24/04/2021"
+    # Preencher os checks dos termos de responsabilidade
+    # Visualizar a mensagem: DATA DE ENTRADA (RNE) NÃO PODE SER MENOR OU IGUAL QUE A DATA DE NASCIMENTO
+    # Clicar em Data de Entrada do candidato e informar "25/04/2021"
+    # Visualizar a mensagem: VOCÊ NÃO PODE REALIZAR UMA NOVA INSCRIÇÃO, ALUNO JÁ POSSUI UMA INSCRIÇÃO ATIVA.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Cenário 46: Processo de Demanda
+    [Documentation]    Esse teste efetua o fluxo negativo do Processo de Demanda
+    [Tags]             Processo de Demanda | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "PREENCHA OS CAMPOS DO CRITÉRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, na Descrição, inserir "TESTE NEGATIVO PROCESSO DEMANDA"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO DATA INICIAL DO AGRUPAMENTO É OBRIGATÓRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO DATA FIM DO AGRUPAMENTO É OBRIGATÓRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO 'VERIFICA AUTORIZAÇÃO DE MATRICULA' É OBRIGATÓRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO PERMITE 'MATRICULA MESMO MATRICULADO' É OBRIGATÓRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO PERMITE 'PERMITE INSCRIÇÃO NA MESMA ESCOLA?' É OBRIGATÓRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, visualizar o modal de alerta contendo "PREENCHA TODOS OS CAMPOS DO PROCESSO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/09/2022"
+    Em Programação de Processo, em Data Fim, inserir "30/09/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, nos resultados, clicar em Ações e Excluir
+    Em Processo de Demanda, clicar em Sim no modal
+    Em Processo de Demanda, visualizar o modal de alerta contendo "EXCLUSÃO NÃO PERMITIDA, PROGRAMAÇÃO VINCULADA AO PROCESSO"
     
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    
-
-
-
-
-    
-
-
-
-
-
-
-        
-
-
-
-
-
-
-    
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
+Cenário 47: Programação de Processo
+    [Documentation]    Esse teste efetua o fluxo negativo de Programação de Processo
+    [Tags]             Programação de Processo | Fluxo Negativo
+        Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "PREENCHA A DATA INÍCIO"
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO"
+    Em Programação de Processo, em Data Inicio, inserir "02/01/2022"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "PREENCHA A DATA FIM"
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Data Fim, inserir "01/01/2022"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "DATA INÍCIO NÃO PODE SER MAIOR QUE A DATA FIM"
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "SELECIONE OS DIAS DA SEMANA"
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "SELECIONE O AMBIENTE"
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "JÁ ESTÃO INSERIDOS!"
+    Em Programação de Processo, clicar em OK no modal
