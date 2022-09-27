@@ -6,6 +6,7 @@ Resource         ../2-PageElements/FluxosAlternativos/AvaliacaoEFreqquencia/Aval
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/Apredizagem.robot
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/AvaliacaoEducacional.robot
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/AvaliacaoEducacional2.robot
+Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/BancoDeQuestoes.robot
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/GruposDePergunta.robot
 Resource         ../2-PageElements/FluxosAlternativos/BoletimEscolar/BoletimEscolar.robot
 Resource         ../2-PageElements/FluxosAlternativos/ControleDiarioDeFrequencia/ControleDiarioDeFrequencia.robot
@@ -33,7 +34,7 @@ Resource         ../2-PageElements/FluxosAlternativos/Transporte/CredenciamentoC
 Resource         ../2-PageElements/FluxosAlternativos/Transporte/GestãoDeTransporte.robot
 Resource         ../2-PageElements/FluxosAlternativos/Transporte/SolicitacaoTransporte.robot
 Resource         ../2-PageElements/FluxosAlternativos/Turma/CadastroDeTurma.robot
-Resource         ../2-PageElements/FluxosAlternativos/Turma/ConsultaDeTurma.robot    
+Resource         ../2-PageElements/FluxosAlternativos/Turma/ConsultaDeTurma.robot  
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -1243,13 +1244,13 @@ Cenário 41: Funcionalidade Banco de Questões
     Entrar na funcionalidade "Banco de Questões" 
     Clicar no botão Cadastrar  
     Clicar em Salvar
-    Visualizar a mensagem: UTILIZAÇÃO DA QUESTÃO É OBRIGATÓRIO    
+    Visualizar a mensagem: UTILIZAÇÃO DA QUESTÃO É OBRIGATÓRIO            
     Clicar em OK no modal de alerta
     Em Utilização da Questão, selecionar "Pedagógico"
     Clicar em Salvar
     Visualizar a mensagem: INFORME A PERGUNTA.
     Clicar em OK no modal de alerta
-    Em Pergunta, informar "Teste Automação Qa Pergunta"
+    Em Pergunta, informar "Teste Automação Qa Pergunta"    
     Clicar em Salvar
     Visualizar a mensagem: INFORME A SIGLA.
     Clicar em OK no modal de alerta
