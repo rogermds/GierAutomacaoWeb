@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation     Esse teste verifica se é possível efetuar login no Gier
 Resource         ../1-Hooks/1-Principal.robot
-<<<<<<< HEAD
 Resource         ../2-PageElements/FluxosAlternativos/AtaDeConselhoFinal/AtaDeConselhoFinal.robot
 Resource         ../2-PageElements/FluxosAlternativos/AvaliacaoEFreqquencia/AvaliacaoEFrequencia.robot
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/Apredizagem.robot
