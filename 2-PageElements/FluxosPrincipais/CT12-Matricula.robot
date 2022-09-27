@@ -1,12 +1,18 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    DateTime
+Library    String
+Library    FakerLibrary     locale=pt_BR
 Resource    ../../1-Hooks/1-Principal.robot
 
 *** Variables ***
 ${campoTipoEstabelecimentoEscolaMatricula}    cphContent_ddlTipoEstabelecimento
 ${campoEtapaModalidadeEscolaMatricula}        cphContent_ddlModalidade
-${campoEscolaEscolaMatricula}              cphContent_ddlEscola
+${campoEscolaEscolaMatricula}                 cphContent_ddlEscola
+${campoEPGVolpi}                              chkEW_575
+${campoEPGCrispiniano}                        chkEW_607
+${campoEPGAntonioAparecido}                   chkEW_584
+${campoNomeCadastroPessoa}                    cphContent_ucDadosPessoais_txtNomeCompleto
 
 *** Keywords ***
 Em Escola Autorizada A Receber Matrícula, em Tipo de Estabelecimento, selecionar "ESCOLA"
@@ -358,8 +364,7 @@ No Portal, clicar em "${etapa}"
 
 No Portal, selecionar o processo para a etapa "${etapa}"
     Wait Until Element Is Visible    //a[contains(@rel,'modal:close')]
-    Run Keyword If   '${etapa}' == 'Educação Infantil'   Click Element    seleciona-processo-17
-    Run Keyword If   '${etapa}' == 'Ensino Fundamental'   Click Element    seleciona-processo-19
+    Click Element    //input[contains(@value,'AUTOMACAO ${etapa} #PROCESSO_TESTE_QA#')]
     Aguardar carregamento Portal
 
 No Portal, verificar se o texto exibido é igual ao cadastrado em Educação Infantil
@@ -624,6 +629,7 @@ Em Programação de Processo, em Processo, selecionar o processo cadastrado
 
 Em Programação de Processo, em Ambiente Utilizado, selecionar "${ambienteUtilizado}"
     Run Keyword If    '${ambienteUtilizado}' == 'Gier'    Execute JavaScript   document.getElementById("cphContent_rblAmbiente_0").click();
+    Run Keyword If    '${ambienteUtilizado}' == 'Portal de Inscrições'    Execute JavaScript   document.getElementById("cphContent_rblAmbiente_1").click();
     Aguardar tela de carregamento
 
 Em Programação de Processo, em Data Inicio, inserir "${data}"
@@ -689,3 +695,426 @@ Em Programação de Processo, verificar se a data "${data}" foi inserida
 Em Programação de Processo, verificar se o horário "${hora}" foi inserida 
     Wait Until Page Contains    ${hora}
 
+No Portal, clicar em Iniciar inscrição
+    Wait Until Element Is Visible    iniciar-inscricao
+    Click Element    iniciar-inscricao
+    Aguardar carregamento Portal
+
+No Portal, em Escolha da Escola, em Data de Nascimento, inserir "${data}"
+    Sleep    1
+    Wait Until Element Is Visible    busca-nascimento
+    Input Text    busca-nascimento    ${data}
+
+No Portal, em Escolha da Escola, em CEP, inserir "${cep}"
+    Input Text    busca-cep    ${cep}
+
+No Portal, em Escolha da Escola, em Número da Residência, inserir "${numeroResidencial}"
+    Input Text    busca-numero    ${numeroResidencial}
+    Press Keys    busca-numero    TAB
+    Aguardar carregamento Portal
+
+No Portal, clicar em Pesquisar Escolas
+    Wait Until Element Is Enabled    pesquisar-escolas
+    Execute JavaScript  document.getElementById("pesquisar-escolas").click();
+    Sleep    1
+    Aguardar carregamento Portal
+
+No Portal, selecionar a escola "${escola}"
+    Set Suite Variable    ${escola}
+    Sleep    1
+    Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Wait Until Element Is Visible    ${campoEPGVolpi}
+    Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Click Element    ${campoEPGVolpi}
+    Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Wait Until Element Is Visible    ${campoEPGCrispiniano}
+    Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Click Element    ${campoEPGCrispiniano}
+    Run Keyword If    "${escola}" == "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"    Wait Until Element Is Visible    ${campoEPGAntonioAparecido}
+    Run Keyword If    "${escola}" == "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"    Click Element    ${campoEPGAntonioAparecido}
+    
+No Portal, clicar em Selecionar Escolas
+    Wait Until Element Is Enabled    selecionar-escolas-pesquisadas
+    Execute JavaScript  document.getElementById("selecionar-escolas-pesquisadas").click();
+    Sleep    1
+    Aguardar carregamento Portal
+
+No Portal, clicar em Próximo
+    Wait Until Element Is Visible    proximo-passo1
+    Click Element    proximo-passo1
+    Aguardar carregamento Portal
+
+No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "${nacionalidade}"
+    Wait Until Page Contains    ${escola}
+    Wait Until Element Is Visible    ddlRNacionalidade
+    Select From List By Label    ddlRNacionalidade    ${nacionalidade}
+    Sleep    1
+
+No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "${ufNascimento}"
+    Wait Until Element Is Visible    ddlRUfNascimento
+    Select From List By Label    ddlRUfNascimento    ${ufNascimento}
+    Aguardar carregamento Portal
+
+No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "${ufNascimento}"
+    Select From List By Label    ddlRCidadeNascimento    ${ufNascimento}
+    
+No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    ${cpfFakeResponsavel}    FakerLibrary.cpf
+    Set Suite Variable    ${cpfFakeResponsavel}
+    Input Text    txtRCpf    ${cpfFakeResponsavel}
+    Press Keys    txtRCpf    TAB
+    Aguardar carregamento Portal
+
+No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    ${nomeCompletoResponsavel}    Name Female
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ç    c
+    ${nomeCompletoResponsavel}    Fetch From Right    ${nomeCompletoResponsavel}    .
+    ${nomeCompletoResponsavel}    Strip String	    ${nomeCompletoResponsavel}    both
+    Set Suite Variable    ${nomeCompletoResponsavel}
+    Input Text    txtRNomeCompleto    ${nomeCompletoResponsavel}
+
+No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "${dataNascimento}"
+    Input Text   txtRDataNascimento    ${dataNascimento}
+
+No Portal, em Cadastro do Responsável, em Sexo, inserir "${sexo}"
+    Select From List By Label    ddlRSexo    ${sexo}
+    
+No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "${grauParentesco}"
+    Select From List By Label    ddlGrauParentesco    ${grauParentesco}
+
+No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "${nacionalidade}"
+    Select From List By Label    ddlNacionalidade    ${nacionalidade}
+    Sleep    1
+
+No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "${UF}"   
+    Wait Until Element Is Visible    ddlUfNascimento
+    Select From List By Label    ddlUfNascimento    ${UF}
+    Sleep    1
+    Aguardar carregamento Portal
+    
+No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "${cidadeNascimento}"
+    Wait Until Element Is Visible    ddlCidadeNascimento
+    Select From List By Label    ddlCidadeNascimento    ${cidadeNascimento}
+
+No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    ${cpfFakeAluno}    FakerLibrary.cpf
+    Set Suite Variable    ${cpfFakeAluno}
+    Input Text    txtCpf    ${cpfFakeAluno}
+    Press Keys    txtCpf    TAB
+    Aguardar carregamento Portal
+    
+No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    ${nomeCompletoAluno}    Name Male
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ç    c
+    ${nomeCompletoAluno}    Fetch From Right    ${nomeCompletoAluno}    .
+    ${nomeCompletoAluno}    Strip String	    ${nomeCompletoAluno}    both
+    Set Suite Variable    ${nomeCompletoAluno}
+    Input Text    txtNomeCompleto    ${nomeCompletoAluno}
+    
+No Portal, em Cadastro do Aluno, em Sexo, inserir "${sexo}"
+    Select From List By Label    ddlSexo    ${sexo}
+
+No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    Sleep    1
+    Click Element    rdNovaCertidao_Sim    
+    Sleep    1
+
+No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    Gerar Certidão de Nascimento Aleatório
+    Input Text    txtMatriculaCertidao    ${certidaoAleatoria}
+    Press Keys    txtMatriculaCertidao    TAB
+    Sleep    1
+    Aguardar carregamento Portal
+
+No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "${dataEmissaoCertidao}"
+    Input Text    txtDataEmissaoCertidao    ${dataEmissaoCertidao}
+    
+No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "${ufCertidao}"
+    Wait Until Element Is Visible    ddlUFCertidao
+    Select From List By Label    ddlUFCertidao    ${ufCertidao}
+    Sleep    1
+    Aguardar carregamento Portal
+
+No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "${cidadeCartorio}"
+    Wait Until Element Is Visible    ddlCidadeCartorio
+    Select From List By Label    ddlCidadeCartorio    ${cidadeCartorio}
+
+No Portal, em Cadastro do Aluno, em Cartório, inserir "${cartorio}"
+    Input Text    txtCartorio    ${cartorio}
+
+No Portal, em Cadastro do Aluno, em Distrito, inserir "${distrito}"
+    Input Text    txtDistritoCartorio    ${distrito}
+    
+No Portal, em Cadastro do Aluno, em Comarca, inserir "${comarca}"
+    Input Text    txtComarcaCartorio    ${comarca}
+
+No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    Sleep    1
+    ${telefoneAleatorio}    Random Number   8
+    Sleep    1
+    Set Suite Variable    ${telefone1Aleatorio}    119${telefoneAleatorio}
+    Input Text    txtTelefone1    ${telefone1Aleatorio}
+    Sleep    1
+
+No Portal, clicar nos campos de declarações
+    Aguardar carregamento Portal
+    Sleep    1
+    Click Element    chkResponsabilidade
+    Click Element    chkLgpd
+    Sleep    1
+    Aguardar carregamento Portal
+
+No Portal, clicar em Concluir Inscrição
+    Wait Until Element Is Enabled    concluir-passo2
+    Click Element    concluir-passo2
+    Sleep    1
+    Aguardar carregamento Portal
+    Sleep    1
+    Aguardar carregamento Portal
+    Sleep    1
+    Aguardar carregamento Portal
+
+No Portal, verificar se o comprovante é exibido em tela
+    Wait Until Page Contains    Comprovante de Inscrição
+    Dormir
+
+No Portal, gravar o número de protocolo gerado
+    ${protocoloComprovante}    Get Text    comprovante-info-protocolo
+    Set Suite Variable    ${protocoloComprovante}
+
+Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Wait Until Element Is Visible    cphContent_btnPesquisa
+    Input Text    cphContent_txtAluno    ${nomeCompletoAluno}
+
+Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Input Text    cphContent_txtProtocolo    ${protocoloComprovante}
+
+Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Execute JavaScript  document.getElementById("cphContent_btnPesquisa").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+    Wait Until Page Contains    Resultado da Busca
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkDadosCandidato_0").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
+    Wait Until Page Contains    Resultado da Busca
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkDadosResponsaveis_0").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
+    Wait Until Page Contains    Resultado da Busca
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkAprovar_0").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
+    FOR     ${index}    IN RANGE    0    20
+    ${busca}    Set Variable    cphContent_dtlClasseTurma_lblVagasDisponiveisTd_${index}
+    ${resultado}    Run Keyword And Return Status   Element Should Not Contain    ${busca}    0    
+        IF  ${resultado}
+            Execute JavaScript  document.getElementById("cphContent_dtlClasseTurma_lbtSelecionar_${index}").click();
+            Aguardar tela de carregamento
+            IF    ${resultado}    BREAK
+        END
+    END
+    Aguardar tela de carregamento
+        
+Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+    Execute JavaScript  document.getElementById("cphContent_btnMatricular").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, clicar em OK no modal
+    Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnOk").click();
+    Aguardar tela de carregamento
+
+No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    Input Text    txtRCpf    ${cpfFakeResponsavel}
+    Press Keys    txtRCpf    TAB
+    Aguardar carregamento Portal
+
+No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+        Input Text    txtRNomeCompleto    ${nomeCompletoResponsavel}
+
+No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
+    Input Text    txtCpf    ${cpfFakeAluno}
+    Press Keys    txtCpf    TAB
+    Aguardar carregamento Portal
+    
+No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    Input Text    txtNomeCompleto    ${nomeCompletoAluno}
+
+No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    Input Text    txtMatriculaCertidao    ${certidaoAleatoria}
+    Press Keys    txtMatriculaCertidao    TAB
+    Sleep    1
+    Aguardar carregamento Portal
+
+No Portal, em Contato, em Telefone 1, inserir o telefone cadastrado
+    Input Text    txtTelefone1    ${telefone1Aleatorio}
+    Sleep    1
+
+Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
+    Clear Element Text    cphContent_ucDadosPessoais_txtNomeCompleto
+    Input Text   cphContent_ucDadosPessoais_txtNomeCompleto    ${nomeCompletoResponsavel}
+
+Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "${ano}"
+    ${anoSeguinte}    Evaluate    ${ano}+1
+    Execute JavaScript   $('#cphContent_ddlAnoLetivo').val("${anoSeguinte}").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlAnoLetivo').trigger('change');
+    Aguardar tela de carregamento
+    Execute JavaScript   $('#cphContent_ddlAnoLetivo').val("${ano}").trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlAnoLetivo').trigger('change');
+    Aguardar tela de carregamento
+
+Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "${alunoMatricula}"
+    Clear Element Text    cphContent_PesquisaPessoa_txtNome
+    Input Text    cphContent_PesquisaPessoa_txtNome    ${alunoMatricula}
+    
+Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
+    Execute JavaScript  document.getElementById("cphContent_PesquisaPessoa_btnPesquisa").click();
+    Aguardar tela de carregamento
+
+Em Matricular Educando, clicar em Sim no Modal
+    Wait Until Element Is Visible    cphContent_PesquisaPessoa_MensagemPadrao_btnSim
+    Execute JavaScript  document.getElementById("cphContent_PesquisaPessoa_MensagemPadrao_btnSim").click();
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
+    ${nomeCompletoAluno}    Name Male
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ç    c
+    ${nomeCompletoAluno}    Fetch From Right    ${nomeCompletoAluno}    .
+    ${nomeCompletoAluno}    Strip String	    ${nomeCompletoAluno}    both
+    Set Suite Variable    ${nomeCompletoAluno}
+    Input Text    ${campoNomeCadastroPessoa}    ${nomeCompletoAluno}
+
+Em Cadastro de Pessoa, em Certidão de Nascimento, clicar em Nova Certidão de Nascimento
+    Execute JavaScript  document.getElementById("cphContent_ucDocumentos_chkNovaCertidaoNascimento").click();
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, em Matrícula Certidão, inserir um certidão válida
+    Gerar Certidão de Nascimento Aleatório
+    Input Text    cphContent_ucDocumentos_txtCertidaoNascimentoMatricula    ${certidaoAleatoria}
+
+Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir "${dataEmissaoCertidao}"
+    Input Text    cphContent_ucDocumentos_txtCertidaoNascimentoEmissao    ${dataEmissaoCertidao}
+
+Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome "${nomeParentesco}"
+    Input Text    cphContent_ucVinculos_PesquisarPessoaParente_txtNome    ${nomeParentesco}
+
+Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir a Data de Nascimento "${nascimentoParentesco}"
+    Input Text    cphContent_ucVinculos_PesquisarPessoaParente_txtDNasc    ${nascimentoParentesco}
+    
+Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_btnPesquisa").click();
+    Aguardar tela de carregamento
+
+Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
+    Wait Until Element Is Visible    cphContent_ucVinculos_PesquisarPessoaParente_MensagemPadrao_btnSim
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_MensagemPadrao_btnSim").click();
+    Aguardar tela de carregamento
+
+Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
+    Wait Until Element Is Visible    cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_btnSalvar
+    ${nomeCompletoResponsavel}    Name Female
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ç    c
+    ${nomeCompletoResponsavel}    Fetch From Right    ${nomeCompletoResponsavel}    .
+    ${nomeCompletoResponsavel}    Strip String	    ${nomeCompletoResponsavel}    both
+    Set Suite Variable    ${nomeCompletoResponsavel}
+    Input Text    ctl00$cphContent$ucVinculos$PesquisarPessoaParente$CadastroRapidoPessoa$txtNome    ${nomeCompletoResponsavel}
+
+Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir "${nascimentoCadastroRapido}"
+    Input Text    cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_txtDataNascimento    ${nascimentoCadastroRapido}
+
+Em Cadastro Rapido de Pessoa, em Sexo, selecionar "${sexoCadastroRapido}"
+    Execute JavaScript   $("#cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_ddlSexo").val($('option:contains("${sexoCadastroRapido}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_ddlSexo').trigger('change');
+    Aguardar tela de carregamento
+
+Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido
+    ${cpfFakeResponsavel}    FakerLibrary.cpf
+    Set Suite Variable    ${cpfFakeResponsavel}
+    Input Text    cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_txtCpf    ${cpfFakeResponsavel}
+
+Em Cadastro Rapido de Pessoa, clicar em Salvar
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_btnSalvar").click();
+    Aguardar tela de carregamento
+
+Em Cadastro Rapido de Pessoa, clicar em OK no Modal
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_MensagemPadrao_btnOk").click();
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, em Grau de Parentesco, selecionar "${grauParentesco}"
+    Wait Until Element Is Visible    cphContent_ucVinculos_btnInserirParente
+    Execute JavaScript   $("#cphContent_ucVinculos_ddlGrauParentesco").val($('option:contains("${grauParentesco}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ucVinculos_ddlGrauParentesco').trigger('change');
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_chkResponsavelLegal").click();
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_chkResponsavelPrincipal").click();
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_btnInserirParente").click();
+    Aguardar tela de carregamento
+
+Em Matricular Educando, em Rede de Origem, selecionar "${redeOrigem}"
+    Wait Until Page Contains    Matricular Educando
+    Execute JavaScript   $("#cphContent_ddlFormaIngresso").val($('option:contains("${redeOrigem}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlFormaIngresso').trigger('change');
+    Aguardar tela de carregamento
+
+Em Matricular Educando, em País de Origem, selecionar "${paisOrigem}"
+    Execute JavaScript   $("#cphContent_ddlPaisOrigem").val($('option:contains("${paisOrigem}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlPaisOrigem').trigger('change');
+    Aguardar tela de carregamento
+
+Em Matricular Educando, em Etapa/Modalidade, selecionar "${etapaModalidade}"
+    Execute JavaScript   $("#cphContent_ddlTipoEnsino").val($('option:contains("${etapaModalidade}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlTipoEnsino').trigger('change');
+    Aguardar tela de carregamento
+
+Em Matricular Educando, em Curso, selecionar "${curso}"
+    Execute JavaScript   $("#cphContent_ddlCurso").val($('option:contains("${curso}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlCurso').trigger('change');
+    Aguardar tela de carregamento
+
+Em Matricular Educando, em Periodo, selecionar "${periodo}"
+    Execute JavaScript   $("#cphContent_ddlPeriodo").val($('option:contains("${periodo}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlPeriodo').trigger('change');
+    Aguardar tela de carregamento
+
+Em Matricular Educando, em Ciclo, selecionar "${ciclo}"
+    Execute JavaScript   $("#cphContent_ddlCiclo").val($('option:contains("${ciclo}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlCiclo').trigger('change');
+    Aguardar tela de carregamento
+
+Em Matricular Educando, selecionar uma turma com vagas
+        FOR     ${index}    IN RANGE    0    20
+    ${busca}    Set Variable    cphContent_dtlConsulta_lblVTeoricasTd_${index}
+    ${resultado}    Run Keyword And Return Status   Element Should Not Contain    ${busca}    0    
+        IF  ${resultado}
+            Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lbtSelecionar_${index}").click();
+            Aguardar tela de carregamento
+            IF    ${resultado}    BREAK
+        END
+    END
+    Aguardar tela de carregamento
+
+Em Matricular Educando, clicar em Matricular Educando
+    Execute JavaScript  document.getElementById("cphContent_btnMatricularAluno").click();
+    Aguardar tela de carregamento
+
+Em Matricular Educando, clicar em Sim no Modal de Matrícula
+    Wait Until Element Is Visible    cphContent_MensagemPadrao_btnSim
+    Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnSim").click();
+    Aguardar tela de carregamento
+
+Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
+    Wait Until Element Contains    cphContent_MensagemPadrao_lblMsg    MATRÍCULA EFETUADA COM SUCESSO

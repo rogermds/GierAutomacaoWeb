@@ -30,6 +30,7 @@ ${botaoVisualizarPessoa}          cphContent_dtlConsultaPessoa_lkbVisualizar_0
 Em Cadastro de Pessoa, no campo Nome, inserir o nome "${nomePessoa}"
     ${codPessoaRandom}   Random Number   6
     Input Text    ${campoNomeCadastroPessoa}    ${nomePessoa}${codPessoaRandom}
+
 Em Cadastro de Pessoa, no campo Sexo, selecionar "${sexo}"
     Run Keyword If    '${sexo}' == 'FEMININO'  Execute JavaScript   $('#${campoSexoPessoa}').val("1").trigger('chosen:updated');
     Run Keyword If    '${sexo}' == 'MASCULINO'  Execute JavaScript   $('#${campoSexoPessoa}').val("2").trigger('chosen:updated');
@@ -115,6 +116,7 @@ Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar "${cidade}"
     Run Keyword If    '${cidade}' == 'SAO ROQUE'  Execute JavaScript   $('#${campoCidade}').val("4913").trigger('chosen:updated');
     Run Keyword If    '${cidade}' == 'TREMEMBE'  Execute JavaScript   $('#${campoCidade}').val("4870").trigger('chosen:updated');
     Run Keyword If    '${cidade}' == 'UBATUBA'  Execute JavaScript   $('#${campoCidade}').val("4877").trigger('chosen:updated');
+    Run Keyword If    '${cidade}' == 'GUARULHOS'  Execute JavaScript   $('#${campoCidade}').val("5333").trigger('chosen:updated');
     Aguardar tela de carregamento
 
 Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido
@@ -145,6 +147,7 @@ Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "${corRaca}"
     Run Keyword If    '${corRaca}' == 'PRETA'  Execute JavaScript   $('#${campoCorRaca}').val("2").trigger('chosen:updated');
 
 Em Cadastro de Pessoa, no campo CEP, inserir o CEP "${CEP}"
+    Wait Until Element Is Visible    ${campoCEP}
     Input Text   ${campoCEP}    ${CEP}
 
 Em Cadastro de Pessoa, no campo Número, inserir o número "${numeroCEP}"

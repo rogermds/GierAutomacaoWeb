@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    FakerLibrary    locale=pt-BR
+Library    RequestsLibrary
 
 *** Variable ***
 ${botaoCadastrar}               cphContent_btnCad   
@@ -161,3 +162,8 @@ Dormir
 
 Aguardar carregamento Portal
     Wait Until Element Is Not Visible    wait    300
+
+Gerar Certidão de Nascimento Aleatório
+    Create Session    certidao    https://geradorbrasileiro.com/api
+    ${certidao}    GET On Session    certidao    url=https://geradorbrasileiro.com/api/faker/certidao?limit=1
+    Set Suite Variable    ${certidaoAleatoria}    ${certidao.json()["values"][0]}

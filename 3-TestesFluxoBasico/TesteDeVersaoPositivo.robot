@@ -1023,7 +1023,7 @@ Cenário 22: Funcionalidade Boletim Escolar - EJA
     Em Boletim Individual de Educando M02, fechar o Boletim Escolar
 
 ## ALTERAR PARA O MÊS SEGUINTE CASO O TESTE FALHE. VERIFICAR O MÊS JÁ ESTÁ FECHADO
-Cenário 23: Funcionalidade Prontuário da Turma - InfantilCenário 23: Funcionalidade Prontuário da Turma - Infantil
+Cenário 23: Funcionalidade Prontuário da Turma - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário da Turma 
     ...                e todas as suas ações para a Etapa Infantil                   
     [Tags]             Prontuário da Turma - Infantil | Fluxo Positivo
@@ -2144,6 +2144,14 @@ Cenário 41: Funcionalidade Programação de Processo - Infantil Inicial
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
 
 Cenário 42: Funcionalidade Programação de Processo - Fundamental Inicial
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
@@ -2169,6 +2177,14 @@ Cenário 42: Funcionalidade Programação de Processo - Fundamental Inicial
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO FUNDAMENTAL INICIAL"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
 
@@ -2198,6 +2214,14 @@ Cenário 43: Funcionalidade Programação de Processo - EJA Inicial
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 1º SEMESTRE INICIAL"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
     Em Programação de Processo, clicar em Cadastrar
     Em Programação de Processo, em Ano Letivo, selecionar "2022"
     Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
@@ -2211,6 +2235,14 @@ Cenário 43: Funcionalidade Programação de Processo - EJA Inicial
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 2º SEMESTRE INICIAL"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
 
@@ -2240,6 +2272,14 @@ Cenário 44: Funcionalidade Programação de Processo - Infantil Contínuo
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL CONTÍNUO"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
 
 Cenário 45: Funcionalidade Programação de Processo - Fundamental Contínuo
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
@@ -2265,6 +2305,14 @@ Cenário 45: Funcionalidade Programação de Processo - Fundamental Contínuo
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO FUNDAMENTAL CONTÍNUO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
 
@@ -2294,6 +2342,14 @@ Cenário 46: Funcionalidade Programação de Processo - EJA Contínuo
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 1º SEMESTRE CONTÍNUO"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
     Em Programação de Processo, clicar em Cadastrar
     Em Programação de Processo, em Ano Letivo, selecionar "2022"
     Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
@@ -2307,6 +2363,14 @@ Cenário 46: Funcionalidade Programação de Processo - EJA Contínuo
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 2º SEMESTRE CONTÍNUO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
 
@@ -2359,13 +2423,362 @@ Cenário 47: Funcionalidade Programação de Processo - Edição e Exclusão
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se é exibida a mensagem "NENHUM REGISTRO FOI ENCONTRADO"
 
-Cenário 34: Funcionalidade Portal
+Cenário 48: Funcionalidade Portal - Gier - Infantil Inicial
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
-    [Tags]             Portal | Fluxo Positivo
+    [Tags]             Portal > Gier - Infantil Inicial | Fluxo Positivo
     Entrar no Portal
-    Clicar em "Educação Infantil"
-    Selecionar o Processo "xxx"
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
+    Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
+    Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
+    Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+    Em Gestão de Pré-Matrícula, clicar em OK no modal
+
+Cenário 49: Funcionalidade Gier - Portal - Infantil Inicial  ##COM INCIDENTE
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Gier > Portal - Infantil Inicial | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Matricular Educando"
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
+    Em Matricular Educando, clicar em Sim no Modal
+    Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
+    Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
+    Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/2020"
+    Clicar no checkbox Pessoa não possui correio eletrônico
+    Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "BRASILEIRA"
+    Em Cadastro de Pessoa, no campo UF Nascimento, selecionar "SP"
+    Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar "GUARULHOS"
+    Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido
+    Em Cadastro de Pessoa, em Certidão de Nascimento, clicar em Nova Certidão de Nascimento
+    Em Cadastro de Pessoa, em Matrícula Certidão, inserir um certidão válida
+    Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir "01/01/2022"
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome "JOSIAS ADALBERTO"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar
+    Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
+    Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
+    Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir "07/03/1996"
+    Em Cadastro Rapido de Pessoa, em Sexo, selecionar "Feminino"
+    Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido
+    Em Cadastro Rapido de Pessoa, clicar em Salvar
+    Em Cadastro Rapido de Pessoa, clicar em OK no Modal
+    Em Cadastro de Pessoa, em Grau de Parentesco, selecionar "Mãe"
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "33"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
+    Em Matricular Educando, em País de Origem, selecionar "Brasil"
+    Em Matricular Educando, em Etapa/Modalidade, selecionar "Educação Infantil"
+    Em Matricular Educando, em Curso, selecionar "Creche"
+    Em Matricular Educando, em Periodo, selecionar "MANHÃ"
+    Em Matricular Educando, em Ciclo, selecionar "Bercário II"
+    Em Matricular Educando, selecionar uma turma com vagas
+    Em Matricular Educando, clicar em Matricular Educando
+    Em Matricular Educando, clicar em Sim no Modal de Matrícula
+    Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2020"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+
+Cenário 50: Funcionalidade Portal - Gier - Fundamental Inicial
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Portal > Gier - Fundamental Inicial | Fluxo Positivo
+    Entrar no Portal
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
+    Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
+    Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
+    Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+    Em Gestão de Pré-Matrícula, clicar em OK no modal
+
+
+Cenário 48: Funcionalidade Gier Portal - Infantil Inicial  ##CENARIO PARA CONTÍNUO
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Portal - Infantil Inicial | Fluxo Positivo
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
+    Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
+    Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
+    Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+    Em Gestão de Pré-Matrícula, clicar em OK no modal
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir o telefone cadastrado
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+   
+
 
 Cenário 35: Funcionalidade Gestão de Pré-Matrícula
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
@@ -2399,9 +2812,48 @@ Cenário 37: Funcionalidade Credenciamento de Condutores
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
+    Entrar no eixo "Configuração"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Credenciamento de Condutores"
     Em Credenciamento de Condutores, clicar em Cadastrar Condutores
+
+Cenário 38: Funcionalidade Tipos de Rotas
+    [Documentation]    Esse teste verifica se é possível cadastrar, editar
+    ...                editar e excluir uma Rota                
+    [Tags]             Rotas | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Tipos de Rotas"
+    Em Tipos de Rotas, clicar em Cadastrar
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, clicar em Salvar
+    Em Tipos de Rotas, clicar em OK no modal
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, clicar em Pesquisar
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, nos resultado, clicar em Ações e Editar
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO EDITADO"
+    Em Tipos de Rotas, clicar em Salvar
+    Em Tipos de Rotas, clicar em OK no modal
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO EDITADO"
+    Em Tipos de Rotas, clicar em Pesquisar
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO EDITADO"
+    Em Tipos de Rotas, nos resultado, clicar em Ações e Excluir
+    Em Tipos de Rotas, clicar em Sim no modal 
+    Em Tipos de Rotas, clicar em OK no modal
+    Em Tipos de Rotas, clicar em Cadastrar
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, clicar em Salvar
+    Em Tipos de Rotas, clicar em OK no modal
+    Em Tipos de Rotas, clicar em OK no modal
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, clicar em Pesquisar
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO"
 
 Cenário 38: Funcionalidade Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
@@ -2412,9 +2864,30 @@ Cenário 38: Funcionalidade Rotas
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
+    Entrar no eixo "Operação"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Rotas"
+    Em Rotas, clicar em Cadastrar
+    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA AUTOMACAO"
+    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA"
+    Em Cadastrar Rota, em Ponto Inicial, inserir "AUTOMACAO PONTO INICIAL"
+    Em Cadastrar Rota, em Ponto Final, inserir "AUTOMACAO PONTO FINAL"
+    Em Cadastrar Rota, em Km, inserir "10"
+    Em Cadastrar Rota, em Vincular Escolar a Rota, em Nome de Escola, inserir "VOLPI"
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Pesquisar
+    Em Cadastrar Rota, em Vincular Escolar a Rota, selecionar a escola pesquisada
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Inserir
+    Em Cadastrar Rota, em Vincular Escolar a Rota, em Nome de Escola, inserir "CRISPINIANO"
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Pesquisar
+    Em Cadastrar Rota, em Vincular Escolar a Rota, selecionar a escola pesquisada
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Inserir
+    Em Cadastrar Rota, clicar em Salvar
+    Em Cadastrar Rota, clicar em OK no Modal
+    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA"
+    Em Rotas, clicar em Pesquisar
+    Em Rotas, verificar se a rota foi cadastrada
 
+    
 Cenário 39: Funcionalidade Viagens
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem                
