@@ -1,8 +1,0 @@
-*** Settings ***
-Library    SeleniumLibrary
-
-*** Variables ***
-
-*** Keywords ***
-Visualizar a mensagem: OS CAMPOS A SEGUIR SÃO DE PREENCHIMENTO OBRIGATÓRIO: DADOS PESSOAIS: NOME
-    Wait Until Page Contains Element    //div[@class='divConteudo'][contains(.,'Os campos a seguir são de preenchimento obrigatório:Dados Pessoais: Nome')]
