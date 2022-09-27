@@ -136,8 +136,8 @@ Em Sexo, selecionar "${Sexo}"
     Aguardar tela de carregamento    
 
 Em Carteira de Identidade ou R.N.E informar um documento válido
-    ${rg}    FakerLibrary.RG    
-    Input Text  ${campoIdentidade}  ${rg}
+    # ${rg}    FakerLibrary.RG    
+    # Input Text  ${campoIdentidade}  ${rg}
 
 Em Órgão Emissor, selecionar "${orgaoEmissor}"
     Run Keyword If    '${orgaoEmissor}' == 'Selecione'  Execute JavaScript   $('#${campoOrgaoEmissor}').val("-1").trigger('chosen:updated');
