@@ -22,6 +22,8 @@ Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/Justificat
 Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/LayoutDoPortal.robot
 Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/PortalConsulta.robot
 Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/PortalInfantilCont.robot
+Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/ProcessoDeDemanda.robot
+Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/ProgramacaoDeProcesso.robot
 Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/PortalInfantilInicial.robot
 Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/PortalListaDeEspera.robot
 Resource         ../2-PageElements/FluxosAlternativos/Prontuario/ProntuarioEducando.robot
