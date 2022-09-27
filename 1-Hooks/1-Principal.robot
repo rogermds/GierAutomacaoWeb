@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    FakerLibrary    locale=pt-BR
+Library    RequestsLibrary
 
 *** Variable ***
 ${botaoCadastrar}               cphContent_btnCad   
@@ -57,9 +58,14 @@ Entrar no módulo "${nomeModulo}"
         Execute JavaScript  xPathResult.singleNodeValue.click()  
     END
 
-Entrar na funcionalidade "${funcionalidade}"  
-    Execute JavaScript  xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
+Entrar na funcionalidade "${funcionalidade}"
+    IF    '${funcionalidade}' == 'Processo de Demandas'
+        Execute JavaScript  xPathResult = document.evaluate("//span[@title='Processo de Demandas']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click()  
+    ELSE 
+        Execute JavaScript  xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click() 
+    END
     Aguardar tela de carregamento
 
 Clicar no botão Cadastrar
@@ -152,7 +158,12 @@ Clicar em Salvar Alterações
     Aguardar tela de carregamento
 
 Dormir
-    Sleep    4
+    Sleep    2
 
 Aguardar carregamento Portal
-    Wait Until Page Does Not Contain    cssload-container
+    Wait Until Element Is Not Visible    wait    300
+
+Gerar Certidão de Nascimento Aleatório
+    Create Session    certidao    https://geradorbrasileiro.com/api
+    ${certidao}    GET On Session    certidao    url=https://geradorbrasileiro.com/api/faker/certidao?limit=1
+    Set Suite Variable    ${certidaoAleatoria}    ${certidao.json()["values"][0]}

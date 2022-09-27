@@ -1,20 +1,27 @@
 *** Settings ***
 Resource         ../1-Hooks/1-Principal.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT01-Login.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT02-SelecaodeEstrutura.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT03-Pessoa.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT04-Turma.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT05-AvaliacoesFrequencia.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT06-ControleDiarioFrequencia.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT07-AtaDeConselho.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT08-HistoricoEscolar.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT09-BoletimEscolar.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT10-ProntuarioDaTurma.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT11-ProntuarioDoEducando.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT12-Matricula.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT13-Transportes.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT14-AvaliacoesEducacionais.robot
-Resource    ../2-PageElements/FluxosAlternativos/CT32-GestaoPreMatriculaEscola.robot
+Resource         ../2-PageElements/FluxosPrincipais/Login/Login.robot
+Resource         ../2-PageElements/FluxosPrincipais/Seleção de Estrutura/Seleção de Estrutura.robot
+Resource         ../2-PageElements/FluxosPrincipais/Pessoa/Pessoa.robot
+Resource         ../2-PageElements/FluxosPrincipais/Turma/Turma.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações e Frequência/Avaliacoes e Frequencia.robot
+Resource         ../2-PageElements/FluxosPrincipais/Controle Diário de Frequência/Controle Diário de Frequência.robot
+Resource         ../2-PageElements/FluxosPrincipais/Ata de Conselho/Ata de Conselho.robot
+Resource         ../2-PageElements/FluxosPrincipais/Histórico Escolar/Histórico Escolar.robot
+Resource         ../2-PageElements/FluxosPrincipais/Boletim Escolar/Boletim Escolar.robot
+Resource         ../2-PageElements/FluxosPrincipais/Prontuário da Turma/Prontuário da Turma.robot
+Resource         ../2-PageElements/FluxosPrincipais/Prontuário do Educando/Prontuário do Educando.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Escola Autorizada A Receber Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Gestão de Pré-Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Justificativas da Pré-Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Layout do Portal.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Matricular Educando.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Portal.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Processo de Demanda.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Programação de Processo.robot
+Resource         ../2-PageElements/FluxosPrincipais/Transportes/Transportes.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Avaliações Educacionais.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -1023,7 +1030,7 @@ Cenário 22: Funcionalidade Boletim Escolar - EJA
     Em Boletim Individual de Educando M02, fechar o Boletim Escolar
 
 ## ALTERAR PARA O MÊS SEGUINTE CASO O TESTE FALHE. VERIFICAR O MÊS JÁ ESTÁ FECHADO
-Cenário 23: Funcionalidade Prontuário da Turma - InfantilCenário 23: Funcionalidade Prontuário da Turma - Infantil
+Cenário 23: Funcionalidade Prontuário da Turma - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário da Turma 
     ...                e todas as suas ações para a Etapa Infantil                   
     [Tags]             Prontuário da Turma - Infantil | Fluxo Positivo
@@ -1406,30 +1413,8 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
     Em Justificativas da Pré-Matrícula, clicar em OK no Modal
 
-EDITAR
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
-    Em Layout do Portal, em Ano Letivo, selecionar "2024"
-    Em Layout do Portal, clicar em Pesquisar
-    Em Layout do Portal, clicar em Ações e Continuar Configuração
-    Em Layout do Portal, Página Inicial, em Descrição do Processo, inserir "LAYOUT PORTAL EDITADO1"
-    Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir uma imagem
-    Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "01/01/2022"
-    Em Layout do Portal, Página Inicial, no Banner Inicial Web, clicar em Inserir
-    Em Layout do Portal, Página Inicial, clicar em Salvar e Próximo
-    Em Layout do Portal, Informações Importantes, em Informações Gerais selecionar "EDUCAÇÃO INFANTIL"
-    Em Layout do Portal, Informações Importantes, em Descrição, inserir "TESTE DESCRIÇÃO AUTOMACAO "
-    Em Layout do Portal, Informações Importantes, clicar em Inserir
-    Em Layout do Portal, Informações Importantes, clicar em Salvar e Próximo
-    
-## ATUALIZAR O NOME DO PROCESSO CORRETO
-Cenário 31: Funcionalidade - Layout do Portal de Inscrições e Transferências
-    [Documentation]    Esse teste efetua o cadastro e edição do Portal
+Cenário 31: Funcionalidade - Cadastro: Layout do Portal de Inscrições e Transferências
+    [Documentation]    Esse teste efetua o cadastro e exclusão do Portal
     ...                Online de Matrícula            
     [Tags]             Layout do Portal de Inscrições e Transferências | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -1440,7 +1425,7 @@ Cenário 31: Funcionalidade - Layout do Portal de Inscrições e Transferências
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
     Em Layout do Portal, clicar em Cadastrar
-    Em Layout do Portal, Página Inicial, em Ano Letivo, selecionar "2024"
+    Em Layout do Portal, Página Inicial, em Ano Letivo, selecionar o ano subsequente
     Em Layout do Portal, Página Inicial, em Descrição do Processo, inserir "LAYOUT PORTAL AUTOMAÇÃO"
     Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir uma imagem
     Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "01/01/2022"
@@ -1452,40 +1437,90 @@ Cenário 31: Funcionalidade - Layout do Portal de Inscrições e Transferências
     Em Layout do Portal, Informações Importantes, em Informações Gerais selecionar "EDUCAÇÃO INFANTIL"
     Em Layout do Portal, Informações Importantes, em Descrição, inserir "TESTE DESCRIÇÃO AUTOMACAO "
     Em Layout do Portal, Informações Importantes, clicar em Inserir
+    Em Layout do Portal, Informações Importantes, em Informações Gerais selecionar "ENSINO FUNDAMENTAL"
+    Em Layout do Portal, Informações Importantes, em Descrição, inserir "TESTE DESCRIÇÃO AUTOMACAO "
+    Em Layout do Portal, Informações Importantes, clicar em Inserir
     Em Layout do Portal, Informações Importantes, clicar em Salvar e Próximo
-    Em Layout do Portal, Layout Inscrição, selecionar os campos X
+    Em Layout do Portal, Layout Inscrição, selecionar os campos conforme o ambiente de produção
     Em Layout do Portal, Layout Inscrição, clicar em Salvar e Próximo
-    Em Layout do Portal, Layout Transferência, selecionar os campos X
     Em Layout do Portal, Layout Transferência, clicar em Salvar e Próximo
     Em Layout do Portal, Observações Importantes, selecionar a Etapa "EDUCAÇÃO INFANTIL"
     Em Layout do Portal, Observações Importantes, selecionar o curso "PRÉ-ESCOLA"
     Em Layout do Portal, Observações Importantes, selecionar em inscrição "INSCRIÇÃO"
     Em Layout do Portal, Observações Importantes, selecionar em vaga "SIM"
-    Em Layout do Portal, Observações Importantes, em Observações inserir "TESTE OBSERVAÇÃO "
+    Em Layout do Portal, Observações Importantes, em Observações inserir "TESTE OBSERVAÇÃO AUTOMACAO "
     Em Layout do Portal, Observações Importantes, clicar em Inserir
+    Em Layout do Portal, Observações Importantes, selecionar a Etapa "ENSINO FUNDAMENTAL"
+    Em Layout do Portal, Observações Importantes, selecionar o curso "CICLO II"
+    Em Layout do Portal, Observações Importantes, selecionar em inscrição "INSCRIÇÃO"
+    Em Layout do Portal, Observações Importantes, selecionar em vaga "SIM"
+    Em Layout do Portal, Observações Importantes, em Observações inserir "TESTE OBSERVAÇÃO AUTOMACAO "
+    Em Layout do Portal, Observações Importantes, clicar em Inserir
+    Em Layout do Portal, Observações Importantes, clicar em Salvar
+    Em Layout do Portal, Observações Importantes, clicar em OK no Modal
+    Em Layout do Portal, em Ano Letivo, selecionar "2024"
+    Em Layout do Portal, clicar em Pesquisar
+    Em Layout do Portal, clicar em Ações e Excluir
+    Em Layout do Portal, clicar em OK no modal
+    Em Layout do Portal, em Ano Letivo, selecionar "2024"
+    Em Layout do Portal, em Descrição do Processo, inserir a descrição criada
+    Em Layout do Portal, clicar em Pesquisar
+    Em Layout do Portal, verificar se o Layout foi excluído
+
+Cenário 32: Funcionalidade - Edição: Layout do Portal de Inscrições e Transferências
+    [Documentation]    Esse teste efetua a edição e verificação das informações no 
+    ...                Portal Online de Matrícula            
+    [Tags]             Layout do Portal de Inscrições e Transferências | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Layout do Portal de Inscrições e Transferências"
+    Em Layout do Portal, em Ano Letivo, selecionar "2022"
+    Em Layout do Portal, clicar em Pesquisar
+    Em Layout do Portal, clicar em Ações e Continuar Configuração
+    Em Layout do Portal, Página Inicial, clicar em Salvar e Próximo
+    Em Layout do Portal, Informações Importantes, editar o texto da etapa Educação Infantil
+    Em Layout do Portal, Informações Importantes, editar o texto da etapa Ensino Fundamental
+    Em Layout do Portal, Informações Importantes, clicar em Salvar e Próximo
+    Em Layout do Portal, Layout Inscrição, verificar se os campos estão marcados conforme o ambiente de produção
+    Em Layout do Portal, Layout Inscrição, clicar em Salvar e Próximo
+    Em Layout do Portal, Layout Transferência, clicar em Salvar e Próximo
+    Em Layout do Portal, Observações Importantes, editar o texto da etapa Educação Infantil
+    Em Layout do Portal, Observações Importantes, editar o texto da etapa Ensino Fundamental
     Em Layout do Portal, Observações Importantes, clicar em Salvar
     Em Layout do Portal, Observações Importantes, clicar em OK no Modal
     Entrar no Portal
     No Portal, clicar em "Educação Infantil"
-    Selecionar o processo para "Educação Infantil"
-
-
-PORTAL
-    Entrar no Portal
-    No Portal, clicar em "EDUCAÇÃO INFANTIL"
-    Dormir
     No Portal, selecionar o processo para a etapa "Educação Infantil"
-    Dormir
-    No Portal, verificar se o texto exibido é igual ao cadastrado
+    No Portal, verificar se o texto exibido é igual ao cadastrado em Educação Infantil
     No Portal, fechar o modal de informações importantes
-    Dormir
-    No Portal, clicar em Consultar Solicitação
-
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "Ensino Fundamental"
+    No Portal, verificar se o texto exibido é igual ao cadastrado em Ensino Fundamental
+    No Portal, fechar o modal de informações importantes
+    No Portal, clicar em "Consultar Solicitação"
+    No Portal, em Consultar Solicitação, selecionar a nacionalidade "Brasileiro"
+    No Portal, em Consultar Solicitação, em Protocolo inserir "20269562"
+    No Portal, em Consultar Solicitação, em CPF inserir "57743459802"
+    No Portal, em Consultar Solicitação, em Data de Nascimento inserir "07/03/1996"
+    No Portal, em Consultar Solicitação, clicar em Pesquisar
+    No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
+    No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Educação Infantil
+    No Portal, clicar em "Consultar Solicitação"
+    No Portal, em Consultar Solicitação, selecionar a nacionalidade "Brasileiro"
+    No Portal, em Consultar Solicitação, em Protocolo inserir "20269563"
+    No Portal, em Consultar Solicitação, em CPF inserir "97780957012"
+    No Portal, em Consultar Solicitação, em Data de Nascimento inserir "07/03/1996"
+    No Portal, em Consultar Solicitação, clicar em Pesquisar
+    No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
+    No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Ensino Fundamental
     
-
-Cenário 32: Funcionalidade Processo de Demanda
+Cenário 33: Funcionalidade Processo de Demanda Inicial - Infantil
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
-    ...                Inicial e Contínuo para as etapas/modalidades             
+    ...                Inicial e Contínuo para a etapas/modalidade Infantil
     [Tags]             Processo de Demanda | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
@@ -1494,16 +1529,603 @@ Cenário 32: Funcionalidade Processo de Demanda
     Entrar no eixo "Configuração"
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Processo de Demandas"
-    Clicar em Cadastrar
-    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO INFANTIL INICIAL 2023 #PROCESSO_TESTE_QA#"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO INFANTIL INICIAL"
     Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
-    Em Processo de Demanda, em Ano Letivo, selecionar "2023"
-    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "Não"
-    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "Sim"
-    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "Sim"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
     Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO INICIAL"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CRECHE - BERCÁRIO I"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2020"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/07/2021"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CRECHE - BERCÁRIO II"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2019"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2020"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CRECHE - MATERNAL"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2018"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2019"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "PRÉ-ESCOLA - ESTÁGIO I"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2017"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2018"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "PRÉ-ESCOLA - ESTÁGIO II"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2016"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2017"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+    
+Cenário 34: Funcionalidade Processo de Demanda Inicial - Fundamental
+    [Documentation]    Esse teste efetua a configuração do Processo de Demanda
+    ...                Inicial e Contínuo para a etapas/modalidade Fundamental
+    [Tags]             Processo de Demanda | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO FUNDAMENTAL INICIAL"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO INICIAL"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO I - 1º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2015"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/07/2016"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO I - 2º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2014"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2015"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO I - 3º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2013"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2014"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO II - 4º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2012"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2013"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO II - 5º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2011"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2012"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
 
-Cenário 33: Funcionalidade Programação de Processo
+Cenário 35: Funcionalidade Processo de Demanda Inicial - EJA
+    [Documentation]    Esse teste efetua a configuração do Processo de Demanda
+    ...                Inicial e Contínuo para a etapas/modalidade Fundamental
+    [Tags]             Processo de Demanda | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO EJA 1º SEMESTRE INICIAL"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "NÃO"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO INICIAL"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO EJA 2º SEMESTRE INICIAL"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "NÃO"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO INICIAL"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 2º SEMESTRE"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+
+Cenário 36: Funcionalidade Processo de Demanda Contínuo - Infantil
+    [Documentation]    Esse teste efetua a configuração do Processo de Demanda
+    ...                Inicial e Contínuo para a etapas/modalidade Infantil
+    [Tags]             Processo de Demanda | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO INFANTIL CONTÍNUO"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CRECHE - BERCÁRIO I"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2020"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/07/2021"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CRECHE - BERCÁRIO II"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2019"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2020"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CRECHE - MATERNAL"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2018"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2019"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "PRÉ-ESCOLA - ESTÁGIO I"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2017"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2018"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "PRÉ-ESCOLA - ESTÁGIO II"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2016"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2017"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+    
+Cenário 37: Funcionalidade Processo de Demanda Contínuo - Fundamental
+    [Documentation]    Esse teste efetua a configuração do Processo de Demanda
+    ...                Inicial e Contínuo para a etapas/modalidade Fundamental
+    [Tags]             Processo de Demanda | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO FUNDAMENTAL CONTÍNUO"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO I - 1º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2015"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/07/2016"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO I - 2º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2014"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2015"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO I - 3º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2013"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2014"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO II - 4º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2012"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2013"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "CICLO II - 5º ANO"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/04/2011"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/03/2012"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+
+Cenário 38: Funcionalidade Processo de Demanda Contínuo - EJA
+    [Documentation]    Esse teste efetua a configuração do Processo de Demanda
+    ...                Inicial e Contínuo para a etapas/modalidade EJA
+    [Tags]             Processo de Demanda | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO EJA 1º SEMESTRE CONTÍNUO"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "NÃO"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "AUTOMACAO EJA 2º SEMESTRE CONTÍNUO"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 2º SEMESTRE"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "NÃO"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+
+Cenário 39: Funcionalidade Processo de Demanda - Edição e Exclusão
+    [Documentation]    Esse teste efetua a configuração do Processo de Demanda
+    ...                Inicial e Contínuo para a etapas/modalidade EJA
+    [Tags]             Processo de Demanda | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "PROCESSO DEMANDA"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "NÃO"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+    Em Processo de Demanda, nos resultados, clicar em Ações e Editar
+    Em Processo de Demanda, na Descrição, inserir "PROCESSO DEMANDA EDITADO"
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+    Em Processo de Demanda, nos resultados, clicar em Ações e Excluir
+    Em Processo de Demanda, clicar em Sim no modal
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo não foi encontrado na pesquisa
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+
+Cenário 40: Processo de Demanda para Programação de Processo
+    [Documentation]    Esse teste efetua um cadastro de processo para ser editado
+    ...                e excluído na Programação de Processo
+    [Tags]             Processo de Demanda | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "TESTE PARA PROGRAMAÇÃO DE PROCESSO"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+
+Cenário 41: Funcionalidade Programação de Processo - Infantil Inicial
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
     ...                para o Portal (todas as etapas), e de transferência para o GIER                  
     [Tags]             Programação de Processo - Infantil | Fluxo Positivo
@@ -1513,16 +2135,664 @@ Cenário 33: Funcionalidade Programação de Processo
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
     Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Configuração Processo de Demandas"
-    Clicar em Cadastrar
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO FUNDAMENTAL INICIAL"
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/01/2022"
+    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
 
-Cenário 34: Funcionalidade Portal
+Cenário 42: Funcionalidade Programação de Processo - Fundamental Inicial
+    [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
+    ...                para o Portal (todas as etapas), e de transferência para o GIER                  
+    [Tags]             Programação de Processo - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO FUNDAMENTAL INICIAL"
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/01/2022"
+    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO FUNDAMENTAL INICIAL"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+
+Cenário 43: Funcionalidade Programação de Processo - EJA Inicial
+    [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
+    ...                para o Portal (todas as etapas), e de transferência para o GIER                  
+    [Tags]             Programação de Processo - EJA | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 1º SEMESTRE INICIAL"
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/01/2022"
+    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 1º SEMESTRE INICIAL"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 2º SEMESTRE INICIAL"
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/01/2022"
+    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 2º SEMESTRE INICIAL"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+
+Cenário 44: Funcionalidade Programação de Processo - Infantil Contínuo
+    [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
+    ...                para o Portal (todas as etapas), e de transferência para o GIER                  
+    [Tags]             Programação de Processo - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL CONTÍNUO"
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/01/2022"
+    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL CONTÍNUO"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+
+Cenário 45: Funcionalidade Programação de Processo - Fundamental Contínuo
+    [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
+    ...                para o Portal (todas as etapas), e de transferência para o GIER                  
+    [Tags]             Programação de Processo - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO FUNDAMENTAL CONTÍNUO"
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/01/2022"
+    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO FUNDAMENTAL CONTÍNUO"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+
+Cenário 46: Funcionalidade Programação de Processo - EJA Contínuo
+    [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
+    ...                para o Portal (todas as etapas), e de transferência para o GIER                  
+    [Tags]             Programação de Processo - EJA | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 1º SEMESTRE CONTÍNUO"
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/01/2022"
+    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 1º SEMESTRE CONTÍNUO"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 2º SEMESTRE CONTÍNUO"
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/01/2022"
+    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Portal de Inscrições"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 2º SEMESTRE CONTÍNUO"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+
+Cenário 47: Funcionalidade Programação de Processo - Edição e Exclusão
+    [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
+    ...                para o Portal (todas as etapas), e de transferência para o GIER                  
+    [Tags]             Programação de Processo - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO"
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/09/2022"
+    Em Programação de Processo, em Data Fim, inserir "30/09/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "22:22"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Data Inicio, inserir "01/10/2022"
+    Em Programação de Processo, em Data Fim, inserir "30/10/2022"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Segunda-Feira"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, verificar se a data "24/10/2022" foi inserida 
+    Em Programação de Processo, verificar se o horário "23:59" foi inserida 
+    Clicar em Voltar
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Excluir
+    Em Programação de Processo, clicar em Sim no modal
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se é exibida a mensagem "NENHUM REGISTRO FOI ENCONTRADO"
+
+Cenário 48: Funcionalidade Portal - Gier - Infantil Inicial
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
-    [Tags]             Portal | Fluxo Positivo
-    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/index.html"
-    Clicar em "Educação Infantil"
-    Selecionar o Processo "xxx"
+    [Tags]             Portal > Gier - Infantil Inicial | Fluxo Positivo
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "07/03/2018"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
+    Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
+    Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
+    Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+    Em Gestão de Pré-Matrícula, clicar em OK no modal
+
+Cenário 49: Funcionalidade Gier - Portal - Infantil Inicial  ##COM INCIDENTE
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Gier > Portal - Infantil Inicial | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Matricular Educando"
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
+    Em Matricular Educando, clicar em Sim no Modal
+    Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
+    Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
+    Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/2020"
+    Clicar no checkbox Pessoa não possui correio eletrônico
+    Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "BRASILEIRA"
+    Em Cadastro de Pessoa, no campo UF Nascimento, selecionar "SP"
+    Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar "GUARULHOS"
+    Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido
+    Em Cadastro de Pessoa, em Certidão de Nascimento, clicar em Nova Certidão de Nascimento
+    Em Cadastro de Pessoa, em Matrícula Certidão, inserir um certidão válida
+    Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir "01/01/2022"
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome "JOSIAS ADALBERTO"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar
+    Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
+    Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
+    Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir "07/03/1996"
+    Em Cadastro Rapido de Pessoa, em Sexo, selecionar "Feminino"
+    Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido
+    Em Cadastro Rapido de Pessoa, clicar em Salvar
+    Em Cadastro Rapido de Pessoa, clicar em OK no Modal
+    Em Cadastro de Pessoa, em Grau de Parentesco, selecionar "Mãe"
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "33"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
+    Em Matricular Educando, em País de Origem, selecionar "Brasil"
+    Em Matricular Educando, em Etapa/Modalidade, selecionar "Educação Infantil"
+    Em Matricular Educando, em Curso, selecionar "Creche"
+    Em Matricular Educando, em Periodo, selecionar "MANHÃ"
+    Em Matricular Educando, em Ciclo, selecionar "Bercário II"
+    Em Matricular Educando, selecionar uma turma com vagas
+    Em Matricular Educando, clicar em Matricular Educando
+    Em Matricular Educando, clicar em Sim no Modal de Matrícula
+    Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2020"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+
+Cenário 50: Funcionalidade Portal - Gier - Fundamental Inicial
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Portal > Gier - Fundamental Inicial | Fluxo Positivo
+    Entrar no Portal
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
+    Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
+    Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
+    Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+    Em Gestão de Pré-Matrícula, clicar em OK no modal
+
+
+
+
+
+
+
+
+#### ESTOU AQUI EM CIMA
+
+Cenário 48: Funcionalidade Gier Portal - Infantil Inicial  ##CENARIO PARA CONTÍNUO
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Portal - Infantil Inicial | Fluxo Positivo
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
+    Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Clicar em Salvar
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
+    Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
+    Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+    Em Gestão de Pré-Matrícula, clicar em OK no modal
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir o telefone cadastrado
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+   
 
 Cenário 35: Funcionalidade Gestão de Pré-Matrícula
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
@@ -1556,9 +2826,48 @@ Cenário 37: Funcionalidade Credenciamento de Condutores
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
+    Entrar no eixo "Configuração"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Credenciamento de Condutores"
     Em Credenciamento de Condutores, clicar em Cadastrar Condutores
+
+Cenário 38: Funcionalidade Tipos de Rotas
+    [Documentation]    Esse teste verifica se é possível cadastrar, editar
+    ...                editar e excluir uma Rota                
+    [Tags]             Rotas | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Tipos de Rotas"
+    Em Tipos de Rotas, clicar em Cadastrar
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, clicar em Salvar
+    Em Tipos de Rotas, clicar em OK no modal
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, clicar em Pesquisar
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, nos resultado, clicar em Ações e Editar
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO EDITADO"
+    Em Tipos de Rotas, clicar em Salvar
+    Em Tipos de Rotas, clicar em OK no modal
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO EDITADO"
+    Em Tipos de Rotas, clicar em Pesquisar
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO EDITADO"
+    Em Tipos de Rotas, nos resultado, clicar em Ações e Excluir
+    Em Tipos de Rotas, clicar em Sim no modal 
+    Em Tipos de Rotas, clicar em OK no modal
+    Em Tipos de Rotas, clicar em Cadastrar
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, clicar em Salvar
+    Em Tipos de Rotas, clicar em OK no modal
+    Em Tipos de Rotas, clicar em OK no modal
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, clicar em Pesquisar
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO"
 
 Cenário 38: Funcionalidade Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
@@ -1569,9 +2878,30 @@ Cenário 38: Funcionalidade Rotas
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
+    Entrar no eixo "Operação"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Rotas"
+    Em Rotas, clicar em Cadastrar
+    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA AUTOMACAO"
+    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA"
+    Em Cadastrar Rota, em Ponto Inicial, inserir "AUTOMACAO PONTO INICIAL"
+    Em Cadastrar Rota, em Ponto Final, inserir "AUTOMACAO PONTO FINAL"
+    Em Cadastrar Rota, em Km, inserir "10"
+    Em Cadastrar Rota, em Vincular Escolar a Rota, em Nome de Escola, inserir "VOLPI"
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Pesquisar
+    Em Cadastrar Rota, em Vincular Escolar a Rota, selecionar a escola pesquisada
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Inserir
+    Em Cadastrar Rota, em Vincular Escolar a Rota, em Nome de Escola, inserir "CRISPINIANO"
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Pesquisar
+    Em Cadastrar Rota, em Vincular Escolar a Rota, selecionar a escola pesquisada
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Inserir
+    Em Cadastrar Rota, clicar em Salvar
+    Em Cadastrar Rota, clicar em OK no Modal
+    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA"
+    Em Rotas, clicar em Pesquisar
+    Em Rotas, verificar se a rota foi cadastrada
 
+    
 Cenário 39: Funcionalidade Viagens
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem                

@@ -1,8 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    String
-Resource    ../../1-Hooks/1-Principal.robot
-Resource    ../FluxosAlternativos/CT39-Apredizagem.robot
+Resource    ../../../1-Hooks/1-Principal.robot
 
 *** Variables ***
 ${campoCalendario}                      cphContent_ddlCalendarioEscola

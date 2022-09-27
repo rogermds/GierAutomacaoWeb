@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    FakerLibrary     locale=pt_BR
-Resource    ../../1-Hooks/1-Principal.robot
+Resource    ../../../1-Hooks/1-Principal.robot
 
 *** Variables ***
 ${campoNomeCadastroPessoa}                    cphContent_ucDadosPessoais_txtNomeCompleto
@@ -30,6 +30,7 @@ ${botaoVisualizarPessoa}          cphContent_dtlConsultaPessoa_lkbVisualizar_0
 Em Cadastro de Pessoa, no campo Nome, inserir o nome "${nomePessoa}"
     ${codPessoaRandom}   Random Number   6
     Input Text    ${campoNomeCadastroPessoa}    ${nomePessoa}${codPessoaRandom}
+
 Em Cadastro de Pessoa, no campo Sexo, selecionar "${sexo}"
     Run Keyword If    '${sexo}' == 'FEMININO'  Execute JavaScript   $('#${campoSexoPessoa}').val("1").trigger('chosen:updated');
     Run Keyword If    '${sexo}' == 'MASCULINO'  Execute JavaScript   $('#${campoSexoPessoa}').val("2").trigger('chosen:updated');
@@ -115,6 +116,7 @@ Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar "${cidade}"
     Run Keyword If    '${cidade}' == 'SAO ROQUE'  Execute JavaScript   $('#${campoCidade}').val("4913").trigger('chosen:updated');
     Run Keyword If    '${cidade}' == 'TREMEMBE'  Execute JavaScript   $('#${campoCidade}').val("4870").trigger('chosen:updated');
     Run Keyword If    '${cidade}' == 'UBATUBA'  Execute JavaScript   $('#${campoCidade}').val("4877").trigger('chosen:updated');
+    Run Keyword If    '${cidade}' == 'GUARULHOS'  Execute JavaScript   $('#${campoCidade}').val("5333").trigger('chosen:updated');
     Aguardar tela de carregamento
 
 Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido
@@ -145,6 +147,7 @@ Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "${corRaca}"
     Run Keyword If    '${corRaca}' == 'PRETA'  Execute JavaScript   $('#${campoCorRaca}').val("2").trigger('chosen:updated');
 
 Em Cadastro de Pessoa, no campo CEP, inserir o CEP "${CEP}"
+    Wait Until Element Is Visible    ${campoCEP}
     Input Text   ${campoCEP}    ${CEP}
 
 Em Cadastro de Pessoa, no campo Número, inserir o número "${numeroCEP}"
@@ -259,3 +262,89 @@ Clicar em OK no Modal de Desativado com Sucesso
 
 Em Consulta de Pessoa, verificar se o botão Desativar está inativo
     Element Attribute Value Should Be    cphContent_dtlConsultaPessoa_lkbExcluir_0    class    aspNetDisabled
+
+Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
+    Clear Element Text    cphContent_ucDadosPessoais_txtNomeCompleto
+    Input Text   cphContent_ucDadosPessoais_txtNomeCompleto    ${nomeCompletoResponsavel}
+
+Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
+    ${nomeCompletoAluno}    Name Male
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ç    c
+    ${nomeCompletoAluno}    Fetch From Right    ${nomeCompletoAluno}    .
+    ${nomeCompletoAluno}    Strip String	    ${nomeCompletoAluno}    both
+    Set Suite Variable    ${nomeCompletoAluno}
+    Input Text    ${campoNomeCadastroPessoa}    ${nomeCompletoAluno}
+
+Em Cadastro de Pessoa, em Certidão de Nascimento, clicar em Nova Certidão de Nascimento
+    Execute JavaScript  document.getElementById("cphContent_ucDocumentos_chkNovaCertidaoNascimento").click();
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, em Matrícula Certidão, inserir um certidão válida
+    Gerar Certidão de Nascimento Aleatório
+    Input Text    cphContent_ucDocumentos_txtCertidaoNascimentoMatricula    ${certidaoAleatoria}
+
+Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir "${dataEmissaoCertidao}"
+    Input Text    cphContent_ucDocumentos_txtCertidaoNascimentoEmissao    ${dataEmissaoCertidao}
+
+Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome "${nomeParentesco}"
+    Input Text    cphContent_ucVinculos_PesquisarPessoaParente_txtNome    ${nomeParentesco}
+
+Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir a Data de Nascimento "${nascimentoParentesco}"
+    Input Text    cphContent_ucVinculos_PesquisarPessoaParente_txtDNasc    ${nascimentoParentesco}
+    
+Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_btnPesquisa").click();
+    Aguardar tela de carregamento
+
+Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
+    Wait Until Element Is Visible    cphContent_ucVinculos_PesquisarPessoaParente_MensagemPadrao_btnSim
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_MensagemPadrao_btnSim").click();
+    Aguardar tela de carregamento
+
+Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
+    Wait Until Element Is Visible    cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_btnSalvar
+    ${nomeCompletoResponsavel}    Name Female
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ç    c
+    ${nomeCompletoResponsavel}    Fetch From Right    ${nomeCompletoResponsavel}    .
+    ${nomeCompletoResponsavel}    Strip String	    ${nomeCompletoResponsavel}    both
+    Set Suite Variable    ${nomeCompletoResponsavel}
+    Input Text    ctl00$cphContent$ucVinculos$PesquisarPessoaParente$CadastroRapidoPessoa$txtNome    ${nomeCompletoResponsavel}
+
+Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir "${nascimentoCadastroRapido}"
+    Input Text    cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_txtDataNascimento    ${nascimentoCadastroRapido}
+
+Em Cadastro Rapido de Pessoa, em Sexo, selecionar "${sexoCadastroRapido}"
+    Execute JavaScript   $("#cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_ddlSexo").val($('option:contains("${sexoCadastroRapido}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_ddlSexo').trigger('change');
+    Aguardar tela de carregamento
+
+Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido
+    ${cpfFakeResponsavel}    FakerLibrary.cpf
+    Set Suite Variable    ${cpfFakeResponsavel}
+    Input Text    cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_txtCpf    ${cpfFakeResponsavel}
+
+Em Cadastro Rapido de Pessoa, clicar em Salvar
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_btnSalvar").click();
+    Aguardar tela de carregamento
+
+Em Cadastro Rapido de Pessoa, clicar em OK no Modal
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_MensagemPadrao_btnOk").click();
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, em Grau de Parentesco, selecionar "${grauParentesco}"
+    Wait Until Element Is Visible    cphContent_ucVinculos_btnInserirParente
+    Execute JavaScript   $("#cphContent_ucVinculos_ddlGrauParentesco").val($('option:contains("${grauParentesco}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ucVinculos_ddlGrauParentesco').trigger('change');
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_chkResponsavelLegal").click();
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_chkResponsavelPrincipal").click();
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
+    Execute JavaScript  document.getElementById("cphContent_ucVinculos_btnInserirParente").click();
+    Aguardar tela de carregamento
