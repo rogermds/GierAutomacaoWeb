@@ -1,20 +1,27 @@
 *** Settings ***
 Resource         ../1-Hooks/1-Principal.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT01-Login.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT02-SelecaodeEstrutura.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT03-Pessoa.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT04-Turma.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT05-AvaliacoesFrequencia.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT06-ControleDiarioFrequencia.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT07-AtaDeConselho.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT08-HistoricoEscolar.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT09-BoletimEscolar.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT10-ProntuarioDaTurma.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT11-ProntuarioDoEducando.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT12-Matricula.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT13-Transportes.robot
-Resource         ../2-PageElements/FluxosPrincipais/CT14-AvaliacoesEducacionais.robot
-Resource    ../2-PageElements/FluxosAlternativos/CT32-GestaoPreMatriculaEscola.robot
+Resource         ../2-PageElements/FluxosPrincipais/Login/Login.robot
+Resource         ../2-PageElements/FluxosPrincipais/Seleção de Estrutura/Seleção de Estrutura.robot
+Resource         ../2-PageElements/FluxosPrincipais/Pessoa/Pessoa.robot
+Resource         ../2-PageElements/FluxosPrincipais/Turma/Turma.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações e Frequência/Avaliacoes e Frequencia.robot
+Resource         ../2-PageElements/FluxosPrincipais/Controle Diário de Frequência/Controle Diário de Frequência.robot
+Resource         ../2-PageElements/FluxosPrincipais/Ata de Conselho/Ata de Conselho.robot
+Resource         ../2-PageElements/FluxosPrincipais/Histórico Escolar/Histórico Escolar.robot
+Resource         ../2-PageElements/FluxosPrincipais/Boletim Escolar/Boletim Escolar.robot
+Resource         ../2-PageElements/FluxosPrincipais/Prontuário da Turma/Prontuário da Turma.robot
+Resource         ../2-PageElements/FluxosPrincipais/Prontuário do Educando/Prontuário do Educando.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Escola Autorizada A Receber Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Gestão de Pré-Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Justificativas da Pré-Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Layout do Portal.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Matricular Educando.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Portal.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Processo de Demanda.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Programação de Processo.robot
+Resource         ../2-PageElements/FluxosPrincipais/Transportes/Transportes.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Avaliações Educacionais.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -2454,7 +2461,7 @@ Cenário 48: Funcionalidade Portal - Gier - Infantil Inicial
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
     No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
     No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
-    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "07/03/2018"
     No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
     No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
     No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
@@ -2598,7 +2605,7 @@ Cenário 50: Funcionalidade Portal - Gier - Fundamental Inicial
     [Tags]             Portal > Gier - Fundamental Inicial | Fluxo Positivo
     Entrar no Portal
     No Portal, clicar em "Ensino Fundamental"
-    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
     No Portal, clicar em Iniciar inscrição
     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
@@ -2666,6 +2673,14 @@ Cenário 50: Funcionalidade Portal - Gier - Fundamental Inicial
     Em Gestão de Pré-Matrícula, clicar em Matricular Educando
     Em Gestão de Pré-Matrícula, clicar em OK no modal
 
+
+
+
+
+
+
+
+#### ESTOU AQUI EM CIMA
 
 Cenário 48: Funcionalidade Gier Portal - Infantil Inicial  ##CENARIO PARA CONTÍNUO
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
@@ -2778,7 +2793,6 @@ Cenário 48: Funcionalidade Gier Portal - Infantil Inicial  ##CENARIO PARA CONT�
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
    
-
 
 Cenário 35: Funcionalidade Gestão de Pré-Matrícula
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  

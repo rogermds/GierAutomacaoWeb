@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Library    DateTime
 Library    String
 Library    FakerLibrary     locale=pt_BR
-Resource    ../../1-Hooks/1-Principal.robot
+Resource    ../../../1-Hooks/1-Principal.robot
 
 *** Variables ***
 ${campoTipoEstabelecimentoEscolaMatricula}    cphContent_ddlTipoEstabelecimento

@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    FakerLibrary
-Resource    ../../1-Hooks/1-Principal.robot
+Resource    ../../../1-Hooks/1-Principal.robot
 
 *** Variables ***
 ${campoEtapaModalidadeAvaliacoes}        cphContent_ddlEtapaModalidade

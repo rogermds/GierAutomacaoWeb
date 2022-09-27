@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220927 10:47:51.685" rpa="false" schemaversion="3">
+<suite id="s1" name="TesteDeVersaoPositivo" source="c:\Users\rogerio.santos\Desktop\AUTOMAÇÃO WEB - GIER\Automação - Teste De Versão Gier\3-TestesFluxoBasico\TesteDeVersaoPositivo.robot">
+<test id="s1-t1" name="Cenário 01: Acesso ao Sistema – Tela de Login" line="24">
+<kw name="Abrir o navegador" library="1-Principal" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://www.google.com/</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220927 10:47:53.963" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220927 10:47:53.963" endtime="20220927 10:47:57.836"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220927 10:47:57.837" endtime="20220927 10:47:58.047"/>
+</kw>
+<status status="PASS" starttime="20220927 10:47:53.961" endtime="20220927 10:47:58.049"/>
+</kw>
+<kw name="Acessar o ambiente &quot;https://guarulhoshomolog.gier.com.br/&quot;" library="1-Principal" sourcename="Acessar o ambiente &quot;${url}&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220927 10:47:58.053" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
+<status status="PASS" starttime="20220927 10:47:58.052" endtime="20220927 10:48:02.694"/>
+</kw>
+<status status="PASS" starttime="20220927 10:47:58.051" endtime="20220927 10:48:02.695"/>
+</kw>
+<kw name="Entrar com as credenciais &quot;02867439817&quot; e &quot;12345678&quot;" library="Login" sourcename="Entrar com as credenciais &quot;${login}&quot; e &quot;${senha}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${tituloLogin}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220927 10:48:02.698" endtime="20220927 10:48:02.754"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoLogin}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220927 10:48:02.756" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
+<status status="PASS" starttime="20220927 10:48:02.755" endtime="20220927 10:48:02.916"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoSenha}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220927 10:48:02.917" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
+<status status="PASS" starttime="20220927 10:48:02.916" endtime="20220927 10:48:03.072"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${botaoLogin}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220927 10:48:03.073" level="INFO">Clicking button 'btnAcessar'.</msg>
+<status status="PASS" starttime="20220927 10:48:03.073" endtime="20220927 10:48:05.655"/>
+</kw>
+<status status="PASS" starttime="20220927 10:48:02.696" endtime="20220927 10:48:05.655"/>
+</kw>
+<kw name="Verificar se aparece o texto &quot;Estrutura&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${texto}</arg>
+<arg>20</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220927 10:48:05.661" endtime="20220927 10:48:05.685"/>
+</kw>
+<status status="PASS" starttime="20220927 10:48:05.658" endtime="20220927 10:48:05.686"/>
+</kw>
+<kw name="Fechar o navegador" library="1-Principal" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220927 10:48:06.301" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220927 10:48:05.689" endtime="20220927 10:48:06.301"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220927 10:48:06.303" endtime="20220927 10:48:08.626"/>
+</kw>
+<status status="PASS" starttime="20220927 10:48:05.688" endtime="20220927 10:48:08.627"/>
+</kw>
+<doc>Esse teste verifica se é possível efetuar login no Gier
+Com o usuário e senha especificados</doc>
+<tag>Login | Fluxo Positivo</tag>
+<status status="PASS" starttime="20220927 10:47:53.957" endtime="20220927 10:48:08.628"/>
+</test>
+<status status="PASS" starttime="20220927 10:47:51.695" endtime="20220927 10:48:08.631"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Login | Fluxo Positivo</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TesteDeVersaoPositivo">TesteDeVersaoPositivo</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220927 10:47:53.135" level="ERROR">Error in file 'c:\Users\rogerio.santos\Desktop\AUTOMAÇÃO WEB - GIER\Automação - Teste De Versão Gier\3-TestesFluxoBasico\TesteDeVersaoPositivo.robot' on line 5: Resource file '..\2-PageElements\FluxosPrincipais\CT02-SelecaodeEstrutura.robot' does not exist.</msg>
+</errors>
+</robot>
