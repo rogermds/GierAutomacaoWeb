@@ -1552,7 +1552,7 @@ Cenário 47: Programação de Processo
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Processo de Demandas"
     Em Processo de Demanda, clicar em Cadastrar
-    Em Processo de Demanda, na Descrição, inserir "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO"
+    Em Processo de Demanda, na Descrição, inserir "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
     Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
     Em Processo de Demanda, em Ano Letivo, selecionar "2022"
     Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
@@ -1591,7 +1591,7 @@ Cenário 47: Programação de Processo
     Em Programação de Processo, visualizar o modal de alerta contendo "PREENCHA A DATA INÍCIO"
     Em Programação de Processo, clicar em OK no modal
     Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
-    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
     Em Programação de Processo, em Data Inicio, inserir "02/01/2022"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, visualizar o modal de alerta contendo "PREENCHA A DATA FIM"
@@ -1611,7 +1611,7 @@ Cenário 47: Programação de Processo
     Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
     Em Programação de Processo, clicar em Ações e Editar

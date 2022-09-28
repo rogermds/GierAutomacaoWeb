@@ -60,9 +60,10 @@ Em Boletim Individual de Educando, no filtro Ano Letivo, selecionar "2021"
     Execute JavaScript  document.getElementById("cphContent_rptFiltros_rptDinamico_0_lnkDinamico_4").click();
 
 Em Boletim Individual de Educando, no filtro Turma, selecionar "EII A"
-    Wait Until Element Is Visible    cphContent_rptFiltros_rptDinamico_1_lnkDinamico_24
-    Execute JavaScript  document.getElementById("cphContent_rptFiltros_rptDinamico_1_lnkDinamico_24").click();
-    
+    Wait Until Element Is Visible    cphContent_rptFiltros_rptDinamico_1_lnkDinamico_25
+    Execute JavaScript  document.getElementById("cphContent_rptFiltros_rptDinamico_1_lnkDinamico_25").click();
+    Dormir
+
 Em Boletim Individual de Educando, no filtro Turma, selecionar "CII B"
     Wait Until Element Is Visible    cphContent_rptFiltros_rptDinamico_1_lnkDinamico_29
     Execute JavaScript  document.getElementById("cphContent_rptFiltros_rptDinamico_1_lnkDinamico_29").click();
@@ -71,7 +72,7 @@ Em Boletim Individual de Educando, no filtro Turma, selecionar "5 A"
     Wait Until Element Is Visible    cphContent_rptFiltros_rptDinamico_1_lnkDinamico_8
     Execute JavaScript  document.getElementById("cphContent_rptFiltros_rptDinamico_1_lnkDinamico_8").click();
     
-Em Boletim Individual de Educando, no filtro Educando, selecionar "ANA BEATRIZ DE ANDRADE OLIVEIRA"
+Em Boletim Individual de Educando, no filtro Educando, selecionar "ANA BEATRIZ ANDRADE OLIVEIRA"
     Wait Until Element Is Visible    cphContent_rptFiltros_rptDinamico_2_lnkDinamico_1
     Execute JavaScript  document.getElementById("cphContent_rptFiltros_rptDinamico_2_lnkDinamico_1").click();
     

@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../1-Hooks/1-Principal.robot
+Resource    ../../../1-Hooks/1-Principal.robot
 
 *** Variables ***
 ${siglaAprendizagem}        cphContent_txtSigla

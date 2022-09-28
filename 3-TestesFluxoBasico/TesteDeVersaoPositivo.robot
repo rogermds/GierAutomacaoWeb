@@ -15,7 +15,6 @@ Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Escola Autorizada
 Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Gestão de Pré-Matrícula.robot
 Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Justificativas da Pré-Matrícula.robot
 Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Layout do Portal.robot
-Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Matrícula.robot
 Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Matricular Educando.robot
 Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Portal.robot
 Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Processo de Demanda.robot
@@ -132,7 +131,7 @@ Cenário 04: Funcionalidade Pessoa – Secretaria
     Em Cadastro de Pessoa, no campo Órgão Emissor, selecionar "SSP"
     Em Cadastro de Pessoa, no campo Data de Expedição, inserir a data "20/01/2020"
     Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
-    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "02176-010"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
     Em Cadastro de Pessoa, no campo Número, inserir o número "13"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
     Clicar no botão Incluir
@@ -364,7 +363,7 @@ Cenário 08: Funcionalidade Avaliações e Frequência - Infantil
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Avaliações e Frequência"
-    Na consulta de avaliações, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Na consulta de avaliações, em Etapa/Modalidade, selecionar "Educação Infantil"
     Na consulta de avaliações, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
     Na consulta de avaliações, em Turma, selecionar "EII A"
     Clicar em Pesquisar
@@ -388,9 +387,9 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Avaliações e Frequência"
-    Na consulta de avaliações, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Na consulta de avaliações, em Professor, selecionar "TANIA MARA DA SILVA"
-    Na consulta de avaliações, em Turma, selecionar "5B"
+    Na consulta de avaliações, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Na consulta de avaliações, em Professor, selecionar "MARIA FAUSTA JUSTINIANO SANTOS SILVEIRA"
+    Na consulta de avaliações, em Turma, selecionar "1B"
     Clicar em Pesquisar
     No primeiro aluno, em questionário, clicar em "Responder"
     Marcar "ATINGIU OS OBJETIVOS" nas questões
@@ -401,8 +400,8 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Verificar se aparece o status "RELATÓRIO AGUARDANDO VALIDAÇÃO"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
-    Em Validação de Relatório, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Em Validação de Relatório, em Turma, selecionar "5B"
+    Em Validação de Relatório, em Etapa/Modalidade, selecionar a etapa/modalidade utilizada
+    Em Validação de Relatório, em Turma, selecionar a turma utilizada
     Em Validação de Relatório, clicar em Pesquisar
     Verificar se a Situação de Validação está como "AGUARDANDO VALIDAÇÃO"
     Clicar em VISUALIZAR EDUCANDOS
@@ -415,9 +414,9 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Verificar se este texto aparece no histórico
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Avaliações e Frequência"
-    Na consulta de avaliações, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Na consulta de avaliações, em Professor, selecionar "TANIA MARA DA SILVA"
-    Na consulta de avaliações, em Turma, selecionar "5B"
+    Na consulta de avaliações, em Etapa/Modalidade, selecionar a etapa/modalidade utilizada
+    Na consulta de avaliações, em Professor, selecionar o professor utilizado
+    Na consulta de avaliações, em Turma, selecionar a turma utilizada
     Clicar em Pesquisar
     Verificar se aparece o status "RELATÓRIO AGUARDANDO AJUSTES"    
     No primeiro aluno, em questionário, clicar em "Responder"
@@ -431,8 +430,8 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Verificar se aparece o status "RELATÓRIO VALIDADO APÓS AJUSTES"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
-    Em Validação de Relatório, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Em Validação de Relatório, em Turma, selecionar "5B"
+    Em Validação de Relatório, em Etapa/Modalidade, selecionar a etapa/modalidade utilizada
+    Em Validação de Relatório, em Turma, selecionar a turma utilizada
     Em Validação de Relatório, clicar em Pesquisar
     Verificar se a Situação de Validação está como "VALIDADO COM AJUSTES"
     Clicar em VISUALIZAR EDUCANDOS
@@ -452,7 +451,7 @@ Cenário 10: Funcionalidade Avaliações e Frequência - EJA
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Avaliações e Frequência"
-    Na consulta de avaliações, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE"
+    Na consulta de avaliações, em Etapa/Modalidade, selecionar "Educação de Jovens e Adultos 1º Semestre"
     Na consulta de avaliações, em Data de Referência, informar "05072022"
     Na consulta de avaliações, em Professor, selecionar "DAIANE LINO SALVADOR"
     Na consulta de avaliações, em Turma, selecionar "CII B (1º Semestre)"
@@ -946,7 +945,7 @@ Cenário 20: Funcionalidade Boletim Escolar - Infantil
     Entrar na funcionalidade "Boletim Individual de Educando"
     Em Boletim Individual de Educando, no filtro Ano Letivo, selecionar "2022"
     Em Boletim Individual de Educando, no filtro Turma, selecionar "EII A"
-    Em Boletim Individual de Educando, no filtro Educando, selecionar "ANA BEATRIZ DE ANDRADE OLIVEIRA"
+    Em Boletim Individual de Educando, no filtro Educando, selecionar "ANA BEATRIZ ANDRADE OLIVEIRA"
     Em Boletim Individual de Educando, clicar em Imprimir
     Em Boletim Individual de Educando, verificar se o Boletim foi emitido corretamente
     Em Boletim Individual de Educando, fechar o Boletim Escolar
@@ -1043,7 +1042,7 @@ Cenário 23: Funcionalidade Prontuário da Turma - Infantil
     Em Prontuário da Turma, em Ano Letivo, selecionar "2022"
     Em Prontuário da Turma, em Turma, selecionar "EII B"
     Clicar em Pesquisar
-    Em Prontuário da Turma, em Mês de Reunião, selecionar "Maio"
+    Em Prontuário da Turma, em Mês de Reunião, selecionar "Junho"
     Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
     Em Prontuário da Turma, em Impressões do Conselho de Turma, inserir "TESTE DE IMPRESSÃO DO CONSELHO DE TURMA"
     Clicar em Salvar
@@ -1067,7 +1066,7 @@ Cenário 24: Funcionalidade Prontuário da Turma - Fundamental
     Em Prontuário da Turma, em Ano Letivo, selecionar "2022"
     Em Prontuário da Turma, em Turma, selecionar "5A"
     Clicar em Pesquisar
-    Em Prontuário da Turma, em Mês de Reunião, selecionar "Maio"
+    Em Prontuário da Turma, em Mês de Reunião, selecionar "Junho"
     Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
     Em Prontuário da Turma, em Impressões do Conselho de Turma, inserir "TESTE DE IMPRESSÃO DO CONSELHO DE TURMA"
     Clicar em Salvar
@@ -1091,7 +1090,7 @@ Cenário 25: Funcionalidade Prontuário da Turma - EJA
     Em Prontuário da Turma, em Ano Letivo, selecionar "2022"
     Em Prontuário da Turma, em Turma, selecionar "CII A (1º Semestre)"
     Clicar em Pesquisar
-    Em Prontuário da Turma, em Mês de Reunião, selecionar "Abril"
+    Em Prontuário da Turma, em Mês de Reunião, selecionar "Maio"
     Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
     Em Prontuário da Turma, em Impressões do Conselho de Turma, inserir "TESTE DE IMPRESSÃO DO CONSELHO DE TURMA"
     Clicar em Salvar
@@ -1158,6 +1157,7 @@ Cenário 26: Funcionalidade Prontuário do Educando - Infantil
     Em Prontuário do Educando, clicar em Mapa de Turma
     Verificar se aparece o texto "Mapa da Turma"
 
+## CONFIGURAR FREQUENCIA PARA VALIDAR PARECER FINAL
 Cenário 27: Funcionalidade Prontuário do Educando - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário do Educando 
     ...                e todas as suas ações para a Etapa Fundamental                   
@@ -1205,13 +1205,13 @@ Cenário 27: Funcionalidade Prontuário do Educando - Fundamental
     Em Atestado de Educandos, em Compensação de Ausências, verificar se o registro foi excluído
     Clicar em Salvar
     Clicar em OK no Modal
-    Em Prontuário do Educando, em Parecer Final, selecionar "PROMOVIDO(A)"
-    Em Prontuário do Educando, em Qualificação do Parecer Final, selecionar "xxxxx"
-    Em Prontuário do Educando, clicar em Finalizar
-    Clicar em OK no Modal
-    Em Prontuário do Educando, clicar em Reabrir Relatório
-    Clicar em OK no Modal
-    Em Prontuário do Educando, verificar se o botão Finalizar está visível
+    # Em Prontuário do Educando, em Parecer Final, selecionar "PROMOVIDO(A)"
+    # Em Prontuário do Educando, em Qualificação do Parecer Final, selecionar "xxxxx"
+    # Em Prontuário do Educando, clicar em Finalizar
+    # Clicar em OK no Modal
+    # Em Prontuário do Educando, clicar em Reabrir Relatório
+    # Clicar em OK no Modal
+    # Em Prontuário do Educando, verificar se o botão Finalizar está visível
     Em Prontuário do Educando, clicar em Mapa de Turma
     Verificar se aparece o texto "Mapa da Turma"
 
@@ -1262,13 +1262,13 @@ Cenário 28: Funcionalidade Prontuário do Educando - EJA
     Em Atestado de Educandos, em Compensação de Ausências, verificar se o registro foi excluído
     Clicar em Salvar
     Clicar em OK no Modal
-    Em Prontuário do Educando, em Parecer Final, selecionar "PROMOVIDO(A)"
-    Em Prontuário do Educando, em Qualificação do Parecer Final, selecionar "xxxxx"
-    Em Prontuário do Educando, clicar em Finalizar
-    Clicar em OK no Modal
-    Em Prontuário do Educando, clicar em Reabrir Relatório
-    Clicar em OK no Modal
-    Em Prontuário do Educando, verificar se o botão Finalizar está visível
+    # Em Prontuário do Educando, em Parecer Final, selecionar "PROMOVIDO(A)"
+    # Em Prontuário do Educando, em Qualificação do Parecer Final, selecionar "xxxxx"
+    # Em Prontuário do Educando, clicar em Finalizar
+    # Clicar em OK no Modal
+    # Em Prontuário do Educando, clicar em Reabrir Relatório
+    # Clicar em OK no Modal
+    # Em Prontuário do Educando, verificar se o botão Finalizar está visível
     Em Prontuário do Educando, clicar em Mapa de Turma
     Verificar se aparece o texto "Mapa da Turma"
 
@@ -1494,11 +1494,11 @@ Cenário 32: Funcionalidade - Edição: Layout do Portal de Inscrições e Trans
     Em Layout do Portal, Observações Importantes, clicar em OK no Modal
     Entrar no Portal
     No Portal, clicar em "Educação Infantil"
-    No Portal, selecionar o processo para a etapa "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
     No Portal, verificar se o texto exibido é igual ao cadastrado em Educação Infantil
     No Portal, fechar o modal de informações importantes
     No Portal, clicar em "Ensino Fundamental"
-    No Portal, selecionar o processo para a etapa "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
     No Portal, verificar se o texto exibido é igual ao cadastrado em Ensino Fundamental
     No Portal, fechar o modal de informações importantes
     No Portal, clicar em "Consultar Solicitação"
@@ -2078,9 +2078,6 @@ Cenário 39: Funcionalidade Processo de Demanda - Edição e Exclusão
     Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
     Em Processo de Demanda, clicar em Pesquisar
     Em Processo de Demanda, verificar se o processo não foi encontrado na pesquisa
-    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
-    Em Processo de Demanda, clicar em Pesquisar
-    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
 
 Cenário 40: Processo de Demanda para Programação de Processo
     [Documentation]    Esse teste efetua um cadastro de processo para ser editado
@@ -2404,7 +2401,7 @@ Cenário 47: Funcionalidade Programação de Processo - Edição e Exclusão
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
     Em Programação de Processo, clicar em Ações e Editar
@@ -2414,19 +2411,19 @@ Cenário 47: Funcionalidade Programação de Processo - Edição e Exclusão
     Em Programação de Processo, em Dias da Semana, selecionar "Segunda-Feira"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
     Em Programação de Processo, clicar em Ações e Editar
     Em Programação de Processo, verificar se a data "24/10/2022" foi inserida 
     Em Programação de Processo, verificar se o horário "23:59" foi inserida 
     Clicar em Voltar
-    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
     Em Programação de Processo, clicar em Ações e Excluir
     Em Programação de Processo, clicar em Sim no modal
-    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se é exibida a mensagem "NENHUM REGISTRO FOI ENCONTRADO"
 
