@@ -844,6 +844,7 @@ Cenário 33: Funcionalidade Gestão de Pré-matrícula Secretaria
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão de Educandos"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Situação, selecionar "AGUARDANDO ANÁLISE"
     Em campo Educando, informar "Teste Automação Qualidade"
     Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.
@@ -1138,8 +1139,8 @@ Cenário 38: Funcionalidade Transportes Escola
     [Documentation]    Esse teste verifica se é possível solicitar
     ...                uma transporte através da escola
     [Tags]             Solicitação de Transporte | Fluxo Negativo
-    Acessar o ambiente "http://guarulhos.suporte.gier.intranet.local/"
-    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -1269,7 +1270,7 @@ Cenário 42: Avaliação Educacional
     [Tags]             Avaliação Educacional | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "4282670" e "4282670"
-    Clicar na Prova "Prova de Educação Qa"
+    Clicar na Prova Prova Automação Qa   
     Visualizar a Questão 1 de 18       
     Clicar no Botão Avançar 
     Visualizar a Questão 2 de 18
@@ -1314,7 +1315,7 @@ Cenário 43: Avaliação Educacional
     [Tags]             Avaliação Educacional | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "4282671" e "4282671"
-    Clicar na Prova "Prova de Educação Qa"
+    Clicar na Prova Prova Automação Qa  
     Visualizar a Questão 1 de 18       
     Clicar na Resposta "A"
     Clicar no Botão Avançar 
@@ -1546,7 +1547,7 @@ Cenário 46: Processo de Demanda
 Cenário 47: Programação de Processo
     [Documentation]    Esse teste efetua o fluxo negativo de Programação de Processo
     [Tags]             Programação de Processo | Fluxo Negativo
-        Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
@@ -1613,7 +1614,7 @@ Cenário 47: Programação de Processo
     Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO #PROCESSO_TESTE_QA#"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
     Em Programação de Processo, clicar em Ações e Editar

@@ -41,7 +41,7 @@ Em campo turma, selecionar "${turmaControle}"
     Aguardar tela de carregamento
 
 Clicar no botão 'Diário de Turma'
-    Wait Until Page Contains Element   ${botaoDiarioDeTurmaControle}    
+    Wait Until Page Contains Element   ${botaoDiarioDeTurmaControle}    30    
     Execute JavaScript  document.getElementById("${botaoDiarioDeTurmaControle}").click();
     Wait Until Element Is Visible    ${botaoSalvar}    20
 
