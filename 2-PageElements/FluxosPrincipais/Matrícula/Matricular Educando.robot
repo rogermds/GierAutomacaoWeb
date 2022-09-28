@@ -71,7 +71,7 @@ Em Matricular Educando, em Ciclo, selecionar "${ciclo}"
 Em Matricular Educando, selecionar uma turma com vagas
         FOR     ${index}    IN RANGE    0    20
     ${busca}    Set Variable    cphContent_dtlConsulta_lblVTeoricasTd_${index}
-    ${resultado}    Run Keyword And Return Status   Element Should Not Contain    ${busca}    0    
+    ${resultado}    Run Keyword And Return Status   Element Text Should Not Be    ${busca}    0    
         IF  ${resultado}
             Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lbtSelecionar_${index}").click();
             Aguardar tela de carregamento

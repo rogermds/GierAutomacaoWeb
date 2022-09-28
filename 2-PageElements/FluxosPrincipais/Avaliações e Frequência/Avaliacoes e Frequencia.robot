@@ -36,11 +36,14 @@ ${campoJustificativaDevolucao}           cphContent_QuestionarioAvaliacao_dtlQue
 
 *** Keywords ***
 Na consulta de avaliações, em Etapa/Modalidade, selecionar "${etapaModalidade}"
+    Set Suite Variable    ${etapaModalidade}
     Aguardar tela de carregamento
-    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("1").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("4").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("5").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 2º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').val("6").trigger('chosen:updated');
+    Execute JavaScript   $("#${campoEtapaModalidadeAvaliacoes}").val($('option:contains("${etapaModalidade}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').trigger('change');
+    Aguardar tela de carregamento
+
+Na consulta de avaliações, em Etapa/Modalidade, selecionar a etapa/modalidade utilizada
+    Execute JavaScript   $("#${campoEtapaModalidadeAvaliacoes}").val($('option:contains("${etapaModalidade}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').trigger('change');
     Aguardar tela de carregamento
 
@@ -54,27 +57,25 @@ Na consulta de avaliações, em Data de Referência, informar "${data}"
     Execute JavaScript   $('#${campoDataReferencia}').trigger('change');
     Aguardar tela de carregamento
 
-Na consulta de avaliações, em Professor, selecionar "${professor}"    
-    Run Keyword If    '${professor}' == 'ADRIANA CRISTINA CAMPOS SCALICI'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("6167").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'DANIELA MACHADO OLIVEIRA'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("8702").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'TANIA MARA DA SILVA'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("7859").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'TANIA APARECIDA MINORELLI'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("7491").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'PRISCILA DOMINGUES FERNANDES LOPES'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("2588").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'MARIA FAUSTA JUSTINIANO SANTOS SILVEIRA'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("3560").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'LUCIANA OLIVEIRA RIBEIRO TOLEDO'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("7797").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'DAIANE LINO SALVADOR'  Execute JavaScript   $('#${campoProfessorAvalicoes}').val("4446").trigger('chosen:updated');
+Na consulta de avaliações, em Professor, selecionar "${professor}"
+    Set Suite Variable    ${professor}
+    Execute JavaScript   $("#${campoProfessorAvalicoes}").val($('option:contains("${professor}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#${campoProfessorAvalicoes}').trigger('change');
+    Aguardar tela de carregamento
+
+Na consulta de avaliações, em Professor, selecionar o professor utilizado
+    Execute JavaScript   $("#${campoProfessorAvalicoes}").val($('option:contains("${professor}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#${campoProfessorAvalicoes}').trigger('change');
     Aguardar tela de carregamento
 
 Na consulta de avaliações, em Turma, selecionar "${turma}"
-    Run Keyword If    '${turma}' == 'EII A'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("110667").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '5B'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("112173").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '3A'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("110822").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '3B'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("110825").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '1B'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("110726").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '1A'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("110725").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '4A'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("111827").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == 'CII B (1º Semestre)'  Execute JavaScript   $('#${campoTurmaAvalicoes}').val("113555").trigger('chosen:updated');
+    Set Suite Variable    ${turma}
+    Execute JavaScript   $("#${campoTurmaAvalicoes}").val($('option:contains("${turma}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#${campoTurmaAvalicoes}').trigger('change');
+    Aguardar tela de carregamento
+
+Na consulta de avaliações, em Turma, selecionar a turma utilizada
+    Execute JavaScript   $("#${campoTurmaAvalicoes}").val($('option:contains("${turma}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#${campoTurmaAvalicoes}').trigger('change');
     Aguardar tela de carregamento
 
@@ -171,26 +172,18 @@ Clicar em Salvar Ajustes
     Aguardar tela de carregamento
 
 Verificar se o texto alterado aparece nesta tela
+    Dormir
     Element Should Contain    ${campoTextoRespostaAvaliacao}     ${correcaoRelatorio}
 
-Em Validação de Relatório, em Etapa/Modalidade, selecionar "${etapaModalidade}"
+Em Validação de Relatório, em Etapa/Modalidade, selecionar a etapa/modalidade utilizada
     Aguardar tela de carregamento
-    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'  Execute JavaScript   $('#${campoEtapaModalidadeRelatorio}').val("1").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'  Execute JavaScript   $('#${campoEtapaModalidadeRelatorio}').val("4").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO DE JOVENS E ADULTOS 1º SEMESTRE'  Execute JavaScript   $('#${campoEtapaModalidadeRelatorio}').val("5").trigger('chosen:updated');
+    Execute JavaScript   $("#${campoEtapaModalidadeRelatorio}").val($('option:contains("${etapaModalidade}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeRelatorio}').trigger('change');
     Aguardar tela de carregamento
 
-Em Validação de Relatório, em Turma, selecionar "${turma}"
+Em Validação de Relatório, em Turma, selecionar a turma utilizada
     Aguardar tela de carregamento
-    Run Keyword If    '${turma}' == 'EII A'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("110667").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == 'CII B'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("113555").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '5B'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("112173").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '3A'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("110822").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '3B'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("110825").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '4A'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("111827").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '1B'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("110726").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '1A'  Execute JavaScript   $('#${campoTurmaRelatorio}').val("110725").trigger('chosen:updated');
+    Execute JavaScript   $("#${campoTurmaRelatorio}").val($('option:contains("${turma}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#${campoTurmaRelatorio}').trigger('change');
     Aguardar tela de carregamento
 

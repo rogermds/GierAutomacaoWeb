@@ -25,26 +25,13 @@ No controle de frequência, em Etapa/Modalidade, selecionar "${etapaModalidade}"
     Aguardar tela de carregamento
 
 No controle de frequência, em Professor, selecionar "${professor}"
-    Run Keyword If    '${professor}' == 'ADRIANA CRISTINA CAMPOS SCALICI'  Execute JavaScript   $('#${campoProfessorFrequencia}').val("6167").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'TANIA MARA DA SILVA'  Execute JavaScript   $('#${campoProfessorFrequencia}').val("7859").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'TANIA APARECIDA MINORELLI'  Execute JavaScript   $('#${campoProfessorFrequencia}').val("7491").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'PRISCILA DOMINGUES FERNANDES LOPES'  Execute JavaScript   $('#${campoProfessorFrequencia}').val("2588").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'MARIA FAUSTA JUSTINIANO SANTOS SILVEIRA'  Execute JavaScript   $('#${campoProfessorFrequencia}').val("3560").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'LUCIANA OLIVEIRA RIBEIRO TOLEDO'  Execute JavaScript   $('#${campoProfessorFrequencia}').val("7797").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'DANIELA MACHADO OLIVEIRA'  Execute JavaScript   $('#${campoProfessorFrequencia}').val("8702").trigger('chosen:updated');
-    Run Keyword If    '${professor}' == 'DAIANE LINO SALVADOR'  Execute JavaScript   $('#${campoProfessorFrequencia}').val("4446").trigger('chosen:updated');
+    Sleep    1
+    Execute JavaScript   $("#${campoProfessorFrequencia}").val($('option:contains("${professor}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#${campoProfessorFrequencia}').trigger('change');
     Aguardar tela de carregamento
 
 No controle de frequência, em Turma, selecionar "${turma}"
-    Run Keyword If    '${turma}' == 'EII A'  Execute JavaScript   $('#${campoTurmaFrequencia}').val("110667").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '5B'  Execute JavaScript   $('#${campoTurmaFrequencia}').val("112173").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '3A'  Execute JavaScript   $('#${campoTurmaFrequencia}').val("110822").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '3B'  Execute JavaScript   $('#${campoTurmaFrequencia}').val("110825").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '1B'  Execute JavaScript   $('#${campoTurmaFrequencia}').val("110726").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '4A'  Execute JavaScript   $('#${campoTurmaFrequencia}').val("111827").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == '1A'  Execute JavaScript   $('#${campoTurmaFrequencia}').val("110725").trigger('chosen:updated');
-    Run Keyword If    '${turma}' == 'CI A'  Execute JavaScript   $('#${campoTurmaFrequencia}').val("113554").trigger('chosen:updated');
+    Execute JavaScript   $("#${campoTurmaFrequencia}").val($('option:contains("${turma}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#${campoTurmaFrequencia}').trigger('change');
     Aguardar tela de carregamento
 

@@ -44,6 +44,7 @@ Em Escola Autorizada A Receber Matrícula, verificar se as opções estão selec
         ELSE
             Execute JavaScript  document.getElementById("${busca}").click();
             Aguardar tela de carregamento
+            Exit For Loop
         END
     END
 
