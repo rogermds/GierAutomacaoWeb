@@ -1,12 +1,12 @@
 *** Settings ***
 Documentation     Esse teste verifica se é possível efetuar login no Gier
 Resource         ../1-Hooks/1-Principal.robot
-<<<<<<< HEAD
 Resource         ../2-PageElements/FluxosAlternativos/AtaDeConselhoFinal/AtaDeConselhoFinal.robot
 Resource         ../2-PageElements/FluxosAlternativos/AvaliacaoEFreqquencia/AvaliacaoEFrequencia.robot
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/Apredizagem.robot
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/AvaliacaoEducacional.robot
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/AvaliacaoEducacional2.robot
+Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/BancoDeQuestoes.robot
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/GruposDePergunta.robot
 Resource         ../2-PageElements/FluxosAlternativos/BoletimEscolar/BoletimEscolar.robot
 Resource         ../2-PageElements/FluxosAlternativos/ControleDiarioDeFrequencia/ControleDiarioDeFrequencia.robot
@@ -16,14 +16,16 @@ Resource         ../2-PageElements/FluxosAlternativos/Login/EsqueciMinhaSenha.ro
 Resource         ../2-PageElements/FluxosAlternativos/Login/Estrutura.robot
 Resource         ../2-PageElements/FluxosAlternativos/Pessoa/CadastroPessoa.robot
 Resource         ../2-PageElements/FluxosAlternativos/Pessoa/ConsultaPessoa.robot
-Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/GestaoDePreMatriculaEscola.robot
-Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/GestãoDePreMatriculaSecret.robot
-Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/JustificativasPreMatricula.robot
-Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/LayoutDoPortal.robot
-Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/PortalConsulta.robot
-Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/PortalInfantilCont.robot
-Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/PortalInfantilInicial.robot
-Resource         ../2-PageElements/FluxosAlternativos/PortalInscricao/PortalListaDeEspera.robot
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/GestaoDePreMatriculaEscola.robot
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/GestãoDePreMatriculaSecret.robot
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/JustificativasPreMatricula.robot
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/LayoutDoPortal.robot
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/PortalConsulta.robot
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/PortalInfantilCont.robot    
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/ProcessoDeDemanda.robot
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/ProgramacaoDeProcesso.robot
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/PortalInfantilInicial.robot
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/PortalListaDeEspera.robot
 Resource         ../2-PageElements/FluxosAlternativos/Prontuario/ProntuarioEducando.robot
 Resource         ../2-PageElements/FluxosAlternativos/Prontuario/ProntuarioTurma.robot
 Resource         ../2-PageElements/FluxosAlternativos/Transporte/CadastroDeRotas.robot
@@ -32,7 +34,7 @@ Resource         ../2-PageElements/FluxosAlternativos/Transporte/CredenciamentoC
 Resource         ../2-PageElements/FluxosAlternativos/Transporte/GestãoDeTransporte.robot
 Resource         ../2-PageElements/FluxosAlternativos/Transporte/SolicitacaoTransporte.robot
 Resource         ../2-PageElements/FluxosAlternativos/Turma/CadastroDeTurma.robot
-Resource         ../2-PageElements/FluxosAlternativos/Turma/ConsultaDeTurma.robot    
+Resource         ../2-PageElements/FluxosAlternativos/Turma/ConsultaDeTurma.robot  
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -1242,13 +1244,13 @@ Cenário 41: Funcionalidade Banco de Questões
     Entrar na funcionalidade "Banco de Questões" 
     Clicar no botão Cadastrar  
     Clicar em Salvar
-    Visualizar a mensagem: UTILIZAÇÃO DA QUESTÃO É OBRIGATÓRIO    
+    Visualizar a mensagem: UTILIZAÇÃO DA QUESTÃO É OBRIGATÓRIO            
     Clicar em OK no modal de alerta
     Em Utilização da Questão, selecionar "Pedagógico"
     Clicar em Salvar
     Visualizar a mensagem: INFORME A PERGUNTA.
     Clicar em OK no modal de alerta
-    Em Pergunta, informar "Teste Automação Qa Pergunta"
+    Em Pergunta, informar "Teste Automação Qa Pergunta"    
     Clicar em Salvar
     Visualizar a mensagem: INFORME A SIGLA.
     Clicar em OK no modal de alerta
