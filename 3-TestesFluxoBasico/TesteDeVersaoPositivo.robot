@@ -2136,7 +2136,7 @@ Cenário 41: Funcionalidade Programação de Processo - Infantil Inicial
     Em Programação de Processo, clicar em Cadastrar
     Em Programação de Processo, em Ano Letivo, selecionar "2022"
     Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
-    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO FUNDAMENTAL INICIAL"
+    Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
     Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
     Em Programação de Processo, em Data Inicio, inserir "01/01/2022"
     Em Programação de Processo, em Data Fim, inserir "31/12/2022"
@@ -2580,7 +2580,7 @@ Cenário 49: Funcionalidade Gier - Portal - Infantil Inicial  ##COM INCIDENTE
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
     No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
     No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
     No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova

@@ -4,6 +4,7 @@ Library    DateTime
 Library    String
 Library    FakerLibrary     locale=pt_BR
 Resource    ../../../1-Hooks/1-Principal.robot
+Resource    ./Layout do Portal.robot
 
 *** Variables ***
 ${campoTipoEstabelecimentoEscolaMatricula}    cphContent_ddlTipoEstabelecimento

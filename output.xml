@@ -1,634 +1,2903 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220928 00:11:01.660" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220928 01:59:15.520" rpa="false" schemaversion="3">
 <suite id="s1" name="TesteDeVersaoPositivo" source="c:\Users\rogerio.santos\Desktop\AUTOMAÇÃO WEB - GIER\Automação - Teste De Versão Gier\3-TestesFluxoBasico\TesteDeVersaoPositivo.robot">
-<test id="s1-t1" name="Cenário 47: Funcionalidade Programação de Processo - Edição e Exclusão" line="2381">
+<test id="s1-t1" name="Cenário 49: Funcionalidade Gier - Portal - Infantil Inicial" line="2504">
 <kw name="Abrir o navegador" library="1-Principal" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=https://www.google.com/</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220928 00:11:02.564" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20220928 00:11:02.564" endtime="20220928 00:11:05.046"/>
+<msg timestamp="20220928 01:59:16.442" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220928 01:59:16.441" endtime="20220928 01:59:19.196"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220928 00:11:05.047" endtime="20220928 00:11:05.180"/>
+<status status="PASS" starttime="20220928 01:59:19.197" endtime="20220928 01:59:19.322"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:02.563" endtime="20220928 00:11:05.181"/>
+<status status="PASS" starttime="20220928 01:59:16.441" endtime="20220928 01:59:19.322"/>
 </kw>
 <kw name="Acessar o ambiente &quot;https://guarulhoshomolog.gier.com.br/&quot;" library="1-Principal" sourcename="Acessar o ambiente &quot;${url}&quot;">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220928 00:11:05.186" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
-<status status="PASS" starttime="20220928 00:11:05.184" endtime="20220928 00:11:08.556"/>
+<msg timestamp="20220928 01:59:19.324" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
+<status status="PASS" starttime="20220928 01:59:19.324" endtime="20220928 01:59:27.368"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:05.183" endtime="20220928 00:11:08.556"/>
+<status status="PASS" starttime="20220928 01:59:19.323" endtime="20220928 01:59:27.369"/>
 </kw>
 <kw name="Entrar com as credenciais &quot;02867439817&quot; e &quot;12345678&quot;" library="Login" sourcename="Entrar com as credenciais &quot;${login}&quot; e &quot;${senha}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${tituloLogin}</arg>
 <arg>timeout=30</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220928 00:11:08.557" endtime="20220928 00:11:08.589"/>
+<status status="PASS" starttime="20220928 01:59:27.370" endtime="20220928 01:59:27.406"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoLogin}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220928 00:11:08.590" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
-<status status="PASS" starttime="20220928 00:11:08.590" endtime="20220928 00:11:08.672"/>
+<msg timestamp="20220928 01:59:27.407" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
+<status status="PASS" starttime="20220928 01:59:27.406" endtime="20220928 01:59:27.494"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoSenha}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220928 00:11:08.673" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
-<status status="PASS" starttime="20220928 00:11:08.672" endtime="20220928 00:11:08.743"/>
+<msg timestamp="20220928 01:59:27.497" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
+<status status="PASS" starttime="20220928 01:59:27.496" endtime="20220928 01:59:27.567"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${botaoLogin}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220928 00:11:08.744" level="INFO">Clicking button 'btnAcessar'.</msg>
-<status status="PASS" starttime="20220928 00:11:08.744" endtime="20220928 00:11:10.764"/>
+<msg timestamp="20220928 01:59:27.570" level="INFO">Clicking button 'btnAcessar'.</msg>
+<status status="PASS" starttime="20220928 01:59:27.569" endtime="20220928 01:59:31.244"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:08.557" endtime="20220928 00:11:10.764"/>
+<status status="PASS" starttime="20220928 01:59:27.370" endtime="20220928 01:59:31.244"/>
 </kw>
 <kw name="Verificar se aparece o texto &quot;Estrutura&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${texto}</arg>
 <arg>20</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220928 00:11:10.769" endtime="20220928 00:11:10.794"/>
+<status status="PASS" starttime="20220928 01:59:31.246" endtime="20220928 01:59:31.269"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:10.767" endtime="20220928 00:11:10.794"/>
+<status status="PASS" starttime="20220928 01:59:31.245" endtime="20220928 01:59:31.271"/>
 </kw>
-<kw name="Pesquisar &quot;SECRETARIA&quot; e selecionar o primeiro resultado" library="Seleção de Estrutura" sourcename="Pesquisar &quot;${pesquisaEstrutura}&quot; e selecionar o primeiro resultado">
+<kw name="Pesquisar &quot;VOLPI&quot; e selecionar o primeiro resultado" library="Seleção de Estrutura" sourcename="Pesquisar &quot;${pesquisaEstrutura}&quot; e selecionar o primeiro resultado">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoPesquisaEstrutura}</arg>
 <arg>${pesquisaEstrutura}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220928 00:11:10.796" level="INFO">Typing text 'SECRETARIA' into text field '//input[contains(@class,'textBuscaEstrutura')]'.</msg>
-<status status="PASS" starttime="20220928 00:11:10.796" endtime="20220928 00:11:10.904"/>
+<msg timestamp="20220928 01:59:31.274" level="INFO">Typing text 'VOLPI' into text field '//input[contains(@class,'textBuscaEstrutura')]'.</msg>
+<status status="PASS" starttime="20220928 01:59:31.274" endtime="20220928 01:59:31.371"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${primeiroResultadoEstrutura}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220928 00:11:10.904" level="INFO">Clicking element '//html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]'.</msg>
-<status status="PASS" starttime="20220928 00:11:10.904" endtime="20220928 00:11:10.954"/>
+<msg timestamp="20220928 01:59:31.371" level="INFO">Clicking element '//html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]'.</msg>
+<status status="PASS" starttime="20220928 01:59:31.371" endtime="20220928 01:59:31.413"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:10.795" endtime="20220928 00:11:10.954"/>
+<status status="PASS" starttime="20220928 01:59:31.273" endtime="20220928 01:59:31.414"/>
 </kw>
-<kw name="Entrar no eixo &quot;Configuração&quot;" library="1-Principal" sourcename="Entrar no eixo &quot;${nomeEixo}&quot;">
+<kw name="Entrar no eixo &quot;Operação&quot;" library="1-Principal" sourcename="Entrar no eixo &quot;${nomeEixo}&quot;">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult = document.evaluate("//div[@class='divEixo'][contains(.,'${nomeEixo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:10.959" level="INFO">Executing JavaScript:
-xPathResult = document.evaluate("//div[@class='divEixo'][contains(.,'Configuração')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+<msg timestamp="20220928 01:59:31.418" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//div[@class='divEixo'][contains(.,'Operação')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:10.958" endtime="20220928 00:11:18.910"/>
+<status status="PASS" starttime="20220928 01:59:31.417" endtime="20220928 02:00:01.738"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult.singleNodeValue.click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:18.911" level="INFO">Executing JavaScript:
+<msg timestamp="20220928 02:00:01.739" level="INFO">Executing JavaScript:
 xPathResult.singleNodeValue.click()
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:18.910" endtime="20220928 00:11:18.923"/>
+<status status="PASS" starttime="20220928 02:00:01.739" endtime="20220928 02:00:01.745"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:10.956" endtime="20220928 00:11:18.924"/>
+<status status="PASS" starttime="20220928 01:59:31.415" endtime="20220928 02:00:01.746"/>
 </kw>
-<kw name="Entrar no módulo &quot;Gestão de Demandas&quot;" library="1-Principal" sourcename="Entrar no módulo &quot;${nomeModulo}&quot;">
+<kw name="Entrar no módulo &quot;Educandos&quot;" library="1-Principal" sourcename="Entrar no módulo &quot;${nomeModulo}&quot;">
 <if>
 <branch type="IF" condition="'${nomeModulo}' == 'Gestão'">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult = document.evaluate("//span[contains(@id,'7')][contains(.,'Gestão')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20220928 00:11:18.926" endtime="20220928 00:11:18.926"/>
+<status status="NOT RUN" starttime="20220928 02:00:01.749" endtime="20220928 02:00:01.749"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult.singleNodeValue.click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20220928 00:11:18.926" endtime="20220928 00:11:18.926"/>
+<status status="NOT RUN" starttime="20220928 02:00:01.750" endtime="20220928 02:00:01.750"/>
 </kw>
-<status status="NOT RUN" starttime="20220928 00:11:18.925" endtime="20220928 00:11:18.926"/>
+<status status="NOT RUN" starttime="20220928 02:00:01.748" endtime="20220928 02:00:01.750"/>
 </branch>
 <branch type="ELSE">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:18.928" level="INFO">Executing JavaScript:
-xPathResult = document.evaluate("//span[contains(.,'Gestão de Demandas')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+<msg timestamp="20220928 02:00:01.752" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//span[contains(.,'Educandos')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:18.926" endtime="20220928 00:11:19.975"/>
+<status status="PASS" starttime="20220928 02:00:01.751" endtime="20220928 02:00:03.526"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult.singleNodeValue.click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:19.976" level="INFO">Executing JavaScript:
+<msg timestamp="20220928 02:00:03.526" level="INFO">Executing JavaScript:
 xPathResult.singleNodeValue.click()
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:19.976" endtime="20220928 00:11:19.989"/>
+<status status="PASS" starttime="20220928 02:00:03.526" endtime="20220928 02:00:03.536"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:18.926" endtime="20220928 00:11:19.989"/>
+<status status="PASS" starttime="20220928 02:00:01.750" endtime="20220928 02:00:03.537"/>
 </branch>
-<status status="PASS" starttime="20220928 00:11:18.925" endtime="20220928 00:11:19.990"/>
+<status status="PASS" starttime="20220928 02:00:01.748" endtime="20220928 02:00:03.537"/>
 </if>
-<status status="PASS" starttime="20220928 00:11:18.925" endtime="20220928 00:11:19.990"/>
+<status status="PASS" starttime="20220928 02:00:01.747" endtime="20220928 02:00:03.537"/>
 </kw>
-<kw name="Entrar na funcionalidade &quot;Programação de Processo&quot;" library="1-Principal" sourcename="Entrar na funcionalidade &quot;${funcionalidade}&quot;">
+<kw name="Entrar na funcionalidade &quot;Matricular Educando&quot;" library="1-Principal" sourcename="Entrar na funcionalidade &quot;${funcionalidade}&quot;">
 <if>
 <branch type="IF" condition="'${funcionalidade}' == 'Processo de Demandas'">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult = document.evaluate("//span[@title='Processo de Demandas']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20220928 00:11:19.993" endtime="20220928 00:11:19.993"/>
+<status status="NOT RUN" starttime="20220928 02:00:03.539" endtime="20220928 02:00:03.539"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult.singleNodeValue.click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20220928 00:11:19.993" endtime="20220928 00:11:19.993"/>
+<status status="NOT RUN" starttime="20220928 02:00:03.539" endtime="20220928 02:00:03.539"/>
 </kw>
-<status status="NOT RUN" starttime="20220928 00:11:19.992" endtime="20220928 00:11:19.993"/>
+<status status="NOT RUN" starttime="20220928 02:00:03.538" endtime="20220928 02:00:03.539"/>
 </branch>
 <branch type="ELSE">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:19.994" level="INFO">Executing JavaScript:
-xPathResult = document.evaluate("//span[contains(@title,'Programação de Processo')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+<msg timestamp="20220928 02:00:03.540" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//span[contains(@title,'Matricular Educando')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:19.994" endtime="20220928 00:11:21.089"/>
+<status status="PASS" starttime="20220928 02:00:03.539" endtime="20220928 02:00:05.274"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>xPathResult.singleNodeValue.click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:21.090" level="INFO">Executing JavaScript:
+<msg timestamp="20220928 02:00:05.275" level="INFO">Executing JavaScript:
 xPathResult.singleNodeValue.click()
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:21.089" endtime="20220928 00:11:21.102"/>
+<status status="PASS" starttime="20220928 02:00:05.275" endtime="20220928 02:00:05.284"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:19.993" endtime="20220928 00:11:21.102"/>
+<status status="PASS" starttime="20220928 02:00:03.539" endtime="20220928 02:00:05.284"/>
 </branch>
-<status status="PASS" starttime="20220928 00:11:19.992" endtime="20220928 00:11:21.102"/>
+<status status="PASS" starttime="20220928 02:00:03.538" endtime="20220928 02:00:05.284"/>
 </if>
 <kw name="Aguardar tela de carregamento" library="1-Principal">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>class=carregando</arg>
 <arg>300</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220928 00:11:21.103" endtime="20220928 00:11:22.759"/>
+<status status="PASS" starttime="20220928 02:00:05.285" endtime="20220928 02:00:12.108"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:21.102" endtime="20220928 00:11:22.759"/>
+<status status="PASS" starttime="20220928 02:00:05.284" endtime="20220928 02:00:12.108"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:19.992" endtime="20220928 00:11:22.760"/>
+<status status="PASS" starttime="20220928 02:00:03.538" endtime="20220928 02:00:12.109"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Cadastrar" library="Programação de Processo">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>cphContent_btnCadastrar</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220928 00:11:22.761" endtime="20220928 00:11:22.806"/>
+<kw name="Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de &quot;2022&quot;" library="Matricular Educando" sourcename="Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de &quot;${ano}&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${anoSeguinte}</var>
+<arg>${ano}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220928 02:00:12.112" level="INFO">${anoSeguinte} = 2023</msg>
+<status status="PASS" starttime="20220928 02:00:12.112" endtime="20220928 02:00:12.114"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_btnCadastrar").click();</arg>
+<arg>$('#cphContent_ddlAnoLetivo').val("${anoSeguinte}").trigger('chosen:updated');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:22.807" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnCadastrar").click();
+<msg timestamp="20220928 02:00:12.115" level="INFO">Executing JavaScript:
+$('#cphContent_ddlAnoLetivo').val("2023").trigger('chosen:updated');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:22.806" endtime="20220928 00:11:22.821"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220928 00:11:22.824" endtime="20220928 00:11:24.031"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:22.821" endtime="20220928 00:11:24.032"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:22.760" endtime="20220928 00:11:24.032"/>
-</kw>
-<kw name="Em Programação de Processo, em Ano Letivo, selecionar &quot;2022&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Ano Letivo, selecionar &quot;${ano}&quot;">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#cphContent_ddlAnoLetivo').val("${ano}").trigger('chosen:updated');</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:24.035" level="INFO">Executing JavaScript:
-$('#cphContent_ddlAnoLetivo').val("2022").trigger('chosen:updated');
-Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:24.034" endtime="20220928 00:11:24.041"/>
+<status status="PASS" starttime="20220928 02:00:12.114" endtime="20220928 02:00:12.121"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>$('#cphContent_ddlAnoLetivo').trigger('change');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:24.042" level="INFO">Executing JavaScript:
+<msg timestamp="20220928 02:00:12.123" level="INFO">Executing JavaScript:
 $('#cphContent_ddlAnoLetivo').trigger('change');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:24.041" endtime="20220928 00:11:24.052"/>
+<status status="PASS" starttime="20220928 02:00:12.122" endtime="20220928 02:00:12.138"/>
 </kw>
 <kw name="Aguardar tela de carregamento" library="1-Principal">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>class=carregando</arg>
 <arg>300</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220928 00:11:24.053" endtime="20220928 00:11:24.603"/>
+<status status="PASS" starttime="20220928 02:00:12.140" endtime="20220928 02:00:13.764"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:24.052" endtime="20220928 00:11:24.603"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:24.034" endtime="20220928 00:11:24.603"/>
-</kw>
-<kw name="Em Programação de Processo, em Tipo de Processo, selecionar &quot;PREMATRICULA&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Tipo de Processo, selecionar &quot;${tipoProcesso}&quot;">
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${tipoProcesso}' == 'PREMATRICULA'</arg>
-<arg>Execute JavaScript</arg>
-<arg>$('#cphContent_ddlTipoProcesso').val("1").trigger('chosen:updated');</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#cphContent_ddlTipoProcesso').val("1").trigger('chosen:updated');</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:24.605" level="INFO">Executing JavaScript:
-$('#cphContent_ddlTipoProcesso').val("1").trigger('chosen:updated');
-Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:24.605" endtime="20220928 00:11:24.611"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:24.605" endtime="20220928 00:11:24.612"/>
+<status status="PASS" starttime="20220928 02:00:12.139" endtime="20220928 02:00:13.764"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#cphContent_ddlTipoProcesso').trigger('change');</arg>
+<arg>$('#cphContent_ddlAnoLetivo').val("${ano}").trigger('chosen:updated');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:24.613" level="INFO">Executing JavaScript:
-$('#cphContent_ddlTipoProcesso').trigger('change');
+<msg timestamp="20220928 02:00:13.766" level="INFO">Executing JavaScript:
+$('#cphContent_ddlAnoLetivo').val("2022").trigger('chosen:updated');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:24.612" endtime="20220928 00:11:24.623"/>
+<status status="PASS" starttime="20220928 02:00:13.765" endtime="20220928 02:00:13.774"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ddlAnoLetivo').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:13.774" level="INFO">Executing JavaScript:
+$('#cphContent_ddlAnoLetivo').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:13.774" endtime="20220928 02:00:13.786"/>
 </kw>
 <kw name="Aguardar tela de carregamento" library="1-Principal">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>class=carregando</arg>
 <arg>300</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220928 00:11:24.624" endtime="20220928 00:11:25.391"/>
+<status status="PASS" starttime="20220928 02:00:13.787" endtime="20220928 02:00:15.964"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:24.624" endtime="20220928 00:11:25.391"/>
+<status status="PASS" starttime="20220928 02:00:13.787" endtime="20220928 02:00:15.964"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:24.604" endtime="20220928 00:11:25.391"/>
+<status status="PASS" starttime="20220928 02:00:12.110" endtime="20220928 02:00:15.964"/>
 </kw>
-<kw name="Em Programação de Processo, em Processo, selecionar o processo &quot;TESTE PARA PROGRAMAÇÃO DE PROCESSO&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Processo, selecionar o processo &quot;${processo}&quot;">
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${processo}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20220928 00:11:25.394" level="INFO">${processo} = TESTE PARA PROGRAMAÇÃO DE PROCESSO</msg>
-<status status="PASS" starttime="20220928 00:11:25.394" endtime="20220928 00:11:25.394"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Processo</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220928 00:11:25.394" endtime="20220928 00:11:25.419"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$("#cphContent_ddlProcesso").val($('option:contains("${processo}")').val()).trigger('chosen:updated');</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:25.420" level="INFO">Executing JavaScript:
-$("#cphContent_ddlProcesso").val($('option:contains("TESTE PARA PROGRAMAÇÃO DE PROCESSO")').val()).trigger('chosen:updated');
-Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:25.420" endtime="20220928 00:11:25.426"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#cphContent_ddlProcesso').trigger('change');</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:25.426" level="INFO">Executing JavaScript:
-$('#cphContent_ddlProcesso').trigger('change');
-Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:25.426" endtime="20220928 00:11:25.439"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220928 00:11:25.440" endtime="20220928 00:11:26.337"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:25.440" endtime="20220928 00:11:26.337"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:25.393" endtime="20220928 00:11:26.337"/>
-</kw>
-<kw name="Em Programação de Processo, em Ambiente Utilizado, selecionar &quot;Gier&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Ambiente Utilizado, selecionar &quot;${ambienteUtilizado}&quot;">
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${ambienteUtilizado}' == 'Gier'</arg>
-<arg>Execute JavaScript</arg>
-<arg>document.getElementById("cphContent_rblAmbiente_0").click();</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_rblAmbiente_0").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:26.339" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_rblAmbiente_0").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:26.339" endtime="20220928 00:11:26.350"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:26.337" endtime="20220928 00:11:26.350"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${ambienteUtilizado}' == 'Portal de Inscrições'</arg>
-<arg>Execute JavaScript</arg>
-<arg>document.getElementById("cphContent_rblAmbiente_1").click();</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220928 00:11:26.351" endtime="20220928 00:11:26.351"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220928 00:11:26.352" endtime="20220928 00:11:27.576"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:26.352" endtime="20220928 00:11:27.577"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:26.337" endtime="20220928 00:11:27.577"/>
-</kw>
-<kw name="Em Programação de Processo, em Data Inicio, inserir &quot;01/09/2022&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Data Inicio, inserir &quot;${data}&quot;">
+<kw name="Em Matricular Educando, em Pessoa que Deseja Matricular, inserir &quot;JOSIAS ADALBERTO&quot;" library="Matricular Educando" sourcename="Em Matricular Educando, em Pessoa que Deseja Matricular, inserir &quot;${alunoMatricula}&quot;">
 <kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>cphContent_txtDataInicio</arg>
+<arg>cphContent_PesquisaPessoa_txtNome</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220928 00:11:27.578" endtime="20220928 00:11:27.628"/>
+<status status="PASS" starttime="20220928 02:00:15.966" endtime="20220928 02:00:16.006"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtDataInicio</arg>
-<arg>${data}</arg>
+<arg>cphContent_PesquisaPessoa_txtNome</arg>
+<arg>${alunoMatricula}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220928 00:11:27.629" level="INFO">Typing text '01/09/2022' into text field 'cphContent_txtDataInicio'.</msg>
-<status status="PASS" starttime="20220928 00:11:27.628" endtime="20220928 00:11:27.762"/>
+<msg timestamp="20220928 02:00:16.007" level="INFO">Typing text 'JOSIAS ADALBERTO' into text field 'cphContent_PesquisaPessoa_txtNome'.</msg>
+<status status="PASS" starttime="20220928 02:00:16.006" endtime="20220928 02:00:16.101"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:27.578" endtime="20220928 00:11:27.762"/>
+<status status="PASS" starttime="20220928 02:00:15.966" endtime="20220928 02:00:16.102"/>
 </kw>
-<kw name="Em Programação de Processo, em Data Fim, inserir &quot;30/09/2022&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Data Fim, inserir &quot;${data}&quot;">
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>cphContent_txtDataFim</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220928 00:11:27.765" endtime="20220928 00:11:27.846"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtDataFim</arg>
-<arg>${data}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220928 00:11:27.848" level="INFO">Typing text '30/09/2022' into text field 'cphContent_txtDataFim'.</msg>
-<status status="PASS" starttime="20220928 00:11:27.847" endtime="20220928 00:11:27.953"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:27.764" endtime="20220928 00:11:27.953"/>
-</kw>
-<kw name="Em Programação de Processo, em Hora Inicio, inserir &quot;00:00&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Hora Inicio, inserir &quot;${hora}&quot;">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtHoraInicio</arg>
-<arg>${hora}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220928 00:11:27.955" level="INFO">Typing text '00:00' into text field 'cphContent_txtHoraInicio'.</msg>
-<status status="PASS" starttime="20220928 00:11:27.954" endtime="20220928 00:11:28.131"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:27.954" endtime="20220928 00:11:28.132"/>
-</kw>
-<kw name="Em Programação de Processo, em Hora Fim, inserir &quot;22:22&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Hora Fim, inserir &quot;${hora}&quot;">
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>cphContent_txtHoraFim</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220928 00:11:28.134" endtime="20220928 00:11:28.229"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtHoraFim</arg>
-<arg>${hora}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220928 00:11:28.233" level="INFO">Typing text '22:22' into text field 'cphContent_txtHoraFim'.</msg>
-<status status="PASS" starttime="20220928 00:11:28.231" endtime="20220928 00:11:28.368"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:28.133" endtime="20220928 00:11:28.368"/>
-</kw>
-<kw name="Em Programação de Processo, em Dias da Semana, selecionar &quot;Todos&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Dias da Semana, selecionar &quot;${diaSemana}&quot;">
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${diaSemana}' == 'Todos'</arg>
-<arg>Execute JavaScript</arg>
-<arg>document.getElementById("cblDiaSemana_7").click();</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar" library="Matricular Educando">
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cblDiaSemana_7").click();</arg>
+<arg>document.getElementById("cphContent_PesquisaPessoa_btnPesquisa").click();</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:28.371" level="INFO">Executing JavaScript:
-document.getElementById("cblDiaSemana_7").click();
+<msg timestamp="20220928 02:00:16.104" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_PesquisaPessoa_btnPesquisa").click();
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:28.371" endtime="20220928 00:11:28.403"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:28.370" endtime="20220928 00:11:28.403"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${diaSemana}' == 'Segunda-Feira'</arg>
-<arg>Execute JavaScript</arg>
-<arg>document.getElementById("cblDiaSemana_1").click();</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220928 00:11:28.404" endtime="20220928 00:11:28.404"/>
+<status status="PASS" starttime="20220928 02:00:16.103" endtime="20220928 02:00:16.120"/>
 </kw>
 <kw name="Aguardar tela de carregamento" library="1-Principal">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>class=carregando</arg>
 <arg>300</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220928 00:11:28.405" endtime="20220928 00:11:30.257"/>
+<status status="PASS" starttime="20220928 02:00:16.122" endtime="20220928 02:00:18.730"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:28.404" endtime="20220928 00:11:30.257"/>
+<status status="PASS" starttime="20220928 02:00:16.121" endtime="20220928 02:00:18.731"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:28.370" endtime="20220928 00:11:30.257"/>
+<status status="PASS" starttime="20220928 02:00:16.102" endtime="20220928 02:00:18.731"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Inserir" library="Programação de Processo">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_btnSalvar").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:30.259" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnSalvar").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:30.258" endtime="20220928 00:11:30.277"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220928 00:11:30.278" endtime="20220928 00:11:31.544"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:30.277" endtime="20220928 00:11:31.545"/>
-</kw>
-<status status="PASS" starttime="20220928 00:11:30.258" endtime="20220928 00:11:31.545"/>
-</kw>
-<kw name="Em Programação de Processo, clicar em OK no modal" library="Programação de Processo">
+<kw name="Em Matricular Educando, clicar em Sim no Modal" library="Matricular Educando">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>cphContent_Mensagem_Padrao_btnOk</arg>
+<arg>cphContent_PesquisaPessoa_MensagemPadrao_btnSim</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220928 00:11:31.548" endtime="20220928 00:11:31.587"/>
+<status status="PASS" starttime="20220928 02:00:18.732" endtime="20220928 02:00:18.754"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();</arg>
+<arg>document.getElementById("cphContent_PesquisaPessoa_MensagemPadrao_btnSim").click();</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:31.588" level="INFO">Executing JavaScript:
+<msg timestamp="20220928 02:00:18.757" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_PesquisaPessoa_MensagemPadrao_btnSim").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:18.756" endtime="20220928 02:00:18.770"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:18.770" endtime="20220928 02:00:21.509"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:18.770" endtime="20220928 02:00:21.511"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:18.732" endtime="20220928 02:00:21.511"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório" library="Pessoa">
+<kw name="Name Male" library="FakerLibrary">
+<var>${nomeCompletoAluno}</var>
+<msg timestamp="20220928 02:00:21.513" level="INFO">${nomeCompletoAluno} = Caio Cardoso</msg>
+<status status="PASS" starttime="20220928 02:00:21.513" endtime="20220928 02:00:21.513"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${nomeCompletoAluno}</var>
+<arg>${nomeCompletoAluno}</arg>
+<arg>ç</arg>
+<arg>c</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220928 02:00:21.514" level="INFO">${nomeCompletoAluno} = Caio Cardoso</msg>
+<status status="PASS" starttime="20220928 02:00:21.514" endtime="20220928 02:00:21.514"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${nomeCompletoAluno}</var>
+<arg>${nomeCompletoAluno}</arg>
+<arg>ê</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220928 02:00:21.514" level="INFO">${nomeCompletoAluno} = Caio Cardoso</msg>
+<status status="PASS" starttime="20220928 02:00:21.514" endtime="20220928 02:00:21.514"/>
+</kw>
+<kw name="Fetch From Right" library="String">
+<var>${nomeCompletoAluno}</var>
+<arg>${nomeCompletoAluno}</arg>
+<arg>.</arg>
+<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
+<msg timestamp="20220928 02:00:21.515" level="INFO">${nomeCompletoAluno} = Caio Cardoso</msg>
+<status status="PASS" starttime="20220928 02:00:21.514" endtime="20220928 02:00:21.515"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${nomeCompletoAluno}</var>
+<arg>${nomeCompletoAluno}</arg>
+<arg>both</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20220928 02:00:21.515" level="INFO">${nomeCompletoAluno} = Caio Cardoso</msg>
+<status status="PASS" starttime="20220928 02:00:21.515" endtime="20220928 02:00:21.515"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${nomeCompletoAluno}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220928 02:00:21.516" level="INFO">${nomeCompletoAluno} = Caio Cardoso</msg>
+<status status="PASS" starttime="20220928 02:00:21.515" endtime="20220928 02:00:21.516"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoNomeCadastroPessoa}</arg>
+<arg>${nomeCompletoAluno}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:00:21.516" level="INFO">Typing text 'Caio Cardoso' into text field 'cphContent_ucDadosPessoais_txtNomeCompleto'.</msg>
+<status status="PASS" starttime="20220928 02:00:21.516" endtime="20220928 02:00:21.662"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:21.512" endtime="20220928 02:00:21.663"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Sexo, selecionar &quot;MASCULINO&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Sexo, selecionar &quot;${sexo}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${sexo}' == 'FEMININO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSexoPessoa}').val("1").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:21.664" endtime="20220928 02:00:21.665"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${sexo}' == 'MASCULINO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSexoPessoa}').val("2").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoSexoPessoa}').val("2").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:21.667" level="INFO">Executing JavaScript:
+$('#cphContent_ucDadosPessoais_ddlSexo').val("2").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:21.666" endtime="20220928 02:00:21.676"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:21.665" endtime="20220928 02:00:21.677"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${sexo}' == 'NÃO INFORMADO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoSexoPessoa}').val("3").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:21.679" endtime="20220928 02:00:21.679"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:21.664" endtime="20220928 02:00:21.679"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data &quot;07/03/2020&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data &quot;${data}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoDataNascimento}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:00:21.682" level="INFO">Typing text '07/03/2020' into text field 'txtDNasc'.</msg>
+<status status="PASS" starttime="20220928 02:00:21.681" endtime="20220928 02:00:21.848"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:21.680" endtime="20220928 02:00:21.850"/>
+</kw>
+<kw name="Clicar no checkbox Pessoa não possui correio eletrônico" library="Pessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${naoPossuiEmail}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:21.853" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucDadosPessoais_chkNaoPossuiEmail").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:21.852" endtime="20220928 02:00:21.878"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:21.881" endtime="20220928 02:00:23.081"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:21.880" endtime="20220928 02:00:23.082"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:21.851" endtime="20220928 02:00:23.082"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Nacionalidade, selecionar &quot;BRASILEIRA&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Nacionalidade, selecionar &quot;${nacionalidade}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${nacionalidade}' == 'BRASILEIRA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoNacionalidadePessoa}').val("1").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoNacionalidadePessoa}').val("1").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:23.084" level="INFO">Executing JavaScript:
+$('#cphContent_ucDadosPessoais_ddlNacionalidade').val("1").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:23.084" endtime="20220928 02:00:23.095"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:23.083" endtime="20220928 02:00:23.095"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${nacionalidade}' == 'BRASILEIRO NASCIDO NO EXTERIOR'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoNacionalidadePessoa}').val("2").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:23.096" endtime="20220928 02:00:23.096"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${nacionalidade}' == 'ESTRANGEIRO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoNacionalidadePessoa}').val("3").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:23.097" endtime="20220928 02:00:23.097"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoNacionalidadePessoa}').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:23.099" level="INFO">Executing JavaScript:
+$('#cphContent_ucDadosPessoais_ddlNacionalidade').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:23.098" endtime="20220928 02:00:23.110"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:23.112" endtime="20220928 02:00:24.606"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:23.111" endtime="20220928 02:00:24.606"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:23.083" endtime="20220928 02:00:24.606"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo UF Nascimento, selecionar &quot;SP&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo UF Nascimento, selecionar &quot;${UF}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'PE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("1").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.611" endtime="20220928 02:00:24.611"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'PE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("1").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.611" endtime="20220928 02:00:24.612"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'PB'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("2").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.612" endtime="20220928 02:00:24.612"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'PB'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("2").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.612" endtime="20220928 02:00:24.613"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'PA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("3").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.613" endtime="20220928 02:00:24.613"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'PA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("3").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.613" endtime="20220928 02:00:24.613"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'RS'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("4").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.614" endtime="20220928 02:00:24.614"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'RS'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("4").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.614" endtime="20220928 02:00:24.615"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'AC'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("5").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.615" endtime="20220928 02:00:24.615"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'AC'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("5").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.615" endtime="20220928 02:00:24.616"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'BA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("6").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.616" endtime="20220928 02:00:24.616"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'BA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("6").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.616" endtime="20220928 02:00:24.616"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'SP'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("7").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoUFNascimento}').val("7").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:24.618" level="INFO">Executing JavaScript:
+$('#cphContent_ucDadosPessoais_ddlUfNascimento').val("7").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:24.617" endtime="20220928 02:00:24.629"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:24.617" endtime="20220928 02:00:24.629"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'SP'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("7").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoUFNascimento}').val("7").trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:24.632" level="INFO">Executing JavaScript:
+$('#cphContent_ucDadosPessoais_ddlUfNascimento').val("7").trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:24.632" endtime="20220928 02:00:24.642"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:24.630" endtime="20220928 02:00:24.642"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'SC'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("8").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.644" endtime="20220928 02:00:24.644"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'SC'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("8").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.645" endtime="20220928 02:00:24.645"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'SE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("9").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.646" endtime="20220928 02:00:24.646"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'SE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("9").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.648" endtime="20220928 02:00:24.649"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'MA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("10").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.649" endtime="20220928 02:00:24.650"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'MA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("10").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.650" endtime="20220928 02:00:24.650"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'TO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("11").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.651" endtime="20220928 02:00:24.651"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'TO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("11").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.652" endtime="20220928 02:00:24.652"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'RO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("12").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.652" endtime="20220928 02:00:24.653"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'RO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("12").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.653" endtime="20220928 02:00:24.653"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'DF'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("13").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.653" endtime="20220928 02:00:24.654"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'DF'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("13").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.654" endtime="20220928 02:00:24.654"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'MT'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("14").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.655" endtime="20220928 02:00:24.655"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'MT'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("14").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.656" endtime="20220928 02:00:24.656"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'PR'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("15").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.656" endtime="20220928 02:00:24.656"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'PR'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("15").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.657" endtime="20220928 02:00:24.657"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'CE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("16").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.657" endtime="20220928 02:00:24.657"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'CE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("16").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.658" endtime="20220928 02:00:24.660"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'AL'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("17").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.661" endtime="20220928 02:00:24.661"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'AL'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("17").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.662" endtime="20220928 02:00:24.662"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'RR'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("18").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.663" endtime="20220928 02:00:24.663"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'RR'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("18").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.663" endtime="20220928 02:00:24.664"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'MG'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("19").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.664" endtime="20220928 02:00:24.664"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'MG'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("19").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.665" endtime="20220928 02:00:24.665"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'MS'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("20").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.666" endtime="20220928 02:00:24.666"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'MS'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("20").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.666" endtime="20220928 02:00:24.667"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'GO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("21").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.667" endtime="20220928 02:00:24.667"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'GO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("21").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.668" endtime="20220928 02:00:24.668"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'RN'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("22").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.668" endtime="20220928 02:00:24.668"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'RN'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("22").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.669" endtime="20220928 02:00:24.669"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'AP'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("23").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.669" endtime="20220928 02:00:24.669"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'AP'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("23").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.669" endtime="20220928 02:00:24.670"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'RJ'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("24").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.670" endtime="20220928 02:00:24.670"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'RJ'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("24").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.670" endtime="20220928 02:00:24.670"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'ES'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("25").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.671" endtime="20220928 02:00:24.671"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'ES'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("25").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.671" endtime="20220928 02:00:24.671"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'AM'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("26").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.671" endtime="20220928 02:00:24.671"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'AM'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("26").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.672" endtime="20220928 02:00:24.672"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'PI'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("27").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.672" endtime="20220928 02:00:24.672"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${UF}' == 'PI'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoUFNascimento}').val("27").trigger('change');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:24.672" endtime="20220928 02:00:24.673"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:24.675" endtime="20220928 02:00:27.819"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:24.673" endtime="20220928 02:00:27.819"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:24.609" endtime="20220928 02:00:27.819"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar &quot;GUARULHOS&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar &quot;${cidade}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${cidade}' == 'ADAMANTINA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCidade}').val("5323").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:27.821" endtime="20220928 02:00:27.821"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${cidade}' == 'PRACINHA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCidade}').val("4800").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:27.821" endtime="20220928 02:00:27.823"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${cidade}' == 'SALESOPOLIS'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCidade}').val("5302").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:27.823" endtime="20220928 02:00:27.823"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${cidade}' == 'SAO PAULO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCidade}').val("4910").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:27.824" endtime="20220928 02:00:27.824"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${cidade}' == 'SAO PEDRO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCidade}').val("4911").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:27.824" endtime="20220928 02:00:27.824"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${cidade}' == 'SAO ROQUE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCidade}').val("4913").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:27.825" endtime="20220928 02:00:27.825"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${cidade}' == 'TREMEMBE'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCidade}').val("4870").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:27.825" endtime="20220928 02:00:27.825"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${cidade}' == 'UBATUBA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCidade}').val("4877").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:27.826" endtime="20220928 02:00:27.826"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${cidade}' == 'GUARULHOS'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCidade}').val("5333").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoCidade}').val("5333").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:27.829" level="INFO">Executing JavaScript:
+$('#cphContent_ucDadosPessoais_ddlCidadeNasc').val("5333").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:27.828" endtime="20220928 02:00:27.838"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:27.827" endtime="20220928 02:00:27.838"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:27.842" endtime="20220928 02:00:27.861"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:27.839" endtime="20220928 02:00:27.861"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:27.820" endtime="20220928 02:00:27.861"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido" library="Pessoa">
+<kw name="Cpf" library="FakerLibrary">
+<var>${CPFPessoa}</var>
+<msg timestamp="20220928 02:00:27.863" level="INFO">${CPFPessoa} = 032.957.618-68</msg>
+<status status="PASS" starttime="20220928 02:00:27.863" endtime="20220928 02:00:27.863"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${CPFPessoa}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220928 02:00:27.864" level="INFO">${CPFPessoa} = 032.957.618-68</msg>
+<status status="PASS" starttime="20220928 02:00:27.864" endtime="20220928 02:00:27.864"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${cpfFakeAluno}</arg>
+<arg>${CPFPessoa}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220928 02:00:27.868" level="INFO">${cpfFakeAluno} = 032.957.618-68</msg>
+<status status="PASS" starttime="20220928 02:00:27.865" endtime="20220928 02:00:27.868"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoCPF}</arg>
+<arg>${CPFPessoa}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:00:27.868" level="INFO">Typing text '032.957.618-68' into text field 'cphContent_ucDocumentos_txtCpf'.</msg>
+<status status="PASS" starttime="20220928 02:00:27.868" endtime="20220928 02:00:28.016"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:27.862" endtime="20220928 02:00:28.017"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, em Certidão de Nascimento, clicar em Nova Certidão de Nascimento" library="Pessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_ucDocumentos_chkNovaCertidaoNascimento").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:28.019" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucDocumentos_chkNovaCertidaoNascimento").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:28.018" endtime="20220928 02:00:28.072"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:28.073" endtime="20220928 02:00:30.679"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:28.073" endtime="20220928 02:00:30.680"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:28.018" endtime="20220928 02:00:30.680"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, em Matrícula Certidão, inserir um certidão válida" library="Pessoa">
+<kw name="Gerar Certidão de Nascimento Aleatório" library="1-Principal">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>certidao</arg>
+<arg>https://geradorbrasileiro.com/api</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220928 02:00:30.682" level="INFO">Creating Session using : alias=certidao, url=https://geradorbrasileiro.com/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220928 02:00:30.682" endtime="20220928 02:00:30.682"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${certidao}</var>
+<arg>certidao</arg>
+<arg>url=https://geradorbrasileiro.com/api/faker/certidao?limit=1</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220928 02:00:31.260" level="INFO">GET Request : url=https://geradorbrasileiro.com/api/faker/certidao?limit=1 
+ path_url=/api/faker/certidao?limit=1 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220928 02:00:31.261" level="INFO">GET Response : url=https://geradorbrasileiro.com/api/faker/certidao?limit=1 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.14.1', 'Date': 'Wed, 28 Sep 2022 05:00:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '75', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': '"4b-6Jf4JR4jShdnCxEO8SlfOD2I9/4"', 'Vary': 'Accept-Encoding'} 
+ body={"type":"certidao","limit":1,"values":["95743854091233433064806284437412"]} 
+ </msg>
+<msg timestamp="20220928 02:00:31.261" level="INFO">C:\Users\rogerio.santos\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'geradorbrasileiro.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220928 02:00:31.263" level="INFO">${certidao} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220928 02:00:30.683" endtime="20220928 02:00:31.264"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${certidaoAleatoria}</arg>
+<arg>${certidao.json()["values"][0]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220928 02:00:31.275" level="INFO">${certidaoAleatoria} = 95743854091233433064806284437412</msg>
+<status status="PASS" starttime="20220928 02:00:31.265" endtime="20220928 02:00:31.275"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:30.682" endtime="20220928 02:00:31.276"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>cphContent_ucDocumentos_txtCertidaoNascimentoMatricula</arg>
+<arg>${certidaoAleatoria}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:00:31.276" level="INFO">Typing text '95743854091233433064806284437412' into text field 'cphContent_ucDocumentos_txtCertidaoNascimentoMatricula'.</msg>
+<status status="PASS" starttime="20220928 02:00:31.276" endtime="20220928 02:00:31.389"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:30.681" endtime="20220928 02:00:31.389"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir &quot;01/01/2022&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir &quot;${dataEmissaoCertidao}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>cphContent_ucDocumentos_txtCertidaoNascimentoEmissao</arg>
+<arg>${dataEmissaoCertidao}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:00:31.394" level="INFO">Typing text '01/01/2022' into text field 'cphContent_ucDocumentos_txtCertidaoNascimentoEmissao'.</msg>
+<status status="PASS" starttime="20220928 02:00:31.393" endtime="20220928 02:00:31.503"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:31.391" endtime="20220928 02:00:31.503"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Cor/Raça, selecionar &quot;PRETA&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Cor/Raça, selecionar &quot;${corRaca}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'AMARELA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("3").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:31.505" endtime="20220928 02:00:31.506"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'BRANCA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("1").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:31.506" endtime="20220928 02:00:31.506"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'INDÍGENA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("5").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:31.506" endtime="20220928 02:00:31.506"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'NÃO DECLARADA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("6").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:31.507" endtime="20220928 02:00:31.507"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'PARDA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("4").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:00:31.508" endtime="20220928 02:00:31.508"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'PRETA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("2").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoCorRaca}').val("2").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:31.511" level="INFO">Executing JavaScript:
+$('#cphContent_ucDadosSociais_ddlCorPele').val("2").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:31.510" endtime="20220928 02:00:31.520"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:31.509" endtime="20220928 02:00:31.520"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:31.505" endtime="20220928 02:00:31.521"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome &quot;JOSIAS ADALBERTO&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome &quot;${nomeParentesco}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>cphContent_ucVinculos_PesquisarPessoaParente_txtNome</arg>
+<arg>${nomeParentesco}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:00:31.523" level="INFO">Typing text 'JOSIAS ADALBERTO' into text field 'cphContent_ucVinculos_PesquisarPessoaParente_txtNome'.</msg>
+<status status="PASS" starttime="20220928 02:00:31.523" endtime="20220928 02:00:31.698"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:31.522" endtime="20220928 02:00:31.698"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar" library="Pessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_btnPesquisa").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:31.701" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_btnPesquisa").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:31.700" endtime="20220928 02:00:31.731"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:31.733" endtime="20220928 02:00:40.746"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:31.732" endtime="20220928 02:00:40.746"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:31.699" endtime="20220928 02:00:40.747"/>
+</kw>
+<kw name="Em Cadastro Rapido de Pessoa, clicar em Sim no Modal" library="Pessoa">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>cphContent_ucVinculos_PesquisarPessoaParente_MensagemPadrao_btnSim</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:00:40.748" endtime="20220928 02:00:40.778"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_MensagemPadrao_btnSim").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:40.780" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_MensagemPadrao_btnSim").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:40.778" endtime="20220928 02:00:40.798"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:40.799" endtime="20220928 02:00:43.177"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:40.798" endtime="20220928 02:00:43.177"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:40.747" endtime="20220928 02:00:43.177"/>
+</kw>
+<kw name="Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório" library="Pessoa">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_btnSalvar</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:00:43.181" endtime="20220928 02:00:43.235"/>
+</kw>
+<kw name="Name Female" library="FakerLibrary">
+<var>${nomeCompletoResponsavel}</var>
+<msg timestamp="20220928 02:00:43.235" level="INFO">${nomeCompletoResponsavel} = Cecília Teixeira</msg>
+<status status="PASS" starttime="20220928 02:00:43.235" endtime="20220928 02:00:43.235"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${nomeCompletoResponsavel}</var>
+<arg>${nomeCompletoResponsavel}</arg>
+<arg>ç</arg>
+<arg>c</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220928 02:00:43.236" level="INFO">${nomeCompletoResponsavel} = Cecília Teixeira</msg>
+<status status="PASS" starttime="20220928 02:00:43.236" endtime="20220928 02:00:43.236"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${nomeCompletoResponsavel}</var>
+<arg>${nomeCompletoResponsavel}</arg>
+<arg>ê</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220928 02:00:43.237" level="INFO">${nomeCompletoResponsavel} = Cecília Teixeira</msg>
+<status status="PASS" starttime="20220928 02:00:43.237" endtime="20220928 02:00:43.237"/>
+</kw>
+<kw name="Fetch From Right" library="String">
+<var>${nomeCompletoResponsavel}</var>
+<arg>${nomeCompletoResponsavel}</arg>
+<arg>.</arg>
+<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
+<msg timestamp="20220928 02:00:43.238" level="INFO">${nomeCompletoResponsavel} = Cecília Teixeira</msg>
+<status status="PASS" starttime="20220928 02:00:43.237" endtime="20220928 02:00:43.238"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${nomeCompletoResponsavel}</var>
+<arg>${nomeCompletoResponsavel}</arg>
+<arg>both</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20220928 02:00:43.240" level="INFO">${nomeCompletoResponsavel} = Cecília Teixeira</msg>
+<status status="PASS" starttime="20220928 02:00:43.239" endtime="20220928 02:00:43.240"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${nomeCompletoResponsavel}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220928 02:00:43.241" level="INFO">${nomeCompletoResponsavel} = Cecília Teixeira</msg>
+<status status="PASS" starttime="20220928 02:00:43.240" endtime="20220928 02:00:43.241"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>ctl00$cphContent$ucVinculos$PesquisarPessoaParente$CadastroRapidoPessoa$txtNome</arg>
+<arg>${nomeCompletoResponsavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:00:43.242" level="INFO">Typing text 'Cecília Teixeira' into text field 'ctl00$cphContent$ucVinculos$PesquisarPessoaParente$CadastroRapidoPessoa$txtNome'.</msg>
+<status status="PASS" starttime="20220928 02:00:43.242" endtime="20220928 02:00:43.425"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:43.180" endtime="20220928 02:00:43.426"/>
+</kw>
+<kw name="Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir &quot;07/03/1996&quot;" library="Pessoa" sourcename="Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir &quot;${nascimentoCadastroRapido}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_txtDataNascimento</arg>
+<arg>${nascimentoCadastroRapido}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:00:43.429" level="INFO">Typing text '07/03/1996' into text field 'cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_txtDataNascimento'.</msg>
+<status status="PASS" starttime="20220928 02:00:43.429" endtime="20220928 02:00:43.570"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:43.427" endtime="20220928 02:00:43.571"/>
+</kw>
+<kw name="Em Cadastro Rapido de Pessoa, em Sexo, selecionar &quot;Feminino&quot;" library="Pessoa" sourcename="Em Cadastro Rapido de Pessoa, em Sexo, selecionar &quot;${sexoCadastroRapido}&quot;">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$("#cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_ddlSexo").val($('option:contains("${sexoCadastroRapido}")').val()).trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:43.577" level="INFO">Executing JavaScript:
+$("#cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_ddlSexo").val($('option:contains("Feminino")').val()).trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:43.575" endtime="20220928 02:00:43.587"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_ddlSexo').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:43.590" level="INFO">Executing JavaScript:
+$('#cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_ddlSexo').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:43.588" endtime="20220928 02:00:43.597"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:43.598" endtime="20220928 02:00:43.615"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:43.597" endtime="20220928 02:00:43.616"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:43.574" endtime="20220928 02:00:43.616"/>
+</kw>
+<kw name="Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido" library="Pessoa">
+<kw name="Cpf" library="FakerLibrary">
+<var>${cpfFakeResponsavel}</var>
+<msg timestamp="20220928 02:00:43.617" level="INFO">${cpfFakeResponsavel} = 035.762.148-44</msg>
+<status status="PASS" starttime="20220928 02:00:43.617" endtime="20220928 02:00:43.618"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${cpfFakeResponsavel}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220928 02:00:43.618" level="INFO">${cpfFakeResponsavel} = 035.762.148-44</msg>
+<status status="PASS" starttime="20220928 02:00:43.618" endtime="20220928 02:00:43.619"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_txtCpf</arg>
+<arg>${cpfFakeResponsavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:00:43.619" level="INFO">Typing text '035.762.148-44' into text field 'cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_txtCpf'.</msg>
+<status status="PASS" starttime="20220928 02:00:43.619" endtime="20220928 02:00:43.827"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:43.617" endtime="20220928 02:00:43.828"/>
+</kw>
+<kw name="Em Cadastro Rapido de Pessoa, clicar em Salvar" library="Pessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_btnSalvar").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:43.831" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_btnSalvar").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:43.831" endtime="20220928 02:00:43.896"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:43.898" endtime="20220928 02:00:58.491"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:43.897" endtime="20220928 02:00:58.491"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:43.829" endtime="20220928 02:00:58.491"/>
+</kw>
+<kw name="Em Cadastro Rapido de Pessoa, clicar em OK no Modal" library="Pessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_MensagemPadrao_btnOk").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:00:58.493" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_MensagemPadrao_btnOk").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:00:58.493" endtime="20220928 02:00:58.512"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:00:58.513" endtime="20220928 02:01:00.791"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:58.513" endtime="20220928 02:01:00.791"/>
+</kw>
+<status status="PASS" starttime="20220928 02:00:58.492" endtime="20220928 02:01:00.791"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, em Grau de Parentesco, selecionar &quot;Mãe&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, em Grau de Parentesco, selecionar &quot;${grauParentesco}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>cphContent_ucVinculos_btnInserirParente</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:01:00.793" endtime="20220928 02:01:00.815"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$("#cphContent_ucVinculos_ddlGrauParentesco").val($('option:contains("${grauParentesco}")').val()).trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:00.815" level="INFO">Executing JavaScript:
+$("#cphContent_ucVinculos_ddlGrauParentesco").val($('option:contains("Mãe")').val()).trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:00.815" endtime="20220928 02:01:00.826"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ucVinculos_ddlGrauParentesco').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:00.826" level="INFO">Executing JavaScript:
+$('#cphContent_ucVinculos_ddlGrauParentesco').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:00.826" endtime="20220928 02:01:00.839"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:00.840" endtime="20220928 02:01:02.760"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:00.840" endtime="20220928 02:01:02.761"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:00.793" endtime="20220928 02:01:02.761"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal" library="Pessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_ucVinculos_chkResponsavelLegal").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:02.762" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucVinculos_chkResponsavelLegal").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:02.762" endtime="20220928 02:01:02.776"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:02.778" endtime="20220928 02:01:05.000"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:02.777" endtime="20220928 02:01:05.000"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:02.762" endtime="20220928 02:01:05.000"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal" library="Pessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_ucVinculos_chkResponsavelPrincipal").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:05.002" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucVinculos_chkResponsavelPrincipal").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:05.002" endtime="20220928 02:01:05.012"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:05.013" endtime="20220928 02:01:05.030"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:05.012" endtime="20220928 02:01:05.030"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:05.001" endtime="20220928 02:01:05.030"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente" library="Pessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_ucVinculos_btnInserirParente").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:05.031" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucVinculos_btnInserirParente").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:05.031" endtime="20220928 02:01:05.048"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:05.048" endtime="20220928 02:01:06.551"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:05.048" endtime="20220928 02:01:06.552"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:05.031" endtime="20220928 02:01:06.552"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo CEP, inserir o CEP &quot;07123-140&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo CEP, inserir o CEP &quot;${CEP}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${campoCEP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:01:06.555" endtime="20220928 02:01:06.577"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoCEP}</arg>
+<arg>${CEP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:01:06.578" level="INFO">Typing text '07123-140' into text field 'txtCep'.</msg>
+<status status="PASS" starttime="20220928 02:01:06.577" endtime="20220928 02:01:06.712"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:06.554" endtime="20220928 02:01:06.712"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Número, inserir o número &quot;33&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Número, inserir o número &quot;${numeroCEP}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoNumeroCEP}</arg>
+<arg>${numeroCEP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:01:06.714" level="INFO">Typing text '33' into text field 'cphContent_ucEnderecos_txtNumero'.</msg>
+<status status="PASS" starttime="20220928 02:01:06.714" endtime="20220928 02:01:06.868"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:01:08.872" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220928 02:01:06.868" endtime="20220928 02:01:08.872"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:08.873" endtime="20220928 02:01:12.091"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:08.872" endtime="20220928 02:01:12.091"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoNumeroCEP}</arg>
+<arg>${numeroCEP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:01:12.092" level="INFO">Typing text '33' into text field 'cphContent_ucEnderecos_txtNumero'.</msg>
+<status status="PASS" starttime="20220928 02:01:12.092" endtime="20220928 02:01:12.182"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:06.713" endtime="20220928 02:01:12.182"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Zona, selecionar &quot;URBANO&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Zona, selecionar &quot;${zona}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${zona}' == 'URBANO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoZona}').val("1").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoZona}').val("1").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:12.184" level="INFO">Executing JavaScript:
+$('#cphContent_ucEnderecos_ddlZona').val("1").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:12.184" endtime="20220928 02:01:12.199"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:12.183" endtime="20220928 02:01:12.199"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${zona}' == 'RURAL'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoZona}').val("2").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:01:12.200" endtime="20220928 02:01:12.200"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:12.183" endtime="20220928 02:01:12.200"/>
+</kw>
+<kw name="Clicar no botão Incluir" library="Pessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${botaoIncluir}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:12.202" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucEnderecos_btnIncluirResidencial").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:12.201" endtime="20220928 02:01:12.277"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:12.278" endtime="20220928 02:01:15.022"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:12.278" endtime="20220928 02:01:15.022"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${botaoSalvar}</arg>
+<arg>cphContent_btnCadastrarPessoa</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220928 02:01:15.023" level="INFO">${botaoSalvar} = cphContent_btnCadastrarPessoa</msg>
+<status status="PASS" starttime="20220928 02:01:15.023" endtime="20220928 02:01:15.023"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:12.201" endtime="20220928 02:01:15.023"/>
+</kw>
+<kw name="Clicar em Salvar" library="1-Principal">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${botaoSalvar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:01:15.025" endtime="20220928 02:01:15.049"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${botaoSalvar}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:15.050" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_btnCadastrarPessoa").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:15.050" endtime="20220928 02:01:15.067"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:15.069" endtime="20220928 02:01:34.065"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:15.067" endtime="20220928 02:01:34.065"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:15.025" endtime="20220928 02:01:34.065"/>
+</kw>
+<kw name="Clicar em OK no Modal" library="1-Principal">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${botaoOKModal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:01:34.068" endtime="20220928 02:01:34.090"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${botaoOKModal}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:34.091" level="INFO">Executing JavaScript:
 document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:31.588" endtime="20220928 00:11:31.602"/>
+<status status="PASS" starttime="20220928 02:01:34.090" endtime="20220928 02:01:34.106"/>
 </kw>
 <kw name="Aguardar tela de carregamento" library="1-Principal">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>class=carregando</arg>
 <arg>300</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220928 00:11:31.603" endtime="20220928 00:11:33.020"/>
+<status status="PASS" starttime="20220928 02:01:34.107" endtime="20220928 02:01:39.752"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:31.602" endtime="20220928 00:11:33.020"/>
+<status status="PASS" starttime="20220928 02:01:34.107" endtime="20220928 02:01:39.753"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:31.547" endtime="20220928 00:11:33.021"/>
+<status status="PASS" starttime="20220928 02:01:34.067" endtime="20220928 02:01:39.753"/>
 </kw>
-<kw name="Em Programação de Processo, em Processo, selecionar o processo &quot;TESTE PARA PROGRAMAÇÃO DE PROCESSO&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Processo, selecionar o processo &quot;${processo}&quot;">
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${processo}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20220928 00:11:33.022" level="INFO">${processo} = TESTE PARA PROGRAMAÇÃO DE PROCESSO</msg>
-<status status="PASS" starttime="20220928 00:11:33.022" endtime="20220928 00:11:33.023"/>
+<kw name="Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de &quot;2022&quot;" library="Matricular Educando" sourcename="Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de &quot;${ano}&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${anoSeguinte}</var>
+<arg>${ano}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220928 02:01:39.756" level="INFO">${anoSeguinte} = 2023</msg>
+<status status="PASS" starttime="20220928 02:01:39.755" endtime="20220928 02:01:39.756"/>
 </kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ddlAnoLetivo').val("${anoSeguinte}").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:39.756" level="INFO">Executing JavaScript:
+$('#cphContent_ddlAnoLetivo').val("2023").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:39.756" endtime="20220928 02:01:39.762"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ddlAnoLetivo').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:39.763" level="INFO">Executing JavaScript:
+$('#cphContent_ddlAnoLetivo').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:39.763" endtime="20220928 02:01:39.779"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:39.779" endtime="20220928 02:01:41.036"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:39.779" endtime="20220928 02:01:41.036"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ddlAnoLetivo').val("${ano}").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:41.037" level="INFO">Executing JavaScript:
+$('#cphContent_ddlAnoLetivo').val("2022").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:41.037" endtime="20220928 02:01:41.043"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ddlAnoLetivo').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:41.044" level="INFO">Executing JavaScript:
+$('#cphContent_ddlAnoLetivo').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:41.044" endtime="20220928 02:01:41.056"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:41.057" endtime="20220928 02:01:42.406"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:41.056" endtime="20220928 02:01:42.407"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:39.755" endtime="20220928 02:01:42.407"/>
+</kw>
+<kw name="Em Matricular Educando, em Rede de Origem, selecionar &quot;Municipal&quot;" library="Matricular Educando" sourcename="Em Matricular Educando, em Rede de Origem, selecionar &quot;${redeOrigem}&quot;">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Processo</arg>
+<arg>Matricular Educando</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220928 00:11:33.023" endtime="20220928 00:11:33.094"/>
+<status status="PASS" starttime="20220928 02:01:42.408" endtime="20220928 02:01:42.438"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$("#cphContent_ddlProcesso").val($('option:contains("${processo}")').val()).trigger('chosen:updated');</arg>
+<arg>$("#cphContent_ddlFormaIngresso").val($('option:contains("${redeOrigem}")').val()).trigger('chosen:updated');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:33.095" level="INFO">Executing JavaScript:
-$("#cphContent_ddlProcesso").val($('option:contains("TESTE PARA PROGRAMAÇÃO DE PROCESSO")').val()).trigger('chosen:updated');
+<msg timestamp="20220928 02:01:42.439" level="INFO">Executing JavaScript:
+$("#cphContent_ddlFormaIngresso").val($('option:contains("Municipal")').val()).trigger('chosen:updated');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:33.094" endtime="20220928 00:11:33.107"/>
+<status status="PASS" starttime="20220928 02:01:42.438" endtime="20220928 02:01:42.450"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>$('#cphContent_ddlProcesso').trigger('change');</arg>
+<arg>$('#cphContent_ddlFormaIngresso').trigger('change');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220928 00:11:33.108" level="INFO">Executing JavaScript:
-$('#cphContent_ddlProcesso').trigger('change');
+<msg timestamp="20220928 02:01:42.451" level="INFO">Executing JavaScript:
+$('#cphContent_ddlFormaIngresso').trigger('change');
 Without any arguments.</msg>
-<status status="PASS" starttime="20220928 00:11:33.107" endtime="20220928 00:11:33.119"/>
+<status status="PASS" starttime="20220928 02:01:42.450" endtime="20220928 02:01:42.456"/>
 </kw>
 <kw name="Aguardar tela de carregamento" library="1-Principal">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>class=carregando</arg>
 <arg>300</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220928 00:11:33.120" endtime="20220928 00:11:34.138"/>
+<status status="PASS" starttime="20220928 02:01:42.457" endtime="20220928 02:01:42.472"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:33.120" endtime="20220928 00:11:34.138"/>
+<status status="PASS" starttime="20220928 02:01:42.457" endtime="20220928 02:01:42.472"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:33.021" endtime="20220928 00:11:34.138"/>
+<status status="PASS" starttime="20220928 02:01:42.408" endtime="20220928 02:01:42.472"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Pesquisar" library="Programação de Processo">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>cphContent_btnPesquisa</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20220928 00:11:39.495" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220928 00:11:39.496" level="FAIL">Element 'cphContent_btnPesquisa' not visible after 5 seconds.</msg>
-<status status="FAIL" starttime="20220928 00:11:34.140" endtime="20220928 00:11:39.499"/>
+<kw name="Em Matricular Educando, em País de Origem, selecionar &quot;Brasil&quot;" library="Matricular Educando" sourcename="Em Matricular Educando, em País de Origem, selecionar &quot;${paisOrigem}&quot;">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$("#cphContent_ddlPaisOrigem").val($('option:contains("${paisOrigem}")').val()).trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:42.474" level="INFO">Executing JavaScript:
+$("#cphContent_ddlPaisOrigem").val($('option:contains("Brasil")').val()).trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:42.474" endtime="20220928 02:01:42.481"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_btnPesquisa").click();</arg>
+<arg>$('#cphContent_ddlPaisOrigem').trigger('change');</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20220928 00:11:39.500" endtime="20220928 00:11:39.500"/>
+<msg timestamp="20220928 02:01:42.483" level="INFO">Executing JavaScript:
+$('#cphContent_ddlPaisOrigem').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:42.481" endtime="20220928 02:01:42.494"/>
 </kw>
 <kw name="Aguardar tela de carregamento" library="1-Principal">
-<status status="NOT RUN" starttime="20220928 00:11:39.500" endtime="20220928 00:11:39.501"/>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:42.495" endtime="20220928 02:01:44.457"/>
 </kw>
-<status status="FAIL" starttime="20220928 00:11:34.139" endtime="20220928 00:11:39.501"/>
+<status status="PASS" starttime="20220928 02:01:42.494" endtime="20220928 02:01:44.457"/>
 </kw>
-<kw name="Em Programação de Processo, verificar se o processo aparece nos resultados" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.502" endtime="20220928 00:11:39.502"/>
+<status status="PASS" starttime="20220928 02:01:42.473" endtime="20220928 02:01:44.457"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Ações e Editar" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.503" endtime="20220928 00:11:39.503"/>
+<kw name="Em Matricular Educando, em Etapa/Modalidade, selecionar &quot;Educação Infantil&quot;" library="Matricular Educando" sourcename="Em Matricular Educando, em Etapa/Modalidade, selecionar &quot;${etapaModalidade}&quot;">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$("#cphContent_ddlTipoEnsino").val($('option:contains("${etapaModalidade}")').val()).trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:44.459" level="INFO">Executing JavaScript:
+$("#cphContent_ddlTipoEnsino").val($('option:contains("Educação Infantil")').val()).trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:44.459" endtime="20220928 02:01:44.469"/>
 </kw>
-<kw name="Em Programação de Processo, em Data Inicio, inserir &quot;01/10/2022&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Data Inicio, inserir &quot;${data}&quot;">
-<status status="NOT RUN" starttime="20220928 00:11:39.504" endtime="20220928 00:11:39.504"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ddlTipoEnsino').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:44.470" level="INFO">Executing JavaScript:
+$('#cphContent_ddlTipoEnsino').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:44.469" endtime="20220928 02:01:44.480"/>
 </kw>
-<kw name="Em Programação de Processo, em Data Fim, inserir &quot;30/10/2022&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Data Fim, inserir &quot;${data}&quot;">
-<status status="NOT RUN" starttime="20220928 00:11:39.505" endtime="20220928 00:11:39.505"/>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:44.481" endtime="20220928 02:01:45.415"/>
 </kw>
-<kw name="Em Programação de Processo, em Hora Fim, inserir &quot;23:59&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Hora Fim, inserir &quot;${hora}&quot;">
-<status status="NOT RUN" starttime="20220928 00:11:39.505" endtime="20220928 00:11:39.505"/>
+<status status="PASS" starttime="20220928 02:01:44.480" endtime="20220928 02:01:45.416"/>
 </kw>
-<kw name="Em Programação de Processo, em Dias da Semana, selecionar &quot;Segunda-Feira&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Dias da Semana, selecionar &quot;${diaSemana}&quot;">
-<status status="NOT RUN" starttime="20220928 00:11:39.506" endtime="20220928 00:11:39.506"/>
+<status status="PASS" starttime="20220928 02:01:44.458" endtime="20220928 02:01:45.416"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Inserir" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.507" endtime="20220928 00:11:39.507"/>
+<kw name="Em Matricular Educando, em Curso, selecionar &quot;Creche&quot;" library="Matricular Educando" sourcename="Em Matricular Educando, em Curso, selecionar &quot;${curso}&quot;">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$("#cphContent_ddlCurso").val($('option:contains("${curso}")').val()).trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:45.418" level="INFO">Executing JavaScript:
+$("#cphContent_ddlCurso").val($('option:contains("Creche")').val()).trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:45.418" endtime="20220928 02:01:45.425"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em OK no modal" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.507" endtime="20220928 00:11:39.508"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ddlCurso').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:45.426" level="INFO">Executing JavaScript:
+$('#cphContent_ddlCurso').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:45.425" endtime="20220928 02:01:45.436"/>
 </kw>
-<kw name="Em Programação de Processo, em Processo, selecionar o processo &quot;TESTE PARA PROGRAMAÇÃO DE PROCESSO&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Processo, selecionar o processo &quot;${processo}&quot;">
-<status status="NOT RUN" starttime="20220928 00:11:39.509" endtime="20220928 00:11:39.509"/>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:45.437" endtime="20220928 02:01:46.824"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Pesquisar" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.510" endtime="20220928 00:11:39.510"/>
+<status status="PASS" starttime="20220928 02:01:45.436" endtime="20220928 02:01:46.824"/>
 </kw>
-<kw name="Em Programação de Processo, verificar se o processo aparece nos resultados" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.510" endtime="20220928 00:11:39.510"/>
+<status status="PASS" starttime="20220928 02:01:45.418" endtime="20220928 02:01:46.824"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Ações e Editar" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.511" endtime="20220928 00:11:39.511"/>
+<kw name="Em Matricular Educando, em Periodo, selecionar &quot;MANHÃ&quot;" library="Matricular Educando" sourcename="Em Matricular Educando, em Periodo, selecionar &quot;${periodo}&quot;">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$("#cphContent_ddlPeriodo").val($('option:contains("${periodo}")').val()).trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:46.826" level="INFO">Executing JavaScript:
+$("#cphContent_ddlPeriodo").val($('option:contains("MANHÃ")').val()).trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:46.826" endtime="20220928 02:01:46.836"/>
 </kw>
-<kw name="Em Programação de Processo, verificar se a data &quot;24/10/2022&quot; foi inserida" library="Programação de Processo" sourcename="Em Programação de Processo, verificar se a data &quot;${data}&quot; foi inserida">
-<status status="NOT RUN" starttime="20220928 00:11:39.511" endtime="20220928 00:11:39.511"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ddlPeriodo').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:46.837" level="INFO">Executing JavaScript:
+$('#cphContent_ddlPeriodo').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:46.837" endtime="20220928 02:01:46.846"/>
 </kw>
-<kw name="Em Programação de Processo, verificar se o horário &quot;23:59&quot; foi inserida" library="Programação de Processo" sourcename="Em Programação de Processo, verificar se o horário &quot;${hora}&quot; foi inserida">
-<status status="NOT RUN" starttime="20220928 00:11:39.512" endtime="20220928 00:11:39.512"/>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:46.847" endtime="20220928 02:01:50.137"/>
 </kw>
-<kw name="Clicar em Voltar" library="1-Principal">
-<status status="NOT RUN" starttime="20220928 00:11:39.513" endtime="20220928 00:11:39.513"/>
+<status status="PASS" starttime="20220928 02:01:46.846" endtime="20220928 02:01:50.137"/>
 </kw>
-<kw name="Em Programação de Processo, em Processo, selecionar o processo &quot;TESTE PARA PROGRAMAÇÃO DE PROCESSO&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Processo, selecionar o processo &quot;${processo}&quot;">
-<status status="NOT RUN" starttime="20220928 00:11:39.514" endtime="20220928 00:11:39.514"/>
+<status status="PASS" starttime="20220928 02:01:46.826" endtime="20220928 02:01:50.137"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Pesquisar" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.514" endtime="20220928 00:11:39.515"/>
+<kw name="Em Matricular Educando, em Ciclo, selecionar &quot;Bercário II&quot;" library="Matricular Educando" sourcename="Em Matricular Educando, em Ciclo, selecionar &quot;${ciclo}&quot;">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$("#cphContent_ddlCiclo").val($('option:contains("${ciclo}")').val()).trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:50.142" level="INFO">Executing JavaScript:
+$("#cphContent_ddlCiclo").val($('option:contains("Bercário II")').val()).trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:50.141" endtime="20220928 02:01:50.152"/>
 </kw>
-<kw name="Em Programação de Processo, verificar se o processo aparece nos resultados" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.515" endtime="20220928 00:11:39.515"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#cphContent_ddlCiclo').trigger('change');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:50.154" level="INFO">Executing JavaScript:
+$('#cphContent_ddlCiclo').trigger('change');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:50.154" endtime="20220928 02:01:50.166"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Ações e Excluir" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.515" endtime="20220928 00:11:39.515"/>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:50.167" endtime="20220928 02:01:54.188"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Sim no modal" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.516" endtime="20220928 00:11:39.516"/>
+<status status="PASS" starttime="20220928 02:01:50.167" endtime="20220928 02:01:54.188"/>
 </kw>
-<kw name="Em Programação de Processo, em Processo, selecionar o processo &quot;TESTE PARA PROGRAMAÇÃO DE PROCESSO&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, em Processo, selecionar o processo &quot;${processo}&quot;">
-<status status="NOT RUN" starttime="20220928 00:11:39.516" endtime="20220928 00:11:39.516"/>
+<status status="PASS" starttime="20220928 02:01:50.140" endtime="20220928 02:01:54.189"/>
 </kw>
-<kw name="Em Programação de Processo, clicar em Pesquisar" library="Programação de Processo">
-<status status="NOT RUN" starttime="20220928 00:11:39.517" endtime="20220928 00:11:39.517"/>
+<kw name="Em Matricular Educando, selecionar uma turma com vagas" library="Matricular Educando">
+<for flavor="IN RANGE">
+<var>${index}</var>
+<value>0</value>
+<value>20</value>
+<iter>
+<var name="${index}">0</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${busca}</var>
+<arg>cphContent_dtlConsulta_lblVTeoricasTd_${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220928 02:01:54.190" level="INFO">${busca} = cphContent_dtlConsulta_lblVTeoricasTd_0</msg>
+<status status="PASS" starttime="20220928 02:01:54.190" endtime="20220928 02:01:54.190"/>
 </kw>
-<kw name="Em Programação de Processo, verificar se é exibida a mensagem &quot;NENHUM REGISTRO FOI ENCONTRADO&quot;" library="Programação de Processo" sourcename="Em Programação de Processo, verificar se é exibida a mensagem &quot;${mensagem}&quot;">
-<status status="NOT RUN" starttime="20220928 00:11:39.517" endtime="20220928 00:11:39.518"/>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${resultado}</var>
+<arg>Element Text Should Not Be</arg>
+<arg>${busca}</arg>
+<arg>0</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Text Should Not Be" library="SeleniumLibrary">
+<arg>${busca}</arg>
+<arg>0</arg>
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<msg timestamp="20220928 02:01:54.191" level="INFO">Verifying element 'cphContent_dtlConsulta_lblVTeoricasTd_0' does not contain exact text '0'.</msg>
+<msg timestamp="20220928 02:01:54.426" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-127.png"&gt;&lt;img src="selenium-screenshot-127.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220928 02:01:54.426" level="FAIL">The text of element 'cphContent_dtlConsulta_lblVTeoricasTd_0' was not supposed to be '0'.</msg>
+<status status="FAIL" starttime="20220928 02:01:54.191" endtime="20220928 02:01:54.428"/>
+</kw>
+<msg timestamp="20220928 02:01:54.428" level="INFO">${resultado} = False</msg>
+<status status="PASS" starttime="20220928 02:01:54.191" endtime="20220928 02:01:54.428"/>
+</kw>
+<if>
+<branch type="IF" condition="${resultado}">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_dtlConsulta_lbtSelecionar_${index}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220928 02:01:54.428" endtime="20220928 02:01:54.428"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<status status="NOT RUN" starttime="20220928 02:01:54.429" endtime="20220928 02:01:54.429"/>
+</kw>
+<if>
+<branch type="IF" condition="${resultado}">
+<break>
+<status status="NOT RUN" starttime="20220928 02:01:54.429" endtime="20220928 02:01:54.429"/>
+</break>
+<status status="NOT RUN" starttime="20220928 02:01:54.429" endtime="20220928 02:01:54.429"/>
+</branch>
+<status status="NOT RUN" starttime="20220928 02:01:54.429" endtime="20220928 02:01:54.429"/>
+</if>
+<status status="NOT RUN" starttime="20220928 02:01:54.428" endtime="20220928 02:01:54.429"/>
+</branch>
+<status status="PASS" starttime="20220928 02:01:54.428" endtime="20220928 02:01:54.429"/>
+</if>
+<status status="PASS" starttime="20220928 02:01:54.190" endtime="20220928 02:01:54.429"/>
+</iter>
+<iter>
+<var name="${index}">1</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${busca}</var>
+<arg>cphContent_dtlConsulta_lblVTeoricasTd_${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220928 02:01:54.430" level="INFO">${busca} = cphContent_dtlConsulta_lblVTeoricasTd_1</msg>
+<status status="PASS" starttime="20220928 02:01:54.429" endtime="20220928 02:01:54.430"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${resultado}</var>
+<arg>Element Text Should Not Be</arg>
+<arg>${busca}</arg>
+<arg>0</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Text Should Not Be" library="SeleniumLibrary">
+<arg>${busca}</arg>
+<arg>0</arg>
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<msg timestamp="20220928 02:01:54.430" level="INFO">Verifying element 'cphContent_dtlConsulta_lblVTeoricasTd_1' does not contain exact text '0'.</msg>
+<status status="PASS" starttime="20220928 02:01:54.430" endtime="20220928 02:01:54.455"/>
+</kw>
+<msg timestamp="20220928 02:01:54.455" level="INFO">${resultado} = True</msg>
+<status status="PASS" starttime="20220928 02:01:54.430" endtime="20220928 02:01:54.455"/>
+</kw>
+<if>
+<branch type="IF" condition="${resultado}">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_dtlConsulta_lbtSelecionar_${index}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:54.456" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_dtlConsulta_lbtSelecionar_1").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:54.456" endtime="20220928 02:01:54.475"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:54.475" endtime="20220928 02:01:56.532"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:54.475" endtime="20220928 02:01:56.533"/>
+</kw>
+<if>
+<branch type="IF" condition="${resultado}">
+<break>
+<status status="PASS" starttime="20220928 02:01:56.534" endtime="20220928 02:01:56.535"/>
+</break>
+<status status="PASS" starttime="20220928 02:01:56.534" endtime="20220928 02:01:56.535"/>
+</branch>
+<status status="PASS" starttime="20220928 02:01:56.534" endtime="20220928 02:01:56.535"/>
+</if>
+<status status="PASS" starttime="20220928 02:01:54.456" endtime="20220928 02:01:56.535"/>
+</branch>
+<status status="PASS" starttime="20220928 02:01:54.455" endtime="20220928 02:01:56.535"/>
+</if>
+<status status="PASS" starttime="20220928 02:01:54.429" endtime="20220928 02:01:56.535"/>
+</iter>
+<status status="PASS" starttime="20220928 02:01:54.190" endtime="20220928 02:01:56.535"/>
+</for>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:56.537" endtime="20220928 02:01:56.553"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:56.536" endtime="20220928 02:01:56.553"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:54.189" endtime="20220928 02:01:56.553"/>
+</kw>
+<kw name="Em Matricular Educando, clicar em Matricular Educando" library="Matricular Educando">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_btnMatricularAluno").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:56.557" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_btnMatricularAluno").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:56.555" endtime="20220928 02:01:56.595"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:56.598" endtime="20220928 02:01:57.809"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:56.596" endtime="20220928 02:01:57.809"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:56.554" endtime="20220928 02:01:57.809"/>
+</kw>
+<kw name="Em Matricular Educando, clicar em Sim no Modal de Matrícula" library="Matricular Educando">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>cphContent_MensagemPadrao_btnSim</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:01:57.811" endtime="20220928 02:01:57.833"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_MensagemPadrao_btnSim").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:01:57.834" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_MensagemPadrao_btnSim").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:01:57.834" endtime="20220928 02:01:57.851"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:01:57.854" endtime="20220928 02:02:05.968"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:57.852" endtime="20220928 02:02:05.968"/>
+</kw>
+<status status="PASS" starttime="20220928 02:01:57.810" endtime="20220928 02:02:05.968"/>
+</kw>
+<kw name="Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso" library="Matricular Educando">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>cphContent_MensagemPadrao_lblMsg</arg>
+<arg>MATRÍCULA EFETUADA COM SUCESSO</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220928 02:02:05.969" endtime="20220928 02:02:05.994"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:05.969" endtime="20220928 02:02:05.994"/>
+</kw>
+<kw name="Entrar no Portal" library="Portal">
+<kw name="Acessar o ambiente &quot;https://guarulhosportalhomolog.gier.com.br/index.html&quot;" library="1-Principal" sourcename="Acessar o ambiente &quot;${url}&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220928 02:02:05.998" level="INFO">Opening url 'https://guarulhosportalhomolog.gier.com.br/index.html'</msg>
+<status status="PASS" starttime="20220928 02:02:05.997" endtime="20220928 02:02:07.743"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:05.997" endtime="20220928 02:02:07.743"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:07.745" endtime="20220928 02:02:17.350"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:07.744" endtime="20220928 02:02:17.351"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:05.995" endtime="20220928 02:02:17.351"/>
+</kw>
+<kw name="No Portal, clicar em &quot;Educação Infantil&quot;" library="Portal" sourcename="No Portal, clicar em &quot;${etapa}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${etapa}' == 'Educação Infantil'</arg>
+<arg>Click Element</arg>
+<arg>//div[@class='botao botao-ciano'][contains(.,'Educação Infantil')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='botao botao-ciano'][contains(.,'Educação Infantil')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:17.353" level="INFO">Clicking element '//div[@class='botao botao-ciano'][contains(.,'Educação Infantil')]'.</msg>
+<status status="PASS" starttime="20220928 02:02:17.353" endtime="20220928 02:02:17.405"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:17.352" endtime="20220928 02:02:17.406"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${etapa}' == 'Ensino Fundamental'</arg>
+<arg>Click Element</arg>
+<arg>//div[@class='botao botao-azul'][contains(.,'Ensino Fundamental')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:02:17.407" endtime="20220928 02:02:17.408"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${etapa}' == 'Consultar Solicitação'</arg>
+<arg>Click Element</arg>
+<arg>//div[@class='botao-branco'][contains(.,'Consultar Solicitação')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:02:17.408" endtime="20220928 02:02:17.409"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:17.410" endtime="20220928 02:02:17.437"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:17.409" endtime="20220928 02:02:17.437"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:17.352" endtime="20220928 02:02:17.438"/>
+</kw>
+<kw name="No Portal, selecionar o processo para a etapa &quot;INFANTIL INICIAL&quot;" library="Portal" sourcename="No Portal, selecionar o processo para a etapa &quot;${etapa}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[contains(@rel,'modal:close')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:17.439" endtime="20220928 02:02:17.685"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[contains(@value,'AUTOMACAO ${etapa} #PROCESSO_TESTE_QA#')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:17.686" level="INFO">Clicking element '//input[contains(@value,'AUTOMACAO INFANTIL INICIAL #PROCESSO_TESTE_QA#')]'.</msg>
+<status status="PASS" starttime="20220928 02:02:17.685" endtime="20220928 02:02:17.740"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:17.740" endtime="20220928 02:02:17.760"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:17.740" endtime="20220928 02:02:17.760"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:17.439" endtime="20220928 02:02:17.760"/>
+</kw>
+<kw name="No Portal, clicar em Iniciar inscrição" library="Portal">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>iniciar-inscricao</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:17.764" endtime="20220928 02:02:18.021"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>iniciar-inscricao</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:18.022" level="INFO">Clicking element 'iniciar-inscricao'.</msg>
+<status status="PASS" starttime="20220928 02:02:18.022" endtime="20220928 02:02:21.409"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:21.412" endtime="20220928 02:02:30.331"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:21.411" endtime="20220928 02:02:30.331"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:17.763" endtime="20220928 02:02:30.332"/>
+</kw>
+<kw name="No Portal, em Escolha da Escola, em Data de Nascimento, inserir &quot;07/03/2020&quot;" library="Portal" sourcename="No Portal, em Escolha da Escola, em Data de Nascimento, inserir &quot;${data}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:31.349" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:30.333" endtime="20220928 02:02:31.349"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>busca-nascimento</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:31.349" endtime="20220928 02:02:31.366"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>busca-nascimento</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:31.366" level="INFO">Typing text '07/03/2020' into text field 'busca-nascimento'.</msg>
+<status status="PASS" starttime="20220928 02:02:31.366" endtime="20220928 02:02:31.434"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:30.333" endtime="20220928 02:02:31.434"/>
+</kw>
+<kw name="No Portal, em Escolha da Escola, em CEP, inserir &quot;07123-140&quot;" library="Portal" sourcename="No Portal, em Escolha da Escola, em CEP, inserir &quot;${cep}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>busca-cep</arg>
+<arg>${cep}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:31.437" level="INFO">Typing text '07123-140' into text field 'busca-cep'.</msg>
+<status status="PASS" starttime="20220928 02:02:31.436" endtime="20220928 02:02:31.513"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:31.435" endtime="20220928 02:02:31.513"/>
+</kw>
+<kw name="No Portal, em Escolha da Escola, em Número da Residência, inserir &quot;33&quot;" library="Portal" sourcename="No Portal, em Escolha da Escola, em Número da Residência, inserir &quot;${numeroResidencial}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>busca-numero</arg>
+<arg>${numeroResidencial}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:31.516" level="INFO">Typing text '33' into text field 'busca-numero'.</msg>
+<status status="PASS" starttime="20220928 02:02:31.515" endtime="20220928 02:02:31.621"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>busca-numero</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220928 02:02:31.622" level="INFO">Sending key(s) ('TAB',) to busca-numero element.</msg>
+<msg timestamp="20220928 02:02:31.919" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220928 02:02:31.919" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220928 02:02:31.622" endtime="20220928 02:02:31.930"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:31.932" endtime="20220928 02:02:33.116"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:31.931" endtime="20220928 02:02:33.116"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:31.515" endtime="20220928 02:02:33.117"/>
+</kw>
+<kw name="No Portal, clicar em Pesquisar Escolas" library="Portal">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>pesquisar-escolas</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220928 02:02:33.119" endtime="20220928 02:02:33.149"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("pesquisar-escolas").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:02:33.149" level="INFO">Executing JavaScript:
+document.getElementById("pesquisar-escolas").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:02:33.149" endtime="20220928 02:02:33.156"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:34.169" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:33.156" endtime="20220928 02:02:34.169"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:34.170" endtime="20220928 02:02:35.089"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:34.170" endtime="20220928 02:02:35.089"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:33.118" endtime="20220928 02:02:35.090"/>
+</kw>
+<kw name="No Portal, selecionar a escola &quot;EPG ANTONIO APARECIDO MAGALHAES, VEREADOR&quot;" library="Portal" sourcename="No Portal, selecionar a escola &quot;${escola}&quot;">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${escola}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220928 02:02:35.091" level="INFO">${escola} = EPG ANTONIO APARECIDO MAGALHAES, VEREADOR</msg>
+<status status="PASS" starttime="20220928 02:02:35.091" endtime="20220928 02:02:35.091"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:36.102" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:35.091" endtime="20220928 02:02:36.102"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${escola}" == "EPG ALFREDO VOLPI"</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${campoEPGVolpi}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:02:36.102" endtime="20220928 02:02:36.103"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${escola}" == "EPG ALFREDO VOLPI"</arg>
+<arg>Click Element</arg>
+<arg>${campoEPGVolpi}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:02:36.103" endtime="20220928 02:02:36.103"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${escola}" == "EPG CRISPINIANO SOARES"</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${campoEPGCrispiniano}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:02:36.103" endtime="20220928 02:02:36.103"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${escola}" == "EPG CRISPINIANO SOARES"</arg>
+<arg>Click Element</arg>
+<arg>${campoEPGCrispiniano}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220928 02:02:36.104" endtime="20220928 02:02:36.104"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${escola}" == "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${campoEPGAntonioAparecido}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${campoEPGAntonioAparecido}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:36.104" endtime="20220928 02:02:36.122"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:36.104" endtime="20220928 02:02:36.122"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${escola}" == "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"</arg>
+<arg>Click Element</arg>
+<arg>${campoEPGAntonioAparecido}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${campoEPGAntonioAparecido}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:36.123" level="INFO">Clicking element 'chkEW_584'.</msg>
+<status status="PASS" starttime="20220928 02:02:36.123" endtime="20220928 02:02:36.165"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:36.123" endtime="20220928 02:02:36.165"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:35.090" endtime="20220928 02:02:36.165"/>
+</kw>
+<kw name="No Portal, clicar em Selecionar Escolas" library="Portal">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>selecionar-escolas-pesquisadas</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220928 02:02:36.168" endtime="20220928 02:02:36.195"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("selecionar-escolas-pesquisadas").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220928 02:02:36.196" level="INFO">Executing JavaScript:
+document.getElementById("selecionar-escolas-pesquisadas").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220928 02:02:36.196" endtime="20220928 02:02:36.206"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:37.220" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:36.206" endtime="20220928 02:02:37.221"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:37.223" endtime="20220928 02:02:37.243"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:37.222" endtime="20220928 02:02:37.244"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:36.166" endtime="20220928 02:02:37.244"/>
+</kw>
+<kw name="No Portal, clicar em Próximo" library="Portal">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>proximo-passo1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:37.245" endtime="20220928 02:02:37.261"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>proximo-passo1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:37.262" level="INFO">Clicking element 'proximo-passo1'.</msg>
+<status status="PASS" starttime="20220928 02:02:37.262" endtime="20220928 02:02:37.318"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:37.319" endtime="20220928 02:02:38.723"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:37.318" endtime="20220928 02:02:38.723"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:37.244" endtime="20220928 02:02:38.723"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar &quot;Brasileira&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar &quot;${nacionalidade}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${escola}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220928 02:02:38.725" endtime="20220928 02:02:38.736"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>ddlRNacionalidade</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:38.736" endtime="20220928 02:02:38.754"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlRNacionalidade</arg>
+<arg>${nacionalidade}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:38.754" level="INFO">Selecting options from selection list 'ddlRNacionalidade' by label Brasileira.</msg>
+<status status="PASS" starttime="20220928 02:02:38.754" endtime="20220928 02:02:38.810"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:39.825" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:38.810" endtime="20220928 02:02:39.826"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:38.724" endtime="20220928 02:02:39.826"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar &quot;SP&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar &quot;${ufNascimento}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>ddlRUfNascimento</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:39.830" endtime="20220928 02:02:39.852"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlRUfNascimento</arg>
+<arg>${ufNascimento}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:39.853" level="INFO">Selecting options from selection list 'ddlRUfNascimento' by label SP.</msg>
+<status status="PASS" starttime="20220928 02:02:39.852" endtime="20220928 02:02:39.905"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:39.906" endtime="20220928 02:02:41.342"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:39.906" endtime="20220928 02:02:41.342"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:39.829" endtime="20220928 02:02:41.343"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar &quot;SAO PAULO&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar &quot;${ufNascimento}&quot;">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlRCidadeNascimento</arg>
+<arg>${ufNascimento}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:41.345" level="INFO">Selecting options from selection list 'ddlRCidadeNascimento' by label SAO PAULO.</msg>
+<status status="PASS" starttime="20220928 02:02:41.344" endtime="20220928 02:02:41.398"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:41.344" endtime="20220928 02:02:41.398"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado" library="Portal">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtRCpf</arg>
+<arg>${cpfFakeResponsavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:41.400" level="INFO">Typing text '035.762.148-44' into text field 'txtRCpf'.</msg>
+<status status="PASS" starttime="20220928 02:02:41.400" endtime="20220928 02:02:41.489"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>txtRCpf</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220928 02:02:41.490" level="INFO">Sending key(s) ('TAB',) to txtRCpf element.</msg>
+<msg timestamp="20220928 02:02:41.817" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220928 02:02:41.817" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220928 02:02:41.490" endtime="20220928 02:02:41.832"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:41.833" endtime="20220928 02:02:43.242"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:41.833" endtime="20220928 02:02:43.242"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:41.399" endtime="20220928 02:02:43.242"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado" library="Portal">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtRNomeCompleto</arg>
+<arg>${nomeCompletoResponsavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:43.244" level="INFO">Typing text 'Cecília Teixeira' into text field 'txtRNomeCompleto'.</msg>
+<status status="PASS" starttime="20220928 02:02:43.244" endtime="20220928 02:02:43.312"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:43.243" endtime="20220928 02:02:43.312"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir &quot;07/03/1996&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir &quot;${dataNascimento}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtRDataNascimento</arg>
+<arg>${dataNascimento}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:43.313" level="INFO">Typing text '07/03/1996' into text field 'txtRDataNascimento'.</msg>
+<status status="PASS" starttime="20220928 02:02:43.313" endtime="20220928 02:02:43.385"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:43.313" endtime="20220928 02:02:43.386"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Sexo, inserir &quot;Feminino&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Sexo, inserir &quot;${sexo}&quot;">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlRSexo</arg>
+<arg>${sexo}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:43.387" level="INFO">Selecting options from selection list 'ddlRSexo' by label Feminino.</msg>
+<status status="PASS" starttime="20220928 02:02:43.387" endtime="20220928 02:02:43.448"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:43.386" endtime="20220928 02:02:43.449"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir &quot;Mãe&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir &quot;${grauParentesco}&quot;">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlGrauParentesco</arg>
+<arg>${grauParentesco}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:43.452" level="INFO">Selecting options from selection list 'ddlGrauParentesco' by label Mãe.</msg>
+<status status="PASS" starttime="20220928 02:02:43.452" endtime="20220928 02:02:43.528"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:43.451" endtime="20220928 02:02:43.529"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar &quot;Brasileira&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar &quot;${nacionalidade}&quot;">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlNacionalidade</arg>
+<arg>${nacionalidade}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:43.531" level="INFO">Selecting options from selection list 'ddlNacionalidade' by label Brasileira.</msg>
+<status status="PASS" starttime="20220928 02:02:43.531" endtime="20220928 02:02:43.600"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:44.605" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:43.601" endtime="20220928 02:02:44.605"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:43.530" endtime="20220928 02:02:44.605"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar &quot;SP&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar &quot;${UF}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>ddlUfNascimento</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:44.608" endtime="20220928 02:02:44.630"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlUfNascimento</arg>
+<arg>${UF}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:44.631" level="INFO">Selecting options from selection list 'ddlUfNascimento' by label SP.</msg>
+<status status="PASS" starttime="20220928 02:02:44.631" endtime="20220928 02:02:44.700"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:45.708" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:44.701" endtime="20220928 02:02:45.708"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:45.713" endtime="20220928 02:02:45.985"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:45.711" endtime="20220928 02:02:45.986"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:44.606" endtime="20220928 02:02:45.986"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar &quot;GUARULHOS&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar &quot;${cidadeNascimento}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>ddlCidadeNascimento</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:45.988" endtime="20220928 02:02:46.014"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlCidadeNascimento</arg>
+<arg>${cidadeNascimento}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:46.015" level="INFO">Selecting options from selection list 'ddlCidadeNascimento' by label GUARULHOS.</msg>
+<status status="PASS" starttime="20220928 02:02:46.015" endtime="20220928 02:02:46.089"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:45.987" endtime="20220928 02:02:46.090"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado" library="Portal">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtCpf</arg>
+<arg>${cpfFakeAluno}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:46.092" level="INFO">Typing text '032.957.618-68' into text field 'txtCpf'.</msg>
+<status status="PASS" starttime="20220928 02:02:46.092" endtime="20220928 02:02:46.181"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>txtCpf</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220928 02:02:46.182" level="INFO">Sending key(s) ('TAB',) to txtCpf element.</msg>
+<msg timestamp="20220928 02:02:46.492" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220928 02:02:46.492" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220928 02:02:46.182" endtime="20220928 02:02:46.508"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:46.510" endtime="20220928 02:02:46.528"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:46.509" endtime="20220928 02:02:46.529"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:46.091" endtime="20220928 02:02:46.529"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado" library="Portal">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtNomeCompleto</arg>
+<arg>${nomeCompletoAluno}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:46.530" level="INFO">Typing text 'Caio Cardoso' into text field 'txtNomeCompleto'.</msg>
+<status status="PASS" starttime="20220928 02:02:46.530" endtime="20220928 02:02:46.600"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:46.529" endtime="20220928 02:02:46.600"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Sexo, inserir &quot;Masculino&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Sexo, inserir &quot;${sexo}&quot;">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlSexo</arg>
+<arg>${sexo}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:46.602" level="INFO">Selecting options from selection list 'ddlSexo' by label Masculino.</msg>
+<status status="PASS" starttime="20220928 02:02:46.601" endtime="20220928 02:02:46.656"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:46.601" endtime="20220928 02:02:46.658"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova" library="Portal">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:47.661" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:46.659" endtime="20220928 02:02:47.662"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>rdNovaCertidao_Sim</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:47.664" level="INFO">Clicking element 'rdNovaCertidao_Sim'.</msg>
+<status status="PASS" starttime="20220928 02:02:47.663" endtime="20220928 02:02:47.722"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:48.731" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:47.722" endtime="20220928 02:02:48.731"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:46.659" endtime="20220928 02:02:48.731"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada" library="Portal">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtMatriculaCertidao</arg>
+<arg>${certidaoAleatoria}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:48.733" level="INFO">Typing text '95743854091233433064806284437412' into text field 'txtMatriculaCertidao'.</msg>
+<status status="PASS" starttime="20220928 02:02:48.733" endtime="20220928 02:02:48.871"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>txtMatriculaCertidao</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220928 02:02:48.872" level="INFO">Sending key(s) ('TAB',) to txtMatriculaCertidao element.</msg>
+<msg timestamp="20220928 02:02:49.161" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220928 02:02:49.162" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220928 02:02:48.871" endtime="20220928 02:02:49.176"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:50.180" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:49.177" endtime="20220928 02:02:50.180"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:50.182" endtime="20220928 02:02:50.214"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:50.180" endtime="20220928 02:02:50.214"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:48.732" endtime="20220928 02:02:50.214"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir &quot;01/01/2022&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir &quot;${dataEmissaoCertidao}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtDataEmissaoCertidao</arg>
+<arg>${dataEmissaoCertidao}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:50.216" level="INFO">Typing text '01/01/2022' into text field 'txtDataEmissaoCertidao'.</msg>
+<status status="PASS" starttime="20220928 02:02:50.216" endtime="20220928 02:02:50.311"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:50.216" endtime="20220928 02:02:50.312"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar &quot;SP&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar &quot;${ufCertidao}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>ddlUFCertidao</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:50.313" endtime="20220928 02:02:50.341"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlUFCertidao</arg>
+<arg>${ufCertidao}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:50.341" level="INFO">Selecting options from selection list 'ddlUFCertidao' by label SP.</msg>
+<status status="PASS" starttime="20220928 02:02:50.341" endtime="20220928 02:02:50.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:51.405" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:50.405" endtime="20220928 02:02:51.405"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:51.406" endtime="20220928 02:02:51.902"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:51.405" endtime="20220928 02:02:51.902"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:50.313" endtime="20220928 02:02:51.902"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar &quot;GUARULHOS&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar &quot;${cidadeCartorio}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>ddlCidadeCartorio</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 02:02:51.904" endtime="20220928 02:02:51.927"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlCidadeCartorio</arg>
+<arg>${cidadeCartorio}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220928 02:02:51.928" level="INFO">Selecting options from selection list 'ddlCidadeCartorio' by label GUARULHOS.</msg>
+<status status="PASS" starttime="20220928 02:02:51.928" endtime="20220928 02:02:51.985"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:51.903" endtime="20220928 02:02:51.985"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Cartório, inserir &quot;CARTÓRIO TESTE&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Cartório, inserir &quot;${cartorio}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtCartorio</arg>
+<arg>${cartorio}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:51.988" level="INFO">Typing text 'CARTÓRIO TESTE' into text field 'txtCartorio'.</msg>
+<status status="PASS" starttime="20220928 02:02:51.987" endtime="20220928 02:02:52.086"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:51.986" endtime="20220928 02:02:52.086"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Distrito, inserir &quot;DISTRITO TESTE&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Distrito, inserir &quot;${distrito}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtDistritoCartorio</arg>
+<arg>${distrito}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:52.088" level="INFO">Typing text 'DISTRITO TESTE' into text field 'txtDistritoCartorio'.</msg>
+<status status="PASS" starttime="20220928 02:02:52.088" endtime="20220928 02:02:52.183"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:52.087" endtime="20220928 02:02:52.183"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Comarca, inserir &quot;COMARCA TESTE&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Comarca, inserir &quot;${comarca}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtComarcaCartorio</arg>
+<arg>${comarca}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:52.186" level="INFO">Typing text 'COMARCA TESTE' into text field 'txtComarcaCartorio'.</msg>
+<status status="PASS" starttime="20220928 02:02:52.184" endtime="20220928 02:02:52.287"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:52.184" endtime="20220928 02:02:52.287"/>
+</kw>
+<kw name="No Portal, em Contato, em Telefone 1, inserir um telefone válido" library="Portal">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:53.299" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:52.290" endtime="20220928 02:02:53.299"/>
+</kw>
+<kw name="Random Number" library="FakerLibrary">
+<var>${telefoneAleatorio}</var>
+<arg>8</arg>
+<doc>Generate a random integer according to the following rules:</doc>
+<msg timestamp="20220928 02:02:53.301" level="INFO">${telefoneAleatorio} = 1995748</msg>
+<status status="PASS" starttime="20220928 02:02:53.300" endtime="20220928 02:02:53.301"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:54.311" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:53.302" endtime="20220928 02:02:54.311"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${telefone1Aleatorio}</arg>
+<arg>119${telefoneAleatorio}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220928 02:02:54.322" level="INFO">${telefone1Aleatorio} = 1191995748</msg>
+<status status="PASS" starttime="20220928 02:02:54.312" endtime="20220928 02:02:54.323"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtTelefone1</arg>
+<arg>${telefone1Aleatorio}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:54.324" level="INFO">Typing text '1191995748' into text field 'txtTelefone1'.</msg>
+<status status="PASS" starttime="20220928 02:02:54.323" endtime="20220928 02:02:54.425"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:55.428" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:54.426" endtime="20220928 02:02:55.428"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:52.289" endtime="20220928 02:02:55.430"/>
+</kw>
+<kw name="No Portal, clicar nos campos de declarações" library="Portal">
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:55.435" endtime="20220928 02:02:55.468"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:55.433" endtime="20220928 02:02:55.469"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:56.472" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:55.469" endtime="20220928 02:02:56.473"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>chkResponsabilidade</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:56.474" level="INFO">Clicking element 'chkResponsabilidade'.</msg>
+<status status="PASS" starttime="20220928 02:02:56.474" endtime="20220928 02:02:56.537"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>chkLgpd</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:56.539" level="INFO">Clicking element 'chkLgpd'.</msg>
+<status status="PASS" starttime="20220928 02:02:56.538" endtime="20220928 02:02:56.588"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 02:02:57.592" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220928 02:02:56.588" endtime="20220928 02:02:57.592"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220928 02:02:57.595" endtime="20220928 02:02:58.323"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:57.592" endtime="20220928 02:02:58.323"/>
+</kw>
+<status status="PASS" starttime="20220928 02:02:55.432" endtime="20220928 02:02:58.323"/>
+</kw>
+<kw name="No Portal, clicar em Concluir Inscrição" library="Portal">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>concluir-passo2</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220928 02:02:58.325" endtime="20220928 02:02:58.364"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>concluir-passo2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 02:02:58.365" level="INFO">Clicking element 'concluir-passo2'.</msg>
+<msg timestamp="20220928 02:02:59.626" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-128.png"&gt;&lt;img src="selenium-screenshot-128.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220928 02:02:59.627" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input type="button" id="concluir-passo2" value="Concluir Inscrição"&gt; is not clickable at point (1017, 549). Other element would receive the click: &lt;div class="jquery-modal blocker current" style="opacity: 1;"&gt;...&lt;/div&gt;
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00AF78B3+2193587]
+	Ordinal0 [0x00A90681+1771137]
+	Ordinal0 [0x009A41A8+803240]
+	Ordinal0 [0x009D8C84+1019012]
+	Ordinal0 [0x009D6C48+1010760]
+	Ordinal0 [0x009D493B+1001787]
+	Ordinal0 [0x009D3699+997017]
+	Ordinal0 [0x009C9223+954915]
+	Ordinal0 [0x009ED7AC+1103788]
+	Ordinal0 [0x009C8C04+953348]
+	Ordinal0 [0x009ED9C4+1104324]
+	Ordinal0 [0x009FDAE2+1170146]
+	Ordinal0 [0x009ED5C6+1103302]
+	Ordinal0 [0x009C77E0+948192]
+	Ordinal0 [0x009C86E6+952038]
+	GetHandleVerifier [0x00DA0CB2+2738370]
+	GetHandleVerifier [0x00D921B8+2678216]
+	GetHandleVerifier [0x00B817AA+512954]
+	GetHandleVerifier [0x00B80856+509030]
+	Ordinal0 [0x00A9743B+1799227]
+	Ordinal0 [0x00A9BB68+1817448]
+	Ordinal0 [0x00A9BC55+1817685]
+	Ordinal0 [0x00AA5230+1856048]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E47B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E47B2E+238]
+</msg>
+<status status="FAIL" starttime="20220928 02:02:58.364" endtime="20220928 02:02:59.628"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220928 02:02:59.628" endtime="20220928 02:02:59.628"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<status status="NOT RUN" starttime="20220928 02:02:59.630" endtime="20220928 02:02:59.630"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220928 02:02:59.630" endtime="20220928 02:02:59.630"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<status status="NOT RUN" starttime="20220928 02:02:59.630" endtime="20220928 02:02:59.630"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220928 02:02:59.630" endtime="20220928 02:02:59.630"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<status status="NOT RUN" starttime="20220928 02:02:59.630" endtime="20220928 02:02:59.630"/>
+</kw>
+<status status="FAIL" starttime="20220928 02:02:58.325" endtime="20220928 02:02:59.630"/>
+</kw>
+<kw name="No Portal, verificar se o comprovante é exibido em tela" library="Portal">
+<status status="NOT RUN" starttime="20220928 02:02:59.631" endtime="20220928 02:02:59.632"/>
 </kw>
 <kw name="Fechar o navegador" library="1-Principal" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220928 00:11:39.721" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220928 00:11:39.519" endtime="20220928 00:11:39.721"/>
+<msg timestamp="20220928 02:02:59.813" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-129.png"&gt;&lt;img src="selenium-screenshot-129.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220928 02:02:59.633" endtime="20220928 02:02:59.813"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220928 00:11:39.722" endtime="20220928 00:11:41.874"/>
+<status status="PASS" starttime="20220928 02:02:59.813" endtime="20220928 02:03:02.067"/>
 </kw>
-<status status="PASS" starttime="20220928 00:11:39.518" endtime="20220928 00:11:41.875"/>
+<status status="PASS" starttime="20220928 02:02:59.632" endtime="20220928 02:03:02.067"/>
 </kw>
-<doc>Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
-para o Portal (todas as etapas), e de transferência para o GIER</doc>
-<tag>Programação de Processo - Infantil | Fluxo Positivo</tag>
-<status status="FAIL" starttime="20220928 00:11:02.562" endtime="20220928 00:11:41.877">Element 'cphContent_btnPesquisa' not visible after 5 seconds.</status>
+<doc>Esse teste efetua a solicitação e consulta de matrícula
+no Portal, para todas as etapas/modalidades.</doc>
+<tag>Gier &gt; Portal - Infantil Inicial | Fluxo Positivo</tag>
+<status status="FAIL" starttime="20220928 01:59:16.439" endtime="20220928 02:03:02.068">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input type="button" id="concluir-passo2" value="Concluir Inscrição"&gt; is not clickable at point (1017, 549). Other element would receive the click: &lt;div class="jquery-modal blocker current" style="opacity: 1;"&gt;...&lt;/div&gt;
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00AF78B3+2193587]
+	Ordinal0 [0x00A90681+1771137]
+	Ordinal0 [0x009A41A8+803240]
+	Ordinal0 [0x009D8C84+1019012]
+	Ordinal0 [0x009D6C48+1010760]
+	Ordinal0 [0x009D493B+1001787]
+	Ordinal0 [0x009D3699+997017]
+	Ordinal0 [0x009C9223+954915]
+	Ordinal0 [0x009ED7AC+1103788]
+	Ordinal0 [0x009C8C04+953348]
+	Ordinal0 [0x009ED9C4+1104324]
+	Ordinal0 [0x009FDAE2+1170146]
+	Ordinal0 [0x009ED5C6+1103302]
+	Ordinal0 [0x009C77E0+948192]
+	Ordinal0 [0x009C86E6+952038]
+	GetHandleVerifier [0x00DA0CB2+2738370]
+	GetHandleVerifier [0x00D921B8+2678216]
+	GetHandleVerifier [0x00B817AA+512954]
+	GetHandleVerifier [0x00B80856+509030]
+	Ordinal0 [0x00A9743B+1799227]
+	Ordinal0 [0x00A9BB68+1817448]
+	Ordinal0 [0x00A9BC55+1817685]
+	Ordinal0 [0x00AA5230+1856048]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E47B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E47B2E+238]
+</status>
 </test>
-<status status="FAIL" starttime="20220928 00:11:01.664" endtime="20220928 00:11:41.881"/>
+<status status="FAIL" starttime="20220928 01:59:15.525" endtime="20220928 02:03:02.074"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Programação de Processo - Infantil | Fluxo Positivo</stat>
+<stat pass="0" fail="1" skip="0">Gier &gt; Portal - Infantil Inicial | Fluxo Positivo</stat>
 </tag>
 <suite>
 <stat pass="0" fail="1" skip="0" id="s1" name="TesteDeVersaoPositivo">TesteDeVersaoPositivo</stat>
