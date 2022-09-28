@@ -1614,11 +1614,8 @@ Cenário 47: Programação de Processo
     Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
-<<<<<<< HEAD
     Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO #PROCESSO_TESTE_QA#"
-=======
     Em Programação de Processo, em Processo, selecionar o processo "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
->>>>>>> c58436f2ea94e03947077454bca0e68e405f02f6
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
     Em Programação de Processo, clicar em Ações e Editar
