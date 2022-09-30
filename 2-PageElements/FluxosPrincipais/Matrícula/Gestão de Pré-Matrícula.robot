@@ -4,6 +4,8 @@ Library    DateTime
 Library    String
 Library    FakerLibrary     locale=pt_BR
 Resource    ../../../1-Hooks/1-Principal.robot
+Resource    ../Pessoa/Pessoa.robot
+Resource    ../Matrícula/Portal.robot
 
 *** Variables ***
 ${campoTipoEstabelecimentoEscolaMatricula}    cphContent_ddlTipoEstabelecimento
@@ -13,6 +15,7 @@ ${campoEPGVolpi}                              chkEW_575
 ${campoEPGCrispiniano}                        chkEW_607
 ${campoEPGAntonioAparecido}                   chkEW_584
 ${campoNomeCadastroPessoa}                    cphContent_ucDadosPessoais_txtNomeCompleto
+
 
 *** Keywords ***
 Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
@@ -60,7 +63,7 @@ Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
         IF  ${resultado}
             Execute JavaScript  document.getElementById("cphContent_dtlClasseTurma_lbtSelecionar_${index}").click();
             Aguardar tela de carregamento
-            IF    ${resultado}    BREAK
+            Exit For Loop If    ${resultado}
         END
     END
     Aguardar tela de carregamento
