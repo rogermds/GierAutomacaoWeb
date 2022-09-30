@@ -3,10 +3,10 @@ Resource    ../../../1-Hooks/1-Principal.robot
 Library     SeleniumLibrary
 
 *** Variables ***
-${respostaAAvaliacao}                        questao_0_resposta_0_hash_b0b9b5b7
-${respostaBAvaliacao}                        questao_2_resposta_1_hash_b0b9b4b4
-${respostaCAvaliacao}                        questao_5_resposta_2_hash_b0b9b7b9
-${respostaDAvaliacao}                        questao_9_resposta_3_hash_b0b9b9b4
+${respostaAAvaliacao}                        questao_0_resposta_0_hash_b0b3b3b2
+${respostaBAvaliacao}                        questao_2_resposta_1_hash_b0b0b9b5
+${respostaCAvaliacao}                        questao_5_resposta_2_hash_b0b3b1b8
+${respostaDAvaliacao}                        questao_9_resposta_3_hash_b0b8b1b0
 
 *** Keywords ***
 Clicar na Resposta "A"

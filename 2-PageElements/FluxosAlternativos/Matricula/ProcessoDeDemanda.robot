@@ -17,9 +17,10 @@ Em Processo de Demanda, clicar em Cadastrar
 Em Processo de Demanda, na Descrição, inserir "${descricaoProcesso}"
     Set Suite Variable    ${descricaoProcesso}
     ${descricaoProcessoChave}    Set Variable    ${descricaoProcesso} #PROCESSO_TESTE_QA#
+    ${codProcessoRandom}   Random Number   1
     Wait Until Element Is Visible    cphContent_btnIncluir
     Clear Element Text    cphContent_txtDescricao
-    Input Text    cphContent_txtDescricao    ${descricaoProcessoChave}
+    Input Text    cphContent_txtDescricao   ${descricaoProcessoChave}${codProcessoRandom}
 
 Em Processo de Demanda, em Resolução, inserir "${resolucao}"
     Input Text    cphContent_txtResolucao    ${resolucao}
@@ -146,6 +147,7 @@ Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, sel
 
 Em Processo de Demanda, clicar em Salvar
     Execute JavaScript  document.getElementById("cphContent_btnSalvar").click();
+    Sleep    15
     Aguardar tela de carregamento
 
 Em Processo de Demanda, clicar em OK no modal

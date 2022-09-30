@@ -3,11 +3,11 @@ Resource    ../../../1-Hooks/1-Principal.robot
 Library     SeleniumLibrary
 
 *** Variables ***
-${botaoProvaEducacional}            cphContent_rptAvaliacoes_divPeriodo_1
+${botaoProvaEducacional}            cphContent_rptAvaliacoes_divPeriodo_3
 ${botaoAvancarAvaliacao}            (//input[@value='Avançar'])[1]
 
 *** Keywords ***
-Clicar na Prova "Prova de Educação Qa"
+Clicar na Prova Prova Automação Qa
     Execute JavaScript  document.getElementById("${botaoProvaEducacional}").click();
 
 Clicar no Botão Avançar 
