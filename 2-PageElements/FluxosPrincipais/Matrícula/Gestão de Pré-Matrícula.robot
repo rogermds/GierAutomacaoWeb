@@ -17,7 +17,13 @@ ${campoNomeCadastroPessoa}                    cphContent_ucDadosPessoais_txtNome
 *** Keywords ***
 Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
     Wait Until Element Is Visible    cphContent_btnPesquisa
-    Input Text    cphContent_txtAluno    ${nomeCompletoAluno}
+    ${status}    Run Keyword And Return Status    Variable Should Not Exist     ${nomeCompletoAluno}
+    IF    ${status}
+        Input Text    cphContent_txtAluno    ${nomeCompletoResponsavel}
+    ELSE    
+        Input Text    cphContent_txtAluno    ${nomeCompletoAluno}
+    END
+    
 
 Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
     Input Text    cphContent_txtProtocolo    ${protocoloComprovante}

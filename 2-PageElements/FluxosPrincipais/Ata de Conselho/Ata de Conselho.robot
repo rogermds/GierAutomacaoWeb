@@ -55,11 +55,15 @@ Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no pri
 
 Na tela de Ata de Conselho, em Registro das Observações, inserir a observação "${observacao}"
     Wait Until Element Is Visible    ${campoObservacaoAta}
-    Set Suite Variable      ${botaoSalvar}           cphContent_btSalvar
     Set Suite Variable      ${textoObservacaoAta}    ${observacao}
     Clear Element Text    ${campoObservacaoAta}
     Input Text    ${campoObservacaoAta}    ${textoObservacaoAta}
     Sleep    1
+
+Na tela de Ata de Conselho, clicar em Salvar
+    Wait Until Element Is Visible    cphContent_btSalvar
+    Execute JavaScript  document.getElementById("cphContent_btSalvar").click();
+    Aguardar tela de carregamento
 
 Na tela de Ata de Conselho, em Registro de Observações, verificar se a observação foi incluída
     Wait Until Element Is Visible    ${campoObservacaoAta}

@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220930 04:11:50.341" rpa="false" schemaversion="3">
+<suite id="s1" name="TesteDeVersaoPositivo" source="c:\Users\rogerio.santos\Desktop\AUTOMAÇÃO WEB - GIER\Automação - Teste De Versão Gier\3-TestesFluxoBasico\TesteDeVersaoPositivo.robot">
+<test id="s1-t1" name="Cenário 52: Funcionalidade Portal - Gier - EJA Inicial" line="2747">
+<kw name="Abrir o navegador" library="1-Principal" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://www.google.com/</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220930 04:11:51.350" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220930 04:11:51.350" endtime="20220930 04:11:53.757"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220930 04:11:53.757" endtime="20220930 04:11:53.879"/>
+</kw>
+<status status="PASS" starttime="20220930 04:11:51.349" endtime="20220930 04:11:53.879"/>
+</kw>
+<kw name="Entrar no Portal" library="Portal">
+<kw name="Acessar o ambiente &quot;https://guarulhosportalhomolog.gier.com.br/index.html&quot;" library="1-Principal" sourcename="Acessar o ambiente &quot;${url}&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220930 04:11:53.885" level="INFO">Opening url 'https://guarulhosportalhomolog.gier.com.br/index.html'</msg>
+<status status="PASS" starttime="20220930 04:11:53.884" endtime="20220930 04:11:55.448"/>
+</kw>
+<status status="PASS" starttime="20220930 04:11:53.883" endtime="20220930 04:11:55.448"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:11:55.449" endtime="20220930 04:12:00.154"/>
+</kw>
+<status status="PASS" starttime="20220930 04:11:55.448" endtime="20220930 04:12:00.155"/>
+</kw>
+<status status="PASS" starttime="20220930 04:11:53.881" endtime="20220930 04:12:00.155"/>
+</kw>
+<kw name="No Portal, clicar em &quot;Educação de Jovens e Adultos&quot;" library="Portal" sourcename="No Portal, clicar em &quot;${etapa}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${etapa}' == 'Educação Infantil'</arg>
+<arg>Click Element</arg>
+<arg>//div[@class='botao botao-ciano'][contains(.,'Educação Infantil')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220930 04:12:00.157" endtime="20220930 04:12:00.158"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${etapa}' == 'Ensino Fundamental'</arg>
+<arg>Click Element</arg>
+<arg>//div[@class='botao botao-azul'][contains(.,'Ensino Fundamental')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220930 04:12:00.159" endtime="20220930 04:12:00.160"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${etapa}' == 'Educação de Jovens e Adultos'</arg>
+<arg>Click Element</arg>
+<arg>//div[@class='botao botao-azul'][contains(.,'Educação de Jovens e Adultos')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='botao botao-azul'][contains(.,'Educação de Jovens e Adultos')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:00.162" level="INFO">Clicking element '//div[@class='botao botao-azul'][contains(.,'Educação de Jovens e Adultos')]'.</msg>
+<status status="PASS" starttime="20220930 04:12:00.161" endtime="20220930 04:12:00.213"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:00.160" endtime="20220930 04:12:00.213"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:12:00.214" endtime="20220930 04:12:00.236"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:00.214" endtime="20220930 04:12:00.236"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:00.156" endtime="20220930 04:12:00.236"/>
+</kw>
+<kw name="No Portal, selecionar o processo para a etapa &quot;EJA 2º SEMESTRE INICIAL&quot;" library="Portal" sourcename="No Portal, selecionar o processo para a etapa &quot;${etapa}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[contains(@rel,'modal:close')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220930 04:12:00.241" endtime="20220930 04:12:00.475"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[contains(@value,'AUTOMACAO ${etapa} #PROCESSO_TESTE_QA#')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:00.476" level="INFO">Clicking element '//input[contains(@value,'AUTOMACAO EJA 2º SEMESTRE INICIAL #PROCESSO_TESTE_QA#')]'.</msg>
+<status status="PASS" starttime="20220930 04:12:00.475" endtime="20220930 04:12:00.526"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:12:00.527" endtime="20220930 04:12:00.544"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:00.526" endtime="20220930 04:12:00.545"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:00.240" endtime="20220930 04:12:00.545"/>
+</kw>
+<kw name="No Portal, clicar em Iniciar inscrição" library="Portal">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>iniciar-inscricao</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220930 04:12:00.546" endtime="20220930 04:12:00.799"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>iniciar-inscricao</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:00.800" level="INFO">Clicking element 'iniciar-inscricao'.</msg>
+<status status="PASS" starttime="20220930 04:12:00.799" endtime="20220930 04:12:01.963"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:12:01.964" endtime="20220930 04:12:06.537"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:01.963" endtime="20220930 04:12:06.537"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:00.546" endtime="20220930 04:12:06.537"/>
+</kw>
+<kw name="No Portal, em Escolha da Escola, em Data de Nascimento, inserir &quot;07/03/1996&quot;" library="Portal" sourcename="No Portal, em Escolha da Escola, em Data de Nascimento, inserir &quot;${data}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:07.548" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220930 04:12:06.539" endtime="20220930 04:12:07.548"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>busca-nascimento</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220930 04:12:07.5Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D778B3+2193587]
+	Ordinal0 [0x00D10681+1771137]
+	Ordinal0 [0x00C24070+802928]
+	Ordinal0 [0x00C19AB2+760498]
+	Ordinal0 [0x00C0CEAF+708271]
+	Ordinal0 [0x00C11142+725314]
+	Ordinal0 [0x00C155C9+742857]
+	Ordinal0 [0x00C25500+808192]
+	Ordinal0 [0x00C7D2C2+1168066]
+	Ordinal0 [0x00C6D5C6+1103302]
+	Ordinal0 [0x00C477E0+948192]
+	Ordinal0 [0x00C486E6+952038]
+	GetHandleVerifier [0x01020CB2+2738370]
+	GetHandleVerifier [0x010121B8+2678216]
+	GetHandleVerifier [0x00E017AA+512954]
+	GetHandleVerifier [0x00E00856+509030]
+	Ordinal0 [0x00D1743B+1799227]
+	Ordinal0 [0x00D1BB68+1817448]
+	Ordinal0 [0x00D1BC55+1817685]
+	Ordinal0 [0x00D25230+1856048]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E47B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E47B2E+238]
+</msg>
+<msg timestamp="20220930 04:12:07.369" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D778B3+2193587]
+	Ordinal0 [0x00D10681+1771137]
+	Ordinal0 [0x00C24070+802928]
+	Ordinal0 [0x00C19AB2+760498]
+	Ordinal0 [0x00C0CEAF+708271]
+	Ordinal0 [0x00C11142+725314]
+	Ordinal0 [0x00C155C9+742857]
+	Ordinal0 [0x00C25500+808192]
+	Ordinal0 [0x00C7D2C2+1168066]
+	Ordinal0 [0x00C6D5C6+1103302]
+	Ordinal0 [0x00C477E0+948192]
+	Ordinal0 [0x00C486E6+952038]
+	GetHandleVerifier [0x01020CB2+2738370]
+	GetHandleVerifier [0x010121B8+2678216]
+	GetHandleVerifier [0x00E017AA+512954]
+	GetHandleVerifier [0x00E00856+509030]
+	Ordinal0 [0x00D1743B+1799227]
+	Ordinal0 [0x00D1BB68+1817448]
+	Ordinal0 [0x00D1BC55+1817685]
+	Ordinal0 [0x00D25230+1856048]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E47B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E47B2E+238]
+</msg>
+<status status="FAIL" starttime="20220930 04:11:42.190" endtime="20220930 04:12:07.372"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>busca-nascimento</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220930 04:12:07.373" endtime="20220930 04:12:07.373"/>
+</kw>
+<status status="FAIL" starttime="20220930 04:11:41.182" endtime="20220930 04:12:07.375"/>
+</kw>
+<kw name="No Portal, em Escolha da Escola, em CEP, inserir &quot;07123-140&quot;" library="Portal" sourcename="No Portal, em Escolha da Escola, em CEP, inserir &quot;${cep}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.376" endtime="20220930 04:12:07.376"/>
+</kw>
+<kw name="No Portal, em Escolha da Escola, em Número da Residência, inserir &quot;33&quot;" library="Portal" sourcename="No Portal, em Escolha da Escola, em Número da Residência, inserir &quot;${numeroResidencial}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.376" endtime="20220930 04:12:07.376"/>
+</kw>
+<kw name="No Portal, clicar em Pesquisar Escolas" library="Portal">
+<status status="NOT RUN" starttime="20220930 04:12:07.377" endtime="20220930 04:12:07.377"/>
+</kw>
+<kw name="No Portal, selecionar a escola &quot;EPG CRISPINIANO SOARES&quot;" library="Portal" sourcename="No Portal, selecionar a escola &quot;${escola}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.377" endtime="20220930 04:12:07.378"/>
+</kw>
+<kw name="No Portal, em Ano/Ciclo selecionar &quot;Ciclo II&quot;" library="Portal" sourcename="No Portal, em Ano/Ciclo selecionar &quot;${anoCiclo}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.378" endtime="20220930 04:12:07.378"/>
+</kw>
+<kw name="No Portal, clicar em Selecionar Escolas" library="Portal">
+<status status="NOT RUN" starttime="20220930 04:12:07.379" endtime="20220930 04:12:07.379"/>
+</kw>
+<kw name="No Portal, clicar em Próximo" library="Portal">
+<status status="NOT RUN" starttime="20220930 04:12:07.379" endtime="20220930 04:12:07.380"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar &quot;Brasileira&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar &quot;${nacionalidade}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.380" endtime="20220930 04:12:07.381"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar &quot;SP&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar &quot;${ufNascimento}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.382" endtime="20220930 04:12:07.382"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar &quot;SAO PAULO&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar &quot;${ufNascimento}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.382" endtime="20220930 04:12:07.383"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido" library="Portal">
+<status status="NOT RUN" starttime="20220930 04:12:07.384" endtime="20220930 04:12:07.384"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório" library="Portal">
+<status status="NOT RUN" starttime="20220930 04:12:07.384" endtime="20220930 04:12:07.385"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir &quot;07/03/1996&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir &quot;${dataNascimento}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.385" endtime="20220930 04:12:07.386"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Sexo, inserir &quot;Feminino&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Sexo, inserir &quot;${sexo}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.386" endtime="20220930 04:12:07.386"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir &quot;O Próprio&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir &quot;${grauParentesco}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.387" endtime="20220930 04:12:07.387"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar &quot;Brasileira&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar &quot;${nacionalidade}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.387" endtime="20220930 04:12:07.388"/>
+</kw>
+<kw name="No Portal, em Contato, em Telefone 1, inserir um telefone válido" library="Portal">
+<status status="NOT RUN" starttime="20220930 04:12:07.388" endtime="20220930 04:12:07.388"/>
+</kw>
+<kw name="No Portal, clicar nos campos de declarações" library="Portal">
+<status status="NOT RUN" starttime="20220930 04:12:07.389" endtime="20220930 04:12:07.389"/>
+</kw>
+<kw name="No Portal, clicar em Concluir Inscrição" library="Portal">
+<status status="NOT RUN" starttime="20220930 04:12:07.390" endtime="20220930 04:12:07.390"/>
+</kw>
+<kw name="No Portal, verificar se o comprovante é exibido em tela" library="Portal">
+<status status="NOT RUN" starttime="20220930 04:12:07.390" endtime="20220930 04:12:07.390"/>
+</kw>
+<kw name="No Portal, gravar o número de protocolo gerado" library="Portal">
+<status status="NOT RUN" starttime="20220930 04:12:07.391" endtime="20220930 04:12:07.391"/>
+</kw>
+<kw name="Acessar o ambiente &quot;https://guarulhoshomolog.gier.com.br/&quot;" library="1-Principal" sourcename="Acessar o ambiente &quot;${url}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.393" endtime="20220930 04:12:07.393"/>
+</kw>
+<kw name="Entrar com as credenciais &quot;02867439817&quot; e &quot;12345678&quot;" library="Login" sourcename="Entrar com as credenciais &quot;${login}&quot; e &quot;${senha}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.393" endtime="20220930 04:12:07.393"/>
+</kw>
+<kw name="Verificar se aparece o texto &quot;Estrutura&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.394" endtime="20220930 04:12:07.394"/>
+</kw>
+<kw name="Pesquisar &quot;CRISPINIANO&quot; e selecionar o primeiro resultado" library="Seleção de Estrutura" sourcename="Pesquisar &quot;${pesquisaEstrutura}&quot; e selecionar o primeiro resultado">
+<status status="NOT RUN" starttime="20220930 04:12:07.395" endtime="20220930 04:12:07.396"/>
+</kw>
+<kw name="Entrar no eixo &quot;Operação&quot;" library="1-Principal" sourcename="Entrar no eixo &quot;${nomeEixo}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.396" endtime="20220930 04:12:07.397"/>
+</kw>
+<kw name="Entrar no módulo &quot;Gestão Escolar&quot;" library="1-Principal" sourcename="Entrar no módulo &quot;${nomeModulo}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.397" endtime="20220930 04:12:07.398"/>
+</kw>
+<kw name="Entrar na funcionalidade &quot;Gestão de Pré-matrícula&quot;" library="1-Principal" sourcename="Entrar na funcionalidade &quot;${funcionalidade}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.399" endtime="20220930 04:12:07.399"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado" library="Gestão de Pré-Matrícula">
+<status status="NOT RUN" starttime="20220930 04:12:07.400" endtime="20220930 04:12:07.400"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula" library="Gestão de Pré-Matrícula">
+<status status="NOT RUN" starttime="20220930 04:12:07.401" endtime="20220930 04:12:07.401"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, clicar em Pesquisar" library="Gestão de Pré-Matrícula">
+<status status="NOT RUN" starttime="20220930 04:12:07.402" endtime="20220930 04:12:07.402"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato" library="Gestão de Pré-Matrícula">
+<status status="NOT RUN" starttime="20220930 04:12:07.403" endtime="20220930 04:12:07.403"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Cor/Raça, selecionar &quot;PRETA&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Cor/Raça, selecionar &quot;${corRaca}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.404" endtime="20220930 04:12:07.404"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo CEP, inserir o CEP &quot;07123140&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo CEP, inserir o CEP &quot;${CEP}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.404" endtime="20220930 04:12:07.404"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Número, inserir o número &quot;34&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Número, inserir o número &quot;${numeroCEP}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.405" endtime="20220930 04:12:07.405"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Zona, selecionar &quot;URBANO&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Zona, selecionar &quot;${zona}&quot;">
+<status status="NOT RUN" starttime="20220930 04:12:07.405" endtime="20220930 04:12:07.405"/>
+</kw>
+<kw name="Clicar no botão Incluir" library="Pessoa">
+<status status="NOT RUN" starttime="20220930 04:12:07.406" endtime="20220930 04:12:07.406"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, clicar no botão Salvar" library="Pessoa">
+<status status="NOT RUN" starttime="20220930 04:12:07.406" endtime="20220930 04:12:07.406"/>
+</kw>
+<kw name="Clicar em OK no Modal" library="1-Principal">
+<status status="NOT RUN" starttime="20220930 04:12:07.407" endtime="20220930 04:12:07.407"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir" library="Gestão de Pré-Matrícula">
+<status status="NOT RUN" starttime="20220930 04:12:07.407" endtime="20220930 04:12:07.407"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, selecionar uma turma com vagas" library="Gestão de Pré-Matrícula">
+<status status="NOT RUN" starttime="20220930 04:12:07.408" endtime="20220930 04:12:07.408"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, clicar em Matricular Educando" library="Gestão de Pré-Matrícula">
+<status status="NOT RUN" starttime="20220930 04:12:07.409" endtime="20220930 04:12:07.409"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, clicar em OK no modal" library="Gestão de Pré-Matrícula">
+<status status="NOT RUN" starttime="20220930 04:12:07.409" endtime="20220930 04:12:07.409"/>
+</kw>
+<kw name="Fechar o navegador" library="1-Principal" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220930 04:12:28.304" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D778B3+2193587]
+	Ordinal0 [0x00D10681+1771137]
+	Ordinal0 [0x00C24070+802928]
+	Ordinal0 [0x00C19AB2+760498]
+	Ordinal0 [0x00C0CEAF+708271]
+	Ordinal0 [0x00C11142+725314]
+	Ordinal0 [0x00C155C9+742857]
+	Ordinal0 [0x00C25500+808192]
+	Ordinal0 [0x00C7D2C2+1168066]
+	Ordinal0 [0x00C6D5C6+1103302]
+	Ordinal0 [0x00C477E0+948192]
+	Ordinal0 [0x00C486E6+952038]
+	GetHandleVerifier [0x01020CB2+2738370]
+	GetHandleVerifier [0x010121B8+2678216]
+	GetHandleVerifier [0x00E017AA+512954]
+	GetHandleVerifier [0x00E00856+509030]
+	Ordinal0 [0x00D1743B+1799227]
+	Ordinal0 [0x00D1BB68+1817448]
+	Ordinal0 [0x00D1BC55+1817685]
+	Ordinal0 [0x00D25230+1856048]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E47B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E47B2E+238]
+</msg>
+<msg timestamp="20220930 04:12:28.309" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D778B3+2193587]
+	Ordinal0 [0x00D10681+1771137]
+	Ordinal0 [0x00C24070+802928]
+	Ordinal0 [0x00C19AB2+760498]
+	Ordinal0 [0x00C0CEAF+708271]
+	Ordinal0 [0x00C11142+725314]
+	Ordinal0 [0x00C155C9+742857]
+	Ordinal0 [0x00C25500+808192]
+	Ordinal0 [0x00C7D2C2+1168066]
+	Ordinal0 [0x00C6D5C6+1103302]
+	Ordinal0 [0x00C477E0+948192]
+	Ordinal0 [0x00C486E6+952038]
+	GetHandleVerifier [0x01020CB2+2738370]
+	GetHandleVerifier [0x010121B8+2678216]
+	GetHandleVerifier [0x00E017AA+512954]
+	GetHandleVerifier [0x00E00856+509030]
+	Ordinal0 [0x00D1743B+1799227]
+	Ordinal0 [0x00D1BB68+1817448]
+	Ordinal0 [0x00D1BC55+1817685]
+	Ordinal0 [0x00D25230+1856048]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E47B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E47B2E+238]
+</msg>
+<status status="FAIL" starttime="20220930 04:12:07.411" endtime="20220930 04:12:28.313"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220930 04:12:28.315" endtime="20220930 04:12:30.404"/>
+</kw>
+<status status="FAIL" starttime="20220930 04:12:07.410" endtime="20220930 04:12:30.405">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D778B3+2193587]
+	Ordinal0 [0x00D10681+1771137]
+	Ordinal0 [0x00C24070+802928]
+	Ordinal0 [0x00C19AB2+760498]
+	Ordinal0 [0x00C0CEAF+708271]
+	Ordinal0 [0x00C11142+725314]
+	Ordinal0 [0x00C155C9+742857]
+	Ordinal0 [0x00C25500+808192]
+	Ordinal0 [0x00C7D2C2+1168066]
+	Ordinal0 [0x00C6D5C6+1103302]
+	Ordinal0 [0x00C477E0+948192]
+	Ordinal0 [0x00C486E6+952038]
+	GetHandleVerifier [0x01020CB2+2738370]
+	GetHandleVerifier [0x010121B8+2678216]
+	GetHandleVerifier [0x00E017AA+512954]
+	GetHandleVerifier [0x00E00856+509030]
+	Ordinal0 [0x00D1743B+1799227]
+	Ordinal0 [0x00D1BB68+18174<kw name="No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar &quot;SAO PAULO&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar &quot;${ufNascimento}&quot;">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlRCidadeNascimento</arg>
+<arg>${ufNascimento}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220930 04:12:19.519" level="INFO">Selecting options from selection list 'ddlRCidadeNascimento' by label SAO PAULO.</msg>
+<status status="PASS" starttime="20220930 04:12:19.518" endtime="20220930 04:12:19.584"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:19.518" endtime="20220930 04:12:19.584"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido" library="Portal">
+<kw name="Cpf" library="FakerLibrary">
+<var>${cpfFakeResponsavel}</var>
+<msg timestamp="20220930 04:12:19.585" level="INFO">${cpfFakeResponsavel} = 641.785.923-19</msg>
+<status status="PASS" starttime="20220930 04:12:19.585" endtime="20220930 04:12:19.586"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${cpfFakeResponsavel}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220930 04:12:19.587" level="INFO">${cpfFakeResponsavel} = 641.785.923-19</msg>
+<status status="PASS" starttime="20220930 04:12:19.586" endtime="20220930 04:12:19.587"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtRCpf</arg>
+<arg>${cpfFakeResponsavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:19.588" level="INFO">Typing text '641.785.923-19' into text field 'txtRCpf'.</msg>
+<status status="PASS" starttime="20220930 04:12:19.588" endtime="20220930 04:12:19.685"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>txtRCpf</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220930 04:12:19.686" level="INFO">Sending key(s) ('TAB',) to txtRCpf element.</msg>
+<msg timestamp="20220930 04:12:19.968" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220930 04:12:19.968" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220930 04:12:19.685" endtime="20220930 04:12:19.982"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:12:19.984" endtime="20220930 04:12:21.423"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:19.983" endtime="20220930 04:12:21.423"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:19.585" endtime="20220930 04:12:21.424"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório" library="Portal">
+<kw name="Name Female" library="FakerLibrary">
+<var>${nomeCompletoResponsavel}</var>
+<msg timestamp="20220930 04:12:21.426" level="INFO">${nomeCompletoResponsavel} = Mariane Nunes</msg>
+<status status="PASS" starttime="20220930 04:12:21.426" endtime="20220930 04:12:21.426"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${nomeCompletoResponsavel}</var>
+<arg>${nomeCompletoResponsavel}</arg>
+<arg>ç</arg>
+<arg>c</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220930 04:12:21.427" level="INFO">${nomeCompletoResponsavel} = Mariane Nunes</msg>
+<status status="PASS" starttime="20220930 04:12:21.427" endtime="20220930 04:12:21.427"/>
+</kw>
+<kw name="Fetch From Right" library="String">
+<var>${nomeCompletoResponsavel}</var>
+<arg>${nomeCompletoResponsavel}</arg>
+<arg>.</arg>
+<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
+<msg timestamp="20220930 04:12:21.428" level="INFO">${nomeCompletoResponsavel} = Mariane Nunes</msg>
+<status status="PASS" starttime="20220930 04:12:21.428" endtime="20220930 04:12:21.428"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${nomeCompletoResponsavel}</var>
+<arg>${nomeCompletoResponsavel}</arg>
+<arg>both</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20220930 04:12:21.429" level="INFO">${nomeCompletoResponsavel} = Mariane Nunes</msg>
+<status status="PASS" starttime="20220930 04:12:21.429" endtime="20220930 04:12:21.429"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${nomeCompletoResponsavel}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220930 04:12:21.430" level="INFO">${nomeCompletoResponsavel} = Mariane Nunes</msg>
+<status status="PASS" starttime="20220930 04:12:21.429" endtime="20220930 04:12:21.430"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtRNomeCompleto</arg>
+<arg>${nomeCompletoResponsavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:21.432" level="INFO">Typing text 'Mariane Nunes' into text field 'txtRNomeCompleto'.</msg>
+<status status="PASS" starttime="20220930 04:12:21.430" endtime="20220930 04:12:21.508"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:21.425" endtime="20220930 04:12:21.508"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir &quot;07/03/1996&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir &quot;${dataNascimento}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtRDataNascimento</arg>
+<arg>${dataNascimento}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:21.510" level="INFO">Typing text '07/03/1996' into text field 'txtRDataNascimento'.</msg>
+<status status="PASS" starttime="20220930 04:12:21.510" endtime="20220930 04:12:21.604"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:21.509" endtime="20220930 04:12:21.605"/>
+</kw>
+<kw name="No Portal, em Cadastro do Responsável, em Sexo, inserir &quot;Feminino&quot;" library="Portal" sourcename="No Portal, em Cadastro do Responsável, em Sexo, inserir &quot;${sexo}&quot;">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlRSexo</arg>
+<arg>${sexo}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220930 04:12:21.608" level="INFO">Selecting options from selection list 'ddlRSexo' by label Feminino.</msg>
+<status status="PASS" starttime="20220930 04:12:21.607" endtime="20220930 04:12:21.677"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:21.606" endtime="20220930 04:12:21.678"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir &quot;O Próprio&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir &quot;${grauParentesco}&quot;">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlGrauParentesco</arg>
+<arg>${grauParentesco}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220930 04:12:21.682" level="INFO">Selecting options from selection list 'ddlGrauParentesco' by label O Próprio.</msg>
+<status status="PASS" starttime="20220930 04:12:21.680" endtime="20220930 04:12:21.768"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:21.679" endtime="20220930 04:12:21.768"/>
+</kw>
+<kw name="No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar &quot;Brasileira&quot;" library="Portal" sourcename="No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar &quot;${nacionalidade}&quot;">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>ddlNacionalidade</arg>
+<arg>${nacionalidade}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220930 04:12:21.771" level="INFO">Selecting options from selection list 'ddlNacionalidade' by label Brasileira.</msg>
+<status status="PASS" starttime="20220930 04:12:21.770" endtime="20220930 04:12:21.828"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:22.837" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220930 04:12:21.828" endtime="20220930 04:12:22.837"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:21.769" endtime="20220930 04:12:22.837"/>
+</kw>
+<kw name="No Portal, em Contato, em Telefone 1, inserir um telefone válido" library="Portal">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:23.853" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220930 04:12:22.840" endtime="20220930 04:12:23.853"/>
+</kw>
+<kw name="Random Number" library="FakerLibrary">
+<var>${telefoneAleatorio}</var>
+<arg>8</arg>
+<arg>True</arg>
+<doc>Generate a random integer according to the following rules:</doc>
+<msg timestamp="20220930 04:12:23.855" level="INFO">${telefoneAleatorio} = 87015917</msg>
+<status status="PASS" starttime="20220930 04:12:23.854" endtime="20220930 04:12:23.855"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:24.862" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220930 04:12:23.855" endtime="20220930 04:12:24.862"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${telefone1Aleatorio}</arg>
+<arg>119${telefoneAleatorio}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220930 04:12:24.871" level="INFO">${telefone1Aleatorio} = 11987015917</msg>
+<status status="PASS" starttime="20220930 04:12:24.862" endtime="20220930 04:12:24.871"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>txtTelefone1</arg>
+<arg>${telefone1Aleatorio}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:24.873" level="INFO">Typing text '11987015917' into text field 'txtTelefone1'.</msg>
+<status status="PASS" starttime="20220930 04:12:24.872" endtime="20220930 04:12:24.984"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:25.998" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220930 04:12:24.985" endtime="20220930 04:12:25.999"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:22.838" endtime="20220930 04:12:26.000"/>
+</kw>
+<kw name="No Portal, clicar nos campos de declarações" library="Portal">
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:12:26.006" endtime="20220930 04:12:26.279"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:26.005" endtime="20220930 04:12:26.280"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:27.288" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220930 04:12:26.281" endtime="20220930 04:12:27.289"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>chkResponsabilidade</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:27.290" level="INFO">Clicking element 'chkResponsabilidade'.</msg>
+<status status="PASS" starttime="20220930 04:12:27.289" endtime="20220930 04:12:27.342"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>chkLgpd</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:27.343" level="INFO">Clicking element 'chkLgpd'.</msg>
+<status status="PASS" starttime="20220930 04:12:27.343" endtime="20220930 04:12:27.396"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:28.411" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220930 04:12:27.398" endtime="20220930 04:12:28.411"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:12:28.412" endtime="20220930 04:12:28.665"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:28.412" endtime="20220930 04:12:28.666"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:26.004" endtime="20220930 04:12:28.666"/>
+</kw>
+<kw name="No Portal, clicar em Concluir Inscrição" library="Portal">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>concluir-passo2</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220930 04:12:28.668" endtime="20220930 04:12:28.704"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>concluir-passo2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:28.705" level="INFO">Clicking element 'concluir-passo2'.</msg>
+<status status="PASS" starttime="20220930 04:12:28.704" endtime="20220930 04:12:28.758"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:29.766" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220930 04:12:28.759" endtime="20220930 04:12:29.766"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:12:29.767" endtime="20220930 04:12:34.999"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:29.767" endtime="20220930 04:12:34.999"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:36.011" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220930 04:12:34.999" endtime="20220930 04:12:36.012"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:12:36.014" endtime="20220930 04:12:36.047"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:36.013" endtime="20220930 04:12:36.048"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:37.054" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220930 04:12:36.048" endtime="20220930 04:12:37.054"/>
+</kw>
+<kw name="Aguardar carregamento Portal" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>wait</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:12:37.057" endtime="20220930 04:12:37.082"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:37.055" endtime="20220930 04:12:37.083"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:28.667" endtime="20220930 04:12:37.083"/>
+</kw>
+<kw name="No Portal, verificar se o comprovante é exibido em tela" library="Portal">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Comprovante de Inscrição</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220930 04:12:37.085" endtime="20220930 04:12:37.102"/>
+</kw>
+<kw name="Dormir" library="1-Principal">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:12:39.114" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220930 04:12:37.104" endtime="20220930 04:12:39.114"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:37.103" endtime="20220930 04:12:39.115"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:37.084" endtime="20220930 04:12:39.115"/>
+</kw>
+<kw name="No Portal, gravar o número de protocolo gerado" library="Portal">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${protocoloComprovante}</var>
+<arg>comprovante-info-protocolo</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:39.143" level="INFO">${protocoloComprovante} = 20269611</msg>
+<status status="PASS" starttime="20220930 04:12:39.118" endtime="20220930 04:12:39.144"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${protocoloComprovante}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220930 04:12:39.145" level="INFO">${protocoloComprovante} = 20269611</msg>
+<status status="PASS" starttime="20220930 04:12:39.144" endtime="20220930 04:12:39.145"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:39.117" endtime="20220930 04:12:39.145"/>
+</kw>
+<kw name="Acessar o ambiente &quot;https://guarulhoshomolog.gier.com.br/&quot;" library="1-Principal" sourcename="Acessar o ambiente &quot;${url}&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220930 04:12:39.149" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
+<status status="PASS" starttime="20220930 04:12:39.148" endtime="20220930 04:12:43.134"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:39.148" endtime="20220930 04:12:43.135"/>
+</kw>
+<kw name="Entrar com as credenciais &quot;02867439817&quot; e &quot;12345678&quot;" library="Login" sourcename="Entrar com as credenciais &quot;${login}&quot; e &quot;${senha}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${tituloLogin}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220930 04:12:43.138" endtime="20220930 04:12:43.167"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoLogin}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:43.169" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
+<status status="PASS" starttime="20220930 04:12:43.168" endtime="20220930 04:12:43.265"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoSenha}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:43.268" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
+<status status="PASS" starttime="20220930 04:12:43.267" endtime="20220930 04:12:43.364"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${botaoLogin}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:43.364" level="INFO">Clicking button 'btnAcessar'.</msg>
+<status status="PASS" starttime="20220930 04:12:43.364" endtime="20220930 04:12:47.268"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:43.136" endtime="20220930 04:12:47.269"/>
+</kw>
+<kw name="Verificar se aparece o texto &quot;Estrutura&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${texto}</arg>
+<arg>20</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220930 04:12:47.271" endtime="20220930 04:12:47.296"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:47.270" endtime="20220930 04:12:47.298"/>
+</kw>
+<kw name="Pesquisar &quot;CRISPINIANO&quot; e selecionar o primeiro resultado" library="Seleção de Estrutura" sourcename="Pesquisar &quot;${pesquisaEstrutura}&quot; e selecionar o primeiro resultado">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoPesquisaEstrutura}</arg>
+<arg>${pesquisaEstrutura}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:47.300" level="INFO">Typing text 'CRISPINIANO' into text field '//input[contains(@class,'textBuscaEstrutura')]'.</msg>
+<status status="PASS" starttime="20220930 04:12:47.300" endtime="20220930 04:12:47.413"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${primeiroResultadoEstrutura}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220930 04:12:47.415" level="INFO">Clicking element '//html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]'.</msg>
+<status status="PASS" starttime="20220930 04:12:47.415" endtime="20220930 04:12:47.460"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:47.299" endtime="20220930 04:12:47.460"/>
+</kw>
+<kw name="Entrar no eixo &quot;Operação&quot;" library="1-Principal" sourcename="Entrar no eixo &quot;${nomeEixo}&quot;">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult = document.evaluate("//div[@class='divEixo'][contains(.,'${nomeEixo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:12:47.466" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//div[@class='divEixo'][contains(.,'Operação')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:12:47.464" endtime="20220930 04:12:55.897"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult.singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:12:55.901" level="INFO">Executing JavaScript:
+xPathResult.singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:12:55.898" endtime="20220930 04:12:55.908"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:47.463" endtime="20220930 04:12:55.908"/>
+</kw>
+<kw name="Entrar no módulo &quot;Gestão Escolar&quot;" library="1-Principal" sourcename="Entrar no módulo &quot;${nomeModulo}&quot;">
+<if>
+<branch type="IF" condition="'${nomeModulo}' == 'Gestão'">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult = document.evaluate("//span[contains(@id,'7')][contains(.,'Gestão')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220930 04:12:55.915" endtime="20220930 04:12:55.915"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult.singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220930 04:12:55.916" endtime="20220930 04:12:55.916"/>
+</kw>
+<status status="NOT RUN" starttime="20220930 04:12:55.913" endtime="20220930 04:12:55.916"/>
+</branch>
+<branch type="ELSE">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:12:55.918" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//span[contains(.,'Gestão Escolar')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:12:55.916" endtime="20220930 04:12:56.557"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult.singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:12:56.558" level="INFO">Executing JavaScript:
+xPathResult.singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:12:56.557" endtime="20220930 04:12:56.573"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:55.916" endtime="20220930 04:12:56.573"/>
+</branch>
+<status status="PASS" starttime="20220930 04:12:55.912" endtime="20220930 04:12:56.573"/>
+</if>
+<status status="PASS" starttime="20220930 04:12:55.911" endtime="20220930 04:12:56.573"/>
+</kw>
+<kw name="Entrar na funcionalidade &quot;Gestão de Pré-matrícula&quot;" library="1-Principal" sourcename="Entrar na funcionalidade &quot;${funcionalidade}&quot;">
+<if>
+<branch type="IF" condition="'${funcionalidade}' == 'Processo de Demandas'">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult = document.evaluate("//span[@title='Processo de Demandas']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220930 04:12:56.581" endtime="20220930 04:12:56.581"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult.singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220930 04:12:56.581" endtime="20220930 04:12:56.581"/>
+</kw>
+<status status="NOT RUN" starttime="20220930 04:12:56.579" endtime="20220930 04:12:56.581"/>
+</branch>
+<branch type="ELSE">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:12:56.584" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//span[contains(@title,'Gestão de Pré-matrícula')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:12:56.582" endtime="20220930 04:12:58.120"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult.singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:12:58.120" level="INFO">Executing JavaScript:
+xPathResult.singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:12:58.120" endtime="20220930 04:12:58.126"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:56.581" endtime="20220930 04:12:58.127"/>
+</branch>
+<status status="PASS" starttime="20220930 04:12:56.578" endtime="20220930 04:12:58.127"/>
+</if>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:12:58.130" endtime="20220930 04:13:01.524"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:58.128" endtime="20220930 04:13:01.525"/>
+</kw>
+<status status="PASS" starttime="20220930 04:12:56.576" endtime="20220930 04:13:01.526"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado" library="Gestão de Pré-Matrícula">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>cphContent_btnPesquisa</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220930 04:13:01.529" endtime="20220930 04:13:01.571"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Variable Should Not Exist</arg>
+<arg>${nomeCompletoAluno}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Variable Should Not Exist" library="BuiltIn">
+<arg>${nomeCompletoAluno}</arg>
+<doc>Fails if the given variable exists within the current scope.</doc>
+<status status="PASS" starttime="20220930 04:13:01.572" endtime="20220930 04:13:01.581"/>
+</kw>
+<msg timestamp="20220930 04:13:01.581" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20220930 04:13:01.571" endtime="20220930 04:13:01.581"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>cphContent_txtAluno</arg>
+<arg>${nomeCompletoResponsavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:13:01.582" level="INFO">Typing text 'Mariane Nunes' into text field 'cphContent_txtAluno'.</msg>
+<status status="PASS" starttime="20220930 04:13:01.582" endtime="20220930 04:13:01.707"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:01.581" endtime="20220930 04:13:01.707"/>
+</branch>
+<branch type="ELSE">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>cphContent_txtAluno</arg>
+<arg>${nomeCompletoAluno}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220930 04:13:01.708" endtime="20220930 04:13:01.708"/>
+</kw>
+<status status="NOT RUN" starttime="20220930 04:13:01.707" endtime="20220930 04:13:01.708"/>
+</branch>
+<status status="PASS" starttime="20220930 04:13:01.581" endtime="20220930 04:13:01.709"/>
+</if>
+<status status="PASS" starttime="20220930 04:13:01.528" endtime="20220930 04:13:01.710"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula" library="Gestão de Pré-Matrícula">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>cphContent_txtProtocolo</arg>
+<arg>${protocoloComprovante}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:13:01.715" level="INFO">Typing text '20269611' into text field 'cphContent_txtProtocolo'.</msg>
+<status status="PASS" starttime="20220930 04:13:01.714" endtime="20220930 04:13:01.872"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:01.713" endtime="20220930 04:13:01.872"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, clicar em Pesquisar" library="Gestão de Pré-Matrícula">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_btnPesquisa").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:01.878" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_btnPesquisa").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:01.876" endtime="20220930 04:13:01.899"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:01.901" endtime="20220930 04:13:06.849"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:01.900" endtime="20220930 04:13:06.849"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:01.874" endtime="20220930 04:13:06.849"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato" library="Gestão de Pré-Matrícula">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Resultado da Busca</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220930 04:13:06.852" endtime="20220930 04:13:06.872"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:06.873" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:06.873" endtime="20220930 04:13:06.879"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult.singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:06.880" level="INFO">Executing JavaScript:
+xPathResult.singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:06.880" endtime="20220930 04:13:06.894"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_dtlConsulta_lnkDadosCandidato_0").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:06.896" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_dtlConsulta_lnkDadosCandidato_0").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:06.895" endtime="20220930 04:13:06.999"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:07.000" endtime="20220930 04:13:09.191"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:06.999" endtime="20220930 04:13:09.193"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:06.851" endtime="20220930 04:13:09.193"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Cor/Raça, selecionar &quot;PRETA&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Cor/Raça, selecionar &quot;${corRaca}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'AMARELA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("3").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220930 04:13:09.197" endtime="20220930 04:13:09.197"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'BRANCA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("1").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220930 04:13:09.198" endtime="20220930 04:13:09.198"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'INDÍGENA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("5").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220930 04:13:09.199" endtime="20220930 04:13:09.200"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'NÃO DECLARADA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("6").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220930 04:13:09.200" endtime="20220930 04:13:09.201"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'PARDA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("4").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220930 04:13:09.202" endtime="20220930 04:13:09.202"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${corRaca}' == 'PRETA'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoCorRaca}').val("2").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoCorRaca}').val("2").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:09.204" level="INFO">Executing JavaScript:
+$('#cphContent_ucDadosSociais_ddlCorPele').val("2").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:09.203" endtime="20220930 04:13:09.216"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:09.202" endtime="20220930 04:13:09.216"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:09.196" endtime="20220930 04:13:09.217"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo CEP, inserir o CEP &quot;07123140&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo CEP, inserir o CEP &quot;${CEP}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${campoCEP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220930 04:13:09.218" endtime="20220930 04:13:09.324"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoCEP}</arg>
+<arg>${CEP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:13:09.327" level="INFO">Typing text '07123140' into text field 'txtCep'.</msg>
+<status status="PASS" starttime="20220930 04:13:09.326" endtime="20220930 04:13:09.471"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:09.217" endtime="20220930 04:13:09.471"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Número, inserir o número &quot;34&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Número, inserir o número &quot;${numeroCEP}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoNumeroCEP}</arg>
+<arg>${numeroCEP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:13:09.474" level="INFO">Typing text '34' into text field 'cphContent_ucEnderecos_txtNumero'.</msg>
+<status status="PASS" starttime="20220930 04:13:09.473" endtime="20220930 04:13:09.654"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220930 04:13:11.669" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220930 04:13:09.654" endtime="20220930 04:13:11.669"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:11.671" endtime="20220930 04:13:11.695"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:11.670" endtime="20220930 04:13:11.695"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoNumeroCEP}</arg>
+<arg>${numeroCEP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 04:13:11.696" level="INFO">Typing text '34' into text field 'cphContent_ucEnderecos_txtNumero'.</msg>
+<status status="PASS" starttime="20220930 04:13:11.696" endtime="20220930 04:13:11.813"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:09.472" endtime="20220930 04:13:11.813"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, no campo Zona, selecionar &quot;URBANO&quot;" library="Pessoa" sourcename="Em Cadastro de Pessoa, no campo Zona, selecionar &quot;${zona}&quot;">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${zona}' == 'URBANO'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoZona}').val("1").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$('#${campoZona}').val("1").trigger('chosen:updated');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:11.817" level="INFO">Executing JavaScript:
+$('#cphContent_ucEnderecos_ddlZona').val("1").trigger('chosen:updated');
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:11.816" endtime="20220930 04:13:11.837"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:11.815" endtime="20220930 04:13:11.837"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${zona}' == 'RURAL'</arg>
+<arg>Execute JavaScript</arg>
+<arg>$('#${campoZona}').val("2").trigger('chosen:updated');</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220930 04:13:11.838" endtime="20220930 04:13:11.839"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:11.815" endtime="20220930 04:13:11.839"/>
+</kw>
+<kw name="Clicar no botão Incluir" library="Pessoa">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${botaoIncluir}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:11.845" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_ucEnderecos_btnIncluirResidencial").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:11.843" endtime="20220930 04:13:11.869"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:11.870" endtime="20220930 04:13:13.764"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:11.869" endtime="20220930 04:13:13.765"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:11.841" endtime="20220930 04:13:13.765"/>
+</kw>
+<kw name="Em Cadastro de Pessoa, clicar no botão Salvar" library="Pessoa">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>cphContent_btnCadastrarPessoa</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220930 04:13:13.768" endtime="20220930 04:13:13.801"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_btnCadastrarPessoa").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:13.803" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_btnCadastrarPessoa").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:13.801" endtime="20220930 04:13:13.823"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:13.826" endtime="20220930 04:13:19.611"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:13.824" endtime="20220930 04:13:19.611"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:13.766" endtime="20220930 04:13:19.612"/>
+</kw>
+<kw name="Clicar em OK no Modal" library="1-Principal">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${botaoOKModal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220930 04:13:19.614" endtime="20220930 04:13:19.648"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${botaoOKModal}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:19.650" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:19.649" endtime="20220930 04:13:19.766"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:19.767" endtime="20220930 04:13:25.902"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:19.766" endtime="20220930 04:13:25.902"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:19.614" endtime="20220930 04:13:25.904"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir" library="Gestão de Pré-Matrícula">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Resultado da Busca</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220930 04:13:25.908" endtime="20220930 04:13:25.946"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:25.948" level="INFO">Executing JavaScript:
+xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:25.947" endtime="20220930 04:13:25.958"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>xPathResult.singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:25.960" level="INFO">Executing JavaScript:
+xPathResult.singleNodeValue.click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:25.959" endtime="20220930 04:13:25.980"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_dtlConsulta_lnkAprovar_0").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:25.983" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_dtlConsulta_lnkAprovar_0").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:25.981" endtime="20220930 04:13:26.007"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:26.009" endtime="20220930 04:13:27.883"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:26.008" endtime="20220930 04:13:27.884"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:25.905" endtime="20220930 04:13:27.885"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, selecionar uma turma com vagas" library="Gestão de Pré-Matrícula">
+<for flavor="IN RANGE">
+<var>${index}</var>
+<value>0</value>
+<value>20</value>
+<iter>
+<var name="${index}">0</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${busca}</var>
+<arg>cphContent_dtlClasseTurma_lblVagasDisponiveisTd_${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220930 04:13:27.890" level="INFO">${busca} = cphContent_dtlClasseTurma_lblVagasDisponiveisTd_0</msg>
+<status status="PASS" starttime="20220930 04:13:27.888" endtime="20220930 04:13:27.891"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${resultado}</var>
+<arg>Element Should Not Contain</arg>
+<arg>${busca}</arg>
+<arg>0</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${busca}</arg>
+<arg>0</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20220930 04:13:27.944" level="INFO">Element 'cphContent_dtlClasseTurma_lblVagasDisponiveisTd_0' does not contain text '0'.</msg>
+<status status="PASS" starttime="20220930 04:13:27.893" endtime="20220930 04:13:27.944"/>
+</kw>
+<msg timestamp="20220930 04:13:27.944" level="INFO">${resultado} = True</msg>
+<status status="PASS" starttime="20220930 04:13:27.892" endtime="20220930 04:13:27.944"/>
+</kw>
+<if>
+<branch type="IF" condition="${resultado}">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_dtlClasseTurma_lbtSelecionar_${index}").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:27.947" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_dtlClasseTurma_lbtSelecionar_0").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:27.946" endtime="20220930 04:13:27.966"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:27.968" endtime="20220930 04:13:28.741"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:27.967" endtime="20220930 04:13:28.741"/>
+</kw>
+<if>
+<branch type="IF" condition="${resultado}">
+<break>
+<status status="PASS" starttime="20220930 04:13:28.742" endtime="20220930 04:13:28.742"/>
+</break>
+<status status="PASS" starttime="20220930 04:13:28.742" endtime="20220930 04:13:28.742"/>
+</branch>
+<status status="PASS" starttime="20220930 04:13:28.741" endtime="20220930 04:13:28.742"/>
+</if>
+<status status="PASS" starttime="20220930 04:13:27.945" endtime="20220930 04:13:28.742"/>
+</branch>
+<status status="PASS" starttime="20220930 04:13:27.945" endtime="20220930 04:13:28.743"/>
+</if>
+<status status="PASS" starttime="20220930 04:13:27.887" endtime="20220930 04:13:28.743"/>
+</iter>
+<status status="PASS" starttime="20220930 04:13:27.887" endtime="20220930 04:13:28.743"/>
+</for>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:28.744" endtime="20220930 04:13:28.771"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:28.743" endtime="20220930 04:13:28.771"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:27.886" endtime="20220930 04:13:28.772"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, clicar em Matricular Educando" library="Gestão de Pré-Matrícula">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_btnMatricular").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:28.776" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_btnMatricular").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:28.776" endtime="20220930 04:13:28.796"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:28.798" endtime="20220930 04:13:34.146"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:28.797" endtime="20220930 04:13:34.147"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:28.774" endtime="20220930 04:13:34.147"/>
+</kw>
+<kw name="Em Gestão de Pré-Matrícula, clicar em OK no modal" library="Gestão de Pré-Matrícula">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("cphContent_MensagemPadrao_btnOk").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220930 04:13:34.150" level="INFO">Executing JavaScript:
+document.getElementById("cphContent_MensagemPadrao_btnOk").click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20220930 04:13:34.149" endtime="20220930 04:13:34.168"/>
+</kw>
+<kw name="Aguardar tela de carregamento" library="1-Principal">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>class=carregando</arg>
+<arg>300</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220930 04:13:34.170" endtime="20220930 04:13:34.601"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:34.169" endtime="20220930 04:13:34.602"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:34.148" endtime="20220930 04:13:34.602"/>
+</kw>
+<kw name="Fechar o navegador" library="1-Principal" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220930 04:13:34.975" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220930 04:13:34.607" endtime="20220930 04:13:34.975"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220930 04:13:34.976" endtime="20220930 04:13:37.251"/>
+</kw>
+<status status="PASS" starttime="20220930 04:13:34.604" endtime="20220930 04:13:37.251"/>
+</kw>
+<doc>Esse teste efetua a solicitação e consulta de matrícula
+no Portal, para todas as etapas/modalidades.</doc>
+<tag>Portal &gt; Gier - Fundamental Inicial | Fluxo Positivo</tag>
+<status status="PASS" starttime="20220930 04:11:51.348" endtime="20220930 04:13:37.252"/>
+</test>
+<status status="PASS" starttime="20220930 04:11:50.346" endtime="20220930 04:13:37.254"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Portal &gt; Gier - Fundamental Inicial | Fluxo Positivo</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TesteDeVersaoPositivo">TesteDeVersaoPositivo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

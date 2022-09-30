@@ -23,7 +23,7 @@ Entrar no Portal
 No Portal, clicar em "${etapa}"
     Run Keyword If   '${etapa}' == 'Educação Infantil'    Click Element    //div[@class='botao botao-ciano'][contains(.,'Educação Infantil')]
     Run Keyword If   '${etapa}' == 'Ensino Fundamental'    Click Element    //div[@class='botao botao-azul'][contains(.,'Ensino Fundamental')]
-    Run Keyword If   '${etapa}' == 'Consultar Solicitação'    Click Element    //div[@class='botao-branco'][contains(.,'Consultar Solicitação')]
+    Run Keyword If   '${etapa}' == 'Educação de Jovens e Adultos'    Click Element    //div[@class='botao botao-azul'][contains(.,'Educação de Jovens e Adultos')]
     Aguardar carregamento Portal
 
 No Portal, selecionar o processo para a etapa "${etapa}"
@@ -81,6 +81,11 @@ No Portal, em Escolha da Escola, em Data de Nascimento, inserir "${data}"
     Wait Until Element Is Visible    busca-nascimento
     Input Text    busca-nascimento    ${data}
 
+No Portal, em Escolha da Escola, em Data de Nascimento, inserir a data de nascimento cadastrada
+    Sleep    1
+    Wait Until Element Is Visible    busca-nascimento
+    Input Text    busca-nascimento    ${dataNascimento}
+
 No Portal, em Escolha da Escola, em CEP, inserir "${cep}"
     Input Text    busca-cep    ${cep}
 
@@ -99,12 +104,18 @@ No Portal, selecionar a escola "${escola}"
     Set Suite Variable    ${escola}
     Sleep    1
     Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Wait Until Element Is Visible    ${campoEPGVolpi}
-    Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Click Element    ${campoEPGVolpi}
+    Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Execute Javascript    document.getElementById("${campoEPGVolpi}").click();
     Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Wait Until Element Is Visible    ${campoEPGCrispiniano}
-    Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Click Element    ${campoEPGCrispiniano}
+    Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Execute Javascript    document.getElementById("${campoEPGCrispiniano}").click();
     Run Keyword If    "${escola}" == "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"    Wait Until Element Is Visible    ${campoEPGAntonioAparecido}
-    Run Keyword If    "${escola}" == "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"    Click Element    ${campoEPGAntonioAparecido}
-    
+    Run Keyword If    "${escola}" == "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"    Execute Javascript    document.getElementById("${campoEPGAntonioAparecido}").click();    
+    Aguardar carregamento Portal
+
+No Portal, em Ano/Ciclo selecionar "${anoCiclo}"
+    Sleep    1
+    Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Select From List By Label    ddlEW_575    ${anoCiclo}
+    Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Select From List By Label    ddlEW_607    ${anoCiclo}
+
 No Portal, clicar em Selecionar Escolas
     Wait Until Element Is Enabled    selecionar-escolas-pesquisadas
     Execute JavaScript  document.getElementById("selecionar-escolas-pesquisadas").click();
@@ -121,6 +132,18 @@ No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "${nacional
     Wait Until Element Is Visible    ddlRNacionalidade
     Select From List By Label    ddlRNacionalidade    ${nacionalidade}
     Sleep    1
+
+No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "${pais}"
+    Wait Until Element Is Visible    ddlRPaisNascimento
+    Select From List By Label    ddlRPaisNascimento    ${pais}
+    Sleep    1
+
+No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
+    ${numeroRNE}    Random Number   6    True
+    Set Suite Variable    ${RNEResponsavel}    V${numeroRNE}-S
+    Input Text    txtRRNE    ${RNEResponsavel}
+    Press Keys    txtRRNE    TAB
+    Aguardar carregamento Portal
 
 No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "${ufNascimento}"
     Wait Until Element Is Visible    ddlRUfNascimento
@@ -157,6 +180,22 @@ No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "${grauParentesc
 No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "${nacionalidade}"
     Select From List By Label    ddlNacionalidade    ${nacionalidade}
     Sleep    1
+
+No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "${paisNascimento}"
+    Select From List By Label    ddlPaisNascimento    ${paisNascimento}
+    Sleep    1
+
+No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+    ${numeroRNE}    Random Number   6
+    Set Suite Variable    ${RNEAluno}    V${numeroRNE}-S
+    Input Text    txtRNE    ${RNEAluno}
+    Press Keys    txtRNE    TAB
+    Aguardar carregamento Portal
+
+No Portal, em Cadastro do Aluno, em RNE, inserir O RNE cadastrado
+    Input Text    txtRNE    ${RNEAluno}
+    Press Keys    txtRNE    TAB
+    Aguardar carregamento Portal    
 
 No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "${UF}"   
     Wait Until Element Is Visible    ddlUfNascimento
@@ -222,7 +261,7 @@ No Portal, em Cadastro do Aluno, em Comarca, inserir "${comarca}"
 
 No Portal, em Contato, em Telefone 1, inserir um telefone válido
     Sleep    1
-    ${telefoneAleatorio}    Random Number   8
+    ${telefoneAleatorio}    Random Number   8    True
     Sleep    1
     Set Suite Variable    ${telefone1Aleatorio}    119${telefoneAleatorio}
     Input Text    txtTelefone1    ${telefone1Aleatorio}

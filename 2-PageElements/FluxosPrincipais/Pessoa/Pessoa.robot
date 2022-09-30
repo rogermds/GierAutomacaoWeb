@@ -29,7 +29,7 @@ ${botaoVisualizarPessoa}          cphContent_dtlConsultaPessoa_lkbVisualizar_0
 
 *** Keywords ***
 Em Cadastro de Pessoa, no campo Nome, inserir o nome "${nomePessoa}"
-    ${codPessoaRandom}   Random Number   6
+    ${codPessoaRandom}   Random Number   6    True
     Input Text    ${campoNomeCadastroPessoa}    ${nomePessoa}${codPessoaRandom}
 
 Em Cadastro de Pessoa, no campo Sexo, selecionar "${sexo}"
@@ -37,8 +37,9 @@ Em Cadastro de Pessoa, no campo Sexo, selecionar "${sexo}"
     Run Keyword If    '${sexo}' == 'MASCULINO'  Execute JavaScript   $('#${campoSexoPessoa}').val("2").trigger('chosen:updated');
     Run Keyword If    '${sexo}' == 'NÃO INFORMADO'  Execute JavaScript   $('#${campoSexoPessoa}').val("3").trigger('chosen:updated');
     
-Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "${data}"
-    Input Text   ${campoDataNascimento}    ${data}
+Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "${dataNascimento}"
+    Set Suite Variable    ${dataNascimento}
+    Input Text   ${campoDataNascimento}    ${dataNascimento}
 
 Clicar no checkbox Pessoa não possui correio eletrônico
     Execute JavaScript  document.getElementById("${naoPossuiEmail}").click();
@@ -50,6 +51,16 @@ Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "${nacionalidade}"
     Run Keyword If    '${nacionalidade}' == 'ESTRANGEIRO'  Execute JavaScript   $('#${campoNacionalidadePessoa}').val("3").trigger('chosen:updated');
     Execute JavaScript   $('#${campoNacionalidadePessoa}').trigger('change');
     Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, no campo País Origem, selecionar "${paisOrigem}"
+    Execute JavaScript   $("#cphContent_ucDadosPessoais_ddlPaisOrigem").val($('option:contains("${paisOrigem}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ucDadosPessoais_ddlPaisOrigem').trigger('change');
+
+Em Cadastro de Pessoa, no campo RNE, inserir um RNE válido
+    ${numeroRNE}    Random Number   6    True
+    Set Suite Variable    ${RNE}    V${numeroRNE}-S
+    Set Suite Variable    ${RNEAluno}    ${RNE}
+    Input Text    cphContent_ucDocumentos_txtRg    ${RNE}
 
 Em Cadastro de Pessoa, no campo UF Nascimento, selecionar "${UF}"
     Run Keyword If    '${UF}' == 'PE'  Execute JavaScript   $('#${campoUFNascimento}').val("1").trigger('chosen:updated');
@@ -127,11 +138,11 @@ Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido
     Input Text  ${campoCPF}  ${CPFPessoa}
 
 Em Cadastro de Pessoa, no campo Carteira de Identidade ou R.N.E., inserir um RG válido
-    ${RG}   Random Number   10
+    ${RG}   Random Number   10    True
     Input Text  ${campoRG}  ${RG}
 
 Em Cadastro de Pessoa, no campo Dígito, inserir o dígito do RG
-    ${digitoRG}   Random Number   1
+    ${digitoRG}   Random Number    1
     Input Text    ${campoRGDigito}    ${digitoRG}    
 
 Em Cadastro de Pessoa, no campo Órgão Emissor, selecionar "${orgaoEmissor}"
@@ -165,7 +176,6 @@ Em Cadastro de Pessoa, no campo Zona, selecionar "${zona}"
 Clicar no botão Incluir
     Execute JavaScript  document.getElementById("${botaoIncluir}").click();
     Aguardar tela de carregamento
-    Set Suite Variable  ${botaoSalvar}  cphContent_btnCadastrarPessoa
 
 No modal Deseja Cadastrar Outra Pessoa?, clicar em "${cadastroSimNao}"
     Run Keyword If    '${cadastroSimNao}' == 'Sim'  Execute JavaScript  document.getElementById("${botaoCadastroPessoaSim}").click();
@@ -178,6 +188,11 @@ Verificar se o sistema retorna a página Consultar Pessoa
 Em Cadastro de Pessoa, em Tipo de Pesquisa, selecionar "CPF"
     Execute JavaScript   $(cphContent_ddlTipoPesquisa').val("2").trigger('chosen:updated');
     Execute JavaScript   $('cphContent_ddlTipoPesquisa').trigger('change');
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, clicar no botão Salvar
+    Wait Until Element Is Visible    cphContent_btnCadastrarPessoa
+    Execute JavaScript  document.getElementById("cphContent_btnCadastrarPessoa").click();
     Aguardar tela de carregamento
 
 Em Consulta de Pessoa, em Tipo de Pesquisa, inserir o CPF cadastrado

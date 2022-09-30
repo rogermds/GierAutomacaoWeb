@@ -75,7 +75,7 @@ Cenário 03: Funcionalidade Pessoa – Escola
     Em Cadastro de Pessoa, no campo Número, inserir o número "13"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
     Clicar no botão Incluir
-    Clicar em Salvar
+    Em Cadastro de Pessoa, clicar no botão Salvar
     No modal Deseja Cadastrar Outra Pessoa?, clicar em "Não"
     Verificar se o sistema retorna a página Consultar Pessoa
     Em Consulta de Pessoa, em Tipo de Pesquisa, selecionar CPF
@@ -85,7 +85,7 @@ Cenário 03: Funcionalidade Pessoa – Escola
     Clicar no botão "Editar"
     Em Editar Pessoa, no campo Nome, inserir o nome "TESTE CADASTRO AUTOMACAO EDITADO"
     Em Editar Pessoa, no campo Data de Nascimento, inserir a data "01/01/2000"
-    Clicar em Salvar
+    Em Cadastro de Pessoa, clicar no botão Salvar
     Clicar em OK no Modal
     Verificar se o sistema retorna a página Consultar Pessoa
     Em Consulta de Pessoa, em Tipo de Pesquisa, selecionar CPF
@@ -135,7 +135,7 @@ Cenário 04: Funcionalidade Pessoa – Secretaria
     Em Cadastro de Pessoa, no campo Número, inserir o número "13"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
     Clicar no botão Incluir
-    Clicar em Salvar
+    Em Cadastro de Pessoa, clicar no botão Salvar
     No modal Deseja Cadastrar Outra Pessoa?, clicar em "Não"
     Verificar se o sistema retorna a página Consultar Pessoa
     Em Consulta de Pessoa, em Tipo de Pesquisa, selecionar CPF
@@ -145,7 +145,7 @@ Cenário 04: Funcionalidade Pessoa – Secretaria
     Clicar no botão "Editar"
     Em Editar Pessoa, no campo Nome, inserir o nome "TESTE CADASTRO AUTOMACAO EDITADO"
     Em Editar Pessoa, no campo Data de Nascimento, inserir a data "01/01/2000"
-    Clicar em Salvar
+    Em Cadastro de Pessoa, clicar no botão Salvar
     Clicar em OK no Modal
     Verificar se o sistema retorna a página Consultar Pessoa
     Em Consulta de Pessoa, em Tipo de Pesquisa, selecionar CPF
@@ -689,13 +689,13 @@ Cenário 14: Funcionalidade Ata de Conselho - Infantil
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
     Na tela de Ata de Conselho, em Registro das Observações, inserir a observação "TESTE DE INSERÇÃO DE OBSERVAÇÃO"
-    Clicar em Salvar
+    Na tela de Ata de Conselho, clicar em Salvar
     Clicar em OK no modal
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
     Na tela de Ata de Conselho, em Registro de Observações, verificar se a observação foi incluída
     Na tela de Ata de Conselho, em Registro das Observações, inserir a observação "TESTE DE EDIÇÃO DE OBSERVAÇÃO"
-    Clicar em Salvar
+    Na tela de Ata de Conselho, clicar em Salvar
     Clicar em OK no modal
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
@@ -735,13 +735,13 @@ Cenário 15: Funcionalidade Ata de Conselho - Fundamental
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
     Na tela de Ata de Conselho, em Registro das Observações, inserir a observação "TESTE DE INSERÇÃO DE OBSERVAÇÃO"
-    Clicar em Salvar
+    Na tela de Ata de Conselho, clicar em Salvar
     Clicar em OK no modal
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
     Na tela de Ata de Conselho, em Registro de Observações, verificar se a observação foi incluída
     Na tela de Ata de Conselho, em Registro das Observações, inserir a observação "TESTE DE EDIÇÃO DE OBSERVAÇÃO"
-    Clicar em Salvar
+    Na tela de Ata de Conselho, clicar em Salvar
     Clicar em OK no modal
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
@@ -781,13 +781,13 @@ Cenário 16: Funcionalidade Ata de Conselho - EJA
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
     Na tela de Ata de Conselho, em Registro das Observações, inserir a observação "TESTE DE INSERÇÃO DE OBSERVAÇÃO"
-    Clicar em Salvar
+    Na tela de Ata de Conselho, clicar em Salvar
     Clicar em OK no modal
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
     Na tela de Ata de Conselho, em Registro de Observações, verificar se a observação foi incluída
     Na tela de Ata de Conselho, em Registro das Observações, inserir a observação "TESTE DE EDIÇÃO DE OBSERVAÇÃO"
-    Clicar em Salvar
+    Na tela de Ata de Conselho, clicar em Salvar
     Clicar em OK no modal
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Registrar Observações no primeiro aluno
@@ -2604,35 +2604,26 @@ Cenário 50: Funcionalidade Portal - Gier - Fundamental Inicial
     No Portal, clicar em "Ensino Fundamental"
     No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
     No Portal, clicar em Selecionar Escolas
     No Portal, clicar em Próximo
-    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
-    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
-    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
-    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
-    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
-    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
-    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
-    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
-    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
-    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
-    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações
     No Portal, clicar em Concluir Inscrição
@@ -2654,7 +2645,7 @@ Cenário 50: Funcionalidade Portal - Gier - Fundamental Inicial
     Em Cadastro de Pessoa, no campo Número, inserir o número "34"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
     Clicar no botão Incluir
-    Clicar em Salvar
+    Em Cadastro de Pessoa, clicar no botão Salvar    
     Clicar em OK no Modal
     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
     Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
@@ -2663,104 +2654,76 @@ Cenário 50: Funcionalidade Portal - Gier - Fundamental Inicial
     Em Cadastro de Pessoa, no campo Número, inserir o número "34"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
     Clicar no botão Incluir
-    Clicar em Salvar
+    Em Cadastro de Pessoa, clicar no botão Salvar
     Clicar em OK no Modal
     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
     Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
     Em Gestão de Pré-Matrícula, clicar em Matricular Educando
     Em Gestão de Pré-Matrícula, clicar em OK no modal
 
-
-
-
-
-
-
-
-#### ESTOU AQUI EM CIMA
-
-Cenário 48: Funcionalidade Gier Portal - Infantil Inicial  ##CENARIO PARA CONTÍNUO
+Cenário 51: Funcionalidade Gier - Portal - Fundamental Inicial  ##COM INCIDENTE
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
-    [Tags]             Portal - Infantil Inicial | Fluxo Positivo
-    Entrar no Portal
-    No Portal, clicar em "Educação Infantil"
-    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
-    No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
-    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
-    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
-    No Portal, clicar em Pesquisar Escolas
-    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
-    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
-    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
-    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
-    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
-    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
-    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
-    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
-    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
-    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
-    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
-    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
-    No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    No Portal, clicar nos campos de declarações
-    No Portal, clicar em Concluir Inscrição
-    No Portal, verificar se o comprovante é exibido em tela
-    No Portal, gravar o número de protocolo gerado
+    [Tags]             Gier > Portal - Fundamental Inicial | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
-    Entrar no módulo "Gestão Escolar"
-    Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
-    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
-    Em Gestão de Pré-Matrícula, clicar em Pesquisar
-    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Matricular Educando"
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
+    Em Matricular Educando, clicar em Sim no Modal
+    Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
+    Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
+    Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/2013"
+    Clicar no checkbox Pessoa não possui correio eletrônico
+    Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "ESTRANGEIRO"
+    Em Cadastro de Pessoa, no campo País Origem, selecionar "PORTUGAL"
+    Em Cadastro de Pessoa, no campo RNE, inserir um RNE válido
     Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
-    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
-    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome "JOSIAS ADALBERTO"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar
+    Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
+    Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
+    Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir "07/03/1996"
+    Em Cadastro Rapido de Pessoa, em Sexo, selecionar "Feminino"
+    Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido
+    Em Cadastro Rapido de Pessoa, clicar em Salvar
+    Em Cadastro Rapido de Pessoa, clicar em OK no Modal
+    Em Cadastro de Pessoa, em Grau de Parentesco, selecionar "Mãe"
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "33"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
     Clicar no botão Incluir
-    Clicar em Salvar
+    Em Cadastro de Pessoa, clicar no botão Salvar       
     Clicar em OK no Modal
-    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
-    Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
-    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
-    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
-    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
-    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
-    Clicar no botão Incluir
-    Clicar em Salvar
-    Clicar em OK no Modal
-    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
-    Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
-    Em Gestão de Pré-Matrícula, clicar em Matricular Educando
-    Em Gestão de Pré-Matrícula, clicar em OK no modal
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
+    Em Matricular Educando, em País de Origem, selecionar "Brasil"
+    Em Matricular Educando, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Matricular Educando, em Curso, selecionar "Ciclo II"
+    Em Matricular Educando, em Periodo, selecionar "TARDE"
+    Em Matricular Educando, em Ciclo, selecionar "4º Ano"
+    Em Matricular Educando, selecionar uma turma com vagas
+    Em Matricular Educando, clicar em Matricular Educando
+    Em Matricular Educando, clicar em Sim no Modal de Matrícula
+    Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
     Entrar no Portal
-    No Portal, clicar em "Educação Infantil"
-    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
     No Portal, clicar em Selecionar Escolas
     No Portal, clicar em Próximo
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
@@ -2771,62 +2734,224 @@ Cenário 48: Funcionalidade Gier Portal - Infantil Inicial  ##CENARIO PARA CONT�
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
-    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Aluno, em RNE, inserir O RNE cadastrado
     No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
-    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
-    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
-    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
-    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
-    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
-    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
-    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
-    No Portal, em Contato, em Telefone 1, inserir o telefone cadastrado
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
+
+Cenário 52: Funcionalidade Portal - Gier - EJA Inicial
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Portal > Gier - Fundamental Inicial | Fluxo Positivo
+    Entrar no Portal
+    No Portal, clicar em "Educação de Jovens e Adultos"
+    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, em Ano/Ciclo selecionar "Ciclo II"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Em Cadastro de Pessoa, clicar no botão Salvar    
+    Clicar em OK no Modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
+    Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
+    Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+    Em Gestão de Pré-Matrícula, clicar em OK no modal
+
+
+
+
+
+
+#### ESTOU AQUI EM CIMA
+
+# Cenário 48: Funcionalidade Gier Portal - Infantil Inicial  ##CENARIO PARA CONTÍNUO
+#     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+#     ...                no Portal, para todas as etapas/modalidades.                
+#     [Tags]             Portal - Infantil Inicial | Fluxo Positivo
+#     Entrar no Portal
+#     No Portal, clicar em "Educação Infantil"
+#     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+#     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+#     No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+#     No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+#     No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+#     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+#     No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+#     No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+#     No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+#     No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+#     No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+#     No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+#     No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+#     No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
+#     No Portal, gravar o número de protocolo gerado
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Entrar no eixo "Operação"
+#     Entrar no módulo "Gestão Escolar"
+#     Entrar na funcionalidade "Gestão de Pré-matrícula"
+#     Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+#     Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+#     Em Gestão de Pré-Matrícula, clicar em Pesquisar
+#     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+#     Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+#     Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+#     Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+#     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+#     Clicar no botão Incluir
+#     Clicar em Salvar
+#     Clicar em OK no Modal
+#     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
+#     Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
+#     Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+#     Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123140"
+#     Em Cadastro de Pessoa, no campo Número, inserir o número "34"
+#     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+#     Clicar no botão Incluir
+#     Clicar em Salvar
+#     Clicar em OK no Modal
+#     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
+#     Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
+#     Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+#     Em Gestão de Pré-Matrícula, clicar em OK no modal
+#     Entrar no Portal
+#     No Portal, clicar em "Educação Infantil"
+#     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+#     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+#     No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+#     No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+#     No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+#     No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+#     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+#     No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+#     No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+#     No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+#     No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+#     No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+#     No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+#     No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+#     No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+#     No Portal, em Contato, em Telefone 1, inserir o telefone cadastrado
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
    
 
-Cenário 35: Funcionalidade Gestão de Pré-Matrícula
-    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
-    ...                dentro do GIER, para todas as etapas/modalidades.                
-    [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no eixo "Operação"
-    Entrar no módulo "Gestão de Educandos"
-    Entrar na funcionalidade "Gestão de Pré-Matrícula"
+# Cenário 35: Funcionalidade Gestão de Pré-Matrícula
+#     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
+#     ...                dentro do GIER, para todas as etapas/modalidades.                
+#     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Entrar no eixo "Operação"
+#     Entrar no módulo "Gestão de Educandos"
+#     Entrar na funcionalidade "Gestão de Pré-Matrícula"
 
-Cenário 36: Funcionalidade Parâmetros do Processo de Transporte
-    [Documentation]    Esse teste efetua o cadastro, configuração e edição
-    ...                dos Parâmetros do Processo de Transporte                 
-    [Tags]             Parâmetros do Processo de Transporte | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Parâmetros do Processo de Transporte"
+# Cenário 36: Funcionalidade Parâmetros do Processo de Transporte
+#     [Documentation]    Esse teste efetua o cadastro, configuração e edição
+#     ...                dos Parâmetros do Processo de Transporte                 
+#     [Tags]             Parâmetros do Processo de Transporte | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Entrar no eixo "Configuração"
+#     Entrar no módulo "Transportes"
+#     Entrar na funcionalidade "Parâmetros do Processo de Transporte"
 
-Cenário 37: Funcionalidade Credenciamento de Condutores
-    [Documentation]    Esse teste efetua o cadastro e edição do Credenciamento de Condutores                               
-    [Tags]             Credenciamento de Condutores | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Credenciamento de Condutores"
-    Em Credenciamento de Condutores, clicar em Cadastrar Condutores
+# Cenário 37: Funcionalidade Credenciamento de Condutores
+#     [Documentation]    Esse teste efetua o cadastro e edição do Credenciamento de Condutores                               
+#     [Tags]             Credenciamento de Condutores | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no eixo "Configuração"
+#     Entrar no módulo "Transportes"
+#     Entrar na funcionalidade "Credenciamento de Condutores"
+#     Em Credenciamento de Condutores, clicar em Cadastrar Condutores
 
 Cenário 38: Funcionalidade Tipos de Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
@@ -2899,65 +3024,65 @@ Cenário 38: Funcionalidade Rotas
     Em Rotas, verificar se a rota foi cadastrada
 
     
-Cenário 39: Funcionalidade Viagens
-    [Documentation]    Esse teste verifica se é possível cadastrar, editar
-    ...                editar e excluir uma Viagem                
-    [Tags]             Viagens | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Viagens"
+# Cenário 39: Funcionalidade Viagens
+#     [Documentation]    Esse teste verifica se é possível cadastrar, editar
+#     ...                editar e excluir uma Viagem                
+#     [Tags]             Viagens | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Transportes"
+#     Entrar na funcionalidade "Viagens"
 
-Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
-    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
-    ...                pela Escola, para um educando da Etapa Infantil        
-    [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Solicitação de Transporte"
+# Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
+#     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+#     ...                pela Escola, para um educando da Etapa Infantil        
+#     [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Transportes"
+#     Entrar na funcionalidade "Solicitação de Transporte"
 
-Cenário 41: Funcionalidade Solicitação de Transporte - Fundamental
-    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
-    ...                pela Escola, para um educando da Etapa Fundamental        
-    [Tags]             Solicitação de Transporte - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Solicitação de Transporte"
+# Cenário 41: Funcionalidade Solicitação de Transporte - Fundamental
+#     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+#     ...                pela Escola, para um educando da Etapa Fundamental        
+#     [Tags]             Solicitação de Transporte - Fundamental | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Transportes"
+#     Entrar na funcionalidade "Solicitação de Transporte"
 
-Cenário 42: Funcionalidade Gestão de Solicitação de Transporte - Infantil
-    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
-    ...                pela Secretaria, para um educando da Etapa Infantil        
-    [Tags]             Gestão de Solicitação de Transporte - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Gestão de Solicitação de Transporte"
+# Cenário 42: Funcionalidade Gestão de Solicitação de Transporte - Infantil
+#     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+#     ...                pela Secretaria, para um educando da Etapa Infantil        
+#     [Tags]             Gestão de Solicitação de Transporte - Infantil | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Transportes"
+#     Entrar na funcionalidade "Gestão de Solicitação de Transporte"
 
-Cenário 43: Funcionalidade Gestão de Solicitação de Transporte - Fundamental
-    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
-    ...                pela Secretaria, para um educando da Etapa Fundamental        
-    [Tags]             Gestão de Solicitação de Transporte - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Transportes"
-    Entrar na funcionalidade "Gestão de Solicitação de Transporte"
+# Cenário 43: Funcionalidade Gestão de Solicitação de Transporte - Fundamental
+#     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+#     ...                pela Secretaria, para um educando da Etapa Fundamental        
+#     [Tags]             Gestão de Solicitação de Transporte - Fundamental | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Transportes"
+#     Entrar na funcionalidade "Gestão de Solicitação de Transporte"
 
 Cenário 44: Funcionalidade Aprendizagem
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
@@ -3060,76 +3185,76 @@ Cenário 44: Funcionalidade Aprendizagem
     Em Consulta de Descrição de Aprendizagem, clicar em Pesquisar
     Em Consulta de Descrição de Aprendizagem, verificar se aparece o texto "NENHUM REGISTRO FOI ENCONTRADO"
 
-Cenário 45: Funcionalidade Grupos de Pergunta
-    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
-    [Tags]             Grupos de Pergunta | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Grupos de Pergunta"
+# Cenário 45: Funcionalidade Grupos de Pergunta
+#     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
+#     [Tags]             Grupos de Pergunta | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Entrar no módulo "Configuração"
+#     Entrar no módulo "Avaliações Educacionais"
+#     Entrar na funcionalidade "Grupos de Pergunta"
 
-Cenário 46: Funcionalidade Banco de Questões
-    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
-    [Tags]             Banco de Questões | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Banco de Questões"
+# Cenário 46: Funcionalidade Banco de Questões
+#     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
+#     [Tags]             Banco de Questões | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Entrar no módulo "Configuração"
+#     Entrar no módulo "Avaliações Educacionais"
+#     Entrar na funcionalidade "Banco de Questões"
 
-Cenário 47: Funcionalidade Configurar Avaliação
-    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
-    [Tags]             Configurar Avaliação | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Configuração"
-    Entrar no módulo "Avaliações Educacionais"
-    Entrar na funcionalidade "Configurar Avaliação"
+# Cenário 47: Funcionalidade Configurar Avaliação
+#     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
+#     [Tags]             Configurar Avaliação | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Entrar no módulo "Configuração"
+#     Entrar no módulo "Avaliações Educacionais"
+#     Entrar na funcionalidade "Configurar Avaliação"
 
-Cenário 48: Funcionalidade Agendamento Avaliação
-    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
-    [Tags]             Agendamento Avaliação | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Operação"
-    Entrar no módulo "Gestão de Avaliações"
-    Entrar na funcionalidade "Agendamento Avaliação"
+# Cenário 48: Funcionalidade Agendamento Avaliação
+#     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
+#     [Tags]             Agendamento Avaliação | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Entrar no módulo "Operação"
+#     Entrar no módulo "Gestão de Avaliações"
+#     Entrar na funcionalidade "Agendamento Avaliação"
 
-Cenário 49: Prova Online
-    [Documentation]    Esse teste efetua a prova online para um educando da Etapa - Fundamental     
-    [Tags]             Prova Online - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "4282670" e "4282670"
-    Clicar na Prova "Prova de Educação Qa"
+# Cenário 49: Prova Online
+#     [Documentation]    Esse teste efetua a prova online para um educando da Etapa - Fundamental     
+#     [Tags]             Prova Online - Fundamental | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "4282670" e "4282670"
+#     Clicar na Prova "Prova de Educação Qa"
 
-Cenário 50: Lançamento Individualizado
-    [Documentation]    Esse teste consulta e finaliza um Lançamento Individualizado     
-    [Tags]             Lançamento Individualizado | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Operação"
-    Entrar no módulo "Gestão de Avaliações"
-    Entrar na funcionalidade "Lançamento Individualizado"
+# Cenário 50: Lançamento Individualizado
+#     [Documentation]    Esse teste consulta e finaliza um Lançamento Individualizado     
+#     [Tags]             Lançamento Individualizado | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Entrar no módulo "Operação"
+#     Entrar no módulo "Gestão de Avaliações"
+#     Entrar na funcionalidade "Lançamento Individualizado"
 
-Cenário 51: Avaliações Educacionais Realizadas
-    [Documentation]    Esse teste efetua a consulta de uma Avaliação Educacional Realizada,
-    ...                validando os relatórios para uma escola
-    [Tags]             Avaliações Educacionais Realizadas | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no módulo "Operação"
-    Entrar no módulo "Gestão de Avaliações"
-    Entrar na funcionalidade "Avaliações Educacionais Realizadas"
+# Cenário 51: Avaliações Educacionais Realizadas
+#     [Documentation]    Esse teste efetua a consulta de uma Avaliação Educacional Realizada,
+#     ...                validando os relatórios para uma escola
+#     [Tags]             Avaliações Educacionais Realizadas | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Entrar no módulo "Operação"
+#     Entrar no módulo "Gestão de Avaliações"
+#     Entrar na funcionalidade "Avaliações Educacionais Realizadas"
