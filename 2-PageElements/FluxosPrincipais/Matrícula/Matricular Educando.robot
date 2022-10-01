@@ -15,6 +15,35 @@ ${campoEPGAntonioAparecido}                   chkEW_584
 ${campoNomeCadastroPessoa}                    cphContent_ucDadosPessoais_txtNomeCompleto
 
 *** Keywords ***
+Em Matricular Educando, em Nome, inserir o nome cadastrado
+    Wait Until Element Is Visible    cphContent_PessoaResponsavel_btnPesquisa
+    Input Text    cphContent_PessoaResponsavel_txtNome    ${nomeCompletoAluno}
+
+Em Matricular Educando, em Data de Nascimento, inserir a data cadastrada
+    Input Text    cphContent_PessoaResponsavel_txtDNasc    ${dataNascimento}
+
+Em Matricular Educando, clicar em Pesquisar
+    Execute JavaScript  document.getElementById("cphContent_PessoaResponsavel_btnPesquisa").click();
+    Aguardar tela de carregamento
+
+Em Matricular Educando, em Grau de Parentesco, selecionar "${grauParentesco}"
+    Wait Until Element Is Visible    cphContent_btnInserirParente
+    Execute JavaScript   $("#cphContent_ddlGrauParentesco").val($('option:contains("${grauParentesco}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlGrauParentesco').trigger('change');
+    Aguardar tela de carregamento
+
+Em Matricular Educando, em Grau de Parentesco, clicar em Responsável Legal
+    Execute JavaScript  document.getElementById("cphContent_chkResponsavelLegal").click();
+    Aguardar tela de carregamento
+
+Em Matricular Educando, em Grau de Parentesco, clicar em Responsável Principal 
+    Execute JavaScript  document.getElementById("cphContent_chkResponsavelPrincipal").click();
+    Aguardar tela de carregamento
+    
+Em Matricular Educando, em Grau de Parentesco, clicar em Inserir Responsável
+    Execute JavaScript  document.getElementById("cphContent_btnInserirParente").click();
+    Aguardar tela de carregamento
+
 Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "${ano}"
     ${anoSeguinte}    Evaluate    ${ano}+1
     Execute JavaScript   $('#cphContent_ddlAnoLetivo').val("${anoSeguinte}").trigger('chosen:updated');

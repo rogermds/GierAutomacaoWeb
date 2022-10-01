@@ -53,19 +53,52 @@ Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
     Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkAprovar_0").click();
     Aguardar tela de carregamento
 
+Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Indeferir
+    Wait Until Page Contains    Resultado da Busca
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkRecusar_0").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, em Justificativa de Indeferimento, selecionar "${justificativa}"
+    Wait Until Page Contains    Justificativa de Indeferimento
+    Execute JavaScript   $("#cphContent_Justificativa_ddlJustificativa").val($('option:contains("${justificativa}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_Justificativa_ddlJustificativa').trigger('change');
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, em Justificativa de Indeferimento, inserir "${justificativa}"
+    Input Text    txtObservacao    ${justificativa}
+
+Em Gestão de Pré-Matrícula, em Justificativa de Indeferimento, clicar em Salvar
+    Execute JavaScript  document.getElementById("cphContent_Justificativa_btnSalvar").click();
+    Aguardar tela de carregamento
+    
+Em Gestão de Pré-Matrícula, em Justificativa de Indeferimento, clicar em Sim
+    Execute JavaScript  document.getElementById("cphContent_Justificativa_Mensagem_Padrao_btnSim").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, verificar se o aluno foi indeferido
+    Wait Until Element Contains    cphContent_Justificativa_Mensagem_Padrao_Outer_lblMsg    INDEFERIMENTO REALIZADO COM SUCESSO
+
+Em Gestão de Pré-Matrícula, em Justificativa de Indeferimento, clicar em Ok
+    Execute JavaScript  document.getElementById("cphContent_Justificativa_Mensagem_Padrao_Outer_btnOk").click();
+    Aguardar tela de carregamento
+
+
 Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
     FOR     ${index}    IN RANGE    0    20
     ${busca}    Set Variable    cphContent_dtlClasseTurma_lblVagasDisponiveisTd_${index}
-    ${resultado}    Run Keyword And Return Status   Element Should Not Contain    ${busca}    0    
+    ${resultado}    Run Keyword And Return Status   Element Text Should Not Be    ${busca}    0    
         IF  ${resultado}
             Execute JavaScript  document.getElementById("cphContent_dtlClasseTurma_lbtSelecionar_${index}").click();
             Aguardar tela de carregamento
-            IF    ${resultado}    BREAK
+            Exit For Loop If    ${resultado}
         END
     END
     Aguardar tela de carregamento
         
 Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+    Wait Until Element Is Visible    cphContent_btnMatricular
     Execute JavaScript  document.getElementById("cphContent_btnMatricular").click();
     Aguardar tela de carregamento
 

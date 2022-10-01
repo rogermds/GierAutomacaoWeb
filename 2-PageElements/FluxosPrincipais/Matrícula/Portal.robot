@@ -13,7 +13,9 @@ ${campoEscolaEscolaMatricula}                 cphContent_ddlEscola
 ${campoEPGVolpi}                              chkEW_575
 ${campoEPGCrispiniano}                        chkEW_607
 ${campoEPGAntonioAparecido}                   chkEW_584
+${campoEPGAmadeuPereiraLima}                  chkEW_578
 ${campoNomeCadastroPessoa}                    cphContent_ucDadosPessoais_txtNomeCompleto
+
 
 *** Keywords ***
 Entrar no Portal 
@@ -75,6 +77,7 @@ No Portal, clicar em Iniciar inscrição
     Wait Until Element Is Visible    iniciar-inscricao
     Click Element    iniciar-inscricao
     Aguardar carregamento Portal
+    Aguardar carregamento Portal
 
 No Portal, em Escolha da Escola, em Data de Nascimento, inserir "${data}"
     Sleep    1
@@ -102,19 +105,26 @@ No Portal, clicar em Pesquisar Escolas
 
 No Portal, selecionar a escola "${escola}"
     Set Suite Variable    ${escola}
+    Wait Until Page Contains Element    tabela-escolas
     Sleep    1
-    Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Wait Until Element Is Visible    ${campoEPGVolpi}
     Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Execute Javascript    document.getElementById("${campoEPGVolpi}").click();
-    Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Wait Until Element Is Visible    ${campoEPGCrispiniano}
     Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Execute Javascript    document.getElementById("${campoEPGCrispiniano}").click();
-    Run Keyword If    "${escola}" == "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"    Wait Until Element Is Visible    ${campoEPGAntonioAparecido}
     Run Keyword If    "${escola}" == "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"    Execute Javascript    document.getElementById("${campoEPGAntonioAparecido}").click();    
+    Run Keyword If    "${escola}" == "EPG AMADEU PEREIRA LIMA"    Execute Javascript    document.getElementById("${campoEPGAmadeuPereiraLima}").click();    
     Aguardar carregamento Portal
+
+No Portal, clicar em Solicitar Vaga
+    Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Execute Javascript    document.getElementById("btnVW_575").click();
+    Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Execute Javascript    document.getElementById("btnVW_607").click();
+    Aguardar carregamento Portal
+
+    
 
 No Portal, em Ano/Ciclo selecionar "${anoCiclo}"
     Sleep    1
     Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Select From List By Label    ddlEW_575    ${anoCiclo}
     Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Select From List By Label    ddlEW_607    ${anoCiclo}
+    Run Keyword If    "${escola}" == "EPG AMADEU PEREIRA LIMA"    Select From List By Label    ddlEW_578    ${anoCiclo}
 
 No Portal, clicar em Selecionar Escolas
     Wait Until Element Is Enabled    selecionar-escolas-pesquisadas
@@ -151,6 +161,7 @@ No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "${ufNascim
     Aguardar carregamento Portal
 
 No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "${ufNascimento}"
+    Wait Until Element Is Visible    ddlRCidadeNascimento
     Select From List By Label    ddlRCidadeNascimento    ${ufNascimento}
     
 No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
@@ -163,13 +174,15 @@ No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
 No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     ${nomeCompletoResponsavel}    Name Female
     ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ç    c
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    í    i
     ${nomeCompletoResponsavel}    Fetch From Right    ${nomeCompletoResponsavel}    .
     ${nomeCompletoResponsavel}    Strip String	    ${nomeCompletoResponsavel}    both
     Set Suite Variable    ${nomeCompletoResponsavel}
     Input Text    txtRNomeCompleto    ${nomeCompletoResponsavel}
 
-No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "${dataNascimento}"
-    Input Text   txtRDataNascimento    ${dataNascimento}
+No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "${dataNascimentoResponsavel}"
+    Sleep    1
+    Input Text   txtRDataNascimento    ${dataNascimentoResponsavel}
 
 No Portal, em Cadastro do Responsável, em Sexo, inserir "${sexo}"
     Select From List By Label    ddlRSexo    ${sexo}
@@ -238,6 +251,7 @@ No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão v
     Aguardar carregamento Portal
 
 No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "${dataEmissaoCertidao}"
+    Sleep    1
     Input Text    txtDataEmissaoCertidao    ${dataEmissaoCertidao}
     
 No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "${ufCertidao}"
@@ -275,6 +289,11 @@ No Portal, clicar nos campos de declarações
     Sleep    1
     Aguardar carregamento Portal
 
+No Portal, no modal de alerta, clicar em Sim
+    Wait Until Element Is Visible    //button[@class='swal-button swal-button--Confirmar swal-button--confirm'][contains(.,'Sim')]
+    Click Element    //button[@class='swal-button swal-button--Confirmar swal-button--confirm'][contains(.,'Sim')]
+    Aguardar carregamento Portal
+
 No Portal, clicar em Concluir Inscrição
     Wait Until Element Is Enabled    concluir-passo2
     Click Element    concluir-passo2
@@ -286,7 +305,7 @@ No Portal, clicar em Concluir Inscrição
     Aguardar carregamento Portal
 
 No Portal, verificar se o comprovante é exibido em tela
-    Wait Until Page Contains    Comprovante de Inscrição
+    Wait Until Element Is Visible    comprovante-impressao    120
     Dormir
 
 No Portal, gravar o número de protocolo gerado
@@ -294,12 +313,23 @@ No Portal, gravar o número de protocolo gerado
     Set Suite Variable    ${protocoloComprovante}
 
 No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
-    Input Text    txtRCpf    ${cpfFakeResponsavel}
-    Press Keys    txtRCpf    TAB
+    ${validacao}    Run Keyword And Return Status    Variable Should Exist    ${cpfFakeResponsavel}
+    IF    ${validacao}
+        Input Text    txtRCpf    ${cpfFakeResponsavel}
+        Press Keys    txtRCpf    TAB
+    ELSE
+        Input Text    txtRCpf    ${cpfFakeAluno}
+        Press Keys    txtRCpf    TAB
+    END
     Aguardar carregamento Portal
 
 No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    ${validacao}    Run Keyword And Return Status    Variable Should Exist    ${nomeCompletoResponsavel}
+    IF    ${validacao}
         Input Text    txtRNomeCompleto    ${nomeCompletoResponsavel}
+    ELSE
+        Input Text    txtRNomeCompleto    ${nomeCompletoAluno}
+    END
 
 No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
     Input Text    txtCpf    ${cpfFakeAluno}
