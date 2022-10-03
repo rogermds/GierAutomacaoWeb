@@ -117,3 +117,23 @@ Em Rotas, clicar em Pesquisar
 
 Em Rotas, verificar se a rota foi cadastrada
     Wait Until Page Contains    ${nomeRota}
+
+Em Rotas, no Resultado da Busca, clicar em Ações e Editar
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkEditar_0").click();
+    Aguardar tela de carregamento
+
+Em Rotas, no Resultado da Busca, clicar em Ações e Excluir
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkExcluir_0").click();
+    Aguardar tela de carregamento
+
+Em Rotas, clicar em Sim no modal
+    Wait Until Element Is Visible    cphContent_MensagemPadrao_btnSim
+    Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnSim").click();
+    Aguardar tela de carregamento
+
+Em Rotas, verificar se a rota foi excluída
+    Wait Until Element Contains    cphContent_MensagemPadrao_lblMsg    NENHUM REGISTRO FOI ENCONTRADO

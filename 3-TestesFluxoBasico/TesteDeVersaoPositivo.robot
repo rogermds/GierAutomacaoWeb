@@ -4,21 +4,21 @@ Resource         ../2-PageElements/FluxosPrincipais/Login/Login.robot
 Resource         ../2-PageElements/FluxosPrincipais/Seleção de Estrutura/Seleção de Estrutura.robot
 Resource         ../2-PageElements/FluxosPrincipais/Pessoa/Pessoa.robot
 Resource         ../2-PageElements/FluxosPrincipais/Turma/Turma.robot
-Resource         ../2-PageElements/FluxosPrincipais/Avaliações e Frequência/Avaliacoes e Frequencia.robot
-Resource         ../2-PageElements/FluxosPrincipais/Controle Diário de Frequência/Controle Diário de Frequência.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliacoes e Frequencia/Avaliacoes e Frequencia.robot
+Resource         ../2-PageElements/FluxosPrincipais/Controle Diario de Frequencia/Controle Diário de Frequência.robot
 Resource         ../2-PageElements/FluxosPrincipais/Ata de Conselho/Ata de Conselho.robot
-Resource         ../2-PageElements/FluxosPrincipais/Histórico Escolar/Histórico Escolar.robot
+Resource         ../2-PageElements/FluxosPrincipais/Historico Escolar/Histórico Escolar.robot
 Resource         ../2-PageElements/FluxosPrincipais/Boletim Escolar/Boletim Escolar.robot
 Resource         ../2-PageElements/FluxosPrincipais/Prontuário da Turma/Prontuário da Turma.robot
 Resource         ../2-PageElements/FluxosPrincipais/Prontuário do Educando/Prontuário do Educando.robot
-Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Escola Autorizada A Receber Matrícula.robot
-Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Gestão de Pré-Matrícula.robot
-Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Justificativas da Pré-Matrícula.robot
-Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Layout do Portal.robot
-Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Matricular Educando.robot
-Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Portal.robot
-Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Processo de Demanda.robot
-Resource         ../2-PageElements/FluxosPrincipais/Matrícula/Programação de Processo.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matricula/Escola Autorizada A Receber Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matricula/Gestão de Pré-Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matricula/Justificativas da Pré-Matrícula.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matricula/Layout do Portal.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matricula/Matricular Educando.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matricula/Portal.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matricula/Processo de Demanda.robot
+Resource         ../2-PageElements/FluxosPrincipais/Matricula/Programação de Processo.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/Transportes.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Avaliações Educacionais.robot
 Test Setup       Abrir o navegador
@@ -2876,7 +2876,7 @@ Cenário 53: Funcionalidade Gier - Portal - EJA Inicial  ##COM INCIDENTE
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
 
-Cenário 54: Funcionalidade Gier Portal - Infantil Contínuo  ##CENARIO PARA CONTÍNUO
+Cenário 54: Funcionalidade Gier Portal - Infantil Contínuo
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
     [Tags]             Portal - Infantil Contínuo | Fluxo Positivo
@@ -3038,6 +3038,133 @@ Cenário 54: Funcionalidade Gier Portal - Infantil Contínuo  ##CENARIO PARA CON
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
 
+Cenário 55: Funcionalidade Gier Portal - Fundamental Contínuo
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Portal - Fundamental Contínuo | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Matricular Educando"
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
+    Em Matricular Educando, clicar em Sim no Modal
+    Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
+    Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
+    Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/2013"
+    Clicar no checkbox Pessoa não possui correio eletrônico
+    Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "ESTRANGEIRO"
+    Em Cadastro de Pessoa, no campo País Origem, selecionar "PORTUGAL"
+    Em Cadastro de Pessoa, no campo RNE, inserir um RNE válido
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome "JOSIAS ADALBERTO"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar
+    Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
+    Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
+    Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir "07/03/1996"
+    Em Cadastro Rapido de Pessoa, em Sexo, selecionar "Feminino"
+    Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido
+    Em Cadastro Rapido de Pessoa, clicar em Salvar
+    Em Cadastro Rapido de Pessoa, clicar em OK no Modal
+    Em Cadastro de Pessoa, em Grau de Parentesco, selecionar "Mãe"
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "33"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Em Cadastro de Pessoa, clicar no botão Salvar       
+    Clicar em OK no Modal
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
+    Em Matricular Educando, em País de Origem, selecionar "Brasil"
+    Em Matricular Educando, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Matricular Educando, em Curso, selecionar "Ciclo II"
+    Em Matricular Educando, em Periodo, selecionar "MANHÃ"
+    Em Matricular Educando, em Ciclo, selecionar "4º Ano"
+    Em Matricular Educando, selecionar uma turma com vagas
+    Em Matricular Educando, clicar em Matricular Educando
+    Em Matricular Educando, clicar em Sim no Modal de Matrícula
+    Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
+    Entrar no Portal
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Aluno, em RNE, inserir O RNE cadastrado
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Indeferir
+    Em Gestão de Pré-Matrícula, em Justificativa de Indeferimento, selecionar "Outros"
+    Em Gestão de Pré-Matrícula, em Justificativa de Indeferimento, inserir "TESTE JUSTIFICATIVA AUTOMACAO"
+    Em Gestão de Pré-Matrícula, em Justificativa de Indeferimento, clicar em Salvar
+    Em Gestão de Pré-Matrícula, em Justificativa de Indeferimento, clicar em Sim
+    Em Gestão de Pré-Matrícula, verificar se o aluno foi indeferido
+    Em Gestão de Pré-Matrícula, em Justificativa de Indeferimento, clicar em Ok
+    Entrar no Portal
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Aluno, em RNE, inserir O RNE cadastrado
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+
+
 # Cenário 35: Funcionalidade Gestão de Pré-Matrícula
 #     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
 #     ...                dentro do GIER, para todas as etapas/modalidades.                
@@ -3113,7 +3240,7 @@ Cenário 38: Funcionalidade Tipos de Rotas
     Em Tipos de Rotas, clicar em Pesquisar
     Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO"
 
-Cenário 38: Funcionalidade Rotas
+Cenário XX: Funcionalidade Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Rota                
     [Tags]             Rotas | Fluxo Positivo
@@ -3144,20 +3271,101 @@ Cenário 38: Funcionalidade Rotas
     Em Rotas, em Descrição, inserir "AUTOMACAO ROTA"
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi cadastrada
+    Em Rotas, no Resultado da Busca, clicar em Ações e Editar
+    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA EDITADO"
+    Em Cadastrar Rota, em Km, inserir "7"
+    Em Cadastrar Rota, clicar em Salvar
+    Em Cadastrar Rota, clicar em OK no Modal
+    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA EDITADO"
+    Em Rotas, clicar em Pesquisar
+    Em Rotas, verificar se a rota foi cadastrada
+    Em Rotas, no Resultado da Busca, clicar em Ações e Excluir
+    Em Rotas, clicar em Sim no modal
+    Em Cadastrar Rota, clicar em OK no Modal
+    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA EDITADO"
+    Em Rotas, clicar em Pesquisar
+    Em Rotas, verificar se a rota foi excluída
+    Em Rotas, clicar em Cadastrar
+    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA AUTOMACAO"
+    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA"
+    Em Cadastrar Rota, em Ponto Inicial, inserir "AUTOMACAO PONTO INICIAL"
+    Em Cadastrar Rota, em Ponto Final, inserir "AUTOMACAO PONTO FINAL"
+    Em Cadastrar Rota, em Km, inserir "10"
+    Em Cadastrar Rota, em Vincular Escolar a Rota, em Nome de Escola, inserir "VOLPI"
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Pesquisar
+    Em Cadastrar Rota, em Vincular Escolar a Rota, selecionar a escola pesquisada
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Inserir
+    Em Cadastrar Rota, em Vincular Escolar a Rota, em Nome de Escola, inserir "CRISPINIANO"
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Pesquisar
+    Em Cadastrar Rota, em Vincular Escolar a Rota, selecionar a escola pesquisada
+    Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Inserir
+    Em Cadastrar Rota, clicar em Salvar
+    Em Cadastrar Rota, clicar em OK no Modal
+    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA"
+    Em Rotas, clicar em Pesquisar
+    Em Rotas, verificar se a rota foi cadastrada
+
+Cenário XX: Funcionalidade Tipos de Frotas  ## FALTA FAZER AS KEYWORDS
+    [Documentation]    Esse teste verifica se é possível cadastrar, editar
+    ...                editar e excluir uma Viagem                
+    [Tags]             Viagens | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Configuração"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Tipos de Frotas"
+    Em Tipos de Frotas, clicar em Cadastrar
+    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO"
+    Em Tipos de Frotas, em Sigla, inserir "TFA"
+    Em Tipos de Frotas, clicar em Salvar
+    Em Tipos de Frotas, clicar em OK no modal
+    Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado
+    Em Tipos de Frotas, clicar em Pesquisar
+    Em Tipos de Frotas, verificar se o tipo de rota foi cadastrado
+    Em Tipos de Frotas, clicar em Ações e Editar
+    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO EDITADO"
+    Em Tipos de Frotas, clicar em Salvar
+    Em Tipos de Frotas, clicar em OK no modal
+    Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado
+    Em Tipos de Frotas, clicar em Pesquisar
+    Em Tipos de Frotas, verificar se o tipo de rota foi cadastrado
+    Em Tipos de Frotas, clicar em Ações e Excluir
+    Em Tipos de Frotas, clicar em Sim no modal
+    Em Tipos de Frotas, clicar em OK no modal
+    Em Tipos de Frotas, clicar em Cadastrar
+    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO"
+    Em Tipos de Frotas, em Sigla, inserir "TFA"
+    Em Tipos de Frotas, clicar em Salvar
+    Em Tipos de Frotas, clicar em OK no modal
+    Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado
     
 
+Cenário XX: Funcionalidade Viagens
+    [Documentation]    Esse teste verifica se é possível cadastrar, editar
+    ...                editar e excluir uma Viagem                
+    [Tags]             Viagens | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Viagens"
+    Em Viagens, clicar em Cadastrar
+    Em Cadastrar Viagens, em Nome, inserir "VIAGEM AUTOMACAO"
+    Em Cadastrar Viagens, em Rota, selecionar "AUTOMACAO ROTA"
+    Em Cadastrar Viagens, em Vigência Inicial, inserir "01/01/2022"
+    Em Cadastrar Viagens, em Vigência Final, inserir "31/12/2022"
+    Em Cadastrar Viagens, em Frota, selecionar "31/12/2022"
+
+
+
     
-# Cenário 39: Funcionalidade Viagens
-#     [Documentation]    Esse teste verifica se é possível cadastrar, editar
-#     ...                editar e excluir uma Viagem                
-#     [Tags]             Viagens | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Verificar se aparece o texto "Operação"
-#     Entrar no módulo "Transportes"
-#     Entrar na funcionalidade "Viagens"
+
+
+
 
 # Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
 #     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
