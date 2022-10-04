@@ -21,10 +21,9 @@ Resource         ../2-PageElements/FluxosAlternativos/Matricula/GestãoDePreMatr
 Resource         ../2-PageElements/FluxosAlternativos/Matricula/JustificativasPreMatricula.robot
 Resource         ../2-PageElements/FluxosAlternativos/Matricula/LayoutDoPortal.robot
 Resource         ../2-PageElements/FluxosAlternativos/Matricula/PortalConsulta.robot
-Resource         ../2-PageElements/FluxosAlternativos/Matricula/PortalInfantilCont.robot    
+Resource         ../2-PageElements/FluxosAlternativos/Matricula/Portal.robot    
 Resource         ../2-PageElements/FluxosAlternativos/Matricula/ProcessoDeDemanda.robot
 Resource         ../2-PageElements/FluxosAlternativos/Matricula/ProgramacaoDeProcesso.robot
-Resource         ../2-PageElements/FluxosAlternativos/Matricula/PortalInfantilInicial.robot
 Resource         ../2-PageElements/FluxosAlternativos/Matricula/PortalListaDeEspera.robot
 Resource         ../2-PageElements/FluxosAlternativos/Prontuario/ProntuarioEducando.robot
 Resource         ../2-PageElements/FluxosAlternativos/Prontuario/ProntuarioTurma.robot
@@ -57,7 +56,7 @@ Cenário 02 - Acesso ao Sistema – Tela de Login B
     Entrar com as credenciais "gieronline.com.br" e "123456789"		
     Verificar se o sistema exibe a mensagem: Login e/ou senha inválido(s)
 
-CTenário 03 - Acesso ao Sistema – Tela de Login C 	
+Cenário 03 - Acesso ao Sistema – Tela de Login C 	
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura	
     ...    Com o usuário e senha especificados	
     [Tags]    Seleção de Estrutura | Fluxo Negativo	
@@ -1348,54 +1347,147 @@ Cenário 44: Portal de Inscrição - Infantil Inicial
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Infantil
     [Tags]             Portal de Inscrição | Fluxo Negativo
-    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/index.html"    
-    # Clicar no botão para solicitação de pré-inscrição Infantil 
-    # Clicar no processo de demandas inicial 
-    # Viualizar as informações importantes 
-    # Clicar no botão Iniciar Inscrição para o Ensino Infantil 
-    # Clicar em Data de Nascimento e informar "00/00/0000"
-    # Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
-    # Clicar em Data de Nascimento e informar "24/04/1993"
-    # Clicar em Cep e informar 07032-000
-    # Clicar em Número da Residência e informar 134
-    # Clicar no botão Pesquisar Escolas 
-    # Visualizar a mensagem: NÃO EXISTEM ESCOLAS DISPONÍVEIS A PARTIR DOS DADOS INFORMADOS
-    # Clicar em Cep e informar 00000-002
-    # Visualizar a mensagem: NÃO FOI POSSÍVEL LOCALIZAR A COORDENADA PARA LISTAR ESCOLAS, FAVOR ENTRAR EM CONTATO COM ADMINISTRADOR DO SERVIÇO.
-    # Clicar em Data de Nascimento e informar "24/04/2021"
-    # Clicar em Cep e informar 07032-000
-    # Clicar em Número da Residência e informar 134
-    # Clicar no botão Pesquisar Escolas 
-    # Selecionar a escola na pesquisa realizada
-    # Clicar no botão Selecionar Escolas(s)
-    # Clicar no botão Próximo
-    # Preencher os checks dos termos de responsabilidade
-    # Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
-    # Clicar em CPF do responsável e informar "000.000.000-00"
-    # Visualizar a mensagem: O CPF INFORMADO É INVÁLIDO
-    # Clicar em Data de Nascimento do responsável e informar "00/00/0000"
-    # Visualizar a mensagem: CPF NÃO INFORMADO
-    # Clicar em CPF do responsável e informar "891.290.380-22"
-    # Clicar em Nome Completo do responsável e informar "Teste Nome Responavel"
-    # Clicar em Data de Nascimento do responsável e informar "00/00/0000"
-    # Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
-    # Clicar em Data de Nascimento do responsável e informar "10/01/1965"
-    # Visualizar a mensagem: NÃO É POSSÍVEL CONTINUAR COM A INSCRIÇÃO, DIRIJA -SE PESSOALMENTE À ESCOLA MAIS PRÓXIMA COM OS DOCUMENTOS
-    # Clicar em Nome Completo do responsável e informar "Teste Nome Responavel Automacao"
-    # Clicar em Data de Nascimento do responsável e informar "10/01/1965"
-    # Clicar em Sexo do responsavel e selecionar "Masculino"
-    # Preencher os checks dos termos de responsabilidade
-    # Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
-    # Clicar em Nacionalidade e selecionar "Brasileira"
-    # Clicar em Nome Completo do cadidato e informar "Teste Nome Candidato"
-    # Clicar em Sexo do candidato e selecionar "Feminino"
-    # Clicar em Certidão de Nascimento, selecionar "Nova" e informar "0"
-    # Visualizar a mensagem: NÚMERO DE CERTIDÃO DE NASCIMENTO INVÁLIDO. VERIFIQUE O NÚMERO CADASTRADO.
-    # Clicar em Certidão de Nascimento, selecionar "Nova" e informar "11246201552019194299537624703623"
-    # Clicar em Data de Emissão do candidato e informar "00/00/0000"
-    # Clicar em Telefone 1 e informar "11999999999"
-    # Preencher os checks dos termos de responsabilidade
-    # Visualizar a mensagem: DATA DE EMISSÃO DA CERTIDÃO É INVÁLIDA
+    Entrar no Portal 
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "Data de Nascimento inválida"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Escolha da Escola, em CEP, inserir "07032-000"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, visualizar a mensagem "Não existem escolas disponíveis a partir dos dados informados"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em CEP, inserir "00000-002"
+    No Portal, visualizar a mensagem "Não foi possível localizar a coordenada para listar escolas"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF inválido
+    No Portal, visualizar a mensagem "O CPF informado é inválido"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "CPF não informado"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "Data de Nascimento inválida"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "10/01/1965"
+    No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão inválida
+    No Portal, visualizar a mensagem "Número de Certidão de Nascimento Inválido"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "00/00/0000"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações 
+    No Portal, visualizar a mensagem "Data de Emissão da Certidão é inválida"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "24/04/1900"
+
+Cenário 45: Portal de Inscrição - Fundamental Inicial 
+    [Documentation]    Esse teste verifica se é possível realizar uma 
+    ...                solicitação para a etapa Fundamental
+    [Tags]             Portal de Inscrição | Fluxo Negativo
+    Entrar no Portal 
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "Data de Nascimento inválida"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Escolha da Escola, em CEP, inserir "07032-000"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, visualizar a mensagem "Não existem escolas disponíveis a partir dos dados informados"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em CEP, inserir "00000-002"
+    No Portal, visualizar a mensagem "Não foi possível localizar a coordenada para listar escolas"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF inválido
+    No Portal, visualizar a mensagem "O CPF informado é inválido"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "CPF não informado"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "Data de Nascimento inválida"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "10/01/1965"
+    No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão inválida
+    No Portal, visualizar a mensagem "Número de Certidão de Nascimento Inválido"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "00/00/0000"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações 
+    No Portal, visualizar a mensagem "Data de Emissão da Certidão é inválida"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "24/04/1900"
+
+
+
+    # No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    # No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    # No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    # No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    # No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    # No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    # No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    # No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    # No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    # No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    # No Portal, clicar nos campos de declarações 
+
+
     # Clicar em Data de Emissão do candidato e informar "24/04/2021"
     # Preencher os checks dos termos de responsabilidade
     # Visualizar a mensagem: DATA DE EMISSÃO DA CERTIDÃO DE NASCIMENTO NÃO PODE SER MENOR OU IGUAL QUE A DATA DE NASCIMENTO
