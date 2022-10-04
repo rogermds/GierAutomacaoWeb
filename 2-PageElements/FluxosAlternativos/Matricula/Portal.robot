@@ -2,7 +2,7 @@
 Resource    ../../../1-Hooks/1-Principal.robot
 Library     SeleniumLibrary
 Library     String
-Library    FakerLibrary     locale=pt_BR
+Library     FakerLibrary     locale=pt_BR
 Resource    ../../../1-Hooks/1-Principal.robot
 
 *** Variables ***
@@ -100,6 +100,7 @@ No Portal, clicar nos campos de declarações
     Aguardar carregamento Portal
 
 No Portal, em Cadastro do Responsável, em CPF, inserir um CPF inválido
+    Clear Element Text    txtRCpf
     Input Text    txtRCpf    000.000.000-00
     Press Keys    txtRCpf    TAB
     Aguardar carregamento Portal
@@ -107,7 +108,14 @@ No Portal, em Cadastro do Responsável, em CPF, inserir um CPF inválido
 No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
     ${cpfFakeResponsavel}    FakerLibrary.cpf
     Set Suite Variable    ${cpfFakeResponsavel}
+    Clear Element Text    txtRCpf
     Input Text    txtRCpf    ${cpfFakeResponsavel}
+    Press Keys    txtRCpf    TAB
+    Aguardar carregamento Portal
+
+No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "${CPF}"
+    Clear Element Text    txtRCpf
+    Input Text    txtRCpf    ${CPF}
     Press Keys    txtRCpf    TAB
     Aguardar carregamento Portal
 

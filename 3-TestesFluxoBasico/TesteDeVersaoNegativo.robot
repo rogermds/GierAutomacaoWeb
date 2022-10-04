@@ -1364,6 +1364,7 @@ Cenário 44: Portal de Inscrição - Infantil Inicial
     No Portal, visualizar a mensagem "Não foi possível localizar a coordenada para listar escolas"
     No Portal, fechar o modal
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
     No Portal, clicar em Selecionar Escolas
@@ -1377,14 +1378,16 @@ Cenário 44: Portal de Inscrição - Infantil Inicial
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "CPF não informado"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "401.360.618-69"
     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "Data de Nascimento inválida"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "10/01/1965"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
     No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
