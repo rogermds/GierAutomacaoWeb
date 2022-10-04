@@ -1387,11 +1387,11 @@ Cenário 44: Portal de Inscrição - Infantil Inicial
     No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
     No Portal, fechar o modal
     No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
     No Portal, clicar nos campos de declarações
     No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
