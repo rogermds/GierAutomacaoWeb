@@ -116,9 +116,8 @@ No Portal, selecionar a escola "${escola}"
 No Portal, clicar em Solicitar Vaga
     Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Execute Javascript    document.getElementById("btnVW_575").click();
     Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Execute Javascript    document.getElementById("btnVW_607").click();
+    Run Keyword If    "${escola}" == "EPG AMADEU PEREIRA LIMA"    Execute Javascript    document.getElementById("btnVW_578").click();
     Aguardar carregamento Portal
-
-    
 
 No Portal, em Ano/Ciclo selecionar "${anoCiclo}"
     Sleep    1
