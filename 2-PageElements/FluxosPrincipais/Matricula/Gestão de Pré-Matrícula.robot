@@ -5,7 +5,6 @@ Library    String
 Library    FakerLibrary     locale=pt_BR
 Resource    ../../../1-Hooks/1-Principal.robot
 Resource    ../Pessoa/Pessoa.robot
-Resource    ../Matricula/Portal.robot
 
 *** Variables ***
 ${campoTipoEstabelecimentoEscolaMatricula}    cphContent_ddlTipoEstabelecimento

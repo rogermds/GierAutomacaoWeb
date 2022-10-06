@@ -26,6 +26,7 @@ ${campoSexo}                    cphContent_ddlSexo
 ${campoIdentidade}              cphContent_txtIdentidade
 ${campoOrgaoEmissor}            cphContent_ddlOrgaoEmissor
 ${campoDataDeNascimento}        cphContent_txtDataNascimento
+&{body}     acao=gerador_certidao       pontuacao=N     tipo_certidao=nascimento
 
 *** Keywords ***
 Abrir o navegador
@@ -164,6 +165,6 @@ Aguardar carregamento Portal
     Wait Until Element Is Not Visible    wait    300
 
 Gerar Certidão de Nascimento Aleatório
-    Create Session    certidao    https://geradorbrasileiro.com/api
-    ${certidao}    GET On Session    certidao    url=https://geradorbrasileiro.com/api/faker/certidao?limit=1
-    Set Suite Variable    ${certidaoAleatoria}    ${certidao.json()["values"][0]}
+    Create Session    certidao    https://www.4devs.com.br/
+    ${certidao}    POST On Session    certidao    ferramentas_online.php     data=${body}
+    Set Suite Variable    ${certidaoAleatoria}    ${certidao.json()}

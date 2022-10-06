@@ -3,7 +3,6 @@ Resource    ../../../1-Hooks/1-Principal.robot
 Library     SeleniumLibrary
 Library     String
 Library     FakerLibrary     locale=pt_BR
-Resource    ../../../1-Hooks/1-Principal.robot
 
 *** Variables ***
 ${campoTipoEstabelecimentoEscolaMatricula}    cphContent_ddlTipoEstabelecimento
@@ -21,6 +20,7 @@ Entrar no Portal
     Aguardar carregamento Portal
 
 No Portal, clicar em "${etapa}"
+    Wait Until Element Is Visible    //div[@class='botao botao-ciano'][contains(.,'Educação Infantil')]
     Run Keyword If   '${etapa}' == 'Educação Infantil'    Click Element    //div[@class='botao botao-ciano'][contains(.,'Educação Infantil')]
     Run Keyword If   '${etapa}' == 'Ensino Fundamental'    Click Element    //div[@class='botao botao-azul'][contains(.,'Ensino Fundamental')]
     Run Keyword If   '${etapa}' == 'Educação de Jovens e Adultos'    Click Element    //div[@class='botao botao-azul'][contains(.,'Educação de Jovens e Adultos')]
@@ -45,12 +45,13 @@ No Portal, em Escolha da Escola, em Data de Nascimento, inserir "${data}"
     Aguardar carregamento Portal
 
 No Portal, visualizar a mensagem "${texto}"
+    Wait Until Element Is Visible    //a[contains(@rel,'modal:close')]
     Wait Until Page Contains    ${texto}
 
 No Portal, fechar o modal
-    Wait Until Element Is Visible    //a[contains(@rel,'modal:close')]
     Click Element    //a[contains(@rel,'modal:close')]
     Aguardar carregamento Portal
+    Sleep    1
 
 No Portal, em Escolha da Escola, em CEP, inserir "${cep}"
     Wait Until Element Is Visible    busca-cep
@@ -86,6 +87,9 @@ No Portal, clicar em Selecionar Escolas
     Sleep    1
     Aguardar carregamento Portal
 
+No Portal, verificar se o botão Selecionar Escolas está desativado
+    Element Attribute Value Should Be    selecionar-escolas-pesquisadas    disabled    true
+
 No Portal, clicar em Próximo
     Wait Until Element Is Visible    proximo-passo1
     Click Element    proximo-passo1
@@ -93,6 +97,7 @@ No Portal, clicar em Próximo
 
 No Portal, clicar nos campos de declarações
     Aguardar carregamento Portal
+    Wait Until Element Is Visible    chkResponsabilidade
     Sleep    1
     Click Element    chkResponsabilidade
     Click Element    chkLgpd
@@ -100,22 +105,29 @@ No Portal, clicar nos campos de declarações
     Aguardar carregamento Portal
 
 No Portal, em Cadastro do Responsável, em CPF, inserir um CPF inválido
+    Wait Until Element Is Visible    txtRCpf
     Clear Element Text    txtRCpf
-    Input Text    txtRCpf    000.000.000-00
+    Sleep    1
+    Input Text    txtRCpf    00000000000
     Press Keys    txtRCpf    TAB
     Aguardar carregamento Portal
 
 No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    Wait Until Element Is Visible    txtRCpf
     ${cpfFakeResponsavel}    FakerLibrary.cpf
     Set Suite Variable    ${cpfFakeResponsavel}
     Clear Element Text    txtRCpf
+    Sleep    1
     Input Text    txtRCpf    ${cpfFakeResponsavel}
     Press Keys    txtRCpf    TAB
     Aguardar carregamento Portal
 
 No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "${CPF}"
+    Wait Until Element Is Visible    txtRCpf
     Clear Element Text    txtRCpf
+    Sleep    1
     Input Text    txtRCpf    ${CPF}
+    Sleep    1
     Press Keys    txtRCpf    TAB
     Aguardar carregamento Portal
 
@@ -133,6 +145,9 @@ No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleat�
     ${nomeCompletoResponsavel}    Strip String	    ${nomeCompletoResponsavel}    both
     Set Suite Variable    ${nomeCompletoResponsavel}
     Input Text    txtRNomeCompleto    ${nomeCompletoResponsavel}
+
+No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "${nome}"
+    Input Text    txtRNomeCompleto    ${nome}
 
 No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "${nacionalidade}"
     Wait Until Page Contains    ${escola}
@@ -160,6 +175,9 @@ No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
     Set Suite Variable    ${nomeCompletoAluno}
     Input Text    txtNomeCompleto    ${nomeCompletoAluno}
 
+No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "${nome}"
+    Input Text    txtNomeCompleto    ${nome}
+
 No Portal, em Cadastro do Aluno, em Sexo, inserir "${sexo}"
     Select From List By Label    ddlSexo    ${sexo}
 
@@ -168,14 +186,14 @@ No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
     Click Element    rdNovaCertidao_Sim    
     Sleep    1
 
-No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
     Gerar Certidão de Nascimento Aleatório
     Input Text    txtMatriculaCertidao    ${certidaoAleatoria}
     Press Keys    txtMatriculaCertidao    TAB
     Sleep    1
     Aguardar carregamento Portal
 
-No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão inválida
+No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão inválida
     Input Text    txtMatriculaCertidao    0
     Press Keys    txtMatriculaCertidao    TAB
     Sleep    1
@@ -197,3 +215,47 @@ No Portal, em Contato, em Telefone 1, inserir um telefone válido
 No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "${nacionalidade}"
     Select From List By Label    ddlNacionalidade    ${nacionalidade}
     Sleep    1
+
+No Portal, clicar em Concluir Inscrição
+    Wait Until Element Is Enabled    concluir-passo2
+    Click Element    concluir-passo2
+    Sleep    1
+    Aguardar carregamento Portal
+    Sleep    1
+    Aguardar carregamento Portal
+    Sleep    1
+    Aguardar carregamento Portal
+
+No Portal, em Ano/Ciclo selecionar "${anoCiclo}"
+    Sleep    1
+    Run Keyword If    "${escola}" == "EPG ALFREDO VOLPI"    Select From List By Label    ddlEW_575    ${anoCiclo}
+    Run Keyword If    "${escola}" == "EPG CRISPINIANO SOARES"    Select From List By Label    ddlEW_607    ${anoCiclo}
+    Run Keyword If    "${escola}" == "EPG AMADEU PEREIRA LIMA"    Select From List By Label    ddlEW_578    ${anoCiclo}
+
+No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+    ${numeroRNE}    Random Number   6
+    Set Suite Variable    ${RNEAluno}    V${numeroRNE}-S
+    Input Text    txtRNE    ${RNEAluno}
+    Press Keys    txtRNE    TAB
+    Aguardar carregamento Portal
+
+No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "${grauParentesco}"
+    Select From List By Label    ddlGrauParentesco    ${grauParentesco}
+    Aguardar carregamento Portal
+
+No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Antiga
+    Sleep    1
+    Click Element    rdNovaCertidao_Nao    
+    Sleep    1
+
+No Portal, em Cadastro do Aluno, em Termo, inserir "${termo}"
+    Wait Until Element Is Visible    txtTermo
+    Input Text    txtTermo    ${termo}
+
+No Portal, em Cadastro do Aluno, em Livro, inserir "${livro}"
+    Wait Until Element Is Visible    txtLivro
+    Input Text    txtLivro    ${livro}
+
+No Portal, em Cadastro do Aluno, em Folha, inserir "${folha}"
+    Wait Until Element Is Visible    txtFolha
+    Input Text    txtFolha    ${folha}
