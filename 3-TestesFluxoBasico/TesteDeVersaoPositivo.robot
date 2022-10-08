@@ -2631,7 +2631,7 @@ Cenário 52: Funcionalidade Gier Portal - Infantil Contínuo
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
-    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
     No Portal, clicar em Solicitar Vaga
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"

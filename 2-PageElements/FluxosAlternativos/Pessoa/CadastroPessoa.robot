@@ -348,6 +348,7 @@ Em Cadastro de Pessoa, no campo Zona, selecionar "${zona}"
     Run Keyword If    '${zona}' == 'RURAL'   Execute JavaScript   $('#${campoZona}').val("2").trigger('chosen:updated');
 
 Clicar no botão Incluir
+    Wait Until Element Is Visible    ${botaoIncluir}
     Execute JavaScript  document.getElementById("${botaoIncluir}").click();
     Aguardar tela de carregamento
 
@@ -463,6 +464,8 @@ Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
     ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ç    c
     ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ê    e
     ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    í    i
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ô    o
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ã    a
     ${nomeCompletoAluno}    Fetch From Right    ${nomeCompletoAluno}    .
     ${nomeCompletoAluno}    Strip String	    ${nomeCompletoAluno}    both
     Set Suite Variable    ${nomeCompletoAluno}
@@ -542,4 +545,9 @@ Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
 
 Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
     Execute JavaScript  document.getElementById("cphContent_ucVinculos_btnInserirParente").click();
+    Aguardar tela de carregamento
+
+Em Cadastro de Pessoa, clicar em Salvar
+    Wait Until Element Is Visible    cphContent_btnCadastrarPessoa
+    Execute JavaScript  document.getElementById("cphContent_btnCadastrarPessoa").click(); 
     Aguardar tela de carregamento

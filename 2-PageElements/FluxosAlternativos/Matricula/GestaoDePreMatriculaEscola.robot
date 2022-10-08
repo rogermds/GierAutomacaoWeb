@@ -88,3 +88,45 @@ Fechar o modal de Histórico de Contato
 
 Visualizar a mensagem: INSIRA A JUSTIFICATIVA PARA PROSSEGUIR    
     Wait Until Page Contains Element    //div[@class='divConteudo'][contains(.,'Insira a justificativa para prosseguir')]
+
+Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Cancelar
+    Wait Until Page Contains    Resultado da Busca
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkCancelar_0").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Wait Until Element Is Visible    cphContent_btnPesquisa
+    ${status}    Run Keyword And Return Status    Variable Should Not Exist     ${nomeCompletoAluno}
+    IF    ${status}
+        Input Text    cphContent_txtAluno    ${nomeCompletoResponsavel}
+    ELSE    
+        Input Text    cphContent_txtAluno    ${nomeCompletoAluno}
+    END
+
+Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Input Text    cphContent_txtProtocolo    ${protocoloComprovante}
+
+Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Execute JavaScript  document.getElementById("cphContent_btnPesquisa").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, em Justificativa, selecionar "${justificativa}"
+    Wait Until Page Contains    Justificativa
+    Execute JavaScript   $("#cphContent_Justificativa_ddlJustificativa").val($('option:contains("${justificativa}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_Justificativa_ddlJustificativa').trigger('change');
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, em Justificativa, inserir "${justificativa}"
+    Input Text    txtObservacao    ${justificativa}
+
+Em Gestão de Pré-Matrícula, em Justificativa, clicar em Salvar
+    Wait Until Element Is Visible    cphContent_Justificativa_btnSalvar
+    Execute JavaScript  document.getElementById("cphContent_Justificativa_btnSalvar").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, em Justificativa, clicar em Ok
+    Wait Until Element Is Visible    cphContent_Justificativa_Mensagem_Padrao_Outer_btnOk
+    Execute JavaScript  document.getElementById("cphContent_Justificativa_Mensagem_Padrao_Outer_btnOk").click();
+    Aguardar tela de carregamento

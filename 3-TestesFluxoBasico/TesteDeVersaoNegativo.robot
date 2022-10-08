@@ -1308,7 +1308,6 @@ Cenário 42: Avaliação Educacional
     Visualizar a Questão 18 de 18
     Visualizar o texto: Perguntas não respondidas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
     
-
 Cenário 43: Avaliação Educacional 
     [Documentation]    Esse teste verifica se é possível realizar a prova
     ...                Educacional com o preenchimento parcial das perguntas
@@ -1344,7 +1343,170 @@ Cenário 43: Avaliação Educacional
     Visualizar o texto: Perguntas não respondidas: 2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18    
     Visualizar o botão Salvar desabilitado 
 
-Cenário 44: Portal de Inscrição - Infantil Inicial 
+Cenário 44: Processo de Demanda
+    [Documentation]    Esse teste efetua o fluxo negativo do Processo de Demanda
+    [Tags]             Processo de Demanda | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "PREENCHA OS CAMPOS DO CRITÉRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, na Descrição, inserir "TESTE NEGATIVO PROCESSO DEMANDA"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO DATA INICIAL DO AGRUPAMENTO É OBRIGATÓRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO DATA FIM DO AGRUPAMENTO É OBRIGATÓRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO 'VERIFICA AUTORIZAÇÃO DE MATRICULA' É OBRIGATÓRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO PERMITE 'MATRICULA MESMO MATRICULADO' É OBRIGATÓRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO PERMITE 'PERMITE INSCRIÇÃO NA MESMA ESCOLA?' É OBRIGATÓRIO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, visualizar o modal de alerta contendo "PREENCHA TODOS OS CAMPOS DO PROCESSO"
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo cadastrado
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, em Data Inicio, inserir "01/09/2022"
+    Em Programação de Processo, em Data Fim, inserir "30/09/2022"
+    Em Programação de Processo, em Hora Inicio, inserir "00:00"
+    Em Programação de Processo, em Hora Fim, inserir "23:59"
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, nos resultados, clicar em Ações e Excluir
+    Em Processo de Demanda, clicar em Sim no modal
+    Em Processo de Demanda, visualizar o modal de alerta contendo "EXCLUSÃO NÃO PERMITIDA, PROGRAMAÇÃO VINCULADA AO PROCESSO"
+    
+Cenário 45: Programação de Processo
+    [Documentation]    Esse teste efetua o fluxo negativo de Programação de Processo
+    [Tags]             Programação de Processo | Fluxo Negativo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Processo de Demandas"
+    Em Processo de Demanda, clicar em Cadastrar
+    Em Processo de Demanda, na Descrição, inserir "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
+    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
+    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
+    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
+    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
+    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
+    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
+    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
+    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
+    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
+    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
+    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
+    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
+    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
+    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
+    Em Processo de Demanda, clicar em Incluir
+    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
+    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
+    Em Processo de Demanda, clicar em Salvar
+    Em Processo de Demanda, clicar em OK no modal
+    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
+    Em Processo de Demanda, clicar em Pesquisar
+    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Gestão de Demandas"
+    Entrar na funcionalidade "Programação de Processo"
+    Em Programação de Processo, clicar em Cadastrar
+    Em Programação de Processo, em Ano Letivo, selecionar "2022"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "PREENCHA A DATA INÍCIO"
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
+    Em Programação de Processo, em Data Inicio, inserir "02/01/2022"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "PREENCHA A DATA FIM"
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Data Fim, inserir "01/01/2022"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "DATA INÍCIO NÃO PODE SER MAIOR QUE A DATA FIM"
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "SELECIONE OS DIAS DA SEMANA"
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "SELECIONE O AMBIENTE"
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, clicar em OK no modal
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO #PROCESSO_TESTE_QA#"
+    Em Programação de Processo, em Processo, selecionar o processo "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
+    Em Programação de Processo, clicar em Pesquisar
+    Em Programação de Processo, verificar se o processo aparece nos resultados
+    Em Programação de Processo, clicar em Ações e Editar
+    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
+    Em Programação de Processo, clicar em Inserir
+    Em Programação de Processo, visualizar o modal de alerta contendo "JÁ ESTÃO INSERIDOS!"
+    Em Programação de Processo, clicar em OK no modal
+
+Cenário 46: Portal de Inscrição - Infantil Inicial 
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Infantil
     [Tags]             Portal de Inscrição | Fluxo Negativo
@@ -1435,7 +1597,7 @@ Cenário 44: Portal de Inscrição - Infantil Inicial
     No Portal, visualizar a mensagem "A pessoa TESTE NEGATIVO INFANTIL INICIAL já está matriculado(a) na rede de ensino!"
     No Portal, fechar o modal
 
-Cenário 45: Portal de Inscrição - Fundamental Inicial 
+Cenário 47: Portal de Inscrição - Fundamental Inicial 
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Fundamental
     [Tags]             Portal de Inscrição | Fluxo Negativo
@@ -1515,11 +1677,11 @@ Cenário 45: Portal de Inscrição - Fundamental Inicial
     No Portal, visualizar a mensagem "A pessoa TESTE NEGATIVO FUDAMENTAL INICIAL já está matriculado(a) na rede de ensino!"
     No Portal, fechar o modal
  
-Cenário 45: Portal de Inscrição - EJA Inicial 
+Cenário 48: Portal de Inscrição - EJA Inicial 
     [Documentation]    Esse teste verifica se é possível realizar uma 
-    ...                solicitação para a etapa Fundamental
+    ...                solicitação para a etapa EJA
     [Tags]             Portal de Inscrição | Fluxo Negativo
-    Entrar no Portal 
+    Entrar no Portal
     No Portal, clicar em "Educação de Jovens e Adultos"
     No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
     No Portal, clicar em Iniciar inscrição
@@ -1575,19 +1737,42 @@ Cenário 45: Portal de Inscrição - EJA Inicial
     No Portal, clicar nos campos de declarações 
     No Portal, visualizar a mensagem "A pessoa CARLOS JOSE DA SILVA já está inscrito(a) na rede de ensino!"
     No Portal, fechar o modal
-
-
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "045.064.260-70"
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "TESTE NEGATIVO EJA II INICIAL"
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "34129850741"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "YASMIN MORAES"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07031996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Pai"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
-    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "A pessoa YASMIN MORAES já está inscrito(a) na rede de ensino!"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "19070384000"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "RICARDO SIMOES"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07031996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Pai"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "A pessoa RICARDO SIMOES já está inscrito(a) na rede de ensino!"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "32423662041"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "LEANDRO LEONARDO"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07031996"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Pai"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "A pessoa LEANDRO LEONARDOmai já está inscrito(a) na rede de ensino!"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "95631027895"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "TESTE NEGATIVO EJA II INICIAL"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07031996"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Pai"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
     No Portal, clicar nos campos de declarações
     No Portal, visualizar a mensagem "A pessoa TESTE NEGATIVO EJA II INICIAL já está matriculado(a) na rede de ensino!"
     No Portal, fechar o modal
 
-Cenário 46: Portal de Inscrição - Infantil Contínuo 
+Cenário 49: Portal de Inscrição - Infantil Contínuo 
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Infantil
     [Tags]             Portal de Inscrição | Fluxo Negativo
@@ -1611,8 +1796,7 @@ Cenário 46: Portal de Inscrição - Infantil Contínuo
     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
+    No Portal, clicar em Solicitar Vaga
     No Portal, clicar nos campos de declarações
     No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
     No Portal, fechar o modal
@@ -1622,7 +1806,7 @@ Cenário 46: Portal de Inscrição - Infantil Contínuo
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "CPF não informado"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "401.360.618-69"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "40136061869"
     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "Data de Nascimento inválida"
@@ -1630,7 +1814,7 @@ Cenário 46: Portal de Inscrição - Infantil Contínuo
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "234.981.750-41"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "23498175041"
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
@@ -1641,7 +1825,7 @@ Cenário 46: Portal de Inscrição - Infantil Contínuo
     No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
     No Portal, fechar o modal
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "MURILO LIMA"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "PEDRO HENRIQUE MARTINS"
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
     No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
     No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão inválida
@@ -1653,20 +1837,20 @@ Cenário 46: Portal de Inscrição - Infantil Contínuo
     No Portal, clicar nos campos de declarações 
     No Portal, visualizar a mensagem "Data de Emissão da Certidão é inválida"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "24/04/1990"
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "24041990"
     No Portal, clicar nos campos de declarações 
     No Portal, visualizar a mensagem "Data de Emissão da Certidão de Nascimento não pode ser menor que a Data de Nascimento"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "24/04/2021"
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "24042021"
     No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "A pessoa MURILO LIMA já está inscrito(a) na rede de ensino!"
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
     No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "TESTE NEGATIVO INFANTIL INICIAL"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "GUILHERME ARAUJO"
     No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "A pessoa TESTE NEGATIVO INFANTIL INICIAL já está matriculado(a) na rede de ensino!"
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
     No Portal, fechar o modal
 
-Cenário 47: Portal de Inscrição - Fundamental Contínuo 
+Cenário 50: Portal de Inscrição - Fundamental Contínuo 
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Fundamental
     [Tags]             Portal de Inscrição | Fluxo Negativo
@@ -1689,11 +1873,9 @@ Cenário 47: Portal de Inscrição - Fundamental Contínuo
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
     No Portal, clicar em Pesquisar Escolas
-    No Portal, verificar se o botão Selecionar Escolas está desativado
     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
     No Portal, em Ano/Ciclo selecionar "4º Ano"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
+    No Portal, clicar em Solicitar Vaga
     No Portal, clicar nos campos de declarações
     No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
     No Portal, fechar o modal
@@ -1722,331 +1904,266 @@ Cenário 47: Portal de Inscrição - Fundamental Contínuo
     No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
     No Portal, fechar o modal
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "ROBERTO SALES"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "CARRILHO ESCOBAR"
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
     No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    No Portal, clicar nos campos de declarações 
-    No Portal, visualizar a mensagem "A pessoa ROBERTO SALES já está inscrito(a) na rede de ensino!"
-    No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "TESTE NEGATIVO FUDAMENTAL INICIAL"
     No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "A pessoa TESTE NEGATIVO FUDAMENTAL INICIAL já está matriculado(a) na rede de ensino!"
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "DOURIVAL JUNIOR"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
     No Portal, fechar o modal
 
-Cenário 45: Portal de Inscrição - Infantil Contínuo 
+Cenário 51: Portal de Inscrição - EJA Contínuo 
     [Documentation]    Esse teste verifica se é possível realizar uma 
-    ...                solicitação para a etapa Infantil
+    ...                solicitação para a etapa EJA
     [Tags]             Portal de Inscrição | Fluxo Negativo
-    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/index.html"
-    # Clicar no botão para solicitação de pré-inscrição Infantil 
-    # Clicar no Processo de Demandas Contínuo         
-    # Viualizar as informações importantes 
-    # Clicar no botão Iniciar Inscrição para o Ensino Infantil 
-    # Clicar em Data de Nascimento e informar "00/00/0000"
-    # Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
-    # Clicar em Data de Nascimento e informar "24/04/1993"
-    # Clicar em Cep e informar 07032-000
-    # Clicar em Número da Residência e informar 134
-    # Clicar no botão Pesquisar Escolas 
-    # Visualizar a mensagem: NÃO EXISTEM ESCOLAS DISPONÍVEIS A PARTIR DOS DADOS INFORMADOS
-    # Clicar em Cep e informar 00000-002
-    # Visualizar a mensagem: NÃO FOI POSSÍVEL LOCALIZAR A COORDENADA PARA LISTAR ESCOLAS, FAVOR ENTRAR EM CONTATO COM ADMINISTRADOR DO SERVIÇO.
-    # Clicar em Data de Nascimento e informar "24/04/2021"
-    # Clicar em Cep e informar 07032-000
-    # Clicar em Número da Residência e informar 134
-    # Clicar no botão Pesquisar Escolas 
-    # Selecionar a escola na pesquisa realizada
-    # Clicar no botão Solicitar Vaga 
-    # Preencher os checks dos termos de responsabilidade
-    # Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
-    # Clicar em CPF do responsável e informar "000.000.000-00"
-    # Visualizar a mensagem: O CPF INFORMADO É INVÁLIDO
-    # Clicar em Data de Nascimento do responsável e informar "00/00/0000"
-    # Visualizar a mensagem: CPF NÃO INFORMADO
-    # Clicar em CPF do responsável e informar "891.290.380-22"
-    # Clicar em Nome Completo do responsável e informar "Teste Nome Responavel"
-    # Clicar em Data de Nascimento do responsável e informar "00/00/0000"
-    # Visualizar a mensagem: DATA DE NASCIMENTO INVÁLIDA
-    # Clicar em Data de Nascimento do responsável e informar "10/01/1965"
-    # Visualizar a mensagem: NÃO É POSSÍVEL CONTINUAR COM A INSCRIÇÃO, DIRIJA -SE PESSOALMENTE À ESCOLA MAIS PRÓXIMA COM OS DOCUMENTOS
-    # Clicar em Nome Completo do responsável e informar "Teste Nome Responavel Automacao"
-    # Clicar em Data de Nascimento do responsável e informar "10/01/1965"
-    # Clicar em Sexo do responsavel e selecionar "Masculino"
-    # Preencher os checks dos termos de responsabilidade
-    # Visualizar a mensagem: EXISTEM CAMPOS OBRIGATÓRIOS NÃO PREENCHIDOS
-    # Clicar em Nacionalidade e selecionar "Estrangeiro"
-    # Clicar em RNE e informar "123456789qa"
-    # Clicar em Data de Entrada do candidato e informar "00/00/0000"
-    # Clicar em Nome Completo do cadidato e informar "Teste Nome Candidato Estrangeiro"
-    # Clicar em Sexo do candidato e selecionar "Feminino"
-    # Clicar em Telefone 1 e informar "11999999999"
-    # Preencher os checks dos termos de responsabilidade
-    # Visualizar a mensagem: DATA DE ENTRADA (RNE) INVÁLIDA
-    # Clicar em Data de Entrada do candidato e informar "24/04/2021"
-    # Preencher os checks dos termos de responsabilidade
-    # Visualizar a mensagem: DATA DE ENTRADA (RNE) NÃO PODE SER MENOR OU IGUAL QUE A DATA DE NASCIMENTO
-    # Clicar em Data de Entrada do candidato e informar "25/04/2021"
-    # Visualizar a mensagem: VOCÊ NÃO PODE REALIZAR UMA NOVA INSCRIÇÃO, ALUNO JÁ POSSUI UMA INSCRIÇÃO ATIVA.
+    Entrar no Portal
+    No Portal, clicar em "Educação de Jovens e Adultos"
+    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "Data de Nascimento inválida"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em CEP, inserir "07032-000"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, visualizar a mensagem "Não existem escolas disponíveis a partir dos dados informados"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em CEP, inserir "00000-002"
+    No Portal, visualizar a mensagem "Não foi possível localizar a coordenada para listar escolas"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, verificar se o botão Selecionar Escolas está desativado
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, em Ano/Ciclo selecionar "Ciclo II"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF inválido
+    No Portal, visualizar a mensagem "O CPF informado é inválido"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "CPF não informado"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "401.360.618-69"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "Data de Nascimento inválida"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "90670308056"
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "EDUARDO SUPLICY"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Masculino"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações 
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "09432884015"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "HARLEY DAVID"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07031996"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Pai"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
 
-Cenário 46: Processo de Demanda
-    [Documentation]    Esse teste efetua o fluxo negativo do Processo de Demanda
-    [Tags]             Processo de Demanda | Fluxo Negativo
+Cenário 52: Funcionalidade Gier - Portal: Cancelado - Infantil Contínuo
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Gier > Portal - Infantil Contínuo | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Processo de Demandas"
-    Em Processo de Demanda, clicar em Cadastrar
-    Em Processo de Demanda, clicar em Incluir
-    Em Processo de Demanda, visualizar o modal de alerta contendo "PREENCHA OS CAMPOS DO CRITÉRIO"
-    Em Processo de Demanda, clicar em OK no modal
-    Em Processo de Demanda, na Descrição, inserir "TESTE NEGATIVO PROCESSO DEMANDA"
-    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
-    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
-    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
-    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
-    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
-    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
-    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
-    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
-    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
-    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
-    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
-    Em Processo de Demanda, clicar em Incluir
-    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO DATA INICIAL DO AGRUPAMENTO É OBRIGATÓRIO"
-    Em Processo de Demanda, clicar em OK no modal
-    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
-    Em Processo de Demanda, clicar em Incluir
-    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO DATA FIM DO AGRUPAMENTO É OBRIGATÓRIO"
-    Em Processo de Demanda, clicar em OK no modal
-    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
-    Em Processo de Demanda, clicar em Incluir
-    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO 'VERIFICA AUTORIZAÇÃO DE MATRICULA' É OBRIGATÓRIO"
-    Em Processo de Demanda, clicar em OK no modal
-    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
-    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
-    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
-    Em Processo de Demanda, clicar em Incluir
-    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO PERMITE 'MATRICULA MESMO MATRICULADO' É OBRIGATÓRIO"
-    Em Processo de Demanda, clicar em OK no modal
-    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
-    Em Processo de Demanda, clicar em Incluir
-    Em Processo de Demanda, visualizar o modal de alerta contendo "O CAMPO PERMITE 'PERMITE INSCRIÇÃO NA MESMA ESCOLA?' É OBRIGATÓRIO"
-    Em Processo de Demanda, clicar em OK no modal
-    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
-    Em Processo de Demanda, clicar em Incluir
-    Em Processo de Demanda, clicar em Salvar
-    Em Processo de Demanda, visualizar o modal de alerta contendo "PREENCHA TODOS OS CAMPOS DO PROCESSO"
-    Em Processo de Demanda, clicar em OK no modal
-    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
-    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
-    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
-    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
-    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
-    Em Processo de Demanda, clicar em Salvar
-    Em Processo de Demanda, clicar em OK no modal
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Programação de Processo"
-    Em Programação de Processo, clicar em Cadastrar
-    Em Programação de Processo, em Ano Letivo, selecionar "2022"
-    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
-    Em Programação de Processo, em Processo, selecionar o processo cadastrado
-    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
-    Em Programação de Processo, em Data Inicio, inserir "01/09/2022"
-    Em Programação de Processo, em Data Fim, inserir "30/09/2022"
-    Em Programação de Processo, em Hora Inicio, inserir "00:00"
-    Em Programação de Processo, em Hora Fim, inserir "23:59"
-    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
-    Em Programação de Processo, clicar em Inserir
-    Em Programação de Processo, clicar em OK no modal
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Processo de Demandas"
-    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
-    Em Processo de Demanda, clicar em Pesquisar
-    Em Processo de Demanda, nos resultados, clicar em Ações e Excluir
-    Em Processo de Demanda, clicar em Sim no modal
-    Em Processo de Demanda, visualizar o modal de alerta contendo "EXCLUSÃO NÃO PERMITIDA, PROGRAMAÇÃO VINCULADA AO PROCESSO"
-    
-Cenário 47: Programação de Processo
-    [Documentation]    Esse teste efetua o fluxo negativo de Programação de Processo
-    [Tags]             Programação de Processo | Fluxo Negativo
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Matricular Educando"
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
+    Em Matricular Educando, clicar em Sim no Modal
+    Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
+    Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
+    Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/2020"
+    Clicar no checkbox Pessoa não possui correio eletrônico
+    Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "BRASILEIRA"
+    Em Cadastro de Pessoa, no campo UF Nascimento, selecionar "SP"
+    Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar "GUARULHOS"
+    Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido
+    Em Cadastro de Pessoa, em Certidão de Nascimento, clicar em Nova Certidão de Nascimento
+    Em Cadastro de Pessoa, em Matrícula Certidão, inserir uma certidão válida
+    Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir "01/01/2022"
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome "JOSIAS ADALBERTO"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar
+    Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
+    Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
+    Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir "07/03/1996"
+    Em Cadastro Rapido de Pessoa, em Sexo, selecionar "Feminino"
+    Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido
+    Em Cadastro Rapido de Pessoa, clicar em Salvar
+    Em Cadastro Rapido de Pessoa, clicar em OK no Modal
+    Em Cadastro de Pessoa, em Grau de Parentesco, selecionar "Mãe"
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "33"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Em Cadastro de Pessoa, clicar em Salvar
+    Clicar em OK no Modal
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
+    Em Matricular Educando, em País de Origem, selecionar "Brasil"
+    Em Matricular Educando, em Etapa/Modalidade, selecionar "Educação Infantil"
+    Em Matricular Educando, em Curso, selecionar "Creche"
+    Em Matricular Educando, em Periodo, selecionar "MANHÃ"
+    Em Matricular Educando, em Ciclo, selecionar "Bercário II"
+    Em Matricular Educando, selecionar uma turma com vagas
+    Em Matricular Educando, clicar em Matricular Educando
+    Em Matricular Educando, clicar em Sim no Modal de Matrícula
+    Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2020"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, no modal de alerta, clicar em Sim
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Processo de Demandas"
-    Em Processo de Demanda, clicar em Cadastrar
-    Em Processo de Demanda, na Descrição, inserir "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
-    Em Processo de Demanda, em Resolução, inserir "RESOLUÇÃO TESTE"
-    Em Processo de Demanda, em Ano Letivo, selecionar "2022"
-    Em Processo de Demanda, em Reserva Técnica de Vagas, selecionar "NÃO"
-    Em Processo de Demanda, em Critérios de Classificação por Escola, selecionar "SIM"
-    Em Processo de Demanda, em Processamento Único da Classificação, selecionar "SIM"
-    Em Processo de Demanda, em Tipo de Demanda, selecionar "CADASTRO CONTÍNUO"
-    Em Processo de Demanda, Critérios, em Estabelecimento Destino, selecionar "ESCOLA"
-    Em Processo de Demanda, Critérios, em Esfera Destino, selecionar "MUNICIPAL"
-    Em Processo de Demanda, Critérios, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
-    Em Processo de Demanda, Critérios, em Ciclo de Destino, selecionar "TODOS"
-    Em Processo de Demanda, Critérios, em Lista de Espera, selecionar "NÃO PERMITE LISTA DE ESPERA"
-    Em Processo de Demanda, Critérios, em Data Inicial Agrupamento, inserir "01/01/1900"
-    Em Processo de Demanda, Critérios, em Data Final Agrupamento, inserir "31/12/2005"
-    Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
-    Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
-    Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
-    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
-    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
-    Em Processo de Demanda, clicar em Incluir
-    Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
-    Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
-    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite alterar escolas, selecionar "SIM"
-    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Inscrição Pré-Matrícula, selecionar "SIM"
-    Em Processo de Demanda, Gestão Pré-Matrícula, em Permite Quando For, selecionar ATENDIDO e INDEFERIDO
-    Em Processo de Demanda, clicar em Salvar
-    Em Processo de Demanda, clicar em OK no modal
-    Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
-    Em Processo de Demanda, clicar em Pesquisar
-    Em Processo de Demanda, verificar se o processo foi encontrado na pesquisa
-    Entrar no eixo "Configuração"
-    Entrar no módulo "Gestão de Demandas"
-    Entrar na funcionalidade "Programação de Processo"
-    Em Programação de Processo, clicar em Cadastrar
-    Em Programação de Processo, em Ano Letivo, selecionar "2022"
-    Em Programação de Processo, clicar em Inserir
-    Em Programação de Processo, visualizar o modal de alerta contendo "PREENCHA A DATA INÍCIO"
-    Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Tipo de Processo, selecionar "PREMATRICULA"
-    Em Programação de Processo, em Processo, selecionar o processo "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
-    Em Programação de Processo, em Data Inicio, inserir "02/01/2022"
-    Em Programação de Processo, clicar em Inserir
-    Em Programação de Processo, visualizar o modal de alerta contendo "PREENCHA A DATA FIM"
-    Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Data Fim, inserir "01/01/2022"
-    Em Programação de Processo, clicar em Inserir
-    Em Programação de Processo, visualizar o modal de alerta contendo "DATA INÍCIO NÃO PODE SER MAIOR QUE A DATA FIM"
-    Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Data Fim, inserir "31/12/2022"
-    Em Programação de Processo, clicar em Inserir
-    Em Programação de Processo, visualizar o modal de alerta contendo "SELECIONE OS DIAS DA SEMANA"
-    Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
-    Em Programação de Processo, clicar em Inserir
-    Em Programação de Processo, visualizar o modal de alerta contendo "SELECIONE O AMBIENTE"
-    Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
-    Em Programação de Processo, clicar em Inserir
-    Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO #PROCESSO_TESTE_QA#"
-    Em Programação de Processo, em Processo, selecionar o processo "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
-    Em Programação de Processo, clicar em Pesquisar
-    Em Programação de Processo, verificar se o processo aparece nos resultados
-    Em Programação de Processo, clicar em Ações e Editar
-    Em Programação de Processo, em Dias da Semana, selecionar "Todos"
-    Em Programação de Processo, clicar em Inserir
-    Em Programação de Processo, visualizar o modal de alerta contendo "JÁ ESTÃO INSERIDOS!"
-    Em Programação de Processo, clicar em OK no modal
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Cancelar
+    Em Gestão de Pré-Matrícula, em Justificativa, selecionar "OUTROS"
+    Em Gestão de Pré-Matrícula, em Justificativa, inserir "TESTE JUSTIFICATIVA AUTOMACAO"
+    Em Gestão de Pré-Matrícula, em Justificativa, clicar em Salvar
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2020"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2020"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG BRAGUINHA"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
 
-
-# Cenário 49: Funcionalidade Gier - Portal - Infantil Inicial  ##COM INCIDENTE
-#     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
-#     ...                no Portal, para todas as etapas/modalidades.                
-#     [Tags]             Gier > Portal - Infantil Inicial | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "VOLPI" e selecionar o primeiro resultado
-#     Entrar no eixo "Operação"
-#     Entrar no módulo "Educandos"
-#     Entrar na funcionalidade "Matricular Educando"
-#     Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
-#     Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
-#     Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
-#     Em Matricular Educando, clicar em Sim no Modal
-#     Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
-#     Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
-#     Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/2020"
-#     Clicar no checkbox Pessoa não possui correio eletrônico
-#     Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "BRASILEIRA"
-#     Em Cadastro de Pessoa, no campo UF Nascimento, selecionar "SP"
-#     Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar "GUARULHOS"
-#     Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido
-#     Em Cadastro de Pessoa, em Certidão de Nascimento, clicar em Nova Certidão de Nascimento
-#     Em Cadastro de Pessoa, em Matrícula Certidão, inserir uma certidão válida
-#     Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir "01/01/2022"
-#     Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
-#     Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome "JOSIAS ADALBERTO"
-#     Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar
-#     Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
-#     Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
-#     Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir "07/03/1996"
-#     Em Cadastro Rapido de Pessoa, em Sexo, selecionar "Feminino"
-#     Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido
-#     Em Cadastro Rapido de Pessoa, clicar em Salvar
-#     Em Cadastro Rapido de Pessoa, clicar em OK no Modal
-#     Em Cadastro de Pessoa, em Grau de Parentesco, selecionar "Mãe"
-#     Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal
-#     Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
-#     Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
-#     Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
-#     Em Cadastro de Pessoa, no campo Número, inserir o número "33"
-#     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
-#     Clicar no botão Incluir
-#     Clicar em Salvar
-#     Clicar em OK no Modal
-#     Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
-#     Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
-#     Em Matricular Educando, em País de Origem, selecionar "Brasil"
-#     Em Matricular Educando, em Etapa/Modalidade, selecionar "Educação Infantil"
-#     Em Matricular Educando, em Curso, selecionar "Creche"
-#     Em Matricular Educando, em Periodo, selecionar "MANHÃ"
-#     Em Matricular Educando, em Ciclo, selecionar "Bercário II"
-#     Em Matricular Educando, selecionar uma turma com vagas
-#     Em Matricular Educando, clicar em Matricular Educando
-#     Em Matricular Educando, clicar em Sim no Modal de Matrícula
-#     Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
-#     Entrar no Portal
-#     No Portal, clicar em "Educação Infantil"
-#     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
-#     No Portal, clicar em Iniciar inscrição
-#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2020"
-#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
-#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
-#     No Portal, clicar em Pesquisar Escolas
-#     No Portal, selecionar a escola "EPG ANTONIO APARECIDO MAGALHAES, VEREADOR"
-#     No Portal, clicar em Selecionar Escolas
-#     No Portal, clicar em Próximo
-#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
-#     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
-#     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
-#     No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
-#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
-#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
-#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
-#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
-#     No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
-#     No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
-#     No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
-#     No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
-#     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
-#     No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
-#     No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
-#     No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
-#     No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
-#     No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
-#     No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
-#     No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
-#     No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
-#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
-#     No Portal, clicar nos campos de declarações
-#     No Portal, clicar em Concluir Inscrição
-#     No Portal, verificar se o comprovante é exibido em tela
 
 # Cenário 51: Funcionalidade Gier - Portal - Fundamental Inicial  ##COM INCIDENTE
 #     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
@@ -2131,57 +2248,57 @@ Cenário 47: Programação de Processo
 #     No Portal, clicar em Concluir Inscrição
 #     No Portal, verificar se o comprovante é exibido em tela
 
-Cenário 53: Funcionalidade Gier - Portal - EJA Inicial  ##COM INCIDENTE
-    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
-    ...                no Portal, para todas as etapas/modalidades.                
-    [Tags]             Gier > Portal - EJA Inicial | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
-    Entrar no eixo "Operação"
-    Entrar no módulo "Educandos"
-    Entrar na funcionalidade "Matricular Educando"
-    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
-    Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
-    Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
-    Em Matricular Educando, clicar em Sim no Modal
-    Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
-    Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
-    Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/1996"
-    Clicar no checkbox Pessoa não possui correio eletrônico
-    Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "BRASILEIRA"
-    Em Cadastro de Pessoa, no campo UF Nascimento, selecionar "SP"
-    Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar "GUARULHOS"
-    Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido
-    Em Cadastro de Pessoa, em Certidão de Nascimento, clicar em Nova Certidão de Nascimento
-    Em Cadastro de Pessoa, em Matrícula Certidão, inserir uma certidão válida
-    Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir "01/01/2022"
-    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
-    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
-    Em Cadastro de Pessoa, no campo Número, inserir o número "33"
-    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
-    Clicar no botão Incluir
-    Em Cadastro de Pessoa, clicar no botão Salvar       
-    Clicar em OK no Modal
-    Em Matricular Educando, em Nome, inserir o nome cadastrado
-    Em Matricular Educando, em Data de Nascimento, inserir a data cadastrada
-    Em Matricular Educando, clicar em Pesquisar
-    Em Matricular Educando, em Grau de Parentesco, selecionar "O Próprio"
-    Em Matricular Educando, em Grau de Parentesco, clicar em Responsável Legal
-    Em Matricular Educando, em Grau de Parentesco, clicar em Responsável Principal
-    Em Matricular Educando, em Grau de Parentesco, clicar em Inserir Responsável
-    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
-    Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
-    Em Matricular Educando, em País de Origem, selecionar "Brasil"
-    Em Matricular Educando, em Etapa/Modalidade, selecionar "Educação de Jovens e Adultos 2º Semestre"
-    Em Matricular Educando, em Curso, selecionar "Ciclo II"
-    Em Matricular Educando, em Periodo, selecionar "NOITE"
-    Em Matricular Educando, em Ciclo, selecionar "Semestre 2"
-    Em Matricular Educando, selecionar uma turma com vagas
-    Em Matricular Educando, clicar em Matricular Educando
-    Em Matricular Educando, clicar em Sim no Modal de Matrícula
-    Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
+# Cenário 53: Funcionalidade Gier - Portal - EJA Inicial  ##COM INCIDENTE
+#     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+#     ...                no Portal, para todas as etapas/modalidades.                
+#     [Tags]             Gier > Portal - EJA Inicial | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+#     Entrar no eixo "Operação"
+#     Entrar no módulo "Educandos"
+#     Entrar na funcionalidade "Matricular Educando"
+#     Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+#     Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
+#     Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
+#     Em Matricular Educando, clicar em Sim no Modal
+#     Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
+#     Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
+#     Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/1996"
+#     Clicar no checkbox Pessoa não possui correio eletrônico
+#     Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "BRASILEIRA"
+#     Em Cadastro de Pessoa, no campo UF Nascimento, selecionar "SP"
+#     Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar "GUARULHOS"
+#     Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido
+#     Em Cadastro de Pessoa, em Certidão de Nascimento, clicar em Nova Certidão de Nascimento
+#     Em Cadastro de Pessoa, em Matrícula Certidão, inserir uma certidão válida
+#     Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir "01/01/2022"
+#     Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+#     Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
+#     Em Cadastro de Pessoa, no campo Número, inserir o número "33"
+#     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+#     Clicar no botão Incluir
+#     Em Cadastro de Pessoa, clicar no botão Salvar       
+#     Clicar em OK no Modal
+#     Em Matricular Educando, em Nome, inserir o nome cadastrado
+#     Em Matricular Educando, em Data de Nascimento, inserir a data cadastrada
+#     Em Matricular Educando, clicar em Pesquisar
+#     Em Matricular Educando, em Grau de Parentesco, selecionar "O Próprio"
+#     Em Matricular Educando, em Grau de Parentesco, clicar em Responsável Legal
+#     Em Matricular Educando, em Grau de Parentesco, clicar em Responsável Principal
+#     Em Matricular Educando, em Grau de Parentesco, clicar em Inserir Responsável
+#     Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+#     Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
+#     Em Matricular Educando, em País de Origem, selecionar "Brasil"
+#     Em Matricular Educando, em Etapa/Modalidade, selecionar "Educação de Jovens e Adultos 2º Semestre"
+#     Em Matricular Educando, em Curso, selecionar "Ciclo II"
+#     Em Matricular Educando, em Periodo, selecionar "NOITE"
+#     Em Matricular Educando, em Ciclo, selecionar "Semestre 2"
+#     Em Matricular Educando, selecionar uma turma com vagas
+#     Em Matricular Educando, clicar em Matricular Educando
+#     Em Matricular Educando, clicar em Sim no Modal de Matrícula
+#     Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
 #     Entrar no Portal
 #     No Portal, clicar em "Educação de Jovens e Adultos"
 #     No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"

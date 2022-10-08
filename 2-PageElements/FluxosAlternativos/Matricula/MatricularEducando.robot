@@ -45,6 +45,7 @@ Em Matricular Educando, em Grau de Parentesco, clicar em Inserir Responsável
     Aguardar tela de carregamento
 
 Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "${ano}"
+    Wait Until Page Contains    Matricular Educando
     ${anoSeguinte}    Evaluate    ${ano}+1
     Execute JavaScript   $('#cphContent_ddlAnoLetivo').val("${anoSeguinte}").trigger('chosen:updated');
     Execute JavaScript   $('#cphContent_ddlAnoLetivo').trigger('change');
@@ -76,8 +77,10 @@ Em Matricular Educando, em País de Origem, selecionar "${paisOrigem}"
     Execute JavaScript   $("#cphContent_ddlPaisOrigem").val($('option:contains("${paisOrigem}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#cphContent_ddlPaisOrigem').trigger('change');
     Aguardar tela de carregamento
+    Sleep    1
 
 Em Matricular Educando, em Etapa/Modalidade, selecionar "${etapaModalidade}"
+    Sleep    1
     Execute JavaScript   $("#cphContent_ddlTipoEnsino").val($('option:contains("${etapaModalidade}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#cphContent_ddlTipoEnsino').trigger('change');
     Aguardar tela de carregamento
