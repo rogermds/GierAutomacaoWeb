@@ -466,6 +466,7 @@ Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
     ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    í    i
     ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ô    o
     ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ã    a
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    á    a
     ${nomeCompletoAluno}    Fetch From Right    ${nomeCompletoAluno}    .
     ${nomeCompletoAluno}    Strip String	    ${nomeCompletoAluno}    both
     Set Suite Variable    ${nomeCompletoAluno}
@@ -503,6 +504,9 @@ Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
     ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ç    c
     ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ê    e
     ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    í    i
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ô    o
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ã    a
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    á    a
     ${nomeCompletoResponsavel}    Fetch From Right    ${nomeCompletoResponsavel}    .
     ${nomeCompletoResponsavel}    Strip String	    ${nomeCompletoResponsavel}    both
     Set Suite Variable    ${nomeCompletoResponsavel}

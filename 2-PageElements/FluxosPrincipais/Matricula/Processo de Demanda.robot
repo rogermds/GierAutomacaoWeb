@@ -163,6 +163,7 @@ Em Processo de Demanda, em Descrição, inserir o título do processo cadastrado
     Input Text    cphContent_txtDescricao    ${descricaoProcesso}
 
 Em Processo de Demanda, clicar em Pesquisar
+    Wait Until Element Is Visible    cphContent_btnPesquisa
     Execute JavaScript  document.getElementById("cphContent_btnPesquisa").click();
     Aguardar tela de carregamento
 

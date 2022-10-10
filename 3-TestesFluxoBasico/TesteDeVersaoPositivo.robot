@@ -1981,7 +1981,8 @@ Cenário 38: Funcionalidade Processo de Demanda Contínuo - EJA
     Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
     Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
     Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
-    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
     Em Processo de Demanda, clicar em Incluir
     Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
     Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"
@@ -2011,7 +2012,8 @@ Cenário 38: Funcionalidade Processo de Demanda Contínuo - EJA
     Em Processo de Demanda, Critérios, em Permite Troca, selecionar "NÃO"
     Em Processo de Demanda, Critérios, em Tipo de Busca, selecionar "GEORREFERENCIAMENTO LISTA"
     Em Processo de Demanda, Critérios, em Autorização de Matrícula, selecionar "SIM"
-    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "NÃO"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Matriculado, selecionar "SIM"
+    Em Processo de Demanda, Critérios, em Permite Inscrição Mesma Escola, selecionar "SIM"
     Em Processo de Demanda, clicar em Incluir
     Em Processo de Demanda, Seleção de Escolas, em Selecionar Diversas Escolas, selecionar "NÃO"
     Em Processo de Demanda, Gestão Pré-Matrícula, em Verifica Dados, selecionar "SIM"

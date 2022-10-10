@@ -350,3 +350,12 @@ No Portal, gravar o número de protocolo gerado
     ${protocoloComprovante}    Get Text    comprovante-info-protocolo
     Set Suite Variable    ${protocoloComprovante}
 
+No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "${paisNascimento}"
+    Select From List By Label    ddlPaisNascimento    ${paisNascimento}
+    Sleep    1
+
+No Portal, em Cadastro do Aluno, em RNE, inserir O RNE cadastrado
+    Input Text    txtRNE    ${RNEAluno}
+    Press Keys    txtRNE    TAB
+    Aguardar carregamento Portal      
+
