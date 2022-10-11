@@ -461,12 +461,14 @@ Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
 
 Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
     ${nomeCompletoAluno}    Name Male
-    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ç    c
-    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ê    e
-    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    í    i
-    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ô    o
     ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ã    a
     ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    á    a
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ê    e
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    é    e
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    í    i
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ó    o
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ô    o
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ç    c
     ${nomeCompletoAluno}    Fetch From Right    ${nomeCompletoAluno}    .
     ${nomeCompletoAluno}    Strip String	    ${nomeCompletoAluno}    both
     Set Suite Variable    ${nomeCompletoAluno}
@@ -501,12 +503,14 @@ Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
 Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
     Wait Until Element Is Visible    cphContent_ucVinculos_PesquisarPessoaParente_CadastroRapidoPessoa_btnSalvar
     ${nomeCompletoResponsavel}    Name Female
-    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ç    c
-    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ê    e
-    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    í    i
-    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ô    o
     ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ã    a
     ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    á    a
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ê    e
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    é    e
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    í    i
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ó    o
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ô    o
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ç    c
     ${nomeCompletoResponsavel}    Fetch From Right    ${nomeCompletoResponsavel}    .
     ${nomeCompletoResponsavel}    Strip String	    ${nomeCompletoResponsavel}    both
     Set Suite Variable    ${nomeCompletoResponsavel}

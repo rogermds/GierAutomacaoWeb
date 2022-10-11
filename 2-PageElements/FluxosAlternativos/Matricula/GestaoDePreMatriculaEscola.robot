@@ -96,6 +96,13 @@ Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Cancelar
     Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkCancelar_0").click();
     Aguardar tela de carregamento
 
+Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Pausar
+    Wait Until Page Contains    Resultado da Busca
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkPausar_0").click();
+    Aguardar tela de carregamento
+
 Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
     Wait Until Element Is Visible    cphContent_btnPesquisa
     ${status}    Run Keyword And Return Status    Variable Should Not Exist     ${nomeCompletoAluno}

@@ -141,8 +141,14 @@ No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "${dataNa
 
 No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     ${nomeCompletoResponsavel}    Name Female
-    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ç    c
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ã    a
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    á    a
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ê    e
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    é    e
     ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    í    i
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ó    o
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ô    o
+    ${nomeCompletoResponsavel}    Replace String    ${nomeCompletoResponsavel}    ç    c
     ${nomeCompletoResponsavel}    Fetch From Right    ${nomeCompletoResponsavel}    .
     ${nomeCompletoResponsavel}    Strip String	    ${nomeCompletoResponsavel}    both
     Set Suite Variable    ${nomeCompletoResponsavel}
@@ -171,6 +177,13 @@ No Portal, em Cadastro do Responsável, em Sexo, inserir "${sexo}"
 
 No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
     ${nomeCompletoAluno}    Name Male
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ã    a
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    á    a
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ê    e
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    é    e
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    í    i
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ó    o
+    ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ô    o
     ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ç    c
     ${nomeCompletoAluno}    Fetch From Right    ${nomeCompletoAluno}    .
     ${nomeCompletoAluno}    Strip String	    ${nomeCompletoAluno}    both
@@ -359,3 +372,9 @@ No Portal, em Cadastro do Aluno, em RNE, inserir O RNE cadastrado
     Press Keys    txtRNE    TAB
     Aguardar carregamento Portal      
 
+No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    ${cpfFakeAluno}    FakerLibrary.cpf
+    Set Suite Variable    ${cpfFakeAluno}
+    Input Text    txtCpf    ${cpfFakeAluno}
+    Press Keys    txtCpf    TAB
+    Aguardar carregamento Portal

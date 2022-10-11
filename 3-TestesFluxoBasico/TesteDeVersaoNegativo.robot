@@ -2369,7 +2369,7 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - EJA Contínuo
     Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
     Entrar no Portal
     No Portal, clicar em "Educação de Jovens e Adultos"
-    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
+    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
@@ -2377,8 +2377,7 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - EJA Contínuo
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
     No Portal, em Ano/Ciclo selecionar "Ciclo II"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
+    No Portal, clicar em Solicitar Vaga
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
@@ -2395,7 +2394,7 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - EJA Contínuo
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
@@ -2408,7 +2407,7 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - EJA Contínuo
     Em Gestão de Pré-Matrícula, em Justificativa, clicar em Salvar
     Entrar no Portal
     No Portal, clicar em "Educação de Jovens e Adultos"
-    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
+    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
@@ -2416,8 +2415,7 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - EJA Contínuo
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
     No Portal, em Ano/Ciclo selecionar "Ciclo II"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
+    No Portal, clicar em Solicitar Vaga
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
@@ -2433,7 +2431,7 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - EJA Contínuo
     No Portal, fechar o modal
     Entrar no Portal
     No Portal, clicar em "Educação de Jovens e Adultos"
-    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
+    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
@@ -2441,8 +2439,7 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - EJA Contínuo
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG AMADEU PEREIRA LIMA"
     No Portal, em Ano/Ciclo selecionar "Ciclo II"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
+    No Portal, clicar em Solicitar Vaga
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
@@ -2457,60 +2454,272 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - EJA Contínuo
     No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
     No Portal, fechar o modal
 
-Cenário 53: Funcionalidade Gier - Portal - EJA Inicial  ##COM INCIDENTE
+Cenário 54: Funcionalidade Gier - Portal: Pausado - Infantil Contínuo
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
-    [Tags]             Gier > Portal - EJA Inicial | Fluxo Positivo
+    [Tags]             Gier > Portal - Infantil Contínuo | Fluxo Positivo
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2020"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
-    Entrar no módulo "Educandos"
-    Entrar na funcionalidade "Matricular Educando"
-    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
-    Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
-    Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
-    Em Matricular Educando, clicar em Sim no Modal
-    Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
-    Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
-    Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/1996"
-    Clicar no checkbox Pessoa não possui correio eletrônico
-    Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "BRASILEIRA"
-    Em Cadastro de Pessoa, no campo UF Nascimento, selecionar "SP"
-    Em Cadastro de Pessoa, no campo Cidade de Nascimento, selecionar "GUARULHOS"
-    Em Cadastro de Pessoa, no campo CPF, inserir um CPF válido
-    Em Cadastro de Pessoa, em Certidão de Nascimento, clicar em Nova Certidão de Nascimento
-    Em Cadastro de Pessoa, em Matrícula Certidão, inserir uma certidão válida
-    Em Cadastro de Pessoa, em Certidão, em Data de Emissão, inserir "01/01/2022"
-    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
-    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
-    Em Cadastro de Pessoa, no campo Número, inserir o número "33"
-    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
-    Clicar no botão Incluir
-    Em Cadastro de Pessoa, clicar no botão Salvar       
-    Clicar em OK no Modal
-    Em Matricular Educando, em Nome, inserir o nome cadastrado
-    Em Matricular Educando, em Data de Nascimento, inserir a data cadastrada
-    Em Matricular Educando, clicar em Pesquisar
-    Em Matricular Educando, em Grau de Parentesco, selecionar "O Próprio"
-    Em Matricular Educando, em Grau de Parentesco, clicar em Responsável Legal
-    Em Matricular Educando, em Grau de Parentesco, clicar em Responsável Principal
-    Em Matricular Educando, em Grau de Parentesco, clicar em Inserir Responsável
-    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
-    Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
-    Em Matricular Educando, em País de Origem, selecionar "Brasil"
-    Em Matricular Educando, em Etapa/Modalidade, selecionar "Educação de Jovens e Adultos 2º Semestre"
-    Em Matricular Educando, em Curso, selecionar "Ciclo II"
-    Em Matricular Educando, em Periodo, selecionar "NOITE"
-    Em Matricular Educando, em Ciclo, selecionar "Semestre 2"
-    Em Matricular Educando, selecionar uma turma com vagas
-    Em Matricular Educando, clicar em Matricular Educando
-    Em Matricular Educando, clicar em Sim no Modal de Matrícula
-    Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Pausar
+    Em Gestão de Pré-Matrícula, em Justificativa, selecionar "TESTE QA"
+    Em Gestão de Pré-Matrícula, em Justificativa, inserir "TESTE JUSTIFICATIVA AUTOMACAO"
+    Em Gestão de Pré-Matrícula, em Justificativa, clicar em Salvar
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2020"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2020"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG BRAGUINHA"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
+
+Cenário 55: Funcionalidade Gier - Portal: Pausado - Fundamental Contínuo
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Gier > Portal - Fundamental Contínuo | Fluxo Positivo
+    Entrar no Portal
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Pausar
+    Em Gestão de Pré-Matrícula, em Justificativa, selecionar "TESTE QA"
+    Em Gestão de Pré-Matrícula, em Justificativa, inserir "TESTE JUSTIFICATIVA AUTOMACAO"
+    Em Gestão de Pré-Matrícula, em Justificativa, clicar em Salvar
+    Entrar no Portal
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
+    Entrar no Portal
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
+
+Cenário 56: Funcionalidade Gier - Portal: Pausado - EJA Contínuo
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
+    ...                no Portal, para todas as etapas/modalidades.                
+    [Tags]             Gier > Portal - EJA Contínuo | Fluxo Positivo
     Entrar no Portal
     No Portal, clicar em "Educação de Jovens e Adultos"
-    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
+    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
@@ -2518,15 +2727,14 @@ Cenário 53: Funcionalidade Gier - Portal - EJA Inicial  ##COM INCIDENTE
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
     No Portal, em Ano/Ciclo selecionar "Ciclo II"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
+    No Portal, clicar em Solicitar Vaga
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Cadastro do Responsável, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
@@ -2534,3 +2742,65 @@ Cenário 53: Funcionalidade Gier - Portal - EJA Inicial  ##COM INCIDENTE
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrado
+    Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Pausar
+    Em Gestão de Pré-Matrícula, em Justificativa, selecionar "TESTE QA"
+    Em Gestão de Pré-Matrícula, em Justificativa, inserir "TESTE JUSTIFICATIVA AUTOMACAO"
+    Em Gestão de Pré-Matrícula, em Justificativa, clicar em Salvar
+    Entrar no Portal
+    No Portal, clicar em "Educação de Jovens e Adultos"
+    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, em Ano/Ciclo selecionar "Ciclo II"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
+    Entrar no Portal
+    No Portal, clicar em "Educação de Jovens e Adultos"
+    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG AMADEU PEREIRA LIMA"
+    No Portal, em Ano/Ciclo selecionar "Ciclo II"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal

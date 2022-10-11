@@ -16,7 +16,7 @@ ${campoNomeCadastroPessoa}                    cphContent_ucDadosPessoais_txtNome
 
 *** Keywords ***
 Em Matricular Educando, em Nome, inserir o nome cadastrado
-    Wait Until Element Is Visible    cphContent_PessoaResponsavel_btnPesquisa
+    Wait Until Element Is Visible    cphContent_PessoaResponsavel_txtNome
     Input Text    cphContent_PessoaResponsavel_txtNome    ${nomeCompletoAluno}
 
 Em Matricular Educando, em Data de Nascimento, inserir a data cadastrada
