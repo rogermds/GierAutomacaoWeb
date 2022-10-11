@@ -137,3 +137,38 @@ Em Gestão de Pré-Matrícula, em Justificativa, clicar em Ok
     Wait Until Element Is Visible    cphContent_Justificativa_Mensagem_Padrao_Outer_btnOk
     Execute JavaScript  document.getElementById("cphContent_Justificativa_Mensagem_Padrao_Outer_btnOk").click();
     Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
+    Wait Until Page Contains    Resultado da Busca
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkDadosCandidato_0").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
+    Wait Until Page Contains    Resultado da Busca
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkAprovar_0").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
+    FOR     ${index}    IN RANGE    0    20
+    ${busca}    Set Variable    cphContent_dtlClasseTurma_lblVagasDisponiveisTd_${index}
+    ${resultado}    Run Keyword And Return Status   Element Text Should Not Be    ${busca}    0    
+        IF  ${resultado}
+            Execute JavaScript  document.getElementById("cphContent_dtlClasseTurma_lbtSelecionar_${index}").click();
+            Aguardar tela de carregamento
+            Exit For Loop If    ${resultado}
+        END
+    END
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, clicar em Matricular Educando
+    Wait Until Element Is Visible    cphContent_btnMatricular
+    Execute JavaScript  document.getElementById("cphContent_btnMatricular").click();
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, clicar em OK no modal
+    Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnOk").click();
+    Aguardar tela de carregamento

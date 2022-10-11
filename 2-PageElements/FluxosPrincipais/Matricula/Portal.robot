@@ -347,3 +347,4 @@ No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão ca
 No Portal, em Contato, em Telefone 1, inserir o telefone cadastrado
     Input Text    txtTelefone1    ${telefone1Aleatorio}
     Sleep    1
+

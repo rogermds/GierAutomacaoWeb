@@ -207,6 +207,14 @@ No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão 
     Press Keys    txtMatriculaCertidao    TAB
     Sleep    1
     Aguardar carregamento Portal
+    ${validacao}    Run Keyword And Return Status    Wait Until Page Contains    Número de Certidão de Nascimento Inválido
+    IF    ${validacao}
+        Gerar Certidão de Nascimento Aleatório
+        Input Text    txtMatriculaCertidao    ${certidaoAleatoria}
+        Press Keys    txtMatriculaCertidao    TAB
+        Sleep    1
+        Aguardar carregamento Portal
+    END
 
 No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão inválida
     Input Text    txtMatriculaCertidao    0
@@ -377,4 +385,40 @@ No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
     Set Suite Variable    ${cpfFakeAluno}
     Input Text    txtCpf    ${cpfFakeAluno}
     Press Keys    txtCpf    TAB
+    Aguardar carregamento Portal
+    ${validacao}    Run Keyword And Return Status    Wait Until Page Contains    O CPF informado é inválido
+    IF    ${validacao}
+        ${cpfFakeAluno}    FakerLibrary.cpf
+        Set Suite Variable    ${cpfFakeAluno}
+        Input Text    txtCpf    ${cpfFakeAluno}
+        Press Keys    txtCpf    TAB
+        Aguardar carregamento Portal
+    END
+
+No Portal, verificar se é exibida a mensagem que a pessoa já está matriculada
+    ${validacao}    Run Keyword And Return Status    Variable Should Exist    ${nomeCompletoAluno}
+    IF    ${validacao}
+        Wait Until Page Contains    A pessoa ${nomeCompletoAluno} já está matriculado(a) na rede de ensino!
+    ELSE
+        Wait Until Page Contains    A pessoa ${nomeCompletoResponsavel} já está matriculado(a) na rede de ensino!
+    END
+
+No Portal, verificar se é exibida a mensagem que a pessoa já está inscrita
+    ${validacao}    Run Keyword And Return Status    Variable Should Exist    ${nomeCompletoAluno}
+    IF    ${validacao}
+        Wait Until Page Contains    A pessoa ${nomeCompletoAluno} já está inscrito(a) na rede de ensino!
+    ELSE
+        Wait Until Page Contains    A pessoa ${nomeCompletoResponsavel} já está inscrito(a) na rede de ensino!
+    END
+
+No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "${pais}"
+    Wait Until Element Is Visible    ddlRPaisNascimento
+    Select From List By Label    ddlRPaisNascimento    ${pais}
+    Sleep    1
+
+No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
+    ${numeroRNE}    Random Number   6    True
+    Set Suite Variable    ${RNEResponsavel}    V${numeroRNE}-S
+    Input Text    txtRRNE    ${RNEResponsavel}
+    Press Keys    txtRRNE    TAB
     Aguardar carregamento Portal
