@@ -27,6 +27,7 @@ Em Tipos de Rotas, clicar em OK no modal
     Aguardar tela de carregamento
 
 Em Tipos de Rotas, clicar em Pesquisar
+    Wait Until Element Is Visible    cphContent_btnPesquisa
     Execute JavaScript  document.getElementById("cphContent_btnPesquisa").click();
     Aguardar tela de carregamento
 
@@ -49,3 +50,4 @@ Em Tipos de Rotas, clicar em Sim no modal
 
 Em Tipos de Rotas, verificar se aparece o resultado "${tipoDeRota}"
     Wait Until Page Contains    ${tipoDeRota}
+

@@ -20,6 +20,9 @@ Resource         ../2-PageElements/FluxosPrincipais/Matricula/Portal.robot
 Resource         ../2-PageElements/FluxosPrincipais/Matricula/Processo de Demanda.robot
 Resource         ../2-PageElements/FluxosPrincipais/Matricula/Programação de Processo.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/Rotas.robot
+Resource         ../2-PageElements/FluxosPrincipais/Transportes/TiposDeRotas.robot
+Resource         ../2-PageElements/FluxosPrincipais/Transportes/TiposDeFrotas.robot
+Resource         ../2-PageElements/FluxosPrincipais/Transportes/Frotas.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Avaliações Educacionais.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
@@ -2459,7 +2462,7 @@ Cenário 48: Funcionalidade Portal - Gier - Infantil Inicial
     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
     No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
-    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
     No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "07/03/2018"
     No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
     No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
@@ -2650,7 +2653,7 @@ Cenário 52: Funcionalidade Gier Portal - Infantil Contínuo
     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
     No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
-    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir um certidão válida
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
     No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
     No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
     No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
@@ -3025,7 +3028,215 @@ Cenário 54: Funcionalidade Portal Gier - EJA Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
 
-# Cenário 35: Funcionalidade Gestão de Pré-Matrícula
+Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infantil Inicial) - Secretaria
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
+    ...                dentro do GIER, para todas as etapas/modalidades.                
+    [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "06/06/2016"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
+    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "05/06/2016"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
+    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em penúltimo lugar na fila de espera
+
+Cenário XX: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infantil Contínuo) - Secretaria
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
+    ...                dentro do GIER, para todas as etapas/modalidades.                
+    [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "08/06/2016"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
+    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
+    Entrar no Portal
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/06/2016"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
+    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
+
+
+# Cenário 35: Funcionalidade Gestão de Pré-Matrícula - Escola
 #     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
 #     ...                dentro do GIER, para todas as etapas/modalidades.                
 #     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
@@ -3037,30 +3248,19 @@ Cenário 54: Funcionalidade Portal Gier - EJA Contínuo
 #     Entrar no módulo "Gestão de Educandos"
 #     Entrar na funcionalidade "Gestão de Pré-Matrícula"
 
-# Cenário 36: Funcionalidade Parâmetros do Processo de Transporte
-#     [Documentation]    Esse teste efetua o cadastro, configuração e edição
-#     ...                dos Parâmetros do Processo de Transporte                 
-#     [Tags]             Parâmetros do Processo de Transporte | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Entrar no eixo "Configuração"
-#     Entrar no módulo "Transportes"
-#     Entrar na funcionalidade "Parâmetros do Processo de Transporte"
-
-# Cenário 37: Funcionalidade Credenciamento de Condutores
-#     [Documentation]    Esse teste efetua o cadastro e edição do Credenciamento de Condutores                               
-#     [Tags]             Credenciamento de Condutores | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Verificar se aparece o texto "Operação"
-#     Entrar no eixo "Configuração"
-#     Entrar no módulo "Transportes"
-#     Entrar na funcionalidade "Credenciamento de Condutores"
-#     Em Credenciamento de Condutores, clicar em Cadastrar Condutores
+Cenário XX: Funcionalidade Parâmetros do Processo de Transporte
+    [Documentation]    Esse teste efetua o cadastro, configuração e edição
+    ...                dos Parâmetros do Processo de Transporte                 
+    [Tags]             Parâmetros do Processo de Transporte | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Parâmetros do Processo de Transporte"
+    Em Parâmetros de Transporte
 
 Cenário XX: Funcionalidade Tipos de Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
@@ -3165,7 +3365,7 @@ Cenário XX: Funcionalidade Rotas
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi cadastrada
 
-Cenário XX: Funcionalidade Tipos de Frotas  ## FALTA FAZER AS KEYWORDS
+Cenário XX: Funcionalidade Tipos de Frotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem                
     [Tags]             Viagens | Fluxo Positivo
@@ -3173,7 +3373,8 @@ Cenário XX: Funcionalidade Tipos de Frotas  ## FALTA FAZER AS KEYWORDS
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Configuração"
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Configuração"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Tipos de Frotas"
     Em Tipos de Frotas, clicar em Cadastrar
@@ -3200,7 +3401,61 @@ Cenário XX: Funcionalidade Tipos de Frotas  ## FALTA FAZER AS KEYWORDS
     Em Tipos de Frotas, clicar em Salvar
     Em Tipos de Frotas, clicar em OK no modal
     Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado
-    
+
+Cenário XX: Funcionalidade Frotas
+    [Documentation]    Esse teste verifica se é possível cadastrar, editar
+    ...                editar e excluir uma Viagem
+    [Tags]             Viagens | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Frotas"
+    Em Frotas, clicar em Cadastrar
+    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO"
+    Em Frotas, em Sigla, inserir "FRAT"
+    Em Frotas, em Tipo, selecionar "TIPO FROTA AUTOMACAO"
+    Em Frotas, em Forma de Gerenciamento, selecionar "Frota Gerenciada"
+    Em Frotas, clicar em Salvar
+    Em Frotas, clicar em OK
+    Em Frotas, em Descrição, inserir a frota cadastrada
+    Em Frotas, clicar em Pesquisar
+    Em Frotas, verificar se a frota foi cadastrada
+    Em Frotas, clicar em Ações e Editar
+    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO EDITADA"
+    Em Frotas, clicar em Salvar
+    Em Frotas, clicar em OK
+    Em Frotas, em Descrição, inserir a frota cadastrada
+    Em Frotas, clicar em Pesquisar
+    Em Frotas, verificar se a frota foi cadastrada
+    Em Frotas, clicar em Ações e Excluir
+    Em Frotas, clicar em Sim
+    Em Frotas, clicar em OK
+    Em Frotas, clicar em Cadastrar
+    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO"
+    Em Frotas, em Sigla, inserir "FRAT"
+    Em Frotas, em Tipo, selecionar "TIPO FROTA AUTOMACAO"
+    Em Frotas, em Forma de Gerenciamento, selecionar "Frota Gerenciada"
+    Em Frotas, clicar em Salvar
+    Em Frotas, clicar em OK
+    Em Frotas, em Descrição, inserir a frota cadastrada
+    Em Frotas, clicar em Pesquisar
+    Em Frotas, verificar se a frota foi cadastrada
+
+# Cenário 37: Funcionalidade Credenciamento de Condutores
+#     [Documentation]    Esse teste efetua o cadastro e edição do Credenciamento de Condutores                               
+#     [Tags]             Credenciamento de Condutores | Fluxo Positivo
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no eixo "Configuração"
+#     Entrar no módulo "Transportes"
+#     Entrar na funcionalidade "Credenciamento de Condutores"
+#     Em Credenciamento de Condutores, clicar em Cadastrar Condutores
 
 Cenário XX: Funcionalidade Viagens
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
@@ -3218,14 +3473,7 @@ Cenário XX: Funcionalidade Viagens
     Em Cadastrar Viagens, em Rota, selecionar "AUTOMACAO ROTA"
     Em Cadastrar Viagens, em Vigência Inicial, inserir "01/01/2022"
     Em Cadastrar Viagens, em Vigência Final, inserir "31/12/2022"
-    Em Cadastrar Viagens, em Frota, selecionar "31/12/2022"
-
-
-
-    
-
-
-
+    Em Cadastrar Viagens, em Frota, selecionar "FROTA AUTOMACAO"
 
 # Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
 #     [Documentation]    Esse teste verifica se é possível solicitar um Transporte

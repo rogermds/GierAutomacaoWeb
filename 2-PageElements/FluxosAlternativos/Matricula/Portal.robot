@@ -209,6 +209,7 @@ No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão 
     Aguardar carregamento Portal
     ${validacao}    Run Keyword And Return Status    Wait Until Page Contains    Número de Certidão de Nascimento Inválido
     IF    ${validacao}
+        No Portal, fechar o modal
         Gerar Certidão de Nascimento Aleatório
         Input Text    txtMatriculaCertidao    ${certidaoAleatoria}
         Press Keys    txtMatriculaCertidao    TAB

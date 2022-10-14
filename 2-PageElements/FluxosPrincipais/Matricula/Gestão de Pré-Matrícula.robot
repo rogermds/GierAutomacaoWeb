@@ -108,4 +108,67 @@ Em Gestão de Pré-Matrícula, clicar em OK no modal
     Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnOk").click();
     Aguardar tela de carregamento
 
+Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "${ciclo}"
+    Execute JavaScript   $("#cphContent_ddlCiclo").val($('option:contains("${ciclo}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlCiclo').trigger('change');
+    Aguardar tela de carregamento
 
+Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "${escola}"
+    Execute JavaScript   $("#cphContent_ddlEscolaDestino").val($('option:contains("${escola}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlEscolaDestino').trigger('change');
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, em Situação, selecionar "${situacao}"
+    Execute JavaScript   $("#cphContent_ddlSituacao").val($('option:contains("${situacao}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlSituacao').trigger('change');
+    Aguardar tela de carregamento
+
+Em Gestão de Pré-Matrícula, em '${processo}', verificar se o aluno entrou em último lugar na fila de espera
+    FOR     ${index}    IN RANGE    0    300
+        ${campoAnterior}    Evaluate    ${index}-1
+        ${buscaAluno}    Set Variable    cphContent_dtlConsulta_lblAlunoLi_${index}
+        ${nomeAlunoCaixaAlta}    Convert To Upper Case    ${nomeCompletoAluno}
+        ${buscaProcesso}    Set Variable    cphContent_dtlConsulta_lblDemandaLi_${index}
+        ${resultadoProcesso}    Run Keyword And Return Status   Element Should Contain    ${buscaProcesso}    ${processo}
+        ${resultadoAluno}    Run Keyword And Return Status   Element Should Contain  ${buscaAluno}    ${nomeAlunoCaixaAlta}
+        ${listaEsperaAluno}    Get Text    cphContent_dtlConsulta_lblClassificacaoLi_${index}
+        ${validacao}    Evaluate    ${index} > ${listaEsperaAluno}
+        IF  ${resultadoAluno} and ${resultadoProcesso}
+            IF    ${listaEsperaAluno} == 1
+                Element Text Should Be    cphContent_dtlConsulta_lblClassificacaoLi_${index}    1
+                Exit For Loop
+            END
+                ${listaEsperaAluno}    Get Text    cphContent_dtlConsulta_lblClassificacaoLi_${index}
+                ${valorAnterior}    Evaluate    ${listaEsperaAluno}-1
+                Element Text Should Be    cphContent_dtlConsulta_lblClassificacaoLi_${campoAnterior}    ${valorAnterior}
+                Exit For Loop
+        END
+        IF    ${validacao}
+            Fail      
+        END
+    END
+
+Em Gestão de Pré-Matrícula, em '${processo}', verificar se o aluno entrou em penúltimo lugar na fila de espera
+    FOR     ${index}    IN RANGE    0    300
+        ${proximoCampo}    Evaluate    ${index}+1
+        ${buscaAluno}    Set Variable    cphContent_dtlConsulta_lblAlunoLi_${index}
+        ${nomeAlunoCaixaAlta}    Convert To Upper Case    ${nomeCompletoAluno}
+        ${buscaProcesso}    Set Variable    cphContent_dtlConsulta_lblDemandaLi_${index}
+        ${resultadoProcesso}    Run Keyword And Return Status   Element Should Contain    ${buscaProcesso}    ${processo}
+        ${resultadoAluno}    Run Keyword And Return Status   Element Should Contain  ${buscaAluno}    ${nomeAlunoCaixaAlta}
+        ${listaEsperaAluno}    Get Text    cphContent_dtlConsulta_lblClassificacaoLi_${index}
+        ${validacao}    Evaluate    ${index} > ${listaEsperaAluno}
+        IF  ${resultadoAluno} and ${resultadoProcesso}
+            IF    ${listaEsperaAluno} == 1
+                Element Text Should Be    cphContent_dtlConsulta_lblClassificacaoLi_${index}    1
+                Exit For Loop
+            ELSE
+                ${proximoValor}    Evaluate    ${listaEsperaAluno}+1
+                Element Text Should Be    cphContent_dtlConsulta_lblClassificacaoLi_${proximoCampo}    ${proximoValor}
+                Exit For Loop
+            END
+        END
+        IF    ${validacao}
+            Fail      
+        END
+    END
