@@ -63,6 +63,9 @@ Entrar na funcionalidade "${funcionalidade}"
     IF    '${funcionalidade}' == 'Processo de Demandas'
         Execute JavaScript  xPathResult = document.evaluate("//span[@title='Processo de Demandas']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
         Execute JavaScript  xPathResult.singleNodeValue.click()  
+    ELSE IF    '${funcionalidade}' == 'Viagens'
+        Execute JavaScript  xPathResult = document.evaluate("(//div[@class='left formataNome'][contains(.,'Viagens')])[2]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click() 
     ELSE 
         Execute JavaScript  xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
         Execute JavaScript  xPathResult.singleNodeValue.click() 

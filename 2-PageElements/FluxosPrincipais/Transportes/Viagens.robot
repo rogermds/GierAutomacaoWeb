@@ -10,6 +10,7 @@ Em Viagens, clicar em Cadastrar
     Aguardar tela de carregamento
 
 Em Viagens, em Nome, inserir "${nomeViagem}"
+    Wait Until Element Is Visible    cphContent_txtNome
     Set Suite Variable    ${nomeViagem}
     Clear Element Text    cphContent_txtNome
     Input Text    cphContent_txtNome    ${nomeViagem}

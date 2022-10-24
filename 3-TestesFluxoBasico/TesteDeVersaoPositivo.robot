@@ -4581,7 +4581,6 @@ Cenário 74: Funcionalidade Viagens
     Em Cadastrar Viagens, em Vigência Final, inserir "31/12/2022"
     Em Cadastrar Viagens, em Frota, selecionar "FROTA INTERNA"
     Em Cadastrar Viagens, em Veículo, selecionar "RENAULT - SANDERO - FSN9561 DT2121"
-    Em Cadastrar Viagens, em Período, selecionar "MANHÃ"
     Em Cadastrar Viagens, em Horário Inicial De, inserir "06:00"
     Em Cadastrar Viagens, em Horário Inicial Até, inserir "08:00"
     Em Cadastrar Viagens, em Horário Final De, inserir "12:00"
@@ -4597,6 +4596,7 @@ Cenário 74: Funcionalidade Viagens
     Em Cadastrar Viagens, clicar em Salvar
     Em Cadastrar Viagens, clicar em OK no modal
     Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO EDITADO"
+    Em Cadastrar Viagens, clicar em Pesquisar
     Em Cadastrar Viagens, verificar se a viagem foi cadastrada
     Em Cadastrar Viagens, clicar em Ações e Excluir
     Em Cadastrar Viagens, clicar em Sim no modal
@@ -4606,9 +4606,8 @@ Cenário 74: Funcionalidade Viagens
     Em Cadastrar Viagens, em Rota, selecionar "AUTOMACAO ROTA"
     Em Cadastrar Viagens, em Vigência Inicial, inserir "01/01/2022"
     Em Cadastrar Viagens, em Vigência Final, inserir "31/12/2022"
-    Em Cadastrar Viagens, em Frota, selecionar "FROTA AUTOMACAO"
-    Em Cadastrar Viagens, em Veículo, selecionar "TST AUT"
-    Em Cadastrar Viagens, em Período, selecionar "MANHÃ"
+    Em Cadastrar Viagens, em Frota, selecionar "FROTA INTERNA"
+    Em Cadastrar Viagens, em Veículo, selecionar "RENAULT - SANDERO - FSN9561 DT2121"
     Em Cadastrar Viagens, em Horário Inicial De, inserir "06:00"
     Em Cadastrar Viagens, em Horário Inicial Até, inserir "08:00"
     Em Cadastrar Viagens, em Horário Final De, inserir "12:00"
