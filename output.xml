@@ -1,707 +1,498 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20221024 15:16:41.529" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20221024 16:21:14.915" rpa="false" schemaversion="3">
 <suite id="s1" name="TesteDeVersaoPositivo" source="c:\Users\rogerio.santos\Desktop\AUTOMAÇÃO WEB - GIER\Automação - Teste De Versão Gier\3-TestesFluxoBasico\TesteDeVersaoPositivo.robot">
-<test id="s1-t1" name="Cenário 71: Funcionalidade Tipos de Frotas" line="4435">
+<test id="s1-t1" name="Cenário 74: Funcionalidade Viagens" line="4566">
 <kw name="Abrir o navegador" library="1-Principal" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=https://www.google.com/</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221024 15:16:42.667" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20221024 15:16:42.667" endtime="20221024 15:16:45.482"/>
+<msg timestamp="20221024 16:21:16.560" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20221024 16:21:16.559" endtime="20221024 16:21:19.895"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221024 15:16:45.484" endtime="20221024 15:16:45.619"/>
+<status status="PASS" starttime="20221024 16:21:19.896" endtime="20221024 16:21:20.039"/>
 </kw>
-<status status="PASS" starttime="20221024 15:16:42.666" endtime="20221024 15:16:45.619"/>
+<status status="PASS" starttime="20221024 16:21:16.558" endtime="20221024 16:21:20.039"/>
 </kw>
 <kw name="Acessar o ambiente &quot;https://guarulhoshomolog.gier.com.br/&quot;" library="1-Principal" sourcename="Acessar o ambiente &quot;${url}&quot;">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221024 15:16:45.622" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
-<status status="PASS" starttime="20221024 15:16:45.621" endtime="20221024 15:16:48.692"/>
+<msg timestamp="20221024 16:21:20.043" level="INFO">Opening url 'https://guarulhoshomolog.gier.com.br/'</msg>
+<status status="PASS" starttime="20221024 16:21:20.042" endtime="20221024 16:21:24.175"/>
 </kw>
-<status status="PASS" starttime="20221024 15:16:45.620" endtime="20221024 15:16:48.692"/>
+<status status="PASS" starttime="20221024 16:21:20.041" endtime="20221024 16:21:24.175"/>
 </kw>
 <kw name="Entrar com as credenciais &quot;02867439817&quot; e &quot;12345678&quot;" library="Login" sourcename="Entrar com as credenciais &quot;${login}&quot; e &quot;${senha}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${tituloLogin}</arg>
 <arg>timeout=30</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221024 15:16:48.694" endtime="20221024 15:16:48.723"/>
+<status status="PASS" starttime="20221024 16:21:24.179" endtime="20221024 16:21:24.225"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoLogin}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:16:48.725" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
-<status status="PASS" starttime="20221024 15:16:48.725" endtime="20221024 15:16:48.818"/>
+<msg timestamp="20221024 16:21:24.227" level="INFO">Typing text '02867439817' into text field 'txtLogin'.</msg>
+<status status="PASS" starttime="20221024 16:21:24.226" endtime="20221024 16:21:24.362"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoSenha}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:16:48.819" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
-<status status="PASS" starttime="20221024 15:16:48.818" endtime="20221024 15:16:48.901"/>
+<msg timestamp="20221024 16:21:24.363" level="INFO">Typing text '12345678' into text field 'txtSenha1'.</msg>
+<status status="PASS" starttime="20221024 16:21:24.363" endtime="20221024 16:21:24.477"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${botaoLogin}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221024 15:16:48.902" level="INFO">Clicking button 'btnAcessar'.</msg>
-<status status="PASS" starttime="20221024 15:16:48.902" endtime="20221024 15:16:51.828"/>
+<msg timestamp="20221024 16:21:24.478" level="INFO">Clicking button 'btnAcessar'.</msg>
+<status status="PASS" starttime="20221024 16:21:24.477" endtime="20221024 16:21:27.103"/>
 </kw>
-<status status="PASS" starttime="20221024 15:16:48.693" endtime="20221024 15:16:51.828"/>
+<status status="PASS" starttime="20221024 16:21:24.177" endtime="20221024 16:21:27.103"/>
 </kw>
 <kw name="Verificar se aparece o texto &quot;Estrutura&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${texto}</arg>
 <arg>20</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221024 15:16:51.832" endtime="20221024 15:16:51.851"/>
+<status status="PASS" starttime="20221024 16:21:27.105" endtime="20221024 16:21:27.124"/>
 </kw>
-<status status="PASS" starttime="20221024 15:16:51.831" endtime="20221024 15:16:51.852"/>
+<status status="PASS" starttime="20221024 16:21:27.105" endtime="20221024 16:21:27.125"/>
 </kw>
 <kw name="Pesquisar &quot;SECRETARIA&quot; e selecionar o primeiro resultado" library="Seleção de Estrutura" sourcename="Pesquisar &quot;${pesquisaEstrutura}&quot; e selecionar o primeiro resultado">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${campoPesquisaEstrutura}</arg>
 <arg>${pesquisaEstrutura}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:16:51.856" level="INFO">Typing text 'SECRETARIA' into text field '//input[contains(@class,'textBuscaEstrutura')]'.</msg>
-<status status="PASS" starttime="20221024 15:16:51.855" endtime="20221024 15:16:51.971"/>
+<msg timestamp="20221024 16:21:27.128" level="INFO">Typing text 'SECRETARIA' into text field '//input[contains(@class,'textBuscaEstrutura')]'.</msg>
+<status status="PASS" starttime="20221024 16:21:27.127" endtime="20221024 16:21:27.248"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${primeiroResultadoEstrutura}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221024 15:16:51.973" level="INFO">Clicking element '//html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]'.</msg>
-<status status="PASS" starttime="20221024 15:16:51.972" endtime="20221024 15:16:52.019"/>
+<msg timestamp="20221024 16:21:27.250" level="INFO">Clicking element '//html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]'.</msg>
+<status status="PASS" starttime="20221024 16:21:27.249" endtime="20221024 16:21:27.300"/>
 </kw>
-<status status="PASS" starttime="20221024 15:16:51.853" endtime="20221024 15:16:52.020"/>
+<status status="PASS" starttime="20221024 16:21:27.126" endtime="20221024 16:21:27.301"/>
 </kw>
 <kw name="Verificar se aparece o texto &quot;Operação&quot;" library="1-Principal" sourcename="Verificar se aparece o texto &quot;${texto}&quot;">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${texto}</arg>
 <arg>20</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221024 15:16:52.022" endtime="20221024 15:17:01.159"/>
+<msg timestamp="20221024 16:21:27.904" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004C1ED3+2236115]
+	Ordinal0 [0x004592F1+1807089]
+	Ordinal0 [0x003666FD+812797]
+	Ordinal0 [0x0034DFFA+712698]
+	Ordinal0 [0x003B506B+1134699]
+	Ordinal0 [0x003C514A+1200458]
+	Ordinal0 [0x003B18A6+1120422]
+	Ordinal0 [0x0038A73D+960317]
+	Ordinal0 [0x0038B71F+964383]
+	GetHandleVerifier [0x0076E7E2+2743074]
+	GetHandleVerifier [0x007608D4+2685972]
+	GetHandleVerifier [0x00552BAA+532202]
+	GetHandleVerifier [0x00551990+527568]
+	Ordinal0 [0x0046080C+1837068]
+	Ordinal0 [0x00464CD8+1854680]
+	Ordinal0 [0x00464DC5+1854917]
+	Ordinal0 [0x0046ED64+1895780]
+	BaseThreadInitThunk [0x772CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C77BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C77B8E+238]
+</msg>
+<msg timestamp="20221024 16:21:27.910" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004C1ED3+2236115]
+	Ordinal0 [0x004592F1+1807089]
+	Ordinal0 [0x003666FD+812797]
+	Ordinal0 [0x0034DFFA+712698]
+	Ordinal0 [0x003B506B+1134699]
+	Ordinal0 [0x003C514A+1200458]
+	Ordinal0 [0x003B18A6+1120422]
+	Ordinal0 [0x0038A73D+960317]
+	Ordinal0 [0x0038B71F+964383]
+	GetHandleVerifier [0x0076E7E2+2743074]
+	GetHandleVerifier [0x007608D4+2685972]
+	GetHandleVerifier [0x00552BAA+532202]
+	GetHandleVerifier [0x00551990+527568]
+	Ordinal0 [0x0046080C+1837068]
+	Ordinal0 [0x00464CD8+1854680]
+	Ordinal0 [0x00464DC5+1854917]
+	Ordinal0 [0x0046ED64+1895780]
+	BaseThreadInitThunk [0x772CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C77BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C77B8E+238]
+</msg>
+<status status="FAIL" starttime="20221024 16:21:27.303" endtime="20221024 16:21:27.930"/>
 </kw>
-<status status="PASS" starttime="20221024 15:16:52.021" endtime="20221024 15:17:01.159"/>
-</kw>
-<kw name="Entrar no eixo &quot;Configuração&quot;" library="1-Principal" sourcename="Entrar no eixo &quot;${nomeEixo}&quot;">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult = document.evaluate("//div[@class='divEixo'][contains(.,'${nomeEixo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:01.163" level="INFO">Executing JavaScript:
-xPathResult = document.evaluate("//div[@class='divEixo'][contains(.,'Configuração')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:01.162" endtime="20221024 15:17:01.175"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult.singleNodeValue.click()</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:01.175" level="INFO">Executing JavaScript:
-xPathResult.singleNodeValue.click()
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:01.175" endtime="20221024 15:17:01.198"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:01.161" endtime="20221024 15:17:01.198"/>
+<status status="FAIL" starttime="20221024 16:21:27.302" endtime="20221024 16:21:27.931"/>
 </kw>
 <kw name="Entrar no módulo &quot;Transportes&quot;" library="1-Principal" sourcename="Entrar no módulo &quot;${nomeModulo}&quot;">
-<if>
-<branch type="IF" condition="'${nomeModulo}' == 'Gestão'">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult = document.evaluate("//span[contains(@id,'7')][contains(.,'Gestão')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20221024 15:17:01.201" endtime="20221024 15:17:01.202"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult.singleNodeValue.click()</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20221024 15:17:01.202" endtime="20221024 15:17:01.202"/>
-</kw>
-<status status="NOT RUN" starttime="20221024 15:17:01.201" endtime="20221024 15:17:01.202"/>
-</branch>
-<branch type="ELSE">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:01.205" level="INFO">Executing JavaScript:
-xPathResult = document.evaluate("//span[contains(.,'Transportes')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:01.204" endtime="20221024 15:17:02.295"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult.singleNodeValue.click()</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:02.297" level="INFO">Executing JavaScript:
-xPathResult.singleNodeValue.click()
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:02.296" endtime="20221024 15:17:02.315"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:01.203" endtime="20221024 15:17:02.316"/>
-</branch>
-<status status="PASS" starttime="20221024 15:17:01.201" endtime="20221024 15:17:02.316"/>
-</if>
-<status status="PASS" starttime="20221024 15:17:01.200" endtime="20221024 15:17:02.316"/>
-</kw>
-<kw name="Entrar na funcionalidade &quot;Tipos de Frotas&quot;" library="1-Principal" sourcename="Entrar na funcionalidade &quot;${funcionalidade}&quot;">
-<if>
-<branch type="IF" condition="'${funcionalidade}' == 'Processo de Demandas'">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult = document.evaluate("//span[@title='Processo de Demandas']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20221024 15:17:02.321" endtime="20221024 15:17:02.321"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult.singleNodeValue.click()</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20221024 15:17:02.323" endtime="20221024 15:17:02.323"/>
-</kw>
-<status status="NOT RUN" starttime="20221024 15:17:02.320" endtime="20221024 15:17:02.324"/>
-</branch>
-<branch type="ELSE">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult = document.evaluate("//span[contains(@title,'${funcionalidade}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:02.326" level="INFO">Executing JavaScript:
-xPathResult = document.evaluate("//span[contains(@title,'Tipos de Frotas')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:02.324" endtime="20221024 15:17:04.757"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult.singleNodeValue.click()</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:04.760" level="INFO">Executing JavaScript:
-xPathResult.singleNodeValue.click()
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:04.759" endtime="20221024 15:17:04.784"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:02.324" endtime="20221024 15:17:04.785"/>
-</branch>
-<status status="PASS" starttime="20221024 15:17:02.319" endtime="20221024 15:17:04.785"/>
-</if>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:04.789" endtime="20221024 15:17:06.482"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:04.786" endtime="20221024 15:17:06.483"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:02.319" endtime="20221024 15:17:06.483"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em Cadastrar" library="TiposDeFrotas">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>cphContent_btnCadastrar</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221024 15:17:06.486" endtime="20221024 15:17:06.533"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_btnCadastrar").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:06.535" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnCadastrar").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:06.534" endtime="20221024 15:17:06.558"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:06.561" endtime="20221024 15:17:07.736"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:06.559" endtime="20221024 15:17:07.737"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:06.485" endtime="20221024 15:17:07.737"/>
-</kw>
-<kw name="Em Tipos de Frotas, em Descrição, inserir &quot;TIPO FROTA AUTOMACAO&quot;" library="TiposDeFrotas" sourcename="Em Tipos de Frotas, em Descrição, inserir &quot;${descricaoTipoFrota}&quot;">
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${descricaoTipoFrota}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20221024 15:17:07.741" level="INFO">${descricaoTipoFrota} = TIPO FROTA AUTOMACAO</msg>
-<status status="PASS" starttime="20221024 15:17:07.740" endtime="20221024 15:17:07.741"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Gestão de Transporte</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221024 15:17:07.742" endtime="20221024 15:17:07.778"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtDescricao</arg>
-<arg>${descricaoTipoFrota}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:17:07.778" level="INFO">Typing text 'TIPO FROTA AUTOMACAO' into text field 'cphContent_txtDescricao'.</msg>
-<status status="PASS" starttime="20221024 15:17:07.778" endtime="20221024 15:17:07.898"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:07.738" endtime="20221024 15:17:07.898"/>
-</kw>
-<kw name="Em Tipos de Frotas, em Sigla, inserir &quot;TFA&quot;" library="TiposDeFrotas" sourcename="Em Tipos de Frotas, em Sigla, inserir &quot;${siglaTipoFrota}&quot;">
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${siglaTipoFrota}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20221024 15:17:07.902" level="INFO">${siglaTipoFrota} = TFA</msg>
-<status status="PASS" starttime="20221024 15:17:07.901" endtime="20221024 15:17:07.902"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtSigla</arg>
-<arg>${siglaTipoFrota}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:17:07.904" level="INFO">Typing text 'TFA' into text field 'cphContent_txtSigla'.</msg>
-<status status="PASS" starttime="20221024 15:17:07.903" endtime="20221024 15:17:08.014"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:07.900" endtime="20221024 15:17:08.014"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em Salvar" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_btnSalvar").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:08.017" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnSalvar").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:08.016" endtime="20221024 15:17:08.031"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:08.033" endtime="20221024 15:17:09.151"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:08.032" endtime="20221024 15:17:09.152"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:08.015" endtime="20221024 15:17:09.153"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em OK no modal" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:09.157" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:09.156" endtime="20221024 15:17:09.170"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:09.173" endtime="20221024 15:17:11.514"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:09.172" endtime="20221024 15:17:11.514"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:09.154" endtime="20221024 15:17:11.515"/>
-</kw>
-<kw name="Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado" library="TiposDeFrotas">
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Consultar Tipos de Frotas</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221024 15:17:11.517" endtime="20221024 15:17:11.553"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtDescricao</arg>
-<arg>${descricaoTipoFrota}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:17:11.554" level="INFO">Typing text 'TIPO FROTA AUTOMACAO' into text field 'cphContent_txtDescricao'.</msg>
-<status status="PASS" starttime="20221024 15:17:11.554" endtime="20221024 15:17:11.660"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:11.515" endtime="20221024 15:17:11.660"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em Pesquisar" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_btnPesquisa").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:11.662" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnPesquisa").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:11.662" endtime="20221024 15:17:11.676"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:11.679" endtime="20221024 15:17:13.652"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:11.677" endtime="20221024 15:17:13.652"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:11.661" endtime="20221024 15:17:13.652"/>
-</kw>
-<kw name="Em Tipos de Frotas, verificar se o tipo de rota foi cadastrado" library="TiposDeFrotas">
-<kw name="Wait Until Element Contains" library="SeleniumLibrary">
-<arg>cphContent_dtlConsulta_lblDescricao_0</arg>
-<arg>${descricaoTipoFrota}</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20221024 15:17:13.655" endtime="20221024 15:17:13.699"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:13.654" endtime="20221024 15:17:13.699"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em Ações e Editar" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:13.702" level="INFO">Executing JavaScript:
-xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:13.701" endtime="20221024 15:17:13.710"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult.singleNodeValue.click()</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:13.711" level="INFO">Executing JavaScript:
-xPathResult.singleNodeValue.click()
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:13.710" endtime="20221024 15:17:13.729"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_dtlConsulta_lnkEditar_0").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:13.730" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_dtlConsulta_lnkEditar_0").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:13.729" endtime="20221024 15:17:13.777"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:13.779" endtime="20221024 15:17:15.171"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:13.778" endtime="20221024 15:17:15.171"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:13.700" endtime="20221024 15:17:15.171"/>
-</kw>
-<kw name="Em Tipos de Frotas, em Descrição, inserir &quot;TIPO FROTA AUTOMACAO EDITADO&quot;" library="TiposDeFrotas" sourcename="Em Tipos de Frotas, em Descrição, inserir &quot;${descricaoTipoFrota}&quot;">
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${descricaoTipoFrota}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20221024 15:17:15.173" level="INFO">${descricaoTipoFrota} = TIPO FROTA AUTOMACAO EDITADO</msg>
-<status status="PASS" starttime="20221024 15:17:15.173" endtime="20221024 15:17:15.174"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Gestão de Transporte</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221024 15:17:15.174" endtime="20221024 15:17:15.198"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtDescricao</arg>
-<arg>${descricaoTipoFrota}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:17:15.200" level="INFO">Typing text 'TIPO FROTA AUTOMACAO EDITADO' into text field 'cphContent_txtDescricao'.</msg>
-<status status="PASS" starttime="20221024 15:17:15.199" endtime="20221024 15:17:15.298"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:15.173" endtime="20221024 15:17:15.298"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em Salvar" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_btnSalvar").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:15.300" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnSalvar").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:15.300" endtime="20221024 15:17:15.312"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:15.313" endtime="20221024 15:17:16.240"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:15.313" endtime="20221024 15:17:16.240"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:15.299" endtime="20221024 15:17:16.240"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em OK no modal" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:16.242" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:16.241" endtime="20221024 15:17:16.249"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:16.250" endtime="20221024 15:17:17.219"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:16.250" endtime="20221024 15:17:17.220"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:16.241" endtime="20221024 15:17:17.221"/>
-</kw>
-<kw name="Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado" library="TiposDeFrotas">
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Consultar Tipos de Frotas</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221024 15:17:17.224" endtime="20221024 15:17:17.253"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtDescricao</arg>
-<arg>${descricaoTipoFrota}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:17:17.256" level="INFO">Typing text 'TIPO FROTA AUTOMACAO EDITADO' into text field 'cphContent_txtDescricao'.</msg>
-<status status="PASS" starttime="20221024 15:17:17.255" endtime="20221024 15:17:17.387"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:17.223" endtime="20221024 15:17:17.387"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em Pesquisar" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_btnPesquisa").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:17.391" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnPesquisa").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:17.390" endtime="20221024 15:17:17.401"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:17.404" endtime="20221024 15:17:17.985"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:17.403" endtime="20221024 15:17:17.985"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:17.389" endtime="20221024 15:17:17.985"/>
-</kw>
-<kw name="Em Tipos de Frotas, verificar se o tipo de rota foi cadastrado" library="TiposDeFrotas">
-<kw name="Wait Until Element Contains" library="SeleniumLibrary">
-<arg>cphContent_dtlConsulta_lblDescricao_0</arg>
-<arg>${descricaoTipoFrota}</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20221024 15:17:17.987" endtime="20221024 15:17:18.012"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:17.987" endtime="20221024 15:17:18.013"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em Ações e Excluir" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:18.016" level="INFO">Executing JavaScript:
-xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:18.015" endtime="20221024 15:17:18.023"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>xPathResult.singleNodeValue.click()</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:18.025" level="INFO">Executing JavaScript:
-xPathResult.singleNodeValue.click()
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:18.024" endtime="20221024 15:17:18.033"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_dtlConsulta_lnkExcluir_0").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:18.034" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_dtlConsulta_lnkExcluir_0").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:18.033" endtime="20221024 15:17:18.044"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:18.045" endtime="20221024 15:17:18.769"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:18.045" endtime="20221024 15:17:18.769"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:18.014" endtime="20221024 15:17:18.769"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em Sim no modal" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_Mensagem_Padrao_btnSim").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:18.774" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_Mensagem_Padrao_btnSim").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:18.773" endtime="20221024 15:17:18.786"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:18.788" endtime="20221024 15:17:19.973"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:18.787" endtime="20221024 15:17:19.973"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:18.771" endtime="20221024 15:17:19.973"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em OK no modal" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:19.975" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:19.975" endtime="20221024 15:17:19.982"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:19.983" endtime="20221024 15:17:20.704"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:19.982" endtime="20221024 15:17:20.705"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:19.974" endtime="20221024 15:17:20.705"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em Cadastrar" library="TiposDeFrotas">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>cphContent_btnCadastrar</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221024 15:17:20.707" endtime="20221024 15:17:20.739"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_btnCadastrar").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:20.741" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnCadastrar").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:20.739" endtime="20221024 15:17:20.753"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:20.755" endtime="20221024 15:17:22.025"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:20.755" endtime="20221024 15:17:22.026"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:20.706" endtime="20221024 15:17:22.026"/>
-</kw>
-<kw name="Em Tipos de Frotas, em Descrição, inserir &quot;TIPO FROTA AUTOMACAO&quot;" library="TiposDeFrotas" sourcename="Em Tipos de Frotas, em Descrição, inserir &quot;${descricaoTipoFrota}&quot;">
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${descricaoTipoFrota}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20221024 15:17:22.028" level="INFO">${descricaoTipoFrota} = TIPO FROTA AUTOMACAO</msg>
-<status status="PASS" starttime="20221024 15:17:22.028" endtime="20221024 15:17:22.028"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Gestão de Transporte</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221024 15:17:22.028" endtime="20221024 15:17:22.049"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtDescricao</arg>
-<arg>${descricaoTipoFrota}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:17:22.050" level="INFO">Typing text 'TIPO FROTA AUTOMACAO' into text field 'cphContent_txtDescricao'.</msg>
-<status status="PASS" starttime="20221024 15:17:22.050" endtime="20221024 15:17:22.132"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:22.027" endtime="20221024 15:17:22.132"/>
-</kw>
-<kw name="Em Tipos de Frotas, em Sigla, inserir &quot;TFA&quot;" library="TiposDeFrotas" sourcename="Em Tipos de Frotas, em Sigla, inserir &quot;${siglaTipoFrota}&quot;">
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${siglaTipoFrota}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20221024 15:17:22.134" level="INFO">${siglaTipoFrota} = TFA</msg>
-<status status="PASS" starttime="20221024 15:17:22.134" endtime="20221024 15:17:22.135"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtSigla</arg>
-<arg>${siglaTipoFrota}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:17:22.135" level="INFO">Typing text 'TFA' into text field 'cphContent_txtSigla'.</msg>
-<status status="PASS" starttime="20221024 15:17:22.135" endtime="20221024 15:17:22.212"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:22.133" endtime="20221024 15:17:22.212"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em Salvar" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_btnSalvar").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:22.214" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_btnSalvar").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:22.214" endtime="20221024 15:17:22.224"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:22.226" endtime="20221024 15:17:22.968"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:22.226" endtime="20221024 15:17:22.969"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:22.213" endtime="20221024 15:17:22.969"/>
-</kw>
-<kw name="Em Tipos de Frotas, clicar em OK no modal" library="TiposDeFrotas">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221024 15:17:22.971" level="INFO">Executing JavaScript:
-document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();
-Without any arguments.</msg>
-<status status="PASS" starttime="20221024 15:17:22.970" endtime="20221024 15:17:22.978"/>
-</kw>
-<kw name="Aguardar tela de carregamento" library="1-Principal">
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>class=carregando</arg>
-<arg>300</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20221024 15:17:22.979" endtime="20221024 15:17:23.756"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:22.978" endtime="20221024 15:17:23.757"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:22.970" endtime="20221024 15:17:23.757"/>
-</kw>
-<kw name="Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado" library="TiposDeFrotas">
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Consultar Tipos de Frotas</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221024 15:17:23.759" endtime="20221024 15:17:23.784"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>cphContent_txtDescricao</arg>
-<arg>${descricaoTipoFrota}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221024 15:17:23.784" level="INFO">Typing text 'TIPO FROTA AUTOMACAO' into text field 'cphContent_txtDescricao'.</msg>
-<status status="PASS" starttime="20221024 15:17:23.784" endtime="20221024 15:17:23.884"/>
-</kw>
-<status status="PASS" starttime="20221024 15:17:23.758" endtime="20221024 15:17:23.885"/>
+<status status="NOT RUN" starttime="20221024 16:21:27.937" endtime="20221024 16:21:27.937"/>
+</kw>
+<kw name="Entrar na funcionalidade &quot;Viagens&quot;" library="1-Principal" sourcename="Entrar na funcionalidade &quot;${funcionalidade}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.938" endtime="20221024 16:21:27.938"/>
+</kw>
+<kw name="Em Viagens, clicar em Cadastrar" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.939" endtime="20221024 16:21:27.939"/>
+</kw>
+<kw name="Em Viagens, em Nome, inserir &quot;VIAGEM AUTOMACAO&quot;" library="Viagens" sourcename="Em Viagens, em Nome, inserir &quot;${nomeViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.943" endtime="20221024 16:21:27.944"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Rota, selecionar &quot;AUTOMACAO ROTA&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Rota, selecionar &quot;${rotaViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.945" endtime="20221024 16:21:27.946"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Vigência Inicial, inserir &quot;01/01/2022&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Vigência Inicial, inserir &quot;${dataVigenciaInicial}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.947" endtime="20221024 16:21:27.947"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Vigência Final, inserir &quot;31/12/2022&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Vigência Final, inserir &quot;${dataVigenciaFinal}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.948" endtime="20221024 16:21:27.948"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Frota, selecionar &quot;FROTA INTERNA&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Frota, selecionar &quot;${frotaViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.954" endtime="20221024 16:21:27.954"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Veículo, selecionar &quot;RENAULT - SANDERO - FSN9561 DT2121&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Veículo, selecionar &quot;${frotaViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.956" endtime="20221024 16:21:27.956"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Período, selecionar &quot;MANHÃ&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Período, selecionar &quot;${periodoViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.957" endtime="20221024 16:21:27.957"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Horário Inicial De, inserir &quot;06:00&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Horário Inicial De, inserir &quot;${horarioInicialDeViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.959" endtime="20221024 16:21:27.959"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Horário Inicial Até, inserir &quot;08:00&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Horário Inicial Até, inserir &quot;${horarioInicialAteViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.960" endtime="20221024 16:21:27.960"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Horário Final De, inserir &quot;12:00&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Horário Final De, inserir &quot;${horarioFindalDeViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.961" endtime="20221024 16:21:27.962"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Horário Final Até, inserir &quot;14:00&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Horário Final Até, inserir &quot;${horarioFinalAteViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.963" endtime="20221024 16:21:27.963"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Dia da Semana, clicar em &quot;TODOS&quot;" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.964" endtime="20221024 16:21:27.964"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em Salvar" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.966" endtime="20221024 16:21:27.966"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em OK no modal" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.969" endtime="20221024 16:21:27.970"/>
+</kw>
+<kw name="Em Viagens, em Nome, inserir &quot;VIAGEM AUTOMACAO&quot;" library="Viagens" sourcename="Em Viagens, em Nome, inserir &quot;${nomeViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.970" endtime="20221024 16:21:27.971"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em Pesquisar" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.972" endtime="20221024 16:21:27.972"/>
+</kw>
+<kw name="Em Cadastrar Viagens, verificar se a viagem foi cadastrada" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.973" endtime="20221024 16:21:27.973"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em Ações e Editar" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.974" endtime="20221024 16:21:27.974"/>
+</kw>
+<kw name="Em Viagens, em Nome, inserir &quot;VIAGEM AUTOMACAO EDITADO&quot;" library="Viagens" sourcename="Em Viagens, em Nome, inserir &quot;${nomeViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.974" endtime="20221024 16:21:27.975"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em Salvar" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.975" endtime="20221024 16:21:27.975"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em OK no modal" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.976" endtime="20221024 16:21:27.976"/>
+</kw>
+<kw name="Em Viagens, em Nome, inserir &quot;VIAGEM AUTOMACAO EDITADO&quot;" library="Viagens" sourcename="Em Viagens, em Nome, inserir &quot;${nomeViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.978" endtime="20221024 16:21:27.979"/>
+</kw>
+<kw name="Em Cadastrar Viagens, verificar se a viagem foi cadastrada" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.979" endtime="20221024 16:21:27.979"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em Ações e Excluir" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.980" endtime="20221024 16:21:27.981"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em Sim no modal" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.981" endtime="20221024 16:21:27.982"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em OK no modal" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.982" endtime="20221024 16:21:27.983"/>
+</kw>
+<kw name="Em Viagens, clicar em Cadastrar" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.983" endtime="20221024 16:21:27.983"/>
+</kw>
+<kw name="Em Viagens, em Nome, inserir &quot;VIAGEM AUTOMACAO&quot;" library="Viagens" sourcename="Em Viagens, em Nome, inserir &quot;${nomeViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.984" endtime="20221024 16:21:27.984"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Rota, selecionar &quot;AUTOMACAO ROTA&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Rota, selecionar &quot;${rotaViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.986" endtime="20221024 16:21:27.986"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Vigência Inicial, inserir &quot;01/01/2022&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Vigência Inicial, inserir &quot;${dataVigenciaInicial}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.988" endtime="20221024 16:21:27.988"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Vigência Final, inserir &quot;31/12/2022&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Vigência Final, inserir &quot;${dataVigenciaFinal}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.989" endtime="20221024 16:21:27.989"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Frota, selecionar &quot;FROTA AUTOMACAO&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Frota, selecionar &quot;${frotaViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.989" endtime="20221024 16:21:27.989"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Veículo, selecionar &quot;TST AUT&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Veículo, selecionar &quot;${frotaViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.990" endtime="20221024 16:21:27.990"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Período, selecionar &quot;MANHÃ&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Período, selecionar &quot;${periodoViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.991" endtime="20221024 16:21:27.991"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Horário Inicial De, inserir &quot;06:00&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Horário Inicial De, inserir &quot;${horarioInicialDeViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.992" endtime="20221024 16:21:27.993"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Horário Inicial Até, inserir &quot;08:00&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Horário Inicial Até, inserir &quot;${horarioInicialAteViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.993" endtime="20221024 16:21:27.994"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Horário Final De, inserir &quot;12:00&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Horário Final De, inserir &quot;${horarioFindalDeViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.994" endtime="20221024 16:21:27.994"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Horário Final Até, inserir &quot;14:00&quot;" library="Viagens" sourcename="Em Cadastrar Viagens, em Horário Final Até, inserir &quot;${horarioFinalAteViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.995" endtime="20221024 16:21:27.996"/>
+</kw>
+<kw name="Em Cadastrar Viagens, em Dia da Semana, clicar em &quot;TODOS&quot;" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.996" endtime="20221024 16:21:27.996"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em Salvar" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.997" endtime="20221024 16:21:27.997"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em OK no modal" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.998" endtime="20221024 16:21:27.998"/>
+</kw>
+<kw name="Em Viagens, em Nome, inserir &quot;VIAGEM AUTOMACAO&quot;" library="Viagens" sourcename="Em Viagens, em Nome, inserir &quot;${nomeViagem}&quot;">
+<status status="NOT RUN" starttime="20221024 16:21:27.999" endtime="20221024 16:21:27.999"/>
+</kw>
+<kw name="Em Cadastrar Viagens, clicar em Pesquisar" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:27.999" endtime="20221024 16:21:27.999"/>
+</kw>
+<kw name="Em Cadastrar Viagens, verificar se a viagem foi cadastrada" library="Viagens">
+<status status="NOT RUN" starttime="20221024 16:21:28.001" endtime="20221024 16:21:28.001"/>
 </kw>
 <kw name="Fechar o navegador" library="1-Principal" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20221024 15:17:24.159" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20221024 15:17:23.888" endtime="20221024 15:17:24.159"/>
+<msg timestamp="20221024 16:21:28.007" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004C1ED3+2236115]
+	Ordinal0 [0x004592F1+1807089]
+	Ordinal0 [0x003666FD+812797]
+	Ordinal0 [0x0034DFFA+712698]
+	Ordinal0 [0x003B506B+1134699]
+	Ordinal0 [0x003C514A+1200458]
+	Ordinal0 [0x003B18A6+1120422]
+	Ordinal0 [0x0038A73D+960317]
+	Ordinal0 [0x0038B71F+964383]
+	GetHandleVerifier [0x0076E7E2+2743074]
+	GetHandleVerifier [0x007608D4+2685972]
+	GetHandleVerifier [0x00552BAA+532202]
+	GetHandleVerifier [0x00551990+527568]
+	Ordinal0 [0x0046080C+1837068]
+	Ordinal0 [0x00464CD8+1854680]
+	Ordinal0 [0x00464DC5+1854917]
+	Ordinal0 [0x0046ED64+1895780]
+	BaseThreadInitThunk [0x772CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C77BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C77B8E+238]
+</msg>
+<msg timestamp="20221024 16:21:28.011" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004C1ED3+2236115]
+	Ordinal0 [0x004592F1+1807089]
+	Ordinal0 [0x003666FD+812797]
+	Ordinal0 [0x0034DFFA+712698]
+	Ordinal0 [0x003B506B+1134699]
+	Ordinal0 [0x003C514A+1200458]
+	Ordinal0 [0x003B18A6+1120422]
+	Ordinal0 [0x0038A73D+960317]
+	Ordinal0 [0x0038B71F+964383]
+	GetHandleVerifier [0x0076E7E2+2743074]
+	GetHandleVerifier [0x007608D4+2685972]
+	GetHandleVerifier [0x00552BAA+532202]
+	GetHandleVerifier [0x00551990+527568]
+	Ordinal0 [0x0046080C+1837068]
+	Ordinal0 [0x00464CD8+1854680]
+	Ordinal0 [0x00464DC5+1854917]
+	Ordinal0 [0x0046ED64+1895780]
+	BaseThreadInitThunk [0x772CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C77BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C77B8E+238]
+</msg>
+<status status="FAIL" starttime="20221024 16:21:28.003" endtime="20221024 16:21:28.015"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221024 15:17:24.160" endtime="20221024 15:17:26.337"/>
+<status status="PASS" starttime="20221024 16:21:28.016" endtime="20221024 16:21:30.090"/>
 </kw>
-<status status="PASS" starttime="20221024 15:17:23.887" endtime="20221024 15:17:26.339"/>
+<status status="FAIL" starttime="20221024 16:21:28.002" endtime="20221024 16:21:30.090">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004C1ED3+2236115]
+	Ordinal0 [0x004592F1+1807089]
+	Ordinal0 [0x003666FD+812797]
+	Ordinal0 [0x0034DFFA+712698]
+	Ordinal0 [0x003B506B+1134699]
+	Ordinal0 [0x003C514A+1200458]
+	Ordinal0 [0x003B18A6+1120422]
+	Ordinal0 [0x0038A73D+960317]
+	Ordinal0 [0x0038B71F+964383]
+	GetHandleVerifier [0x0076E7E2+2743074]
+	GetHandleVerifier [0x007608D4+2685972]
+	GetHandleVerifier [0x00552BAA+532202]
+	GetHandleVerifier [0x00551990+527568]
+	Ordinal0 [0x0046080C+1837068]
+	Ordinal0 [0x00464CD8+1854680]
+	Ordinal0 [0x00464DC5+1854917]
+	Ordinal0 [0x0046ED64+1895780]
+	BaseThreadInitThunk [0x772CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C77BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C77B8E+238]
+</status>
 </kw>
 <doc>Esse teste verifica se é possível cadastrar, editar
 editar e excluir uma Viagem</doc>
 <tag>Viagens | Fluxo Positivo</tag>
-<status status="PASS" starttime="20221024 15:16:42.665" endtime="20221024 15:17:26.340"/>
+<status status="FAIL" starttime="20221024 16:21:16.556" endtime="20221024 16:21:30.091">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004C1ED3+2236115]
+	Ordinal0 [0x004592F1+1807089]
+	Ordinal0 [0x003666FD+812797]
+	Ordinal0 [0x0034DFFA+712698]
+	Ordinal0 [0x003B506B+1134699]
+	Ordinal0 [0x003C514A+1200458]
+	Ordinal0 [0x003B18A6+1120422]
+	Ordinal0 [0x0038A73D+960317]
+	Ordinal0 [0x0038B71F+964383]
+	GetHandleVerifier [0x0076E7E2+2743074]
+	GetHandleVerifier [0x007608D4+2685972]
+	GetHandleVerifier [0x00552BAA+532202]
+	GetHandleVerifier [0x00551990+527568]
+	Ordinal0 [0x0046080C+1837068]
+	Ordinal0 [0x00464CD8+1854680]
+	Ordinal0 [0x00464DC5+1854917]
+	Ordinal0 [0x0046ED64+1895780]
+	BaseThreadInitThunk [0x772CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C77BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C77B8E+238]
+
+
+Also teardown failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004C1ED3+2236115]
+	Ordinal0 [0x004592F1+1807089]
+	Ordinal0 [0x003666FD+812797]
+	Ordinal0 [0x0034DFFA+712698]
+	Ordinal0 [0x003B506B+1134699]
+	Ordinal0 [0x003C514A+1200458]
+	Ordinal0 [0x003B18A6+1120422]
+	Ordinal0 [0x0038A73D+960317]
+	Ordinal0 [0x0038B71F+964383]
+	GetHandleVerifier [0x0076E7E2+2743074]
+	GetHandleVerifier [0x007608D4+2685972]
+	GetHandleVerifier [0x00552BAA+532202]
+	GetHandleVerifier [0x00551990+527568]
+	Ordinal0 [0x0046080C+1837068]
+	Ordinal0 [0x00464CD8+1854680]
+	Ordinal0 [0x00464DC5+1854917]
+	Ordinal0 [0x0046ED64+1895780]
+	BaseThreadInitThunk [0x772CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C77BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C77B8E+238]
+</status>
 </test>
-<status status="PASS" starttime="20221024 15:16:41.534" endtime="20221024 15:17:26.344"/>
+<status status="FAIL" starttime="20221024 16:21:14.924" endtime="20221024 16:21:30.099"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Viagens | Fluxo Positivo</stat>
+<stat pass="0" fail="1" skip="0">Viagens | Fluxo Positivo</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TesteDeVersaoPositivo">TesteDeVersaoPositivo</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="TesteDeVersaoPositivo">TesteDeVersaoPositivo</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20221024 16:21:16.536" level="ERROR">Error in file 'c:\Users\rogerio.santos\Desktop\AUTOMAÇÃO WEB - GIER\Automação - Teste De Versão Gier\2-PageElements\FluxosPrincipais\Transportes\Viagens.robot' on line 90: Creating keyword 'Em Cadastrar Viagens, clicar em OK no modal' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20221024 16:21:27.904" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004C1ED3+2236115]
+	Ordinal0 [0x004592F1+1807089]
+	Ordinal0 [0x003666FD+812797]
+	Ordinal0 [0x0034DFFA+712698]
+	Ordinal0 [0x003B506B+1134699]
+	Ordinal0 [0x003C514A+1200458]
+	Ordinal0 [0x003B18A6+1120422]
+	Ordinal0 [0x0038A73D+960317]
+	Ordinal0 [0x0038B71F+964383]
+	GetHandleVerifier [0x0076E7E2+2743074]
+	GetHandleVerifier [0x007608D4+2685972]
+	GetHandleVerifier [0x00552BAA+532202]
+	GetHandleVerifier [0x00551990+527568]
+	Ordinal0 [0x0046080C+1837068]
+	Ordinal0 [0x00464CD8+1854680]
+	Ordinal0 [0x00464DC5+1854917]
+	Ordinal0 [0x0046ED64+1895780]
+	BaseThreadInitThunk [0x772CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C77BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C77B8E+238]
+</msg>
+<msg timestamp="20221024 16:21:28.007" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004C1ED3+2236115]
+	Ordinal0 [0x004592F1+1807089]
+	Ordinal0 [0x003666FD+812797]
+	Ordinal0 [0x0034DFFA+712698]
+	Ordinal0 [0x003B506B+1134699]
+	Ordinal0 [0x003C514A+1200458]
+	Ordinal0 [0x003B18A6+1120422]
+	Ordinal0 [0x0038A73D+960317]
+	Ordinal0 [0x0038B71F+964383]
+	GetHandleVerifier [0x0076E7E2+2743074]
+	GetHandleVerifier [0x007608D4+2685972]
+	GetHandleVerifier [0x00552BAA+532202]
+	GetHandleVerifier [0x00551990+527568]
+	Ordinal0 [0x0046080C+1837068]
+	Ordinal0 [0x00464CD8+1854680]
+	Ordinal0 [0x00464DC5+1854917]
+	Ordinal0 [0x0046ED64+1895780]
+	BaseThreadInitThunk [0x772CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C77BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C77B8E+238]
+</msg>
 </errors>
 </robot>

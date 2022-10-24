@@ -60,10 +60,6 @@ Em Cadastrar Viagens, clicar em Salvar
     Execute JavaScript  document.getElementById("cphContent_btnSalvar").click();
     Aguardar tela de carregamento
 
-Em Cadastrar Viagens, clicar em OK no modal
-    Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnOk").click();
-    Aguardar tela de carregamento
-
 Em Cadastrar Viagens, clicar em Pesquisar
     Execute JavaScript  document.getElementById("cphContent_btnPesquisa").click();
     Aguardar tela de carregamento
