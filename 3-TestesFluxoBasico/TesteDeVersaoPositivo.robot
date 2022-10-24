@@ -19,10 +19,12 @@ Resource         ../2-PageElements/FluxosPrincipais/Matricula/Matricular Educand
 Resource         ../2-PageElements/FluxosPrincipais/Matricula/Portal.robot
 Resource         ../2-PageElements/FluxosPrincipais/Matricula/Processo de Demanda.robot
 Resource         ../2-PageElements/FluxosPrincipais/Matricula/Programação de Processo.robot
+Resource         ../2-PageElements/FluxosPrincipais/Transportes/ParametrosDeTransporte.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/Rotas.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/TiposDeRotas.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/TiposDeFrotas.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/Frotas.robot
+Resource         ../2-PageElements/FluxosPrincipais/Transportes/Viagens.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Avaliações Educacionais.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
@@ -4097,7 +4099,6 @@ Cenário 64: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4228,28 +4229,48 @@ Cenário 66: Funcionalidade Gestão de Pré-Matrícula: Ações - Escola
     Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, em Observações, inserir "OBSERVAÇÃO CANCELAMENTO AUTOMAÇÃO"
     Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, clicar em Salvar
 
+Cenário 67: Funcionalidade Gestão de Pré-Matrícula: Ações - Secretaria
+    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
+    ...                dentro do GIER, para todas as etapas/modalidades.                
+    [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
+    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Registro de Atendimento
+    Em Gestão de Pré-Matrícula, em Histórico de Contato, selecionar Contato com Sucesso
+    Em Gestão de Pré-Matrícula, em Histórico de Contato, em Informações, inserir "TESTE INFORMAÇÃO AUTOMACAO"
+    Em Gestão de Pré-Matrícula, em Histórico de Contato, clicar em Salvar
+    Em Gestão de Pré-Matrícula, em Histórico de Contato, clicar em OK
+    Em Gestão de Pré-Matrícula, em Histórico de Contato, verificar se o registro foi salvo
+    Em Gestão de Pré-Matrícula, em Histórico de Contato, fechar o modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Origem e Documentação
+    Em Gestão de Pré-Matrícula, em Origem e Documentação, em Rede de Origem, selecionar "Municipal"
+    Em Gestão de Pré-Matrícula, em Origem e Documentação, em Escola Origem, inserir "ESCOLA ORIGEM AUTOMACAO"
+    Em Gestão de Pré-Matrícula, em Origem e Documentação, em Estado Origem, selecionar "SP"
+    Em Gestão de Pré-Matrícula, em Origem e Documentação, em País Origem, selecionar "Brasil"
+    Em Gestão de Pré-Matrícula, em Origem e Documentação, em Documentos Aprensentados, selecionar CPF e RG
+    Em Gestão de Pré-Matrícula, em Origem e Documentação, clicar em Salvar
+    Em Gestão de Pré-Matrícula, em Origem e Documentação, clicar em Ok
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Origem e Documentação
+    Em Gestão de Pré-Matrícula, em Origem e Documentação, verificar se os campos foram salvos corretamente
+    Em Gestão de Pré-Matrícula, em Origem e Documentação, fechar o modal
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Histórico de Alterações
+    Em Gestão de Pré-Matrícula, em Histórico de Alterações, verificar se o registro foi salvo
+    Em Gestão de Pré-Matrícula, em Histórico de Alterações, clicar em Fechar
+    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Cancelar Inscrição
+    Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, selecionar "OUTROS"
+    Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, em Observações, inserir "OBSERVAÇÃO CANCELAMENTO AUTOMAÇÃO"
+    Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, clicar em Salvar
 
-
-
-
-
-
-
-
-    
-# Cenário 35: Funcionalidade Gestão de Pré-Matrícula - Escola
-#     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
-#     ...                dentro do GIER, para todas as etapas/modalidades.                
-#     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Entrar no eixo "Operação"
-#     Entrar no módulo "Gestão de Educandos"
-#     Entrar na funcionalidade "Gestão de Pré-Matrícula"
-
-Cenário XX: Funcionalidade Parâmetros do Processo de Transporte
+Cenário 68: Funcionalidade Parâmetros do Processo de Transporte
     [Documentation]    Esse teste efetua o cadastro, configuração e edição
     ...                dos Parâmetros do Processo de Transporte                 
     [Tags]             Parâmetros do Processo de Transporte | Fluxo Positivo
@@ -4261,9 +4282,55 @@ Cenário XX: Funcionalidade Parâmetros do Processo de Transporte
     Entrar no eixo "Configuração"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Parâmetros do Processo de Transporte"
-    Em Parâmetros de Transporte
+    Em Parâmetros de Transporte, clicar em Cadastrar
+    No cadastro de Parâmetros de Transporte, em Data Inicial, inserir "01/01/2023"
+    No cadastro de Parâmetros de Transporte, em Data Final, inserir "31/12/2023"
+    No cadastro de Parâmetros de Transporte, em Processo de Transporte, inserir "PROCESSO DE TRANSPORTE AUTOMACAO"
+    No cadastro de Parâmetros de Transporte, em permite o deferimento e indeferimento pelas escolas, selecionar "Não"
+    No cadastro de Parâmetros de Transporte, em utilizar o indeferimento automático, selecionar "Sim"
+    No cadastro de Parâmetros de Transporte, em estruturas do indeferimento, selecionar "Escola"
+    No cadastro de Parâmetros de Transporte, em permite a escolha de veículo, selecionar "Não"
+    No cadastro de Parâmetros de Transporte, em retornar para o solicitante após o deferimento, selecionar "Sim"
+    No cadastro de Parâmetros de Transporte, em solicitação de transporte para beneficiários fora da rede, selecionar "Sim"
+    No cadastro de Parâmetros de Transporte, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
+    No cadastro de Parâmetros de Transporte, em Curso, selecionar "PRÉ-ESCOLA"
+    No cadastro de Parâmetros de Transporte, clicar em Incluir
+    No cadastro de Parâmetros de Transporte, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    No cadastro de Parâmetros de Transporte, em Curso, selecionar "CICLO I"
+    No cadastro de Parâmetros de Transporte, clicar em Incluir
+    No cadastro de Parâmetros de Transporte, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
+    No cadastro de Parâmetros de Transporte, em Curso, selecionar "CICLO II"
+    No cadastro de Parâmetros de Transporte, clicar em Incluir
+    No cadastro de Parâmetros de Transporte, em TEG, selecionar "Sim"
+    No cadastro de Parâmetros de Transporte, em Distância entre a residência e a escola, inserir "2"
+    No cadastro de Parâmetros de Transporte, em Parâmetro de Distância, selecionar "CARRO"
+    No cadastro de Parâmetros de Transporte, em Cálculo de Distância, selecionar "ROTEIRIZADA"
+    No cadastro de Parâmetros de Transporte, em TEG Adaptado, selecionar "Sim"
+    No cadastro de Parâmetros de Transporte, em Necessidades especiais incluídas, selecionar "CADEIRANTE"
+    No cadastro de Parâmetros de Transporte, em Necessidades Especiais, clicar em Incluir
+    No cadastro de Parâmetros de Transporte, em Necessidades especiais incluídas, selecionar "DEFICIÊNCIA FÍSICA - CADEIRANTE"
+    No cadastro de Parâmetros de Transporte, em Necessidades Especiais, clicar em Incluir
+    No cadastro de Parâmetros de Transporte, em grupo de campos, selecionar "Sim"
+    No cadastro de Parâmetros de Transporte, clicar em Salvar
+    No cadastro de Parâmetros de Transporte, clicar em OK no modal
+    Em Parâmetros de Transporte, selecionar o ano "2023"
+    Em Parâmetros de Transporte, clicar em Pesquisar
+    Em Parâmetros de Transporte, verificar se o cadastro foi efetuado
+    Em Parâmetros de Transporte, clicar em Ações e Editar
+    No cadastro de Parâmetros de Transporte, em Processo de Transporte, inserir "PROCESSO DE TRANSPORTE EDITADO"
+    No cadastro de Parâmetros de Transporte, clicar em Salvar
+    No cadastro de Parâmetros de Transporte, clicar em OK no modal
+    Em Parâmetros de Transporte, selecionar o ano "2023"
+    Em Parâmetros de Transporte, clicar em Pesquisar
+    Em Parâmetros de Transporte, verificar se o cadastro foi efetuado
+    Em Parâmetros de Transporte, clicar em Ações e Inativar
+    Em Parâmetros de Transporte, clicar em Sim no modal
+    Em Parâmetros de Transporte, clicar em Ok no modal
+    Em Parâmetros de Transporte, selecionar o ano "2023"
+    Em Parâmetros de Transporte, clicar em Pesquisar
+    Em Parâmetros de Transporte, verificar se o cadastro foi excluído
 
-Cenário XX: Funcionalidade Tipos de Rotas
+Cenário 69: Funcionalidade Tipos de Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Rota                
     [Tags]             Rotas | Fluxo Positivo
@@ -4301,7 +4368,7 @@ Cenário XX: Funcionalidade Tipos de Rotas
     Em Tipos de Rotas, clicar em Pesquisar
     Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO"
 
-Cenário XX: Funcionalidade Rotas
+Cenário 70: Funcionalidade Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Rota                
     [Tags]             Rotas | Fluxo Positivo
@@ -4366,7 +4433,7 @@ Cenário XX: Funcionalidade Rotas
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi cadastrada
 
-Cenário XX: Funcionalidade Tipos de Frotas
+Cenário 71: Funcionalidade Tipos de Frotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem                
     [Tags]             Viagens | Fluxo Positivo
@@ -4403,7 +4470,7 @@ Cenário XX: Funcionalidade Tipos de Frotas
     Em Tipos de Frotas, clicar em OK no modal
     Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado
 
-Cenário XX: Funcionalidade Frotas
+Cenário 72: Funcionalidade Frotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem
     [Tags]             Viagens | Fluxo Positivo
@@ -4445,20 +4512,58 @@ Cenário XX: Funcionalidade Frotas
     Em Frotas, clicar em Pesquisar
     Em Frotas, verificar se a frota foi cadastrada
 
-# Cenário 37: Funcionalidade Credenciamento de Condutores
-#     [Documentation]    Esse teste efetua o cadastro e edição do Credenciamento de Condutores                               
-#     [Tags]             Credenciamento de Condutores | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Verificar se aparece o texto "Operação"
-#     Entrar no eixo "Configuração"
-#     Entrar no módulo "Transportes"
-#     Entrar na funcionalidade "Credenciamento de Condutores"
-#     Em Credenciamento de Condutores, clicar em Cadastrar Condutores
+Cenário 73: Funcionalidade Credenciamento de Condutores
+    [Documentation]    Esse teste efetua o cadastro e edição do Credenciamento de Condutores                               
+    [Tags]             Credenciamento de Condutores | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no eixo "Configuração"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Credenciamento de Condutores"
+    Em Credenciamento de Condutores, clicar em Cadastrar Condutores
+    Em Credenciamento de Condutores, clicar em Cadastro de Pessoa Juridica
+    Em Cadastrar Fornecedores, inserir a razão social "RAZÃO SOCIAL TESTE AUTOMACAO"
+    Em Cadastrar Fornecedores, inserir um CNPJ aleatório
+    Em Cadastrar Fornecedores, Clicar em Salvar
+    Em Credenciamento de Condutores, clicar em Selecionar
+    Em Credenciamento de Condutores, em data de inscrição do condutor, inserir "01/01/2022"
+    Em Credenciamento de Condutores, clicar em Salvar e Próximo
+    Em Credenciamento de Condutores, em Nome da Escola inserir "EPG ALFREDO VOLPI"
+    Em Credenciamento de Condutores, clicar em Pesquisar
+    Em Credenciamento de Condutores, selecionar o período "MANHÃ"
+    Em Credenciamento de Condutores, selecionar o período "TARDE"
+    Em Credenciamento de Condutores, clicar em inserir
+    Em Credenciamento de Condutores, clicar em Salvar e Próximo
+    Em Credenciamento de Condutores, selecionar a marca "HYUNDAI"
+    Em Credenciamento de Condutores, selecionar o modelo "H100 GLS"
+    Em Credenciamento de Condutores, selecionar o ano de fabricação "2020"
+    Em Credenciamento de Condutores, selecionar o ano modelo "2020"
+    Em Credenciamento de Condutores, inserir o código do veículo "TST AUT"
+    Em Credenciamento de Condutores, inserir a placa do veículo "TST AUT"
+    Em Credenciamento de Condutores, inserir o prefixo do veículo "TST AUT"
+    Em Credenciamento de Condutores, inserir a cor do veículo "AZUL"
+    Em Credenciamento de Condutores, selecionar o tipo do veículo "ONIBUS"
+    Em Credenciamento de Condutores, selecionar o tipo do combústivel "GASOLINA"
+    Em Credenciamento de Condutores, selecionar a unidade de medida "PESSOAS"
+    Em Credenciamento de Condutores, inserir o número de eixos "2"
+    Em Credenciamento de Condutores, selecionar o Estado do veículo "SAO PAULO"
+    Em Credenciamento de Condutores, selecionar a Cidade do veículo "SAO PAULO"
+    Em Credenciamento de Condutores, selecionar em véiculo PCD "SIM"
+    Em Credenciamento de Condutores, inserir em vagas convencionais "50"
+    Em Credenciamento de Condutores, inserir em vagas PCD "50"
+    Em Credenciamento de Condutores, clicar em Adicionar Veículo
+    Clicar em Salvar e Próximo
+    Em Credenciamento de Condutores, selecionar 3 anexos
+    Clicar em Salvar e Próximo
+    Em Credenciamento de Condutores, em número do contrato inserir "AUTO 001"
+    Em Credenciamento de Condutores, em vigência de contrato inserir "01/01/2022"
+    Clicar em Salvar e Fechar
+    Em Credenciamento de Condutores, clicar em Adicionar Veículo
 
-Cenário XX: Funcionalidade Viagens
+Cenário 74: Funcionalidade Viagens
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem                
     [Tags]             Viagens | Fluxo Positivo
@@ -4470,12 +4575,51 @@ Cenário XX: Funcionalidade Viagens
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Viagens"
     Em Viagens, clicar em Cadastrar
-    Em Cadastrar Viagens, em Nome, inserir "VIAGEM AUTOMACAO"
+    Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO"
+    Em Cadastrar Viagens, em Rota, selecionar "AUTOMACAO ROTA"
+    Em Cadastrar Viagens, em Vigência Inicial, inserir "01/01/2022"
+    Em Cadastrar Viagens, em Vigência Final, inserir "31/12/2022"
+    Em Cadastrar Viagens, em Frota, selecionar "FROTA INTERNA"
+    Em Cadastrar Viagens, em Veículo, selecionar "RENAULT - SANDERO - FSN9561 DT2121"
+    Em Cadastrar Viagens, em Período, selecionar "MANHÃ"
+    Em Cadastrar Viagens, em Horário Inicial De, inserir "06:00"
+    Em Cadastrar Viagens, em Horário Inicial Até, inserir "08:00"
+    Em Cadastrar Viagens, em Horário Final De, inserir "12:00"
+    Em Cadastrar Viagens, em Horário Final Até, inserir "14:00"
+    Em Cadastrar Viagens, em Dia da Semana, clicar em "TODOS"
+    Em Cadastrar Viagens, clicar em Salvar
+    Em Cadastrar Viagens, clicar em OK no modal
+    Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO"
+    Em Cadastrar Viagens, clicar em Pesquisar
+    Em Cadastrar Viagens, verificar se a viagem foi cadastrada
+    Em Cadastrar Viagens, clicar em Ações e Editar
+    Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO EDITADO"
+    Em Cadastrar Viagens, clicar em Salvar
+    Em Cadastrar Viagens, clicar em OK no modal
+    Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO EDITADO"
+    Em Cadastrar Viagens, verificar se a viagem foi cadastrada
+    Em Cadastrar Viagens, clicar em Ações e Excluir
+    Em Cadastrar Viagens, clicar em Sim no modal
+    Em Cadastrar Viagens, clicar em OK no modal
+    Em Viagens, clicar em Cadastrar
+    Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO"
     Em Cadastrar Viagens, em Rota, selecionar "AUTOMACAO ROTA"
     Em Cadastrar Viagens, em Vigência Inicial, inserir "01/01/2022"
     Em Cadastrar Viagens, em Vigência Final, inserir "31/12/2022"
     Em Cadastrar Viagens, em Frota, selecionar "FROTA AUTOMACAO"
-
+    Em Cadastrar Viagens, em Veículo, selecionar "TST AUT"
+    Em Cadastrar Viagens, em Período, selecionar "MANHÃ"
+    Em Cadastrar Viagens, em Horário Inicial De, inserir "06:00"
+    Em Cadastrar Viagens, em Horário Inicial Até, inserir "08:00"
+    Em Cadastrar Viagens, em Horário Final De, inserir "12:00"
+    Em Cadastrar Viagens, em Horário Final Até, inserir "14:00"
+    Em Cadastrar Viagens, em Dia da Semana, clicar em "TODOS"
+    Em Cadastrar Viagens, clicar em Salvar
+    Em Cadastrar Viagens, clicar em OK no modal
+    Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO"
+    Em Cadastrar Viagens, clicar em Pesquisar
+    Em Cadastrar Viagens, verificar se a viagem foi cadastrada
+    
 # Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
 #     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
 #     ...                pela Escola, para um educando da Etapa Infantil        
