@@ -25,6 +25,8 @@ Resource         ../2-PageElements/FluxosPrincipais/Transportes/TiposDeRotas.rob
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/TiposDeFrotas.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/Frotas.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/Viagens.robot
+Resource         ../2-PageElements/FluxosPrincipais/Transportes/CredenciamentoDeCondutores.robot
+Resource         ../2-PageElements/FluxosPrincipais/Transportes/SolicitacaoDeTransporte.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Avaliações Educacionais.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
@@ -4292,23 +4294,23 @@ Cenário 68: Funcionalidade Parâmetros do Processo de Transporte
     No cadastro de Parâmetros de Transporte, em permite a escolha de veículo, selecionar "Não"
     No cadastro de Parâmetros de Transporte, em retornar para o solicitante após o deferimento, selecionar "Sim"
     No cadastro de Parâmetros de Transporte, em solicitação de transporte para beneficiários fora da rede, selecionar "Sim"
-    No cadastro de Parâmetros de Transporte, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
-    No cadastro de Parâmetros de Transporte, em Curso, selecionar "PRÉ-ESCOLA"
+    No cadastro de Parâmetros de Transporte, em Etapa/Modalidade, selecionar "Educação Infantil"
+    No cadastro de Parâmetros de Transporte, em Curso, selecionar "Pré-Escola"
     No cadastro de Parâmetros de Transporte, clicar em Incluir
-    No cadastro de Parâmetros de Transporte, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    No cadastro de Parâmetros de Transporte, em Curso, selecionar "CICLO I"
+    No cadastro de Parâmetros de Transporte, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    No cadastro de Parâmetros de Transporte, em Curso, selecionar "Ciclo I"
     No cadastro de Parâmetros de Transporte, clicar em Incluir
-    No cadastro de Parâmetros de Transporte, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    No cadastro de Parâmetros de Transporte, em Curso, selecionar "CICLO II"
+    No cadastro de Parâmetros de Transporte, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    No cadastro de Parâmetros de Transporte, em Curso, selecionar "Ciclo II"
     No cadastro de Parâmetros de Transporte, clicar em Incluir
     No cadastro de Parâmetros de Transporte, em TEG, selecionar "Sim"
     No cadastro de Parâmetros de Transporte, em Distância entre a residência e a escola, inserir "2"
-    No cadastro de Parâmetros de Transporte, em Parâmetro de Distância, selecionar "CARRO"
-    No cadastro de Parâmetros de Transporte, em Cálculo de Distância, selecionar "ROTEIRIZADA"
+    No cadastro de Parâmetros de Transporte, em Parâmetro de Distância, selecionar "Carro"
+    No cadastro de Parâmetros de Transporte, em Cálculo de Distância, selecionar "Roteirizada"
     No cadastro de Parâmetros de Transporte, em TEG Adaptado, selecionar "Sim"
-    No cadastro de Parâmetros de Transporte, em Necessidades especiais incluídas, selecionar "CADEIRANTE"
+    No cadastro de Parâmetros de Transporte, em Necessidades especiais incluídas, selecionar "Cadeirante"
     No cadastro de Parâmetros de Transporte, em Necessidades Especiais, clicar em Incluir
-    No cadastro de Parâmetros de Transporte, em Necessidades especiais incluídas, selecionar "DEFICIÊNCIA FÍSICA - CADEIRANTE"
+    No cadastro de Parâmetros de Transporte, em Necessidades especiais incluídas, selecionar "Deficiência Física - Cadeirante"
     No cadastro de Parâmetros de Transporte, em Necessidades Especiais, clicar em Incluir
     No cadastro de Parâmetros de Transporte, em grupo de campos, selecionar "Sim"
     No cadastro de Parâmetros de Transporte, clicar em Salvar
@@ -4520,48 +4522,91 @@ Cenário 73: Funcionalidade Credenciamento de Condutores
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no eixo "Configuração"
+    Entrar no eixo "Operação"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Credenciamento de Condutores"
     Em Credenciamento de Condutores, clicar em Cadastrar Condutores
     Em Credenciamento de Condutores, clicar em Cadastro de Pessoa Juridica
-    Em Cadastrar Fornecedores, inserir a razão social "RAZÃO SOCIAL TESTE AUTOMACAO"
+    Em Cadastrar Fornecedores, inserir a razão social "TESTE AUTOMACAO"
+    Em Cadastrar Fornecedores, inserir o nome fantasia "TESTE AUTOMACAO "
     Em Cadastrar Fornecedores, inserir um CNPJ aleatório
     Em Cadastrar Fornecedores, Clicar em Salvar
     Em Credenciamento de Condutores, clicar em Selecionar
-    Em Credenciamento de Condutores, em data de inscrição do condutor, inserir "01/01/2022"
+    Em Credenciamento de Condutores, em data de inscrição do condutor, inserir "25/10/2022"
+    Em Credenciamento de Condutores, clicar em Salvar e Próximo
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Credenciamento de Condutores"
+    Em Credenciamento de Condutores, Nome do Condutor selecionar o cadastro criado
+    Em Credenciamento de Condutores, em consulta, clicar em Pesquisar
+    Em Credenciamento de Condutores, verificar se o status está como "EM CADASTRO"
+    Em Credenciamento de Condutores, clicar em Ações e Analisar Credenciamento
     Em Credenciamento de Condutores, clicar em Salvar e Próximo
     Em Credenciamento de Condutores, em Nome da Escola inserir "EPG ALFREDO VOLPI"
     Em Credenciamento de Condutores, clicar em Pesquisar
     Em Credenciamento de Condutores, selecionar o período "MANHÃ"
     Em Credenciamento de Condutores, selecionar o período "TARDE"
-    Em Credenciamento de Condutores, clicar em inserir
-    Em Credenciamento de Condutores, clicar em Salvar e Próximo
+    Em Credenciamento de Condutores, clicar em INSERIR
+    Em Credenciamento de Condutores, clicar em Salvar e Próximo no passo 2
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Credenciamento de Condutores"
+    Em Credenciamento de Condutores, Nome do Condutor selecionar o cadastro criado
+    Em Credenciamento de Condutores, em consulta, clicar em Pesquisar
+    Em Credenciamento de Condutores, verificar se o status está como "EM CADASTRO"
+    Em Credenciamento de Condutores, clicar em Ações e Analisar Credenciamento
+    Em Credenciamento de Condutores, clicar em Salvar e Próximo no passo 2
     Em Credenciamento de Condutores, selecionar a marca "HYUNDAI"
     Em Credenciamento de Condutores, selecionar o modelo "H100 GLS"
     Em Credenciamento de Condutores, selecionar o ano de fabricação "2020"
     Em Credenciamento de Condutores, selecionar o ano modelo "2020"
     Em Credenciamento de Condutores, inserir o código do veículo "TST AUT"
-    Em Credenciamento de Condutores, inserir a placa do veículo "TST AUT"
+    Em Credenciamento de Condutores, inserir a placa do veículo "AUT"
     Em Credenciamento de Condutores, inserir o prefixo do veículo "TST AUT"
     Em Credenciamento de Condutores, inserir a cor do veículo "AZUL"
-    Em Credenciamento de Condutores, selecionar o tipo do veículo "ONIBUS"
-    Em Credenciamento de Condutores, selecionar o tipo do combústivel "GASOLINA"
-    Em Credenciamento de Condutores, selecionar a unidade de medida "PESSOAS"
+    Em Credenciamento de Condutores, selecionar o tipo do veículo "ÔNIBUS"
+    Em Credenciamento de Condutores, selecionar o tipo do combústivel "Gasolina"
+    Em Credenciamento de Condutores, selecionar a unidade de medida "Pessoas"
     Em Credenciamento de Condutores, inserir o número de eixos "2"
-    Em Credenciamento de Condutores, selecionar o Estado do veículo "SAO PAULO"
+    Em Credenciamento de Condutores, selecionar o Estado do veículo "Sao Paulo"
     Em Credenciamento de Condutores, selecionar a Cidade do veículo "SAO PAULO"
-    Em Credenciamento de Condutores, selecionar em véiculo PCD "SIM"
+    Em Credenciamento de Condutores, selecionar em veículo PCD "Sim"
     Em Credenciamento de Condutores, inserir em vagas convencionais "50"
     Em Credenciamento de Condutores, inserir em vagas PCD "50"
     Em Credenciamento de Condutores, clicar em Adicionar Veículo
-    Clicar em Salvar e Próximo
+    Em Credenciamento de Condutores, clicar em Salvar e Próximo no passo 3
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Credenciamento de Condutores"
+    Em Credenciamento de Condutores, Nome do Condutor selecionar o cadastro criado
+    Em Credenciamento de Condutores, em consulta, clicar em Pesquisar
+    Em Credenciamento de Condutores, verificar se o status está como "EM CADASTRO"
+    Em Credenciamento de Condutores, clicar em Ações e Analisar Credenciamento
+    Em Credenciamento de Condutores, clicar em Salvar e Próximo no passo 3
     Em Credenciamento de Condutores, selecionar 3 anexos
-    Clicar em Salvar e Próximo
+    Em Credenciamento de Condutores, clicar em Salvar e Próximo no passo 4
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Credenciamento de Condutores"
+    Em Credenciamento de Condutores, Nome do Condutor selecionar o cadastro criado
+    Em Credenciamento de Condutores, em consulta, clicar em Pesquisar
+    Em Credenciamento de Condutores, verificar se o status está como "AGUARDANDO DOCUMENTAÇÃO"
+    Em Credenciamento de Condutores, clicar em Ações e Analisar Credenciamento
+    Em Credenciamento de Condutores, selecionar os anexos restantes
+    Em Credenciamento de Condutores, clicar em Salvar e Próximo no passo 4
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Credenciamento de Condutores"
+    Em Credenciamento de Condutores, Nome do Condutor selecionar o cadastro criado
+    Em Credenciamento de Condutores, em consulta, clicar em Pesquisar
+    Em Credenciamento de Condutores, verificar se o status está como "AGUARDANDO ANÁLISE"
+    Em Credenciamento de Condutores, verificar se o status da documentação está como "SIM"
+    Em Credenciamento de Condutores, clicar em Ações e Analisar Credenciamento
+    Em Credenciamento de Condutores, clicar em Salvar e Próximo no passo 4  
     Em Credenciamento de Condutores, em número do contrato inserir "AUTO 001"
     Em Credenciamento de Condutores, em vigência de contrato inserir "01/01/2022"
-    Clicar em Salvar e Fechar
-    Em Credenciamento de Condutores, clicar em Adicionar Veículo
+    Em Credenciamento de Condutores, clicar em Salvar e Fechar
+    Em Credenciamento de Condutores, Nome do Condutor selecionar o cadastro criado
+    Em Credenciamento de Condutores, em consulta, clicar em Pesquisar
+    Em Credenciamento de Condutores, clicar em Ações e Credenciar
+    Em Credenciamento de Condutores, clicar em Sim no Modal
+    Em Credenciamento de Condutores, clicar em Ok no Modal
+    Em Credenciamento de Condutores, verificar se o status está como "CREDENCIADO"
 
 Cenário 74: Funcionalidade Viagens
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
@@ -4619,17 +4664,18 @@ Cenário 74: Funcionalidade Viagens
     Em Cadastrar Viagens, clicar em Pesquisar
     Em Cadastrar Viagens, verificar se a viagem foi cadastrada
     
-# Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
-#     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
-#     ...                pela Escola, para um educando da Etapa Infantil        
-#     [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Verificar se aparece o texto "Operação"
-#     Entrar no módulo "Transportes"
-#     Entrar na funcionalidade "Solicitação de Transporte"
+Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
+    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+    ...                pela Escola, para um educando da Etapa Infantil        
+    [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Solicitação de Transporte"
+
 
 # Cenário 41: Funcionalidade Solicitação de Transporte - Fundamental
 #     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
