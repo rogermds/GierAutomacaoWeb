@@ -4679,7 +4679,10 @@ Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
     Em Solicitação de Transporte, selecionar a Situação "SEM SOLICITAÇÃO"
     Em Solicitação de Transporte, clicar em Pesquisar
     Em Solicitação de Transporte, clicar em um aluno para solicitar transporte
-    Em Solicitação de Transporte, clicar em Enviar Solicitação
+    Em Solicitação de Transporte, salvar o nome do aluno
+    Em Solicitação de Transporte, clicar em Enviar para Análise
+    Em Solicitação de Transporte, clicar em Sim no modal
+    Em Solicitação de Transporte, clicar em OK no modal
     Em Solicitação de Transporte, clicar no perfil e em Trocar Perfil
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4687,8 +4690,11 @@ Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
     Entrar na funcionalidade "Gestão de Solicitação de Transporte"
     Em Solicitação de Transporte, selecionar a Situação "AGUARDANDO ANÁLISE"
     Em Solicitação de Transporte, selecionar a Etapa/Modalidade "EDUCAÇÃO INFANTIL"
-    Em Solicitação de Transporte, clicar em um aluno para analisar transporte
+    Em Solicitação de Transporte, inserir o nome do aluno solicitado
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, clicar em Ações e Analisar Solicitação
     Em Solicitação de Transporte, clicar Deferir
+    Em Solicitação de Transporte, clicar em Sim no modal
     Em Solicitação de Transporte, clicar Ok no modal
     Em Solicitação de Transporte, clicar no perfil e em Trocar Perfil
     Pesquisar "VOLPI" e selecionar o primeiro resultado
