@@ -4671,10 +4671,37 @@ Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Solicitação de Transporte"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "EDUCAÇÃO INFANTIL"
+    Em Solicitação de Transporte, selecionar a Situação "SEM SOLICITAÇÃO"
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, clicar em um aluno para solicitar transporte
+    Em Solicitação de Transporte, clicar em Enviar Solicitação
+    Em Solicitação de Transporte, clicar no perfil e em Trocar Perfil
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Gestão de Solicitação de Transporte"
+    Em Solicitação de Transporte, selecionar a Situação "AGUARDANDO ANÁLISE"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "EDUCAÇÃO INFANTIL"
+    Em Solicitação de Transporte, clicar em um aluno para analisar transporte
+    Em Solicitação de Transporte, clicar Deferir
+    Em Solicitação de Transporte, clicar Ok no modal
+    Em Solicitação de Transporte, clicar no perfil e em Trocar Perfil
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Solicitação de Transporte"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "EDUCAÇÃO INFANTIL"
+    Em Solicitação de Transporte, selecionar a Situação "DEFERIDO"
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, clicar em um aluno para solicitar transporte
+
+
+
 
 
 # Cenário 41: Funcionalidade Solicitação de Transporte - Fundamental
