@@ -2497,7 +2497,7 @@ Cenário 48: Funcionalidade Portal - Gier - Infantil Inicial
     Em Cadastro de Pessoa, no campo Número, inserir o número "34"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
     Clicar no botão Incluir
-    Clicar em Salvar
+    Em Cadastro de Pessoa, clicar no botão Salvar
     Clicar em OK no Modal
     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados do Responsável
     Em Cadastro de Pessoa, no campo Nome, inserir o nome cadastrado
@@ -2506,7 +2506,7 @@ Cenário 48: Funcionalidade Portal - Gier - Infantil Inicial
     Em Cadastro de Pessoa, no campo Número, inserir o número "34"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
     Clicar no botão Incluir
-    Clicar em Salvar
+    Em Cadastro de Pessoa, clicar no botão Salvar
     Clicar em OK no Modal
     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Deferir
     Em Gestão de Pré-Matrícula, selecionar uma turma com vagas
