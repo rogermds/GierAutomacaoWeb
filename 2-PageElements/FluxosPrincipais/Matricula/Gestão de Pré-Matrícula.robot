@@ -3,7 +3,6 @@ Library    SeleniumLibrary
 Library    DateTime
 Library    String
 Library    FakerLibrary     locale=pt_BR
-Library    XML
 Resource    ../../../1-Hooks/1-Principal.robot
 Resource    ../Pessoa/Pessoa.robot
 

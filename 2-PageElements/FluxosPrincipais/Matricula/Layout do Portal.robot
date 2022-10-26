@@ -19,6 +19,7 @@ Em Layout do Portal, clicar em Cadastrar
     Execute JavaScript  document.getElementById("btnCadastraLayout").click();
 
 Em Layout do Portal, Página Inicial, em Ano Letivo, selecionar o ano subsequente
+    Wait Until Page Contains    Configuração de Layout
     ${anoAtual}     Get Current Date    result_format=%Y
     ${anoSeguinte}    Evaluate     ${anoAtual}+2
     Execute JavaScript   $('#ddlAnoLetivo').val("${anoSeguinte}").trigger('chosen:updated');
@@ -57,8 +58,8 @@ Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, clicar em Inseri
     Aguardar tela de carregamento
 
 Em Layout do Portal, Página Inicial, clicar em Salvar e Próximo
+    Sleep    3
     Wait Until Element Is Visible    btnAvancaPrimeiroPasso
-    Sleep    1
     Aguardar tela de carregamento
     Execute JavaScript  document.getElementById("btnAvancaPrimeiroPasso").click();
     Aguardar tela de carregamento

@@ -191,7 +191,7 @@ Cenário 05: Funcionalidade Turma – Infantil
     Em Curso, selecionar "PRÉ-ESCOLA"
     Em Ciclo, selecionar "ESTÁGIO II"
     Em Período, selecionar "MISTO"
-    Em Turma, selecionar "R"
+    Em Turma, selecionar "X"
     No cadastro de Turma, selecionar Calendário
     Em Grade de Aula, selecionar "GRADE DE HORARIO - MISTO"
     Em Programa Curricular, selecionar "ESTÁGIO II"
@@ -210,7 +210,7 @@ Cenário 05: Funcionalidade Turma – Infantil
     Selecionar uma Sala Física
     Em Capacidade da Turma, inserir a quantidade "30"
     Em Professor Responsável, clicar em INSERIR
-    Em Professor Responsável, selecionar ADRIANA HOLLAIS SANTOS REIS
+    Em Professor Responsável, selecionar ADRIANA HOLLAIS SANTOS
     Clicar em Salvar
     Clicar em OK no Modal
     Verificar se a página retornou a busca de turma
@@ -225,7 +225,7 @@ Cenário 05: Funcionalidade Turma – Infantil
     Verificar se em Ciclo está selecionado "Estágio II"
     Verificar se em Período está selecionado "MISTO"
     Verificar se em Capacidade da Turma está a quantidade "30"
-    Verificar se o professor responsável é "ADRIANA HOLLAIS SANTOS REIS"
+    Verificar se o professor responsável é "ADRIANA HOLLAIS SANTOS"
     Clicar em Voltar
     Verificar se a página retornou a busca de turma
     Na consulta de turma, em Etapa/Modalidade, selecionar "EDUCAÇÃO INFANTIL"
@@ -255,7 +255,7 @@ Cenário 06: Funcionalidade Turma – Fundamental
     Em Curso, selecionar "CICLO II"
     Em Ciclo, selecionar "5° ANO"
     Em Período, selecionar "TARDE"
-    Em Turma, selecionar "S"
+    Em Turma, selecionar "X"
     No cadastro de Turma, selecionar Calendário
     Em Grade de Aula, selecionar "GRADE DE HORARIO - TARDE"
     Em Programa Curricular, selecionar "5º ANO"
@@ -274,7 +274,7 @@ Cenário 06: Funcionalidade Turma – Fundamental
     Selecionar uma Sala Física
     Em Capacidade da Turma, inserir a quantidade "30"
     Em Professor Responsável, clicar em INSERIR
-    Em Professor Responsável, selecionar ADRIANA HOLLAIS SANTOS REIS
+    Em Professor Responsável, selecionar ADRIANA HOLLAIS SANTOS
     Clicar em Salvar
     Clicar em OK no Modal
     Verificar se a página retornou a busca de turma
@@ -289,7 +289,7 @@ Cenário 06: Funcionalidade Turma – Fundamental
     Verificar se em Ciclo está selecionado "5º Ano"
     Verificar se em Período está selecionado "TARDE"
     Verificar se em Capacidade da Turma está a quantidade "30"
-    Verificar se o professor responsável é "ADRIANA HOLLAIS SANTOS REIS"
+    Verificar se o professor responsável é "ADRIANA HOLLAIS SANTOS"
     Clicar em Voltar
     Verificar se a página retornou a busca de turma
     Na consulta de turma, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
@@ -318,7 +318,7 @@ Cenário 07: Funcionalidade Turma Multisseriada – EJA
     Em Anual/Semanal, selecionar "2° SEMESTRE"
     Em Período, selecionar "NOITE"
     No grid de Etapa, selecionar os semestres correspondentes
-    Em Turma, selecionar "T"
+    Em Turma, selecionar "X"
     Selecionar uma Sala Física
     Em Capacidade da Turma, inserir a quantidade "20"
     Clicar em Salvar
@@ -333,7 +333,7 @@ Cenário 07: Funcionalidade Turma Multisseriada – EJA
     Selecionar uma Sala Física
     Em Capacidade da Turma, inserir a quantidade "30"
     Em Professor Responsável, clicar em EXCLUIR
-    Em Professor Responsável, selecionar ADRIANA HOLLAIS SANTOS REIS
+    Em Professor Responsável, selecionar ADRIANA HOLLAIS SANTOS
     Clicar em Salvar
     Clicar em OK no Modal
     Verificar se a página retornou a busca de turma
@@ -346,7 +346,7 @@ Cenário 07: Funcionalidade Turma Multisseriada – EJA
     Verificar se em Curso, em Multisseriada, está selecionado "Ciclo II"
     Verificar se em Período, em Multisseriada, está selecionado "NOITE"
     Verificar se em Capacidade da Turma está a quantidade "30"
-    Verificar se o professor responsável é "ADRIANA HOLLAIS SANTOS REIS"
+    Verificar se o professor responsável é "ADRIANA HOLLAIS SANTOS"
     Clicar em Voltar
     Verificar se a página retornou a busca de turma
     Na consulta de turma, em Etapa/Modalidade, selecionar "EDUCAÇÃO DE JOVENS E ADULTOS 2º SEMESTRE"
@@ -383,6 +383,7 @@ Cenário 08: Funcionalidade Avaliações e Frequência - Infantil
     No primeiro aluno, em questionário, clicar em "Responder"
     Verificar se as questões foram marcadas conforme foram salvas
 
+### INCIDENTE - OS 84969
 Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar, registrar notas
     ...                e validar os relatórios para a Etapa Fundamental
@@ -395,8 +396,8 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Avaliações e Frequência"
     Na consulta de avaliações, em Etapa/Modalidade, selecionar "Ensino Fundamental"
-    Na consulta de avaliações, em Professor, selecionar "MARIA FAUSTA JUSTINIANO SANTOS SILVEIRA"
-    Na consulta de avaliações, em Turma, selecionar "1B"
+    Na consulta de avaliações, em Professor, selecionar "PRISCILA DOMINGUES FERNANDES LOPES"
+    Na consulta de avaliações, em Turma, selecionar "3B"
     Clicar em Pesquisar
     No primeiro aluno, em questionário, clicar em "Responder"
     Marcar "ATINGIU OS OBJETIVOS" nas questões
@@ -408,7 +409,6 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
     Em Validação de Relatório, em Etapa/Modalidade, selecionar a etapa/modalidade utilizada
-    Em Validação de Relatório, em Turma, selecionar a turma utilizada
     Em Validação de Relatório, clicar em Pesquisar
     Verificar se a Situação de Validação está como "AGUARDANDO VALIDAÇÃO"
     Clicar em VISUALIZAR EDUCANDOS
@@ -1371,37 +1371,40 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Em Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, clicar em Cadastrar
     Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "CANCELAMENTO"
-    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
     Em Justificativas da Pré-Matrícula, clicar em Pesquisar
     Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar    
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "PAUSADO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Editar
+    Em Edição de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA EDITADO"
+    Em Edição de Justificativas da Pré-Matrícula, clicar em Alterar
+    Em Edição de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa editada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa editada foi salva
     Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
     Em Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, clicar em Cadastrar
-    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "DETERMINAÇÃO LEGAL"
-    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "PAUSADO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
     Em Justificativas da Pré-Matrícula, clicar em Pesquisar
     Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
-    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
-    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, clicar em Cadastrar
     Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "DESFAZER AÇÃO"
-    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
-    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
-    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
-    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
-    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
-    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
-    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
-    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
-    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
-    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "INDEFERIMENTO"
-    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
@@ -1411,7 +1414,7 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Em Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, clicar em Cadastrar
     Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "VAGA OFERTADA"
-    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
@@ -1435,10 +1438,10 @@ Cenário 31: Funcionalidade - Cadastro: Layout do Portal de Inscrições e Trans
     Em Layout do Portal, Página Inicial, em Ano Letivo, selecionar o ano subsequente
     Em Layout do Portal, Página Inicial, em Descrição do Processo, inserir "LAYOUT PORTAL AUTOMAÇÃO"
     Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir uma imagem
-    Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "01/01/2022"
+    Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "01/01/2024"
     Em Layout do Portal, Página Inicial, no Banner Inicial Web, clicar em Inserir
     Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir uma imagem
-    Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir a data "31/12/2022"
+    Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir a data "31/12/2024"
     Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, clicar em Inserir
     Em Layout do Portal, Página Inicial, clicar em Salvar e Próximo
     Em Layout do Portal, Informações Importantes, em Informações Gerais selecionar "EDUCAÇÃO INFANTIL"
@@ -4664,7 +4667,7 @@ Cenário 74: Funcionalidade Viagens
     Em Cadastrar Viagens, clicar em Pesquisar
     Em Cadastrar Viagens, verificar se a viagem foi cadastrada
     
-Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
+Cenário 75: Funcionalidade Solicitação de Transporte - Infantil
     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
     ...                pela Escola, para um educando da Etapa Infantil        
     [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
@@ -4675,8 +4678,9 @@ Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Solicitação de Transporte"
-    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "EDUCAÇÃO INFANTIL"
-    Em Solicitação de Transporte, selecionar a Situação "SEM SOLICITAÇÃO"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "Educação Infantil"
+    Em Solicitação de Transporte, selecionar o curso "Pré-Escola"
+    Em Solicitação de Transporte, selecionar a Situação "Sem solicitação"
     Em Solicitação de Transporte, clicar em Pesquisar
     Em Solicitação de Transporte, clicar em um aluno para solicitar transporte
     Em Solicitação de Transporte, salvar o nome do aluno
@@ -4688,65 +4692,161 @@ Cenário 40: Funcionalidade Solicitação de Transporte - Infantil
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Gestão de Solicitação de Transporte"
-    Em Solicitação de Transporte, selecionar a Situação "AGUARDANDO ANÁLISE"
-    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "EDUCAÇÃO INFANTIL"
+    Em Solicitação de Transporte, selecionar a Situação "Aguardando Análise"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "Educação Infantil"
     Em Solicitação de Transporte, inserir o nome do aluno solicitado
     Em Solicitação de Transporte, clicar em Pesquisar
     Em Solicitação de Transporte, clicar em Ações e Analisar Solicitação
     Em Solicitação de Transporte, clicar Deferir
     Em Solicitação de Transporte, clicar em Sim no modal
-    Em Solicitação de Transporte, clicar Ok no modal
+    Em Solicitação de Transporte, clicar em OK no modal
     Em Solicitação de Transporte, clicar no perfil e em Trocar Perfil
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Solicitação de Transporte"
-    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "EDUCAÇÃO INFANTIL"
-    Em Solicitação de Transporte, selecionar a Situação "DEFERIDO"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "Educação Infantil"
+    Em Solicitação de Transporte, selecionar a Situação "Deferida sem Veiculo"
+    Em Solicitação de Transporte, inserir o nome do aluno solicitado
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, clicar em Ações e Editar
+    Em Solicitação de Transporte, selecionar uma linha
+    Em Solicitação de Transporte, clicar em Inserir
+    Em Solicitação de Transporte, clicar em Salvar
+    Em Solicitação de Transporte, clicar em OK no modal
+    Em Solicitação de Transporte, clicar em OK no modal
+    Em Solicitação de Transporte, selecionar a Situação "Deferida"
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, verificar se a solicitação foi deferida
+
+Cenário 76: Funcionalidade Solicitação de Transporte - Fundamental
+    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+    ...                pela Escola, para um educando da Etapa Infantil        
+    [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Solicitação de Transporte"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "Ensino Fundamental"
+    Em Solicitação de Transporte, selecionar a Situação "Sem solicitação"
     Em Solicitação de Transporte, clicar em Pesquisar
     Em Solicitação de Transporte, clicar em um aluno para solicitar transporte
+    Em Solicitação de Transporte, salvar o nome do aluno
+    Em Solicitação de Transporte, clicar em Enviar para Análise
+    Em Solicitação de Transporte, clicar em Sim no modal
+    Em Solicitação de Transporte, clicar em OK no modal
+    Em Solicitação de Transporte, clicar no perfil e em Trocar Perfil
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Gestão de Solicitação de Transporte"
+    Em Solicitação de Transporte, selecionar a Situação "Aguardando Análise"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "Ensino Fundamental"
+    Em Solicitação de Transporte, inserir o nome do aluno solicitado
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, clicar em Ações e Analisar Solicitação
+    Em Solicitação de Transporte, clicar Deferir
+    Em Solicitação de Transporte, clicar em Sim no modal
+    Em Solicitação de Transporte, clicar em OK no modal
+    Em Solicitação de Transporte, clicar no perfil e em Trocar Perfil
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Solicitação de Transporte"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "Ensino Fundamental"
+    Em Solicitação de Transporte, selecionar a Situação "Deferida sem Veiculo"
+    Em Solicitação de Transporte, inserir o nome do aluno solicitado
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, clicar em Ações e Editar
+    Em Solicitação de Transporte, selecionar uma linha
+    Em Solicitação de Transporte, clicar em Inserir
+    Em Solicitação de Transporte, clicar em Salvar
+    Em Solicitação de Transporte, clicar em OK no modal
+    Em Solicitação de Transporte, clicar em OK no modal
+    Em Solicitação de Transporte, selecionar a Situação "Deferida"
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, verificar se a solicitação foi deferida
 
+Cenário 77: Funcionalidade Gestão de Solicitação de Transporte - Infantil
+    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+    ...                pela Escola, para um educando da Etapa Infantil        
+    [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Gestão de Solicitação de Transporte"
+    Em Solicitação de Transporte, selecionar a Situação "Sem solicitação"
+    Em Solicitação de Transporte, selecionar a escola "EPG ALFREDO VOLPI"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "Educação Infantil"
+    Em Solicitação de Transporte, selecionar o ciclo "Estágio II"
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, clicar em um aluno para solicitar transporte
+    Em Solicitação de Transporte, salvar o nome do aluno
+    Em Solicitação de Transporte, selecionar o Tipo de Transporte "TEG"
+    Em Solicitação de Transporte, clicar Deferir
+    Em Solicitação de Transporte, clicar em Sim no modal
+    Em Solicitação de Transporte, clicar em OK no modal
+    Em Solicitação de Transporte, selecionar a Situação "Deferida sem Veiculo"
+    Em Solicitação de Transporte, selecionar a escola "EPG ALFREDO VOLPI"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "Educação Infantil"
+    Em Solicitação de Transporte, selecionar o ciclo "Estágio II"
+    Em Solicitação de Transporte, inserir o nome do aluno solicitado
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, clicar em Ações e Editar
+    Em Solicitação de Transporte, selecionar uma linha
+    Em Solicitação de Transporte, clicar em Inserir
+    Em Solicitação de Transporte, clicar em Salvar
+    Em Solicitação de Transporte, clicar em OK no modal
+    Em Solicitação de Transporte, selecionar a Situação "Deferida"
+    Em Solicitação de Transporte, inserir o nome do aluno solicitado
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, verificar se a solicitação foi deferida
 
+Cenário 78: Funcionalidade Gestão de Solicitação de Transporte - Fundamental
+    [Documentation]    Esse teste verifica se é possível solicitar um Transporte
+    ...                pela Escola, para um educando da Etapa Fundamental        
+    [Tags]             Solicitação de Transporte - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Transportes"
+    Entrar na funcionalidade "Gestão de Solicitação de Transporte"
+    Em Solicitação de Transporte, selecionar a Situação "Sem solicitação"
+    Em Solicitação de Transporte, selecionar a escola "EPG ALFREDO VOLPI"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "Ensino Fundamental"
+    Em Solicitação de Transporte, selecionar o ciclo "5º Ano"
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, clicar em um aluno para solicitar transporte
+    Em Solicitação de Transporte, salvar o nome do aluno
+    Em Solicitação de Transporte, selecionar o Tipo de Transporte "TEG"
+    Em Solicitação de Transporte, clicar Deferir
+    Em Solicitação de Transporte, clicar em Sim no modal
+    Em Solicitação de Transporte, clicar em OK no modal
+    Em Solicitação de Transporte, selecionar a Situação "Deferida sem Veiculo"
+    Em Solicitação de Transporte, selecionar a escola "EPG ALFREDO VOLPI"
+    Em Solicitação de Transporte, selecionar a Etapa/Modalidade "Ensino Fundamental"
+    Em Solicitação de Transporte, selecionar o ciclo "5º Ano"
+    Em Solicitação de Transporte, inserir o nome do aluno solicitado
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, clicar em Ações e Editar
+    Em Solicitação de Transporte, selecionar uma linha
+    Em Solicitação de Transporte, clicar em Inserir
+    Em Solicitação de Transporte, clicar em Salvar
+    Em Solicitação de Transporte, clicar em OK no modal
+    Em Solicitação de Transporte, selecionar a Situação "Deferida"
+    Em Solicitação de Transporte, inserir o nome do aluno solicitado
+    Em Solicitação de Transporte, clicar em Pesquisar
+    Em Solicitação de Transporte, verificar se a solicitação foi deferida
 
-
-
-# Cenário 41: Funcionalidade Solicitação de Transporte - Fundamental
-#     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
-#     ...                pela Escola, para um educando da Etapa Fundamental        
-#     [Tags]             Solicitação de Transporte - Fundamental | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Verificar se aparece o texto "Operação"
-#     Entrar no módulo "Transportes"
-#     Entrar na funcionalidade "Solicitação de Transporte"
-
-# Cenário 42: Funcionalidade Gestão de Solicitação de Transporte - Infantil
-#     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
-#     ...                pela Secretaria, para um educando da Etapa Infantil        
-#     [Tags]             Gestão de Solicitação de Transporte - Infantil | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Verificar se aparece o texto "Operação"
-#     Entrar no módulo "Transportes"
-#     Entrar na funcionalidade "Gestão de Solicitação de Transporte"
-
-# Cenário 43: Funcionalidade Gestão de Solicitação de Transporte - Fundamental
-#     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
-#     ...                pela Secretaria, para um educando da Etapa Fundamental        
-#     [Tags]             Gestão de Solicitação de Transporte - Fundamental | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Verificar se aparece o texto "Operação"
-#     Entrar no módulo "Transportes"
-#     Entrar na funcionalidade "Gestão de Solicitação de Transporte"
-
-Cenário 44: Funcionalidade Aprendizagem
+Cenário 79: Funcionalidade Aprendizagem
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
     [Tags]             Aprendizagem | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -4847,16 +4947,16 @@ Cenário 44: Funcionalidade Aprendizagem
     Em Consulta de Descrição de Aprendizagem, clicar em Pesquisar
     Em Consulta de Descrição de Aprendizagem, verificar se aparece o texto "NENHUM REGISTRO FOI ENCONTRADO"
 
-# Cenário 45: Funcionalidade Grupos de Pergunta
-#     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
-#     [Tags]             Grupos de Pergunta | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Entrar no módulo "Configuração"
-#     Entrar no módulo "Avaliações Educacionais"
-#     Entrar na funcionalidade "Grupos de Pergunta"
+Cenário 80: Funcionalidade Grupos de Pergunta
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
+    [Tags]             Grupos de Pergunta | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Grupos de Pergunta"
 
 # Cenário 46: Funcionalidade Banco de Questões
 #     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     

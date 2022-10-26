@@ -210,7 +210,7 @@ Em Professor Responsável, clicar em INSERIR
     Execute JavaScript  document.getElementById("cphContent_dtlProfessor_lbtSelecionar_0").click();
     Aguardar tela de carregamento
     
-Em Professor Responsável, selecionar ADRIANA HOLLAIS SANTOS REIS
+Em Professor Responsável, selecionar ADRIANA HOLLAIS SANTOS
     Execute JavaScript  document.getElementById("cphContent_dtlProfessor_lbtSelecionar_0").click();
     Aguardar tela de carregamento
 
