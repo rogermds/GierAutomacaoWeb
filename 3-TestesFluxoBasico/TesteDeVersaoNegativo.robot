@@ -403,7 +403,7 @@ Cenário 20 - Funcionalidade Controle Diário de Frequência
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Controle Diário de Frequência"    
     Clicar em 'Pesquisar'
-    Visualizar a mensagem: INFORME O PROFESSOR.
+    Visualizar a mensagem: INFORME A ETAPA/MODALIDADE.    
     Clicar em OK no modal
     Em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
     Clicar em Pesquisar
@@ -803,9 +803,7 @@ Cenário 32: Funcionalidade Gestão de Pré-matrícula Escola
     Clicar no botão salvar para o alerta de Justificativa    
     Visualizar a mensagem: SELECIONE UMA JUSTIFICATIVA    
     Clicar em Ok no alerta de Justificativa    
-    Fechar o modal de Justificativa            
-    No primeiro aluno da pesquisa, clicar na ação "Deferir"     
-    Clicar em OK no modal de alerta
+    Fechar o modal de Justificativa               
     No primeiro aluno da pesquisa, clicar na ação "Registro de Atendimento"
     Clicar em salvar o Registro de Atendimento     
     Visualizar a mensagem: SELECIONE O TIPO DE CONTATO.    
@@ -954,7 +952,7 @@ Cenário 34: Funcionalidade Credenciamento de Condutores
     Clicar no botão Adicionar Veículo
     Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
     Clicar em OK no modal de alerta 
-    Em Placa do Veículo informar "54321"
+    Em Placa do Veículo informar "1"
     Clicar no botão Adicionar Veículo
     Visualizar a mensagem: EXISTEM CAMPOS NÃO PREENCHIDOS QUE SÃO OBRIGATÓRIOS
     Clicar em OK no modal de alerta 
@@ -1496,7 +1494,6 @@ Cenário 45: Programação de Processo
     Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
-    Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO NEGATIVO #PROCESSO_TESTE_QA#"
     Em Programação de Processo, em Processo, selecionar o processo "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -1541,12 +1538,12 @@ Cenário 46: Portal de Inscrição - Infantil Inicial
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "CPF não informado"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "40136061869"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "110.422.025-32"
     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "Data de Nascimento inválida"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "13/01/2014"
     No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
     No Portal, fechar o modal
     No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "23498175041"

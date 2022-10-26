@@ -18,7 +18,7 @@ Em Programação de Processo, em Processo, selecionar o processo "${processo}"
     Aguardar tela de carregamento
 
 Em Programação de Processo, clicar em Pesquisar
-    Wait Until Element Is Visible    cphContent_btnPesquisa
+    Wait Until Element Is Visible    cphContent_btnPesquisa    60
     Execute JavaScript   document.getElementById("cphContent_btnPesquisa").click();
     Aguardar tela de carregamento
 

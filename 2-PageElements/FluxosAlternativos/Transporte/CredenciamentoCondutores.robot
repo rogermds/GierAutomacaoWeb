@@ -221,7 +221,8 @@ Em Código do Veículo, informar "${Codigo}"
 
 Em Placa do Veículo informar "${Placa}"
     Execute JavaScript  document.getElementById("${campoPlacaCondutores}").click();
-    Input Text    ${campoPlacaCondutores}    ${Placa}
+    ${codPlaca}    Random Number    5    true
+    Input Text    cphContent_Wizard1_txtPlaca    ${Placa}${codPlaca}
 
 Em Prefixo do Veículo, informar "${Prefixo}"
     Execute JavaScript  document.getElementById("${campoPrefixoCondutores}").click();

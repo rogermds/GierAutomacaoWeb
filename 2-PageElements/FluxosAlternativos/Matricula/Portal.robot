@@ -50,6 +50,7 @@ No Portal, visualizar a mensagem "${texto}"
     Wait Until Page Contains    ${texto}
 
 No Portal, fechar o modal
+    Wait Until Element Is Visible    //a[contains(@rel,'modal:close')]
     Click Element    //a[contains(@rel,'modal:close')]
     Sleep    1
     Aguardar carregamento Portal

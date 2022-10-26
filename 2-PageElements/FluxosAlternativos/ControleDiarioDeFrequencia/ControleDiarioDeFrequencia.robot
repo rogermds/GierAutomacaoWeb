@@ -13,7 +13,7 @@ ${botaoIncluirDiario}                      cphContent_btnIncluir
 
 *** Keywords ***
 Visualizar a mensagem: INFORME O PROFESSOR.
-    Wait Until Page Contains Element    //span[contains(.,'Informe o Professor.')]
+    Wait Until Page Contains Element    //span[contains(.,'Informe o Professor.')]    60
 
 Em Etapa/Modalidade, selecionar "${etapaModalidade}"
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'  Execute JavaScript   $('#${campoetapaModalidadeControle}').val("1").trigger('chosen:updated');
