@@ -1545,6 +1545,7 @@ Cenário 46: Portal de Inscrição - Infantil Inicial (Mesma Escola)
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
+    
     Entrar no Portal 
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"

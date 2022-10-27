@@ -240,14 +240,17 @@ No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
     Press Keys    txtCpf    TAB
     Aguardar carregamento Portal
     ${validacao}    Run Keyword And Return Status    Wait Until Page Contains    O CPF informado é inválido
-    IF    ${validacao}
-        ${cpfFakeAluno}    FakerLibrary.cpf
-        Set Suite Variable    ${cpfFakeAluno}
-        Input Text    txtCpf    ${cpfFakeAluno}
-        Press Keys    txtCpf    TAB
-        Aguardar carregamento Portal
+
+    FOR    ${index}    IN RANGE    10
+        IF    ${validacao}
+            ${cpfFakeAluno}    FakerLibrary.cpf
+            Set Suite Variable    ${cpfFakeAluno}
+            Input Text    txtCpf    ${cpfFakeAluno}
+            Press Keys    txtCpf    TAB
+            Aguardar carregamento Portal
+        END
     END
-    
+
 No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
     ${nomeCompletoAluno}    Name Male
     ${nomeCompletoAluno}    Replace String    ${nomeCompletoAluno}    ã    a
@@ -277,14 +280,17 @@ No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão 
     Press Keys    txtMatriculaCertidao    TAB
     Sleep    1
     Aguardar carregamento Portal
-    ${validacao}    Run Keyword And Return Status    Wait Until Page Contains    Número de Certidão de Nascimento Inválido
-    IF    ${validacao}
-        No Portal, fechar o modal de informações importantes
-        Gerar Certidão de Nascimento Aleatório
-        Input Text    txtMatriculaCertidao    ${certidaoAleatoria}
-        Press Keys    txtMatriculaCertidao    TAB
-        Sleep    1
-        Aguardar carregamento Portal
+    ${validacao}    Run Keyword And Return Status    Wait Until Element Is Visible   (//div[contains(.,'Número de Certidão de Nascimento Inválido. Verifique o número cadastrado.')])[3]
+    
+    FOR    ${index}    IN RANGE    10
+        IF    ${validacao}
+            No Portal, fechar o modal de informações importantes
+            Gerar Certidão de Nascimento Aleatório
+            Input Text    txtMatriculaCertidao    ${certidaoAleatoria}
+            Press Keys    txtMatriculaCertidao    TAB
+            Sleep    1
+            Aguardar carregamento Portal
+        END
     END
 
 No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "${dataEmissaoCertidao}"

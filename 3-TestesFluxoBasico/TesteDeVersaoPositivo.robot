@@ -27,7 +27,8 @@ Resource         ../2-PageElements/FluxosPrincipais/Transportes/Frotas.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/Viagens.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/CredenciamentoDeCondutores.robot
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/SolicitacaoDeTransporte.robot
-Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Avaliações Educacionais.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Aprendizagem.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/GruposDePergunta.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -446,32 +447,6 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Clicar em VISUALIZAR RELATORIO
     Verificar se o texto alterado aparece nesta tela
 
-## PODE SER NECESSÁRIO CONFIGURAR O GERIR LANÇAMENTOS ABAIXO DESTE TESTE
-Cenário 10: Funcionalidade Avaliações e Frequência - EJA
-    [Documentation]    Esse teste verifica se é possível consultar e
-    ...                registrar notas para a Etapa EJA
-    [Tags]             Avaliações e Frequência - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Pedagógico"
-    Entrar na funcionalidade "Avaliações e Frequência"
-    Na consulta de avaliações, em Etapa/Modalidade, selecionar "Educação de Jovens e Adultos 1º Semestre"
-    Na consulta de avaliações, em Data de Referência, informar "05072022"
-    Na consulta de avaliações, em Professor, selecionar "DAIANE LINO SALVADOR"
-    Na consulta de avaliações, em Turma, selecionar "CII B (1º Semestre)"
-    Clicar em Pesquisar
-    No primeiro aluno, em questionário, clicar em "Responder"
-    Marcar "ATINGIU OS OBJETIVOS" nas questões
-    Clicar em Salvar e Fechar
-    No modal de alerta, clicar em Ok
-    Clicar em Salvar
-    No modal de Cadastro Efetuado com Sucesso, clicar em Ok
-    No primeiro aluno, em questionário, clicar em "Responder"
-    Verificar se as questões foram marcadas conforme foram salvas
-
 ## NECESSÁRIO CONFIGURAR O TESTE EXTRA: GERIR LANÇAMENTOS ABAIXO,
 ## CASO O TESTE ACIMA PARA O EJA NÃO CONSIGA SELECIONAR UM PROFESSOR 
 Cenário EXTRA: Funcionalidade Gerir Lançamentos - EJA
@@ -496,6 +471,31 @@ Cenário EXTRA: Funcionalidade Gerir Lançamentos - EJA
     Em Gerir Lançamentos, alterar as datas para "30112022"
     Clicar em Salvar Alterações
     Em Gerir Lançamentos, clicar em OK no Modal
+
+Cenário 10: Funcionalidade Avaliações e Frequência - EJA
+    [Documentation]    Esse teste verifica se é possível consultar e
+    ...                registrar notas para a Etapa EJA
+    [Tags]             Avaliações e Frequência - EJA | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Pedagógico"
+    Entrar na funcionalidade "Avaliações e Frequência"
+    Na consulta de avaliações, em Etapa/Modalidade, selecionar "Educação de Jovens e Adultos 1º Semestre"
+    Na consulta de avaliações, em Data de Referência, informar "05072022"
+    Na consulta de avaliações, em Professor, selecionar "DAIANE LINO SALVADOR"
+    Na consulta de avaliações, em Turma, selecionar "CII B (1º Semestre)"
+    Clicar em Pesquisar
+    No primeiro aluno, em questionário, clicar em "Responder"
+    Marcar "ATINGIU OS OBJETIVOS" nas questões
+    Clicar em Salvar e Fechar
+    No modal de alerta, clicar em Ok
+    Clicar em Salvar
+    No modal de Cadastro Efetuado com Sucesso, clicar em Ok
+    No primeiro aluno, em questionário, clicar em "Responder"
+    Verificar se as questões foram marcadas conforme foram salvas
 
 Cenário 11: Funcionalidade Controle Diário de Frequência - Infantil
     [Documentation]    Esse teste verifica se é possível consultar e registrar frequencia, 
@@ -575,8 +575,8 @@ Cenário 12: Funcionalidade Controle Diário de Frequência - Fundamental
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Controle Diário de Frequência"
     No controle de frequência, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    No controle de frequência, em Professor, selecionar "MARIA FAUSTA JUSTINIANO SANTOS SILVEIRA"
-    No controle de frequência, em Turma, selecionar "1B"
+    No controle de frequência, em Professor, selecionar "TANIA MARA DA SILVA"
+    No controle de frequência, em Turma, selecionar "5B"
     Clicar em Pesquisar
     Verificar se o botão Iniciar está visível
     Iniciar as aulas nos 4 últimos dias da semana
@@ -4957,17 +4957,47 @@ Cenário 80: Funcionalidade Grupos de Pergunta
     Entrar no módulo "Configuração"
     Entrar no módulo "Avaliações Educacionais"
     Entrar na funcionalidade "Grupos de Pergunta"
+    Em Grupos de Pergunta, clicar em Cadastrar
+    Em Grupos de Pergunta, em Descrição inserir "GRUPO DE PERGUNTA AUTOMACAO"
+    Em Grupos de Pergunta, em Sigla inserir "AUT"
+    Em Grupos de Pergunta, clicar em Salvar
+    Em Grupos de Pergunta, clicar em OK no modal
+    Em Grupos de Pergunta, em Descrição inserir a descrição cadastrada
+    Em Grupos de Pergunta, clicar em Pesquisar
+    Em Grupos de Pergunta, clicar em Ações e Editar
+    Em Grupos de Pergunta, em Descrição inserir "GRUPO DE PERGUNTA AUTOMACAO EDITADO"
+    Em Grupos de Pergunta, clicar em Salvar
+    Em Grupos de Pergunta, clicar em OK no modal
+    Em Grupos de Pergunta, em Descrição inserir a descrição cadastrada
+    Em Grupos de Pergunta, clicar em Pesquisar
+    Em Grupos de Pergunta, clicar em Ações e Excluir
+    Em Grupos de Pergunta, clicar em Sim no modal
+    Em Grupos de Pergunta, clicar em OK no modal
+    Em Grupos de Pergunta, em Descrição inserir a descrição cadastrada
+    Em Grupos de Pergunta, clicar em Pesquisar
+    Em Grupos de Pergunta, verificar se o cadastro foi excluído
+    Em Grupos de Pergunta, clicar em OK no modal
+    Em Grupos de Pergunta, clicar em Cadastrar
+    Em Grupos de Pergunta, em Descrição inserir "GRUPO DE PERGUNTA AUTOMACAO"
+    Em Grupos de Pergunta, em Sigla inserir "AUT"
+    Em Grupos de Pergunta, clicar em Salvar
+    Em Grupos de Pergunta, clicar em OK no modal
+    Em Grupos de Pergunta, em Descrição inserir a descrição cadastrada
+    Em Grupos de Pergunta, clicar em Pesquisar
+    Em Grupos de Pergunta, verificar se o cadastro foi efetuado
 
-# Cenário 46: Funcionalidade Banco de Questões
-#     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
-#     [Tags]             Banco de Questões | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Entrar no módulo "Configuração"
-#     Entrar no módulo "Avaliações Educacionais"
-#     Entrar na funcionalidade "Banco de Questões"
+Cenário 46: Funcionalidade Banco de Questões
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
+    [Tags]             Banco de Questões | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Banco de Questões"
+    Em Banco de Questões, clicar em Cadastrar
+    
 
 # Cenário 47: Funcionalidade Configurar Avaliação
 #     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
