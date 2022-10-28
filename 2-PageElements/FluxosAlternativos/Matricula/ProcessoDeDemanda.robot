@@ -260,6 +260,6 @@ Em Programação de Processo, clicar em Inserir
     Aguardar tela de carregamento
 
 Em Programação de Processo, clicar em OK no modal
-    Wait Until Element Is Visible    cphContent_Mensagem_Padrao_btnOk
+    Wait Until Element Is Visible    cphContent_Mensagem_Padrao_btnOk    60
     Execute JavaScript   document.getElementById("cphContent_Mensagem_Padrao_btnOk").click();
     Aguardar tela de carregamento
