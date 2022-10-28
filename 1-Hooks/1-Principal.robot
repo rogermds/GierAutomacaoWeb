@@ -4,6 +4,7 @@ Library    FakerLibrary    locale=pt-BR
 Library    RequestsLibrary
 
 *** Variable ***
+${path}                         C:\\Users\\rogerio.santos\\Desktop\\AUTOMAÇÃO WEB - GIER\\Automação - Teste De Versão Gier\\4-Arquivos
 ${botaoCadastrar}               cphContent_btnCad   
 ${botaoPesquisar}               cphContent_btnPesquisar
 ${botaoEditar}                  cphContent_btnEditar

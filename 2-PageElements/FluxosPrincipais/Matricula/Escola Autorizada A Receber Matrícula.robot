@@ -54,8 +54,8 @@ Em Escola Autorizada A Receber Matrícula, verificar se as opções foram salvas
         ${resultado}    Run Keyword And Return Status   Wait Until Element Is Not Visible    ${busca}    0.2
         ${resultado2}    Run Keyword And Return Status   Element Attribute Value Should Be    ${busca}    checked    true
         IF  ${resultado} or ${resultado2}
-        CONTINUE    
+            CONTINUE    
         ELSE
-        Fail
+            Fail
         END
     END

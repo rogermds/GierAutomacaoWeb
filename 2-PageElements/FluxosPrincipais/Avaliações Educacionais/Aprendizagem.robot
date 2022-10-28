@@ -35,6 +35,7 @@ Em Consulta de Descrição de Aprendizagem, nos resultados, clicar em excluir
     Aguardar tela de carregamento
     
 Em Consulta de Descrição de Aprendizagem, clicar no botão Cadastrar
+    Wait Until Element Is Visible    cphContent_btnCadastra
     Execute JavaScript  document.getElementById("cphContent_btnCadastra").click();
     Aguardar tela de carregamento
         

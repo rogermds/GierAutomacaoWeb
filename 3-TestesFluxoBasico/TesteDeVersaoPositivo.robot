@@ -29,6 +29,7 @@ Resource         ../2-PageElements/FluxosPrincipais/Transportes/CredenciamentoDe
 Resource         ../2-PageElements/FluxosPrincipais/Transportes/SolicitacaoDeTransporte.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Aprendizagem.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/GruposDePergunta.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/BancoDeQuestoes.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -4901,36 +4902,6 @@ Cenário 79: Funcionalidade Aprendizagem
     Clicar em Salvar
     Em Cadastro de Descrição de Aprendizagem, clicar em OK no Modal
     Em Consulta de Descrição de Aprendizagem, clicar no botão Cadastrar
-    Em Cadastro de Descrição de Aprendizagem, em Sigla, inserir "TST06"
-    Em Cadastro de Descrição de Aprendizagem, em Ordem, inserir "6"
-    Em Cadastro de Descrição de Aprendizagem, em Descrição de Aprendizagem, inserir "TESTE DE DESCRICAO DE APRENDIZAGEM 06"
-    Clicar em Salvar
-    Em Cadastro de Descrição de Aprendizagem, clicar em OK no Modal
-    Em Consulta de Descrição de Aprendizagem, clicar no botão Cadastrar
-    Em Cadastro de Descrição de Aprendizagem, em Sigla, inserir "TST07"
-    Em Cadastro de Descrição de Aprendizagem, em Ordem, inserir "7"
-    Em Cadastro de Descrição de Aprendizagem, em Descrição de Aprendizagem, inserir "TESTE DE DESCRICAO DE APRENDIZAGEM 07"
-    Clicar em Salvar
-    Em Cadastro de Descrição de Aprendizagem, clicar em OK no Modal
-    Em Consulta de Descrição de Aprendizagem, clicar no botão Cadastrar
-    Em Cadastro de Descrição de Aprendizagem, em Sigla, inserir "TST08"
-    Em Cadastro de Descrição de Aprendizagem, em Ordem, inserir "8"
-    Em Cadastro de Descrição de Aprendizagem, em Descrição de Aprendizagem, inserir "TESTE DE DESCRICAO DE APRENDIZAGEM 08"
-    Clicar em Salvar
-    Em Cadastro de Descrição de Aprendizagem, clicar em OK no Modal
-    Em Consulta de Descrição de Aprendizagem, clicar no botão Cadastrar
-    Em Cadastro de Descrição de Aprendizagem, em Sigla, inserir "TST09"
-    Em Cadastro de Descrição de Aprendizagem, em Ordem, inserir "9"
-    Em Cadastro de Descrição de Aprendizagem, em Descrição de Aprendizagem, inserir "TESTE DE DESCRICAO DE APRENDIZAGEM 09"
-    Clicar em Salvar
-    Em Cadastro de Descrição de Aprendizagem, clicar em OK no Modal
-    Em Consulta de Descrição de Aprendizagem, clicar no botão Cadastrar
-    Em Cadastro de Descrição de Aprendizagem, em Sigla, inserir "TST10"
-    Em Cadastro de Descrição de Aprendizagem, em Ordem, inserir "10"
-    Em Cadastro de Descrição de Aprendizagem, em Descrição de Aprendizagem, inserir "TESTE DE DESCRICAO DE APRENDIZAGEM 10"
-    Clicar em Salvar
-    Em Cadastro de Descrição de Aprendizagem, clicar em OK no Modal
-    Em Consulta de Descrição de Aprendizagem, clicar no botão Cadastrar
     Em Cadastro de Descrição de Aprendizagem, em Sigla, inserir "TST88"
     Em Cadastro de Descrição de Aprendizagem, em Ordem, inserir "88"
     Em Cadastro de Descrição de Aprendizagem, em Descrição de Aprendizagem, inserir "TESTE DE DESCRICAO DE APRENDIZAGEM 88"
@@ -4986,7 +4957,7 @@ Cenário 80: Funcionalidade Grupos de Pergunta
     Em Grupos de Pergunta, clicar em Pesquisar
     Em Grupos de Pergunta, verificar se o cadastro foi efetuado
 
-Cenário 46: Funcionalidade Banco de Questões
+Cenário 46: Funcionalidade Banco de Questões - Texto
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
     [Tags]             Banco de Questões | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -4997,18 +4968,282 @@ Cenário 46: Funcionalidade Banco de Questões
     Entrar no módulo "Avaliações Educacionais"
     Entrar na funcionalidade "Banco de Questões"
     Em Banco de Questões, clicar em Cadastrar
+    Em Banco de Questões, em Utilização da Questão, selecionar "Avaliação Educacional"
+    Em Banco de Questões, em Texto Base para a Pergunta, inserir "Texto base pergunta 01 - Automação"
+    Em Banco de Questões, em Pergunta, inserir "Pergunta Texto 01 - Automação"
+    Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 1
+    Em Banco de Questões, clicar em Anexar
+    Em Banco de Questões, em Sigla, inserir "AUT01"
+    Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
+    Em Banco de Questões, em Peso, inserir "20"
+    Em Banco de Questões, em Nível da Questão, selecionar "Média"
+    Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST01-2022"
+    Em Banco de Questões, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Banco de Questões, em Ano/Ciclo, selecionar "5º Ano"
+    Em Banco de Questões, em Respostas Permitidas, selecionar Texto
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA A"
+    Em Banco de Questões, em Sigla Resposta, inserir "A"
+    Em Banco de Questões, em Resposta Correta, selecionar SIM
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA CORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA B"
+    Em Banco de Questões, em Sigla Resposta, inserir "B"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA C"
+    Em Banco de Questões, em Sigla Resposta, inserir "C"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA D"
+    Em Banco de Questões, em Sigla Resposta, inserir "D"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, clicar em Salvar
+    Em Banco de Questões, clicar em OK no modal
+    Em Banco de Questões, clicar em Cadastrar
+    Em Banco de Questões, em Utilização da Questão, selecionar "Avaliação Educacional"
+    Em Banco de Questões, em Texto Base para a Pergunta, inserir "Texto base pergunta 02 - Automação"
+    Em Banco de Questões, em Pergunta, inserir "Pergunta Texto 02 - Automação"
+    Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 2
+    Em Banco de Questões, clicar em Anexar
+    Em Banco de Questões, em Sigla, inserir "AUT02"
+    Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
+    Em Banco de Questões, em Peso, inserir "20"
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "Média"
+    Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST02-2022"
+    Em Banco de Questões, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Banco de Questões, em Ano/Ciclo, selecionar "5º Ano"
+    Em Banco de Questões, em Respostas Permitidas, selecionar Texto
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA A"
+    Em Banco de Questões, em Sigla Resposta, inserir "A"
+    Em Banco de Questões, em Resposta Correta, selecionar SIM
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA CORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA B"
+    Em Banco de Questões, em Sigla Resposta, inserir "B"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA C"
+    Em Banco de Questões, em Sigla Resposta, inserir "C"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA D"
+    Em Banco de Questões, em Sigla Resposta, inserir "D"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, clicar em Salvar
+    Em Banco de Questões, clicar em OK no modal
+    Em Banco de Questões, clicar em Cadastrar
+    Em Banco de Questões, em Utilização da Questão, selecionar "Avaliação Educacional"
+    Em Banco de Questões, em Texto Base para a Pergunta, inserir "Texto base pergunta 03 - Automação"
+    Em Banco de Questões, em Pergunta, inserir "Pergunta Texto 03 - Automação"
+    Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 3
+    Em Banco de Questões, clicar em Anexar
+    Em Banco de Questões, em Sigla, inserir "AUT03"
+    Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
+    Em Banco de Questões, em Peso, inserir "20"
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "Média"
+    Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST03-2022"
+    Em Banco de Questões, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Banco de Questões, em Ano/Ciclo, selecionar "5º Ano"
+    Em Banco de Questões, em Respostas Permitidas, selecionar Texto
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA A"
+    Em Banco de Questões, em Sigla Resposta, inserir "A"
+    Em Banco de Questões, em Resposta Correta, selecionar SIM
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA CORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA B"
+    Em Banco de Questões, em Sigla Resposta, inserir "B"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA C"
+    Em Banco de Questões, em Sigla Resposta, inserir "C"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA D"
+    Em Banco de Questões, em Sigla Resposta, inserir "D"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, clicar em Salvar
+    Em Banco de Questões, clicar em OK no modal
+    Em Banco de Questões, clicar em Cadastrar
+    Em Banco de Questões, em Utilização da Questão, selecionar "Avaliação Educacional"
+    Em Banco de Questões, em Texto Base para a Pergunta, inserir "Texto base pergunta 04 - Automação"
+    Em Banco de Questões, em Pergunta, inserir "Pergunta Texto 04 - Automação"
+    Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 4
+    Em Banco de Questões, clicar em Anexar
+    Em Banco de Questões, em Sigla, inserir "AUT04"
+    Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
+    Em Banco de Questões, em Peso, inserir "20"
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "Média"
+    Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST04-2022"
+    Em Banco de Questões, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Banco de Questões, em Ano/Ciclo, selecionar "5º Ano"
+    Em Banco de Questões, em Respostas Permitidas, selecionar Texto
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA A"
+    Em Banco de Questões, em Sigla Resposta, inserir "A"
+    Em Banco de Questões, em Resposta Correta, selecionar SIM
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA CORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA B"
+    Em Banco de Questões, em Sigla Resposta, inserir "B"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA C"
+    Em Banco de Questões, em Sigla Resposta, inserir "C"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA D"
+    Em Banco de Questões, em Sigla Resposta, inserir "D"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, clicar em Salvar
+    Em Banco de Questões, clicar em OK no modal
+    Em Banco de Questões, clicar em Cadastrar
+    Em Banco de Questões, em Utilização da Questão, selecionar "Avaliação Educacional"
+    Em Banco de Questões, em Texto Base para a Pergunta, inserir "Texto base pergunta 05 - Automação"
+    Em Banco de Questões, em Pergunta, inserir "Pergunta Texto 05 - Automação"
+    Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 5
+    Em Banco de Questões, clicar em Anexar
+    Em Banco de Questões, em Sigla, inserir "AUT05"
+    Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
+    Em Banco de Questões, em Peso, inserir "20"
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "Média"
+    Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST05-2022"
+    Em Banco de Questões, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Banco de Questões, em Ano/Ciclo, selecionar "5º Ano"
+    Em Banco de Questões, em Respostas Permitidas, selecionar Texto
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA A"
+    Em Banco de Questões, em Sigla Resposta, inserir "A"
+    Em Banco de Questões, em Resposta Correta, selecionar SIM
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA CORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA B"
+    Em Banco de Questões, em Sigla Resposta, inserir "B"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA C"
+    Em Banco de Questões, em Sigla Resposta, inserir "C"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Resposta, inserir "RESPOSTA D"
+    Em Banco de Questões, em Sigla Resposta, inserir "D"
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, clicar em Salvar
+    Em Banco de Questões, clicar em OK no modal
+    
+Cenário 47: Funcionalidade Banco de Questões - Imagem
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
+    [Tags]             Banco de Questões | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Banco de Questões"
+    Em Banco de Questões, clicar em Cadastrar
+    Em Banco de Questões, em Utilização da Questão, selecionar "Avaliação Educacional"
+    Em Banco de Questões, em Texto Base para a Pergunta, inserir "Texto base pergunta 01 - Automação"
+    Em Banco de Questões, em Pergunta, inserir "Pergunta Imagem 01 - Automação"
+    Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 1
+    Em Banco de Questões, clicar em Anexar
+    Em Banco de Questões, em Sigla, inserir "AUT01"
+    Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
+    Em Banco de Questões, em Peso, inserir "20"
+    Em Banco de Questões, em Nível da Questão, selecionar "Média"
+    Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST01-2022"
+    Em Banco de Questões, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Banco de Questões, em Ano/Ciclo, selecionar "5º Ano"
+    Em Banco de Questões, em Respostas Permitidas, selecionar Imagem
+    Em Banco de Questões, em Resposta Correta, selecionar SIM
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA CORRETA AUTOMAÇÃO"
+    Em Banco de Questões, em Inserir Imagem na Resposta, inserir a imagem da questão 1
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, em Inserir Imagem na Resposta, inserir a imagem da questão 2
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, clicar em Salvar
+    Em Banco de Questões, clicar em OK no modal
+
+Cenário 47: Funcionalidade Configurar Avaliação
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
+    [Tags]             Configurar Avaliação | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Configurar Avaliação"
+    Em Configurar Avaliação, clicar em Cadastrar
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO AUTOMAÇÃO"
+    Em Configurar Avaliação, em Tipo de Lançamento, selecionar Consolidado
+    Em Configurar Avaliação, em Aplicação da Avaliação, selecionar On Line
+    Em Configurar Avaliação, em Proposta da Avaliação, inserir "PROPOSTA AVALIAÇÃO AUTOMAÇÃO" 
+    Em Configurar Avaliação, em Modelo de Avaliação, selecionar "AVALIA MAIS - COMUNICAÇÃO E EXPRESSÃO" 
+    Em Configurar Avaliação, em Periodo de Avaliação, selecionar "2º SEMESTRE" 
+    Em Configurar Avaliação, em Situação, selecionar Ativo 
+    Em Configurar Avaliação, em Situação, selecionar Individual Por Periodo 
+    Em Configurar Avaliação, em Pergunta, inserir "PERGUNTA"
+    Em Configurar Avaliação, em Resposta, inserir "RESPOSTA"
+    Em Configurar Avaliação, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Configurar Avaliação, em Curso, selecionar "CICLO II"
+    Em Configurar Avaliação, em Ano/Ciclo, selecionar "5º Ano"
+    Em Configurar Avaliação, em Nível, selecionar "ABAIXO DO NÍVEL 1"
+    Em Configurar Avaliação, em Pontuação de, inserir "0"
+    Em Configurar Avaliação, em Pontuação até, inserir "125"
+    Em Configurar Avaliação, em Regra de pontuação, inserir "MENOR OU IGUAL A 125."  
+    Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA DESENVOLVIMENTO DOS SABERES E APRENDIZAGENS INSUFICIENTES PARA A SÉRIE/ANO."
+    Em Configurar Avaliação, clicar em Adicionar
+    Em Configurar Avaliação, em Nível, selecionar "NÍVEL 1"
+    Em Configurar Avaliação, em Pontuação de, inserir "126"
+    Em Configurar Avaliação, em Pontuação até, inserir "200"
+    Em Configurar Avaliação, em Regra de pontuação, inserir "MAIOR QUE 125, MENOR OU IGUAL A 200."  
+    Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA POUCO DESENVOLVIMENTO DOS SABERES E APRENDIZAGENS PARA A SÉRIE/ANO."
+    Em Configurar Avaliação, clicar em Adicionar
+    Em Configurar Avaliação, em Nível, selecionar "NÍVEL 2"
+    Em Configurar Avaliação, em Pontuação de, inserir "201"
+    Em Configurar Avaliação, em Pontuação até, inserir "275"
+    Em Configurar Avaliação, em Regra de pontuação, inserir "MAIOR QUE 200, MENOR OU IGUAL A 275."  
+    Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA DESENVOLVIMENTO ADEQUADO DOS SABERES E APRENDIZAGENS PARA A SÉRIE/ANO."
+    Em Configurar Avaliação, clicar em Adicionar
+    Em Configurar Avaliação, em Nível, selecionar "NÍVEL 3"
+    Em Configurar Avaliação, em Pontuação de, inserir "276"
+    Em Configurar Avaliação, em Pontuação até, inserir "350"
+    Em Configurar Avaliação, em Regra de pontuação, inserir "MAIOR QUE 275, MENOR OU IGUAL A 350."  
+    Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA DESENVOLVIMENTO DESEJÁVEL DOS SABERES E APRENDIZAGENS PARA A SÉRIE/ANO."
+    Em Configurar Avaliação, clicar em Adicionar
+    Em Configurar Avaliação, em Nível, selecionar "ACIMA DO NÍVEL 3"
+    Em Configurar Avaliação, em Pontuação de, inserir "351"
+    Em Configurar Avaliação, em Pontuação até, inserir "450"
+    Em Configurar Avaliação, em Regra de pontuação, inserir "MAIOR QUE 350, MENOR OU IGUAL A 450."  
+    Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA DESENVOLVIMENTO QUE EXCEDE AS EXPECTATIVAS DOS SABERES E APRENDIZAGENS PARA A SÉRIE/ANO."
+    Em Configurar Avaliação, clicar em Adicionar
+    Em Configurar Avaliação, clicar em Salvar
+    Em Configurar Avaliação, clicar em OK no modal
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Imagem 01 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, selecionar a Etapa/Modalidade "Ensino Fundamental"
     
 
-# Cenário 47: Funcionalidade Configurar Avaliação
-#     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
-#     [Tags]             Configurar Avaliação | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Entrar no módulo "Configuração"
-#     Entrar no módulo "Avaliações Educacionais"
-#     Entrar na funcionalidade "Configurar Avaliação"
+
+
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO AUTOMAÇÃO"
+    Em Configurar Avaliação, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Configurar Avaliação, clicar em Pesquisar
+    Em Configurar Avaliação, clicar em Ações e Questões
+    Em Configurar Avaliação, em Pergunta, inserir "Pergunta Imagem 01 - Automação"
+    Em Configurar Avaliação, em Etapa/Modalidade, selecionar "Pergunta Imagem 01 - Automação"
+    
+
+
 
 # Cenário 48: Funcionalidade Agendamento Avaliação
 #     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
