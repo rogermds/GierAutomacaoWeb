@@ -40,7 +40,7 @@ Em Escola Autorizada A Receber Matrícula, verificar se as opções estão selec
         ${resultado}    Run Keyword And Return Status   Wait Until Element Is Not Visible    ${busca}    0.2
         ${resultado2}    Run Keyword And Return Status   Element Attribute Value Should Be    ${busca}    checked    true
         IF  ${resultado} or ${resultado2}
-        CONTINUE    
+        Log    Ok   
         ELSE
             Execute JavaScript  document.getElementById("${busca}").click();
             Aguardar tela de carregamento
@@ -53,8 +53,8 @@ Em Escola Autorizada A Receber Matrícula, verificar se as opções foram salvas
         ${busca}    Set Variable    cphContent_dtlEscolas_chkTodosTd_${index}
         ${resultado}    Run Keyword And Return Status   Wait Until Element Is Not Visible    ${busca}    0.2
         ${resultado2}    Run Keyword And Return Status   Element Attribute Value Should Be    ${busca}    checked    true
-        IF  ${resultado} or ${resultado2}
-        CONTINUE    
+        IF  ${resultado} or ${resultado2} 
+        Log    Ok   
         ELSE
         Fail
         END

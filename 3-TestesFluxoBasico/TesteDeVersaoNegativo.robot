@@ -581,7 +581,6 @@ Cenário 26: Funcionalidade Avaliações e Frequência
     Clicar em OK no modal de alerta
     Em Descrição, informar o valor "Teste Automação Qualidade - Fluxo Negativo"
     Clicar em "Salvar"
-    Visualizar a mensagem: UM TIPO DE AVALIAÇÃO DEVE SER SELECIONADO.
 
 Cenário 27: Funcionalidade Justificativas da Pré-Matricula
     [Documentation]    Esse teste verifica se é possível cadastrar uma 
@@ -1494,6 +1493,7 @@ Cenário 45: Programação de Processo
     Em Programação de Processo, em Ambiente Utilizado, selecionar "Gier"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar    
     Em Programação de Processo, em Processo, selecionar o processo "TESTE NEGATIVO PARA PROGRAMAÇÃO DE PROCESSO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -1617,7 +1617,7 @@ Cenário 46: Portal de Inscrição - Infantil Inicial (Mesma Escola)
     No Portal, visualizar a mensagem "já está inscrito(a) na rede de ensino!"
     No Portal, fechar o modal
 
-Cenário 47: Portal de Inscrição - Infantil Inicial (Outra Escola)
+Cenário 47: Portal de Inscrição - Infantil Contínuo (Outra Escola)
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Infantil
     [Tags]             Portal de Inscrição | Fluxo Negativo
@@ -1702,6 +1702,36 @@ Cenário xx: Portal de Inscrição - Fundamental Inicial
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Fundamental
     [Tags]             Portal de Inscrição | Fluxo Negativo
+    Entrar no Portal
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+
     Entrar no Portal 
     No Portal, clicar em "Ensino Fundamental"
     No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
@@ -1754,7 +1784,7 @@ Cenário xx: Portal de Inscrição - Fundamental Inicial
     No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
     No Portal, fechar o modal
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "ROBERTO SALES"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
     No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
@@ -1872,6 +1902,113 @@ Cenário 49: Portal de Inscrição - Infantil Contínuo
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Infantil
     [Tags]             Portal de Inscrição | Fluxo Negativo
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+
+    Entrar no Portal 
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "Data de Nascimento inválida"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Escolha da Escola, em CEP, inserir "07032-000"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, visualizar a mensagem "Não existem escolas disponíveis a partir dos dados informados"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em CEP, inserir "00000-002"
+    No Portal, visualizar a mensagem "Não foi possível localizar a coordenada para listar escolas"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF inválido
+    No Portal, visualizar a mensagem "O CPF informado é inválido"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "CPF não informado"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "40136061869"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "Data de Nascimento inválida"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "23498175041"
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "AMANDA SANTOS"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão inválida
+    No Portal, visualizar a mensagem "Número de Certidão de Nascimento Inválido"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "00/00/0000"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações 
+    No Portal, visualizar a mensagem "Data de Emissão da Certidão é inválida"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "24041990"
+    No Portal, clicar nos campos de declarações 
+    No Portal, visualizar a mensagem "Data de Emissão da Certidão de Nascimento não pode ser menor que a Data de Nascimento"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "24042021"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
+
     Entrar no Portal 
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
@@ -1921,13 +2058,13 @@ Cenário 49: Portal de Inscrição - Infantil Contínuo
     No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
     No Portal, fechar o modal
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "PEDRO HENRIQUE MARTINS"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
     No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
     No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão inválida
     No Portal, visualizar a mensagem "Número de Certidão de Nascimento Inválido"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
     No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "00/00/0000"
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações 
@@ -1941,15 +2078,41 @@ Cenário 49: Portal de Inscrição - Infantil Contínuo
     No Portal, clicar nos campos de declarações
     No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
     No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "GUILHERME ARAUJO"
-    No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
-    No Portal, fechar o modal
 
 Cenário 50: Portal de Inscrição - Fundamental Contínuo 
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Fundamental
     [Tags]             Portal de Inscrição | Fluxo Negativo
+    Entrar no Portal
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Aluno, em RNE, inserir O RNE cadastrado
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+
     Entrar no Portal 
     No Portal, clicar em "Ensino Fundamental"
     No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
@@ -2000,14 +2163,68 @@ Cenário 50: Portal de Inscrição - Fundamental Contínuo
     No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
     No Portal, fechar o modal
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "CARRILHO ESCOBAR"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
     No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações
     No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
     No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "DOURIVAL JUNIOR"
+
+    Entrar no Portal 
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "Data de Nascimento inválida"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Escolha da Escola, em CEP, inserir "07032-000"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, visualizar a mensagem "Não existem escolas disponíveis a partir dos dados informados"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em CEP, inserir "00000-002"
+    No Portal, visualizar a mensagem "Não foi possível localizar a coordenada para listar escolas"
+    No Portal, fechar o modal
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF inválido
+    No Portal, visualizar a mensagem "O CPF informado é inválido"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "CPF não informado"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "401.360.618-69"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
+    No Portal, visualizar a mensagem "Data de Nascimento inválida"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "234.981.750-41"
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "AMANDA SANTOS"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações
     No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
     No Portal, fechar o modal

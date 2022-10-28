@@ -68,4 +68,4 @@ Clicar no botão Inserir Responsável
     Aguardar tela de carregamento
 
 Visualizar a mensagem: PESQUISE UM RESPONSÁVEL.
-    Wait Until Page Contains Element    //div[@class='divConteudo'][contains(.,'Pesquise um Responsável.')]
+    Wait Until Page Contains Element    //div[@class='divConteudo'][contains(.,'Por favor pesquisar um Responsável .')]

@@ -40,7 +40,7 @@ Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
     Aguardar tela de carregamento
 
 Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
-    Wait Until Element Is Visible    alertBox_btnOk
+    Wait Until Element Is Visible    alertBox_btnOk    20
     Execute JavaScript  document.getElementById("alertBox_btnOk").click();
     Aguardar tela de carregamento
     
