@@ -104,6 +104,7 @@ No Portal, clicar nos campos de declarações
     Wait Until Element Is Visible    chkResponsabilidade
     Sleep    1
     Click Element    chkResponsabilidade
+    Sleep    1
     Click Element    chkLgpd
     Sleep    1
     Aguardar carregamento Portal
@@ -235,10 +236,11 @@ No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "${da
     Input Text    txtDataEmissaoCertidao    ${dataEmissaoCertidao}
 
 No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    Sleep    1
+    Sleep    5
     ${telefoneAleatorio}    Random Number   8    True
     Sleep    1
     Set Suite Variable    ${telefone1Aleatorio}    119${telefoneAleatorio}
+    Click Element    txtTelefone1
     Input Text    txtTelefone1    ${telefone1Aleatorio}
     Sleep    1    
 
@@ -366,6 +368,8 @@ No Portal, verificar se o comprovante é exibido em tela
     Dormir
 
 No Portal, em Contato, em Telefone 1, inserir o telefone cadastrado
+    Sleep    5
+    Click Element    txtTelefone1    
     Input Text    txtTelefone1    ${telefone1Aleatorio}
     Sleep    1
 

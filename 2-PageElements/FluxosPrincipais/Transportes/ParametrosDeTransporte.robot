@@ -131,7 +131,7 @@ Em Parâmetros de Transporte, clicar em Ações e Inativar
     Aguardar tela de carregamento
 
 Em Parâmetros de Transporte, clicar em Sim no modal
-    Execute JavaScript  document.getElementById("cphContent_btnPesquisa").click();
+    Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnSim").click();
     Aguardar tela de carregamento
 
 Em Parâmetros de Transporte, clicar em Ok no modal

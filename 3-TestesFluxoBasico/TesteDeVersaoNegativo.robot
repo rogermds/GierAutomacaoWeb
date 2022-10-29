@@ -1697,7 +1697,6 @@ Cenário 47: Portal de Inscrição - Infantil Contínuo (Outra Escola)
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
 
-
 Cenário xx: Portal de Inscrição - Fundamental Inicial 
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Fundamental

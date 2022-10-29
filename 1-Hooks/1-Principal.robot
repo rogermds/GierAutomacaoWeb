@@ -101,7 +101,7 @@ Clicar em Fechar
     Aguardar tela de carregamento
 
 Clicar em Voltar
-    Wait Until Element Is Visible    ${botaoVoltar}
+    Wait Until Element Is Visible    ${botaoVoltar}    60
     Execute JavaScript  document.getElementById("${botaoVoltar}").click();
     Aguardar tela de carregamento
 

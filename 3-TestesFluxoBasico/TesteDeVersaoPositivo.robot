@@ -1353,6 +1353,9 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Justificativas da Pré-matrícula"
     Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "DETERMINAÇÃO LEGAL"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
     Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "CANCELAMENTO"
     Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
@@ -1499,9 +1502,16 @@ Cenário 32: Funcionalidade - Edição: Layout do Portal de Inscrições e Trans
     Em Layout do Portal, Layout Inscrição, clicar em Salvar e Próximo
     Em Layout do Portal, Layout Transferência, clicar em Salvar e Próximo
     Em Layout do Portal, Observações Importantes, editar o texto da etapa Educação Infantil
+    Em Layout do Portal, Observações Importantes, selecionar a Etapa "ENSINO FUNDAMENTAL"
+    Em Layout do Portal, Observações Importantes, selecionar o curso "CICLO II"
+    Em Layout do Portal, Observações Importantes, selecionar em inscrição "INSCRIÇÃO"
+    Em Layout do Portal, Observações Importantes, selecionar em vaga "SIM"
+    Em Layout do Portal, Observações Importantes, em Observações inserir "TESTE OBSERVAÇÃO AUTOMACAO "
+    Em Layout do Portal, Observações Importantes, clicar em Inserir
     Em Layout do Portal, Observações Importantes, editar o texto da etapa Ensino Fundamental
     Em Layout do Portal, Observações Importantes, clicar em Salvar
     Em Layout do Portal, Observações Importantes, clicar em OK no Modal
+
     Entrar no Portal
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
@@ -1511,22 +1521,52 @@ Cenário 32: Funcionalidade - Edição: Layout do Portal de Inscrições e Trans
     No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
     No Portal, verificar se o texto exibido é igual ao cadastrado em Ensino Fundamental
     No Portal, fechar o modal de informações importantes
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07032018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Selecionar Escolas
+    No Portal, clicar em Próximo
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "07/03/2018"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+
     No Portal, clicar em "Consultar Solicitação"
     No Portal, em Consultar Solicitação, selecionar a nacionalidade "Brasileiro"
-    No Portal, em Consultar Solicitação, em Protocolo inserir "20269562"
-    No Portal, em Consultar Solicitação, em CPF inserir "57743459802"
-    No Portal, em Consultar Solicitação, em Data de Nascimento inserir "07/03/1996"
+    No Portal, em Consultar Solicitação, em Protocolo inserir o protocolo do comprovande de matrícula    
+    No Portal, em Consultar Solicitação, em CPF inserir o CPF do responsavel cadastrado
+    No Portal, em Consultar Solicitação, em Data de Nascimento inserir data de na/scimento do responsavel cadastrado
     No Portal, em Consultar Solicitação, clicar em Pesquisar
     No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
-    No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Educação Infantil
-    No Portal, clicar em "Consultar Solicitação"
-    No Portal, em Consultar Solicitação, selecionar a nacionalidade "Brasileiro"
-    No Portal, em Consultar Solicitação, em Protocolo inserir "20269563"
-    No Portal, em Consultar Solicitação, em CPF inserir "97780957012"
-    No Portal, em Consultar Solicitação, em Data de Nascimento inserir "07/03/1996"
-    No Portal, em Consultar Solicitação, clicar em Pesquisar
-    No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
-    No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Ensino Fundamental
+    No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Educação Infantil    
     
 Cenário 33: Funcionalidade Processo de Demanda Inicial - Infantil
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
@@ -2157,6 +2197,7 @@ Cenário 41: Funcionalidade Programação de Processo - Infantil Inicial
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2165,6 +2206,7 @@ Cenário 41: Funcionalidade Programação de Processo - Infantil Inicial
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL INICIAL"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2192,6 +2234,7 @@ Cenário 42: Funcionalidade Programação de Processo - Fundamental Inicial
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2200,6 +2243,7 @@ Cenário 42: Funcionalidade Programação de Processo - Fundamental Inicial
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO FUNDAMENTAL INICIAL"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2227,6 +2271,7 @@ Cenário 43: Funcionalidade Programação de Processo - EJA Inicial
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2235,6 +2280,7 @@ Cenário 43: Funcionalidade Programação de Processo - EJA Inicial
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 1º SEMESTRE INICIAL"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2250,6 +2296,7 @@ Cenário 43: Funcionalidade Programação de Processo - EJA Inicial
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2258,6 +2305,7 @@ Cenário 43: Funcionalidade Programação de Processo - EJA Inicial
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 2º SEMESTRE INICIAL"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2285,6 +2333,7 @@ Cenário 44: Funcionalidade Programação de Processo - Infantil Contínuo
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2293,6 +2342,7 @@ Cenário 44: Funcionalidade Programação de Processo - Infantil Contínuo
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO INFANTIL CONTÍNUO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2320,6 +2370,7 @@ Cenário 45: Funcionalidade Programação de Processo - Fundamental Contínuo
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2328,6 +2379,7 @@ Cenário 45: Funcionalidade Programação de Processo - Fundamental Contínuo
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO FUNDAMENTAL CONTÍNUO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2355,6 +2407,7 @@ Cenário 46: Funcionalidade Programação de Processo - EJA Contínuo
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2363,6 +2416,7 @@ Cenário 46: Funcionalidade Programação de Processo - EJA Contínuo
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 1º SEMESTRE CONTÍNUO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2378,6 +2432,7 @@ Cenário 46: Funcionalidade Programação de Processo - EJA Contínuo
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo cadastrado
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2386,6 +2441,7 @@ Cenário 46: Funcionalidade Programação de Processo - EJA Contínuo
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo "AUTOMACAO EJA 2º SEMESTRE CONTÍNUO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2413,6 +2469,7 @@ Cenário 47: Funcionalidade Programação de Processo - Edição e Exclusão
     Em Programação de Processo, em Dias da Semana, selecionar "Todos"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2423,6 +2480,7 @@ Cenário 47: Funcionalidade Programação de Processo - Edição e Exclusão
     Em Programação de Processo, em Dias da Semana, selecionar "Segunda-Feira"
     Em Programação de Processo, clicar em Inserir
     Em Programação de Processo, clicar em OK no modal
+    Clicar em Voltar
     Em Programação de Processo, em Processo, selecionar o processo "TESTE PARA PROGRAMAÇÃO DE PROCESSO"
     Em Programação de Processo, clicar em Pesquisar
     Em Programação de Processo, verificar se o processo aparece nos resultados
@@ -2675,7 +2733,7 @@ Cenário 52: Funcionalidade Gier Portal - Infantil Contínuo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Pesquisar "EPG CRISPINIANO SOARES" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
@@ -2737,7 +2795,7 @@ Cenário 52: Funcionalidade Gier Portal - Infantil Contínuo
     No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
     No Portal, em Contato, em Telefone 1, inserir o telefone cadastrado
     No Portal, clicar nos campos de declarações
-    No Portal, no modal de alerta, clicar em Sim
+    No Portal, no modal de alerta, clicar em Sim    
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
@@ -2790,6 +2848,7 @@ Cenário 52: Funcionalidade Gier Portal - Infantil Contínuo
     No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
     No Portal, em Contato, em Telefone 1, inserir o telefone cadastrado
     No Portal, clicar nos campos de declarações
+    No Portal, no modal de alerta, clicar em Sim 
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
 
@@ -4226,7 +4285,7 @@ Cenário 66: Funcionalidade Gestão de Pré-Matrícula: Ações - Escola
     Em Gestão de Pré-Matrícula, em Histórico de Alterações, verificar se o registro foi salvo
     Em Gestão de Pré-Matrícula, em Histórico de Alterações, clicar em Fechar
     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Determinação Legal
-    Em Gestão de Pré-Matrícula, em Determinação Legal, selecionar "TESTE AUTOMACAO"
+    Em Gestão de Pré-Matrícula, em Determinação Legal, selecionar "TESTE AUTOMAÇÃO QA"
     Em Gestão de Pré-Matrícula, em Determinação Legal, em Observações, inserir "OBSERVAÇÃO DETERMINAÇÃO LEGAL AUTOMAÇÃO"
     Em Gestão de Pré-Matrícula, em Determinação Legal, clicar em Salvar
     Em Gestão de Pré-Matrícula, em Escolas Selecionadas, clicar em Ações e Cancelar Indicação
@@ -4348,30 +4407,30 @@ Cenário 69: Funcionalidade Tipos de Rotas
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Tipos de Rotas"
     Em Tipos de Rotas, clicar em Cadastrar
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO QA"
     Em Tipos de Rotas, clicar em Salvar
     Em Tipos de Rotas, clicar em OK no modal
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO QA"
     Em Tipos de Rotas, clicar em Pesquisar
-    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO QA"
     Em Tipos de Rotas, nos resultado, clicar em Ações e Editar
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO EDITADO"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO EDITADO QA"
     Em Tipos de Rotas, clicar em Salvar
     Em Tipos de Rotas, clicar em OK no modal
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO EDITADO"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO EDITADO QA"
     Em Tipos de Rotas, clicar em Pesquisar
-    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO EDITADO"
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO EDITADO QA"
     Em Tipos de Rotas, nos resultado, clicar em Ações e Excluir
     Em Tipos de Rotas, clicar em Sim no modal 
     Em Tipos de Rotas, clicar em OK no modal
     Em Tipos de Rotas, clicar em Cadastrar
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO QA"
     Em Tipos de Rotas, clicar em Salvar
     Em Tipos de Rotas, clicar em OK no modal
     Em Tipos de Rotas, clicar em OK no modal
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO QA"
     Em Tipos de Rotas, clicar em Pesquisar
-    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO"
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO QA"
 
 Cenário 70: Funcionalidade Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
@@ -4386,8 +4445,8 @@ Cenário 70: Funcionalidade Rotas
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Rotas"
     Em Rotas, clicar em Cadastrar
-    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA AUTOMACAO"
-    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA"
+    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA AUTOMACAO Qa"
+    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA QA"
     Em Cadastrar Rota, em Ponto Inicial, inserir "AUTOMACAO PONTO INICIAL"
     Em Cadastrar Rota, em Ponto Final, inserir "AUTOMACAO PONTO FINAL"
     Em Cadastrar Rota, em Km, inserir "10"
@@ -4401,25 +4460,25 @@ Cenário 70: Funcionalidade Rotas
     Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Inserir
     Em Cadastrar Rota, clicar em Salvar
     Em Cadastrar Rota, clicar em OK no Modal
-    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA"
+    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA QA"
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi cadastrada
     Em Rotas, no Resultado da Busca, clicar em Ações e Editar
-    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA EDITADO"
+    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA EDITADO QA"
     Em Cadastrar Rota, em Km, inserir "7"
     Em Cadastrar Rota, clicar em Salvar
     Em Cadastrar Rota, clicar em OK no Modal
-    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA EDITADO"
+    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA EDITADO QA"
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi cadastrada
     Em Rotas, no Resultado da Busca, clicar em Ações e Excluir
     Em Rotas, clicar em Sim no modal
     Em Cadastrar Rota, clicar em OK no Modal
-    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA EDITADO"
+    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA EDITADO QA"
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi excluída
     Em Rotas, clicar em Cadastrar
-    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA AUTOMACAO"
+    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA AUTOMACAO QA"
     Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA"
     Em Cadastrar Rota, em Ponto Inicial, inserir "AUTOMACAO PONTO INICIAL"
     Em Cadastrar Rota, em Ponto Final, inserir "AUTOMACAO PONTO FINAL"
@@ -4434,7 +4493,7 @@ Cenário 70: Funcionalidade Rotas
     Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Inserir
     Em Cadastrar Rota, clicar em Salvar
     Em Cadastrar Rota, clicar em OK no Modal
-    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA"
+    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA QA"
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi cadastrada
 
@@ -4451,7 +4510,7 @@ Cenário 71: Funcionalidade Tipos de Frotas
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Tipos de Frotas"
     Em Tipos de Frotas, clicar em Cadastrar
-    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO"
+    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO QA"
     Em Tipos de Frotas, em Sigla, inserir "TFA"
     Em Tipos de Frotas, clicar em Salvar
     Em Tipos de Frotas, clicar em OK no modal
@@ -4459,7 +4518,7 @@ Cenário 71: Funcionalidade Tipos de Frotas
     Em Tipos de Frotas, clicar em Pesquisar
     Em Tipos de Frotas, verificar se o tipo de rota foi cadastrado
     Em Tipos de Frotas, clicar em Ações e Editar
-    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO EDITADO"
+    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO EDITADO QA"
     Em Tipos de Frotas, clicar em Salvar
     Em Tipos de Frotas, clicar em OK no modal
     Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado
@@ -4469,7 +4528,7 @@ Cenário 71: Funcionalidade Tipos de Frotas
     Em Tipos de Frotas, clicar em Sim no modal
     Em Tipos de Frotas, clicar em OK no modal
     Em Tipos de Frotas, clicar em Cadastrar
-    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO"
+    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO QA"
     Em Tipos de Frotas, em Sigla, inserir "TFA"
     Em Tipos de Frotas, clicar em Salvar
     Em Tipos de Frotas, clicar em OK no modal
@@ -4487,9 +4546,9 @@ Cenário 72: Funcionalidade Frotas
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Frotas"
     Em Frotas, clicar em Cadastrar
-    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO"
+    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO QA"
     Em Frotas, em Sigla, inserir "FRAT"
-    Em Frotas, em Tipo, selecionar "TIPO FROTA AUTOMACAO"
+    Em Frotas, em Tipo, selecionar "TIPO FROTA AUTOMACAO QA"
     Em Frotas, em Forma de Gerenciamento, selecionar "Frota Gerenciada"
     Em Frotas, clicar em Salvar
     Em Frotas, clicar em OK
@@ -4497,7 +4556,7 @@ Cenário 72: Funcionalidade Frotas
     Em Frotas, clicar em Pesquisar
     Em Frotas, verificar se a frota foi cadastrada
     Em Frotas, clicar em Ações e Editar
-    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO EDITADA"
+    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO EDITADA QA"
     Em Frotas, clicar em Salvar
     Em Frotas, clicar em OK
     Em Frotas, em Descrição, inserir a frota cadastrada
@@ -4507,9 +4566,9 @@ Cenário 72: Funcionalidade Frotas
     Em Frotas, clicar em Sim
     Em Frotas, clicar em OK
     Em Frotas, clicar em Cadastrar
-    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO"
+    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO QA"
     Em Frotas, em Sigla, inserir "FRAT"
-    Em Frotas, em Tipo, selecionar "TIPO FROTA AUTOMACAO"
+    Em Frotas, em Tipo, selecionar "TIPO FROTA AUTOMACAO QA"
     Em Frotas, em Forma de Gerenciamento, selecionar "Frota Gerenciada"
     Em Frotas, clicar em Salvar
     Em Frotas, clicar em OK

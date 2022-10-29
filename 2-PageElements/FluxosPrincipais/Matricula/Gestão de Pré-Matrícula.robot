@@ -28,14 +28,15 @@ Em Gestão de Pré-Matrícula, em Educando, inserir o nome do educando cadastrad
     
 
 Em Gestão de Pré-Matrícula, em Educando, inserir o protocolo do comprovande de matrícula
-    Input Text    cphContent_txtProtocolo    ${protocoloComprovante}
+    Set Suite Variable    ${protocoloComprovante}  
+    Input Text    cphContent_txtProtocolo    ${protocoloComprovante}    
 
 Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Execute JavaScript  document.getElementById("cphContent_btnPesquisa").click();
     Aguardar tela de carregamento
 
 Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Dados Candidato
-    Wait Until Page Contains    Resultado da Busca
+    Wait Until Page Contains    Resultado da Busca    
     Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click() 
     Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkDadosCandidato_0").click();
@@ -246,12 +247,15 @@ Em Gestão de Pré-Matrícula, em Origem e Documentação, em Estado Origem, sel
     Aguardar tela de carregamento
 
 Em Gestão de Pré-Matrícula, em Origem e Documentação, em País Origem, selecionar "${paisOrigemGestao}"
+    Sleep     3
     Execute JavaScript   $("#cphContent_ddlRedePais").val($('option:contains("${paisOrigemGestao}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#cphContent_ddlRedePais').trigger('change');
     Aguardar tela de carregamento
 
 Em Gestão de Pré-Matrícula, em Origem e Documentação, em Documentos Aprensentados, selecionar CPF e RG
+    Sleep    3
     Execute JavaScript  document.getElementById("cphContent_rptDocumentos_chkDocumento_0").click();
+    Sleep    3
     Execute JavaScript  document.getElementById("cphContent_rptDocumentos_chkDocumento_1").click();
     Aguardar tela de carregamento
 
@@ -280,7 +284,7 @@ Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Histórico de A
 Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Cancelar Inscrição
     Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click() 
-    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkCancelar_2").click();
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkCancelar_1").click();
     Aguardar tela de carregamento
 
 Em Gestão de Pré-Matrícula, em Histórico de Alterações, verificar se o registro foi salvo
