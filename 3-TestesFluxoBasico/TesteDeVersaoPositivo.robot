@@ -1354,12 +1354,34 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Entrar no módulo "Gestão de Demandas"
     Entrar na funcionalidade "Justificativas da Pré-matrícula"
     Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "CANCELAMENTO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Editar
+    Em Edição de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA EDITADO"
+    Em Edição de Justificativas da Pré-Matrícula, clicar em Alterar
+    Em Edição de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa editada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa editada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
+    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "CANCELAMENTO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
     Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "DETERMINAÇÃO LEGAL"
     Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
-    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "CANCELAMENTO"
-    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
-    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
     Em Justificativas da Pré-Matrícula, clicar em Pesquisar
@@ -1374,32 +1396,7 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
     Em Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, clicar em Cadastrar
-    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "CANCELAMENTO"
-    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
-    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
-    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
-    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
-    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
-    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
-    Em Justificativas da Pré-Matrícula, clicar em Cadastrar    
-    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "PAUSADO"
-    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
-    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
-    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
-    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
-    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
-    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
-    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Editar
-    Em Edição de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA EDITADO"
-    Em Edição de Justificativas da Pré-Matrícula, clicar em Alterar
-    Em Edição de Justificativas da Pré-Matrícula, clicar em OK no Modal
-    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa editada
-    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
-    Em Justificativas da Pré-Matrícula, verificar se a justificativa editada foi salva
-    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
-    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
-    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
-    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "PAUSADO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "DETERMINAÇÃO LEGAL"
     Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
@@ -1408,25 +1405,88 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
     Em Justificativas da Pré-Matrícula, clicar em Cadastrar
     Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "DESFAZER AÇÃO"
-    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
     Em Justificativas da Pré-Matrícula, clicar em Pesquisar
     Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Editar
+    Em Edição de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA EDITADO"
+    Em Edição de Justificativas da Pré-Matrícula, clicar em Alterar
+    Em Edição de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa editada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa editada foi salva
     Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
     Em Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, clicar em Cadastrar
-    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "VAGA OFERTADA"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "DESFAZER AÇÃO"
     Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
     Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
     Em Justificativas da Pré-Matrícula, clicar em Pesquisar
     Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "INDEFERIMENTO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Editar
+    Em Edição de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA EDITADO"
+    Em Edição de Justificativas da Pré-Matrícula, clicar em Alterar
+    Em Edição de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa editada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa editada foi salva
     Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
     Em Justificativas da Pré-Matrícula, clicar em OK no Modal
-
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "INDEFERIMENTO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "PAUSADO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Editar
+    Em Edição de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA EDITADO"
+    Em Edição de Justificativas da Pré-Matrícula, clicar em Alterar
+    Em Edição de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa editada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa editada foi salva
+    Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
+    Em Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "PAUSADO"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA PARA "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    Em Justificativas da Pré-Matrícula, clicar em Cadastrar
+    Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "VAGA OFERTADA"
+    Em Cadastro de Justificativas da Pré-Matrícula, em Justificativa, inserir "TESTE DE JUSTIFICATIVA DE "
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
+    Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
+    Em Justificativas da Pré-Matrícula, clicar em Pesquisar
+    Em Justificativas da Pré-Matrícula, verificar se a justificativa cadastrada foi salva
+    
 Cenário 31: Funcionalidade - Cadastro: Layout do Portal de Inscrições e Transferências
     [Documentation]    Esse teste efetua o cadastro e exclusão do Portal
     ...                Online de Matrícula            
@@ -1564,7 +1624,7 @@ Cenário 32: Funcionalidade - Edição: Layout do Portal de Inscrições e Trans
     No Portal, em Consultar Solicitação, selecionar a nacionalidade "Brasileiro"
     No Portal, em Consultar Solicitação, em Protocolo inserir o protocolo do comprovande de matrícula    
     No Portal, em Consultar Solicitação, em CPF inserir o CPF do responsavel cadastrado
-    No Portal, em Consultar Solicitação, em Data de Nascimento inserir data de na/scimento do responsavel cadastrado
+    No Portal, em Consultar Solicitação, em Data de Nascimento inserir data de nascimento do responsavel cadastrado
     No Portal, em Consultar Solicitação, clicar em Pesquisar
     No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
     No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Educação Infantil    
@@ -5016,7 +5076,7 @@ Cenário 80: Funcionalidade Grupos de Pergunta
     Em Grupos de Pergunta, clicar em Pesquisar
     Em Grupos de Pergunta, verificar se o cadastro foi efetuado
 
-Cenário 46: Funcionalidade Banco de Questões - Texto
+Cenário 81: Funcionalidade Banco de Questões - Texto
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
     [Tags]             Banco de Questões | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5197,7 +5257,7 @@ Cenário 46: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
     
-Cenário 47: Funcionalidade Banco de Questões - Imagem
+Cenário 82: Funcionalidade Banco de Questões - Imagem
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
     [Tags]             Banco de Questões | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5232,7 +5292,7 @@ Cenário 47: Funcionalidade Banco de Questões - Imagem
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
 
-Cenário 47: Funcionalidade Configurar Avaliação
+Cenário 83: Funcionalidade Configurar Avaliação
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"

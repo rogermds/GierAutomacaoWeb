@@ -1692,10 +1692,7 @@ Cenário 47: Portal de Inscrição - Infantil Contínuo (Outra Escola)
     No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
     No Portal, em Contato, em Telefone 1, inserir o telefone cadastrado
     No Portal, clicar nos campos de declarações
-    No Portal, no modal de alerta, clicar em Sim
-    No Portal, clicar em Concluir Inscrição
-    No Portal, verificar se o comprovante é exibido em tela
-    No Portal, gravar o número de protocolo gerado
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
 
 Cenário xx: Portal de Inscrição - Fundamental Inicial 
     [Documentation]    Esse teste verifica se é possível realizar uma 

@@ -20,6 +20,7 @@ Em Justificativas da Pré-Matrícula, clicar em Cadastrar
 
 Em Cadastro de Justificativas da Pré-Matrícula, em Tipo de Situação, selecionar "${tipoSituacao}"
     Sleep    1.5
+    Aguardar tela de carregamento
     Set Suite Variable    ${tipoSituacao}
     Run Keyword If    '${tipoSituacao}' == 'CANCELAMENTO'   Execute JavaScript   $('#ddlTiposJustificativas').val("1").trigger('chosen:updated');
     Run Keyword If    '${tipoSituacao}' == 'DETERMINAÇÃO LEGAL'     Execute JavaScript   $('#ddlTiposJustificativas').val("2").trigger('chosen:updated');
@@ -47,6 +48,7 @@ Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
 Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa cadastrada
     Wait Until Element Is Visible    txtJustificativa
     Input Text    txtJustificativa    ${justificativaSituacao}
+    Aguardar tela de carregamento
 
 Em Justificativas da Pré-Matrícula, clicar em Pesquisar
     Wait Until Element Is Visible    btnPesquisar_busca
@@ -69,17 +71,24 @@ Em Edição de Justificativas da Pré-Matrícula, em Justificativa, inserir "${t
     Input Text    txtJustificativa    ${textoEditado}
 
 Em Edição de Justificativas da Pré-Matrícula, clicar em Alterar
+    Sleep    2
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em Salvar
 
 Em Edição de Justificativas da Pré-Matrícula, clicar em OK no Modal
+    Sleep    2
     Em Cadastro de Justificativas da Pré-Matrícula, clicar em OK no Modal
 
 Em Justificativas da Pré-Matrícula, verificar se a justificativa editada foi salva
+    Sleep    3
+    Aguardar tela de carregamento
     Wait Until Page Contains    ${textoEditado}
+    Aguardar tela de carregamento
 
 Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa editada
-    Wait Until Element Is Visible    btnPesquisar_busca
+    Aguardar tela de carregamento
+    Wait Until Element Is Visible    txtJustificativa
     Input Text    txtJustificativa    ${textoEditado}
+    Aguardar tela de carregamento
 
 Em Justificativas da Pré-Matrícula, no resultado, clicar em Ações e Excluir
     Execute JavaScript  xPathResult = document.evaluate("//input[contains(@idregistro,'grid_0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);

@@ -115,7 +115,7 @@ Clicar em OK no Modal
     Aguardar tela de carregamento
     
 Clicar em Sim no Modal   
-    Wait Until Element Is Visible    ${botaoSimModal}
+    Wait Until Element Is Visible    ${botaoSimModal}    120
     Execute JavaScript  document.getElementById("${botaoSimModal}").click();
     Aguardar tela de carregamento
 

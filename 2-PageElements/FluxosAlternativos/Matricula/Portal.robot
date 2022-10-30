@@ -46,7 +46,7 @@ No Portal, em Escolha da Escola, em Data de Nascimento, inserir "${data}"
     Aguardar carregamento Portal
 
 No Portal, visualizar a mensagem "${texto}"
-    Wait Until Element Is Visible    //a[contains(@rel,'modal:close')]
+    Wait Until Element Is Visible    //a[contains(@rel,'modal:close')]    60
     Wait Until Page Contains    ${texto}
 
 No Portal, fechar o modal
