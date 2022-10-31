@@ -102,7 +102,7 @@ Clicar em Fechar
     Aguardar tela de carregamento
 
 Clicar em Voltar
-    Wait Until Element Is Visible    ${botaoVoltar}
+    Wait Until Element Is Visible    ${botaoVoltar}    60
     Execute JavaScript  document.getElementById("${botaoVoltar}").click();
     Aguardar tela de carregamento
 
@@ -115,7 +115,7 @@ Clicar em OK no Modal
     Aguardar tela de carregamento
     
 Clicar em Sim no Modal   
-    Wait Until Element Is Visible    ${botaoSimModal}
+    Wait Until Element Is Visible    ${botaoSimModal}    120
     Execute JavaScript  document.getElementById("${botaoSimModal}").click();
     Aguardar tela de carregamento
 

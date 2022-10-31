@@ -26,6 +26,7 @@ No Portal, clicar em "${etapa}"
     Run Keyword If   '${etapa}' == 'Educação Infantil'    Click Element    //div[@class='botao botao-ciano'][contains(.,'Educação Infantil')]
     Run Keyword If   '${etapa}' == 'Ensino Fundamental'    Click Element    //div[@class='botao botao-azul'][contains(.,'Ensino Fundamental')]
     Run Keyword If   '${etapa}' == 'Educação de Jovens e Adultos'    Click Element    //div[@class='botao botao-azul'][contains(.,'Educação de Jovens e Adultos')]
+    Run Keyword If   '${etapa}' == 'Consultar Solicitação'    Click Element    //div[@class='containerBotaoMenuCentro containerBotaoTexto'][contains(.,'Consultar Solicitação')]
     Aguardar carregamento Portal
 
 No Portal, selecionar o processo para a etapa "${etapa}"
@@ -34,7 +35,7 @@ No Portal, selecionar o processo para a etapa "${etapa}"
     Aguardar carregamento Portal
 
 No Portal, verificar se o texto exibido é igual ao cadastrado em Educação Infantil
-    Wait Until Element Is Visible    iniciar-inscricao
+    Wait Until Element Is Visible    iniciar-inscricao    60
     Wait Until Page Contains    ${textoInfoImportanteInfantil}
 
 No Portal, verificar se o texto exibido é igual ao cadastrado em Ensino Fundamental
@@ -49,14 +50,16 @@ No Portal, fechar o modal de informações importantes
 No Portal, em Consultar Solicitação, selecionar a nacionalidade "Brasileiro"
     Click Element    BR
 
-No Portal, em Consultar Solicitação, em Protocolo inserir "${protocolo}"
-    Input Text    txtprotocolo    ${protocolo}
+No Portal, em Consultar Solicitação, em Protocolo inserir o protocolo do comprovande de matrícula
+    Click Element    txtprotocolo
+    Input Text    txtprotocolo    ${protocoloComprovante}
 
-No Portal, em Consultar Solicitação, em CPF inserir "${cpf}"
-    Input Text    txtCpf    ${cpf}
+No Portal, em Consultar Solicitação, em CPF inserir o CPF do responsavel cadastrado
+    Click Element    txtCpf   
+    Input Text    txtCpf    ${cpfFakeResponsavel}
 
-No Portal, em Consultar Solicitação, em Data de Nascimento inserir "${dataNascimento}"
-    Input Text    txtdatanascimento    ${dataNascimento}
+No Portal, em Consultar Solicitação, em Data de Nascimento inserir data de nascimento do responsavel cadastrado
+    Input Text    txtdatanascimento    ${dataNascimentoResponsavel}
 
 No Portal, em Consultar Solicitação, clicar em Pesquisar
     Click Element    btnPesquisar
@@ -79,10 +82,11 @@ No Portal, clicar em Iniciar inscrição
     Aguardar carregamento Portal
     Aguardar carregamento Portal
 
-No Portal, em Escolha da Escola, em Data de Nascimento, inserir "${data}"
+No Portal, em Escolha da Escola, em Data de Nascimento, inserir "${dataNascimento}"
     Sleep    1
+    Set Suite Variable    ${dataNascimento}
     Wait Until Element Is Visible    busca-nascimento
-    Input Text    busca-nascimento    ${data}
+    Input Text    busca-nascimento    ${dataNascimento}
 
 No Portal, em Escolha da Escola, em Data de Nascimento, inserir a data de nascimento cadastrada
     Sleep    1
@@ -195,6 +199,7 @@ No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleat�
 
 No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "${dataNascimentoResponsavel}"
     Sleep    1
+    Set Suite Variable    ${dataNascimentoResponsavel}
     Input Text   txtRDataNascimento    ${dataNascimentoResponsavel}
 
 No Portal, em Cadastro do Responsável, em Sexo, inserir "${sexo}"
@@ -317,10 +322,11 @@ No Portal, em Cadastro do Aluno, em Comarca, inserir "${comarca}"
     Input Text    txtComarcaCartorio    ${comarca}
 
 No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    Sleep    1
+    Sleep    5
     ${telefoneAleatorio}    Random Number   8    True
     Sleep    1
     Set Suite Variable    ${telefone1Aleatorio}    119${telefoneAleatorio}
+    Click Element    txtTelefone1
     Input Text    txtTelefone1    ${telefone1Aleatorio}
     Sleep    1
 
@@ -332,10 +338,13 @@ No Portal, clicar nos campos de declarações
     Sleep    1
     Aguardar carregamento Portal
 
-No Portal, no modal de alerta, clicar em Sim
-    Wait Until Element Is Visible    //button[@class='swal-button swal-button--Confirmar swal-button--confirm'][contains(.,'Sim')]
-    Click Element    //button[@class='swal-button swal-button--Confirmar swal-button--confirm'][contains(.,'Sim')]
-    Aguardar carregamento Portal
+No Portal, no modal de alerta, clicar em Sim    
+    ${validacao}    Run Keyword And Return Status        Wait Until Element Is Visible    //button[@class='swal-button swal-button--Confirmar swal-button--confirm'][contains(.,'Sim')]
+    IF    ${validacao} 
+        Click Element    //button[@class='swal-button swal-button--Confirmar swal-button--confirm'][contains(.,'Sim')]
+    ELSE
+        Log     Ok
+    END
 
 No Portal, clicar em Concluir Inscrição
     Wait Until Element Is Visible    concluir-passo2

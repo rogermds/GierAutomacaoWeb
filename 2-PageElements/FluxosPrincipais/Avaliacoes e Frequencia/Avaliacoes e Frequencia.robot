@@ -9,6 +9,7 @@ ${campoDataReferencia}                   cphContent_txtDataReferenci
 ${campoProfessorAvalicoes}               cphContent_ddlProfessor
 ${campoTurmaAvalicoes}                   cphContent_ddlClasse
 ${responderPrimeiroAluno}                cphContent_rptDigitaNf_lkbQuestionario_0
+${responderProximoAluno}                 cphContent_rptDigitaNf_lkbQuestionario_1
 ${botaoControleFrequencia}               cphContent_btnLancarAusencia
 ${primeiraQuestao}                       cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_1_0_1
 ${segundaQuestao}                        cphContent_QuestionarioAvaliacao_dtlQuestionario_rblResposta_2_0_2
@@ -19,7 +20,7 @@ ${okModalSucesso}                        cphContent_QuestionarioAvaliacao_Mensag
 ${okModalCadastroSucesso}                cphContent_Mensagem_Padrao_btnOk
 ${campoTextoRelatorioQuestionario}       cphContent_QuestionarioAvaliacao_dtlQuestionario_txtRespostaValidacao_50
 ${botaoEnviarParaValidacao}              cphContent_QuestionarioAvaliacao_dtlQuestionario_btnValidacao_50
-${campoDescricaoQuestionario}            cphContent_rptDigitaNf_lkbQuestionario_0
+${campoDescricaoQuestionario}            cphContent_rptDigitaNf_lkbQuestionario_1
 ${campoSituacaoValidacao}                cphContent_dtlConsulta_lblSituacao_0
 ${visualizarEducandos}                   cphContent_dtlConsulta_lblVisualizar_0 
 ${visualizarRelatorio}                   cphContent_dtlConsulta_lblVisualizar_0
@@ -80,14 +81,19 @@ Na consulta de avaliações, em Turma, selecionar a turma utilizada
     Aguardar tela de carregamento
 
 No primeiro aluno, em questionário, clicar em "Responder"
-    Wait Until Element Is Visible       ${botaoControleFrequencia}  20
-    Execute JavaScript  document.getElementById("${responderPrimeiroAluno}").click();
-    Wait Until Element Is Visible       ${primeiraQuestao}  10
-    Aguardar tela de carregamento
+    ${validacao}    Run Keyword And Return Status   Wait Until Page Contains    RESPONDER
+    IF         ${validacao}
+        Execute JavaScript  document.getElementById("${responderProximoAluno}").click();     
+    ELSE    
+        Execute JavaScript  document.getElementById("${responderPrimeiroAluno}").click();    
+    END   
 
 Marcar "ATINGIU OS OBJETIVOS" nas questões
+    Sleep    2
     Execute JavaScript  document.getElementById("${primeiraQuestao}").click();
+    Sleep    2
     Execute JavaScript  document.getElementById("${segundaQuestao}").click();
+    Sleep    2
     Execute JavaScript  document.getElementById("${terceiraQuestao}").click();
 
 Clicar em Salvar e Fechar
