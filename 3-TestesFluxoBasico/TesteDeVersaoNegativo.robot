@@ -8,6 +8,8 @@ Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/AvaliacaoEduca
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/AvaliacaoEducacional2.robot
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/BancoDeQuestoes.robot
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/GruposDePergunta.robot
+Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/ProvaOnline.robot
+Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/Educandos.robot
 Resource         ../2-PageElements/FluxosAlternativos/BoletimEscolar/BoletimEscolar.robot
 Resource         ../2-PageElements/FluxosAlternativos/ControleDiarioDeFrequencia/ControleDiarioDeFrequencia.robot
 Resource         ../2-PageElements/FluxosAlternativos/HistoricoEscolar.robot/HistoricoEscolar.robot
@@ -1263,82 +1265,86 @@ Cenário 41: Funcionalidade Banco de Questões
 
 Cenário 42: Avaliação Educacional 
     [Documentation]    Esse teste verifica se é possível realizar a prova
-    ...                Educacional sem o preenchimento de todas as respostas 
-    [Tags]             Avaliação Educacional | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "4282670" e "4282670"
-    Clicar na Prova Prova Automação Qa   
-    Visualizar a Questão 1 de 18       
-    Clicar no Botão Avançar 
-    Visualizar a Questão 2 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 3 de 18
-    Clicar no Botão Avançar
-    Visualizar a Questão 4 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 5 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 6 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 7 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 8 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 9 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 10 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 11 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 12 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 13 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 14 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 15 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 16 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 17 de 18
-    Clicar no Botão Avançar 
-    Visualizar a Questão 18 de 18
-    Visualizar o texto: Perguntas não respondidas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
-    
-Cenário 43: Avaliação Educacional 
-    [Documentation]    Esse teste verifica se é possível realizar a prova
     ...                Educacional com o preenchimento parcial das perguntas
     [Tags]             Avaliação Educacional | Fluxo Negativo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "4282671" e "4282671"
-    Clicar na Prova Prova Automação Qa  
-    Visualizar a Questão 1 de 18       
-    Clicar na Resposta "A"
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Visualizar a Questão 3 de 18  
-    Clicar na Resposta "B"
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Visualizar a Questão 6 de 18  
-    Clicar na Resposta "C"
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Visualizar a Questão 10 de 18  
-    Clicar na Resposta "D"
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Clicar no Botão Avançar 
-    Visualizar o texto: Perguntas não respondidas: 2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18    
-    Visualizar o botão Salvar desabilitado 
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Matricular Educando"
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
+    Em Matricular Educando, clicar em Sim no Modal
+    Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
+    Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
+    Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/2012"
+    Clicar no checkbox Pessoa não possui correio eletrônico
+    Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "ESTRANGEIRO"
+    Em Cadastro de Pessoa, no campo País Origem, selecionar "PORTUGAL"
+    Em Cadastro de Pessoa, no campo RNE, inserir um RNE válido
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome "JOSIAS ADALBERTO"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar
+    Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
+    Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
+    Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir "07/03/1996"
+    Em Cadastro Rapido de Pessoa, em Sexo, selecionar "Feminino"
+    Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido
+    Em Cadastro Rapido de Pessoa, clicar em Salvar
+    Em Cadastro Rapido de Pessoa, clicar em OK no Modal
+    Em Cadastro de Pessoa, em Grau de Parentesco, selecionar "Mãe"
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "33"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Em Cadastro de Pessoa, clicar no botão Salvar       
+    Clicar em OK no Modal
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
+    Em Matricular Educando, em País de Origem, selecionar "Brasil"
+    Em Matricular Educando, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Matricular Educando, em Curso, selecionar "Ciclo II"
+    Em Matricular Educando, em Periodo, selecionar "MANHÃ"
+    Em Matricular Educando, em Ciclo, selecionar "5º Ano"    
+    Em Matricular Educando, selecionar uma turma com vagas
+    Em Matricular Educando, clicar em Matricular Educando
+    Em Matricular Educando, clicar em Sim no Modal de Matrícula
+    Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Educandos"
+    Em Educandos, em Educando, inserir o nome cadastrado
+    Em Educandos, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Educandos, em Situação, selecionar "Matriculado"
+    Em Educandos, clicar em Pesquisar
+    Em Educandos, clicar em Ações e Visualizar Matrícula
+    Em Educandos, salvar o número do Livro RM
+    Em Educandos, clicar no perfil e em Sair
+    Entrar com as credenciais do aluno
+    Clicar na Prova "Avaliação Teste - Automação"
+    Na Prova, na Pergunta 1, clicar na Resposta A
+    Na Prova, clicar em Avançar
+    Na Prova, na Pergunta 2, clicar na Resposta B
+    Na Prova, clicar em Avançar
+    Na Prova, na Pergunta 3, clicar na Resposta C
+    Na Prova, clicar em Avançar
+    Na Prova, clicar em Avançar
+    Na Prova, clicar em Avançar
+    Na Prova, clicar em Avançar
+    Na Prova, verificar se o botão Salvar está desabilitado
+    Na Prova, verificar se o botão Finalizar está desabilitado
+    Na Prova, clicar em Voltar
+    Na Prova, clicar em Voltar
+    Na Prova, clicar em Voltar
+    Na Prova, clicar em Voltar
+    Na Prova, na Pergunta 3, verificar se a resposta C está marcada
+    Na Prova, visualizar o texto "Perguntas não respondidas: 4, 5, 6, 7"
+    Na Prova, clicar em Sair
 
 Cenário 44: Processo de Demanda
     [Documentation]    Esse teste efetua o fluxo negativo do Processo de Demanda
@@ -4012,3 +4018,4 @@ Cenário 65: Funcionalidade Portal - Portal - EJA Inicial
     No Portal, clicar nos campos de declarações
     No Portal, verificar se é exibida a mensagem que a pessoa já está inscrita
     No Portal, fechar o modal
+

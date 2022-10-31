@@ -30,6 +30,12 @@ Resource         ../2-PageElements/FluxosPrincipais/Transportes/SolicitacaoDeTra
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Aprendizagem.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/GruposDePergunta.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/BancoDeQuestoes.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/ConfigurarAvaliacao.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/AgendamentoAvaliacao.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Educandos.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/ProvaOnline.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/LancamentoIndividualizado.robot
+Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/AvaliacoesEducacionaisRealizadas.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -5089,7 +5095,6 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, clicar em Anexar
     Em Banco de Questões, em Sigla, inserir "AUT01"
     Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
-    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, em Peso, inserir "20"
     Em Banco de Questões, em Nível da Questão, selecionar "Média"
     Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST01-2022"
@@ -5113,6 +5118,7 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, em Sigla Resposta, inserir "D"
     Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
     Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
     Em Banco de Questões, clicar em Cadastrar
@@ -5123,7 +5129,6 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, clicar em Anexar
     Em Banco de Questões, em Sigla, inserir "AUT02"
     Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
-    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, em Peso, inserir "20"
     Em Banco de Questões, em Grupo de Pergunta, selecionar "Média"
     Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST02-2022"
@@ -5147,6 +5152,7 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, em Sigla Resposta, inserir "D"
     Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
     Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
     Em Banco de Questões, clicar em Cadastrar
@@ -5157,7 +5163,6 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, clicar em Anexar
     Em Banco de Questões, em Sigla, inserir "AUT03"
     Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
-    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, em Peso, inserir "20"
     Em Banco de Questões, em Grupo de Pergunta, selecionar "Média"
     Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST03-2022"
@@ -5181,6 +5186,7 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, em Sigla Resposta, inserir "D"
     Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
     Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
     Em Banco de Questões, clicar em Cadastrar
@@ -5191,7 +5197,6 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, clicar em Anexar
     Em Banco de Questões, em Sigla, inserir "AUT04"
     Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
-    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, em Peso, inserir "20"
     Em Banco de Questões, em Grupo de Pergunta, selecionar "Média"
     Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST04-2022"
@@ -5215,6 +5220,7 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, em Sigla Resposta, inserir "D"
     Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
     Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
     Em Banco de Questões, clicar em Cadastrar
@@ -5225,7 +5231,6 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, clicar em Anexar
     Em Banco de Questões, em Sigla, inserir "AUT05"
     Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
-    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, em Peso, inserir "20"
     Em Banco de Questões, em Grupo de Pergunta, selecionar "Média"
     Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST05-2022"
@@ -5249,6 +5254,7 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, em Sigla Resposta, inserir "D"
     Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
     Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
     
@@ -5264,16 +5270,15 @@ Cenário 82: Funcionalidade Banco de Questões - Imagem
     Entrar na funcionalidade "Banco de Questões"
     Em Banco de Questões, clicar em Cadastrar
     Em Banco de Questões, em Utilização da Questão, selecionar "Avaliação Educacional"
-    Em Banco de Questões, em Texto Base para a Pergunta, inserir "Texto base pergunta 01 - Automação"
-    Em Banco de Questões, em Pergunta, inserir "Pergunta Imagem 01 - Automação"
+    Em Banco de Questões, em Texto Base para a Pergunta, inserir "Texto base pergunta 06 - Automação"
+    Em Banco de Questões, em Pergunta, inserir "Pergunta Imagem 06 - Automação"
     Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 1
     Em Banco de Questões, clicar em Anexar
-    Em Banco de Questões, em Sigla, inserir "AUT01"
+    Em Banco de Questões, em Sigla, inserir "AUT06"
     Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
-    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, em Peso, inserir "20"
     Em Banco de Questões, em Nível da Questão, selecionar "Média"
-    Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST01-2022"
+    Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST06-2022"
     Em Banco de Questões, em Etapa/Modalidade, selecionar "Ensino Fundamental"
     Em Banco de Questões, em Ano/Ciclo, selecionar "5º Ano"
     Em Banco de Questões, em Respostas Permitidas, selecionar Imagem
@@ -5284,10 +5289,39 @@ Cenário 82: Funcionalidade Banco de Questões - Imagem
     Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
     Em Banco de Questões, em Inserir Imagem na Resposta, inserir a imagem da questão 2
     Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
+    Em Banco de Questões, clicar em Salvar
+    Em Banco de Questões, clicar em OK no modal
+    Em Banco de Questões, clicar em Cadastrar
+    Em Banco de Questões, em Utilização da Questão, selecionar "Avaliação Educacional"
+    Em Banco de Questões, em Texto Base para a Pergunta, inserir "Texto base pergunta 07 - Automação"
+    Em Banco de Questões, em Pergunta, inserir "Pergunta Imagem 07 - Automação"
+    Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 2
+    Em Banco de Questões, clicar em Anexar
+    Em Banco de Questões, em Sigla, inserir "AUT07"
+    Em Banco de Questões, em Tipo de Resposta, selecionar "ÚNICA RESPOSTA"
+    Em Banco de Questões, em Peso, inserir "20"
+    Em Banco de Questões, em Nível da Questão, selecionar "Média"
+    Em Banco de Questões, em Sigla Descrição de Aprendizagem, selecionar "TST07-2022"
+    Em Banco de Questões, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Banco de Questões, em Ano/Ciclo, selecionar "5º Ano"
+    Em Banco de Questões, em Respostas Permitidas, selecionar Imagem
+    Em Banco de Questões, em Resposta Correta, selecionar SIM
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA CORRETA AUTOMAÇÃO"
+    Em Banco de Questões, em Inserir Imagem na Resposta, inserir a imagem da questão 1
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Texto Explicativo da Resposta, inserir "RESPOSTA INCORRETA AUTOMAÇÃO"
+    Em Banco de Questões, em Inserir Imagem na Resposta, inserir a imagem da questão 2
+    Em Banco de Questões, clicar em Adicionar
+    Em Banco de Questões, em Grupo de Pergunta, selecionar "GRUPO DE PERGUNTA AUTOMACAO"
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
 
+<<<<<<< HEAD
+Cenário 83: Funcionalidade Configurar Avaliação - Online
+=======
 Cenário 83: Funcionalidade Configurar Avaliação
+>>>>>>> c12565a6170609a64b5531de2ceedda45cd89278
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5298,44 +5332,45 @@ Cenário 83: Funcionalidade Configurar Avaliação
     Entrar no módulo "Avaliações Educacionais"
     Entrar na funcionalidade "Configurar Avaliação"
     Em Configurar Avaliação, clicar em Cadastrar
-    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO AUTOMAÇÃO"
-    Em Configurar Avaliação, em Tipo de Lançamento, selecionar Consolidado
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO"
+    Em Configurar Avaliação, em Tipo de Lançamento, selecionar Individualizado
     Em Configurar Avaliação, em Aplicação da Avaliação, selecionar On Line
     Em Configurar Avaliação, em Proposta da Avaliação, inserir "PROPOSTA AVALIAÇÃO AUTOMAÇÃO" 
-    Em Configurar Avaliação, em Modelo de Avaliação, selecionar "AVALIA MAIS - COMUNICAÇÃO E EXPRESSÃO" 
-    Em Configurar Avaliação, em Periodo de Avaliação, selecionar "2º SEMESTRE" 
-    Em Configurar Avaliação, em Situação, selecionar Ativo 
+    Em Configurar Avaliação, em Modelo de Avaliação, selecionar "AVALIA MAIS – Educação Matemática" 
+    Em Configurar Avaliação, em Periodo de Avaliação, selecionar "2º Semestre"
+    Em Configurar Avaliação, em Situação, selecionar Ativo
     Em Configurar Avaliação, em Situação, selecionar Individual Por Periodo 
     Em Configurar Avaliação, em Pergunta, inserir "PERGUNTA"
     Em Configurar Avaliação, em Resposta, inserir "RESPOSTA"
     Em Configurar Avaliação, em Etapa/Modalidade, selecionar "Ensino Fundamental"
-    Em Configurar Avaliação, em Curso, selecionar "CICLO II"
+    Em Configurar Avaliação, em Curso, selecionar "Ciclo II"
     Em Configurar Avaliação, em Ano/Ciclo, selecionar "5º Ano"
-    Em Configurar Avaliação, em Nível, selecionar "ABAIXO DO NÍVEL 1"
+    Em Configurar Avaliação, adicionar o curso
+    Em Configurar Avaliação, em Nível, selecionar "Abaixo do Nível 1"
     Em Configurar Avaliação, em Pontuação de, inserir "0"
     Em Configurar Avaliação, em Pontuação até, inserir "125"
     Em Configurar Avaliação, em Regra de pontuação, inserir "MENOR OU IGUAL A 125."  
     Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA DESENVOLVIMENTO DOS SABERES E APRENDIZAGENS INSUFICIENTES PARA A SÉRIE/ANO."
     Em Configurar Avaliação, clicar em Adicionar
-    Em Configurar Avaliação, em Nível, selecionar "NÍVEL 1"
+    Em Configurar Avaliação, em Nível, selecionar "Nível 1"
     Em Configurar Avaliação, em Pontuação de, inserir "126"
     Em Configurar Avaliação, em Pontuação até, inserir "200"
     Em Configurar Avaliação, em Regra de pontuação, inserir "MAIOR QUE 125, MENOR OU IGUAL A 200."  
     Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA POUCO DESENVOLVIMENTO DOS SABERES E APRENDIZAGENS PARA A SÉRIE/ANO."
     Em Configurar Avaliação, clicar em Adicionar
-    Em Configurar Avaliação, em Nível, selecionar "NÍVEL 2"
+    Em Configurar Avaliação, em Nível, selecionar "Nível 2"
     Em Configurar Avaliação, em Pontuação de, inserir "201"
     Em Configurar Avaliação, em Pontuação até, inserir "275"
     Em Configurar Avaliação, em Regra de pontuação, inserir "MAIOR QUE 200, MENOR OU IGUAL A 275."  
     Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA DESENVOLVIMENTO ADEQUADO DOS SABERES E APRENDIZAGENS PARA A SÉRIE/ANO."
     Em Configurar Avaliação, clicar em Adicionar
-    Em Configurar Avaliação, em Nível, selecionar "NÍVEL 3"
+    Em Configurar Avaliação, em Nível, selecionar "Nível 3"
     Em Configurar Avaliação, em Pontuação de, inserir "276"
     Em Configurar Avaliação, em Pontuação até, inserir "350"
     Em Configurar Avaliação, em Regra de pontuação, inserir "MAIOR QUE 275, MENOR OU IGUAL A 350."  
     Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA DESENVOLVIMENTO DESEJÁVEL DOS SABERES E APRENDIZAGENS PARA A SÉRIE/ANO."
     Em Configurar Avaliação, clicar em Adicionar
-    Em Configurar Avaliação, em Nível, selecionar "ACIMA DO NÍVEL 3"
+    Em Configurar Avaliação, em Nível, selecionar "Acima do Nível 3"
     Em Configurar Avaliação, em Pontuação de, inserir "351"
     Em Configurar Avaliação, em Pontuação até, inserir "450"
     Em Configurar Avaliação, em Regra de pontuação, inserir "MAIOR QUE 350, MENOR OU IGUAL A 450."  
@@ -5343,59 +5378,409 @@ Cenário 83: Funcionalidade Configurar Avaliação
     Em Configurar Avaliação, clicar em Adicionar
     Em Configurar Avaliação, clicar em Salvar
     Em Configurar Avaliação, clicar em OK no modal
-    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Imagem 01 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Texto 01 - Automação"
     Em Configurar Avaliação, Cadastrar Questões, selecionar a Etapa/Modalidade "Ensino Fundamental"
-    
-
-
-
-    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO AUTOMAÇÃO"
-    Em Configurar Avaliação, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Texto 02 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Texto 03 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Texto 04 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Texto 05 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Imagem 06 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Imagem 07 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Voltar
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO TESTE - AUTOMAÇÃO"
     Em Configurar Avaliação, clicar em Pesquisar
-    Em Configurar Avaliação, clicar em Ações e Questões
-    Em Configurar Avaliação, em Pergunta, inserir "Pergunta Imagem 01 - Automação"
-    Em Configurar Avaliação, em Etapa/Modalidade, selecionar "Pergunta Imagem 01 - Automação"
+    Em Configurar Avaliação, clicar em Ações e Imprimir
+    Em Configurar Avaliação, verificar se a prova foi gerada corretamente
+
+Cenário 84: Funcionalidade Configurar Avaliação - Offline
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
+    [Tags]             Configurar Avaliação | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Configurar Avaliação"
+    Em Configurar Avaliação, clicar em Cadastrar
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO"
+    Em Configurar Avaliação, em Tipo de Lançamento, selecionar Individualizado
+    Em Configurar Avaliação, em Aplicação da Avaliação, selecionar Off Line
+    Em Configurar Avaliação, em Proposta da Avaliação, inserir "PROPOSTA AVALIAÇÃO AUTOMAÇÃO" 
+    Em Configurar Avaliação, em Modelo de Avaliação, selecionar "AVALIA MAIS – Comunicação Expressão" 
+    Em Configurar Avaliação, em Periodo de Avaliação, selecionar "2º Semestre"
+    Em Configurar Avaliação, em Situação, selecionar Ativo
+    Em Configurar Avaliação, em Pergunta, inserir "PERGUNTA"
+    Em Configurar Avaliação, em Resposta, inserir "RESPOSTA"
+    Em Configurar Avaliação, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Configurar Avaliação, em Curso, selecionar "Ciclo II"
+    Em Configurar Avaliação, em Ano/Ciclo, selecionar "5º Ano"
+    Em Configurar Avaliação, adicionar o curso
+    Em Configurar Avaliação, em Nível, selecionar "Abaixo do Nível 1"
+    Em Configurar Avaliação, em Pontuação de, inserir "0"
+    Em Configurar Avaliação, em Pontuação até, inserir "125"
+    Em Configurar Avaliação, em Regra de pontuação, inserir "MENOR OU IGUAL A 125."  
+    Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA DESENVOLVIMENTO DOS SABERES E APRENDIZAGENS INSUFICIENTES PARA A SÉRIE/ANO."
+    Em Configurar Avaliação, clicar em Adicionar
+    Em Configurar Avaliação, em Nível, selecionar "Nível 1"
+    Em Configurar Avaliação, em Pontuação de, inserir "126"
+    Em Configurar Avaliação, em Pontuação até, inserir "200"
+    Em Configurar Avaliação, em Regra de pontuação, inserir "MAIOR QUE 125, MENOR OU IGUAL A 200."  
+    Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA POUCO DESENVOLVIMENTO DOS SABERES E APRENDIZAGENS PARA A SÉRIE/ANO."
+    Em Configurar Avaliação, clicar em Adicionar
+    Em Configurar Avaliação, clicar em Salvar
+    Em Configurar Avaliação, clicar em OK no modal
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Texto 01 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, selecionar a Etapa/Modalidade "Ensino Fundamental"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Texto 02 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Texto 03 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Texto 04 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Texto 05 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Imagem 06 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, inserir a pergunta "Pergunta Imagem 07 - Automação"
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Pesquisar
+    Em Configurar Avaliação, Cadastrar Questões, clicar na questão
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Voltar
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO TESTE - AUTOMAÇÃO"
+    Em Configurar Avaliação, clicar em Pesquisar
+    Em Configurar Avaliação, clicar em Ações e Imprimir
+    Em Configurar Avaliação, verificar se a prova foi gerada corretamente
+
+Cenário 85: Funcionalidade Configurar Avaliação - Edição e Exclusão
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
+    [Tags]             Configurar Avaliação | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Configuração"
+    Entrar no módulo "Avaliações Educacionais"
+    Entrar na funcionalidade "Configurar Avaliação"
+    Em Configurar Avaliação, clicar em Cadastrar
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AUTOMAÇÃO EDITAR EXCLUIR"
+    Em Configurar Avaliação, em Tipo de Lançamento, selecionar Individualizado
+    Em Configurar Avaliação, em Aplicação da Avaliação, selecionar On Line
+    Em Configurar Avaliação, em Proposta da Avaliação, inserir "PROPOSTA AVALIAÇÃO AUTOMAÇÃO" 
+    Em Configurar Avaliação, em Modelo de Avaliação, selecionar "AVALIA MAIS – Comunicação Expressão" 
+    Em Configurar Avaliação, em Periodo de Avaliação, selecionar "2º Semestre"
+    Em Configurar Avaliação, em Situação, selecionar Ativo
+    Em Configurar Avaliação, em Situação, selecionar Individual Por Periodo 
+    Em Configurar Avaliação, em Pergunta, inserir "PERGUNTA"
+    Em Configurar Avaliação, em Resposta, inserir "RESPOSTA"
+    Em Configurar Avaliação, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Configurar Avaliação, em Curso, selecionar "Ciclo II"
+    Em Configurar Avaliação, em Ano/Ciclo, selecionar "5º Ano"
+    Em Configurar Avaliação, adicionar o curso
+    Em Configurar Avaliação, em Nível, selecionar "Abaixo do Nível 1"
+    Em Configurar Avaliação, em Pontuação de, inserir "0"
+    Em Configurar Avaliação, em Pontuação até, inserir "125"
+    Em Configurar Avaliação, em Regra de pontuação, inserir "MENOR OU IGUAL A 125."  
+    Em Configurar Avaliação, em Critérios de correção, inserir "O EDUCANDO, NESTE NÍVEL, DEMONSTRA DESENVOLVIMENTO DOS SABERES E APRENDIZAGENS INSUFICIENTES PARA A SÉRIE/ANO."
+    Em Configurar Avaliação, clicar em Adicionar
+    Em Configurar Avaliação, clicar em Salvar
+    Em Configurar Avaliação, clicar em OK no modal
+    Em Configurar Avaliação, Cadastrar Questões, clicar em Voltar
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AUTOMAÇÃO EDITAR EXCLUIR"
+    Em Configurar Avaliação, clicar em Pesquisar
+    Em Configurar Avaliação, clicar em Ações e Editar
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AUTOMAÇÃO EDITADO"
+    Em Configurar Avaliação, clicar em Salvar
+    Em Configurar Avaliação, clicar em OK no modal
+    Em Configurar Avaliação, clicar em OK no modal
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AUTOMAÇÃO EDITADO"
+    Em Configurar Avaliação, clicar em Pesquisar
+    Em Configurar Avaliação, clicar em Ações e Excluir
+    Em Configurar Avaliação, clicar em Sim no modal
+    Em Configurar Avaliação, clicar em OK no modal
+
+Cenário 86: Funcionalidade Agendamento Avaliação - Online
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
+    [Tags]             Agendamento Avaliação | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Operação"
+    Entrar no módulo "Gestão de Avaliações"
+    Entrar na funcionalidade "Agendamento Avaliação"
+    Em Agendamento Avaliação, clicar em Cadastrar
+    Em Agendamento Avaliação, em Avaliação, selecionar "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO"
+    Em Agendamento Avaliação, em Identificação do Período, inserir "2° SEMESTRE 2022 - AUTOMAÇÃO"
+    Em Agendamento Avaliação, em Data Início da Avaliação, inserir "01/02/2024 00:00"
+    Em Agendamento Avaliação, em Data Fim da Avaliação, inserir "31/12/2024 00:00"
+    Em Agendamento Avaliação, clicar em Aplicar
+    Em Agendamento Avaliação, clicar em Salvar
+    Em Agendamento Avaliação, clicar em OK no modal
+    Em Agendamento Avaliação, em Avaliação, inserir "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO"
+    Em Agendamento Avaliação, clicar em Pesquisar
+    Em Agendamento Avaliação, clicar em Ações e Editar
+    Em Agendamento Avaliação, em Identificação do Período, inserir "AGENDAMENTO EDITADO AUTOMAÇÃO"
+    Em Agendamento Avaliação, clicar em Salvar
+    Em Agendamento Avaliação, clicar em OK no modal
+    Em Agendamento Avaliação, em Avaliação, inserir "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO"
+    Em Agendamento Avaliação, clicar em Pesquisar
+    Em Agendamento Avaliação, clicar em Ações e Excluir
+    Em Agendamento Avaliação, clicar em Sim no modal
+    Em Agendamento Avaliação, clicar em OK no modal
+    Em Agendamento Avaliação, clicar em Cadastrar
+    Em Agendamento Avaliação, em Avaliação, selecionar "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO"
+    Em Agendamento Avaliação, em Identificação do Período, inserir "2° SEMESTRE 2022 - AUTOMAÇÃO"
+    Em Agendamento Avaliação, em Data Início da Avaliação, inserir "01/02/2022 00:00"
+    Em Agendamento Avaliação, em Data Fim da Avaliação, inserir "31/12/2024 00:00"
+    Em Agendamento Avaliação, clicar em Aplicar
+    Em Agendamento Avaliação, clicar em Salvar
+    Em Agendamento Avaliação, clicar em OK no modal
+    Em Agendamento Avaliação, em Avaliação, inserir "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO"
+    Em Agendamento Avaliação, clicar em Pesquisar
+    Em Agendamento Avaliação, verificar se o Agendamento "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO" foi cadastrado
+
+Cenário 87: Funcionalidade Agendamento Avaliação - Offline
+    [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
+    [Tags]             Agendamento Avaliação | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Operação"
+    Entrar no módulo "Gestão de Avaliações"
+    Entrar na funcionalidade "Agendamento Avaliação"
+    Em Agendamento Avaliação, clicar em Cadastrar
+    Em Agendamento Avaliação, em Avaliação, selecionar "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO"
+    Em Agendamento Avaliação, em Identificação do Período, inserir "2° SEMESTRE 2022 - AUTOMAÇÃO"
+    Em Agendamento Avaliação, em Data Início da Avaliação, inserir "01/02/2024 00:00"
+    Em Agendamento Avaliação, em Data Fim da Avaliação, inserir "31/12/2024 00:00"
+    Em Agendamento Avaliação, clicar em Aplicar
+    Em Agendamento Avaliação, clicar em Salvar
+    Em Agendamento Avaliação, clicar em OK no modal
+    Em Agendamento Avaliação, em Avaliação, inserir "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO"
+    Em Agendamento Avaliação, clicar em Pesquisar
+    Em Agendamento Avaliação, clicar em Ações e Editar
+    Em Agendamento Avaliação, em Identificação do Período, inserir "AGENDAMENTO EDITADO AUTOMAÇÃO"
+    Em Agendamento Avaliação, clicar em Salvar
+    Em Agendamento Avaliação, clicar em OK no modal
+    Em Agendamento Avaliação, em Avaliação, inserir "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO"
+    Em Agendamento Avaliação, clicar em Pesquisar
+    Em Agendamento Avaliação, clicar em Ações e Excluir
+    Em Agendamento Avaliação, clicar em Sim no modal
+    Em Agendamento Avaliação, clicar em OK no modal
+    Em Agendamento Avaliação, clicar em Cadastrar
+    Em Agendamento Avaliação, em Avaliação, selecionar "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO"
+    Em Agendamento Avaliação, em Identificação do Período, inserir "2° SEMESTRE 2022 - AUTOMAÇÃO"
+    Em Agendamento Avaliação, em Data Início da Avaliação, inserir "01/02/2022 00:00"
+    Em Agendamento Avaliação, em Data Fim da Avaliação, inserir "31/12/2024 00:00"
+    Em Agendamento Avaliação, clicar em Aplicar
+    Em Agendamento Avaliação, clicar em Salvar
+    Em Agendamento Avaliação, clicar em OK no modal
+    Em Agendamento Avaliação, em Avaliação, inserir "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO"
+    Em Agendamento Avaliação, clicar em Pesquisar
+    Em Agendamento Avaliação, verificar se o Agendamento "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO" foi cadastrado
+
+Cenário 86: Prova Online
+    [Documentation]    Esse teste efetua a prova online para um educando da Etapa - Fundamental     
+    [Tags]             Prova Online - Fundamental | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Entrar no eixo "Operação"
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Matricular Educando"
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, inserir "JOSIAS ADALBERTO"
+    Em Matricular Educando, em Pessoa que Deseja Matricular, clicar em Pesquisar
+    Em Matricular Educando, clicar em Sim no Modal
+    Em Cadastro de Pessoa, no campo Nome, inserir um nome aleatório
+    Em Cadastro de Pessoa, no campo Sexo, selecionar "MASCULINO"
+    Em Cadastro de Pessoa, no campo Data de Nascimento, inserir a data "07/03/2012"
+    Clicar no checkbox Pessoa não possui correio eletrônico
+    Em Cadastro de Pessoa, no campo Nacionalidade, selecionar "ESTRANGEIRO"
+    Em Cadastro de Pessoa, no campo País Origem, selecionar "PORTUGAL"
+    Em Cadastro de Pessoa, no campo RNE, inserir um RNE válido
+    Em Cadastro de Pessoa, no campo Cor/Raça, selecionar "PRETA"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, inserir o Nome "JOSIAS ADALBERTO"
+    Em Cadastro de Pessoa, em Vínculos de Parentesco, clicar em Pesquisar
+    Em Cadastro Rapido de Pessoa, clicar em Sim no Modal
+    Em Cadastro Rapido de Pessoa, em Nome, inserir um nome aleatório
+    Em Cadastro Rapido de Pessoa, em Data de Nascimento, inserir "07/03/1996"
+    Em Cadastro Rapido de Pessoa, em Sexo, selecionar "Feminino"
+    Em Cadastro Rapido de Pessoa, em CPF, inserir um CPF válido
+    Em Cadastro Rapido de Pessoa, clicar em Salvar
+    Em Cadastro Rapido de Pessoa, clicar em OK no Modal
+    Em Cadastro de Pessoa, em Grau de Parentesco, selecionar "Mãe"
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Legal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Responsável Principal
+    Em Cadastro de Pessoa, em Grau de Parentesco, clicar em Inserir Parente
+    Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
+    Em Cadastro de Pessoa, no campo Número, inserir o número "33"
+    Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Clicar no botão Incluir
+    Em Cadastro de Pessoa, clicar no botão Salvar       
+    Clicar em OK no Modal
+    Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"
+    Em Matricular Educando, em Rede de Origem, selecionar "Municipal"
+    Em Matricular Educando, em País de Origem, selecionar "Brasil"
+    Em Matricular Educando, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Matricular Educando, em Curso, selecionar "Ciclo II"
+    Em Matricular Educando, em Periodo, selecionar "MANHÃ"
+    Em Matricular Educando, em Ciclo, selecionar "5º Ano"    
+    Em Matricular Educando, selecionar uma turma com vagas
+    Em Matricular Educando, clicar em Matricular Educando
+    Em Matricular Educando, clicar em Sim no Modal de Matrícula
+    Em Matricular Educando, verificar se a matrícula foi efetuada com sucesso
+    Entrar no módulo "Educandos"
+    Entrar na funcionalidade "Educandos"
+    Em Educandos, em Educando, inserir o nome cadastrado
+    Em Educandos, em Etapa/Modalidade, selecionar "Ensino Fundamental"
+    Em Educandos, em Situação, selecionar "Matriculado"
+    Em Educandos, clicar em Pesquisar
+    Em Educandos, clicar em Ações e Visualizar Matrícula
+    Em Educandos, salvar o número do Livro RM
+    Em Educandos, clicar no perfil e em Sair
+    Entrar com as credenciais do aluno
+    Clicar na Prova "Avaliação Teste - Automação"
+    Na Prova, na Pergunta 1, clicar na Resposta A
+    Na Prova, clicar em Avançar
+    Na Prova, na Pergunta 2, clicar na Resposta B
+    Na Prova, clicar em Avançar
+    Na Prova, na Pergunta 3, clicar na Resposta C
+    Na Prova, clicar em Avançar
+    Na Prova, clicar em Navegue no questionário
+    Na Prova, verificar se as questões 3, 2 e 1 estão em azul
+    Na Prova, verificar se as questões 4, 5, 6 e 7 estão em cinza
+    Na Prova, na Pergunta 4, clicar na Resposta D
+    Na Prova, clicar em Avançar
+    Na Prova, na Pergunta 5, clicar na Resposta C
+    Na Prova, clicar em Avançar
+    Na Prova, na Pergunta 6, clicar na Resposta B
+    Na Prova, clicar em Avançar
+    Na Prova, na Pergunta 7, clicar na Resposta A
+    Na Prova, clicar em Salvar
+    Na Prova, clicar em Finalizar
+    Na Prova, visualizar a mensagem de avaliação finalizada
+    Na Prova, clicar em Sair
+    Na Prova, verificar o campo da prova foi desativado
+
+Cenário 87: Lançamento Individualizado
+    [Documentation]    Esse teste consulta e finaliza um Lançamento Individualizado     
+    [Tags]             Lançamento Individualizado | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no módulo "Operação"
+    Entrar no módulo "Gestão de Avaliações"
+    Entrar na funcionalidade "Lançamento Individualizado"
+    Em Lançamento Individualizado, clicar em Cadastrar
+    Em Lançamento Individualizado, selecionar a unidade escolar "EPG ALFREDO VOLPI"
+    Em Lançamento Individualizado, selecionar a avaliação "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO"
+    Em Lançamento Individualizado, selecionar o período "2° SEMESTRE 2022 - AUTOMAÇÃO"
+    Em Lançamento Individualizado, selecionar o ciclo "5º Ano"
+    Em Lançamento Individualizado, selecionar a turma "5A"
+    Em Lançamento Individualizado, no resultado da busca, clicar em um aluno com lançamento pendente
+    Em Lançamento Individualizado, na Pergunta 1, clicar na Resposta A
+    Em Lançamento Individualizado, na Pergunta 2, clicar na Resposta B
+    Em Lançamento Individualizado, na Pergunta 3, clicar na Resposta C
+    Em Lançamento Individualizado, na Pergunta 4, clicar na Resposta D
+    Em Lançamento Individualizado, na Pergunta 5, clicar na Resposta C
+    Em Lançamento Individualizado, na Pergunta 6, clicar na Resposta B
+    Em Lançamento Individualizado, na Pergunta 7, clicar na Resposta A
+    Em Lançamento Individualizado, na Pergunta 7, clicar em LIMPAR
+    Em Lançamento Individualizado, verificar se a questão foi limpa
+    Em Lançamento Individualizado, na Pergunta 7, clicar na Resposta A
+    Em Lançamento Individualizado, anexar um arquivo e clicar em Anexar
+    Em Lançamento Individualizado, em Justificativas, inserir "JUSTIFICATIVA AUTOMAÇÃO"
+    Em Lançamento Individualizado, clicar em Salvar e Próximo
+    Em Lançamento Individualizado, no resultado da busca, clicar em um aluno com lançamento pendente
+    Em Lançamento Individualizado, na Pergunta 1, clicar na Resposta A
+    Em Lançamento Individualizado, na Pergunta 2, clicar na Resposta B
+    Em Lançamento Individualizado, na Pergunta 3, clicar na Resposta C
+    Em Lançamento Individualizado, na Pergunta 4, clicar na Resposta D
+    Em Lançamento Individualizado, na Pergunta 5, clicar na Resposta C
+    Em Lançamento Individualizado, na Pergunta 6, clicar na Resposta B
+    Em Lançamento Individualizado, na Pergunta 7, clicar na Resposta A
+    Em Lançamento Individualizado, na Pergunta 7, clicar em LIMPAR
+    Em Lançamento Individualizado, verificar se a questão foi limpa
+    Em Lançamento Individualizado, na Pergunta 7, clicar na Resposta A
+    Em Lançamento Individualizado, anexar um arquivo e clicar em Anexar
+    Em Lançamento Individualizado, em Justificativas, inserir "JUSTIFICATIVA AUTOMAÇÃO"
+    Em Lançamento Individualizado, clicar em Salvar e Próximo
+    Em Lançamento Individualizado, no resultado da busca, clicar em um aluno com lançamento pendente
+    Em Lançamento Individualizado, na Pergunta 1, clicar na Resposta A
+    Em Lançamento Individualizado, na Pergunta 2, clicar na Resposta B
+    Em Lançamento Individualizado, na Pergunta 3, clicar na Resposta C
+    Em Lançamento Individualizado, na Pergunta 4, clicar na Resposta D
+    Em Lançamento Individualizado, na Pergunta 5, clicar na Resposta C
+    Em Lançamento Individualizado, na Pergunta 6, clicar na Resposta B
+    Em Lançamento Individualizado, na Pergunta 7, clicar na Resposta A
+    Em Lançamento Individualizado, na Pergunta 7, clicar em LIMPAR
+    Em Lançamento Individualizado, verificar se a questão foi limpa
+    Em Lançamento Individualizado, na Pergunta 7, clicar na Resposta A
+    Em Lançamento Individualizado, anexar um arquivo e clicar em Anexar
+    Em Lançamento Individualizado, em Justificativas, inserir "JUSTIFICATIVA AUTOMAÇÃO"
+    Em Lançamento Individualizado, clicar em Salvar e Próximo
+    Em Lançamento Individualizado, clicar em Finalizar Turma
+    Em Lançamento Individualizado, clicar em OK no modal
+    Em Lançamento Individualizado, clicar em Sim no modal
+    Em Lançamento Individualizado, verificar se o totalizador abriu sem erros
+
+Cenário 51: Avaliações Educacionais Realizadas
+    [Documentation]    Esse teste efetua a consulta de uma Avaliação Educacional Realizada,
+    ...                validando os relatórios para uma escola
+    [Tags]             Avaliações Educacionais Realizadas | Fluxo Positivo
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Entrar com as credenciais "02867439817" e "12345678"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Entrar no eixo "Gestão"
+    Entrar no módulo "Avaliação Educacional"
+    Entrar na funcionalidade "Avaliações Educacionais Realizadas"
+    Em Avaliações Educacionais Realizadas, selecionar o ciclo "5º Ano"
+    Em Avaliações Educacionais Realizadas, selecionar o período "2º Semestre"
+    Em Avaliações Educacionais Realizadas, selecionar a avaliação "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO"
+    Em Avaliações Educacionais Realizadas, clicar em Pesquisar
+    Em Avaliações Educacionais Realizadas, no resultado, clicar em Ações e Relatório de Produção de Texto
+    Em Avaliações Educacionais Realizadas, verificar o relatório foi aberto sem erros
+    Em Avaliações Educacionais Realizadas, clicar em Pesquisar
+    Em Avaliações Educacionais Realizadas, no resultado, clicar em Ações e Relatório de Educandos Sem Lançamento
+    Em Avaliações Educacionais Realizadas, verificar o relatório foi aberto sem erros
     
-
-
-
-# Cenário 48: Funcionalidade Agendamento Avaliação
-#     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
-#     [Tags]             Agendamento Avaliação | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Entrar no módulo "Operação"
-#     Entrar no módulo "Gestão de Avaliações"
-#     Entrar na funcionalidade "Agendamento Avaliação"
-
-# Cenário 49: Prova Online
-#     [Documentation]    Esse teste efetua a prova online para um educando da Etapa - Fundamental     
-#     [Tags]             Prova Online - Fundamental | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "4282670" e "4282670"
-#     Clicar na Prova "Prova de Educação Qa"
-
-# Cenário 50: Lançamento Individualizado
-#     [Documentation]    Esse teste consulta e finaliza um Lançamento Individualizado     
-#     [Tags]             Lançamento Individualizado | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Entrar no módulo "Operação"
-#     Entrar no módulo "Gestão de Avaliações"
-#     Entrar na funcionalidade "Lançamento Individualizado"
-
-# Cenário 51: Avaliações Educacionais Realizadas
-#     [Documentation]    Esse teste efetua a consulta de uma Avaliação Educacional Realizada,
-#     ...                validando os relatórios para uma escola
-#     [Tags]             Avaliações Educacionais Realizadas | Fluxo Positivo
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
-#     Verificar se aparece o texto "Estrutura"
-#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-#     Entrar no módulo "Operação"
-#     Entrar no módulo "Gestão de Avaliações"
-#     Entrar na funcionalidade "Avaliações Educacionais Realizadas"

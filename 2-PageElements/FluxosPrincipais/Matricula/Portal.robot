@@ -349,8 +349,8 @@ No Portal, no modal de alerta, clicar em Sim
 No Portal, clicar em Concluir Inscrição
     Wait Until Element Is Visible    concluir-passo2
     Wait Until Element Is Enabled    concluir-passo2
-    Click Element    concluir-passo2
     Sleep    1
+    Click Element    concluir-passo2
     Aguardar carregamento Portal
     Sleep    1
     Aguardar carregamento Portal
