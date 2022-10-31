@@ -7,6 +7,7 @@ Resource    ../../../1-Hooks/1-Principal.robot
 
 *** Keywords ***    
 Em Banco de Questões, clicar em Cadastrar
+    Wait Until Element Is Visible    cphContent_btnCad
     Execute JavaScript  document.getElementById("cphContent_btnCad").click();
     Aguardar tela de carregamento
 
@@ -141,3 +142,34 @@ Em Banco de Questões, em Inserir Imagem na Resposta, inserir a imagem da quest�
 Em Banco de Questões, em Inserir Imagem na Resposta, inserir a imagem da questão 2
     Choose File   cphContent_fupImagemResposta    C:\\Users\\rogerio.santos\\Desktop\\AUTOMAÇÃO WEB - GIER\\Automação - Teste De Versão Gier\\4-Arquivos\\resposta02.jpg
 
+Em Configurar Avaliação, clicar em Pesquisar
+    Execute JavaScript  document.getElementById("cphContent_btnPesquisa").click();
+    Aguardar tela de carregamento
+
+Em Configurar Avaliação, clicar em Ações e Imprimir
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkImprimir_0").click();
+    Aguardar tela de carregamento
+
+Em Configurar Avaliação, verificar se a prova foi gerada corretamente
+    ${windowHandles}    Get Window Handles
+    Switch Window   ${windowHandles}[1]
+    Wait Until Page Does Not Contain    OCORREU UM ERRO INESPERADO
+    Sleep    2
+
+Em Configurar Avaliação, clicar em Ações e Editar
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkEditar_0").click();
+    Aguardar tela de carregamento
+
+Em Configurar Avaliação, clicar em Ações e Excluir
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkExcluir_0").click();
+    Aguardar tela de carregamento
+
+Em Configurar Avaliação, clicar em Sim no modal
+    Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnSim").click();
+    Aguardar tela de carregamento

@@ -53,13 +53,8 @@ Em Escola Autorizada A Receber Matrícula, verificar se as opções foram salvas
         ${busca}    Set Variable    cphContent_dtlEscolas_chkTodosTd_${index}
         ${resultado}    Run Keyword And Return Status   Wait Until Element Is Not Visible    ${busca}    0.2
         ${resultado2}    Run Keyword And Return Status   Element Attribute Value Should Be    ${busca}    checked    true
-<<<<<<< HEAD
-        IF  ${resultado} or ${resultado2}
-            CONTINUE    
-=======
         IF  ${resultado} or ${resultado2} 
         Log    Ok   
->>>>>>> 6a2b7d31eaa3b84eca95c7f0952e3f47674ee419
         ELSE
             Fail
         END
