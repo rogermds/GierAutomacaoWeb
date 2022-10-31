@@ -287,6 +287,12 @@ Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Cancelar Inscri
     Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkCancelar_1").click();
     Aguardar tela de carregamento
 
+Em Gestão de Pré-Matrículas Secretaria, no Resultado, clicar em Ações e Cancelar Inscrição
+    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click() 
+    Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lnkCancelar_0").click();
+    Aguardar tela de carregamento
+
 Em Gestão de Pré-Matrícula, em Histórico de Alterações, verificar se o registro foi salvo
     Em Gestão de Pré-Matrícula, em Histórico de Contato, verificar se o registro foi salvo
 
