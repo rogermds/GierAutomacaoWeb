@@ -5317,11 +5317,7 @@ Cenário 82: Funcionalidade Banco de Questões - Imagem
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
 
-<<<<<<< HEAD
 Cenário 83: Funcionalidade Configurar Avaliação - Online
-=======
-Cenário 83: Funcionalidade Configurar Avaliação
->>>>>>> c12565a6170609a64b5531de2ceedda45cd89278
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5653,6 +5649,7 @@ Cenário 86: Prova Online
     Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
     Em Cadastro de Pessoa, no campo Número, inserir o número "33"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Em Cadastro de Pessoa, no campo Localização difereciada, clicar em "Não está em Área de Localização Diferenciada"   
     Clicar no botão Incluir
     Em Cadastro de Pessoa, clicar no botão Salvar       
     Clicar em OK no Modal

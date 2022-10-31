@@ -173,6 +173,13 @@ Em Cadastro de Pessoa, no campo Zona, selecionar "${zona}"
     Run Keyword If    '${zona}' == 'URBANO'  Execute JavaScript   $('#${campoZona}').val("1").trigger('chosen:updated');
     Run Keyword If    '${zona}' == 'RURAL'   Execute JavaScript   $('#${campoZona}').val("2").trigger('chosen:updated');
 
+Em Cadastro de Pessoa, no campo Localização difereciada, clicar em "${LocalizacaoDifereciada}"
+    Run Keyword If    '${LocalizacaoDifereciada}' == 'Não está em Área de Localização Diferenciada'  Execute JavaScript   $('#${campoLocalizacaoDifereciada}').val("1").trigger('chosen:updated');
+    Run Keyword If    '${LocalizacaoDifereciada}' == 'Área de Assentamento'  Execute JavaScript   $('#${campoLocalizacaoDifereciada}').val("4").trigger('chosen:updated');
+    Run Keyword If    '${LocalizacaoDifereciada}' == 'Área onde se localiza Comunidade Remanescente de Quilombos'  Execute JavaScript   $('#${campoLocalizacaoDifereciada}').val("2").trigger('chosen:updated');
+
+
+
 Clicar no botão Incluir
     Execute JavaScript  document.getElementById("${botaoIncluir}").click();
     Aguardar tela de carregamento
