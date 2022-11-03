@@ -107,7 +107,9 @@ Em Matricular Educando, selecionar uma turma com vagas
         IF  ${resultado}
             Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lbtSelecionar_${index}").click();
             Aguardar tela de carregamento
-            IF    ${resultado}    BREAK
+            IF    ${resultado}
+            Log    Ok
+            END
         END
     END
     Aguardar tela de carregamento

@@ -1302,7 +1302,8 @@ Cenário 42: Avaliação Educacional
     Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
     Em Cadastro de Pessoa, no campo Número, inserir o número "33"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
-    Clicar no botão Incluir
+    Em Cadastro de Pessoa, no campo Localização difereciada, clicar em "Não está em Área de Localização Diferenciada"    
+    Clicar no botão Incluir    
     Em Cadastro de Pessoa, clicar no botão Salvar       
     Clicar em OK no Modal
     Em Matricular Educando, em Ano Letivo da Matrícula, selecionar o ano de "2022"

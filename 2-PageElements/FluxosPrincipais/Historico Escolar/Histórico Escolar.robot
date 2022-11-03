@@ -36,7 +36,7 @@ Em Histórico Escolar, clicar em OK no Modal
     Aguardar tela de carregamento
 
 Em Histórico Escolar, clicar em Fechar Historico
-    Wait Until Page Contains Element    ${campoFecharHistorico}
+    Wait Until Page Contains Element    ${campoFecharHistorico}    60
     Execute JavaScript  document.getElementById("${campoFecharHistorico}").click();
     Aguardar tela de carregamento
 

@@ -741,7 +741,7 @@ Cenário 15: Funcionalidade Ata de Conselho - Fundamental
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Ata de Conselho Final - Turma"
     Na tela de Ata de Conselho, em Etapa/Modalidade, selecionar "ENSINO FUNDAMENTAL"
-    Na tela de Ata de Conselho, em Turma, selecionar "5B"
+    Na tela de Ata de Conselho, em Turma, selecionar "3A"
     Clicar em Pesquisar
     Na tela de Ata de Conselho, clicar em Ações no primeiro aluno
     Na tela de Ata de Conselho, em ações, clicar em Fechamento do Período Letivo no primeiro aluno
@@ -846,19 +846,14 @@ Cenário 17: Funcionalidade Histórico Escolar - Infantil
     Em Histórico Escolar, clicar em Sim no Modal
     Em Histórico Escolar, verificar se o botão Salvar Historico foi habilitado
     Clicar em Voltar
-    Em Histórico Escolar, pesquisar "HIGOR DIAS SACRAMENTO"
+    Em Histórico Escolar, pesquisar "JOSUE SANTOS QUEIROZ"
     Clicar em Pesquisar
     Em Histórico Escolar, clicar em HISTORICO ESCOLAR
-    Em Histórico Escolar, clicar em Fechar Historico
-    Em Histórico Escolar, clicar em Sim no Modal
     Em Histórico Escolar, clicar em Salvar Historico
     Em Histórico Escolar, clicar em OK no Modal
     Em Histórico Escolar, clicar em Emitir Historico
     Em Histórico Escolar, verificar se o Historico foi emitido corretamente
     Em Histórico Escolar, fechar o Historico Escolar
-    Em Histórico Escolar, clicar em Abrir Historico
-    Em Histórico Escolar, clicar em Sim no Modal
-    Em Histórico Escolar, verificar se o botão Salvar Historico foi habilitado
 
 Cenário 18: Funcionalidade Histórico Escolar - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar o
@@ -1044,7 +1039,7 @@ Cenário 22: Funcionalidade Boletim Escolar - EJA
     Em Boletim Individual de Educando M02, no filtro Turma, selecionar "CII A"
     Em Boletim Individual de Educando M02, no filtro Educando, selecionar "ANDERSON CASSEANO DA SILVA"
     Em Boletim Individual de Educando M02, clicar em Imprimir
-    Em Boletim Individual de Educando M02, verificar se o Boletim foi emitido corretamente
+    # Em Boletim Individual de Educando M02, verificar se o Boletim foi emitido corretamente
     Em Boletim Individual de Educando M02, fechar o Boletim Escolar
 
 ## ALTERAR PARA O MÊS SEGUINTE CASO O TESTE FALHE. VERIFICAR O MÊS JÁ ESTÁ FECHADO
@@ -4647,7 +4642,7 @@ Cenário 67: Funcionalidade Gestão de Pré-Matrícula: Ações - Escola
     Em Gestão de Pré-Matrícula, em Histórico de Alterações, verificar se o registro foi salvo
     Em Gestão de Pré-Matrícula, em Histórico de Alterações, clicar em Fechar
     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Determinação Legal
-    Em Gestão de Pré-Matrícula, em Determinação Legal, selecionar "TESTE AUTOMAÇÃO QA"
+    Em Gestão de Pré-Matrícula, em Determinação Legal, selecionar "TESTE DE JUSTIFICATIVA PARA DETERMINAÇÃO LEGAL"
     Em Gestão de Pré-Matrícula, em Determinação Legal, em Observações, inserir "OBSERVAÇÃO DETERMINAÇÃO LEGAL AUTOMAÇÃO"
     Em Gestão de Pré-Matrícula, em Determinação Legal, clicar em Salvar
     Em Gestão de Pré-Matrícula, em Escolas Selecionadas, clicar em Ações e Cancelar Indicação
@@ -4691,7 +4686,7 @@ Cenário 68: Funcionalidade Gestão de Pré-Matrícula: Ações - Secretaria
     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Histórico de Alterações
     Em Gestão de Pré-Matrícula, em Histórico de Alterações, verificar se o registro foi salvo
     Em Gestão de Pré-Matrícula, em Histórico de Alterações, clicar em Fechar
-    Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Cancelar Inscrição
+    Em Gestão de Pré-Matrículas Secretaria, no Resultado, clicar em Ações e Cancelar Inscrição
     Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, selecionar "OUTROS"
     Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, em Observações, inserir "OBSERVAÇÃO CANCELAMENTO AUTOMAÇÃO"
     Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, clicar em Salvar
@@ -4769,30 +4764,30 @@ Cenário 70: Funcionalidade Tipos de Rotas
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Tipos de Rotas"
     Em Tipos de Rotas, clicar em Cadastrar
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO QA"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA PARA AUTOMAÇÃO QA"
     Em Tipos de Rotas, clicar em Salvar
     Em Tipos de Rotas, clicar em OK no modal
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO QA"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA PARA AUTOMAÇÃO QA"
     Em Tipos de Rotas, clicar em Pesquisar
-    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO QA"
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA PARA AUTOMAÇÃO QA"
     Em Tipos de Rotas, nos resultado, clicar em Ações e Editar
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO EDITADO QA"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA PARA AUTOMACAO QA EDITADO"
     Em Tipos de Rotas, clicar em Salvar
     Em Tipos de Rotas, clicar em OK no modal
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO EDITADO QA"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA PARA AUTOMACAO QA EDITADO"
     Em Tipos de Rotas, clicar em Pesquisar
-    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO EDITADO QA"
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA PARA AUTOMACAO QA EDITADO"
     Em Tipos de Rotas, nos resultado, clicar em Ações e Excluir
     Em Tipos de Rotas, clicar em Sim no modal 
     Em Tipos de Rotas, clicar em OK no modal
     Em Tipos de Rotas, clicar em Cadastrar
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO QA"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA PARA AUTOMACAO QA"
     Em Tipos de Rotas, clicar em Salvar
     Em Tipos de Rotas, clicar em OK no modal
     Em Tipos de Rotas, clicar em OK no modal
-    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA AUTOMACAO QA"
+    Em Tipos de Rotas, em Descrição, inserir "TIPO DE ROTA PARA AUTOMACAO QA"
     Em Tipos de Rotas, clicar em Pesquisar
-    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO QA"
+    Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA PARA AUTOMACAO QA"
 
 Cenário 71: Funcionalidade Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
@@ -4807,8 +4802,8 @@ Cenário 71: Funcionalidade Rotas
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Rotas"
     Em Rotas, clicar em Cadastrar
-    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA AUTOMACAO Qa"
-    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA QA"
+    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA PARA AUTOMACAO QA"
+    Em Cadastrar Rota, em Nome, inserir "ROTA PARA AUTOMAÇÃO QA"
     Em Cadastrar Rota, em Ponto Inicial, inserir "AUTOMACAO PONTO INICIAL"
     Em Cadastrar Rota, em Ponto Final, inserir "AUTOMACAO PONTO FINAL"
     Em Cadastrar Rota, em Km, inserir "10"
@@ -4822,26 +4817,26 @@ Cenário 71: Funcionalidade Rotas
     Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Inserir
     Em Cadastrar Rota, clicar em Salvar
     Em Cadastrar Rota, clicar em OK no Modal
-    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA QA"
+    Em Rotas, em Descrição, inserir "ROTA PARA AUTOMAÇÃO QA"
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi cadastrada
     Em Rotas, no Resultado da Busca, clicar em Ações e Editar
-    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA EDITADO QA"
+    Em Cadastrar Rota, em Nome, inserir "ROTA PARA AUTOMAÇÃO QA EDITADO"
     Em Cadastrar Rota, em Km, inserir "7"
     Em Cadastrar Rota, clicar em Salvar
     Em Cadastrar Rota, clicar em OK no Modal
-    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA EDITADO QA"
+    Em Rotas, em Descrição, inserir "ROTA PARA AUTOMAÇÃO QA EDITADO"
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi cadastrada
     Em Rotas, no Resultado da Busca, clicar em Ações e Excluir
     Em Rotas, clicar em Sim no modal
     Em Cadastrar Rota, clicar em OK no Modal
-    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA EDITADO QA"
+    Em Rotas, em Descrição, inserir "ROTA PARA AUTOMAÇÃO QA EDITADO"
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi excluída
     Em Rotas, clicar em Cadastrar
-    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA AUTOMACAO QA"
-    Em Cadastrar Rota, em Nome, inserir "AUTOMACAO ROTA"
+    Em Cadastrar Rota, selecionar o Tipo de Rota "TIPO DE ROTA PARA AUTOMACAO QA"
+    Em Cadastrar Rota, em Nome, inserir "ROTA PARA AUTOMAÇÃO QA"
     Em Cadastrar Rota, em Ponto Inicial, inserir "AUTOMACAO PONTO INICIAL"
     Em Cadastrar Rota, em Ponto Final, inserir "AUTOMACAO PONTO FINAL"
     Em Cadastrar Rota, em Km, inserir "10"
@@ -4855,7 +4850,7 @@ Cenário 71: Funcionalidade Rotas
     Em Cadastrar Rota, em Vincular Escolar a Rota, clicar em Inserir
     Em Cadastrar Rota, clicar em Salvar
     Em Cadastrar Rota, clicar em OK no Modal
-    Em Rotas, em Descrição, inserir "AUTOMACAO ROTA QA"
+    Em Rotas, em Descrição, inserir "ROTA PARA AUTOMAÇÃO QA"
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi cadastrada
 
@@ -4872,7 +4867,7 @@ Cenário 72: Funcionalidade Tipos de Frotas
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Tipos de Frotas"
     Em Tipos de Frotas, clicar em Cadastrar
-    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO QA"
+    Em Tipos de Frotas, em Descrição, inserir "TIPO DE FROTA PARA AUTOMACAO QA"
     Em Tipos de Frotas, em Sigla, inserir "TFA"
     Em Tipos de Frotas, clicar em Salvar
     Em Tipos de Frotas, clicar em OK no modal
@@ -4880,7 +4875,7 @@ Cenário 72: Funcionalidade Tipos de Frotas
     Em Tipos de Frotas, clicar em Pesquisar
     Em Tipos de Frotas, verificar se o tipo de rota foi cadastrado
     Em Tipos de Frotas, clicar em Ações e Editar
-    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO EDITADO QA"
+    Em Tipos de Frotas, em Descrição, inserir "TIPO DE FROTA PARA AUTOMACAO QA EDITADO"
     Em Tipos de Frotas, clicar em Salvar
     Em Tipos de Frotas, clicar em OK no modal
     Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado
@@ -4890,7 +4885,7 @@ Cenário 72: Funcionalidade Tipos de Frotas
     Em Tipos de Frotas, clicar em Sim no modal
     Em Tipos de Frotas, clicar em OK no modal
     Em Tipos de Frotas, clicar em Cadastrar
-    Em Tipos de Frotas, em Descrição, inserir "TIPO FROTA AUTOMACAO QA"
+    Em Tipos de Frotas, em Descrição, inserir "TIPO DE FROTA PARA AUTOMACAO QA"
     Em Tipos de Frotas, em Sigla, inserir "TFA"
     Em Tipos de Frotas, clicar em Salvar
     Em Tipos de Frotas, clicar em OK no modal
@@ -4908,9 +4903,9 @@ Cenário 73: Funcionalidade Frotas
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Frotas"
     Em Frotas, clicar em Cadastrar
-    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO QA"
+    Em Frotas, em Descrição, inserir "FROTA PARA AUTOMACAO QA"
     Em Frotas, em Sigla, inserir "FRAT"
-    Em Frotas, em Tipo, selecionar "TIPO FROTA AUTOMACAO QA"
+    Em Frotas, em Tipo, selecionar "TIPO DE FROTA PARA AUTOMACAO QA"
     Em Frotas, em Forma de Gerenciamento, selecionar "Frota Gerenciada"
     Em Frotas, clicar em Salvar
     Em Frotas, clicar em OK
@@ -4918,7 +4913,7 @@ Cenário 73: Funcionalidade Frotas
     Em Frotas, clicar em Pesquisar
     Em Frotas, verificar se a frota foi cadastrada
     Em Frotas, clicar em Ações e Editar
-    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO EDITADA QA"
+    Em Frotas, em Descrição, inserir "FROTA PARA AUTOMACAO QA EDITADA"
     Em Frotas, clicar em Salvar
     Em Frotas, clicar em OK
     Em Frotas, em Descrição, inserir a frota cadastrada
@@ -4928,9 +4923,9 @@ Cenário 73: Funcionalidade Frotas
     Em Frotas, clicar em Sim
     Em Frotas, clicar em OK
     Em Frotas, clicar em Cadastrar
-    Em Frotas, em Descrição, inserir "FROTA AUTOMACAO QA"
+    Em Frotas, em Descrição, inserir "FROTA PARA AUTOMACAO QA"
     Em Frotas, em Sigla, inserir "FRAT"
-    Em Frotas, em Tipo, selecionar "TIPO FROTA AUTOMACAO QA"
+    Em Frotas, em Tipo, selecionar "TIPO DE FROTA PARA AUTOMACAO QA"
     Em Frotas, em Forma de Gerenciamento, selecionar "Frota Gerenciada"
     Em Frotas, clicar em Salvar
     Em Frotas, clicar em OK
@@ -5044,12 +5039,12 @@ Cenário 75: Funcionalidade Viagens
     Entrar no módulo "Transportes"
     Entrar na funcionalidade "Viagens"
     Em Viagens, clicar em Cadastrar
-    Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO"
-    Em Cadastrar Viagens, em Rota, selecionar "AUTOMACAO ROTA"
+    Em Viagens, em Nome, inserir "VIAGEM PARA AUTOMACAO QA"
+    Em Cadastrar Viagens, em Rota, selecionar "ROTA PARA AUTOMAÇÃO QA"
     Em Cadastrar Viagens, em Vigência Inicial, inserir "01/01/2022"
     Em Cadastrar Viagens, em Vigência Final, inserir "31/12/2022"
     Em Cadastrar Viagens, em Frota, selecionar "FROTA INTERNA"
-    Em Cadastrar Viagens, em Veículo, selecionar "RENAULT - SANDERO - FSN9561 DT2121"
+    Em Cadastrar Viagens, em Veículo, selecionar "RENAULT - SANDERO - FAU7597"
     Em Cadastrar Viagens, em Horário Inicial De, inserir "06:00"
     Em Cadastrar Viagens, em Horário Inicial Até, inserir "08:00"
     Em Cadastrar Viagens, em Horário Final De, inserir "12:00"
@@ -5057,7 +5052,7 @@ Cenário 75: Funcionalidade Viagens
     Em Cadastrar Viagens, em Dia da Semana, clicar em "TODOS"
     Em Cadastrar Viagens, clicar em Salvar
     Em Cadastrar Viagens, clicar em OK no modal
-    Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO"
+    Em Viagens, em Nome, inserir "VIAGEM PARA AUTOMACAO QA"
     Em Cadastrar Viagens, clicar em Pesquisar
     Em Cadastrar Viagens, verificar se a viagem foi cadastrada
     Em Cadastrar Viagens, clicar em Ações e Editar
@@ -5071,12 +5066,12 @@ Cenário 75: Funcionalidade Viagens
     Em Cadastrar Viagens, clicar em Sim no modal
     Em Cadastrar Viagens, clicar em OK no modal
     Em Viagens, clicar em Cadastrar
-    Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO"
-    Em Cadastrar Viagens, em Rota, selecionar "AUTOMACAO ROTA"
+    Em Viagens, em Nome, inserir "VIAGEM PARA AUTOMACAO QA"
+    Em Cadastrar Viagens, em Rota, selecionar "ROTA PARA AUTOMAÇÃO QA"
     Em Cadastrar Viagens, em Vigência Inicial, inserir "01/01/2022"
     Em Cadastrar Viagens, em Vigência Final, inserir "31/12/2022"
     Em Cadastrar Viagens, em Frota, selecionar "FROTA INTERNA"
-    Em Cadastrar Viagens, em Veículo, selecionar "RENAULT - SANDERO - FSN9561 DT2121"
+    Em Cadastrar Viagens, em Veículo, selecionar "RENAULT - SANDERO - FAU7597"
     Em Cadastrar Viagens, em Horário Inicial De, inserir "06:00"
     Em Cadastrar Viagens, em Horário Inicial Até, inserir "08:00"
     Em Cadastrar Viagens, em Horário Final De, inserir "12:00"
@@ -5084,7 +5079,7 @@ Cenário 75: Funcionalidade Viagens
     Em Cadastrar Viagens, em Dia da Semana, clicar em "TODOS"
     Em Cadastrar Viagens, clicar em Salvar
     Em Cadastrar Viagens, clicar em OK no modal
-    Em Viagens, em Nome, inserir "VIAGEM AUTOMACAO"
+    Em Viagens, em Nome, inserir "VIAGEM PARA AUTOMACAO QA"
     Em Cadastrar Viagens, clicar em Pesquisar
     Em Cadastrar Viagens, verificar se a viagem foi cadastrada
     
@@ -5617,7 +5612,7 @@ Cenário 83: Funcionalidade Banco de Questões - Imagem
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
 
-Cenário 84: Funcionalidade Configurar Avaliação - Online
+Cenário 83: Funcionalidade Configurar Avaliação - Online
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5709,7 +5704,7 @@ Cenário 84: Funcionalidade Configurar Avaliação - Online
     Em Configurar Avaliação, clicar em Ações e Imprimir
     Em Configurar Avaliação, verificar se a prova foi gerada corretamente
 
-Cenário 85: Funcionalidade Configurar Avaliação - Offline
+Cenário 84: Funcionalidade Configurar Avaliação - Offline
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5782,7 +5777,7 @@ Cenário 85: Funcionalidade Configurar Avaliação - Offline
     Em Configurar Avaliação, clicar em Ações e Imprimir
     Em Configurar Avaliação, verificar se a prova foi gerada corretamente
 
-Cenário 86: Funcionalidade Configurar Avaliação - Edição e Exclusão
+Cenário 85: Funcionalidade Configurar Avaliação - Edição e Exclusão
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5829,7 +5824,7 @@ Cenário 86: Funcionalidade Configurar Avaliação - Edição e Exclusão
     Em Configurar Avaliação, clicar em Sim no modal
     Em Configurar Avaliação, clicar em OK no modal
 
-Cenário 87: Funcionalidade Agendamento Avaliação - Online
+Cenário 86: Funcionalidade Agendamento Avaliação - Online
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
     [Tags]             Agendamento Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5870,7 +5865,7 @@ Cenário 87: Funcionalidade Agendamento Avaliação - Online
     Em Agendamento Avaliação, clicar em Pesquisar
     Em Agendamento Avaliação, verificar se o Agendamento "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO" foi cadastrado
 
-Cenário 88: Funcionalidade Agendamento Avaliação - Offline
+Cenário 87: Funcionalidade Agendamento Avaliação - Offline
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
     [Tags]             Agendamento Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5911,7 +5906,7 @@ Cenário 88: Funcionalidade Agendamento Avaliação - Offline
     Em Agendamento Avaliação, clicar em Pesquisar
     Em Agendamento Avaliação, verificar se o Agendamento "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO" foi cadastrado
 
-Cenário 89: Prova Online
+Cenário 88: Prova Online
     [Documentation]    Esse teste efetua a prova online para um educando da Etapa - Fundamental     
     [Tags]             Prova Online - Fundamental | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5949,6 +5944,7 @@ Cenário 89: Prova Online
     Em Cadastro de Pessoa, no campo CEP, inserir o CEP "07123-140"
     Em Cadastro de Pessoa, no campo Número, inserir o número "33"
     Em Cadastro de Pessoa, no campo Zona, selecionar "URBANO"
+    Em Cadastro de Pessoa, no campo Localização difereciada, clicar em "Não está em Área de Localização Diferenciada"   
     Clicar no botão Incluir
     Em Cadastro de Pessoa, clicar no botão Salvar       
     Clicar em OK no Modal
@@ -5996,7 +5992,7 @@ Cenário 89: Prova Online
     Na Prova, clicar em Sair
     Na Prova, verificar o campo da prova foi desativado
 
-Cenário 90: Lançamento Individualizado
+Cenário 89: Lançamento Individualizado
     [Documentation]    Esse teste consulta e finaliza um Lançamento Individualizado     
     [Tags]             Lançamento Individualizado | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -6059,7 +6055,7 @@ Cenário 90: Lançamento Individualizado
     Em Lançamento Individualizado, clicar em Sim no modal
     Em Lançamento Individualizado, verificar se o totalizador abriu sem erros
 
-Cenário 91: Avaliações Educacionais Realizadas
+Cenário 90: Avaliações Educacionais Realizadas
     [Documentation]    Esse teste efetua a consulta de uma Avaliação Educacional Realizada,
     ...                validando os relatórios para uma escola
     [Tags]             Avaliações Educacionais Realizadas | Fluxo Positivo
