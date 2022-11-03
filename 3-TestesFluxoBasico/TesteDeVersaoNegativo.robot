@@ -2099,15 +2099,15 @@ Cenário 50: Portal de Inscrição - Fundamental Contínuo
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF cadastrado
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
     No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
-    No Portal, em Cadastro do Aluno, em RNE, inserir O RNE cadastrado
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações

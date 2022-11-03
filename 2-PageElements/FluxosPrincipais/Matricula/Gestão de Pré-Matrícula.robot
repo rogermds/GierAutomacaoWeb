@@ -111,7 +111,7 @@ Em Gestão de Pré-Matrícula, clicar em OK no modal
 
 Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "${ciclo}"
     Execute JavaScript   $("#cphContent_ddlCiclo").val($('option:contains("${ciclo}")').val()).trigger('chosen:updated');
-    Run Keyword If    '${ciclo}' == 'Ciclo II-Semestre 1'     Execute JavaScript   $('#cphContent_ddlCiclo').val("53").trigger('chosen:updated');        
+    Run Keyword If    '${ciclo}' == 'Ciclo II-Semestre 1'     Execute JavaScript   $('#cphContent_ddlCiclo').val("59").trigger('chosen:updated');        
     Execute JavaScript   $('#cphContent_ddlCiclo').trigger('change');
     Aguardar tela de carregamento
     
@@ -131,6 +131,12 @@ Em Gestão de Pré-Matrícula, em '${processo}', verificar se o aluno entrou em 
         ${buscaAluno}    Set Variable    cphContent_dtlConsulta_lblAlunoLi_${index}
         ${buscaProcesso}    Set Variable    cphContent_dtlConsulta_lblDemandaLi_${index}
         ${resultadoProcesso}    Run Keyword And Return Status   Element Should Contain    ${buscaProcesso}    ${processo}
+        
+        ${naoAchou}    Run Keyword And Return Status    Wait Until Element Is Not Visible    cphContent_dtlConsulta_lblClassificacaoLi_${index}    0.5
+        IF    ${naoAchou}
+            Fail    Aluno não foi encontrado na lista
+        END
+        
         ${listaEsperaAluno}    Get Text    cphContent_dtlConsulta_lblClassificacaoLi_${index}
         ${validacao}    Evaluate    ${index} > ${listaEsperaAluno}
         
@@ -141,7 +147,7 @@ Em Gestão de Pré-Matrícula, em '${processo}', verificar se o aluno entrou em 
 
         ${resultadoAluno}    Run Keyword And Return Status   Element Should Contain  ${buscaAluno}    ${nomeAlunoCaixaAlta}
             
-        ${nomeResponsavelCaixaAlta}    Convert To Upper Case    ${nomeCompletoAluno}
+        ${nomeResponsavelCaixaAlta}    Convert To Upper Case    ${nomeCompletoResponsavel}
         ${resultadoResponsavel}    Run Keyword And Return Status   Element Should Contain  ${buscaAluno}    ${nomeResponsavelCaixaAlta}
         ${nomeResponsavelCaixaAlta}    Convert To Upper Case    ${nomeCompletoResponsavel}
 
@@ -176,26 +182,55 @@ Em Gestão de Pré-Matrícula, em '${processo}', verificar se o aluno entrou em 
     FOR     ${index}    IN RANGE    0    300
         ${proximoCampo}    Evaluate    ${index}+1
         ${buscaAluno}    Set Variable    cphContent_dtlConsulta_lblAlunoLi_${index}
-        ${nomeAlunoCaixaAlta}    Convert To Upper Case    ${nomeCompletoAluno}
         ${buscaProcesso}    Set Variable    cphContent_dtlConsulta_lblDemandaLi_${index}
         ${resultadoProcesso}    Run Keyword And Return Status   Element Should Contain    ${buscaProcesso}    ${processo}
-        ${resultadoAluno}    Run Keyword And Return Status   Element Should Contain  ${buscaAluno}    ${nomeAlunoCaixaAlta}
+        
+        ${naoAchou}    Run Keyword And Return Status    Wait Until Element Is Not Visible    cphContent_dtlConsulta_lblClassificacaoLi_${index}    0.5
+        IF    ${naoAchou}
+            Fail    Aluno não foi encontrado na lista
+        END
+        
         ${listaEsperaAluno}    Get Text    cphContent_dtlConsulta_lblClassificacaoLi_${index}
         ${validacao}    Evaluate    ${index} > ${listaEsperaAluno}
+        
+        ${existeNomeAluno}    Run Keyword And Return Status    Variable Should Exist    ${nomeCompletoAluno}
+        IF    ${existeNomeAluno}
+            ${nomeAlunoCaixaAlta}    Convert To Upper Case    ${nomeCompletoAluno}
+        END
+
+        ${resultadoAluno}    Run Keyword And Return Status   Element Should Contain  ${buscaAluno}    ${nomeAlunoCaixaAlta}
+            
+        ${nomeResponsavelCaixaAlta}    Convert To Upper Case    ${nomeCompletoResponsavel}
+        ${resultadoResponsavel}    Run Keyword And Return Status   Element Should Contain  ${buscaAluno}    ${nomeResponsavelCaixaAlta}
+        ${nomeResponsavelCaixaAlta}    Convert To Upper Case    ${nomeCompletoResponsavel}
+
         IF  ${resultadoAluno} and ${resultadoProcesso}
             IF    ${listaEsperaAluno} == 1
                 Element Text Should Be    cphContent_dtlConsulta_lblClassificacaoLi_${index}    1
                 Exit For Loop
-            ELSE
+            END
+                ${listaEsperaAluno}    Get Text    cphContent_dtlConsulta_lblClassificacaoLi_${index}
                 ${proximoValor}    Evaluate    ${listaEsperaAluno}+1
                 Element Text Should Be    cphContent_dtlConsulta_lblClassificacaoLi_${proximoCampo}    ${proximoValor}
+                Exit For Loop 
+        END
+
+        IF  ${resultadoResponsavel} and ${resultadoProcesso}
+            IF    ${listaEsperaAluno} == 1
+                Element Text Should Be    cphContent_dtlConsulta_lblClassificacaoLi_${index}    1
                 Exit For Loop
             END
+                ${listaEsperaAluno}    Get Text    cphContent_dtlConsulta_lblClassificacaoLi_${index}
+                ${proximoValor}    Evaluate    ${listaEsperaAluno}+1
+                Element Text Should Be    cphContent_dtlConsulta_lblClassificacaoLi_${proximoCampo}    ${proximoValor}
+                Exit For Loop 
         END
+
         IF    ${validacao}
             Fail      
         END
     END
+
 
 Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Registro de Atendimento
     Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);

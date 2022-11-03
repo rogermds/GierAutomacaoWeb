@@ -38,8 +38,21 @@ No controle de frequência, em Turma, selecionar "${turma}"
 No controle de frequência, em Data Referência, insira "${data}"
     Input Text    ${campoDataFrequencia}    ${data}
 
-Verificar se o botão Iniciar está visível
+Iniciar as aulas na semana
     Wait Until Element Is Enabled     cphContent_dtlDiaSemanaLabel_lkbIniciar_6
+
+    FOR    ${index}    IN RANGE    7
+    ${campoIniciarAula}    Set Variable    cphContent_dtlDiaSemanaLabel_lkbIniciar_${index}
+    ${validacao1}    Run Keyword And Return Status    Element Should Be Disabled    ${campoIniciarAula}
+    ${validacao2}    Run Keyword And Return Status    Element Should Contain    ${campoIniciarAula}    Cancelar
+        IF    ${validacao1}
+            Log    Dia não letivo        
+        END
+        IF    ${validacao2}
+            Execute JavaScript  document.getElementById("${campoIniciarAula}").click();
+            Aguardar tela de carregamento
+        END
+    END
 
 Iniciar as aulas para os 4 últimos dias da semana
     Execute JavaScript  xPathResult = document.evaluate("//a[contains(@id,'6')][@title='Iniciar Aula'][contains(.,'Iniciar')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
@@ -135,37 +148,47 @@ Iniciar as aulas nos 4 últimos dias da semana
     Execute JavaScript  xPathResult.singleNodeValue.click() 
     Aguardar tela de carregamento
 
-Registrar faltas para os 4 primeiros alunos
-    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlFrequencia$ctl00$dtlDiaSemana$ctl06$dtlMarcarAulas$ctl00$btnFrequencia'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click()
-    Sleep    1
-    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlFrequencia$ctl00$dtlDiaSemana$ctl05$dtlMarcarAulas$ctl00$btnFrequencia'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
-    Sleep    1
-    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlFrequencia$ctl00$dtlDiaSemana$ctl04$dtlMarcarAulas$ctl00$btnFrequencia'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
-    Sleep    1
-    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlFrequencia$ctl00$dtlDiaSemana$ctl03$dtlMarcarAulas$ctl00$btnFrequencia'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
-    Sleep    1
-    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlFrequencia$ctl01$dtlDiaSemana$ctl06$dtlMarcarAulas$ctl00$btnFrequencia'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
-    Sleep    1
-    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlFrequencia$ctl01$dtlDiaSemana$ctl05$dtlMarcarAulas$ctl00$btnFrequencia'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
-    Sleep    1
-    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlFrequencia$ctl01$dtlDiaSemana$ctl04$dtlMarcarAulas$ctl00$btnFrequencia'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
-    Sleep    1
-    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlFrequencia$ctl02$dtlDiaSemana$ctl06$dtlMarcarAulas$ctl00$btnFrequencia'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
-    Sleep    1
-    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlFrequencia$ctl02$dtlDiaSemana$ctl05$dtlMarcarAulas$ctl00$btnFrequencia'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
-    Sleep    1
-    Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlFrequencia$ctl03$dtlDiaSemana$ctl06$dtlMarcarAulas$ctl00$btnFrequencia'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click() 
-    Sleep    1
+Retirar as faltas marcadas, caso houver
+    Wait Until Element Is Visible    cphContent_dtlFrequencia_liNChamada_0
+    FOR    ${indexAlunos}    IN RANGE    0    3
+        ${buscaAlunoFrequente}    Run Keyword And Return Status    Element Attribute Value Should Be    cphContent_dtlFrequencia_liNChamada_${indexAlunos}    style    width: 25px; text-align: center; background-color: rgb(10, 150, 13); padding-left: 0px !important;
+        IF    ${buscaAlunoFrequente}
+            FOR    ${indexDiaSemana}    IN RANGE    0    6
+                ${campoMarcacaoAula}    Set Variable    cphContent_dtlFrequencia_dtlDiaSemana_${indexAlunos}_dtlMarcarAulas_${indexDiaSemana}_btnFrequencia_0 
+                ${validacaoCampoAulaMarcada}    Run Keyword And Return Status    Element Attribute Value Should Be     ${campoMarcacaoAula}    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaAplicada.png"); border: none; height: 22px; width: 22px;
+                IF    ${validacaoCampoAulaMarcada}
+                    Execute JavaScript  document.getElementById("${campoMarcacaoAula}").click();
+                    Aguardar tela de carregamento
+                END
+            END
+        END  
+    END
+
+Cancelar as aulas abertas, caso houver
+    FOR    ${index}    IN RANGE    0    6
+        ${campoIniciarAula}    Set Variable    cphContent_dtlDiaSemanaLabel_lkbIniciar_${index}
+        ${verificarSeAulaFoiIniciada}    Run Keyword And Return Status    Element Should Contain    ${campoIniciarAula}    Cancelar
+        IF    ${verificarSeAulaFoiIniciada}
+            Execute JavaScript  document.getElementById("${campoIniciarAula}").click();
+            Aguardar tela de carregamento
+        END
+    END
+
+Registrar faltas para os 4 primeiros alunos frequentes
+    FOR    ${indexAlunos}    IN RANGE    0    4
+    ${buscaAlunoFrequente}    Run Keyword And Return Status    Element Attribute Value Should Be    cphContent_dtlFrequencia_liNChamada_${indexAlunos}    style    width:25px;text-align:center;padding-left:0px !important;background-color:#0a960d;
+        IF    ${buscaAlunoFrequente}
+            @{reverse_listDiaSemana}    Evaluate  list(range(6,2,-1))
+            FOR    ${indexDiaSemana}    IN    @{reverse_listDiaSemana}
+                ${campoMarcacaoAula}    Set Variable    cphContent_dtlFrequencia_dtlDiaSemana_${indexAlunos}_dtlMarcarAulas_${indexDiaSemana}_btnFrequencia_0 
+                ${validacaoCampoAulaMarcada}    Run Keyword And Return Status    Element Attribute Value Should Be     ${campoMarcacaoAula}    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaAplicada.png"); border: none; height: 22px; width: 22px;
+                IF    {validacaoCampoAulaMarcada}
+                    Execute JavaScript  document.getElementById("${campoMarcacaoAula}").click();
+                    Aguardar tela de carregamento
+                END
+            END
+        END  
+    END
 
 Verificar se o primeiro aluno possui 4 faltas e frequencia 0
     Element Text Should Be    cphContent_dtlFrequencia_lblTotalFaltas_0    4

@@ -5,6 +5,7 @@ Resource    ../../../1-Hooks/1-Principal.robot
 
 *** Variables ***
 ${xPathIframe}        //iframe[contains(@frameborder,'0')]
+@{meses}    Janeiro    Fevereiro    Marco    Abril    Maio    Junho    Julho    Agosto    Setembro    Outubro    Novembro    Dezembro
 
 *** Keywords ***
 Em Prontuário da Turma, em Ano Letivo, selecionar "${ano}"
@@ -21,10 +22,15 @@ Em Prontuário da Turma, em Turma, selecionar "${turma}"
     Execute JavaScript   $('#cphContent_ddlTurma').trigger('change');
     Aguardar tela de carregamento
 
-Em Prontuário da Turma, em Mês de Reunião, selecionar "${mês}"
-    Execute JavaScript  xPathResult = document.evaluate("//input[contains(@value,'${mês}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-    Execute JavaScript  xPathResult.singleNodeValue.click()     
-    Aguardar tela de carregamento
+Em Prontuário da Turma, em Mês de Reunião, selecionar um mês em aberto
+    FOR    ${mes}    IN    @{meses}
+        ${validacao}    Run Keyword And Return Status    Element Attribute Value Should Be    /input[contains(@value,'${mes}')]    background-color    green
+        IF    ${validacao}
+            Execute JavaScript  xPathResult = document.evaluate("//input[contains(@value,'${mes}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+            Execute JavaScript  xPathResult.singleNodeValue.click()     
+            Aguardar tela de carregamento
+        END 
+    END
 
 Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
     ${dataHoje}    Get Current Date    result_format=%d/%m/%Y

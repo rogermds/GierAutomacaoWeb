@@ -37,7 +37,7 @@ ${campoJustificativaDevolucao}           cphContent_QuestionarioAvaliacao_dtlQue
 
 *** Keywords ***
 Na consulta de avaliações, em Etapa/Modalidade, selecionar "${etapaModalidade}"
-    Set Suite Variable    ${etapaModalidade}
+    Set Test Variable    ${etapaModalidade}
     Aguardar tela de carregamento
     Execute JavaScript   $("#${campoEtapaModalidadeAvaliacoes}").val($('option:contains("${etapaModalidade}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#${campoEtapaModalidadeAvaliacoes}').trigger('change');
@@ -57,9 +57,11 @@ Na consulta de avaliações, em Data de Referência, informar "${data}"
     Input Text    ${campoDataReferencia}    ${data}
     Execute JavaScript   $('#${campoDataReferencia}').trigger('change');
     Aguardar tela de carregamento
+    Execute JavaScript   document.getElementsByClassName("ui-datepicker-close")[0].click();
+    Aguardar tela de carregamento
 
 Na consulta de avaliações, em Professor, selecionar "${professor}"
-    Set Suite Variable    ${professor}
+    Set Test Variable    ${professor}
     Execute JavaScript   $("#${campoProfessorAvalicoes}").val($('option:contains("${professor}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#${campoProfessorAvalicoes}').trigger('change');
     Aguardar tela de carregamento
@@ -70,7 +72,7 @@ Na consulta de avaliações, em Professor, selecionar o professor utilizado
     Aguardar tela de carregamento
 
 Na consulta de avaliações, em Turma, selecionar "${turma}"
-    Set Suite Variable    ${turma}
+    Set Test Variable    ${turma}
     Execute JavaScript   $("#${campoTurmaAvalicoes}").val($('option:contains("${turma}")').val()).trigger('chosen:updated');
     Execute JavaScript   $('#${campoTurmaAvalicoes}').trigger('change');
     Aguardar tela de carregamento
@@ -98,9 +100,11 @@ Marcar "ATINGIU OS OBJETIVOS" nas questões
 
 Clicar em Salvar e Fechar
     Execute JavaScript  document.getElementById("${salvarFechar}").click();
-    Wait Until Element Is Visible   ${okModalSucesso}  10
+    Aguardar tela de carregamento
+
 
 No modal de alerta, clicar em Ok
+    Wait Until Element Is Visible   ${okModalSucesso}  10
     Execute JavaScript  document.getElementById("${okModalSucesso}").click();
     Aguardar tela de carregamento
 
@@ -110,13 +114,14 @@ No modal de Cadastro Efetuado com Sucesso, clicar em Ok
     Wait Until Element Is Visible       ${botaoControleFrequencia}  10
 
 Verificar se as questões foram marcadas conforme foram salvas
+    Wait Until Element Is Visible    ${primeiraQuestao}
     Element Attribute Value Should Be    ${primeiraQuestao}     checked     true
     Element Attribute Value Should Be    ${segundaQuestao}     checked     true
     Element Attribute Value Should Be    ${terceiraQuestao}     checked     true
     Aguardar tela de carregamento
 
 Em Relatório, digitar um texto para envio
-    Set Suite Variable    ${textoRelatorioValidacao}    ENVIO DE RELATÓRIO PARA VALIDAÇÃO
+    Set Test Variable    ${textoRelatorioValidacao}    ENVIO DE RELATÓRIO PARA VALIDAÇÃO
     Clear Element Text    ${campoTextoRelatorioQuestionario}
     Input Text    ${campoTextoRelatorioQuestionario}    ${textoRelatorioValidacao}
 
@@ -125,25 +130,34 @@ Clicar em Enviar para Validação
     Aguardar tela de carregamento
 
 Verificar se aparece o status "${texto}"
-    Aguardar tela de carregamento
-    Element Should Contain    ${campoDescricaoQuestionario}     ${texto}
+    Wait Until Element Contains    cphContent_rptDigitaNf_lkbQuestionario_${localizacaoAlunoListaAvaliacao}    ${texto}
 
 Verificar se a Situação de Validação está como "${texto}"
-    ${primeiraValidacao}    Run Keyword And Return Status   Wait Until Page Contains    Relatórios de Desenvolvimento para Validação
-    ${segundaValidacao}     Run Keyword And Return Status    Wait Until Page Contains    Relatórios de Desenvolvimento de Educandos para Validação
-    IF         ${primeiraValidacao}
-        Element Text Should Be    ${campoSituacaoValidacao}     ${texto}
-    ELSE IF    ${segundaValidacao}
-        Element Text Should Be    ${campoSituacaoValidacao}     ${texto}
-    END   
+    FOR     ${index}    IN RANGE    0    50
+        ${busca}    Set Variable    cphContent_dtlConsulta_lblNomeTd_${index}
+        ${resultado}    Run Keyword And Return Status   Element Should Contain  ${busca}    ${alunoAvaliacaoFrequencia}
+        IF  ${resultado}
+            Wait Until Element Contains    cphContent_dtlConsulta_lblSituacao_${index}    ${texto}
+            Exit For Loop
+        END
+    END
 
 Clicar em VISUALIZAR EDUCANDOS
+    Wait Until Element Is Visible    ${visualizarEducandos}
     Execute JavaScript  document.getElementById("${visualizarEducandos}").click();
     Aguardar tela de carregamento
 
 Clicar em VISUALIZAR RELATORIO
-    Execute JavaScript  document.getElementById("${visualizarRelatorio}").click();
-    Aguardar tela de carregamento
+    Wait Until Element Is Visible    ${visualizarRelatorio}
+    FOR     ${index}    IN RANGE    0    50
+        ${busca}    Set Variable    cphContent_dtlConsulta_lblNomeTd_${index}
+        ${resultado}    Run Keyword And Return Status   Element Should Contain  ${busca}    ${alunoAvaliacaoFrequencia}
+        IF  ${resultado}            
+            Execute JavaScript  document.getElementById("cphContent_dtlConsulta_lblVisualizar_${index}").click();
+            Aguardar tela de carregamento
+            Exit For Loop
+        END
+    END
 
 Verificar se o texto inserido aparece nesta tela
     Element Should Contain    ${campoTextoRespostaAvaliacao}     ${textoRelatorioValidacao}
@@ -153,7 +167,7 @@ Clicar em Encaminhar para Ajustes
     Aguardar tela de carregamento
 
 Digitar uma justificativa
-    Set Suite Variable    ${justificativaRelatorio}    JUSTIFICATIVA DE DEVOLUÇÃO DE RELATÓRIO
+    Set Test Variable    ${justificativaRelatorio}    JUSTIFICATIVA DE DEVOLUÇÃO DE RELATÓRIO
     Clear Element Text    ${campoJustificativaRelatorio}
     Input Text    ${campoJustificativaRelatorio}    ${justificativaRelatorio}
 
@@ -169,7 +183,7 @@ Clicar em Realizar Ajustes
     Aguardar tela de carregamento
 
 Inserir um novo texto no relatório
-    Set Suite Variable    ${correcaoRelatorio}    AJUSTE EFETUADO COM SUCESSO
+    Set Test Variable    ${correcaoRelatorio}    AJUSTE EFETUADO COM SUCESSO
     Clear Element Text    ${campoCorrecaoRelatorio}
     Input Text    ${campoCorrecaoRelatorio}    ${correcaoRelatorio}
 
@@ -193,13 +207,23 @@ Em Validação de Relatório, em Turma, selecionar a turma utilizada
     Execute JavaScript   $('#${campoTurmaRelatorio}').trigger('change');
     Aguardar tela de carregamento
 
+Em Validação de Relatório, em Unidade Letiva, selecionar "${unidadeLetivaRelatorio}"
+    Execute JavaScript   $("#cphContent_ddlUnidadeLetiva").val($('option:contains("${unidadeLetivaRelatorio}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlUnidadeLetiva').trigger('change');
+    Aguardar tela de carregamento
+
+Em Validação de Relatório, em Professor, selecionar o professor utilizado
+    Execute JavaScript   $("#cphContent_ddlProfessor").val($('option:contains("${professor}")').val()).trigger('chosen:updated');
+    Execute JavaScript   $('#cphContent_ddlProfessor').trigger('change');
+    Aguardar tela de carregamento
+
 Em Validação de Relatório, clicar em Pesquisar
     ${botaoPesquisar}    Set Variable   cphContent_btnPesquisa
     Wait Until Element Is Visible    ${botaoPesquisar}
     Execute JavaScript  document.getElementById("${botaoPesquisar}").click();
 
 Em Gerir Lançamentos, em Etapa/Modalidade, selecionar "${modalidade}"
-    Set Suite Variable    ${modalidade}
+    Set Test Variable    ${modalidade}
     Run Keyword If    '${modalidade}' == 'Educação de Jovens e Adultos 1º Semestre'  Execute JavaScript   $('#cphContent_ddlTipoEnsino').val("5").trigger('chosen:updated');
     Run Keyword If    '${modalidade}' == 'Educação de Jovens e Adultos 2º Semestre'  Execute JavaScript   $('#cphContent_ddlTipoEnsino').val("6").trigger('chosen:updated');
     Execute JavaScript   $('#cphContent_ddlTipoEnsino').trigger('change');
@@ -231,4 +255,26 @@ Em Gerir Lançamentos, alterar as datas para "${data}"
 Em Gerir Lançamentos, clicar em OK no Modal
     Wait Until Element Is Visible    cphContent_MensagemPadrao_btnOk
     Execute JavaScript  document.getElementById("cphContent_MensagemPadrao_btnOk").click();
+    Aguardar tela de carregamento
+
+Pesquisar um aluno com o status RESPONDER e clicá-lo
+    FOR     ${index}    IN RANGE    0    50
+        ${busca}    Set Variable    cphContent_rptDigitaNf_lkbQuestionario_${index}
+        ${resultado}    Run Keyword And Return Status   Element Should Contain  ${busca}    RESPONDER
+        ${resultado2}    Run Keyword And Return Status   Element Should Not Contain  ${busca}    RELATÓRIO
+        ${resultado3}    Run Keyword And Return Status   Element Attribute Value Should Be    cphContent_rptDigitaNf_tdNChamada_${index}    style    width: 15px; background-color: rgb(10, 150, 13);
+        IF  ${resultado} and ${resultado2} and ${resultado3}
+            ${alunoAvaliacaoFrequencia}    Get Text    cphContent_rptDigitaNf_lblAlunoTd_${index}
+            Set Test Variable    ${busca}
+            ${localizacaoAlunoListaAvaliacao}    Set Variable    ${index}
+            Set Test Variable    ${localizacaoAlunoListaAvaliacao}
+            Set Test Variable    ${alunoAvaliacaoFrequencia}
+            Execute JavaScript  document.getElementById("${busca}").click();
+            Aguardar tela de carregamento
+            Exit For Loop
+        END
+    END
+
+Localizar o aluno pesquisado e clicar em RESPONDER
+    Execute JavaScript  document.getElementById("${busca}").click();
     Aguardar tela de carregamento

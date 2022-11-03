@@ -383,15 +383,15 @@ Cenário 08: Funcionalidade Avaliações e Frequência - Infantil
     Na consulta de avaliações, em Turma, selecionar "EII A"
     Clicar em Pesquisar
     No primeiro aluno, em questionário, clicar em "Responder"
+    Pesquisar um aluno com o status RESPONDER e clicá-lo
     Marcar "ATINGIU OS OBJETIVOS" nas questões
     Clicar em Salvar e Fechar
     No modal de alerta, clicar em Ok
     Clicar em Salvar
     No modal de Cadastro Efetuado com Sucesso, clicar em Ok
-    No primeiro aluno, em questionário, clicar em "Responder"
+    Localizar o aluno pesquisado e clicar em RESPONDER
     Verificar se as questões foram marcadas conforme foram salvas
 
-### INCIDENTE - OS 84969
 Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar, registrar notas
     ...                e validar os relatórios para a Etapa Fundamental
@@ -407,7 +407,7 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Na consulta de avaliações, em Professor, selecionar "PRISCILA DOMINGUES FERNANDES LOPES"
     Na consulta de avaliações, em Turma, selecionar "3B"
     Clicar em Pesquisar
-    No primeiro aluno, em questionário, clicar em "Responder"
+    Pesquisar um aluno com o status RESPONDER e clicá-lo
     Marcar "ATINGIU OS OBJETIVOS" nas questões
     Em Relatório, digitar um texto para envio
     Clicar em Enviar para Validação
@@ -417,8 +417,10 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
     Em Validação de Relatório, em Etapa/Modalidade, selecionar a etapa/modalidade utilizada
+    Em Validação de Relatório, em Unidade Letiva, selecionar "2º Semestre"
+    Em Validação de Relatório, em Turma, selecionar a turma utilizada
+    Em Validação de Relatório, em Professor, selecionar o professor utilizado
     Em Validação de Relatório, clicar em Pesquisar
-    Verificar se a Situação de Validação está como "AGUARDANDO VALIDAÇÃO"
     Clicar em VISUALIZAR EDUCANDOS
     Verificar se a Situação de Validação está como "AGUARDANDO VALIDAÇÃO"
     Clicar em VISUALIZAR RELATORIO
@@ -434,7 +436,7 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Na consulta de avaliações, em Turma, selecionar a turma utilizada
     Clicar em Pesquisar
     Verificar se aparece o status "RELATÓRIO AGUARDANDO AJUSTES"    
-    No primeiro aluno, em questionário, clicar em "Responder"
+    Localizar o aluno pesquisado e clicar em RESPONDER
     Verificar se as questões foram marcadas conforme foram salvas
     Verificar se a Justificativa de Devolução é exibida
     Clicar em Realizar Ajustes
@@ -446,7 +448,9 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     Entrar no módulo "Pedagógico"
     Entrar na funcionalidade "Validação de Relatório de Desenvolvimento de Educandos"
     Em Validação de Relatório, em Etapa/Modalidade, selecionar a etapa/modalidade utilizada
+    Em Validação de Relatório, em Unidade Letiva, selecionar "2º Semestre"
     Em Validação de Relatório, em Turma, selecionar a turma utilizada
+    Em Validação de Relatório, em Professor, selecionar o professor utilizado
     Em Validação de Relatório, clicar em Pesquisar
     Verificar se a Situação de Validação está como "VALIDADO COM AJUSTES"
     Clicar em VISUALIZAR EDUCANDOS
@@ -495,13 +499,13 @@ Cenário 10: Funcionalidade Avaliações e Frequência - EJA
     Na consulta de avaliações, em Professor, selecionar "DAIANE LINO SALVADOR"
     Na consulta de avaliações, em Turma, selecionar "CII B (1º Semestre)"
     Clicar em Pesquisar
-    No primeiro aluno, em questionário, clicar em "Responder"
+    Pesquisar um aluno com o status RESPONDER e clicá-lo
     Marcar "ATINGIU OS OBJETIVOS" nas questões
     Clicar em Salvar e Fechar
     No modal de alerta, clicar em Ok
     Clicar em Salvar
     No modal de Cadastro Efetuado com Sucesso, clicar em Ok
-    No primeiro aluno, em questionário, clicar em "Responder"
+    Localizar o aluno pesquisado e clicar em RESPONDER
     Verificar se as questões foram marcadas conforme foram salvas
 
 Cenário 11: Funcionalidade Controle Diário de Frequência - Infantil
@@ -519,9 +523,10 @@ Cenário 11: Funcionalidade Controle Diário de Frequência - Infantil
     No controle de frequência, em Professor, selecionar "ADRIANA CRISTINA CAMPOS SCALICI"
     No controle de frequência, em Turma, selecionar "EII A"
     Clicar em Pesquisar
-    Verificar se o botão Iniciar está visível
-    Iniciar as aulas nos 4 últimos dias da semana
-    Registrar faltas para os 4 primeiros alunos
+    Retirar as faltas marcadas, caso houver
+    Cancelar as aulas abertas, caso houver
+    Iniciar as aulas na semana
+    Registrar faltas para os 4 primeiros alunos frequentes
     Clicar em Pesquisar
     Verificar se o primeiro aluno possui 4 faltas e frequencia 0
     Verificar se o segundo aluno possui 3 faltas e frequencia 25
@@ -585,9 +590,10 @@ Cenário 12: Funcionalidade Controle Diário de Frequência - Fundamental
     No controle de frequência, em Professor, selecionar "TANIA MARA DA SILVA"
     No controle de frequência, em Turma, selecionar "5B"
     Clicar em Pesquisar
-    Verificar se o botão Iniciar está visível
-    Iniciar as aulas nos 4 últimos dias da semana
-    Registrar faltas para os 4 primeiros alunos
+    Retirar as faltas marcadas, caso houver
+    Cancelar as aulas abertas, caso houver
+    Iniciar as aulas na semana
+    Registrar faltas para os 4 primeiros alunos frequentes
     Clicar em Pesquisar
     Verificar se o primeiro aluno possui 4 faltas e frequencia 0
     Verificar se o segundo aluno possui 3 faltas e frequencia 25
@@ -656,7 +662,6 @@ Cenário 13: Funcionalidade Controle Diário de Frequência - EJA
     No controle de frequência, em Professor, selecionar "DAIANE LINO SALVADOR"
     No controle de frequência, em Turma, selecionar "CI A"
     Clicar em Pesquisar
-    Verificar se o botão Iniciar está visível
     Iniciar as aulas para os 4 últimos dias da semana
     No primeiro aluno, clicar em Diário de Bordo do Aluno
     Em Diário do Educando, em Tipo de Avaliação, selecionar "SAÚDE LEVE"
@@ -1056,7 +1061,7 @@ Cenário 23: Funcionalidade Prontuário da Turma - Infantil
     Em Prontuário da Turma, em Ano Letivo, selecionar "2022"
     Em Prontuário da Turma, em Turma, selecionar "EII B"
     Clicar em Pesquisar
-    Em Prontuário da Turma, em Mês de Reunião, selecionar "Junho"
+    Em Prontuário da Turma, em Mês de Reunião, selecionar um mês em aberto
     Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
     Em Prontuário da Turma, em Impressões do Conselho de Turma, inserir "TESTE DE IMPRESSÃO DO CONSELHO DE TURMA"
     Clicar em Salvar
@@ -3169,7 +3174,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "06/06/2016"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "20/06/2016"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3219,7 +3224,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "05/06/2016"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "18/06/2016"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3264,107 +3269,15 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
-
-Cenário 56: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundamental Inicial) - Secretaria
-    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
-    ...                dentro do GIER, para todas as etapas/modalidades.                
-    [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
     Entrar no Portal
-    No Portal, clicar em "Ensino Fundamental"
-    No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "02/04/2011"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "19/06/2016"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
-    No Portal, em Ano/Ciclo selecionar "5º Ano"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
-    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
-    No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
-    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
-    No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    No Portal, clicar nos campos de declarações
-    No Portal, clicar em Concluir Inscrição
-    No Portal, verificar se o comprovante é exibido em tela
-    No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
-    Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
-    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
-    Em Gestão de Pré-Matrícula, clicar em Pesquisar
-    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
-    Entrar no Portal
-    No Portal, clicar em "Ensino Fundamental"
-    No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
-    No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "01/04/2011"
-    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
-    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
-    No Portal, clicar em Pesquisar Escolas
-    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
-    No Portal, em Ano/Ciclo selecionar "2º Ano"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
-    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
-    No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
-    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
-    No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    No Portal, clicar nos campos de declarações
-    No Portal, clicar em Concluir Inscrição
-    No Portal, verificar se o comprovante é exibido em tela
-    No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
-    Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
-    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
-    Em Gestão de Pré-Matrícula, clicar em Pesquisar
-    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
-
-Cenário 57: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Inicial) - Secretaria
-    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
-    ...                dentro do GIER, para todas as etapas/modalidades.                
-    [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
-    Entrar no Portal
-    No Portal, clicar em "Educação de Jovens e Adultos"
-    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
-    No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
-    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
-    No Portal, clicar em Pesquisar Escolas
-    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
-    No Portal, em Ano/Ciclo selecionar "Ciclo II"
     No Portal, clicar em Selecionar Escolas
     No Portal, clicar em Próximo
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
@@ -3374,46 +3287,21 @@ Cenário 57: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Ini
     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    No Portal, clicar nos campos de declarações
-    No Portal, clicar em Concluir Inscrição
-    No Portal, verificar se o comprovante é exibido em tela
-    No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
-    Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-Semestre 1"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG CRISPINIANO SOARES"
-    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
-    Em Gestão de Pré-Matrícula, clicar em Pesquisar
-    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
-    Entrar no Portal
-    No Portal, clicar em "Educação de Jovens e Adultos"
-    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
-    No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
-    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
-    No Portal, clicar em Pesquisar Escolas
-    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
-    No Portal, em Ano/Ciclo selecionar "Ciclo II"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
-    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
-    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
-    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações
     No Portal, clicar em Concluir Inscrição
@@ -3425,11 +3313,219 @@ Cenário 57: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Ini
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão de Educandos"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-Semestre 1"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG CRISPINIANO SOARES"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
+    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
-    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
+    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em penúltimo lugar na fila de espera
+
+########### ESTÁ COM INCIDENTE
+# Cenário 56: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundamental Inicial) - Secretaria
+#     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
+#     ...                dentro do GIER, para todas as etapas/modalidades.                
+#     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
+#     Entrar no Portal
+#     No Portal, clicar em "Ensino Fundamental"
+#     No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "13/04/2011"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+#     No Portal, em Ano/Ciclo selecionar "5º Ano"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
+#     No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
+#     No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "12/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+#     No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+#     No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+#     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
+#     No Portal, gravar o número de protocolo gerado
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão de Educandos"
+#     Entrar na funcionalidade "Gestão de Pré-matrícula"
+#     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
+#     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+#     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+#     Em Gestão de Pré-Matrícula, clicar em Pesquisar
+#     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
+#     Entrar no Portal
+#     No Portal, clicar em "Ensino Fundamental"
+#     No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "10/04/2011"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+#     No Portal, em Ano/Ciclo selecionar "2º Ano"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
+#     No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
+#     No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+#     No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+#     No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+#     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
+#     No Portal, gravar o número de protocolo gerado
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão de Educandos"
+#     Entrar na funcionalidade "Gestão de Pré-matrícula"
+#     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
+#     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+#     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+#     Em Gestão de Pré-Matrícula, clicar em Pesquisar
+#     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
+#     Entrar no Portal
+#     No Portal, clicar em "Ensino Fundamental"
+#     No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "11/04/2011"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+#     No Portal, em Ano/Ciclo selecionar "2º Ano"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
+#     No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
+#     No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+#     No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+#     No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+#     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
+#     No Portal, gravar o número de protocolo gerado
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão de Educandos"
+#     Entrar na funcionalidade "Gestão de Pré-matrícula"
+#     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
+#     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+#     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+#     Em Gestão de Pré-Matrícula, clicar em Pesquisar
+#     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em penúltimo lugar na fila de espera
+
+########### ESTÁ COM INCIDENTE
+# Cenário 57: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Inicial) - Secretaria
+#     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
+#     ...                dentro do GIER, para todas as etapas/modalidades.                
+#     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
+#     Entrar no Portal
+#     No Portal, clicar em "Educação de Jovens e Adultos"
+#     No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+#     No Portal, em Ano/Ciclo selecionar "Ciclo II"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+#     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+#     No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
+#     No Portal, gravar o número de protocolo gerado
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão de Educandos"
+#     Entrar na funcionalidade "Gestão de Pré-matrícula"
+#     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-Semestre 1"
+#     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG CRISPINIANO SOARES"
+#     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+#     Em Gestão de Pré-Matrícula, clicar em Pesquisar
+#     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
+#     Entrar no Portal
+#     No Portal, clicar em "Educação de Jovens e Adultos"
+#     No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+#     No Portal, em Ano/Ciclo selecionar "Ciclo II"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+#     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+#     No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
+#     No Portal, gravar o número de protocolo gerado
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão de Educandos"
+#     Entrar na funcionalidade "Gestão de Pré-matrícula"
+#     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-Semestre 1"
+#     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG CRISPINIANO SOARES"
+#     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+#     Em Gestão de Pré-Matrícula, clicar em Pesquisar
+#     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
 
 Cenário 58: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infantil Contínuo) - Secretaria
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
@@ -3439,7 +3535,7 @@ Cenário 58: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "08/06/2016"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "24/06/2018"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3479,17 +3575,16 @@ Cenário 58: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão de Educandos"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Creche-Maternal"
     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
     Entrar no Portal
-    Entrar no Portal
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/06/2016"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "22/06/2018"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3528,7 +3623,55 @@ Cenário 58: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão de Educandos"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Creche-Maternal"
+    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
+    Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "23/06/2018"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Creche-Maternal"
     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
@@ -3542,12 +3685,12 @@ Cenário 59: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, clicar em "Ensino Fundamental"
     No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "06/04/2011"
-    No Portal, em Escolha da Escola, em CEP, inserir "07123140"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
-    No Portal, em Ano/Ciclo selecionar "5º Ano"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
     No Portal, clicar em Solicitar Vaga
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
@@ -3557,25 +3700,16 @@ Cenário 59: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
-    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
-    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
-    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
-    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
-    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
-    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
-    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
-    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
-    No Portal, gravar o número de protocolo gerado
+    No Portal, gravar o número de protocolo gerado    
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
@@ -3583,7 +3717,7 @@ Cenário 59: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão de Educandos"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-4º Ano"
     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
@@ -3592,12 +3726,12 @@ Cenário 59: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, clicar em "Ensino Fundamental"
     No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "05/04/2011"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
-    No Portal, em Ano/Ciclo selecionar "5º Ano"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
     No Portal, clicar em Solicitar Vaga
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
@@ -3607,36 +3741,68 @@ Cenário 59: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
-    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
-    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
-    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
-    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
-    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
-    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
-    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
-    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
-    No Portal, gravar o número de protocolo gerado
+    No Portal, gravar o número de protocolo gerado    
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão de Educandos"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-4º Ano"
     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
+    Entrar no Portal
+    No Portal, clicar em "Ensino Fundamental"
+    No Portal, selecionar o processo para a etapa "FUNDAMENTAL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, em Ano/Ciclo selecionar "4º Ano"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado    
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-4º Ano"
+    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
+
 
 Cenário 60: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Contínuo) - Secretaria
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
@@ -3646,7 +3812,7 @@ Cenário 60: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     No Portal, clicar em "Educação de Jovens e Adultos"
     No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "01/03/1996"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Escolha da Escola, em CEP, inserir "07123140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3658,7 +3824,7 @@ Cenário 60: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
     No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "01/03/1996"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
@@ -3683,7 +3849,7 @@ Cenário 60: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     No Portal, clicar em "Educação de Jovens e Adultos"
     No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "09/03/1996"
     No Portal, em Escolha da Escola, em CEP, inserir "07123140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3695,7 +3861,43 @@ Cenário 60: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
     No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "09/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão de Educandos"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-Semestre 1"
+    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG CRISPINIANO SOARES"
+    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
+    Entrar no Portal
+    No Portal, clicar em "Educação de Jovens e Adultos"
+    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "08/03/1996"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, em Ano/Ciclo selecionar "Ciclo II"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "08/03/1996"
     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
@@ -3716,7 +3918,7 @@ Cenário 60: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
 
-Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infantil Inicial) - Secretaria
+Cenário 61: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infantil Inicial) - Escola
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
     ...                dentro do GIER, para todas as etapas/modalidades.                
     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
@@ -3724,7 +3926,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "06/06/2016"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "06/07/2016"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3761,12 +3963,11 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Entrar com as credenciais "02867439817" e "12345678"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
+    Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
@@ -3774,7 +3975,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "05/06/2016"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "04/07/2016"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3810,116 +4011,23 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, gravar o número de protocolo gerado
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
+    Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
-
-Cenário 61: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundamental Inicial) - Secretaria
-    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
-    ...                dentro do GIER, para todas as etapas/modalidades.                
-    [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
     Entrar no Portal
-    No Portal, clicar em "Ensino Fundamental"
-    No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "02/04/2011"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "05/07/2016"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
-    No Portal, em Ano/Ciclo selecionar "5º Ano"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
-    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
-    No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
-    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
-    No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    No Portal, clicar nos campos de declarações
-    No Portal, clicar em Concluir Inscrição
-    No Portal, verificar se o comprovante é exibido em tela
-    No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
-    Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
-    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
-    Em Gestão de Pré-Matrícula, clicar em Pesquisar
-    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
-    Entrar no Portal
-    No Portal, clicar em "Ensino Fundamental"
-    No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
-    No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "01/04/2011"
-    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
-    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
-    No Portal, clicar em Pesquisar Escolas
-    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
-    No Portal, em Ano/Ciclo selecionar "2º Ano"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
-    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
-    No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
-    No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
-    No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
-    No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    No Portal, clicar nos campos de declarações
-    No Portal, clicar em Concluir Inscrição
-    No Portal, verificar se o comprovante é exibido em tela
-    No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
-    Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
-    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
-    Em Gestão de Pré-Matrícula, clicar em Pesquisar
-    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
-
-Cenário 62: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Inicial) - Secretaria
-    [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
-    ...                dentro do GIER, para todas as etapas/modalidades.                
-    [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
-    Entrar no Portal
-    No Portal, clicar em "Educação de Jovens e Adultos"
-    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
-    No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
-    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
-    No Portal, clicar em Pesquisar Escolas
-    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
-    No Portal, em Ano/Ciclo selecionar "Ciclo II"
     No Portal, clicar em Selecionar Escolas
     No Portal, clicar em Próximo
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
@@ -3929,46 +4037,21 @@ Cenário 62: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Ini
     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    No Portal, clicar nos campos de declarações
-    No Portal, clicar em Concluir Inscrição
-    No Portal, verificar se o comprovante é exibido em tela
-    No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
-    Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
-    Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
-    Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-Semestre 1"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG CRISPINIANO SOARES"
-    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
-    Em Gestão de Pré-Matrícula, clicar em Pesquisar
-    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
-    Entrar no Portal
-    No Portal, clicar em "Educação de Jovens e Adultos"
-    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
-    No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
-    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
-    No Portal, clicar em Pesquisar Escolas
-    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
-    No Portal, em Ano/Ciclo selecionar "Ciclo II"
-    No Portal, clicar em Selecionar Escolas
-    No Portal, clicar em Próximo
-    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
-    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
-    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
-    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações
     No Portal, clicar em Concluir Inscrição
@@ -3976,17 +4059,184 @@ Cenário 62: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Ini
     No Portal, gravar o número de protocolo gerado
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
     Verificar se aparece o texto "Estrutura"
-    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
+    Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-Semestre 1"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG CRISPINIANO SOARES"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
-    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
+    Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em penúltimo lugar na fila de espera
 
-Cenário 63: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infantil Contínuo) - Secretaria
+# ##### ESTÁ COM INCIDENTE
+# Cenário 62: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundamental Inicial) - Escola
+#     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
+#     ...                dentro do GIER, para todas as etapas/modalidades.                
+#     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
+#     Entrar no Portal
+#     No Portal, clicar em "Ensino Fundamental"
+#     No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "02/04/2011"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+#     No Portal, em Ano/Ciclo selecionar "5º Ano"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
+#     No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
+#     No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+#     No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+#     No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+#     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
+#     No Portal, gravar o número de protocolo gerado
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão de Educandos"
+#     Entrar na funcionalidade "Gestão de Pré-matrícula"
+#     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
+#     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+#     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+#     Em Gestão de Pré-Matrícula, clicar em Pesquisar
+#     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
+#     Entrar no Portal
+#     No Portal, clicar em "Ensino Fundamental"
+#     No Portal, selecionar o processo para a etapa "FUNDAMENTAL INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "01/04/2011"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+#     No Portal, em Ano/Ciclo selecionar "2º Ano"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Estrangeiro"
+#     No Portal, em Cadastro do Responsável, em País de Nascimento, selecionar "PORTUGAL"
+#     No Portal, em Cadastro do Responsável, em RNE, inserir um RNE válido
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Estrangeiro"
+#     No Portal, em Cadastro do Aluno, em País de Nascimento, selecionar "PORTUGAL"
+#     No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
+#     No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
+#     No Portal, gravar o número de protocolo gerado
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão de Educandos"
+#     Entrar na funcionalidade "Gestão de Pré-matrícula"
+#     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
+#     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
+#     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+#     Em Gestão de Pré-Matrícula, clicar em Pesquisar
+#     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
+
+# ##### ESTÁ COM INCIDENTE
+# Cenário 63: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Inicial) - Escola
+#     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
+#     ...                dentro do GIER, para todas as etapas/modalidades.                
+#     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
+#     Entrar no Portal
+#     No Portal, clicar em "Educação de Jovens e Adultos"
+#     No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+#     No Portal, em Ano/Ciclo selecionar "Ciclo II"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+#     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+#     No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
+#     No Portal, gravar o número de protocolo gerado
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Entrar com as credenciais "02867439817" e "12345678"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão de Educandos"
+#     Entrar na funcionalidade "Gestão de Pré-matrícula"
+#     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-Semestre 1"
+#     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG CRISPINIANO SOARES"
+#     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+#     Em Gestão de Pré-Matrícula, clicar em Pesquisar
+#     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
+#     Entrar no Portal
+#     No Portal, clicar em "Educação de Jovens e Adultos"
+#     No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE INICIAL"
+#     No Portal, clicar em Iniciar inscrição
+#     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+#     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+#     No Portal, clicar em Pesquisar Escolas
+#     No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+#     No Portal, em Ano/Ciclo selecionar "Ciclo II"
+#     No Portal, clicar em Selecionar Escolas
+#     No Portal, clicar em Próximo
+#     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+#     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+#     No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+#     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+#     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+#     No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+#     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
+#     No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+#     No Portal, em Contato, em Telefone 1, inserir um telefone válido
+#     No Portal, clicar nos campos de declarações
+#     No Portal, clicar em Concluir Inscrição
+#     No Portal, verificar se o comprovante é exibido em tela
+#     No Portal, gravar o número de protocolo gerado
+#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Verificar se aparece o texto "Estrutura"
+#     Pesquisar "VOLPI" e selecionar o primeiro resultado
+#     Verificar se aparece o texto "Operação"
+#     Entrar no módulo "Gestão de Educandos"
+#     Entrar na funcionalidade "Gestão de Pré-matrícula"
+#     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-Semestre 1"
+#     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG CRISPINIANO SOARES"
+#     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+#     Em Gestão de Pré-Matrícula, clicar em Pesquisar
+#     Em Gestão de Pré-Matrícula, em 'CADASTRO INICIAL', verificar se o aluno entrou em último lugar na fila de espera
+
+Cenário 64: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infantil Contínuo) - Secretaria
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
     ...                dentro do GIER, para todas as etapas/modalidades.                
     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
@@ -4032,14 +4282,59 @@ Cenário 63: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
+    Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
     Entrar no Portal
+    No Portal, clicar em "Educação Infantil"
+    No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "06/06/2016"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG ALFREDO VOLPI"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "01/01/2022"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "VOLPI" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão Escolar"
+    Entrar na funcionalidade "Gestão de Pré-matrícula"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
+    Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
+    Em Gestão de Pré-Matrícula, clicar em Pesquisar
+    Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
     Entrar no Portal
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
@@ -4081,15 +4376,15 @@ Cenário 63: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
+    Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Pré-Escola-Estágio II"
-    Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
 
-Cenário 64: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundamental Contínuo) - Escola
+
+Cenário 65: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundamental Contínuo) - Escola
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
     ...                dentro do GIER, para todas as etapas/modalidades.                
     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
@@ -4240,7 +4535,7 @@ Cenário 64: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em penúltimo lugar na fila de espera
 
-Cenário 65: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Contínuo) - Escola
+Cenário 66: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Contínuo) - Escola
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
     ...                dentro do GIER, para todas as etapas/modalidades.                
     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
@@ -4316,7 +4611,7 @@ Cenário 65: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, em 'CADASTRO CONTÍNUO', verificar se o aluno entrou em último lugar na fila de espera
 
-Cenário 66: Funcionalidade Gestão de Pré-Matrícula: Ações - Escola
+Cenário 67: Funcionalidade Gestão de Pré-Matrícula: Ações - Escola
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
     ...                dentro do GIER, para todas as etapas/modalidades.                
     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
@@ -4360,7 +4655,7 @@ Cenário 66: Funcionalidade Gestão de Pré-Matrícula: Ações - Escola
     Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, em Observações, inserir "OBSERVAÇÃO CANCELAMENTO AUTOMAÇÃO"
     Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, clicar em Salvar
 
-Cenário 67: Funcionalidade Gestão de Pré-Matrícula: Ações - Secretaria
+Cenário 68: Funcionalidade Gestão de Pré-Matrícula: Ações - Secretaria
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
     ...                dentro do GIER, para todas as etapas/modalidades.                
     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
@@ -4401,7 +4696,7 @@ Cenário 67: Funcionalidade Gestão de Pré-Matrícula: Ações - Secretaria
     Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, em Observações, inserir "OBSERVAÇÃO CANCELAMENTO AUTOMAÇÃO"
     Em Gestão de Pré-Matrícula, em Justificativa de Cancelamento, clicar em Salvar
 
-Cenário 68: Funcionalidade Parâmetros do Processo de Transporte
+Cenário 69: Funcionalidade Parâmetros do Processo de Transporte
     [Documentation]    Esse teste efetua o cadastro, configuração e edição
     ...                dos Parâmetros do Processo de Transporte                 
     [Tags]             Parâmetros do Processo de Transporte | Fluxo Positivo
@@ -4461,7 +4756,7 @@ Cenário 68: Funcionalidade Parâmetros do Processo de Transporte
     Em Parâmetros de Transporte, clicar em Pesquisar
     Em Parâmetros de Transporte, verificar se o cadastro foi excluído
 
-Cenário 69: Funcionalidade Tipos de Rotas
+Cenário 70: Funcionalidade Tipos de Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Rota                
     [Tags]             Rotas | Fluxo Positivo
@@ -4499,7 +4794,7 @@ Cenário 69: Funcionalidade Tipos de Rotas
     Em Tipos de Rotas, clicar em Pesquisar
     Em Tipos de Rotas, verificar se aparece o resultado "TIPO DE ROTA AUTOMACAO QA"
 
-Cenário 70: Funcionalidade Rotas
+Cenário 71: Funcionalidade Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Rota                
     [Tags]             Rotas | Fluxo Positivo
@@ -4564,7 +4859,7 @@ Cenário 70: Funcionalidade Rotas
     Em Rotas, clicar em Pesquisar
     Em Rotas, verificar se a rota foi cadastrada
 
-Cenário 71: Funcionalidade Tipos de Frotas
+Cenário 72: Funcionalidade Tipos de Frotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem                
     [Tags]             Viagens | Fluxo Positivo
@@ -4601,7 +4896,7 @@ Cenário 71: Funcionalidade Tipos de Frotas
     Em Tipos de Frotas, clicar em OK no modal
     Em Tipos de Frotas, em Descrição, inserir o nome da frota cadastrado
 
-Cenário 72: Funcionalidade Frotas
+Cenário 73: Funcionalidade Frotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem
     [Tags]             Viagens | Fluxo Positivo
@@ -4643,7 +4938,7 @@ Cenário 72: Funcionalidade Frotas
     Em Frotas, clicar em Pesquisar
     Em Frotas, verificar se a frota foi cadastrada
 
-Cenário 73: Funcionalidade Credenciamento de Condutores
+Cenário 74: Funcionalidade Credenciamento de Condutores
     [Documentation]    Esse teste efetua o cadastro e edição do Credenciamento de Condutores                               
     [Tags]             Credenciamento de Condutores | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -4737,7 +5032,7 @@ Cenário 73: Funcionalidade Credenciamento de Condutores
     Em Credenciamento de Condutores, clicar em Ok no Modal
     Em Credenciamento de Condutores, verificar se o status está como "CREDENCIADO"
 
-Cenário 74: Funcionalidade Viagens
+Cenário 75: Funcionalidade Viagens
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem                
     [Tags]             Viagens | Fluxo Positivo
@@ -4793,7 +5088,7 @@ Cenário 74: Funcionalidade Viagens
     Em Cadastrar Viagens, clicar em Pesquisar
     Em Cadastrar Viagens, verificar se a viagem foi cadastrada
     
-Cenário 75: Funcionalidade Solicitação de Transporte - Infantil
+Cenário 76: Funcionalidade Solicitação de Transporte - Infantil
     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
     ...                pela Escola, para um educando da Etapa Infantil        
     [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
@@ -4845,7 +5140,7 @@ Cenário 75: Funcionalidade Solicitação de Transporte - Infantil
     Em Solicitação de Transporte, clicar em Pesquisar
     Em Solicitação de Transporte, verificar se a solicitação foi deferida
 
-Cenário 76: Funcionalidade Solicitação de Transporte - Fundamental
+Cenário 77: Funcionalidade Solicitação de Transporte - Fundamental
     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
     ...                pela Escola, para um educando da Etapa Infantil        
     [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
@@ -4896,7 +5191,7 @@ Cenário 76: Funcionalidade Solicitação de Transporte - Fundamental
     Em Solicitação de Transporte, clicar em Pesquisar
     Em Solicitação de Transporte, verificar se a solicitação foi deferida
 
-Cenário 77: Funcionalidade Gestão de Solicitação de Transporte - Infantil
+Cenário 78: Funcionalidade Gestão de Solicitação de Transporte - Infantil
     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
     ...                pela Escola, para um educando da Etapa Infantil        
     [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
@@ -4934,7 +5229,7 @@ Cenário 77: Funcionalidade Gestão de Solicitação de Transporte - Infantil
     Em Solicitação de Transporte, clicar em Pesquisar
     Em Solicitação de Transporte, verificar se a solicitação foi deferida
 
-Cenário 78: Funcionalidade Gestão de Solicitação de Transporte - Fundamental
+Cenário 79: Funcionalidade Gestão de Solicitação de Transporte - Fundamental
     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
     ...                pela Escola, para um educando da Etapa Fundamental        
     [Tags]             Solicitação de Transporte - Fundamental | Fluxo Positivo
@@ -4972,7 +5267,7 @@ Cenário 78: Funcionalidade Gestão de Solicitação de Transporte - Fundamental
     Em Solicitação de Transporte, clicar em Pesquisar
     Em Solicitação de Transporte, verificar se a solicitação foi deferida
 
-Cenário 79: Funcionalidade Aprendizagem
+Cenário 80: Funcionalidade Aprendizagem
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
     [Tags]             Aprendizagem | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5043,7 +5338,7 @@ Cenário 79: Funcionalidade Aprendizagem
     Em Consulta de Descrição de Aprendizagem, clicar em Pesquisar
     Em Consulta de Descrição de Aprendizagem, verificar se aparece o texto "NENHUM REGISTRO FOI ENCONTRADO"
 
-Cenário 80: Funcionalidade Grupos de Pergunta
+Cenário 81: Funcionalidade Grupos de Pergunta
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
     [Tags]             Grupos de Pergunta | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5082,7 +5377,7 @@ Cenário 80: Funcionalidade Grupos de Pergunta
     Em Grupos de Pergunta, clicar em Pesquisar
     Em Grupos de Pergunta, verificar se o cadastro foi efetuado
 
-Cenário 81: Funcionalidade Banco de Questões - Texto
+Cenário 82: Funcionalidade Banco de Questões - Texto
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
     [Tags]             Banco de Questões | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5263,7 +5558,7 @@ Cenário 81: Funcionalidade Banco de Questões - Texto
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
     
-Cenário 82: Funcionalidade Banco de Questões - Imagem
+Cenário 83: Funcionalidade Banco de Questões - Imagem
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
     [Tags]             Banco de Questões | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5322,11 +5617,7 @@ Cenário 82: Funcionalidade Banco de Questões - Imagem
     Em Banco de Questões, clicar em Salvar
     Em Banco de Questões, clicar em OK no modal
 
-<<<<<<< HEAD
-Cenário 83: Funcionalidade Configurar Avaliação - Online
-=======
-Cenário 83: Funcionalidade Configurar Avaliação
->>>>>>> c12565a6170609a64b5531de2ceedda45cd89278
+Cenário 84: Funcionalidade Configurar Avaliação - Online
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5418,7 +5709,7 @@ Cenário 83: Funcionalidade Configurar Avaliação
     Em Configurar Avaliação, clicar em Ações e Imprimir
     Em Configurar Avaliação, verificar se a prova foi gerada corretamente
 
-Cenário 84: Funcionalidade Configurar Avaliação - Offline
+Cenário 85: Funcionalidade Configurar Avaliação - Offline
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5491,7 +5782,7 @@ Cenário 84: Funcionalidade Configurar Avaliação - Offline
     Em Configurar Avaliação, clicar em Ações e Imprimir
     Em Configurar Avaliação, verificar se a prova foi gerada corretamente
 
-Cenário 85: Funcionalidade Configurar Avaliação - Edição e Exclusão
+Cenário 86: Funcionalidade Configurar Avaliação - Edição e Exclusão
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5538,7 +5829,7 @@ Cenário 85: Funcionalidade Configurar Avaliação - Edição e Exclusão
     Em Configurar Avaliação, clicar em Sim no modal
     Em Configurar Avaliação, clicar em OK no modal
 
-Cenário 86: Funcionalidade Agendamento Avaliação - Online
+Cenário 87: Funcionalidade Agendamento Avaliação - Online
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
     [Tags]             Agendamento Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5579,7 +5870,7 @@ Cenário 86: Funcionalidade Agendamento Avaliação - Online
     Em Agendamento Avaliação, clicar em Pesquisar
     Em Agendamento Avaliação, verificar se o Agendamento "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO" foi cadastrado
 
-Cenário 87: Funcionalidade Agendamento Avaliação - Offline
+Cenário 88: Funcionalidade Agendamento Avaliação - Offline
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
     [Tags]             Agendamento Avaliação | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5620,7 +5911,7 @@ Cenário 87: Funcionalidade Agendamento Avaliação - Offline
     Em Agendamento Avaliação, clicar em Pesquisar
     Em Agendamento Avaliação, verificar se o Agendamento "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO" foi cadastrado
 
-Cenário 86: Prova Online
+Cenário 89: Prova Online
     [Documentation]    Esse teste efetua a prova online para um educando da Etapa - Fundamental     
     [Tags]             Prova Online - Fundamental | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5705,7 +5996,7 @@ Cenário 86: Prova Online
     Na Prova, clicar em Sair
     Na Prova, verificar o campo da prova foi desativado
 
-Cenário 87: Lançamento Individualizado
+Cenário 90: Lançamento Individualizado
     [Documentation]    Esse teste consulta e finaliza um Lançamento Individualizado     
     [Tags]             Lançamento Individualizado | Fluxo Positivo
     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
@@ -5768,7 +6059,7 @@ Cenário 87: Lançamento Individualizado
     Em Lançamento Individualizado, clicar em Sim no modal
     Em Lançamento Individualizado, verificar se o totalizador abriu sem erros
 
-Cenário 51: Avaliações Educacionais Realizadas
+Cenário 91: Avaliações Educacionais Realizadas
     [Documentation]    Esse teste efetua a consulta de uma Avaliação Educacional Realizada,
     ...                validando os relatórios para uma escola
     [Tags]             Avaliações Educacionais Realizadas | Fluxo Positivo

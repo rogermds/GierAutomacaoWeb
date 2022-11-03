@@ -43,9 +43,11 @@ No Portal, verificar se o texto exibido é igual ao cadastrado em Ensino Fundame
     Wait Until Page Contains    ${textoInfoImportanteFundamental}
 
 No Portal, fechar o modal de informações importantes
-    Wait Until Page Contains Element    //a[contains(@rel,'modal:close')]
-    Click Element    //a[contains(@rel,'modal:close')]
-    Aguardar carregamento Portal
+    ${validacao2}    Run Keyword And Return Status     Wait Until Page Contains Element    //a[contains(@rel,'modal:close')]
+    IF    ${validacao2}
+        Click Element    //a[contains(@rel,'modal:close')]
+        Aguardar carregamento Portal
+    END
 
 No Portal, em Consultar Solicitação, selecionar a nacionalidade "Brasileiro"
     Click Element    BR
@@ -86,6 +88,7 @@ No Portal, em Escolha da Escola, em Data de Nascimento, inserir "${dataNasciment
     Sleep    1
     Set Suite Variable    ${dataNascimento}
     Wait Until Element Is Visible    busca-nascimento
+    Clear Element Text    busca-nascimento
     Input Text    busca-nascimento    ${dataNascimento}
 
 No Portal, em Escolha da Escola, em Data de Nascimento, inserir a data de nascimento cadastrada
@@ -285,8 +288,9 @@ No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão 
     Press Keys    txtMatriculaCertidao    TAB
     Sleep    1
     Aguardar carregamento Portal
+
     ${validacao}    Run Keyword And Return Status    Wait Until Element Is Visible   (//div[contains(.,'Número de Certidão de Nascimento Inválido. Verifique o número cadastrado.')])[3]
-    
+
     FOR    ${index}    IN RANGE    10
         IF    ${validacao}
             No Portal, fechar o modal de informações importantes
