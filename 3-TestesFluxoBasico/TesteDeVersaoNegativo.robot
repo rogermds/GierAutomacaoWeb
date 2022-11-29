@@ -47,23 +47,23 @@ Cenário 01 - Acesso ao Sistema – Tela de Login Cenário A
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura
     ...    Com o usuário e senha especificados
     [Tags]    Seleção de Estrutura | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"	
-    Entrar com as credenciais "02867439817" e "100200"	
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"	
+    Entrar com as credenciais "gier@gieronline.com.br" e "100200"	
     Verificar se o sistema exibe a mensagem: Login e/ou senha inválido(s)
 
 Cenário 02 - Acesso ao Sistema – Tela de Login B 	
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura	
     ...    Com o usuário e senha especificados	
     [Tags]    Seleção de Estrutura | Fluxo Negativo	
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"	
-    Entrar com as credenciais "gieronline.com.br" e "123456789"		
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"	
+    Entrar com as credenciais "gieronline.com.br" e "1234567899"		
     Verificar se o sistema exibe a mensagem: Login e/ou senha inválido(s)
 
 Cenário 03 - Acesso ao Sistema – Tela de Login C 	
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura	
     ...    Com o usuário e senha especificados	
     [Tags]    Seleção de Estrutura | Fluxo Negativo	
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"	
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"	
     Clicar em 'Esqueci minha Senha'    
     Clicar no Campo 'EMAIL' e Preencher o Valor "rafaela.domingos@tecnogroup.com.br"
     Verificar se o sistema exibe a mensagem: Informe um CPF válido! 	
@@ -72,7 +72,7 @@ Cenário 04 - Acesso ao Sistema – Tela de Login D
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura	
     ...    Com o usuário e senha especificados	
     [Tags]    Seleção de Estrutura | Fluxo Negativo	
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"	
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"	
     Clicar em 'Esqueci minha Senha' 	
     Clicar no Campo 'CPF' e Preencher o Valor "41316137864"	
     Verificar se o sistema exibe a mensagem: Informe um email válido! 
@@ -81,16 +81,16 @@ Cenário 05 - Acesso ao Sistema – Seleção de Estrutura
     [Documentation]    Esse teste verifica se é possível selecionar uma Estrutura	
     ...    Com o usuário e senha especificados	
     [Tags]    Seleção de Estrutura | Fluxo Negativo	
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"	
-    Entrar com as credenciais "02867439817" e "12345678"	
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"	
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"	
     Informar a Estrutura MMMMMM
     Verificar se o sistema exibe a mensagem: Não há registros com o argumento pesquisado.
 
 Cenário 06 - Cadastro de Pessoa - E-mail inválido
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -114,8 +114,8 @@ Cenário 06 - Cadastro de Pessoa - E-mail inválido
 Cenário 07 - Cadastro de Pessoa - Data de Nascimento sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -138,8 +138,8 @@ Cenário 07 - Cadastro de Pessoa - Data de Nascimento sem preechimento
 Cenário 08 - Cadastro de Pessoa - Nome sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -162,8 +162,8 @@ Cenário 08 - Cadastro de Pessoa - Nome sem preechimento
 Cenário 09 - Cadastro de Pessoa - Sexo sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -186,8 +186,8 @@ Cenário 09 - Cadastro de Pessoa - Sexo sem preechimento
 Cenário 10 - Cadastro de Pessoa - Nacionalidade sem preechimento
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -216,8 +216,8 @@ Cenário 10 - Cadastro de Pessoa - Nacionalidade sem preechimento
 Cenário 11 - Cadastro de Pessoa - Endereço não informado
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -239,8 +239,8 @@ Cenário 11 - Cadastro de Pessoa - Endereço não informado
 Cenário 12 - Cadastro de Pessoa - Cep inválido
     [Documentation]    Esse teste verifica se é possível Cadastrar uma Pessoa
     [Tags]    Cadastrar uma Pessoa | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado        
     Entrar no módulo "Gestão Escolar"
@@ -261,8 +261,8 @@ Cenário 12 - Cadastro de Pessoa - Cep inválido
 Cenário 13 - Acesso ao Sistema – Pessoa/ Consulta sem informar Nome
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Gestão Escolar"
@@ -273,8 +273,8 @@ Cenário 13 - Acesso ao Sistema – Pessoa/ Consulta sem informar Nome
 Cenário 14 - Acesso ao Sistema – Pessoa/ Consulta inexistente por nome
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Gestão Escolar"
@@ -286,8 +286,8 @@ Cenário 14 - Acesso ao Sistema – Pessoa/ Consulta inexistente por nome
 Cenário 15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Gestão Escolar"
@@ -300,8 +300,8 @@ Cenário 15 - Acesso ao Sistema – Pessoa/ Consulta inexistente por E-mail
 Cenário 16 - Acesso ao Sistema – Pessoa/ Consulta por E-mail campo vazio
     [Documentation]    Esse teste verifica se é possível Consultar uma Pessoa
     [Tags]             Pessoa/ Consulta | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Gestão Escolar"
@@ -314,8 +314,8 @@ Cenário 17 - Funcionalidade Cadastro de Turma – Regular
     [Documentation]    Esse teste verifica se é possível efetuar o
     ...                cadastro de uma turma Regular
     [Tags]             Cadastro de Turma | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -351,8 +351,8 @@ Cenário 18 - Funcionalidade Cadastro de Turma – Multisseriada
     [Documentation]    Esse teste verifica se é possível efetuar o
     ...                cadastro de uma turma Multisseriada
     [Tags]             Cadastro de Turma | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -382,8 +382,8 @@ Cenário 19 - Funcionalidade Consulta de Turma
     [Documentation]    Esse teste verifica se é possível efetuar a
     ...                Consulta de uma turma 
     [Tags]             Consulta de Turma | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -397,8 +397,8 @@ Cenário 20 - Funcionalidade Controle Diário de Frequência
     [Documentation]    Esse teste verifica se é possível efetuar o acesso 
     ...                ao Diário de Frequência
     [Tags]             Controle de Frequência | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -430,8 +430,8 @@ Cenário 21 - Funcionalidade Ata de Conselho Final - Turma
     [Documentation]    Esse teste verifica se é possível efetuar o acesso 
     ...                a Ata de Conselho
     [Tags]             Controle de Frequência | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -449,8 +449,8 @@ Cenário 22 - Funcionalidade Histórico Escolar
     [Documentation]    Esse teste verifica se é possível efetuar o acesso 
     ...                ao Histórico Escolar
     [Tags]             Histórico Escolar | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -485,8 +485,8 @@ Cenário 23 - Funcionalidade Boletim Escolar
     [Documentation]    Esse teste verifica se é possível efetuar o acesso 
     ...                ao Boletim Escolar
     [Tags]             Boletim Escolar | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Gestão"
@@ -517,8 +517,8 @@ Cenário 24 - Funcionalidade Prontuário do Educando
     [Documentation]    Esse teste verifica se é possível efetuar o acesso 
     ...                ao Prontuário do Educando
     [Tags]             Prontuário do Educando | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
@@ -539,8 +539,8 @@ Cenário 25 - Funcionalidade Prontuário da Turma
     [Documentation]    Esse teste verifica se é possível efetuar o acesso 
     ...                ao Prontuário da Turma
     [Tags]             Prontuário da Turma| Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
@@ -562,8 +562,8 @@ Cenário 26: Funcionalidade Avaliações e Frequência
     [Documentation]    Esse teste verifica se é possível consultar e
     ...                registrar um diário do Educando em Avaliações
     [Tags]             Avaliações e Frequência Fundamental | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -588,8 +588,8 @@ Cenário 27: Funcionalidade Justificativas da Pré-Matricula
     [Documentation]    Esse teste verifica se é possível cadastrar uma 
     ...                justificativa
     [Tags]             Justificativas da Pré-Matricula | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -628,8 +628,8 @@ Cenário 28: Funcionalidade Layout do Portal de Inscrições e Transferências
     [Documentation]    Esse teste verifica se é possível cadastrar um 
     ...                 Layout do Portal de Inscrições e Transferências
     [Tags]             Layout do Portal de Inscrições e Transferências | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -673,7 +673,7 @@ Cenário 29: Portal de Inscrição - Consulta de Solicitação
     [Documentation]    Esse teste verifica se é possível realizar uma consulta    
     ...                de uma solicitação realizada no Portal
     [Tags]             Portal de Inscrição | Fluxo Negativo
-    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
+    Acessar o ambiente "http://portal.qa.gier.intranet.local/PortalGuarulhosQA/"
     Clicar em 'Consultar Solicitação'
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário escolher uma nacionalidade.
@@ -683,27 +683,27 @@ Cenário 29: Portal de Inscrição - Consulta de Solicitação
     Visualizar a mensagem: Necessário informar um protocolo válido. 
     Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
-    Em Protocolo, informar "123456789"
+    Em Protocolo, informar "1234567899"
     Em Data de Nascimento, informar "10/01/1965"
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar um documento.
     Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
-    Em Protocolo, informar "123456789"
+    Em Protocolo, informar "1234567899"
     Em CPF, inserir "364.882.650-67"
     Em Data de Nascimento, informar "10/01/1965"
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Não foi localizado registro com os dados informados.
     Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
-    Em Protocolo, informar "123456789"
+    Em Protocolo, informar "1234567899"
     Em CPF, inserir "364.882.650-67"
     Limpar o campo Data de Nascimento    
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar uma data de Nascimento.
     Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Brasileiro"
-    Em Protocolo, informar "123456789"
+    Em Protocolo, informar "1234567899"
     Em CPF, inserir "364.882.650-67"
     Em Data de Nascimento, informar "00000000" 
     Clicar em pesquisar no Portal
@@ -714,7 +714,7 @@ Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     [Documentation]    Esse teste verifica se é possível realizar uma consulta
     ...                de uma solicitação realizada no Portal
     [Tags]             Portal de Inscrição | Fluxo Negativo
-    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
+    Acessar o ambiente "http://portal.qa.gier.intranet.local/PortalGuarulhosQA/"
     Clicar em 'Consultar Solicitação'
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário escolher uma nacionalidade.
@@ -724,27 +724,27 @@ Cenário 30: Portal de Inscrição - Consulta de Solicitação Estrangeiro
     Visualizar a mensagem: Necessário informar um protocolo válido. 
     Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
-    Em Protocolo, informar "123456789"
+    Em Protocolo, informar "1234567899"
     Em Data de Nascimento, informar "10/01/1965"
     Clicar em pesquisar no Portal    
     Visualizar a mensagem: Necessário informar um documento.
     Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
-    Em Protocolo, informar "123456789"
+    Em Protocolo, informar "1234567899"
     Em RNE, informar "v565371"
     Em Data de Nascimento, informar "10/01/1965"
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Não foi localizado registro com os dados informados.
     Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
-    Em Protocolo, informar "123456789"
+    Em Protocolo, informar "1234567899"
     Em RNE, informar "v565371"
     Limpar o campo Data de Nascimento
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário informar uma data de Nascimento.
     Clicar em Ok no alerta do Portal
     Em Nacionalidade, selecionar "Estrangeiro"
-    Em Protocolo, informar "123456789"
+    Em Protocolo, informar "1234567899"
     Em RNE, informar "v565371"
     Em Data de Nascimento, informar "00000000" 
     Clicar em pesquisar no Portal
@@ -755,7 +755,7 @@ Cenário 31: Portal de Inscrição - Lista de Espera
     [Documentation]    Esse teste verifica se é possível realizar uma consulta
     ...                de uma solicitação que esta em Lista de Espera
     [Tags]             Portal de Inscrição | Fluxo Negativo
-    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/"
+    Acessar o ambiente "http://portal.qa.gier.intranet.local/PortalGuarulhosQA/"
     Clicar em Lista de Espera    
     Clicar em pesquisar no Portal
     Visualizar a mensagem: Necessário escolher um Ano Letivo
@@ -780,8 +780,8 @@ Cenário 32: Funcionalidade Gestão de Pré-matrícula Escola
     [Documentation]    Esse teste verifica se é possível consultar e
     ...                registrar as solicitações realizadas no Portal 
     [Tags]             Gestão de Pré-matrícula | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -793,7 +793,7 @@ Cenário 32: Funcionalidade Gestão de Pré-matrícula Escola
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.
     Clicar em OK no modal de alerta
     Clicar no botão Limpar
-    Em campo Protocolo, informar "123456789"    
+    Em campo Protocolo, informar "1234567899"    
     Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.    
     Clicar em OK no modal de alerta
@@ -836,8 +836,8 @@ Cenário 33: Funcionalidade Gestão de Pré-matrícula Secretaria
     [Documentation]    Esse teste verifica se é possível consultar e
     ...                registrar as solicitações realizadas no Portal 
     [Tags]             Gestão de Pré-matrícula | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -849,7 +849,7 @@ Cenário 33: Funcionalidade Gestão de Pré-matrícula Secretaria
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.
     Clicar em OK no modal de alerta
     Clicar no botão Limpar
-    Em campo Protocolo, informar "123456789"    
+    Em campo Protocolo, informar "1234567899"    
     Clicar no Botão para "Pesquisar"
     Visualizar a mensagem: NÃO HÁ EDUCANDOS COM OS FILTROS SELECIONADOS.    
     Clicar em OK no modal de alerta
@@ -892,8 +892,8 @@ Cenário 34: Funcionalidade Credenciamento de Condutores
     [Documentation]    Esse teste verifica se é possível cadastrar
     ...                um credenciamento para um condutor 
     [Tags]             Credenciamento de Condutores | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -997,8 +997,8 @@ Cenário 35: Funcionalidade Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar
     ...                uma rota para Transporte 
     [Tags]             Rotas | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -1031,8 +1031,8 @@ Cenário 36: Funcionalidade Viagens
     [Documentation]    Esse teste verifica se é possível cadastrar
     ...                uma rota para Transporte 
     [Tags]             Viagens | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -1089,8 +1089,8 @@ Cenário 37: Funcionalidade Transportes Secretaria
     [Documentation]    Esse teste verifica se é possível solicitar
     ...                uma transporte através da secretaria
     [Tags]             Gestão de Transporte | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -1138,8 +1138,8 @@ Cenário 38: Funcionalidade Transportes Escola
     [Documentation]    Esse teste verifica se é possível solicitar
     ...                uma transporte através da escola
     [Tags]             Solicitação de Transporte | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -1161,8 +1161,8 @@ Cenário 39: Funcionalidade Aprendizagem
     [Documentation]    Esse teste verifica se é possível cadastrar
     ...                e editar uma Aprendizagem
     [Tags]             Aprendizagem | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -1203,8 +1203,8 @@ Cenário 40: Funcionalidade Grupos de Pergunta
     [Documentation]    Esse teste verifica se é possível cadastrar
     ...                um Grupos de Pergunta
     [Tags]             Grupos de Pergunta | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -1235,8 +1235,8 @@ Cenário 41: Funcionalidade Banco de Questões
     [Documentation]    Esse teste verifica se é possível cadastrar
     ...                um Banco de Questões
     [Tags]             Banco de Questões | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -1267,8 +1267,8 @@ Cenário 42: Avaliação Educacional
     [Documentation]    Esse teste verifica se é possível realizar a prova
     ...                Educacional com o preenchimento parcial das perguntas
     [Tags]             Avaliação Educacional | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -1350,8 +1350,8 @@ Cenário 42: Avaliação Educacional
 Cenário 44: Processo de Demanda
     [Documentation]    Esse teste efetua o fluxo negativo do Processo de Demanda
     [Tags]             Processo de Demanda | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -1433,8 +1433,8 @@ Cenário 44: Processo de Demanda
 Cenário 45: Programação de Processo
     [Documentation]    Esse teste efetua o fluxo negativo de Programação de Processo
     [Tags]             Programação de Processo | Fluxo Negativo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -1665,6 +1665,7 @@ Cenário 47: Portal de Inscrição - Infantil Contínuo (Outra Escola)
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
+
     Entrar no Portal
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
@@ -1701,7 +1702,7 @@ Cenário 47: Portal de Inscrição - Infantil Contínuo (Outra Escola)
     No Portal, clicar nos campos de declarações
     No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
 
-Cenário xx: Portal de Inscrição - Fundamental Inicial 
+Cenário 48: Portal de Inscrição - Fundamental Inicial 
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Fundamental
     [Tags]             Portal de Inscrição | Fluxo Negativo
@@ -1792,21 +1793,8 @@ Cenário xx: Portal de Inscrição - Fundamental Inicial
     No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "A pessoa ROBERTO SALES já está inscrito(a) na rede de ensino!"
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
     No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "ENRICO CARVALHO"
-    No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "A pessoa ENRICO CARVALHO já está inscrito(a) na rede de ensino!"
-    No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "AUGUSTO NOGUEIRA"
-    No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "A pessoa AUGUSTO NOGUEIRA já está inscrito(a) na rede de ensino!"
-    No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "MIGUEL DA CUNHA"
-    No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "A pessoa MIGUEL DA CUNHA já está inscrito(a) na rede de ensino!"
-    No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome "TESTE NEGATIVO FUDAMENTAL INICIAL"
 
  
 Cenário 48: Portal de Inscrição - EJA Inicial 
@@ -1893,13 +1881,6 @@ Cenário 48: Portal de Inscrição - EJA Inicial
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Pai"
     No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
     No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "A pessoa LEANDRO LEONARDOmai já está inscrito(a) na rede de ensino!"
-    No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "95631027895"
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "TESTE NEGATIVO EJA II INICIAL"
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07031996"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Pai"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
 
 Cenário 49: Portal de Inscrição - Infantil Contínuo 
     [Documentation]    Esse teste verifica se é possível realizar uma 
@@ -2276,36 +2257,13 @@ Cenário 51: Portal de Inscrição - EJA Contínuo
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
     No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "90670308056"
-    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
-    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
-    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "GUARULHOS"
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "EDUARDO SUPLICY"
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, em Cadastro do Responsável, em Sexo, inserir "Masculino"
-    No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
-    No Portal, fechar o modal
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
-    No Portal, em Contato, em Telefone 1, inserir um telefone válido
-    No Portal, clicar nos campos de declarações 
-    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
-    No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "09432884015"
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "HARLEY DAVID"
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07031996"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Pai"
-    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "O Próprio"
-    No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
-    No Portal, fechar o modal
 
 Cenário 52: Funcionalidade Gier - Portal: Cancelado - Infantil Contínuo
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
     [Tags]             Gier > Portal - Infantil Contínuo | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -2395,7 +2353,7 @@ Cenário 52: Funcionalidade Gier - Portal: Cancelado - Infantil Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
     Entrar no módulo "Gestão Escolar"
@@ -2484,8 +2442,8 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - Fundamental Contínuo
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
     [Tags]             Gier > Portal - Fundamental Contínuo | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -2563,7 +2521,7 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - Fundamental Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
     Entrar no módulo "Gestão Escolar"
@@ -2636,8 +2594,8 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - EJA Contínuo
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
     [Tags]             Gier > Portal - EJA Contínuo | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -2709,7 +2667,7 @@ Cenário 53: Funcionalidade Gier - Portal: Cancelado - EJA Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
     Entrar no módulo "Gestão Escolar"
@@ -2811,8 +2769,8 @@ Cenário 54: Funcionalidade Gier - Portal: Pausado - Infantil Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -2940,8 +2898,8 @@ Cenário 55: Funcionalidade Gier - Portal: Pausado - Fundamental Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -3058,8 +3016,8 @@ Cenário 56: Funcionalidade Gier - Portal: Pausado - EJA Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -3125,8 +3083,8 @@ Cenário 57: Funcionalidade Gier - Portal - Infantil Inicial
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
     [Tags]             Gier > Portal - Infantil Inicial | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -3220,8 +3178,8 @@ Cenário 58: Funcionalidade Gier - Portal - Fundamental Inicial
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
     [Tags]             Gier > Portal - Infantil Inicial | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -3303,8 +3261,8 @@ Cenário 59: Funcionalidade Gier - Portal - EJA Inicial
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
     [Tags]             Gier > Portal - Infantil Inicial | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -3418,8 +3376,8 @@ Cenário 60: Funcionalidade Portal - Gier - Infantil Inicial
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -3549,8 +3507,8 @@ Cenário 61: Funcionalidade Portal - Gier - Fundamental Inicial
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -3659,8 +3617,8 @@ Cenário 62: Funcionalidade Portal - Gier - EJA Inicial
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no eixo "Operação"

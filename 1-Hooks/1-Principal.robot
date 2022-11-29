@@ -4,7 +4,9 @@ Library    FakerLibrary    locale=pt-BR
 Library    RequestsLibrary
 
 *** Variable ***
-${path}                         C:\\Users\\rogerio.santos\\Desktop\\AUTOMAÇÃO WEB - GIER\\Automação - Teste De Versão Gier\\4-Arquivos
+### Alterar variável path para o caminho da pasta em sua máquina antes dos testes
+${path}                         C:\\Users\\rogerio.santos\\Desktop\\AutomacaoWebGier\\AutomacaoGierGRU_1.0\\4-Arquivos
+
 ${botaoCadastrar}               cphContent_btnCad   
 ${botaoPesquisar}               cphContent_btnPesquisar
 ${botaoEditar}                  cphContent_btnEditar
@@ -27,7 +29,7 @@ ${campoSexo}                    cphContent_ddlSexo
 ${campoIdentidade}              cphContent_txtIdentidade
 ${campoOrgaoEmissor}            cphContent_ddlOrgaoEmissor
 ${campoDataDeNascimento}        cphContent_txtDataNascimento
-&{body}     acao=gerador_certidao       pontuacao=N     tipo_certidao=nascimento
+&{body}                         acao=gerador_certidao       pontuacao=N     tipo_certidao=nascimento
 
 *** Keywords ***
 Abrir o navegador

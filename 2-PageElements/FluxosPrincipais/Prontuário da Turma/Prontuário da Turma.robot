@@ -24,17 +24,22 @@ Em Prontuário da Turma, em Turma, selecionar "${turma}"
 
 Em Prontuário da Turma, em Mês de Reunião, selecionar um mês em aberto
     FOR    ${mes}    IN    @{meses}
-        ${validacao}    Run Keyword And Return Status    Element Attribute Value Should Be    /input[contains(@value,'${mes}')]    background-color    green
+        ${validacao}    Run Keyword And Return Status    Element Attribute Value Should Be    //input[contains(@value,'${mes}')]    class    btnCinza
         IF    ${validacao}
             Execute JavaScript  xPathResult = document.evaluate("//input[contains(@value,'${mes}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
             Execute JavaScript  xPathResult.singleNodeValue.click()     
             Aguardar tela de carregamento
+            Exit For Loop
         END 
     END
 
 Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
     ${dataHoje}    Get Current Date    result_format=%d/%m/%Y
     Input Text    cphContent_txtDataReuniao    ${dataHoje}
+    Execute JavaScript  xPathResult = document.evaluate("//button[@type='button'][contains(.,'Fechar')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click();
+
+    
 
 Em Prontuário da Turma, clicar em OK no Modal
     Wait Until Element Is Visible    cphContent_MensagemPadrao_btnOk

@@ -16,8 +16,7 @@ ${botaoIncluirMobile}                    btnIncluirMobile
 ${campoDataWeb}                          txtDataInicioWeb
 ${campoDataMovel}                        txtDataInicioMobile
 ${campoArquivoWeb}                       fupArquivoWeb
-${campoArquivoMovel}                     fupArquivoMobile
-${arquivo}                               C:\\Users\\amanda.diniz\\Desktop\\images.jpg
+${campoArquivoMovel}                     fupArquivoMobile                          
 
 
 
@@ -57,7 +56,7 @@ Visualizar a mensagem: SELECIONE O ARQUIVO ANTES DE INCLUI-LO.
     
 Em inserir Documento Web, inserir o arquivo "Crianças1.jpg"
     Wait Until Element Is Visible    btnBuscarArquivoWeb
-    Choose File    ${campoArquivoWeb}    ${arquivo}   
+    Choose File    ${campoArquivoWeb}    ${path}\\teste-banner.jpg    
     Sleep    5
     
 Em Aplicar no Portal Web, inserir "${data}"
@@ -76,7 +75,7 @@ Em Aplicar no Portal Web, inserir a data do dia atual
 
 Em inserir Documento móvel, inserir o arquivo "Crianças1.jpg"
     Wait Until Element Is Visible    btnBuscarArquivoMobile
-    Choose File    ${campoArquivoMovel}    ${arquivo}   
+    Choose File    ${campoArquivoMovel}    ${path}\\teste-banner.jpg  
     Sleep    5
 
 Em Aplicar no Portal móvel, inserir "${data}" 

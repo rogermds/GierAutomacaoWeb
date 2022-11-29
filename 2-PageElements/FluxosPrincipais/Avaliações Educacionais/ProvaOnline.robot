@@ -18,38 +18,52 @@ Clicar na Prova "${nomeProva}"
 
 
 Na Prova, na Pergunta 1, clicar na Resposta A
-    Wait Until Element Is Visible    questao_0_resposta_0_hash_b2b4b5b9
-    Execute JavaScript  document.getElementById("questao_0_resposta_0_hash_b2b4b5b9").click();
+    Wait Until Element Is Visible    (//input[contains(@type,'radio')])[1]
+    Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click();
+    Sleep    1
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 2, clicar na Resposta B
-    Wait Until Element Is Visible    questao_1_resposta_1_hash_b2b4b4b2
-    Execute JavaScript  document.getElementById("questao_1_resposta_1_hash_b2b4b4b2").click();
+    Wait Until Element Is Visible    (//input[contains(@type,'radio')])[2]
+    Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[2]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click();
+    Sleep    1
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 3, clicar na Resposta C
-    Wait Until Element Is Visible    questao_2_resposta_2_hash_b2b4b4b9
-    Execute JavaScript  document.getElementById("questao_2_resposta_2_hash_b2b4b4b9").click();
+    Wait Until Element Is Visible    (//input[contains(@type,'radio')])[3]
+    Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[3]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click();
+    Sleep    1
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 4, clicar na Resposta D
-    Wait Until Element Is Visible    questao_3_resposta_3_hash_b2b4b7b2
-    Execute JavaScript  document.getElementById("questao_3_resposta_3_hash_b2b4b7b2").click();
+    Wait Until Element Is Visible    (//input[contains(@type,'radio')])[4]
+    Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[4]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click();
+    Sleep    1
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 5, clicar na Resposta C
-    Wait Until Element Is Visible    questao_4_resposta_2_hash_b2b4b7b7
-    Execute JavaScript  document.getElementById("questao_4_resposta_2_hash_b2b4b7b7").click();
+    Wait Until Element Is Visible    (//input[contains(@type,'radio')])[3]
+    Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[3]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click();
+    Sleep    1
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 6, clicar na Resposta B
-    Wait Until Element Is Visible    questao_5_resposta_1_hash_b2b4b7b8
-    Execute JavaScript  document.getElementById("questao_5_resposta_1_hash_b2b4b7b8").click();
+    Wait Until Element Is Visible    (//input[contains(@type,'radio')])[2]
+    Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[2]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click();
+    Sleep    1
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 7, clicar na Resposta A
-    Wait Until Element Is Visible    questao_6_resposta_0_hash_b2b4b6b1
-    Execute JavaScript  document.getElementById("questao_6_resposta_0_hash_b2b4b6b1").click();
+    Wait Until Element Is Visible    (//input[contains(@type,'radio')])[1]
+    Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click();
+    Sleep    1
     Aguardar tela de carregamento
 
 Na Prova, clicar em Avançar

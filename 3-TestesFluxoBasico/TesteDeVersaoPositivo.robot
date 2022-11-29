@@ -36,6 +36,7 @@ Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/Ed
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/ProvaOnline.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/LancamentoIndividualizado.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliações Educacionais/AvaliacoesEducacionaisRealizadas.robot
+
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
@@ -46,16 +47,16 @@ Cenário 01: Acesso ao Sistema – Tela de Login
     [Documentation]    Esse teste verifica se é possível efetuar login no Gier
     ...                Com o usuário e senha especificados
     [Tags]             Login | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"  
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"  
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
 
 Cenário 02: Acesso ao Sistema – Seleção de estrutura
     [Documentation]    Esse teste verifica se é possível selecionar uma
     ...                estrutura após efetuar o login
     [Tags]             Seleção de Estrutura | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -64,8 +65,8 @@ Cenário 03: Funcionalidade Pessoa – Escola
     [Documentation]    Esse teste verifica se é possível efetuar o cadastro, edição, 
     ...                visualização e desativação de uma pessoa na escola
     [Tags]             Pessoa - Escola | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -124,8 +125,8 @@ Cenário 04: Funcionalidade Pessoa – Secretaria
     [Documentation]    Esse teste verifica se é possível efetuar o cadastro, edição, 
     ...                visualização e desativação de uma pessoa na Secretaria
     [Tags]             Pessoa - Secretaria | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -187,8 +188,8 @@ Cenário 05: Funcionalidade Turma – Infantil
     [Documentation]    Esse teste verifica se é possível efetuar o cadastro, edição, 
     ...                visualização e exclusão de uma turma da Etapa Infantil
     [Tags]             Turma - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -251,8 +252,8 @@ Cenário 06: Funcionalidade Turma – Fundamental
     [Documentation]    Esse teste verifica se é possível efetuar o cadastro, edição, 
     ...                visualização e exclusão de uma turma da Etapa Fundamental
     [Tags]             Turma - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -315,8 +316,8 @@ Cenário 07: Funcionalidade Turma Multisseriada – EJA
     [Documentation]    Esse teste verifica se é possível efetuar o cadastro, edição, 
     ...                visualização e exclusão de uma turma da Etapa EJA
     [Tags]             Turma - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -371,8 +372,8 @@ Cenário 08: Funcionalidade Avaliações e Frequência - Infantil
     [Documentation]    Esse teste verifica se é possível consultar e
     ...                registrar nota para a Etapa Infantil
     [Tags]             Avaliações e Frequência - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -396,8 +397,8 @@ Cenário 09: Funcionalidade Avaliações e Frequência - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar, registrar notas
     ...                e validar os relatórios para a Etapa Fundamental
     [Tags]             Avaliações e Frequência - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -464,8 +465,8 @@ Cenário EXTRA: Funcionalidade Gerir Lançamentos - EJA
     [Documentation]    Esse teste verifica se é possível consultar e
     ...                registrar notas para a Etapa EJA
     [Tags]             Avaliações e Frequência - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -487,8 +488,8 @@ Cenário 10: Funcionalidade Avaliações e Frequência - EJA
     [Documentation]    Esse teste verifica se é possível consultar e
     ...                registrar notas para a Etapa EJA
     [Tags]             Avaliações e Frequência - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -512,8 +513,8 @@ Cenário 11: Funcionalidade Controle Diário de Frequência - Infantil
     [Documentation]    Esse teste verifica se é possível consultar e registrar frequencia, 
     ...                avaliação e campo de experiência  para a Etapa Infantil
     [Tags]             Controle de Frequencia - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -579,8 +580,8 @@ Cenário 12: Funcionalidade Controle Diário de Frequência - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar e registrar frequencia, 
     ...                avaliação e campo de experiência  para a Etapa Fundamental
     [Tags]             Controle de Frequencia - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -651,8 +652,8 @@ Cenário 13: Funcionalidade Controle Diário de Frequência - EJA
     [Documentation]    Esse teste verifica se é possível consultar e registrar frequencia, 
     ...                avaliação e campo de experiência  para a Etapa EJA
     [Tags]             Controle de Frequencia - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -687,8 +688,8 @@ Cenário 14: Funcionalidade Ata de Conselho - Infantil
     [Documentation]    Esse teste verifica se é possível consultar a Ata de Conselho Final
     ...                e todas as suas ações para a Etapa Infantil                             
     [Tags]             Ata De Conselho Final - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -733,8 +734,8 @@ Cenário 15: Funcionalidade Ata de Conselho - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar a Ata de Conselho Final
     ...                e todas as suas ações para a Etapa Fundamental  
     [Tags]             Ata De Conselho Final - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -779,8 +780,8 @@ Cenário 16: Funcionalidade Ata de Conselho - EJA
     [Documentation]    Esse teste verifica se é possível consultar a Ata de Conselho Final
     ...                e todas as suas ações para a Etapa EJA                  
     [Tags]             Ata De Conselho Final - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -825,8 +826,8 @@ Cenário 17: Funcionalidade Histórico Escolar - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o
     ...                Histórico Escolar para a Etapa Infantil                 
     [Tags]             Histórico Escolar - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -859,8 +860,8 @@ Cenário 18: Funcionalidade Histórico Escolar - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar o
     ...                Histórico Escolar para a Etapa Fundamental                 
     [Tags]             Histórico Escolar - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -900,8 +901,8 @@ Cenário 19: Funcionalidade Histórico Escolar - EJA
     [Documentation]    Esse teste verifica se é possível consultar o
     ...                Histórico Escolar para a Etapa EJA                 
     [Tags]             Histórico Escolar - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -941,8 +942,8 @@ Cenário 20: Funcionalidade Boletim Escolar - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o
     ...                Boletim Escolar e todas as suas ações para a Etapa Infantil                               
     [Tags]             Boletim Escolar - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -976,8 +977,8 @@ Cenário 21: Funcionalidade Boletim Escolar - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar o
     ...                Boletim Escolar e todas as suas ações para a Etapa Fundamental                  
     [Tags]             Boletim Escolar - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -1011,8 +1012,8 @@ Cenário 22: Funcionalidade Boletim Escolar - EJA
     [Documentation]    Esse teste verifica se é possível consultar o
     ...                Boletim Escolar e todas as suas ações para a Etapa EJA                  
     [Tags]             Boletim Escolar - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -1047,8 +1048,8 @@ Cenário 23: Funcionalidade Prontuário da Turma - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário da Turma 
     ...                e todas as suas ações para a Etapa Infantil                   
     [Tags]             Prontuário da Turma - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
@@ -1071,8 +1072,8 @@ Cenário 24: Funcionalidade Prontuário da Turma - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário da Turma 
     ...                e todas as suas ações para a Etapa Fundamental                   
     [Tags]             Prontuário da Turma - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
@@ -1080,7 +1081,7 @@ Cenário 24: Funcionalidade Prontuário da Turma - Fundamental
     Em Prontuário da Turma, em Ano Letivo, selecionar "2022"
     Em Prontuário da Turma, em Turma, selecionar "5A"
     Clicar em Pesquisar
-    Em Prontuário da Turma, em Mês de Reunião, selecionar "Junho"
+    Em Prontuário da Turma, em Mês de Reunião, selecionar um mês em aberto
     Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
     Em Prontuário da Turma, em Impressões do Conselho de Turma, inserir "TESTE DE IMPRESSÃO DO CONSELHO DE TURMA"
     Clicar em Salvar
@@ -1095,8 +1096,8 @@ Cenário 25: Funcionalidade Prontuário da Turma - EJA
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário da Turma 
     ...                e todas as suas ações para a Etapa EJA                   
     [Tags]             Prontuário da Turma - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
@@ -1104,7 +1105,7 @@ Cenário 25: Funcionalidade Prontuário da Turma - EJA
     Em Prontuário da Turma, em Ano Letivo, selecionar "2022"
     Em Prontuário da Turma, em Turma, selecionar "CII A (1º Semestre)"
     Clicar em Pesquisar
-    Em Prontuário da Turma, em Mês de Reunião, selecionar "Maio"
+    Em Prontuário da Turma, em Mês de Reunião, selecionar um mês em aberto
     Em Prontuário da Turma, em Data da Reunião, inserir o dia atual
     Em Prontuário da Turma, em Impressões do Conselho de Turma, inserir "TESTE DE IMPRESSÃO DO CONSELHO DE TURMA"
     Clicar em Salvar
@@ -1120,8 +1121,8 @@ Cenário 26: Funcionalidade Prontuário do Educando - Infantil
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário do Educando 
     ...                e todas as suas ações para a Etapa Infantil                   
     [Tags]             Prontuário do Educando - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
@@ -1176,8 +1177,8 @@ Cenário 27: Funcionalidade Prontuário do Educando - Fundamental
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário do Educando 
     ...                e todas as suas ações para a Etapa Fundamental                   
     [Tags]             Prontuário da Turma - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
@@ -1233,8 +1234,8 @@ Cenário 28: Funcionalidade Prontuário do Educando - EJA
     [Documentation]    Esse teste verifica se é possível consultar o Prontuário do Educando 
     ...                e todas as suas ações para a Etapa EJA                   
     [Tags]             Prontuário da Turma - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no módulo "Pedagógico"
@@ -1290,8 +1291,8 @@ Cenário 29: Funcionalidade - Escola Autorizada A Receber Matrícula
     [Documentation]    Esse teste efetua a configuração das escolas que
     ...                estão autorizadas a receber matrícula             
     [Tags]             Escola Autorizada A Receber Matrícula | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -1352,8 +1353,8 @@ Cenário 30: Funcionalidade - Justificativas da Pré-Matrícula
     [Documentation]    Esse teste efetua o cadastro de justificativas
     ...                para cada tipo de situação             
     [Tags]             Justificativas da Pré-Matrícula | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -1497,8 +1498,8 @@ Cenário 31: Funcionalidade - Cadastro: Layout do Portal de Inscrições e Trans
     [Documentation]    Esse teste efetua o cadastro e exclusão do Portal
     ...                Online de Matrícula            
     [Tags]             Layout do Portal de Inscrições e Transferências | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -1551,8 +1552,8 @@ Cenário 32: Funcionalidade - Edição: Layout do Portal de Inscrições e Trans
     [Documentation]    Esse teste efetua a edição e verificação das informações no 
     ...                Portal Online de Matrícula            
     [Tags]             Layout do Portal de Inscrições e Transferências | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -1639,8 +1640,8 @@ Cenário 33: Funcionalidade Processo de Demanda Inicial - Infantil
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
     ...                Inicial e Contínuo para a etapas/modalidade Infantil
     [Tags]             Processo de Demanda | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -1727,8 +1728,8 @@ Cenário 34: Funcionalidade Processo de Demanda Inicial - Fundamental
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
     ...                Inicial e Contínuo para a etapas/modalidade Fundamental
     [Tags]             Processo de Demanda | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -1815,8 +1816,8 @@ Cenário 35: Funcionalidade Processo de Demanda Inicial - EJA
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
     ...                Inicial e Contínuo para a etapas/modalidade Fundamental
     [Tags]             Processo de Demanda | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -1883,8 +1884,8 @@ Cenário 36: Funcionalidade Processo de Demanda Contínuo - Infantil
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
     ...                Inicial e Contínuo para a etapas/modalidade Infantil
     [Tags]             Processo de Demanda | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -1978,8 +1979,8 @@ Cenário 37: Funcionalidade Processo de Demanda Contínuo - Fundamental
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
     ...                Inicial e Contínuo para a etapas/modalidade Fundamental
     [Tags]             Processo de Demanda | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2073,8 +2074,8 @@ Cenário 38: Funcionalidade Processo de Demanda Contínuo - EJA
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
     ...                Inicial e Contínuo para a etapas/modalidade EJA
     [Tags]             Processo de Demanda | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2147,8 +2148,8 @@ Cenário 39: Funcionalidade Processo de Demanda - Edição e Exclusão
     [Documentation]    Esse teste efetua a configuração do Processo de Demanda
     ...                Inicial e Contínuo para a etapas/modalidade EJA
     [Tags]             Processo de Demanda | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2202,8 +2203,8 @@ Cenário 40: Processo de Demanda para Programação de Processo
     [Documentation]    Esse teste efetua um cadastro de processo para ser editado
     ...                e excluído na Programação de Processo
     [Tags]             Processo de Demanda | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2245,8 +2246,8 @@ Cenário 41: Funcionalidade Programação de Processo - Infantil Inicial
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
     ...                para o Portal (todas as etapas), e de transferência para o GIER                  
     [Tags]             Programação de Processo - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2282,8 +2283,8 @@ Cenário 42: Funcionalidade Programação de Processo - Fundamental Inicial
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
     ...                para o Portal (todas as etapas), e de transferência para o GIER                  
     [Tags]             Programação de Processo - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2319,8 +2320,8 @@ Cenário 43: Funcionalidade Programação de Processo - EJA Inicial
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
     ...                para o Portal (todas as etapas), e de transferência para o GIER                  
     [Tags]             Programação de Processo - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2381,8 +2382,8 @@ Cenário 44: Funcionalidade Programação de Processo - Infantil Contínuo
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
     ...                para o Portal (todas as etapas), e de transferência para o GIER                  
     [Tags]             Programação de Processo - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2418,8 +2419,8 @@ Cenário 45: Funcionalidade Programação de Processo - Fundamental Contínuo
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
     ...                para o Portal (todas as etapas), e de transferência para o GIER                  
     [Tags]             Programação de Processo - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2455,8 +2456,8 @@ Cenário 46: Funcionalidade Programação de Processo - EJA Contínuo
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
     ...                para o Portal (todas as etapas), e de transferência para o GIER                  
     [Tags]             Programação de Processo - EJA | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2517,8 +2518,8 @@ Cenário 47: Funcionalidade Programação de Processo - Edição e Exclusão
     [Documentation]    Esse teste efetua o cadastro da Programação de Processo de Pré-Matrícula
     ...                para o Portal (todas as etapas), e de transferência para o GIER                  
     [Tags]             Programação de Processo - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Configuração"
@@ -2606,8 +2607,8 @@ Cenário 48: Funcionalidade Portal - Gier - Infantil Inicial
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -2671,8 +2672,8 @@ Cenário 50: Funcionalidade Portal - Gier - Fundamental Inicial
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -2733,8 +2734,8 @@ Cenário 51: Funcionalidade Portal - Gier - EJA Inicial
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -2797,8 +2798,8 @@ Cenário 52: Funcionalidade Gier Portal - Infantil Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "EPG CRISPINIANO SOARES" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -2866,7 +2867,7 @@ Cenário 52: Funcionalidade Gier Portal - Infantil Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
     Entrar no módulo "Gestão Escolar"
@@ -2923,8 +2924,8 @@ Cenário 53: Funcionalidade Gier Portal - Fundamental Contínuo
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula
     ...                no Portal, para todas as etapas/modalidades.                
     [Tags]             Portal - Fundamental Contínuo | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -3001,7 +3002,7 @@ Cenário 53: Funcionalidade Gier Portal - Fundamental Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
     Entrar no módulo "Gestão Escolar"
@@ -3074,8 +3075,8 @@ Cenário 54: Funcionalidade Portal Gier - EJA Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -3116,7 +3117,7 @@ Cenário 54: Funcionalidade Portal Gier - EJA Contínuo
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
     Entrar no módulo "Gestão Escolar"
@@ -3169,7 +3170,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "20/06/2016"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "23/06/2016"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3203,8 +3204,8 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3219,7 +3220,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "18/06/2016"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "21/06/2016"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3253,7 +3254,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3268,7 +3269,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL INICIAL"
     No Portal, clicar em Iniciar inscrição
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "19/06/2016"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "22/06/2016"
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -3302,7 +3303,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3348,8 +3349,8 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
 #     No Portal, clicar em Concluir Inscrição
 #     No Portal, verificar se o comprovante é exibido em tela
 #     No Portal, gravar o número de protocolo gerado
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
+#     Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+#     Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
 #     Verificar se aparece o texto "Estrutura"
 #     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
@@ -3389,7 +3390,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
 #     No Portal, clicar em Concluir Inscrição
 #     No Portal, verificar se o comprovante é exibido em tela
 #     No Portal, gravar o número de protocolo gerado
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
 #     Verificar se aparece o texto "Estrutura"
 #     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
@@ -3429,7 +3430,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
 #     No Portal, clicar em Concluir Inscrição
 #     No Portal, verificar se o comprovante é exibido em tela
 #     No Portal, gravar o número de protocolo gerado
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
 #     Verificar se aparece o texto "Estrutura"
 #     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
@@ -3472,8 +3473,8 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
 #     No Portal, clicar em Concluir Inscrição
 #     No Portal, verificar se o comprovante é exibido em tela
 #     No Portal, gravar o número de protocolo gerado
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
+#     Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+#     Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
 #     Verificar se aparece o texto "Estrutura"
 #     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
@@ -3510,7 +3511,7 @@ Cenário 55: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
 #     No Portal, clicar em Concluir Inscrição
 #     No Portal, verificar se o comprovante é exibido em tela
 #     No Portal, gravar o número de protocolo gerado
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
 #     Verificar se aparece o texto "Estrutura"
 #     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
@@ -3563,8 +3564,8 @@ Cenário 58: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3612,7 +3613,7 @@ Cenário 58: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3660,7 +3661,7 @@ Cenário 58: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3705,8 +3706,8 @@ Cenário 59: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado    
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3746,7 +3747,7 @@ Cenário 59: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado    
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3786,7 +3787,7 @@ Cenário 59: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado    
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3828,8 +3829,8 @@ Cenário 60: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3865,7 +3866,7 @@ Cenário 60: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3901,7 +3902,7 @@ Cenário 60: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -3955,8 +3956,8 @@ Cenário 61: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4004,7 +4005,7 @@ Cenário 61: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4052,7 +4053,7 @@ Cenário 61: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4097,8 +4098,8 @@ Cenário 61: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
 #     No Portal, clicar em Concluir Inscrição
 #     No Portal, verificar se o comprovante é exibido em tela
 #     No Portal, gravar o número de protocolo gerado
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
+#     Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+#     Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
 #     Verificar se aparece o texto "Estrutura"
 #     Pesquisar "VOLPI" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
@@ -4138,7 +4139,7 @@ Cenário 61: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
 #     No Portal, clicar em Concluir Inscrição
 #     No Portal, verificar se o comprovante é exibido em tela
 #     No Portal, gravar o número de protocolo gerado
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
 #     Verificar se aparece o texto "Estrutura"
 #     Pesquisar "VOLPI" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
@@ -4181,8 +4182,8 @@ Cenário 61: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
 #     No Portal, clicar em Concluir Inscrição
 #     No Portal, verificar se o comprovante é exibido em tela
 #     No Portal, gravar o número de protocolo gerado
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-#     Entrar com as credenciais "02867439817" e "12345678"
+#     Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+#     Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
 #     Verificar se aparece o texto "Estrutura"
 #     Pesquisar "VOLPI" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
@@ -4219,7 +4220,7 @@ Cenário 61: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
 #     No Portal, clicar em Concluir Inscrição
 #     No Portal, verificar se o comprovante é exibido em tela
 #     No Portal, gravar o número de protocolo gerado
-#     Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+#     Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
 #     Verificar se aparece o texto "Estrutura"
 #     Pesquisar "VOLPI" e selecionar o primeiro resultado
 #     Verificar se aparece o texto "Operação"
@@ -4272,8 +4273,8 @@ Cenário 64: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4320,7 +4321,7 @@ Cenário 64: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4367,7 +4368,7 @@ Cenário 64: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Infanti
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4421,8 +4422,8 @@ Cenário 65: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4470,7 +4471,7 @@ Cenário 65: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4519,7 +4520,7 @@ Cenário 65: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (Fundame
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4559,8 +4560,8 @@ Cenário 66: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4595,11 +4596,11 @@ Cenário 66: Funcionalidade Gestão de Pré-Matrícula: Lista de Espera (EJA Con
     No Portal, clicar em Concluir Inscrição
     No Portal, verificar se o comprovante é exibido em tela
     No Portal, gravar o número de protocolo gerado
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "CRISPINIANO" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
-    Entrar no módulo "Gestão de Educandos"
+    Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
     Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-Semestre 1"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
@@ -4610,8 +4611,8 @@ Cenário 67: Funcionalidade Gestão de Pré-Matrícula: Ações - Escola
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
     ...                dentro do GIER, para todas as etapas/modalidades.                
     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4654,8 +4655,8 @@ Cenário 68: Funcionalidade Gestão de Pré-Matrícula: Ações - Secretaria
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula  
     ...                dentro do GIER, para todas as etapas/modalidades.                
     [Tags]             Gestão de Pré-Matrícula | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4695,8 +4696,8 @@ Cenário 69: Funcionalidade Parâmetros do Processo de Transporte
     [Documentation]    Esse teste efetua o cadastro, configuração e edição
     ...                dos Parâmetros do Processo de Transporte                 
     [Tags]             Parâmetros do Processo de Transporte | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4750,13 +4751,20 @@ Cenário 69: Funcionalidade Parâmetros do Processo de Transporte
     Em Parâmetros de Transporte, selecionar o ano "2023"
     Em Parâmetros de Transporte, clicar em Pesquisar
     Em Parâmetros de Transporte, verificar se o cadastro foi excluído
+    Em Parâmetros de Transporte, selecionar o ano "2022"
+    No cadastro de Parâmetros de Transporte, em Processo de Transporte, inserir ""
+    Em Parâmetros de Transporte, clicar em Pesquisar
+    Em Parâmetros de Transporte, clicar em Ações e Editar
+    No cadastro de Parâmetros de Transporte, em Distância entre a residência e a escola, inserir "0"
+    No cadastro de Parâmetros de Transporte, clicar em Salvar
+    No cadastro de Parâmetros de Transporte, clicar em OK no modal
 
 Cenário 70: Funcionalidade Tipos de Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Rota                
     [Tags]             Rotas | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4793,8 +4801,8 @@ Cenário 71: Funcionalidade Rotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Rota                
     [Tags]             Rotas | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4858,8 +4866,8 @@ Cenário 72: Funcionalidade Tipos de Frotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem                
     [Tags]             Viagens | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4895,8 +4903,8 @@ Cenário 73: Funcionalidade Frotas
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem
     [Tags]             Viagens | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -4936,8 +4944,8 @@ Cenário 73: Funcionalidade Frotas
 Cenário 74: Funcionalidade Credenciamento de Condutores
     [Documentation]    Esse teste efetua o cadastro e edição do Credenciamento de Condutores                               
     [Tags]             Credenciamento de Condutores | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -5031,8 +5039,8 @@ Cenário 75: Funcionalidade Viagens
     [Documentation]    Esse teste verifica se é possível cadastrar, editar
     ...                editar e excluir uma Viagem                
     [Tags]             Viagens | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -5087,8 +5095,8 @@ Cenário 76: Funcionalidade Solicitação de Transporte - Infantil
     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
     ...                pela Escola, para um educando da Etapa Infantil        
     [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -5139,8 +5147,8 @@ Cenário 77: Funcionalidade Solicitação de Transporte - Fundamental
     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
     ...                pela Escola, para um educando da Etapa Infantil        
     [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -5190,8 +5198,8 @@ Cenário 78: Funcionalidade Gestão de Solicitação de Transporte - Infantil
     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
     ...                pela Escola, para um educando da Etapa Infantil        
     [Tags]             Solicitação de Transporte - Infantil | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -5228,8 +5236,8 @@ Cenário 79: Funcionalidade Gestão de Solicitação de Transporte - Fundamental
     [Documentation]    Esse teste verifica se é possível solicitar um Transporte
     ...                pela Escola, para um educando da Etapa Fundamental        
     [Tags]             Solicitação de Transporte - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Verificar se aparece o texto "Operação"
@@ -5265,8 +5273,8 @@ Cenário 79: Funcionalidade Gestão de Solicitação de Transporte - Fundamental
 Cenário 80: Funcionalidade Aprendizagem
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
     [Tags]             Aprendizagem | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -5317,6 +5325,18 @@ Cenário 80: Funcionalidade Aprendizagem
     Clicar em Salvar
     Em Cadastro de Descrição de Aprendizagem, clicar em OK no Modal
     Em Consulta de Descrição de Aprendizagem, clicar no botão Cadastrar
+    Em Cadastro de Descrição de Aprendizagem, em Sigla, inserir "TST06"
+    Em Cadastro de Descrição de Aprendizagem, em Ordem, inserir "6"
+    Em Cadastro de Descrição de Aprendizagem, em Descrição de Aprendizagem, inserir "TESTE DE DESCRICAO DE APRENDIZAGEM 05"
+    Clicar em Salvar
+    Em Cadastro de Descrição de Aprendizagem, clicar em OK no Modal
+    Em Consulta de Descrição de Aprendizagem, clicar no botão Cadastrar
+    Em Cadastro de Descrição de Aprendizagem, em Sigla, inserir "TST07"
+    Em Cadastro de Descrição de Aprendizagem, em Ordem, inserir "7"
+    Em Cadastro de Descrição de Aprendizagem, em Descrição de Aprendizagem, inserir "TESTE DE DESCRICAO DE APRENDIZAGEM 05"
+    Clicar em Salvar
+    Em Cadastro de Descrição de Aprendizagem, clicar em OK no Modal
+    Em Consulta de Descrição de Aprendizagem, clicar no botão Cadastrar
     Em Cadastro de Descrição de Aprendizagem, em Sigla, inserir "TST88"
     Em Cadastro de Descrição de Aprendizagem, em Ordem, inserir "88"
     Em Cadastro de Descrição de Aprendizagem, em Descrição de Aprendizagem, inserir "TESTE DE DESCRICAO DE APRENDIZAGEM 88"
@@ -5336,8 +5356,8 @@ Cenário 80: Funcionalidade Aprendizagem
 Cenário 81: Funcionalidade Grupos de Pergunta
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Aprendizem     
     [Tags]             Grupos de Pergunta | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -5375,8 +5395,8 @@ Cenário 81: Funcionalidade Grupos de Pergunta
 Cenário 82: Funcionalidade Banco de Questões - Texto
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
     [Tags]             Banco de Questões | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -5556,8 +5576,8 @@ Cenário 82: Funcionalidade Banco de Questões - Texto
 Cenário 83: Funcionalidade Banco de Questões - Imagem
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de Banco de Questões     
     [Tags]             Banco de Questões | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -5615,8 +5635,8 @@ Cenário 83: Funcionalidade Banco de Questões - Imagem
 Cenário 83: Funcionalidade Configurar Avaliação - Online
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -5699,7 +5719,7 @@ Cenário 83: Funcionalidade Configurar Avaliação - Online
     Em Configurar Avaliação, Cadastrar Questões, clicar na questão
     Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
     Em Configurar Avaliação, Cadastrar Questões, clicar em Voltar
-    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO TESTE - AUTOMAÇÃO"
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO"
     Em Configurar Avaliação, clicar em Pesquisar
     Em Configurar Avaliação, clicar em Ações e Imprimir
     Em Configurar Avaliação, verificar se a prova foi gerada corretamente
@@ -5707,8 +5727,8 @@ Cenário 83: Funcionalidade Configurar Avaliação - Online
 Cenário 84: Funcionalidade Configurar Avaliação - Offline
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -5772,7 +5792,7 @@ Cenário 84: Funcionalidade Configurar Avaliação - Offline
     Em Configurar Avaliação, Cadastrar Questões, clicar na questão
     Em Configurar Avaliação, Cadastrar Questões, clicar em Adicionar
     Em Configurar Avaliação, Cadastrar Questões, clicar em Voltar
-    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO TESTE - AUTOMAÇÃO"
+    Em Configurar Avaliação, em Nome da Avaliação, inserir "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO"
     Em Configurar Avaliação, clicar em Pesquisar
     Em Configurar Avaliação, clicar em Ações e Imprimir
     Em Configurar Avaliação, verificar se a prova foi gerada corretamente
@@ -5780,8 +5800,8 @@ Cenário 84: Funcionalidade Configurar Avaliação - Offline
 Cenário 85: Funcionalidade Configurar Avaliação - Edição e Exclusão
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de uma Configuração de Avaliação     
     [Tags]             Configurar Avaliação | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Configuração"
@@ -5827,12 +5847,12 @@ Cenário 85: Funcionalidade Configurar Avaliação - Edição e Exclusão
 Cenário 86: Funcionalidade Agendamento Avaliação - Online
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
     [Tags]             Agendamento Avaliação | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Operação"
-    Entrar no módulo "Gestão de Avaliações"
+    Entrar no módulo "Avaliação Educacional"
     Entrar na funcionalidade "Agendamento Avaliação"
     Em Agendamento Avaliação, clicar em Cadastrar
     Em Agendamento Avaliação, em Avaliação, selecionar "AVALIAÇÃO TESTE MATEMÁTICA - AUTOMAÇÃO"
@@ -5868,12 +5888,12 @@ Cenário 86: Funcionalidade Agendamento Avaliação - Online
 Cenário 87: Funcionalidade Agendamento Avaliação - Offline
     [Documentation]    Esse teste efetua o cadastro, edição e exclusão de um Agendamento de Avaliação     
     [Tags]             Agendamento Avaliação | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Operação"
-    Entrar no módulo "Gestão de Avaliações"
+    Entrar no módulo "Avaliação Educacional"
     Entrar na funcionalidade "Agendamento Avaliação"
     Em Agendamento Avaliação, clicar em Cadastrar
     Em Agendamento Avaliação, em Avaliação, selecionar "AVALIAÇÃO TESTE TEXTO - AUTOMAÇÃO"
@@ -5909,8 +5929,8 @@ Cenário 87: Funcionalidade Agendamento Avaliação - Offline
 Cenário 88: Prova Online
     [Documentation]    Esse teste efetua a prova online para um educando da Etapa - Fundamental     
     [Tags]             Prova Online - Fundamental | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "VOLPI" e selecionar o primeiro resultado
     Entrar no eixo "Operação"
@@ -5969,7 +5989,7 @@ Cenário 88: Prova Online
     Em Educandos, salvar o número do Livro RM
     Em Educandos, clicar no perfil e em Sair
     Entrar com as credenciais do aluno
-    Clicar na Prova "Avaliação Teste - Automação"
+    Clicar na Prova "Avaliação Teste Matemática - Automação"
     Na Prova, na Pergunta 1, clicar na Resposta A
     Na Prova, clicar em Avançar
     Na Prova, na Pergunta 2, clicar na Resposta B
@@ -5995,8 +6015,8 @@ Cenário 88: Prova Online
 Cenário 89: Lançamento Individualizado
     [Documentation]    Esse teste consulta e finaliza um Lançamento Individualizado     
     [Tags]             Lançamento Individualizado | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Operação"
@@ -6059,8 +6079,8 @@ Cenário 90: Avaliações Educacionais Realizadas
     [Documentation]    Esse teste efetua a consulta de uma Avaliação Educacional Realizada,
     ...                validando os relatórios para uma escola
     [Tags]             Avaliações Educacionais Realizadas | Fluxo Positivo
-    Acessar o ambiente "https://guarulhoshomolog.gier.com.br/"
-    Entrar com as credenciais "02867439817" e "12345678"
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no eixo "Gestão"
@@ -6075,4 +6095,3 @@ Cenário 90: Avaliações Educacionais Realizadas
     Em Avaliações Educacionais Realizadas, clicar em Pesquisar
     Em Avaliações Educacionais Realizadas, no resultado, clicar em Ações e Relatório de Educandos Sem Lançamento
     Em Avaliações Educacionais Realizadas, verificar o relatório foi aberto sem erros
-    

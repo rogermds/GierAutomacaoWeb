@@ -25,18 +25,20 @@ Em Banco de Questões, em Pergunta, inserir "${perguntaBanco}"
     Input Text    (//div[contains(@class,'note-editable panel-body')])[2]    ${perguntaBanco}
 
 Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 1   
-    Choose File   cphContent_fupImagemPergunta    C:\\Users\\amanda.diniz\\Desktop\\Gier-TesteVersaoWeb\\4-Arquivos\\banco-questoes01.jpg
-
+    Choose File   cphContent_fupImagemPergunta    ${path}\\banco-questoes01.jpg
+  
 Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 2
-    Choose File   cphContent_fupImagemPergunta    C:\\Users\\amanda.diniz\\Desktop\\Gier-TesteVersaoWeb\\4-Arquivos\\banco-questoes02.jpg
+    Choose File   cphContent_fupImagemPergunta    ${path}\\banco-questoes02.jpg
 
 Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 3
-    Choose File   cphContent_fupImagemPergunta    C:\\Users\\amanda.diniz\\Desktop\\Gier-TesteVersaoWeb\\4-Arquivos\\banco-questoes03.jpg
+    Choose File   cphContent_fupImagemPergunta    ${path}\\banco-questoes03.jpg
 
 Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 4
-    Choose File   cphContent_fupImagemPergunta    C:\\Users\\amanda.diniz\\Desktop\\Gier-TesteVersaoWeb\\4-Arquivos\\banco-questoes04.jpg
+    Choose File   cphContent_fupImagemPergunta    ${path}\\banco-questoes04.jpg
+
 Em Banco de Questões, em Inserir Imagem na Pergunta, inserir a imagem da questão 5
-    Choose File   cphContent_fupImagemPergunta    C:\\Users\\amanda.diniz\\Desktop\\Gier-TesteVersaoWeb\\4-Arquivos\\banco-questoes05.jpg
+    Choose File   cphContent_fupImagemPergunta    ${path}\\banco-questoes05.jpg
+    
 Em Banco de Questões, clicar em Anexar
     Execute JavaScript  document.getElementById("cphContent_btnAnexarImagemPergunta").click();
     Aguardar tela de carregamento
@@ -135,10 +137,10 @@ Em Banco de Questões, em Respostas Permitidas, selecionar Imagem
     Aguardar tela de carregamento
 
 Em Banco de Questões, em Inserir Imagem na Resposta, inserir a imagem da questão 1
-    Choose File   cphContent_fupImagemResposta    C:\\Users\\amanda.diniz\\Desktop\\Gier-TesteVersaoWeb\\4-Arquivos\\resposta01.jpg
+    Choose File   cphContent_fupImagemResposta    ${path}\\resposta01.jpg
 
 Em Banco de Questões, em Inserir Imagem na Resposta, inserir a imagem da questão 2
-    Choose File   cphContent_fupImagemResposta    C:\\Users\\amanda.diniz\\Desktop\\Gier-TesteVersaoWeb\\4-Arquivos\\resposta02.jpg
+    Choose File   cphContent_fupImagemResposta    ${path}\\resposta02.jpg
 
 Em Configurar Avaliação, clicar em Pesquisar
     Execute JavaScript  document.getElementById("cphContent_btnPesquisa").click();

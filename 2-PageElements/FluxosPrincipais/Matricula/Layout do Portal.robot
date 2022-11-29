@@ -33,7 +33,7 @@ Em Layout do Portal, Página Inicial, em Descrição do Processo, inserir "${des
     Input Text    txtDescricao    ${descricaoProcesso}
 
 Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir uma imagem
-    Choose File   fupArquivoWeb    C:\\Users\\amanda.diniz\\Desktop\\Gier-TesteVersaoWeb\\4-Arquivos\\teste-banner.jpg
+    Choose File   fupArquivoWeb    ${path}\\teste-banner.jpg
     Aguardar tela de carregamento
 
 Em Layout do Portal, Página Inicial, no Banner Inicial Web, inserir a data "${data}"
@@ -45,7 +45,7 @@ Em Layout do Portal, Página Inicial, no Banner Inicial Web, clicar em Inserir
     Aguardar tela de carregamento
 
 Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir uma imagem
-    Choose File   fupArquivoMobile    C:\\Users\\amanda.diniz\\Desktop\\Gier-TesteVersaoWeb\\4-Arquivos\\teste-banner.jpg
+    Choose File   fupArquivoMobile    ${path}\\teste-banner.jpg
     Aguardar tela de carregamento
 
 Em Layout do Portal, Página Inicial, no Banner Inicial Móvel, inserir a data "${data}"

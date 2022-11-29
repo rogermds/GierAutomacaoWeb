@@ -19,7 +19,7 @@ ${campoNomeCadastroPessoa}                    cphContent_ucDadosPessoais_txtNome
 
 *** Keywords ***
 Entrar no Portal 
-    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/index.html"
+    Acessar o ambiente "http://portal.qa.gier.intranet.local/PortalGuarulhosQA/"
     Aguardar carregamento Portal
 
 No Portal, clicar em "${etapa}"

@@ -108,6 +108,7 @@ No Portal, clicar nos campos de declarações
     Click Element    chkLgpd
     Sleep    1
     Aguardar carregamento Portal
+    Sleep    5
 
 No Portal, em Cadastro do Responsável, em CPF, inserir um CPF inválido
     Wait Until Element Is Visible    txtRCpf
