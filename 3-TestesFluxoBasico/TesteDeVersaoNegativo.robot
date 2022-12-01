@@ -12,7 +12,7 @@ Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/ProvaOnline.ro
 Resource         ../2-PageElements/FluxosAlternativos/Avaliacaoes/Educandos.robot
 Resource         ../2-PageElements/FluxosAlternativos/BoletimEscolar/BoletimEscolar.robot
 Resource         ../2-PageElements/FluxosAlternativos/ControleDiarioDeFrequencia/ControleDiarioDeFrequencia.robot
-Resource         ../2-PageElements/FluxosAlternativos/HistoricoEscolar.robot/HistoricoEscolar.robot
+Resource         ../2-PageElements/FluxosAlternativos/HistoricoEscolar/HistoricoEscolar.robot    
 Resource         ../2-PageElements/FluxosAlternativos/Login/Login.robot
 Resource         ../2-PageElements/FluxosAlternativos/Login/EsqueciMinhaSenha.robot
 Resource         ../2-PageElements/FluxosAlternativos/Login/Estrutura.robot
@@ -1327,7 +1327,7 @@ Cenário 42: Avaliação Educacional
     Em Educandos, salvar o número do Livro RM
     Em Educandos, clicar no perfil e em Sair
     Entrar com as credenciais do aluno
-    Clicar na Prova "Avaliação Teste - Automação"
+    Clicar na Prova "Avaliação Teste Matemática - Automação"
     Na Prova, na Pergunta 1, clicar na Resposta A
     Na Prova, clicar em Avançar
     Na Prova, na Pergunta 2, clicar na Resposta B
@@ -1769,14 +1769,6 @@ Cenário 48: Portal de Inscrição - Fundamental Inicial
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "CPF não informado"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "401.360.618-69"
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
-    No Portal, visualizar a mensagem "Data de Nascimento inválida"
-    No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
-    No Portal, fechar o modal
     No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "234.981.750-41"
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
@@ -1793,7 +1785,7 @@ Cenário 48: Portal de Inscrição - Fundamental Inicial
     No Portal, em Cadastro do Aluno, em RNE, inserir um RNE válido
     No Portal, em Contato, em Telefone 1, inserir um telefone válido
     No Portal, clicar nos campos de declarações
-    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, visualizar a mensagem "já está inscrito(a) na rede de ensino!"
     No Portal, fechar o modal
 
  

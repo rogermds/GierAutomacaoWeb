@@ -51,7 +51,7 @@ Em Justificativas da Pré-Matrícula, em Justificativa, inserir a justificativa 
     Aguardar tela de carregamento
 
 Em Justificativas da Pré-Matrícula, clicar em Pesquisar
-    Wait Until Element Is Visible    btnPesquisar_busca
+    Wait Until Element Is Visible    btnPesquisar_busca    10
     Execute JavaScript  document.getElementById("btnPesquisar_busca").click();
     Aguardar tela de carregamento
     
