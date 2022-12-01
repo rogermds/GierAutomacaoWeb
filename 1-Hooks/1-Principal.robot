@@ -5,7 +5,8 @@ Library    RequestsLibrary
 
 *** Variable ***
 ### Alterar variável path para o caminho da pasta em sua máquina antes dos testes
-${path}                         C:\\Users\\rogerio.santos\\Desktop\\AutomacaoWebGier\\AutomacaoGierGRU_1.0\\4-Arquivos
+#${path}                         C:\\Users\\rogerio.santos\\Desktop\\AutomacaoWebGier\\AutomacaoGierGRU_1.0\\4-Arquivos
+${path}                          C:\\Users\\amanda.diniz\\Desktop\\RobotFramework\\AutomacaoWebGier-GRU\\4-Arquivos
 
 ${botaoCadastrar}               cphContent_btnCad   
 ${botaoPesquisar}               cphContent_btnPesquisar
@@ -30,6 +31,7 @@ ${campoIdentidade}              cphContent_txtIdentidade
 ${campoOrgaoEmissor}            cphContent_ddlOrgaoEmissor
 ${campoDataDeNascimento}        cphContent_txtDataNascimento
 &{body}                         acao=gerador_certidao       pontuacao=N     tipo_certidao=nascimento
+
 
 *** Keywords ***
 Abrir o navegador
@@ -174,3 +176,7 @@ Gerar Certidão de Nascimento Aleatório
     Create Session    certidao    https://www.4devs.com.br/
     ${certidao}    POST On Session    certidao    ferramentas_online.php     data=${body}
     Set Suite Variable    ${certidaoAleatoria}    ${certidao.json()}
+
+Clicar no campo com xPath "${xPath}"    
+    Execute JavaScript  xPathResult = document.evaluate("${xPath}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    Execute JavaScript  xPathResult.singleNodeValue.click()  

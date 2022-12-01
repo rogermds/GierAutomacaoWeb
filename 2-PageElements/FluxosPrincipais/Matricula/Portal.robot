@@ -73,7 +73,7 @@ No Portal, em Consultar Solicitação, no resultado clicar em Emitir 2ª Via
     Aguardar carregamento Portal
 
 No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Educação Infantil
-    Wait Until Page Contains    ${textoObsImportanteInfantil}
+    Wait Until Page Contains    ${textoObsImportanteInfantil}    5
 
 No Portal, no Comprovante, verificar se o texto foi salvo para a etapa Ensino Fundamental
     Wait Until Page Contains    ${textoObsImportanteFundamental}

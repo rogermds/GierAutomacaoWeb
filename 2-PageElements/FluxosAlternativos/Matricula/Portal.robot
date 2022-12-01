@@ -3,6 +3,7 @@ Resource    ../../../1-Hooks/1-Principal.robot
 Library     SeleniumLibrary
 Library     String
 Library     FakerLibrary     locale=pt_BR
+Library    XML
 
 *** Variables ***
 ${campoTipoEstabelecimentoEscolaMatricula}    cphContent_ddlTipoEstabelecimento
@@ -17,7 +18,7 @@ ${campoNomeCadastroPessoa}                    cphContent_ucDadosPessoais_txtNome
 
 *** Keywords ***
 Entrar no Portal 
-    Acessar o ambiente "https://guarulhosportalhomolog.gier.com.br/index.html"
+    Acessar o ambiente "http://portal.qa.gier.intranet.local/PortalGuarulhosQA/"
     Aguardar carregamento Portal
 
 No Portal, clicar em "${etapa}"
@@ -242,8 +243,16 @@ No Portal, em Contato, em Telefone 1, inserir um telefone válido
     Sleep    1
     Set Suite Variable    ${telefone1Aleatorio}    119${telefoneAleatorio}
     Click Element    txtTelefone1
-    Input Text    txtTelefone1    ${telefone1Aleatorio}
-    Sleep    1    
+    FOR    ${element}   IN RANGE  20
+    ${verificaCampo}    Run Keyword And Return Status    Textfield Value Should Be    txtTelefone1    (11) 9${telefoneAleatorio}        
+        IF    ${verificaCampo}    
+            Pass Execution    OK
+            Exit For Loop
+        ELSE    
+        Input Text    txtTelefone1    ${telefone1Aleatorio}
+        Sleep    2  
+        END
+    END
 
 No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "${nacionalidade}"
     Select From List By Label    ddlNacionalidade    ${nacionalidade}
