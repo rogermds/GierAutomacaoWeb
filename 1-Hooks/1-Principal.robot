@@ -5,6 +5,8 @@ Library    RequestsLibrary
 
 *** Variable ***
 ### Alterar variável path para o caminho da pasta em sua máquina antes dos testes
+### Deixar somente o seu path sem comentário 
+
 #${path}                         C:\\Users\\rogerio.santos\\Desktop\\AutomacaoWebGier\\AutomacaoGierGRU_1.0\\4-Arquivos
 ${path}                          C:\\Users\\amanda.diniz\\Desktop\\RobotFramework\\AutomacaoWebGier-GRU\\4-Arquivos
 
