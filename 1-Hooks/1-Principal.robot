@@ -54,9 +54,12 @@ Entrar no eixo "${nomeEixo}"
     Execute JavaScript  xPathResult.singleNodeValue.click()  
 
 Entrar no módulo "${nomeModulo}"
-    IF    '${nomeModulo}' == 'Gestão'
+    IF    '${pesquisaEstrutura}' == 'SECRETARIA' and '${nomeModulo}' == 'Gestão'
+        Execute JavaScript  xPathResult = document.evaluate("(//span[contains(@id,'9')][contains(.,'Gestão')])[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click()
+    ELSE IF    '${nomeModulo}' == 'Gestão'
         Execute JavaScript  xPathResult = document.evaluate("//span[contains(@id,'7')][contains(.,'Gestão')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-        Execute JavaScript  xPathResult.singleNodeValue.click()  
+        Execute JavaScript  xPathResult.singleNodeValue.click() 
     ELSE
         Execute JavaScript  xPathResult = document.evaluate("//span[contains(.,'${nomeModulo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
         Execute JavaScript  xPathResult.singleNodeValue.click()  

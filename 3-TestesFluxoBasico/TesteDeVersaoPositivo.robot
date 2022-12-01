@@ -7,6 +7,7 @@ Resource         ../2-PageElements/FluxosPrincipais/Turma/Turma.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliacoes e Frequencia/Avaliacoes e Frequencia.robot
 Resource         ../2-PageElements/FluxosPrincipais/Controle Diario de Frequencia/Controle Diário de Frequência.robot
 Resource         ../2-PageElements/FluxosPrincipais/Ata de Conselho/Ata de Conselho.robot
+Resource         ../2-PageElements/FluxosPrincipais/Calendário/Calendario.robot
 Resource         ../2-PageElements/FluxosPrincipais/Historico Escolar/Histórico Escolar.robot
 Resource         ../2-PageElements/FluxosPrincipais/Boletim Escolar/Boletim Escolar.robot
 Resource         ../2-PageElements/FluxosPrincipais/Prontuário da Turma/Prontuário da Turma.robot
@@ -480,7 +481,7 @@ Cenário EXTRA: Funcionalidade Gerir Lançamentos - EJA
     Em Gerir Lançamentos, clicar em OK no Modal
     Em Gerir Lançamentos, em Etapa/Modalidade, selecionar "Educação de Jovens e Adultos 1º Semestre"
     Em Gerir Lançamentos, clicar em Ações e Editar
-    Em Gerir Lançamentos, alterar as datas para "30112022"
+    Em Gerir Lançamentos, alterar as datas para "31122022"
     Clicar em Salvar Alterações
     Em Gerir Lançamentos, clicar em OK no Modal
 
@@ -647,7 +648,25 @@ Cenário 12: Funcionalidade Controle Diário de Frequência - Fundamental
     Clicar em Avaliações
     Verificar se aparece o texto "Avaliações e Frequências"
 
-## SE ESTIVER FORA DOS PARÂMETROS, EDITAR O CALENDARIO PARA INCLUIR O ANO INTEIRO
+Cenário Extra: Calendário EJA
+    [Documentation]    Esse teste efetua a configuração do calendário para que o teste
+    ...                de Frequencia EJA consiga abrir e fechar as aulas
+    [Tags]             Calendário - EJA | Fluxo Positivo
+    Acessar o ambiente "http://guarulhos.qa.gier.intranet.local/"
+    Entrar com as credenciais "gier@gieronline.com.br" e "123456789"
+    Verificar se aparece o texto "Estrutura"
+    Pesquisar "SECRETARIA" e selecionar o primeiro resultado
+    Verificar se aparece o texto "Operação"
+    Entrar no módulo "Gestão"
+    Entrar na funcionalidade "Calendário Escolar"
+    Em Calendário Escolar, em Etapa/Modalidade, selecionar "Educação de Jovens e Adultos 1º Semestre"
+    Em Calendário Escolar, selecionar o Calendário "CALENDÁRIO ESCOLAR SME 2022 - EJA 1°SEMESTR [INTEGRAL / MANHÃ / TARDE / NOITE / INTERMEDIÁRIO / MISTO]"
+    Em Calendário Escolar, clicar em Pesquisar
+    Em Calendário Escolar, clicar em Editar
+    Em Calendário Escolar, em Data de Fim, inserir "31/12/2022"
+    Em Calendário Escolar, clicar em Calcular Dias
+    Em Calendário Escolar, clicar em Salvar
+
 Cenário 13: Funcionalidade Controle Diário de Frequência - EJA
     [Documentation]    Esse teste verifica se é possível consultar e registrar frequencia, 
     ...                avaliação e campo de experiência  para a Etapa EJA
@@ -663,7 +682,12 @@ Cenário 13: Funcionalidade Controle Diário de Frequência - EJA
     No controle de frequência, em Professor, selecionar "DAIANE LINO SALVADOR"
     No controle de frequência, em Turma, selecionar "CI A"
     Clicar em Pesquisar
-    Iniciar as aulas para os 4 últimos dias da semana
+    Iniciar as aulas na semana para a Etapa EJA
+    Registrar faltas para os 2 primeiros alunos frequentes
+    Clicar em Pesquisar
+    Verificar se o primeiro aluno possui 4 faltas e frequencia 0
+    Verificar se o segundo aluno possui 3 faltas e frequencia 25
+    Verificar se um aluno que não esteja matriculado possui as faltas bloqueadas
     No primeiro aluno, clicar em Diário de Bordo do Aluno
     Em Diário do Educando, em Tipo de Avaliação, selecionar "SAÚDE LEVE"
     Em Diário do Educando, em Título, inserir "PASSOU MAL COM DOR DE ESTOMAGO"

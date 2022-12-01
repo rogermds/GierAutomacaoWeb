@@ -7,6 +7,7 @@ ${primeiroResultadoEstrutura}     //html[1]/body[1]/form[1]/div[3]/div[1]/div[1]
 
 *** Keywords ***
 Pesquisar "${pesquisaEstrutura}" e selecionar o primeiro resultado
+    Set Test Variable    ${pesquisaEstrutura}
     Input Text  ${campoPesquisaEstrutura}    ${pesquisaEstrutura}
     Click Element  ${primeiroResultadoEstrutura}
 

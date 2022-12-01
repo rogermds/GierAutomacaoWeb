@@ -38,6 +38,39 @@ No controle de frequência, em Turma, selecionar "${turma}"
 No controle de frequência, em Data Referência, insira "${data}"
     Input Text    ${campoDataFrequencia}    ${data}
 
+Iniciar as aulas na semana para a Etapa EJA
+    Wait Until Element Is Enabled     cphContent_dtlDiaSemanaLabel_lkbIniciar_6
+        
+    Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_6").click();
+    Aguardar tela de carregamento
+    Wait Until Element Is Visible    cphContent_IniciarAula_btnIniciarAula
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_checkBoxTodos_0").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
+    Aguardar tela de carregamento
+
+
+    Wait Until Element Is Enabled     cphContent_dtlDiaSemanaLabel_lkbIniciar_5
+    Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_5").click();
+    Aguardar tela de carregamento
+    Wait Until Element Is Visible    cphContent_IniciarAula_btnIniciarAula
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
+    Aguardar tela de carregamento
+
+    Wait Until Element Is Enabled     cphContent_dtlDiaSemanaLabel_lkbIniciar_4
+    Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_4").click();
+    Aguardar tela de carregamento
+    Wait Until Element Is Visible    cphContent_IniciarAula_btnIniciarAula
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
+    Aguardar tela de carregamento
+
+    Wait Until Element Is Enabled     cphContent_dtlDiaSemanaLabel_lkbIniciar_3
+    Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_3").click();
+    Aguardar tela de carregamento
+    Wait Until Element Is Visible    cphContent_IniciarAula_btnIniciarAula
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
+    Aguardar tela de carregamento
+
 Iniciar as aulas na semana
     Wait Until Element Is Enabled     cphContent_dtlDiaSemanaLabel_lkbIniciar_6
         
@@ -184,7 +217,6 @@ Iniciar as aulas nos 4 últimos dias da semana
     Aguardar tela de carregamento
 
 Retirar as faltas marcadas, caso houver
-    Wait Until Element Is Visible    cphContent_dtlFrequencia_liNChamada_0
     FOR    ${indexAlunos}    IN RANGE    0    6
         ${buscaAlunoFrequente}    Run Keyword And Return Status    Element Attribute Value Should Be    cphContent_dtlFrequencia_liNChamada_${indexAlunos}    style    width: 25px; text-align: center; background-color: rgb(10, 150, 13); padding-left: 0px !important;
         IF    ${buscaAlunoFrequente}
@@ -214,6 +246,24 @@ Cancelar as aulas abertas, caso houver
     Aguardar tela de carregamento
     Sleep    5
 
+Registrar faltas para os 2 primeiros alunos frequentes
+    @{reverse_list1}    Evaluate  list(range(6,2,-1))
+    FOR    ${reverseNumber}    IN    @{reverse_list1}
+        Sleep    1
+        Execute JavaScript  document.getElementById("cphContent_dtlFrequencia_dtlDiaSemana_0_dtlMarcarAulas_${reverseNumber}_btnFrequencia_0").click();
+        Aguardar tela de carregamento        
+    END
+
+    @{reverse_list2}    Evaluate  list(range(6,3,-1))
+    FOR    ${reverseNumber}    IN    @{reverse_list2}
+        Sleep    1
+        Execute JavaScript  document.getElementById("cphContent_dtlFrequencia_dtlDiaSemana_1_dtlMarcarAulas_${reverseNumber}_btnFrequencia_0").click();
+        Aguardar tela de carregamento        
+    END
+
+    Sleep    6
+
+
 Registrar faltas para os 4 primeiros alunos frequentes
     @{reverse_list1}    Evaluate  list(range(6,2,-1))
     FOR    ${reverseNumber}    IN    @{reverse_list1}
@@ -237,13 +287,14 @@ Registrar faltas para os 4 primeiros alunos frequentes
     END
 
     Sleep    1
-    Execute JavaScript  document.getElementById("cphContent_dtlFrequencia_dtlDiaSemana_3_dtlMarcarAulas_${reverseNumber}_btnFrequencia_0").click();
+    Execute JavaScript  document.getElementById("cphContent_dtlFrequencia_dtlDiaSemana_3_dtlMarcarAulas_6_btnFrequencia_0").click();
     Aguardar tela de carregamento 
 
-    Sleep    3       
+    Sleep    6
 
 
 Verificar se o primeiro aluno possui 4 faltas e frequencia 0
+    Wait Until Element Is Visible    cphContent_dtlFrequencia_lblTotalFaltas_0
     Element Text Should Be    cphContent_dtlFrequencia_lblTotalFaltas_0    4
     Element Text Should Be    cphContent_dtlFrequencia_lblPercentualLi_0    0
 
@@ -354,9 +405,15 @@ Em Eixo, selecionar a segunda opção
     Aguardar tela de carregamento
 
 Em Unidade Temática, selecionar a primeira opção
-    Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_ddlUnidadeTematica').val("217").trigger('chosen:updated');
-    Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_ddlUnidadeTematica').trigger('change');
-    Aguardar tela de carregamento
+    IF    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'
+        Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_ddlUnidadeTematica').val("217").trigger('chosen:updated');
+        Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_ddlUnidadeTematica').trigger('change');
+        Aguardar tela de carregamento
+    ELSE IF    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'
+        Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_ddlUnidadeTematica').val("377").trigger('chosen:updated');
+        Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_ddlUnidadeTematica').trigger('change');
+        Aguardar tela de carregamento
+    END
 
 Em Unidade Temática, selecionar a segunda opção
     Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_ddlUnidadeTematica').val("219").trigger('chosen:updated');
@@ -387,7 +444,7 @@ Em Campo de Experiencia, selecionar a segunda opção
 
 Em Saberes, selecionar a primeira opção
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'    Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_lbSaberes').val("8775").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'    Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_lbSaberes').val("14101").trigger('chosen:updated');
+    Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'    Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_lbSaberes').val("28341").trigger('chosen:updated');
     Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_lbSaberes').trigger('change');
     Aguardar tela de carregamento
 
@@ -398,7 +455,7 @@ Em Saberes, selecionar a segunda opção
 
 Em Aprendizagem, selecionar a primeira opção
     Run Keyword If    '${etapaModalidade}' == 'EDUCAÇÃO INFANTIL'    Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_lbAprendizagem').val("18025").trigger('chosen:updated');
-    Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'    Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_lbAprendizagem').val("23207").trigger('chosen:updated');
+    Run Keyword If    '${etapaModalidade}' == 'ENSINO FUNDAMENTAL'    Execute JavaScript   $('#cphContent_CadastroRegistroAulaDinamico_lbAprendizagem').val("240647").trigger('chosen:updated');
     Aguardar tela de carregamento
 
 Em Aprendizagem, selecionar a segunda opção
@@ -444,10 +501,19 @@ Desmarcar as faltas registradas
     Retirar as faltas marcadas, caso houver
 
 Verificar se os campos de faltas foram bloqueados
-    Element Should Be Disabled    cphContent_dtlFrequencia_dtlDiaSemana_0_dtlMarcarAulas_6_btnFrequencia_0
-    Element Should Be Disabled    cphContent_dtlFrequencia_dtlDiaSemana_1_dtlMarcarAulas_5_btnFrequencia_0
-    Element Should Be Disabled    cphContent_dtlFrequencia_dtlDiaSemana_2_dtlMarcarAulas_4_btnFrequencia_0
-    Element Should Be Disabled    cphContent_dtlFrequencia_dtlDiaSemana_3_dtlMarcarAulas_6_btnFrequencia_0
+    Element Attribute Value Should Be    cphContent_dtlFrequencia_dtlDiaSemana_0_dtlMarcarAulas_6_btnFrequencia_0    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaDesabilitada.png"); border: none; height: 22px; width: 22px;
+    Element Attribute Value Should Be    cphContent_dtlFrequencia_dtlDiaSemana_0_dtlMarcarAulas_5_btnFrequencia_0    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaDesabilitada.png"); border: none; height: 22px; width: 22px;
+    Element Attribute Value Should Be    cphContent_dtlFrequencia_dtlDiaSemana_0_dtlMarcarAulas_4_btnFrequencia_0    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaDesabilitada.png"); border: none; height: 22px; width: 22px;
+    Element Attribute Value Should Be    cphContent_dtlFrequencia_dtlDiaSemana_0_dtlMarcarAulas_3_btnFrequencia_0    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaDesabilitada.png"); border: none; height: 22px; width: 22px;
+    
+    Element Attribute Value Should Be    cphContent_dtlFrequencia_dtlDiaSemana_1_dtlMarcarAulas_6_btnFrequencia_0    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaDesabilitada.png"); border: none; height: 22px; width: 22px;
+    Element Attribute Value Should Be    cphContent_dtlFrequencia_dtlDiaSemana_1_dtlMarcarAulas_5_btnFrequencia_0    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaDesabilitada.png"); border: none; height: 22px; width: 22px;
+    Element Attribute Value Should Be    cphContent_dtlFrequencia_dtlDiaSemana_1_dtlMarcarAulas_4_btnFrequencia_0    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaDesabilitada.png"); border: none; height: 22px; width: 22px;
+
+    Element Attribute Value Should Be    cphContent_dtlFrequencia_dtlDiaSemana_2_dtlMarcarAulas_6_btnFrequencia_0    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaDesabilitada.png"); border: none; height: 22px; width: 22px;
+    Element Attribute Value Should Be    cphContent_dtlFrequencia_dtlDiaSemana_2_dtlMarcarAulas_5_btnFrequencia_0    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaDesabilitada.png"); border: none; height: 22px; width: 22px;
+    
+    Element Attribute Value Should Be    cphContent_dtlFrequencia_dtlDiaSemana_3_dtlMarcarAulas_6_btnFrequencia_0    style    background-image: url("../../Recursos/images/Frequencia/btnFaltaDesabilitada.png"); border: none; height: 22px; width: 22px;
 
 Clicar em Avaliações
     Execute JavaScript   document.getElementById("cphContent_btnAvaliacoes").click();
