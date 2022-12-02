@@ -33,6 +33,8 @@ ${campoIdentidade}              cphContent_txtIdentidade
 ${campoOrgaoEmissor}            cphContent_ddlOrgaoEmissor
 ${campoDataDeNascimento}        cphContent_txtDataNascimento
 &{body}                         acao=gerador_certidao       pontuacao=N     tipo_certidao=nascimento
+${campoPesquisaEstrutura}               //input[contains(@class,'textBuscaEstrutura')]
+${primeiroResultadoEstrutura}           //html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]
 
 
 *** Keywords ***
@@ -52,6 +54,11 @@ Aguardar tela de carregamento
 
 Verificar se aparece o texto "${texto}"
     Wait Until Page Contains    ${texto}    20
+
+Pesquisar "${pesquisaEstrutura}" e selecionar o primeiro resultado
+    Set Test Variable    ${pesquisaEstrutura}   
+    Input Text  ${campoPesquisaEstrutura}    ${pesquisaEstrutura}
+    Click Element  ${primeiroResultadoEstrutura}
 
 Entrar no eixo "${nomeEixo}"
     Execute JavaScript  xPathResult = document.evaluate("//div[@class='divEixo'][contains(.,'${nomeEixo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);

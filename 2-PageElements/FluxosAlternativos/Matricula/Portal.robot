@@ -242,9 +242,9 @@ No Portal, em Contato, em Telefone 1, inserir um telefone válido
     ${telefoneAleatorio}    Random Number   8    True
     Sleep    1
     Set Suite Variable    ${telefone1Aleatorio}    119${telefoneAleatorio}
-    Click Element    txtTelefone1
+    Click Element    txtTelefone1       
     FOR    ${element}   IN RANGE  20
-    ${verificaCampo}    Run Keyword And Return Status    Textfield Value Should Be    txtTelefone1    (11) 9${telefoneAleatorio}        
+    ${verificaCampo}    Run Keyword And Return Status    Textfield Value Should Be    txtTelefone1    (11) 9${telefoneAleatorio} 
         IF    ${verificaCampo}    
             Pass Execution    OK
             Exit For Loop
