@@ -54,6 +54,10 @@ Iniciar as aulas na semana para a Etapa EJA
     Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_5").click();
     Aguardar tela de carregamento
     Wait Until Element Is Visible    cphContent_IniciarAula_btnIniciarAula
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_checkBoxTodos_0").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_checkBoxTodos_0").click();
+    Aguardar tela de carregamento
     Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
     Aguardar tela de carregamento
 
@@ -61,6 +65,10 @@ Iniciar as aulas na semana para a Etapa EJA
     Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_4").click();
     Aguardar tela de carregamento
     Wait Until Element Is Visible    cphContent_IniciarAula_btnIniciarAula
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_checkBoxTodos_0").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_checkBoxTodos_0").click();
+    Aguardar tela de carregamento
     Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
     Aguardar tela de carregamento
 
@@ -68,6 +76,10 @@ Iniciar as aulas na semana para a Etapa EJA
     Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_3").click();
     Aguardar tela de carregamento
     Wait Until Element Is Visible    cphContent_IniciarAula_btnIniciarAula
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_checkBoxTodos_0").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_checkBoxTodos_0").click();
+    Aguardar tela de carregamento
     Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
     Aguardar tela de carregamento
 
@@ -157,6 +169,65 @@ Iniciar as aulas para os 4 últimos dias da semana
     Execute JavaScript  document.getElementById("cphContent_IniciarAula_checkBoxTodos_0").click();
     Aguardar tela de carregamento
     Execute JavaScript  document.getElementById("cphContent_IniciarAula_checkBoxTodos_0").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
+    Aguardar tela de carregamento
+
+Cancelar as aulas que foram registradas no EJA
+    @{reverse_list1}    Evaluate  list(range(6,2,-1))
+    FOR    ${reverseNumber}    IN    @{reverse_list1}
+        Sleep    1
+        Execute JavaScript  document.getElementById("cphContent_dtlFrequencia_dtlDiaSemana_0_dtlMarcarAulas_${reverseNumber}_btnFrequencia_0").click();
+        Aguardar tela de carregamento        
+    END
+
+    @{reverse_list2}    Evaluate  list(range(6,3,-1))
+    FOR    ${reverseNumber}    IN    @{reverse_list2}
+        Sleep    1
+        Execute JavaScript  document.getElementById("cphContent_dtlFrequencia_dtlDiaSemana_1_dtlMarcarAulas_${reverseNumber}_btnFrequencia_0").click();
+        Aguardar tela de carregamento        
+    END
+
+    Sleep    6
+
+    Wait Until Element Is Enabled     cphContent_dtlDiaSemanaLabel_lkbIniciar_6
+        
+    Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_6").click();
+    Aguardar tela de carregamento
+    Wait Until Element Is Visible    cphContent_IniciarAula_btnIniciarAula
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_chkHorarios_0").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_chkHorarios_1").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
+    Aguardar tela de carregamento
+
+    Wait Until Element Is Enabled     cphContent_dtlDiaSemanaLabel_lkbIniciar_5
+    Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_5").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_chkHorarios_0").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_chkHorarios_1").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
+    Aguardar tela de carregamento
+
+    Wait Until Element Is Enabled     cphContent_dtlDiaSemanaLabel_lkbIniciar_4
+    Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_4").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_chkHorarios_0").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_chkHorarios_1").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
+    Aguardar tela de carregamento
+
+    Wait Until Element Is Enabled     cphContent_dtlDiaSemanaLabel_lkbIniciar_3
+    Execute JavaScript  document.getElementById("cphContent_dtlDiaSemanaLabel_lkbIniciar_3").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_chkHorarios_0").click();
+    Aguardar tela de carregamento
+    Execute JavaScript  document.getElementById("cphContent_IniciarAula_chkHorarios_1").click();
     Aguardar tela de carregamento
     Execute JavaScript  document.getElementById("cphContent_IniciarAula_btnIniciarAula").click();
     Aguardar tela de carregamento

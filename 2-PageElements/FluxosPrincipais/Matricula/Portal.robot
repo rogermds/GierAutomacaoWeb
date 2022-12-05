@@ -94,7 +94,15 @@ No Portal, em Escolha da Escola, em Data de Nascimento, inserir "${dataNasciment
 No Portal, em Escolha da Escola, em Data de Nascimento, inserir a data de nascimento cadastrada
     Sleep    1
     Wait Until Element Is Visible    busca-nascimento
-    Input Text    busca-nascimento    ${dataNascimento}
+    FOR    ${element}    IN RANGE    20
+    ${verificaCampo}    Run Keyword And Return Status    Textfield Value Should Be    busca-nascimento    ${dataNascimento}
+        IF    ${verificaCampo}
+            Pass Execution    Campo foi preenchido corretamente!
+            Exit For Loop
+        ELSE
+            Input Text    busca-nascimento    ${dataNascimento}
+        END        
+    END
 
 No Portal, em Escolha da Escola, em CEP, inserir "${cep}"
     Input Text    busca-cep    ${cep}
@@ -203,7 +211,16 @@ No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleat�
 No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "${dataNascimentoResponsavel}"
     Sleep    1
     Set Suite Variable    ${dataNascimentoResponsavel}
-    Input Text   txtRDataNascimento    ${dataNascimentoResponsavel}
+    FOR    ${element}    IN RANGE    20
+        ${verificaCampo}    Run Keyword And Return Status    Textfield Value Should Be    txtRDataNascimento    ${dataNascimentoResponsavel}
+        IF    ${verificaCampo}
+            Pass Execution    Campo preenchido corretamente
+            Exit For Loop
+        ELSE
+            Input Text   txtRDataNascimento    ${dataNascimentoResponsavel}
+        END
+        
+    END
 
 No Portal, em Cadastro do Responsável, em Sexo, inserir "${sexo}"
     Select From List By Label    ddlRSexo    ${sexo}

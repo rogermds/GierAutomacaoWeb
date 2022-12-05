@@ -231,7 +231,6 @@ Em Gestão de Pré-Matrícula, em '${processo}', verificar se o aluno entrou em 
         END
     END
 
-
 Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Registro de Atendimento
     Execute JavaScript  xPathResult = document.evaluate("//input[@name='ctl00$cphContent$dtlConsulta$ctl00$A2'][contains(@id,'0')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click() 

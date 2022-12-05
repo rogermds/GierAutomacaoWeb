@@ -704,7 +704,7 @@ Cenário 13: Funcionalidade Controle Diário de Frequência - EJA
     Em Diário do Educando, clicar em OK no modal
     Em Diário do Educando, verificar se o card foi removido histórico
     Clicar em Voltar
-    Cancelar as aulas que foram registradas
+    Cancelar as aulas que foram registradas no EJA
     Clicar em Avaliações
     Verificar se aparece o texto "Avaliações e Frequências"
 
@@ -4642,7 +4642,7 @@ Cenário 67: Funcionalidade Gestão de Pré-Matrícula: Ações - Escola
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão Escolar"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Creche-Bercário I"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
     Em Gestão de Pré-Matrícula, no Resultado, clicar em Ações e Registro de Atendimento
@@ -4686,7 +4686,7 @@ Cenário 68: Funcionalidade Gestão de Pré-Matrícula: Ações - Secretaria
     Verificar se aparece o texto "Operação"
     Entrar no módulo "Gestão de Educandos"
     Entrar na funcionalidade "Gestão de Pré-matrícula"
-    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Ciclo II-5º Ano"
+    Em Gestão de Pré-Matrícula, em Ciclo Destino, selecionar "Creche-Bercário I"
     Em Gestão de Pré-Matrícula, em Escola Destino, selecionar "EPG ALFREDO VOLPI"
     Em Gestão de Pré-Matrícula, em Situação, selecionar "Aguardando Análise"
     Em Gestão de Pré-Matrícula, clicar em Pesquisar
