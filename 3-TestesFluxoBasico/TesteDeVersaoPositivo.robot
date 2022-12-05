@@ -1,7 +1,6 @@
 *** Settings ***
 Resource         ../1-Hooks/1-Principal.robot
 Resource         ../2-PageElements/FluxosPrincipais/Login/Login.robot
-Resource         ../2-PageElements/FluxosPrincipais/Seleção de Estrutura/Seleção de Estrutura.robot
 Resource         ../2-PageElements/FluxosPrincipais/Pessoa/Pessoa.robot
 Resource         ../2-PageElements/FluxosPrincipais/Turma/Turma.robot
 Resource         ../2-PageElements/FluxosPrincipais/Avaliacoes e Frequencia/Avaliacoes e Frequencia.robot
@@ -6044,7 +6043,7 @@ Cenário 89: Lançamento Individualizado
     Verificar se aparece o texto "Estrutura"
     Pesquisar "SECRETARIA" e selecionar o primeiro resultado
     Entrar no módulo "Operação"
-    Entrar no módulo "Gestão de Avaliações"
+    Entrar no módulo "Avaliação Educacional"
     Entrar na funcionalidade "Lançamento Individualizado"
     Em Lançamento Individualizado, clicar em Cadastrar
     Em Lançamento Individualizado, selecionar a unidade escolar "EPG ALFREDO VOLPI"

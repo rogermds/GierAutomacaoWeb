@@ -21,49 +21,55 @@ Na Prova, na Pergunta 1, clicar na Resposta A
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[1]
     Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click();
-    Sleep    1
+    Sleep    3
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 2, clicar na Resposta B
-    Wait Until Element Is Visible    (//input[contains(@type,'radio')])[2]
+    Wait Until Element Is Visible    (//input[contains(@type,'radio')])[2] 
+    Sleep    3   
     Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[2]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click();
-    Sleep    1
+    Sleep    3
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 3, clicar na Resposta C
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[3]
+    Sleep    3 
     Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[3]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click();
-    Sleep    1
+    Sleep    3
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 4, clicar na Resposta D
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[4]
+    Sleep    3
     Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[4]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click();
-    Sleep    1
+    Sleep    3
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 5, clicar na Resposta C
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[3]
+    Sleep    3
     Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[3]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click();
-    Sleep    1
+    Sleep    3
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 6, clicar na Resposta B
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[2]
+    Sleep    3
     Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[2]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click();
-    Sleep    1
+    Sleep    3
     Aguardar tela de carregamento
 
 Na Prova, na Pergunta 7, clicar na Resposta A
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[1]
+    Sleep    3
     Execute JavaScript  xPathResult = document.evaluate("(//input[contains(@type,'radio')])[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click();
-    Sleep    1
+    Sleep    3
     Aguardar tela de carregamento
 
 Na Prova, clicar em Avançar
@@ -89,7 +95,7 @@ Na Prova, clicar em Navegue no questionário
 Na Prova, verificar se as questões 3, 2 e 1 estão em azul
     Element Attribute Value Should Be    //div[@onclick='SalvaResposta(false, 1)']    class    col-3 col-sm-2 col-lg-1 questao-respondida
     Element Attribute Value Should Be    //div[@onclick='SalvaResposta(false, 2)']    class    col-3 col-sm-2 col-lg-1 questao-respondida
-    Sleep    1
+    Sleep    3
     Element Attribute Value Should Be    //div[@onclick='SalvaResposta(false, 3)']    class    col-3 col-sm-2 col-lg-1 questao-respondida
 
 Na Prova, verificar se as questões 4, 5, 6 e 7 estão em cinza
@@ -106,5 +112,5 @@ Na Prova, clicar em Sair
     Aguardar tela de carregamento
 
 Na Prova, verificar o campo da prova foi desativado
-    Element Attribute Value Should Be    //a[contains(.,'Avaliação Teste - Automação')]    class    aspNetDisabled
+    Element Attribute Value Should Be    //a[contains(.,'Avaliação Teste Matemática - Automação')]    class    aspNetDisabled
 

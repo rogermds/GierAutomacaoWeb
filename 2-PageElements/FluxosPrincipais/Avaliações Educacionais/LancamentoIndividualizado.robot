@@ -84,7 +84,8 @@ Em Lançamento Individualizado, verificar se a questão foi limpa
     END
 
 Em Lançamento Individualizado, anexar um arquivo e clicar em Anexar
-    Choose File    cphContent_fuDocumento    C:\\Users\\rogerio.santos\\Desktop\\AUTOMAÇÃO WEB - GIER\\Automação - Teste De Versão Gier\\4-Arquivos\\ARQUIVO TESTE PDF.pdf
+    #Choose File    cphContent_fuDocumento    C:\\Users\\rogerio.santos\\Desktop\\AUTOMAÇÃO WEB - GIER\\Automação - Teste De Versão Gier\\4-Arquivos\\ARQUIVO TESTE PDF.pdf
+    Choose File     cphContent_fuDocumento     C:\\Users\\amanda.diniz\\Desktop\\RobotFramework\\AutomacaoWebGier-GRU\\4-Arquivos\\ARQUIVO TESTE PDF.pdf
     Execute JavaScript  document.getElementById("cphContent_btnIncluirDocumento").click();
     Aguardar tela de carregamento
 

@@ -1826,15 +1826,8 @@ Cenário 48: Portal de Inscrição - EJA Inicial
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "CPF não informado"
     No Portal, fechar o modal
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
     No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "401.360.618-69"
-    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
-    No Portal, visualizar a mensagem "Data de Nascimento inválida"
-    No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
-    No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "257.158.308-50"
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
     No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "GUARULHOS"
@@ -1878,6 +1871,7 @@ Cenário 49: Portal de Inscrição - Infantil Contínuo
     [Documentation]    Esse teste verifica se é possível realizar uma 
     ...                solicitação para a etapa Infantil
     [Tags]             Portal de Inscrição | Fluxo Negativo
+    Entrar no Portal
     No Portal, clicar em "Educação Infantil"
     No Portal, selecionar o processo para a etapa "INFANTIL CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
@@ -2213,10 +2207,49 @@ Cenário 51: Portal de Inscrição - EJA Contínuo
     No Portal, clicar em "Educação de Jovens e Adultos"
     No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
     No Portal, clicar em Iniciar inscrição
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1993"
+    No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
+    No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
+    No Portal, clicar em Pesquisar Escolas
+    No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
+    No Portal, em Ano/Ciclo selecionar "Ciclo II"
+    No Portal, clicar em Solicitar Vaga
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, em Cadastro do Aluno, em Grau de Parentesco, inserir "Mãe"
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade de Nascimento, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em CPF, inserir um CPF válido
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir um nome aleatório
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão válida
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "08/03/1993"
+    No Portal, em Cadastro do Aluno, em UF da Certidão, selecionar "SP"
+    No Portal, em Cadastro do Aluno, em Cidade do Cartório, selecionar "GUARULHOS"
+    No Portal, em Cadastro do Aluno, em Cartório, inserir "CARTÓRIO TESTE"
+    No Portal, em Cadastro do Aluno, em Distrito, inserir "DISTRITO TESTE"
+    No Portal, em Cadastro do Aluno, em Comarca, inserir "COMARCA TESTE"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações
+    No Portal, clicar em Concluir Inscrição
+    No Portal, verificar se o comprovante é exibido em tela
+    No Portal, gravar o número de protocolo gerado
+
+    Entrar no Portal 
+    No Portal, clicar em "Educação de Jovens e Adultos"
+    No Portal, selecionar o processo para a etapa "EJA 2º SEMESTRE CONTÍNUO"
+    No Portal, clicar em Iniciar inscrição
     No Portal, em Escolha da Escola, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "Data de Nascimento inválida"
     No Portal, fechar o modal
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2013"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/2018"
     No Portal, em Escolha da Escola, em CEP, inserir "07032-000"
     No Portal, em Escolha da Escola, em Número da Residência, inserir "33"
     No Portal, clicar em Pesquisar Escolas
@@ -2226,9 +2259,8 @@ Cenário 51: Portal de Inscrição - EJA Contínuo
     No Portal, visualizar a mensagem "Não foi possível localizar a coordenada para listar escolas"
     No Portal, fechar o modal
     No Portal, em Escolha da Escola, em CEP, inserir "07123-140"
-    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Escolha da Escola, em Data de Nascimento, inserir "07/03/1993"
     No Portal, clicar em Pesquisar Escolas
-    No Portal, verificar se o botão Selecionar Escolas está desativado
     No Portal, selecionar a escola "EPG CRISPINIANO SOARES"
     No Portal, em Ano/Ciclo selecionar "Ciclo II"
     No Portal, clicar em Solicitar Vaga
@@ -2241,14 +2273,44 @@ Cenário 51: Portal de Inscrição - EJA Contínuo
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "CPF não informado"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "401.360.618-69"
+    No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "40136061869"
     No Portal, em Cadastro do Responsável, em Nome Completo, inserir um nome aleatório
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
     No Portal, visualizar a mensagem "Data de Nascimento inválida"
     No Portal, fechar o modal
     No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
-    No Portal, visualizar a mensagem "Não é possível continuar com a inscrição"
+    No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
+    No Portal, em Cadastro do Responsável, em Cidade de Nascimento, selecionar "SAO PAULO"
+    No Portal, em Cadastro do Responsável, em Nome Completo, inserir o nome "AMANDA SANTOS"
+    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "07/03/1996"
+    No Portal, em Cadastro do Responsável, em Sexo, inserir "Feminino"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
     No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Nacionalidade, selecionar "Brasileira"
+    No Portal, em Cadastro do Aluno, em Nome Completo, inserir o nome cadastrado
+    No Portal, em Cadastro do Aluno, em Sexo, inserir "Masculino"
+    No Portal, em Cadastro do Aluno, em Certidão de Nascimento, clicar em Nova
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir uma certidão inválida
+    No Portal, visualizar a mensagem "Número de Certidão de Nascimento Inválido"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Matrícula Certidão, inserir a certidão cadastrada
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "00/00/0000"
+    No Portal, em Contato, em Telefone 1, inserir um telefone válido
+    No Portal, clicar nos campos de declarações 
+    No Portal, visualizar a mensagem "Data de Emissão da Certidão é inválida"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "24041990"
+    No Portal, clicar nos campos de declarações 
+    No Portal, visualizar a mensagem "Data de Emissão da Certidão de Nascimento não pode ser menor que a Data de Nascimento"
+    No Portal, fechar o modal
+    No Portal, em Cadastro do Aluno, em Data de Emissão da Certidão, inserir "08/03/1996"
+    No Portal, clicar nos campos de declarações
+    No Portal, visualizar a mensagem "Você não pode realizar uma nova inscrição, Aluno já possui uma inscrição ativa."
+    No Portal, fechar o modal
+
+
 
 Cenário 52: Funcionalidade Gier - Portal: Cancelado - Infantil Contínuo
     [Documentation]    Esse teste efetua a solicitação e consulta de matrícula

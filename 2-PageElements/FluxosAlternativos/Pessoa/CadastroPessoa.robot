@@ -4,8 +4,6 @@ Library    FakerLibrary    locale=pt-BR
 Resource    ../../../1-Hooks/1-Principal.robot
 
 *** Variables ***
-${campoPesquisaEstrutura}               //input[contains(@class,'textBuscaEstrutura')]
-${primeiroResultadoEstrutura}           //html[1]/body[1]/form[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]
 ${campoNomePessoa}                      cphContent_ucDadosPessoais_txtNomeCompleto
 ${campoDataNascimento}                  txtDNasc      
 ${campoSexoPessoa}                      cphContent_ucDadosPessoais_ddlSexo
@@ -36,10 +34,6 @@ ${botaoVisualizarPessoa}          cphContent_dtlConsultaPessoa_lkbVisualizar_0
 ${campoLocalizacaoDifereciada}    cphContent_ucEnderecos_ddlLocalizacaoDiferenciadaResidencial
 
 *** Keywords ***
-Pesquisar "${pesquisaEstrutura}" e selecionar o primeiro resultado
-    Input Text  ${campoPesquisaEstrutura}    ${pesquisaEstrutura}
-    Click Element  ${primeiroResultadoEstrutura}
-
 Selecionar o botão 'Cadastrar'
     Execute JavaScript  document.getElementById("cphContent_btnCad").click();
     Wait Until Element Is Visible    ${campoNomePessoa}    
