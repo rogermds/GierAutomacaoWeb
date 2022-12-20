@@ -22,8 +22,8 @@ Em Prontuário do Educando, no campo turma no Prontuário, selecionar "${turma}"
     Aguardar tela de carregamento
 
 Em Prontuário do Educando, em Educando, selecionar "${educando}"
-    Run Keyword If    '${educando}' == 'ALLAN KOJO DE ASSIS GOES'        Execute JavaScript   $('#cphContent_ddlTurma').val("2450101").trigger('chosen:updated');
-    Run Keyword If    '${educando}' == 'BEATRIZ PEREIRA DA SILVA'        Execute JavaScript   $('#cphContent_ddlTurma').val("2571948").trigger('chosen:updated');
+    Run Keyword If    '${educando}' == 'ALLAN KOJO DE ASSIS GOES'        Execute JavaScript   $('#cphContent_ListaPiloto_ddlAluno').val("2450101").trigger('chosen:updated');
+    Run Keyword If    '${educando}' == 'BEATRIZ PEREIRA DA SILVA'        Execute JavaScript   $('#cphContent_ListaPiloto_ddlAluno').val("2571948").trigger('chosen:updated');
     Aguardar tela de carregamento
 
 Em Prontuário do Educando, clicar em Pesquisar

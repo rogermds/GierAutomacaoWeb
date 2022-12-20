@@ -21,41 +21,49 @@ Na Prova, na Pergunta 1, clicar na Resposta A
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[1]
     Clicar no campo com xPath "(//input[contains(@type,'radio')])[1]"
     Aguardar tela de carregamento
+    Dormir
 
 Na Prova, na Pergunta 2, clicar na Resposta B
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[2]
     Clicar no campo com xPath "(//input[contains(@type,'radio')])[2]"
     Aguardar tela de carregamento
+    Dormir
 
 Na Prova, na Pergunta 3, clicar na Resposta C
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[3]
     Clicar no campo com xPath "(//input[contains(@type,'radio')])[3]"
     Aguardar tela de carregamento
+    Dormir
 
 Na Prova, na Pergunta 4, clicar na Resposta D
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[4]
     Clicar no campo com xPath "(//input[contains(@type,'radio')])[4]"
     Aguardar tela de carregamento
+    Dormir
 
 Na Prova, na Pergunta 5, clicar na Resposta C
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[3]
     Clicar no campo com xPath "(//input[contains(@type,'radio')])[3]"
     Aguardar tela de carregamento
+    Dormir
 
 Na Prova, na Pergunta 6, clicar na Resposta B
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[2]
     Clicar no campo com xPath "(//input[contains(@type,'radio')])[2]"
     Aguardar tela de carregamento
+    Dormir
 
 Na Prova, na Pergunta 7, clicar na Resposta A
     Wait Until Element Is Visible    (//input[contains(@type,'radio')])[1]
     Clicar no campo com xPath "(//input[contains(@type,'radio')])[1]"
     Aguardar tela de carregamento
+    Dormir
 
 Na Prova, clicar em Avançar
     Sleep    1
     Execute JavaScript      document.getElementsByClassName("avaliacao-avanca-questao")[0].click();
     Aguardar tela de carregamento
+    Dormir////
 
 Na Prova, clicar em Voltar
     Sleep    2

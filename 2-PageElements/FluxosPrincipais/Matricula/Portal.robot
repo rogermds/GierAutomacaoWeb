@@ -97,7 +97,7 @@ No Portal, em Escolha da Escola, em Data de Nascimento, inserir a data de nascim
     FOR    ${element}    IN RANGE    20
     ${verificaCampo}    Run Keyword And Return Status    Textfield Value Should Be    busca-nascimento    ${dataNascimento}
         IF    ${verificaCampo}
-            Pass Execution    Campo foi preenchido corretamente!
+            Log    Campo foi preenchido corretamente!
             Exit For Loop
         ELSE
             Input Text    busca-nascimento    ${dataNascimento}
@@ -214,7 +214,7 @@ No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "${dataNa
     FOR    ${element}    IN RANGE    20
         ${verificaCampo}    Run Keyword And Return Status    Textfield Value Should Be    txtRDataNascimento    ${dataNascimentoResponsavel}
         IF    ${verificaCampo}
-            Pass Execution    Campo preenchido corretamente
+            Log   Campo preenchido corretamente
             Exit For Loop
         ELSE
             Input Text   txtRDataNascimento    ${dataNascimentoResponsavel}

@@ -61,12 +61,28 @@ Pesquisar "${pesquisaEstrutura}" e selecionar o primeiro resultado
     Click Element  ${primeiroResultadoEstrutura}
 
 Entrar no eixo "${nomeEixo}"
+    Set Test Variable    ${nomeEixo}
     Execute JavaScript  xPathResult = document.evaluate("//div[@class='divEixo'][contains(.,'${nomeEixo}')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     Execute JavaScript  xPathResult.singleNodeValue.click()  
 
 Entrar no módulo "${nomeModulo}"
-    IF    '${pesquisaEstrutura}' == 'SECRETARIA' and '${nomeModulo}' == 'Gestão'
+    ${verificaEixo}    Run Keyword And Return Status    Variable Should Not Exist    ${nomeEixo}
+    IF    ${verificaEixo} 
+        ${nomeEixo}    Set Variable    escola
+        Set Test Variable   ${nomeEixo} 
+    END
+
+    IF    '${pesquisaEstrutura}' == 'SECRETARIA' and '${nomeEixo}' == 'Operação' and '${nomeModulo}' == 'Gestão'
+        Execute JavaScript  xPathResult = document.evaluate("//span[contains(@id,'8')][contains(.,'Gestão')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click()
+    ELSE IF   '${pesquisaEstrutura}' == 'SECRETARIA' and '${nomeEixo}' == 'Configuração' and '${nomeModulo}' == 'Gestão'
+        Execute JavaScript  xPathResult = document.evaluate("//span[contains(@id,'7')][contains(.,'Gestão')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click()
+    ELSE IF   '${pesquisaEstrutura}' == 'SECRETARIA' and '${nomeModulo}' == 'Gestão'
         Execute JavaScript  xPathResult = document.evaluate("(//span[contains(@id,'9')][contains(.,'Gestão')])[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        Execute JavaScript  xPathResult.singleNodeValue.click()
+    ELSE IF   '${nomeEixo}' == 'Operação' and '${nomeModulo}' == 'Pedagógico'
+        Execute JavaScript  xPathResult = document.evaluate("//span[contains(@id,'16')][contains(.,'Pedagógico')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
         Execute JavaScript  xPathResult.singleNodeValue.click()
     ELSE IF    '${nomeModulo}' == 'Gestão'
         Execute JavaScript  xPathResult = document.evaluate("//span[contains(@id,'7')][contains(.,'Gestão')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
@@ -77,6 +93,7 @@ Entrar no módulo "${nomeModulo}"
     END
 
 Entrar na funcionalidade "${funcionalidade}"
+    Set Test Variable    ${funcionalidade}
     IF    '${funcionalidade}' == 'Processo de Demandas'
         Execute JavaScript  xPathResult = document.evaluate("//span[@title='Processo de Demandas']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
         Execute JavaScript  xPathResult.singleNodeValue.click()  

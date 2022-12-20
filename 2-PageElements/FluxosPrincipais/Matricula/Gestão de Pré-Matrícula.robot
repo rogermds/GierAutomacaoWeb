@@ -174,7 +174,7 @@ Em Gestão de Pré-Matrícula, em '${processo}', verificar se o aluno entrou em 
         END
 
         IF    ${validacao}
-            Fail      
+                Fail      
         END
     END
 

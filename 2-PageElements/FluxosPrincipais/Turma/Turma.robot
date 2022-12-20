@@ -66,9 +66,13 @@ Em Período, selecionar "${periodo}"
     Run Keyword If    '${periodo}' == 'INTERMEDIÁRIO'  Execute JavaScript   $('#${campoPeriodoTurma}').val("15332|IN|5").trigger('chosen:updated');
     Execute JavaScript   $('#${campoPeriodoTurma}').trigger('change');
     Aguardar tela de carregamento
+    Sleep    6
 
 Em Turma, selecionar "${turma}"
     Set Suite Variable    ${turma}
+    Run Keyword If    '${turma}' == 'A'  Execute JavaScript   $('#${campoTurmaTurma}').val("1").trigger('chosen:updated');
+    Run Keyword If    '${turma}' == 'B'  Execute JavaScript   $('#${campoTurmaTurma}').val("2").trigger('chosen:updated');
+    Run Keyword If    '${turma}' == 'C'  Execute JavaScript   $('#${campoTurmaTurma}').val("3").trigger('chosen:updated');
     Run Keyword If    '${turma}' == 'P'  Execute JavaScript   $('#${campoTurmaTurma}').val("16").trigger('chosen:updated');
     Run Keyword If    '${turma}' == 'Q'  Execute JavaScript   $('#${campoTurmaTurma}').val("17").trigger('chosen:updated');
     Run Keyword If    '${turma}' == 'R'  Execute JavaScript   $('#${campoTurmaTurma}').val("18").trigger('chosen:updated');

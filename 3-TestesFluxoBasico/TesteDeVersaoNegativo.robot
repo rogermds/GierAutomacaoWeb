@@ -254,7 +254,7 @@ Cenário 12 - Cadastro de Pessoa - Cep inválido
     Clicar no campo 'UF' e selecionar a opção "SP"
     Clicar no campo 'Cidade de Nascimento' e selecionar a opção "SAO PAULO"
     Clicar no campo 'Cor/Raça' e selecionar a opção "AMARELA"
-    Clicar no campo 'Cep' e digitar o valor "00000001"
+    Clicar no campo 'Cep' e digitar o valor "00000002"
     Clicar no campo 'Numero' e digitar o valor "134"
     Visualizar a mensagem: CEP NÃO ENCONTRADO
 
@@ -326,7 +326,7 @@ Cenário 17 - Funcionalidade Cadastro de Turma – Regular
     Em Curso, selecionar "PRÉ-ESCOLA"
     Em Ciclo, selecionar "ESTÁGIO I"
     Em Período, selecionar "MANHÃ"
-    Em Turma, selecionar "I"
+    Em Turma, selecionar "Y"
     Em Grade de Aula, selecionar "GRADE DE HORARIO - MANHÃ"
     Em Programa Curricular, selecionar "ESTÁGIO I"
     Em Capacidade da Turma, inserir a quantidade "20"
@@ -1823,10 +1823,6 @@ Cenário 48: Portal de Inscrição - EJA Inicial
     No Portal, em Cadastro do Responsável, em CPF, inserir um CPF inválido
     No Portal, visualizar a mensagem "O CPF informado é inválido"
     No Portal, fechar o modal
-    No Portal, em Cadastro do Responsável, em Data de Nascimento, inserir "00/00/0000"
-    No Portal, visualizar a mensagem "CPF não informado"
-    No Portal, fechar o modal
-    No Portal, visualizar a mensagem "Existem campos obrigatórios não preenchidos"
     No Portal, em Cadastro do Responsável, em CPF, inserir o CPF "401.360.618-69"
     No Portal, em Cadastro do Responsável, em Nacionalidade, selecionar "Brasileira"
     No Portal, em Cadastro do Responsável, em UF Nascimento, selecionar "SP"
